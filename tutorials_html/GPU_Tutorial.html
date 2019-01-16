@@ -172,44 +172,66 @@
   <div class="section" id="tutorials-gpu">
 <h1>Tutorials/GPU<a class="headerlink" href="#tutorials-gpu" title="Permalink to this headline">¶</a></h1>
 <p>The tutorials in <code class="docutils literal notranslate"><span class="pre">amrex/Tutorials/GPU</span></code> demonstrate the implementation
-of AMReX’s GPU toolkit as well as provide GPU versions of other CPU
-tutorials for comparison to help applications convert to GPUs.</p>
+of AMReX’s GPU toolkit as well as provide GPU ported versions of CPU
+tutorials to help applications convert to GPUs.</p>
 <div class="section" id="your-first-amrex-gpu-application">
 <h2><strong>Your first AMReX GPU application</strong><a class="headerlink" href="#your-first-amrex-gpu-application" title="Permalink to this headline">¶</a></h2>
 <p>This is a step-by-step guide to preparing, compiling and running your first
-AMReX GPU program.  This guide will use <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/HeatEquation_EX1_C</span></code>,
-and instructions will focus on ORNL’s Summit and Summitdev systems.</p>
-<p>Before compiling, the <code class="docutils literal notranslate"><span class="pre">pgi</span></code> and <code class="docutils literal notranslate"><span class="pre">cuda</span></code> software must be available.  On
-ORNL systems, this is done with <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">pgi</span> <span class="pre">cuda</span></code>.  However, Cuda
-versions 9.2.x are not compatible with AMReX.  So, it is important to check
-whether your system is using 9.2.x as its default. To check, type
-<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code>.  If Cuda is the wrong version, use <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span> <span class="pre">cuda</span></code>
-to find a compatible version and swap using
-<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">swap</span> <span class="pre">cuda</span> <span class="pre">[good</span> <span class="pre">module</span> <span class="pre">name]</span></code>.</p>
-<p>Go to <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/HeatEquation_EX1_C/Exec/SingleVortex</span></code> to compile the
-executable.  Compile with <code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code>, <code class="docutils literal notranslate"><span class="pre">COMP=pgi</span></code>, <code class="docutils literal notranslate"><span class="pre">USE_MPI=TRUE</span></code>
-and <code class="docutils literal notranslate"><span class="pre">USE_OMP=FALSE</span></code>.  This should result in an executable:
-<code class="docutils literal notranslate"><span class="pre">main3d.pgi.MPI.CUDA.ex</span></code>.</p>
-<p>On ORNL’s systems, this executable can be ran by using one of the run scripts
-found in <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU</span></code>. <code class="docutils literal notranslate"><span class="pre">run.script</span></code> can be used to run on Summitdev,
-and <code class="docutils literal notranslate"><span class="pre">run.summit</span></code> can be used for Summit.  To change the number of ranks and
-GPUs used in the simulation, change the number of resource sets, <code class="docutils literal notranslate"><span class="pre">n</span></code> in the
-<code class="docutils literal notranslate"><span class="pre">jsrun</span></code> linei. Also, set the inputs line to take the appopriate input file
-based on the dimensionality of your build.</p>
-<p>When ready, submit the job (on ORNL: <code class="docutils literal notranslate"><span class="pre">bsub</span> <span class="pre">run.script</span></code>). Congratulations!
-You’ve accelerated AMReX using GPUs!</p>
+AMReX GPU program.  This guide will use <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/Launch</span></code>,
+and instructions will focus on ORNL’s systems:</p>
+<ol class="arabic">
+<li><p class="first">Before compiling, the <code class="docutils literal notranslate"><span class="pre">pgi</span></code> and <code class="docutils literal notranslate"><span class="pre">cuda</span></code> software must be available.
+Note, Cuda versions 9.2.x are not compatible with AMReX, so, it is
+identify whether your system is using 9.2.x.  On systems that use
+modules, type <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span> <span class="pre">cuda</span></code> to find a compatible version and
+load it using <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">[good</span> <span class="pre">module</span> <span class="pre">name]</span></code>.</p>
+<p>On ORNL systems, the correct modules can be loaded directly by typing:</p>
+</li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">module load pgi cuda/9.1.85       ! For Summit</span>
+<span class="go">module load pgi cuda/9.0.69       ! For Summitdev</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Go to <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/Launch</span></code> to compile the executable.  Compile with
+<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">USE_CUDA=TRUE</span> <span class="pre">COMP=pgi</span> <span class="pre">USE_MPI=TRUE</span> <span class="pre">USE_OMP=FALSE</span></code>, or edit the
+<code class="docutils literal notranslate"><span class="pre">GNUmakefile</span></code> to match this configuration and run <code class="docutils literal notranslate"><span class="pre">make</span></code>. This
+should result in an executable: <code class="docutils literal notranslate"><span class="pre">main3d.pgi.MPI.CUDA.ex</span></code>.</li>
+<li>On Summit systems, this executable can be submitted by using one of the run
+scripts found in <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU</span></code>.  <code class="docutils literal notranslate"><span class="pre">run.script</span></code> can be used to run on
+Summitdev, and <code class="docutils literal notranslate"><span class="pre">run.summit</span></code> can be used for Summit.  To change the number
+of ranks and GPUs used in the simulation, change the number of resource sets,
+<code class="docutils literal notranslate"><span class="pre">n</span></code> in the <code class="docutils literal notranslate"><span class="pre">jsrun</span></code> line.  For the first <code class="docutils literal notranslate"><span class="pre">Launch</span></code> tutorial, use <code class="docutils literal notranslate"><span class="pre">n=1</span></code>
+and set <code class="docutils literal notranslate"><span class="pre">INPUTS=&quot;&quot;</span></code> because no input file is used in this example.</li>
+</ol>
+<p>When ready, submit the job script (on Summit: <code class="docutils literal notranslate"><span class="pre">bsub</span> <span class="pre">run.script</span></code>).
+Congratulations! You’ve accelerated AMReX using GPUs!</p>
 </div>
 <div class="section" id="launch">
 <h2><strong>Launch</strong><a class="headerlink" href="#launch" title="Permalink to this headline">¶</a></h2>
+<p>Launch shows multiple examples of how GPU work can be offloaded using the tools
+available in AMReX. It includes examples of multiple AMReX macro launch methods,
+launching a Fortran function using CUDA and launching work using OpenACC and
+OpenMP offloading. This tutorial will be regularly updated with AMReX’s
+preferred GPU launch methodologies.</p>
 </div>
 <div class="section" id="heatequation-ex1-c">
 <h2><strong>HeatEquation_EX1_C</strong><a class="headerlink" href="#heatequation-ex1-c" title="Permalink to this headline">¶</a></h2>
+<p>HeatEquation is a direct GPU port of the <code class="docutils literal notranslate"><span class="pre">Tutorials/Basic/HeatEquation_EX1_C</span></code>
+tutorial that solves the 2D or 3D heat equation on a domain-decomposed mesh. It
+offloads the phi <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Multifab</span></span></code> initialization, flux computation and phi update
+kernels to the GPU using AMReX CUDA launch macros and has converted all Fortran
+loops into C++ inlined functions.</p>
 </div>
 <div class="section" id="cns">
 <h2><strong>CNS</strong><a class="headerlink" href="#cns" title="Permalink to this headline">¶</a></h2>
+<p>CNS is a direct GPU port of the <code class="docutils literal notranslate"><span class="pre">Tutorials/EB/CNS</span></code> tutorial.</p>
 </div>
 <div class="section" id="amrcore">
 <h2><strong>AmrCore</strong><a class="headerlink" href="#amrcore" title="Permalink to this headline">¶</a></h2>
+<p>AmrCore is a direct GPU port of the <code class="docutils literal notranslate"><span class="pre">Tutorials/Amr/Advection_AmrCore</span></code> tutorial
+that advects a single scalar field with a velocity field specified on faces, using
+strategies similar to HeatEquation and CNS.</p>
 </div>
 </div>
 

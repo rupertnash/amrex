@@ -93,6 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#vector-and-array">Vector and Array</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#real">Real</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#paralleldescriptor">ParallelDescriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parallelcontext">ParallelContext</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#print">Print</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#parmparse">ParmParse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#initialize-and-finalize">Initialize and Finalize</a></li>
@@ -257,6 +258,59 @@ used functions are</p>
 
 <span class="c1">// See AMReX_ParallelDescriptor.H for many other Reduce functions</span>
 <span class="n">ParallelDescriptor</span><span class="o">::</span><span class="n">ReduceRealSum</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parallelcontext">
+<h1>ParallelContext<a class="headerlink" href="#parallelcontext" title="Permalink to this headline">¶</a></h1>
+<p>Users can also use groups of MPI subcommunicators to perform
+simultaneous physics calculations.  These comms are managed by AMReX’s
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParallelContext</span></span></code> in <code class="docutils literal notranslate"><span class="pre">AMReX_ParallelContext.H.</span></code>  It maintains a
+stack of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MPI_Comm</span></span></code> handlers. A global comm is placed in the
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParallelContext</span></span></code> stack during AMReX’s initialization and
+additional subcommunicators can be handled by adding comms with
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">push</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">MPI_Comm</span></span><span class="punctuation"><span class="pre">)</span></span></code> and removed using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">pop</span></span><span class="punctuation"><span class="pre">()</span></span></code>.  This creates a
+hierarchy of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MPI_Comm</span></span></code> objects that can be used to split work as
+the user sees fit.</p>
+<p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParallelContext</span></span></code> also tracks and returns information about the
+local (most recently added) and global <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MPI_Comm</span></span></code>.  The most common
+access functions are given below.  See <code class="docutils literal notranslate"><span class="pre">AMReX_ParallelContext.H.</span></code> for
+a full listing of the available functions.</p>
+<blockquote>
+<div></div></blockquote>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MPI_Comm</span> <span class="n">subCommA</span> <span class="o">=</span> <span class="p">....;</span>
+<span class="n">MPI_Comm</span> <span class="n">subCommB</span> <span class="o">=</span> <span class="p">....;</span>
+<span class="c1">// Add a communicator to ParallelContext.</span>
+<span class="c1">// After these pushes, subCommB becomes the</span>
+<span class="c1">//     &quot;local&quot; communicator.</span>
+<span class="n">ParallelContext</span><span class="o">::</span><span class="n">push</span><span class="p">(</span><span class="n">subCommA</span><span class="p">);</span>
+<span class="n">ParallelContext</span><span class="o">::</span><span class="n">push</span><span class="p">(</span><span class="n">subCommB</span><span class="p">);</span>
+
+<span class="c1">// Get Global and Local communicator (subCommB).</span>
+<span class="n">MPI_Comm</span> <span class="n">globalComm</span> <span class="o">=</span> <span class="n">ParallelContext</span><span class="o">::</span><span class="n">CommunicatorAll</span><span class="p">();</span>
+<span class="n">MPI_Comm</span> <span class="n">localComm</span>  <span class="o">=</span> <span class="n">ParallelContext</span><span class="o">::</span><span class="n">CommunicatorSub</span><span class="p">();</span>
+
+<span class="c1">// Get local number of ranks and global IO Processor Number.</span>
+<span class="kt">int</span> <span class="n">localRanks</span> <span class="o">=</span> <span class="n">ParallelContext</span><span class="o">::</span><span class="n">NProcsSub</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">globalIO</span>     <span class="o">=</span> <span class="n">ParallelContext</span><span class="o">::</span><span class="n">IOProcessorNumberAll</span><span class="p">();</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">ParallelContext</span><span class="o">::</span><span class="n">IOProcessorSub</span><span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// Only the local I/O process executes this</span>
+<span class="p">}</span>
+
+<span class="c1">// Translation of global rank to local communicator rank.</span>
+<span class="c1">// Returns MPI_UNDEFINED if comms do not overlap.</span>
+<span class="kt">int</span> <span class="n">localRank</span> <span class="o">=</span> <span class="n">ParallelContext</span><span class="o">::</span><span class="n">global_to_local_rank</span><span class="p">(</span><span class="n">globalrank</span><span class="p">);</span>
+
+<span class="c1">// Translations of MPI rank IDs using integer arrays.</span>
+<span class="c1">// Returns MPI_UNDEFINED if comms do not overlap.</span>
+<span class="n">ParallelContext</span><span class="o">::</span><span class="n">global_to_local_rank</span><span class="p">(</span><span class="n">local_array</span><span class="p">,</span> <span class="n">global_array</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="n">ParallelContext</span><span class="o">::</span><span class="n">local_to_global_rank</span><span class="p">(</span><span class="n">global_array</span><span class="p">,</span> <span class="n">local_array</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+
+<span class="c1">// Remove the last added subcommunicator.</span>
+<span class="c1">// This would make &quot;subCommA&quot; the new local communicator.</span>
+<span class="c1">// Note: The user still needs to free &quot;subCommB&quot;.</span>
+<span class="n">ParallelContext</span><span class="o">::</span><span class="n">pop</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
