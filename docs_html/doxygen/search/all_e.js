@@ -92,7 +92,7 @@ var searchData=
   ['nstep',['nStep',['../classamrex_1_1_amr_level.html#ad6a79cb5a4a9a68096183e650138e030',1,'amrex::AmrLevel']]],
   ['nstr',['NSTR',['../_a_m_re_x_8cpp.html#ae078190369c20a6e00eec508f558852f',1,'AMReX.cpp']]],
   ['nstreamerrors',['NStreamErrors',['../classamrex_1_1_stream_retry.html#ae894808026adb5099b7b36f193f39f7c',1,'amrex::StreamRetry']]],
-  ['nstride',['nstride',['../structamrex_1_1_array4.html#a028dbc3fe4060224f23e6f5f95382215',1,'amrex::Array4::nstride()'],['../structamrex_1_1_fab_view.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView::nstride()']]],
+  ['nstride',['nstride',['../structamrex_1_1_fab_view.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView']]],
   ['ntasks',['NTasks',['../classamrex_1_1_fork_join.html#a4eaae5bd6eb7e83442d5db4529cf1443',1,'amrex::ForkJoin']]],
   ['nteams',['NTeams',['../namespaceamrex_1_1_parallel_descriptor.html#a36abe6be2660465d0661ee1426c11a46',1,'amrex::ParallelDescriptor']]],
   ['nullinterphook',['NullInterpHook',['../classamrex_1_1_null_interp_hook.html',1,'amrex']]],

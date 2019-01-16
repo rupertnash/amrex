@@ -335,8 +335,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{ \</div>
-<div class="line">        const <span class="keyword">auto</span> amrex_i_lo = <a class="code" href="namespaceamrex.html#a68a647dab4001dd57423e54e5a380516">amrex::lbound</a>(box); \</div>
-<div class="line">        const <span class="keyword">auto</span> amrex_i_hi = <a class="code" href="namespaceamrex.html#a76bb9f31eb00271b10b7c2bf4532ae8c">amrex::ubound</a>(box); \</div>
+<div class="line">        const <span class="keyword">auto</span> amrex_i_lo = <a class="code" href="namespaceamrex.html#a47d61948fc32994fdf5e72090a97d41d">amrex::lbound</a>(box); \</div>
+<div class="line">        const <span class="keyword">auto</span> amrex_i_hi = <a class="code" href="namespaceamrex.html#a3c96656cd70fd8fd4022cfb81deb15e3">amrex::ubound</a>(box); \</div>
 <div class="line">        for (<span class="keywordtype">int</span> k = amrex_i_lo.z; k &lt;= amrex_i_hi.z; ++k) { \</div>
 <div class="line">        for (<span class="keywordtype">int</span> j = amrex_i_lo.y; j &lt;= amrex_i_hi.y; ++j) { \</div>
 <div class="line">        AMREX_PRAGMA_SIMD \</div>
@@ -344,8 +344,8 @@ Functions</h2></td></tr>
 <div class="line">            block \</div>
 <div class="line">        }}} \</div>
 <div class="line">    }</div>
-<div class="ttc" id="namespaceamrex_html_a68a647dab4001dd57423e54e5a380516"><div class="ttname"><a href="namespaceamrex.html#a68a647dab4001dd57423e54e5a380516">amrex::lbound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_INLINE Dim3 lbound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1453</div></div>
-<div class="ttc" id="namespaceamrex_html_a76bb9f31eb00271b10b7c2bf4532ae8c"><div class="ttname"><a href="namespaceamrex.html#a76bb9f31eb00271b10b7c2bf4532ae8c">amrex::ubound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_INLINE Dim3 ubound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1466</div></div>
+<div class="ttc" id="namespaceamrex_html_a3c96656cd70fd8fd4022cfb81deb15e3"><div class="ttname"><a href="namespaceamrex.html#a3c96656cd70fd8fd4022cfb81deb15e3">amrex::ubound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE Dim3 ubound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1468</div></div>
+<div class="ttc" id="namespaceamrex_html_a47d61948fc32994fdf5e72090a97d41d"><div class="ttname"><a href="namespaceamrex.html#a47d61948fc32994fdf5e72090a97d41d">amrex::lbound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE Dim3 lbound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1455</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -403,8 +403,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{ \</div>
-<div class="line">        const <span class="keyword">auto</span> amrex_i_lo = <a class="code" href="namespaceamrex.html#a68a647dab4001dd57423e54e5a380516">amrex::lbound</a>(box); \</div>
-<div class="line">        const <span class="keyword">auto</span> amrex_i_hi = <a class="code" href="namespaceamrex.html#a76bb9f31eb00271b10b7c2bf4532ae8c">amrex::ubound</a>(box); \</div>
+<div class="line">        const <span class="keyword">auto</span> amrex_i_lo = <a class="code" href="namespaceamrex.html#a47d61948fc32994fdf5e72090a97d41d">amrex::lbound</a>(box); \</div>
+<div class="line">        const <span class="keyword">auto</span> amrex_i_hi = <a class="code" href="namespaceamrex.html#a3c96656cd70fd8fd4022cfb81deb15e3">amrex::ubound</a>(box); \</div>
 <div class="line">        for (<span class="keywordtype">int</span> n = 0; n &lt; ncomp; ++n) { \</div>
 <div class="line">        for (<span class="keywordtype">int</span> k = amrex_i_lo.z; k &lt;= amrex_i_hi.z; ++k) { \</div>
 <div class="line">        for (<span class="keywordtype">int</span> j = amrex_i_lo.y; j &lt;= amrex_i_hi.y; ++j) { \</div>
@@ -413,8 +413,8 @@ Functions</h2></td></tr>
 <div class="line">            block \</div>
 <div class="line">        }}}} \</div>
 <div class="line">    }</div>
-<div class="ttc" id="namespaceamrex_html_a68a647dab4001dd57423e54e5a380516"><div class="ttname"><a href="namespaceamrex.html#a68a647dab4001dd57423e54e5a380516">amrex::lbound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_INLINE Dim3 lbound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1453</div></div>
-<div class="ttc" id="namespaceamrex_html_a76bb9f31eb00271b10b7c2bf4532ae8c"><div class="ttname"><a href="namespaceamrex.html#a76bb9f31eb00271b10b7c2bf4532ae8c">amrex::ubound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_INLINE Dim3 ubound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1466</div></div>
+<div class="ttc" id="namespaceamrex_html_a3c96656cd70fd8fd4022cfb81deb15e3"><div class="ttname"><a href="namespaceamrex.html#a3c96656cd70fd8fd4022cfb81deb15e3">amrex::ubound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE Dim3 ubound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1468</div></div>
+<div class="ttc" id="namespaceamrex_html_a47d61948fc32994fdf5e72090a97d41d"><div class="ttname"><a href="namespaceamrex.html#a47d61948fc32994fdf5e72090a97d41d">amrex::lbound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE Dim3 lbound(Box const &amp;box)</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1455</div></div>
 </div><!-- fragment -->
 </div>
 </div>

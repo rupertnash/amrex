@@ -5,6 +5,7 @@ var searchData=
   ['bcloc',['bcloc',['../classamrex_1_1_bndry_data.html#a30e8975eaca9018ee72a0f5e9600e590',1,'amrex::BndryData']]],
   ['bcond',['bcond',['../classamrex_1_1_bndry_data.html#a33b33d468118587f694c916018b3f3fb',1,'amrex::BndryData']]],
   ['bcs',['bcs',['../classamrex_1_1_l_s_core_base.html#ae564241bee9d2cc16d8f812b7a78096c',1,'amrex::LSCoreBase']]],
+  ['begin',['begin',['../structamrex_1_1_array4.html#a866f2c12eb3e3d6a26399866f355e088',1,'amrex::Array4']]],
   ['beginindex',['beginIndex',['../classamrex_1_1_m_f_iter.html#a65b335b52bc54d9eaf7030a4fce20cf8',1,'amrex::MFIter']]],
   ['bitsmax',['BitsMax',['../namespaceamrex.html#abd60428797a6f8b12bc87f94351665c2',1,'amrex']]],
   ['bl_5fspacedim',['bl_spacedim',['../classamrex__fort__module.html#a75dc0439ac63ce7bbde93929ee9c173c',1,'amrex_fort_module']]],

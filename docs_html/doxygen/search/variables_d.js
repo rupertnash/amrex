@@ -30,7 +30,7 @@ var searchData=
   ['nparticlesatlevelprepost',['nParticlesAtLevelPrePost',['../classamrex_1_1_particle_container.html#a6e7c1ff537295e739af9e43819ba4636',1,'amrex::ParticleContainer']]],
   ['nparticlesprepost',['nparticlesPrePost',['../classamrex_1_1_particle_container.html#aa1d938ace39436b8ce17da3ac8e371a3',1,'amrex::ParticleContainer']]],
   ['nstr',['NSTR',['../_a_m_re_x_8cpp.html#ae078190369c20a6e00eec508f558852f',1,'AMReX.cpp']]],
-  ['nstride',['nstride',['../structamrex_1_1_array4.html#a028dbc3fe4060224f23e6f5f95382215',1,'amrex::Array4::nstride()'],['../structamrex_1_1_fab_view.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView::nstride()']]],
+  ['nstride',['nstride',['../structamrex_1_1_fab_view.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView']]],
   ['num_5fbuild',['num_build',['../structamrex_1_1_fab_array_base_1_1_fab_array_stats.html#a11d7300007b694fa66c0aead6b930f06',1,'amrex::FabArrayBase::FabArrayStats']]],
   ['num_5ffabarrays',['num_fabarrays',['../structamrex_1_1_fab_array_base_1_1_fab_array_stats.html#ab4b3c50d480036fa2cd0506f9e8f96ff',1,'amrex::FabArrayBase::FabArrayStats']]],
   ['num_5flocal_5ftiles',['num_local_tiles',['../classamrex_1_1_m_f_iter.html#a967c3c48ccb4f316911d06fcaccb29fa',1,'amrex::MFIter']]],
