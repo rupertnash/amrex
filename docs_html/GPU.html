@@ -366,7 +366,9 @@ can run it and that will generate results like:</p>
 <p>Most GPU related classes and functions are in <code class="docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">Gpu</span></code>,
 which is inside <code class="docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">amrex</span></code>. For example, the GPU configuration
 class <code class="docutils literal notranslate"><span class="pre">Device</span></code> can be referenced to at <code class="docutils literal notranslate"><span class="pre">amrex::Gpu::Device</span></code>. Other
-important objects in the Gpu namespace include <code class="docutils literal notranslate"><span class="pre">Gpu::AsyncFab</span></code>.</p>
+important objects in the Gpu namespace include objects designed to work
+with GPU memory spaces, such as <code class="docutils literal notranslate"><span class="pre">Gpu::AsyncFab</span></code> a temporary
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> designed to work with CUDA streams.</p>
 <p>For portability, AMReX defines some macros for CUDA function qualifiers
 and they should be preferred to allow execution with <code class="docutils literal notranslate"><span class="pre">USE_CUDA=FALSE</span></code>.
 These include:</p>
@@ -636,7 +638,35 @@ pointers for the CPU and GPU <code class="code cpp c++ docutils literal notransl
 metadata to minimize data movement.  The <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncFab</span></span></code> is async-safe and can
 be used inside of an <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loop without reducing CPU-GPU asynchronicity.
 It is portable, reducing to a simple <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> pointer when ran without
-CUDA.</p>
+CUDA.  An example of using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">AsyncFab</span></span></code> is given below:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">some_multifab</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">bx</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">validbox</span><span class="p">();</span>
+
+   <span class="c1">// Create temporary FAB with given box &amp; number of components.</span>
+   <span class="n">Gpu</span><span class="o">::</span><span class="n">AsyncFab</span> <span class="n">q_box</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+   <span class="n">FArrayBox</span><span class="o">*</span> <span class="n">q_fab</span> <span class="o">=</span> <span class="n">q_box</span><span class="p">.</span><span class="n">fabPtr</span><span class="p">();</span>  <span class="c1">// Get device pointer to fab.</span>
+
+   <span class="n">AMREX_LAUNCH_DEVICE_LAMBDA</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">tbx</span><span class="p">,</span>
+   <span class="p">{</span>
+       <span class="n">Calcs</span> <span class="n">q_fab</span>
+   <span class="p">});</span>
+
+   <span class="n">AMREX_LAUNCH_DEVICE_LAMBDA</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">tbx</span><span class="p">,</span>
+   <span class="p">{</span>
+       <span class="n">Uses</span> <span class="n">q_fab</span>
+   <span class="p">});</span>
+
+   <span class="n">q_box</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>  <span class="c1">// Added to the stream&#39;s kernel launch stack.</span>
+                   <span class="c1">// So, q_box remains until completed.</span>
+
+   <span class="n">AMREX_LAUNCH_DEVICE_LAMBDA</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">tbx</span><span class="p">,</span>
+   <span class="p">{</span>
+       <span class="n">More</span> <span class="n">work</span> <span class="n">w</span><span class="o">/</span><span class="n">o</span> <span class="n">q_fab</span><span class="p">.</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="multifabs-and-accessing-farrayboxes">
 <h2>MultiFabs and Accessing FArrayBoxes<a class="headerlink" href="#multifabs-and-accessing-farrayboxes" title="Permalink to this headline">¶</a></h2>
