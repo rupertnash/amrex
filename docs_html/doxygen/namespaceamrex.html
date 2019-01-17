@@ -552,6 +552,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:acb100c3971f39188ccaa96c07517ee1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a368140c12d35a8d5d1a7ab35b85978fe"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a368140c12d35a8d5d1a7ab35b85978fe">DeriveFunc3D</a> )(amrex::Real *data, const int *dlo, const int *dhi, const int *nvar, const amrex::Real *compdat, const int *clo, const int *chi, const int *ncomp, const int *lo, const int *hi, const int *domain_lo, const int *domain_hi, const amrex::Real *delta, const amrex::Real *xlo, const amrex::Real *time, const amrex::Real *dt, const int *bcrec, const int *level, const int *grid_no)</td></tr>
 <tr class="separator:a368140c12d35a8d5d1a7ab35b85978fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c26d52b1a56280ee60404b1643f751"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ae7c26d52b1a56280ee60404b1643f751">DeriveFuncFab</a> )(const <a class="el" href="classamrex_1_1_box.html">amrex::Box</a> &amp;bx, <a class="el" href="classamrex_1_1_f_array_box.html">amrex::FArrayBox</a> &amp;derfab, int dcomp, int ncomp, const <a class="el" href="classamrex_1_1_f_array_box.html">amrex::FArrayBox</a> &amp;datafab, const <a class="el" href="classamrex_1_1_geometry.html">amrex::Geometry</a> &amp;geomdata, amrex::Real time, const int *bcrec, int level)</td></tr>
+<tr class="separator:ae7c26d52b1a56280ee60404b1643f751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81806287575f9a30fe5c74b51c240f04"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a81806287575f9a30fe5c74b51c240f04">BndryFuncFabDefault</a> )(<a class="el" href="classamrex_1_1_box.html">Box</a> const &amp;bx, <a class="el" href="classamrex_1_1_f_array_box.html">FArrayBox</a> &amp;data, const int dcomp, const int numcomp, <a class="el" href="classamrex_1_1_geometry.html">Geometry</a> const &amp;geom, const Real time, const <a class="el" href="classamrex_1_1_vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1_b_c_rec.html">BCRec</a> &gt; &amp;bcr, const int bcomp, const int scomp)</td></tr>
 <tr class="separator:a81806287575f9a30fe5c74b51c240f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3e7c460d73db960317e8d874dba4a9a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#af3e7c460d73db960317e8d874dba4a9a">ErrorFuncDefault</a> )(int *tag, <a class="el" href="_a_m_re_x___array_lim_8_h.html#af53c6334de4f960ca760f7ea802e1e98">AMREX_ARLIM_P</a>(tlo), <a class="el" href="_a_m_re_x___array_lim_8_h.html#af53c6334de4f960ca760f7ea802e1e98">AMREX_ARLIM_P</a>(thi), const int *tagval, const int *clearval, amrex::Real *data, <a class="el" href="_a_m_re_x___array_lim_8_h.html#af53c6334de4f960ca760f7ea802e1e98">AMREX_ARLIM_P</a>(data_lo), <a class="el" href="_a_m_re_x___array_lim_8_h.html#af53c6334de4f960ca760f7ea802e1e98">AMREX_ARLIM_P</a>(data_hi), const int *lo, const int *hi, const int *nvar, const int *domain_lo, const int *domain_hi, const amrex::Real *dx, const amrex::Real *xlo, const amrex::Real *prob_lo, const amrex::Real *time, const int *level)</td></tr>
@@ -1790,6 +1792,18 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">typedef void(* amrex::DeriveFunc3D)(amrex::Real *data, const int *dlo, const int *dhi, const int *nvar, const amrex::Real *compdat, const int *clo, const int *chi, const int *ncomp, const int *lo, const int *hi, const int *domain_lo, const int *domain_hi, const amrex::Real *delta, const amrex::Real *xlo, const amrex::Real *time, const amrex::Real *dt, const int *bcrec, const int *level, const int *grid_no)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae7c26d52b1a56280ee60404b1643f751"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* amrex::DeriveFuncFab)(const <a class="el" href="classamrex_1_1_box.html">amrex::Box</a> &amp;bx, <a class="el" href="classamrex_1_1_f_array_box.html">amrex::FArrayBox</a> &amp;derfab, int dcomp, int ncomp, const <a class="el" href="classamrex_1_1_f_array_box.html">amrex::FArrayBox</a> &amp;datafab, const <a class="el" href="classamrex_1_1_geometry.html">amrex::Geometry</a> &amp;geomdata, amrex::Real time, const int *bcrec, int level)</td>
         </tr>
       </table>
 </div><div class="memdoc">
