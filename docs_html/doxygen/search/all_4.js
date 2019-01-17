@@ -34,7 +34,7 @@ var searchData=
   ['deriveboxmap',['DeriveBoxMap',['../classamrex_1_1_derive_rec.html#a663a12bb95b8a469e521364e65bdcbac',1,'amrex::DeriveRec']]],
   ['derivefunc',['DeriveFunc',['../namespaceamrex.html#acb100c3971f39188ccaa96c07517ee1b',1,'amrex']]],
   ['derivefunc3d',['DeriveFunc3D',['../namespaceamrex.html#a368140c12d35a8d5d1a7ab35b85978fe',1,'amrex']]],
-  ['derivefuncfab',['DeriveFuncFab',['../namespaceamrex.html#a63543daeab77d31cac38e36141594dc8',1,'amrex']]],
+  ['derivefuncfab',['DeriveFuncFab',['../namespaceamrex.html#ae7c26d52b1a56280ee60404b1643f751',1,'amrex']]],
   ['derivelist',['DeriveList',['../classamrex_1_1_derive_list.html',1,'amrex']]],
   ['derivelist',['DeriveList',['../classamrex_1_1_derive_rec.html#a955d7a4da11a875f2d5129baf943397c',1,'amrex::DeriveRec::DeriveList()'],['../classamrex_1_1_derive_list.html#a7443c4cddcba1d236e77d470446a3b98',1,'amrex::DeriveList::DeriveList()']]],
   ['deriveplotvars',['derivePlotVars',['../classamrex_1_1_amr.html#a171c1d4e1c27ff539e512d7e544c5349',1,'amrex::Amr']]],
