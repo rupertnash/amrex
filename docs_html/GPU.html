@@ -495,9 +495,64 @@ that contain both CPU work and GPU launches, including <code class="code cpp c++
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncArray</span></span></code> is also portable. When built without <code class="docutils literal notranslate"><span class="pre">USE_CUDA</span></code>, the
 object only stores and handles the CPU version of the data.</p>
 <p>A <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncArray</span></span></code> is used by constructing it from a reference to a host
-object containing an initial value, retrieving the associated device pointer
-that is passed into an AMReX lambda function and copying the final value back
-to the CPU. An example is given below:</p>
+object containing an initial value, retrieving the associated device pointer,
+passing the pointer into an device function and copying the final value back
+to the CPU. An example using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncArray</span></span></code> is given below, which finds
+the avarage value of all the boundary cells of a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code>:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Previously defined MultiFab &quot;multiFab&quot;.</span>
+<span class="c1">// Find the average value of boundary cells.</span>
+<span class="p">{</span>
+    <span class="n">Real</span> <span class="n">avg_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">Gpu</span><span class="o">::</span><span class="n">AsyncArray</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="n">a_avg</span><span class="p">(</span><span class="o">&amp;</span><span class="n">avg_val</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>     <span class="c1">// Build AsyncArray</span>
+    <span class="n">Real</span><span class="o">*</span> <span class="n">d_avg</span> <span class="o">=</span> <span class="n">a_avg</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>                   <span class="c1">// Get associated device ptr.</span>
+
+    <span class="kt">long</span> <span class="n">total_cells</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">multiFab</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">gbx</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">fabbox</span><span class="p">();</span>
+        <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">vbx</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">validbox</span><span class="p">();</span>
+        <span class="n">BoxList</span> <span class="n">blst</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">boxDiff</span><span class="p">(</span><span class="n">gbx</span><span class="p">,</span><span class="n">vbx</span><span class="p">);</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">nboxes</span> <span class="o">=</span> <span class="n">blst</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">nboxes</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Create AsyncArray for boxes describing boundary and</span>
+            <span class="c1">//    obtain associated device pointer.</span>
+            <span class="n">Gpu</span><span class="o">::</span><span class="n">AsyncArray</span><span class="o">&lt;</span><span class="n">Box</span><span class="o">&gt;</span> <span class="n">async_boxes</span><span class="p">(</span><span class="n">blst</span><span class="p">.</span><span class="n">data</span><span class="p">().</span><span class="n">data</span><span class="p">(),</span> <span class="n">nboxes</span><span class="p">);</span>
+            <span class="n">Box</span> <span class="k">const</span><span class="o">*</span> <span class="n">pboxes</span> <span class="o">=</span> <span class="n">async_boxes</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
+
+            <span class="kt">long</span> <span class="n">ncells</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">b</span> <span class="p">:</span> <span class="n">blst</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">ncells</span> <span class="o">+=</span> <span class="n">b</span><span class="p">.</span><span class="n">numPts</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="n">total_cells</span> <span class="o">+=</span> <span class="n">ncells</span><span class="p">;</span>
+
+            <span class="k">const</span> <span class="n">FArrayBox</span><span class="o">*</span> <span class="n">fab</span> <span class="o">=</span> <span class="n">multiFab</span><span class="p">.</span><span class="n">fabPtr</span><span class="p">(</span><span class="n">mfi</span><span class="p">);</span>
+            <span class="n">AMREX_FOR_1D</span> <span class="p">(</span> <span class="n">ncells</span><span class="p">,</span> <span class="n">icell</span><span class="p">,</span>
+            <span class="p">{</span>
+                <span class="c1">// Use async_boxes to calc cell for this thread.</span>
+                <span class="k">const</span> <span class="n">Dim3</span> <span class="n">cell</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">getCell</span><span class="p">(</span><span class="n">pboxes</span><span class="p">,</span> <span class="n">nboxes</span><span class="p">,</span> <span class="n">icell</span><span class="p">).</span><span class="n">dim3</span><span class="p">();</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">strt_comp</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">strt_comp</span><span class="o">+</span><span class="n">ncomp</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="o">*</span><span class="n">d_avg</span> <span class="o">+=</span> <span class="n">fab</span><span class="p">(</span><span class="n">cell</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">cell</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">cell</span><span class="p">.</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>   <span class="c1">// Add cell value to total.</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">a_avg</span><span class="p">.</span><span class="n">copyToHost</span><span class="p">(</span><span class="o">&amp;</span><span class="n">avg_val</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>         <span class="c1">// Return d_avg value to host in avg_val.</span>
+
+    <span class="n">avg_val</span> <span class="o">=</span> <span class="n">avg_val</span> <span class="o">/</span> <span class="n">total_cells</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that there are two <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncArray</span></span></code>s: one which is constructed outside
+the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loop and stores the sum of the cell values and one that is
+constructed inside that stores the data from the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> that
+defines the boundary. <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">avg_val</span></span></code> needs to be returned after the sum of
+cell values is completed, so an explicit call to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">copyToHost</span></span></code> is made
+after the loop, but the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">async_boxes</span></span></code> is only used on the device, so no
+return call is needed.</p>
 </div>
 <div class="section" id="managedvector">
 <h2>ManagedVector<a class="headerlink" href="#managedvector" title="Permalink to this headline">¶</a></h2>
@@ -910,10 +965,9 @@ lambda to capture. For example:</p>
 </div>
 <p>Finally, AMReX’s expected OpenMP strategy for GPUs is to utilize OpenMP in
 CPU regions to maintain multi-threaded parallelism on work that cannot be
-offloaded efficiently, while using CUDA independently in GPU regions:
-(MPI+OpenMP)+(MPI+CUDA).  This means OpenMP pragmas need to be maintained
-when <code class="docutils literal notranslate"><span class="pre">USE_CUDA=FALSE</span></code> and turned off in locations CUDA is implemented
-when <code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code>.</p>
+offloaded efficiently, while using CUDA independently in GPU regions.
+This means OpenMP pragmas need to be maintained when <code class="docutils literal notranslate"><span class="pre">USE_CUDA=FALSE</span></code>
+and turned off in locations CUDA is implemented when <code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code>.</p>
 <p>This can currently be implemented in preparation for an OpenMP strategy and
 users are highly encouraged to do so now.  This prevents having to track
 down and label the appropriate OpenMP regions in the future and
