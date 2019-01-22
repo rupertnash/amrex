@@ -152,34 +152,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classamrex_1_1_e_b2_1_1_level.html">EB2::Level</a> * <a class="code" href="classamrex_1_1_l_s_core.html#a917795217583cdd187bdf68987e5b6c9">BuildEBLevel</a> (<span class="keyword">const</span> <a class="code" href="classamrex_1_1_e_b2_1_1_geometry_shop.html">EB2::GeometryShop&lt;F&gt;</a> &amp; gshop,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                            <span class="keywordtype">int</span> lev, <span class="keyword">const</span> <a class="code" href="classamrex_1_1_vector.html">Vector&lt;Geometry&gt;</a> &amp; <a class="code" href="classamrex_1_1_amr_mesh.html#a239ef06043779ea301395ae14876d6cb">geom</a> );</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/****************************************************************************</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">     * private member functions                                                 *</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">     ***************************************************************************/</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classamrex_1_1_e_b2_1_1_level.html">EB2::Level</a> * <a class="code" href="classamrex_1_1_l_s_core.html#a917795217583cdd187bdf68987e5b6c9">BuildEBLevel</a> ( <span class="keyword">const</span> <a class="code" href="classamrex_1_1_e_b2_1_1_geometry_shop.html">EB2::GeometryShop&lt;F&gt;</a> gshop,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                             <span class="keywordtype">int</span> lev, <span class="keyword">const</span> <a class="code" href="classamrex_1_1_vector.html">Vector&lt;Geometry&gt;</a> &amp; geom,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                             <span class="keywordtype">int</span> max_crse_level, <span class="keywordtype">int</span> required_crse_lev);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">/****************************************************************************</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     * private data members                                                     *</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     * private member functions                                                 *</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     ***************************************************************************/</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// Used when building finer levels</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classamrex_1_1_e_b2_1_1_geometry_shop.html">EB2::GeometryShop&lt;F&gt;</a> m_gshop;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">/****************************************************************************</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">     * runtime parameters                                                       *</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">     ***************************************************************************/</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">/****************************************************************************</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     * private data members                                                     *</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     ***************************************************************************/</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// Used when building finer levels</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classamrex_1_1_e_b2_1_1_geometry_shop.html">EB2::GeometryShop&lt;F&gt;</a> m_gshop;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#if defined(BL_USE_SENSEI_INSITU)</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor"></span>    amrex::AmrMeshInSituBridge *insitu_bridge;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor"></span>};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_a_m_re_x___e_b___l_s_core_i_8_h.html">AMReX_EB_LSCoreI.H</a>&gt;</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">/****************************************************************************</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">     * runtime parameters                                                       *</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">     ***************************************************************************/</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#if defined(BL_USE_SENSEI_INSITU)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor"></span>    amrex::AmrMeshInSituBridge *insitu_bridge;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor"></span>};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_a_m_re_x___e_b___l_s_core_i_8_h.html">AMReX_EB_LSCoreI.H</a>&gt;</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classamrex_1_1_real_box_html"><div class="ttname"><a href="classamrex_1_1_real_box.html">amrex::RealBox</a></div><div class="ttdoc">A Box with real dimensions. A RealBox is OK iff volume &gt;= 0. </div><div class="ttdef"><b>Definition:</b> AMReX_RealBox.H:18</div></div>
 <div class="ttc" id="classamrex_1_1_e_b2_1_1_geometry_shop_html"><div class="ttname"><a href="classamrex_1_1_e_b2_1_1_geometry_shop.html">amrex::EB2::GeometryShop</a></div><div class="ttdef"><b>Definition:</b> AMReX_EB2_GeometryShop.H:16</div></div>
 <div class="ttc" id="_a_m_re_x___e_b___l_s_core_base_8_h_html"><div class="ttname"><a href="_a_m_re_x___e_b___l_s_core_base_8_h.html">AMReX_EB_LSCoreBase.H</a></div></div>
@@ -187,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classamrex_1_1_l_s_core_base_html"><div class="ttname"><a href="classamrex_1_1_l_s_core_base.html">amrex::LSCoreBase</a></div><div class="ttdef"><b>Definition:</b> AMReX_EB_LSCoreBase.H:34</div></div>
 <div class="ttc" id="_a_m_re_x___flux_register_8_h_html"><div class="ttname"><a href="_a_m_re_x___flux_register_8_h.html">AMReX_FluxRegister.H</a></div></div>
 <div class="ttc" id="_a_m_re_x___e_b__utils_8_h_html"><div class="ttname"><a href="_a_m_re_x___e_b__utils_8_h.html">AMReX_EB_utils.H</a></div></div>
-<div class="ttc" id="classamrex_1_1_l_s_core_html_a917795217583cdd187bdf68987e5b6c9"><div class="ttname"><a href="classamrex_1_1_l_s_core.html#a917795217583cdd187bdf68987e5b6c9">amrex::LSCore::BuildEBLevel</a></div><div class="ttdeci">static const EB2::Level * BuildEBLevel(const EB2::GeometryShop&lt; F &gt; &amp;gshop, int lev, const Vector&lt; Geometry &gt; &amp;geom)</div><div class="ttdef"><b>Definition:</b> AMReX_EB_LSCoreI.H:37</div></div>
+<div class="ttc" id="classamrex_1_1_l_s_core_html_a917795217583cdd187bdf68987e5b6c9"><div class="ttname"><a href="classamrex_1_1_l_s_core.html#a917795217583cdd187bdf68987e5b6c9">amrex::LSCore::BuildEBLevel</a></div><div class="ttdeci">static const EB2::Level * BuildEBLevel(const EB2::GeometryShop&lt; F &gt; &amp;gshop, int lev, const Vector&lt; Geometry &gt; &amp;geom)</div><div class="ttdef"><b>Definition:</b> AMReX_EB_LSCoreI.H:49</div></div>
 <div class="ttc" id="classamrex_1_1_e_b2_1_1_level_html"><div class="ttname"><a href="classamrex_1_1_e_b2_1_1_level.html">amrex::EB2::Level</a></div><div class="ttdef"><b>Definition:</b> AMReX_EB2_Level.H:28</div></div>
 <div class="ttc" id="classamrex_1_1_distribution_mapping_html"><div class="ttname"><a href="classamrex_1_1_distribution_mapping.html">amrex::DistributionMapping</a></div><div class="ttdoc">Calculates the distribution of FABs to MPI processes. </div><div class="ttdef"><b>Definition:</b> AMReX_DistributionMapping.H:38</div></div>
 <div class="ttc" id="_a_m_re_x___e_b___l_s_core_i_8_h_html"><div class="ttname"><a href="_a_m_re_x___e_b___l_s_core_i_8_h.html">AMReX_EB_LSCoreI.H</a></div></div>
@@ -196,7 +200,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="_a_m_re_x___e_b___f_8_h_html"><div class="ttname"><a href="_a_m_re_x___e_b___f_8_h.html">AMReX_EB_F.H</a></div></div>
 <div class="ttc" id="_a_m_re_x___array_lim_8_h_html"><div class="ttname"><a href="_a_m_re_x___array_lim_8_h.html">AMReX_ArrayLim.H</a></div></div>
 <div class="ttc" id="_a_m_re_x___amr_core_8_h_html"><div class="ttname"><a href="_a_m_re_x___amr_core_8_h.html">AMReX_AmrCore.H</a></div></div>
-<div class="ttc" id="classamrex_1_1_l_s_core_html_aef08d0e705a4320bd5b9929bc02b1690"><div class="ttname"><a href="classamrex_1_1_l_s_core.html#aef08d0e705a4320bd5b9929bc02b1690">amrex::LSCore::MakeNewLevelFromScratch</a></div><div class="ttdeci">virtual void MakeNewLevelFromScratch(int lev, Real time, const BoxArray &amp;ba, const DistributionMapping &amp;dm) override</div><div class="ttdef"><b>Definition:</b> AMReX_EB_LSCoreI.H:55</div></div>
+<div class="ttc" id="classamrex_1_1_l_s_core_html_aef08d0e705a4320bd5b9929bc02b1690"><div class="ttname"><a href="classamrex_1_1_l_s_core.html#aef08d0e705a4320bd5b9929bc02b1690">amrex::LSCore::MakeNewLevelFromScratch</a></div><div class="ttdeci">virtual void MakeNewLevelFromScratch(int lev, Real time, const BoxArray &amp;ba, const DistributionMapping &amp;dm) override</div><div class="ttdef"><b>Definition:</b> AMReX_EB_LSCoreI.H:69</div></div>
 <div class="ttc" id="_a_m_re_x___e_b__levelset_8_h_html"><div class="ttname"><a href="_a_m_re_x___e_b__levelset_8_h.html">AMReX_EB_levelset.H</a></div></div>
 <div class="ttc" id="classamrex_1_1_amr_mesh_html_a239ef06043779ea301395ae14876d6cb"><div class="ttname"><a href="classamrex_1_1_amr_mesh.html#a239ef06043779ea301395ae14876d6cb">amrex::AmrMesh::geom</a></div><div class="ttdeci">Vector&lt; Geometry &gt; geom</div><div class="ttdef"><b>Definition:</b> AMReX_AmrMesh.H:187</div></div>
 <div class="ttc" id="classamrex_1_1_l_s_core_html_adbe3f83c44927912f413aff8c03c3671"><div class="ttname"><a href="classamrex_1_1_l_s_core.html#adbe3f83c44927912f413aff8c03c3671">amrex::LSCore::ClearLevel</a></div><div class="ttdeci">virtual void ClearLevel(int lev) override</div><div class="ttdoc">Delete level data. </div><div class="ttdef"><b>Definition:</b> AMReX_EB_LSCoreI.H:26</div></div>
