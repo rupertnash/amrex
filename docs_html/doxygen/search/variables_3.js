@@ -13,7 +13,6 @@ var searchData=
   ['desc_5flst',['desc_lst',['../classamrex_1_1_amr_level.html#acb5f9e8c8d903d3a700d2cc11be500e5',1,'amrex::AmrLevel']]],
   ['destcomp',['destComp',['../structamrex_1_1_fab_array_base_1_1_fab_com_tag.html#a727cd5fc638afd570a51cec1ba21db89',1,'amrex::FabArrayBase::FabComTag::destComp()'],['../structamrex_1_1_fab_copy_descriptor.html#a164510f57c480c98b19458a1516ba6dd',1,'amrex::FabCopyDescriptor::destComp()']]],
   ['distributionmap',['distributionMap',['../classamrex_1_1_fab_array_base.html#adcb92e864340876da67df2fc64d8bdd7',1,'amrex::FabArrayBase']]],
-  ['dlen',['dlen',['../structamrex_1_1_base_fab_data.html#ab421101fe302c5fabe419ddd5aab07ce',1,'amrex::BaseFabData']]],
   ['dm_5fcfb',['dm_cfb',['../structamrex_1_1_fab_array_base_1_1_c_finfo.html#aeb127de6351fbe080c4d924c38e6a9db',1,'amrex::FabArrayBase::CFinfo']]],
   ['dm_5fcrse_5fpatch',['dm_crse_patch',['../structamrex_1_1_fab_array_base_1_1_f_pinfo.html#a0e15dc8cb52e6b5486f6cb4c89612771',1,'amrex::FabArrayBase::FPinfo']]],
   ['dmap',['dmap',['../classamrex_1_1_amr_level.html#ab0ab7555be82910d8100d7bc3aa55d1d',1,'amrex::AmrLevel::dmap()'],['../classamrex_1_1_amr_mesh.html#ab7f8457c3e5a0dc0295247f005e5a107',1,'amrex::AmrMesh::dmap()']]],

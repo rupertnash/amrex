@@ -39,7 +39,7 @@ var searchData=
   ['num_5fsnds',['num_snds',['../classamrex_1_1_neighbor_particle_container.html#a0223bc2e3edebb49c92f6565ba28dd4e',1,'amrex::NeighborParticleContainer']]],
   ['numblocks',['numBlocks',['../structamrex_1_1_cuda_1_1_grid_size.html#a1eafc94db20f558c2dfdf22a355cf675',1,'amrex::Cuda::GridSize']]],
   ['numlocaltiles',['numLocalTiles',['../structamrex_1_1_fab_array_base_1_1_tile_array.html#a830d98c3be0b8b1f0eb88118f7a1f35c',1,'amrex::FabArrayBase::TileArray']]],
-  ['numpts',['numpts',['../structamrex_1_1_base_fab_data.html#a607fce2347161b6ea022dfd043d6f592',1,'amrex::BaseFabData::numpts()'],['../classamrex_1_1_base_umap.html#a5420c2fdbb1aafae7a455ce7b5cb8267',1,'amrex::BaseUmap::numpts()']]],
+  ['numpts',['numpts',['../classamrex_1_1_base_umap.html#a5420c2fdbb1aafae7a455ce7b5cb8267',1,'amrex::BaseUmap']]],
   ['numthreads',['numThreads',['../structamrex_1_1_cuda_1_1_grid_size.html#a19e9d2a0a1650b7a5388d383b736bdbd',1,'amrex::Cuda::GridSize']]],
   ['nuse',['nuse',['../structamrex_1_1_fab_array_base_1_1_cache_stats.html#ab1660586b93a1c418a659ac9d836e833',1,'amrex::FabArrayBase::CacheStats::nuse()'],['../structamrex_1_1_fab_array_base_1_1_tile_array.html#a0a2af2655e0205f6bf46bf2876d4f229',1,'amrex::FabArrayBase::TileArray::nuse()']]],
   ['nvar',['nvar',['../structamrex_1_1_base_fab_data.html#a9e0d16aba820042ba77a256b3e342bc5',1,'amrex::BaseFabData::nvar()'],['../classamrex_1_1_base_umap.html#afff9dd7123b0033209dc8e53723c9ce6',1,'amrex::BaseUmap::nvar()']]]

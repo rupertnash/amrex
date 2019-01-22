@@ -17,7 +17,7 @@ var searchData=
   ['pd_5ffconvert',['PD_fconvert',['../namespaceamrex.html#a2cbc645bf853e3fd5b0ce829f5f032ed',1,'amrex']]],
   ['period',['period',['../classamrex_1_1_geometry.html#ac9995bee825c800a9e5cd343ab512f68',1,'amrex::Geometry']]],
   ['periodicity',['periodicity',['../classamrex_1_1_geometry.html#ac76b6b9691289b3d5919ee2ee777a69f',1,'amrex::Geometry::periodicity() const '],['../classamrex_1_1_geometry.html#a2acc2d9a8a70d621badc63479added6e',1,'amrex::Geometry::periodicity(const Box &amp;b)'],['../classamrex_1_1_periodicity.html#a96496da47b672023b6ce64ef753bbcd2',1,'amrex::Periodicity::Periodicity()'],['../classamrex_1_1_periodicity.html#ae37ac4aa056eca0dd18eccdd247f180b',1,'amrex::Periodicity::Periodicity(const IntVect &amp;v)']]],
-  ['periodicshift',['PeriodicShift',['../classamrex_1_1_particle_container.html#ac2edb80997a975c0316a78c4c08962b9',1,'amrex::ParticleContainer::PeriodicShift()'],['../classamrex_1_1_geometry.html#a5d695b24e8652503765e0742a4971a28',1,'amrex::Geometry::periodicShift()']]],
+  ['periodicshift',['periodicShift',['../classamrex_1_1_geometry.html#a5d695b24e8652503765e0742a4971a28',1,'amrex::Geometry::periodicShift()'],['../classamrex_1_1_particle_container.html#ac2edb80997a975c0316a78c4c08962b9',1,'amrex::ParticleContainer::PeriodicShift()']]],
   ['persistentifstream',['PersistentIFStream',['../structamrex_1_1_vis_m_f_1_1_persistent_i_f_stream.html#a7634d6a3d98fa43f320f1c2b507ebc85',1,'amrex::VisMF::PersistentIFStream']]],
   ['phys_5fbc_5fhi',['phys_bc_hi',['../classamrex_1_1_mac_bndry.html#aad372fdc38155dc5b795a65ab92e071c',1,'amrex::MacBndry']]],
   ['phys_5fbc_5flo',['phys_bc_lo',['../classamrex_1_1_mac_bndry.html#a32c20896b6ea9fdbdea50bbc580ce3a2',1,'amrex::MacBndry']]],

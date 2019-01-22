@@ -357,9 +357,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    <span class="keyword">const</span> Box&amp; bx = tag.sbox;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                    <span class="keyword">auto</span> <span class="keyword">const</span> sfab = this-&gt;array(tag.srcIndex);</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    <span class="keyword">auto</span> pfab = <a class="code" href="namespaceamrex.html#ab661fbf53776d9252951c57b5e7718b0">amrex::makeArray4</a>((value_type*)(dptr),bx);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( bx, ncomp, i, j, k, n,</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( bx, ncomp, ii, jj, kk, n,</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                    {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                        pfab(i,j,k,n) = sfab(i,j,k,n+scomp);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                        pfab(ii,jj,kk,n) = sfab(ii,jj,kk,n+scomp);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    });</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    dptr += (bx.numPts() * ncomp * <span class="keyword">sizeof</span>(value_type));</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                }</div>
@@ -460,9 +460,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <span class="keyword">auto</span>       dfab = this-&gt;array(tag.dstIndex);</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="keyword">const</span> Dim3 offset = (tag.sbox.smallEnd() - tag.dbox.smallEnd()).dim3();</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( tag.dbox, ncomp, i, j, k, n,</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( tag.dbox, ncomp, ii, jj, kk, n,</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                dfab(i,j,k,n+scomp) = sfab(i+offset.x,j+offset.y,k+offset.z,n+scomp);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                dfab(ii,jj,kk,n+scomp) = sfab(ii+offset.x,jj+offset.y,kk+offset.z,n+scomp);</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            });</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    });</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#ifdef AMREX_USE_GPU</span></div>
@@ -1076,9 +1076,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;                        <span class="keyword">const</span> Box&amp; bx = tag.sbox;</div>
 <div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;                        <span class="keyword">auto</span> <span class="keyword">const</span> sfab = src.array(tag.srcIndex);</div>
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;                        <span class="keyword">auto</span> pfab = <a class="code" href="namespaceamrex.html#ab661fbf53776d9252951c57b5e7718b0">amrex::makeArray4</a>((value_type*)(dptr),bx);</div>
-<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;                        <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( bx, NC, i, j, k, n,</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;                        <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( bx, NC, ii, jj, kk, n,</div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;                        {</div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                            pfab(i,j,k,n) = sfab(i,j,k,SC+n);</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                            pfab(ii,jj,kk,n) = sfab(ii,jj,kk,SC+n);</div>
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                        });</div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                        dptr += (bx.numPts() * NC * <span class="keyword">sizeof</span>(value_type));</div>
@@ -1188,14 +1188,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;                    Dim3 offset = (tag.dbox.smallEnd() - tag.sbox.smallEnd()).dim3();</div>
 <div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;            <span class="keywordflow">if</span> (op == FabArrayBase::COPY) {</div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;                        <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( tag.sbox, NC, i, j, k, n,</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;                        <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( tag.sbox, NC, ii, jj, kk, n,</div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;                        {</div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;                            dfab(i+offset.x,j+offset.y,k+offset.z,DC+n) = sfab(i,j,k,SC+n);</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;                            dfab(ii+offset.x,jj+offset.y,kk+offset.z,DC+n) = sfab(ii,jj,kk,SC+n);</div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;                        });</div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;                        <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( tag.sbox, NC, i, j, k, n,</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;                        <a class="code" href="_a_m_re_x___gpu_launch_8_h.html#af44071ada5d6349748d7ee4bd8fcd8d9">AMREX_HOST_DEVICE_FOR_4D</a> ( tag.sbox, NC, ii, jj, kk, n,</div>
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;                        {</div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;                            dfab(i+offset.x,j+offset.y,k+offset.z,DC+n) += sfab(i,j,k,SC+n);</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;                            dfab(ii+offset.x,jj+offset.y,kk+offset.z,DC+n) += sfab(ii,jj,kk,SC+n);</div>
 <div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;                        });</div>
 <div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;            }</div>
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;        }</div>

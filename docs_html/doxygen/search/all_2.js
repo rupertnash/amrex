@@ -14,7 +14,7 @@ var searchData=
   ['basefab_3c_20real_20_3e',['BaseFab&lt; Real &gt;',['../classamrex_1_1_base_fab.html',1,'amrex']]],
   ['basefab_5ffinalize',['BaseFab_Finalize',['../namespaceamrex.html#a67b24cef9df62e8cced041445b239e86',1,'amrex']]],
   ['basefab_5finitialize',['BaseFab_Initialize',['../namespaceamrex.html#a652bd22fb8cfcdfeaa4ac62e81a41fe6',1,'amrex']]],
-  ['basefabdata',['BaseFabData',['../structamrex_1_1_base_fab_data.html#a1652057151a9721e460e39300f780e9f',1,'amrex::BaseFabData::BaseFabData(T *a_dptr, Box const &amp;a_domain, int a_nvar, IntVect const &amp;a_dlen, long a_numpts, long a_truesize, bool a_ptr_owner, bool a_shared_memory)'],['../structamrex_1_1_base_fab_data.html#a2c734fc3f402e0749da3a52dba9f1077',1,'amrex::BaseFabData::BaseFabData()=default']]],
+  ['basefabdata',['BaseFabData',['../structamrex_1_1_base_fab_data.html#ae851b3db06b509d1d48eae2885fc2634',1,'amrex::BaseFabData::BaseFabData(T *a_dptr, Box const &amp;a_domain, int a_nvar, long a_truesize, bool a_ptr_owner, bool a_shared_memory)'],['../structamrex_1_1_base_fab_data.html#a2c734fc3f402e0749da3a52dba9f1077',1,'amrex::BaseFabData::BaseFabData()=default']]],
   ['basefabdata',['BaseFabData',['../structamrex_1_1_base_fab_data.html',1,'amrex']]],
   ['baseumap',['BaseUmap',['../classamrex_1_1_base_umap.html',1,'amrex']]],
   ['baseumap',['BaseUmap',['../classamrex_1_1_base_umap.html#a7139c2c6f64902632db8a27b3c7ccd0a',1,'amrex::BaseUmap']]],
