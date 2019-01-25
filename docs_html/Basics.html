@@ -1450,6 +1450,15 @@ non-tiling version, whereas in the tiling version the kernel function is called
 8 times.</p>
 <p>It is important to use the correct <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> when implementing tiling, especially
 if the box is used to define a work region inside of the loop. For example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// MFIter loop with tiling on.</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Box</span> <span class="n">bx</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">validbox</span><span class="p">();</span>     <span class="c1">// Gets box of entire, untiled region.</span>
+    <span class="n">calcOverBox</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>             <span class="c1">// ERROR! Works on entire box, not tiled box.</span>
+                                 <span class="c1">// Other iterations will redo many of the same cells.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>The tile size can be explicitly set when defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code>.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// No tiling in x-direction. Tile size is 16 for y and 32 for z.</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span><span class="n">IntVect</span><span class="p">(</span><span class="mi">1024000</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">32</span><span class="p">));</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span> <span class="p">{...}</span>

@@ -198,6 +198,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a8395a097ce8af9ef7b1d4df5754b6191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a767b448e7ba924cbe591535579a724b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1_l_s_factory.html#a767b448e7ba924cbe591535579a724b3">intersect_data</a> (<a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;data, <a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> &amp;valid, const <a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;data_in, const <a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> &amp;valid_in, const <a class="el" href="classamrex_1_1_geometry.html">Geometry</a> &amp;geom_ls)</td></tr>
 <tr class="separator:a767b448e7ba924cbe591535579a724b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1520aa876881287222f18ada1f73f826"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1_l_s_factory.html#a1520aa876881287222f18ada1f73f826">union_data</a> (<a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;data, <a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> &amp;valid, const <a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;data_in, const <a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> &amp;valid_in, const <a class="el" href="classamrex_1_1_geometry.html">Geometry</a> &amp;geom_ls)</td></tr>
+<tr class="separator:a1520aa876881287222f18ada1f73f826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abdd30fe9dc57e254aebe61ee6fc2c0f5"></a>
@@ -1135,6 +1137,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs intersection operation with the level-set representation of <code>eb_factory</code>. The implicit function (mf_impfunc) is needed to select the inside/outside edge-cases where the level-set cannot be determined by projection onto EB facets. </p>
 
 </div>
 </div>
@@ -1167,6 +1170,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs intersection operation with the level-set representation of <code>eb_factory</code>. The integer <code>ebt_size</code> specifies the (cubic) tile size used to search of EB facets. </p>
 
 </div>
 </div>
@@ -1199,6 +1203,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs intersection operation with the level-set representation of <code>eb_factory</code>. The <a class="el" href="classamrex_1_1_int_vect.html">IntVect</a> <code>ebt_size</code> specifies the tile size used to search of EB facets. </p>
 
 </div>
 </div>
@@ -1225,6 +1230,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs intersection operation with the level-set given in the <a class="el" href="classamrex_1_1_multi_fab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> <code>mf_impfunc</code>. If the flag <code>apply_threshold == true</code>, then the level-set in <code>mf_impfunc</code> will be thresholded. </p>
 
 </div>
 </div>
@@ -1277,6 +1283,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Updates the level-set <a class="el" href="classamrex_1_1_multi_fab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> <code>data</code> with the result of intersection operation between <code>data</code> and another level-set <a class="el" href="classamrex_1_1_multi_fab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> <code>data_in</code>, for all cells where <code>valid_in == 1</code>. The <a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> <code>valid</code> is also updated with the new valid flags corresponding to the intersection level-set. </p>
 
 </div>
 </div>
@@ -1360,6 +1367,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs union operation with the level-set representation of <code>eb_factory</code>. The implicit function (mf_impfunc) is needed to select the inside/outside edge-cases where the level-set cannot be determined by projection onto EB facets. </p>
 
 </div>
 </div>
@@ -1392,6 +1400,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs union operation with the level-set representation of <code>eb_factory</code>. The integer <code>ebt_size</code> specifies the (cubic) tile size used to search of EB facets. </p>
 
 </div>
 </div>
@@ -1424,6 +1433,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs union operation with the level-set representation of <code>eb_factory</code>. The <a class="el" href="classamrex_1_1_int_vect.html">IntVect</a> <code>ebt_size</code> specifies the tile size used to search of EB facets. </p>
 
 </div>
 </div>
@@ -1450,6 +1460,60 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs union operation with the level-set given in the <a class="el" href="classamrex_1_1_multi_fab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> <code>mf_impfunc</code>. If the flag <code>apply_threshold == true</code>, then the level-set in <code>mf_impfunc</code> will be thresholded. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1520aa876881287222f18ada1f73f826"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::LSFactory::union_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>valid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>data_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>valid_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1_geometry.html">Geometry</a> &amp;&#160;</td>
+          <td class="paramname"><em>geom_ls</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Updates the level-set <a class="el" href="classamrex_1_1_multi_fab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> <code>data</code> with the result of union operation between <code>data</code> and another level-set <a class="el" href="classamrex_1_1_multi_fab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> <code>data_in</code>, for all cells where <code>valid_in == 1</code>. The <a class="el" href="classamrex_1_1i_multi_fab.html">iMultiFab</a> <code>valid</code> is also updated with the new valid flags corresponding to the intersection level-set. </p>
 
 </div>
 </div>

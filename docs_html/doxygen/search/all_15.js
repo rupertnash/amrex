@@ -7,6 +7,7 @@ var searchData=
   ['unfillable',['Unfillable',['../namespaceamrex.html#a9f13be15ca764e94680df68d8b9505d6a86e193c43ac00a14b0943baf3433c6d0',1,'amrex']]],
   ['ungrownbox',['UngrownBox',['../classamrex_1_1_fill_patch_iterator.html#a8b28e83d795edcadebe049e773b4a136',1,'amrex::FillPatchIterator']]],
   ['union',['Union',['../classamrex_1_1_l_s_factory.html#a7d434880721e515d6458e198ba579219',1,'amrex::LSFactory::Union(const EBFArrayBoxFactory &amp;eb_factory, const MultiFab &amp;mf_impfunc)'],['../classamrex_1_1_l_s_factory.html#a350082120b504041512983b0960bcb8b',1,'amrex::LSFactory::Union(const EBFArrayBoxFactory &amp;eb_factory, const MultiFab &amp;mf_impfunc, int ebt_size)'],['../classamrex_1_1_l_s_factory.html#a37f562a76e4efdb4a4eab2495910fd1f',1,'amrex::LSFactory::Union(const EBFArrayBoxFactory &amp;eb_factory, const MultiFab &amp;mf_impfunc, const IntVect &amp;ebt_size)'],['../classamrex_1_1_l_s_factory.html#aacb082130197d26c131f91f9c12e281d',1,'amrex::LSFactory::Union(const MultiFab &amp;mf_impfunc, bool apply_threshold=false)']]],
+  ['union_5fdata',['union_data',['../classamrex_1_1_l_s_factory.html#a1520aa876881287222f18ada1f73f826',1,'amrex::LSFactory']]],
   ['unionif',['UnionIF',['../classamrex_1_1_e_b2_1_1_union_i_f.html',1,'amrex::EB2']]],
   ['uniqify',['uniqify',['../classamrex_1_1_box_array.html#ae3fba31af025b800aef97da09bc4113c',1,'amrex::BoxArray']]],
   ['uniquerandomsubset',['UniqueRandomSubset',['../namespaceamrex.html#aa2c1209819cd8dd79499c2b9f088120e',1,'amrex']]],

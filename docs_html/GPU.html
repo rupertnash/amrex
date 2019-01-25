@@ -865,9 +865,8 @@ macro can be used to launch threads that work across cells in a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> defined by a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code>. However, the macro
 is also capable of launching for a specified number of elements
 that will be split across GPU threads. For example,
-<code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/Launch</span></code> also shows how the box launch can be</p>
-<blockquote>
-<div>rewritten as a launch over the number of points in the box:</div></blockquote>
+<code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/Launch</span></code> also shows how the box launch can be
+rewritten as a launch over the number of points in the box:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// launch CUDA C++ kernel to add 1</span>
 <span class="c1">// This example shows how to launch kernels over a 1D iteration space.</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">mf</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span>
