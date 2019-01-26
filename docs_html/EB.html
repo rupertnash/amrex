@@ -380,7 +380,7 @@ mesh.</li>
 </pre></div>
 </div>
 <div class="section" id="implicit-function">
-<h2>Implicit Function<a class="headerlink" href="#implicit-function" title="Permalink to this headline">¶</a></h2>
+<span id="sec-eb-ebinit-if"></span><h2>Implicit Function<a class="headerlink" href="#implicit-function" title="Permalink to this headline">¶</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">amrex/Src/EB/</span></code>, there are a number of predefined implicit function classes
 for basic shapes. One can use these directly or as template for their own
 classes.</p>
@@ -625,7 +625,7 @@ provides a way to construct level-sets representing the signed distance function
 from the closest EB surface. In our implementation, the level-set data is stored
 as a 1-component nodal <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> (cf. <a class="reference internal" href="Basics.html#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a>) where
 each node stores its closest distance to the EB. The subroutine
-<code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_eb_interp_levelset</span></span></code> (in <cite>/Scr/EB/AMREX_EB_levelset_F.F90</cite>)
+<code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_eb_interp_levelset</span></span></code> (in <code class="docutils literal notranslate"><span class="pre">/Scr/EB/AMREX_EB_levelset_F.F90</span></code>)
 interpolates the level-set <span class="math notranslate nohighlight">\(\phi(\mathbf{r})\)</span> to any position
 <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> from the pre-computed level-set <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code>. Likewise the
 subroutine <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_eb_normal_levelset</span></span></code> interpolated the normal
@@ -642,19 +642,19 @@ manages multi-level level-set data. These are described in further detail below.
 <div class="section" id="a-note-on-filling-level-sets-from-ebfarrayboxfactory">
 <h2>A Note on Filling Level-Sets from <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code><a class="headerlink" href="#a-note-on-filling-level-sets-from-ebfarrayboxfactory" title="Permalink to this headline">¶</a></h2>
 <p>The data stored in a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code>, represents the embedded boundary
-as a discrete collection of volume fraction, and area fractions over a grid.
+as a discrete collection of volume fractions, and area fractions over a grid.
 Here this is further simplified by thinking of the EB as a collection of planar
 facets. This means that for any given node in a grid, the nearest EB facet might
 be in another grid. Hence if the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code> has <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">n_pad</span></span></code>
 ghost cells, then for any given grid, there could be EB facets that are
-<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">n_pad</span></span> <span class="operator"><span class="pre">+</span></span> <span class="literal number integer"><span class="pre">1</span></span></code> cells away, and we would <em>not</em> “see”. In other words, if the
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">n_pad</span></span> <span class="operator"><span class="pre">+</span></span> <span class="literal number integer"><span class="pre">1</span></span></code> cells away, yet we would <em>not</em> “see”. In other words, if the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code> is defined on a grid with spacing <span class="math notranslate nohighlight">\(h\)</span>, then, and
 we do not have any EB facets in the current grid, then any node within that grid
-is <em>at least</em> <span class="math notranslate nohighlight">\((\mathrm{n_{pad}}+1)h\)</span> away from the nearest EB surface.</p>
+is <em>at least</em> <span class="math notranslate nohighlight">\((n_\mathrm{pad}+1)h\)</span> away from the nearest EB surface.</p>
 <p>Hence, when filling a level-set, it will “max-out” at
-<span class="math notranslate nohighlight">\(\pm(\mathrm{n_{pad}}+1)h\)</span>. Hence it is recommended to think of this kind
-of level-set function as the point being “at least” <span class="math notranslate nohighlight">\(\phi(\mathbf{r})\)</span>
-from the EB surface.</p>
+<span class="math notranslate nohighlight">\(\pm(n_\mathrm{pad}+1)h\)</span>. Hence it is recommended to think of this kind of
+level-set function as the point being “at least” <span class="math notranslate nohighlight">\(\phi(\mathbf{r})\)</span> from
+the EB surface.</p>
 <div class="figure" id="id4">
 <span id="fig-local-levelset"></span><a class="reference internal image-reference" href="_images/loc_ls_ex.png"><img alt="_images/loc_ls_ex.png" src="_images/loc_ls_ex.png" style="width: 50.0%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">: Example of a “local” level-set representing a cylinder. The level-set
@@ -662,11 +662,12 @@ function is a (linear) signed distance function near the EB-surface, and it
 plateaus further away from it.</span></p>
 </div>
 <p>Figure <a class="reference internal" href="#fig-local-levelset"><span class="std std-numref">Fig. 12</span></a> shows an example of such a local level-set
-description. Only cells that are within <span class="math notranslate nohighlight">\(\pm(\mathrm{n_{pad}}+1)h\)</span> of the
-EB surface are filled with a level-set. The rest is filled with lower (upper)
-bound. If the goal is capture interactions between the EB surface and a point
-somewhere else, this approach usually suffices as we only need to know if we are
-“far enough” from the EB in most applications.</p>
+description for a cylinder. Only cells that are within
+<span class="math notranslate nohighlight">\(\pm(n_\mathrm{pad}+1)h\)</span> of the EB surface are filled with a level-set.
+The rest is filled with lower (upper) bound. If the goal is capture interactions
+between the EB surface and a point somewhere else, this approach usually
+suffices as we only need to know if we are “far enough” from the EB in most
+applications.</p>
 <p>Since finding the closest distance between a point and an arbitrary surface is
 computationally expensive, we advice that <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">n_pad</span></span></code> is chosen as the smallest
 necessary number for the application.</p>
@@ -674,17 +675,16 @@ necessary number for the application.</p>
 <div class="section" id="filling-level-sets-without-lsfactory">
 <h2>Filling Level-Sets without <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code><a class="headerlink" href="#filling-level-sets-without-lsfactory" title="Permalink to this headline">¶</a></h2>
 <p>The static function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSFactory</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">fill_data</span></span></code> (defined in
-<cite>Src/EB/AMReX_EB_levelset.cpp</cite>) fills a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> with the nodal level-set
+<code class="docutils literal notranslate"><span class="pre">Src/EB/AMReX_EB_levelset.cpp</span></code>) fills a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> with the nodal level-set
 values and another <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">iMultiFab</span></span></code> with integer tags that are 1 whenever a node
 is near the EB surface. It is then left up to the application to manage the
 level-set <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code>.</p>
-<p>AMReX defines its embedded surfaces using implicit functions (see above).
-Normally these implicit functions are usually <em>not</em> signed distance functions
-(i.e. their value at <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> is not the minimal distance to the EB
-surface). However, in rare cases such as the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EB2</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">PlaneIF</span></span></code>, it is. In this
-case, the most straight-forward way to fill a level-set. If an signed-distance
-implicit function is know, and stored as a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span> <span class="name"><span class="pre">mf_impfunc</span></span></code>, then we
-can use</p>
+<p>AMReX defines embedded surfaces using implicit functions (see above). Normally
+these implicit functions are usually <em>not</em> signed distance functions (i.e. their
+value at <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> is not the minimal distance to the EB surface).
+However, in rare cases such as the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EB2</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">PlaneIF</span></span></code>, it is. In this case, the
+most straight-forward way to fill a level-set. If an signed-distance implicit
+function is know, and stored as a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span> <span class="name"><span class="pre">mf_impfunc</span></span></code>, then we can use</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">fill_data</span> <span class="p">(</span><span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span> <span class="n">iMultiFab</span> <span class="o">&amp;</span> <span class="n">valid</span><span class="p">,</span>
                        <span class="k">const</span> <span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">mf_impfunc</span><span class="p">,</span>
                        <span class="kt">int</span> <span class="n">eb_pad</span><span class="p">,</span> <span class="k">const</span> <span class="n">Geometry</span> <span class="o">&amp;</span> <span class="n">eb_geom</span><span class="p">);</span>
@@ -705,8 +705,9 @@ can use</p>
 stored in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span> <span class="name"><span class="pre">mf_impfunc</span></span></code>, and a threshold of
 <code class="code cpp c++ docutils literal notranslate"><span class="literal number integer"><span class="pre">2</span></span><span class="operator"><span class="pre">*</span></span><span class="name"><span class="pre">geom_eb</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">CellSize</span></span><span class="punctuation"><span class="pre">()</span></span></code>. The helper class <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">GShopLSFactory</span></span></code> converts EB2
 implicit functions to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFabs</span></span></code> (defined in
-<cite>Src/EB/AMReX_EB_levelset.H</cite>).</p>
-<p>The much more interesting application of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSFactory</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">fill_data</span></span></code> is filling a level-set given a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code>:</p>
+<code class="docutils literal notranslate"><span class="pre">Src/EB/AMReX_EB_levelset.H</span></code>).</p>
+<p>The much more interesting application of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSFactory</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">fill_data</span></span></code> is
+filling a level-set given a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code>:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">fill_data</span> <span class="p">(</span><span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span> <span class="n">iMultiFab</span> <span class="o">&amp;</span> <span class="n">valid</span><span class="p">,</span>
                        <span class="k">const</span> <span class="n">EBFArrayBoxFactory</span> <span class="o">&amp;</span> <span class="n">eb_factory</span><span class="p">,</span>
                        <span class="k">const</span> <span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">eb_impfunc</span><span class="p">,</span>
@@ -719,16 +720,16 @@ implicit functions to <code class="code cpp c++ docutils literal notranslate"><s
 implicit function using the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span> <span class="name"><span class="pre">eb_impfunc</span></span></code>, as this is used to
 determine the inside/outside when no EB facets can be found, or in special
 edge-cases. The user also needs to specify the tile size (<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">IntVect</span></span>
-<span class="name"><span class="pre">ebt_size</span></span></code>), the level-set and EB refinement (i.e. the grid over which <cite>data</cite> is
-defined is refined by a factor of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ls_ref</span></span><span class="operator"><span class="pre">/</span></span><span class="name"><span class="pre">eb_ref</span></span></code> compared to the
-<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_factory</span></span></code> ‘s grid), and the Geometries <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">geom</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">geom_eb</span></span></code>
-corresponding to the grids of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">data</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_factory</span></span></code> respectively.</p>
-<p>When filling <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">data</span></span></code>, a tile-size of <cite>ebt_size</cite> is used. Only EB facets
-within a tile (plus the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_factory</span></span></code> ‘s ghost cells) are considered. Hence,
-chosing an appropriately small <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ebt_size</span></span></code> can significantly increase
-performance.</p>
-<p>Hence the following fills a level-set with a cylinder EB (like that shown in
-Fig. <a class="reference internal" href="#fig-local-levelset"><span class="std std-numref">Fig. 12</span></a>).</p>
+<span class="name"><span class="pre">ebt_size</span></span></code>), the level-set and EB refinement (i.e. the grid over which
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">data</span></span></code> is defined is refined by a factor of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ls_ref</span></span><span class="operator"><span class="pre">/</span></span><span class="name"><span class="pre">eb_ref</span></span></code> compared
+to the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_factory</span></span></code> ‘s grid), and the Geometries <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">geom</span></span></code> and
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">geom_eb</span></span></code> corresponding to the grids of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">data</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_factory</span></span></code>
+respectively.</p>
+<p>When filling <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">data</span></span></code>, a tile-size of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ebt_size</span></span></code> is used. Only EB facets
+within a tile (plus the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_factory</span></span></code> ghost cells) are considered. Hence,
+chosing an appropriate <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ebt_size</span></span></code> can significantly increase performance.</p>
+<p>For example, the following fills a level-set with a cylinder EB (like that shown
+in Fig. <a class="reference internal" href="#fig-local-levelset"><span class="std std-numref">Fig. 12</span></a>).</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define nGrow of level-set and EB</span>
 <span class="kt">int</span> <span class="n">ls_pad</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">eb_pad</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
@@ -759,22 +760,41 @@ Fig. <a class="reference internal" href="#fig-local-levelset"><span class="std s
 <p>Note that in theory the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span> <span class="name"><span class="pre">eb_factory</span></span></code> could be defined on
 a different resolution as the the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span> <span class="name"><span class="pre">ba</span></span></code>. In this case, the
 appropriate refinements and geometries must be specified. Also note that the
-thresholding behaviour (due to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_pad</span></span></code>, is specified via the
+thresholding behaviour (due to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_pad</span></span></code>) is specified via the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code> constructor. The implicit function MultiFab needs to
 have the same grids as <cite>data</cite>.</p>
 <p>Since this relies on the interplay of many different parameters, a number of
 utility functions and helper classes have been created. These are discussed in
-the subsequent section.</p>
+the subsequent sections.</p>
+<p>The common operations of intersections and unions (similar to EB implicit
+functions, discussed in <a class="reference internal" href="#sec-eb-ebinit-if"><span class="std std-ref">Implicit Function</span></a>) can also be applied to
+level-sets. Without the use of a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code>, the functions:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">intersect_data</span> <span class="p">(</span><span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span> <span class="n">iMultiFab</span> <span class="o">&amp;</span> <span class="n">valid</span><span class="p">,</span>
+                            <span class="k">const</span> <span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">data_in</span><span class="p">,</span> <span class="k">const</span> <span class="n">iMultiFab</span> <span class="o">&amp;</span> <span class="n">valid_in</span><span class="p">,</span>
+                            <span class="k">const</span> <span class="n">Geometry</span> <span class="o">&amp;</span> <span class="n">geom_ls</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">union_data</span> <span class="p">(</span><span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">,</span> <span class="n">iMultiFab</span> <span class="o">&amp;</span> <span class="n">valid</span><span class="p">,</span>
+                        <span class="k">const</span> <span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">data_in</span><span class="p">,</span> <span class="k">const</span> <span class="n">iMultiFab</span> <span class="o">&amp;</span> <span class="n">valid_in</span><span class="p">,</span>
+                        <span class="k">const</span> <span class="n">Geometry</span> <span class="o">&amp;</span> <span class="n">geom_ls</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>These apply the intersection (element-wise minimum) and union (maximum) between
+the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span> <span class="name"><span class="pre">data</span></span></code>, and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">data_in</span></span></code>. The result overwrites the contents
+of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">data</span></span></code>. The tags stored in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">iMultiFab</span></span> <span class="name"><span class="pre">valid_in</span></span></code> determine where
+the intersection takes place (i.e. only cells where both <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">valid_in</span></span> <span class="operator"><span class="pre">==</span></span> <span class="literal number integer"><span class="pre">1</span></span></code>
+are intersected, others are ignored).</p>
 </div>
 <div class="section" id="using-lsfactory">
 <h2>Using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code><a class="headerlink" href="#using-lsfactory" title="Permalink to this headline">¶</a></h2>
 <p>In the previous section, we’ve seen that the level-set and EB grids can exist on
 different levels of refinement. The practical reason behind this is that
 sometimes we want to capture interactions that are very sensitive close to EBs,
-but this can sometimes be difficult to keep track off. Hence the
-<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code> can be helpful int taking care of all of these parameters.</p>
+but this can sometimes be difficult to keep track of. Hence the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code>
+can be helpful in taking care of all of these parameters.</p>
 <p>The basic principle of the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code> (defined in
-<cite>Src/EB/AMReX_EB_levelset.H</cite>) is that it is created relative to some reference
+<code class="docutils literal notranslate"><span class="pre">Src/EB/AMReX_EB_levelset.H</span></code>) is that it is created relative to some reference
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span> <span class="name"><span class="pre">ba</span></span></code>, <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Geometry</span></span> <span class="name"><span class="pre">geom</span></span></code>, and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span> <span class="name"><span class="pre">dm</span></span></code>. The
 user then specifies refinement factors <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ls_ref</span></span></code> of the level-set data and
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">eb_ref</span></span></code> of the EB grid. Calling the constructor:</p>
@@ -784,8 +804,11 @@ user then specifies refinement factors <code class="code cpp c++ docutils litera
 </pre></div>
 </div>
 <p>Then creates all appropriate grids and geometries. Note that we can also specify
-the tile size used in the <cite>LSFactory::fill_data</cite> function.</p>
-<p>When a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFacotry</span></span></code> is first created, it is set to <code class="code fortran docutils literal notranslate"><span class="name builtin"><span class="pre">huge</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">amrex_real</span></span><span class="punctuation"><span class="pre">)</span></span></code>. Ie. there are no surfaces, and so the level-set value is effectively infinite. It can then be filled just like in the previous section:</p>
+the tile size used internally in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">fill_data</span></span></code> function.</p>
+<p>When a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFacotry</span></span></code> is first created, its level-set values are set to
+<code class="code fortran docutils literal notranslate"><span class="name builtin"><span class="pre">huge</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">amrex_real</span></span><span class="punctuation"><span class="pre">)</span></span></code>. I. e. there are no surfaces, and so the level-set
+value is effectively infinite. It can then be filled just like in the previous
+section:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define refinement of level-set and EB</span>
 <span class="kt">int</span> <span class="n">ls_ref</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">eb_ref</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -827,12 +850,21 @@ the tile size used in the <cite>LSFactory::fill_data</cite> function.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">MultiFab</span><span class="o">&gt;</span> <span class="n">level_set_data</span> <span class="o">=</span> <span class="n">level_set</span><span class="p">.</span><span class="n">copy_data</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>Both of the data above are on grids what have been refined by <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ls_ref</span></span></code>
+<p>Both of the data above are on grids that have been refined by <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ls_ref</span></span></code>
 (with respect to the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span> <span class="name"><span class="pre">ba</span></span></code>). In order to get a copy of the
 level-set data at the coarseness of the original grids, use:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">MultiFab</span><span class="o">&gt;</span> <span class="n">level_set_data_crse</span> <span class="o">=</span> <span class="n">level_set</span><span class="p">.</span><span class="n">coarsen_data</span><span class="p">();</span>
 </pre></div>
 </div>
+<p>Note however, that the level-set data is nodal data. Therefore, even though the
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span> <span class="name"><span class="pre">level_set_data_crse</span></span></code> is defined on a grid with the same
+resolution as the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span> <span class="name"><span class="pre">ba</span></span></code>, it is defined on the nodal version of that
+grid.</p>
+<p>The <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code> is also there to make operations on the level-set easier.
+Intersection and Union operations with EB factories and implicit functions in
+the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code> class. As well as functions to regrid (updating the
+underlying <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code>), copying, and
+inverting the level-set function.</p>
 </div>
 </div>
 <div class="section" id="linear-solvers">
