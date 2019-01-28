@@ -117,6 +117,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#a-note-on-filling-level-sets-from-ebfarrayboxfactory">A Note on Filling Level-Sets from <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EBFArrayBoxFactory</span></span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#filling-level-sets-without-lsfactory">Filling Level-Sets without <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-lsfactory">Using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filling-multi-level-level-sets-without-lscore">Filling Multi-Level Level-Sets without <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-lscore">Using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#linear-solvers">Linear Solvers</a></li>
@@ -712,7 +714,7 @@ computationally expensive, we advice that <code class="code cpp c++ docutils lit
 necessary number for the application.</p>
 </div>
 <div class="section" id="filling-level-sets-without-lsfactory">
-<h2>Filling Level-Sets without <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code><a class="headerlink" href="#filling-level-sets-without-lsfactory" title="Permalink to this headline">¶</a></h2>
+<span id="ss-ls-nolsf"></span><h2>Filling Level-Sets without <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code><a class="headerlink" href="#filling-level-sets-without-lsfactory" title="Permalink to this headline">¶</a></h2>
 <p>The static function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSFactory</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">fill_data</span></span></code> (defined in
 <code class="docutils literal notranslate"><span class="pre">Src/EB/AMReX_EB_levelset.cpp</span></code>) fills a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> with the nodal level-set
 values and another <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">iMultiFab</span></span></code> with integer tags that are 1 whenever a node
@@ -900,10 +902,133 @@ level-set data at the coarseness of the original grids, use:</p>
 resolution as the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span> <span class="name"><span class="pre">ba</span></span></code>, it is defined on the nodal version of that
 grid.</p>
 <p>The <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code> is also there to make operations on the level-set easier.
-Intersection and Union operations with EB factories and implicit functions in
-the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code> class. As well as functions to regrid (updating the
-underlying <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code>), copying, and
-inverting the level-set function.</p>
+Intersection and Union operations with EB factories and implicit functions are
+available in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSFactory</span></span></code> class. As well as functions to regrid
+(updating the underlying <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code>),
+copying, and inverting the level-set function.</p>
+</div>
+<div class="section" id="filling-multi-level-level-sets-without-lscore">
+<h2>Filling Multi-Level Level-Sets without <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code><a class="headerlink" href="#filling-multi-level-level-sets-without-lscore" title="Permalink to this headline">¶</a></h2>
+<p>AMReX also provides code to fill the level-set function on different levels of
+refinement. The static function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSCoreBase</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">FillLevelSet</span></span></code>,
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSCoreBase</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">MakeNewLevelFromCoarse</span></span></code>, and
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSCoreBase</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">FillVolfracTags</span></span></code> (or
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">LSCoreBase</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">FillLevelSetTags</span></span></code> for level-set tagging instead of
+volume-fraction tagging) fill a finer level from a coarse one. Just like the
+section on <a class="reference internal" href="#ss-ls-nolsf"><span class="std std-ref">Filling Level-Sets without LSFactory</span></a>, the philosophy here is to enable to user to fill
+a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> with level-set values, and manage this data structure
+themselves. Later we will discuss the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code> class, which automatically
+constructs multi-level level-sets.</p>
+<p>One common problem with level-set function is that they are expensive to
+compute. Therefore, a strategy would be to compromise by computing the level-set
+function accurately near embedded boundaries (where precision is important), and
+at a lower resolution for from walls. The function</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">FillVolfracTags</span><span class="p">(</span> <span class="kt">int</span> <span class="n">lev</span><span class="p">,</span> <span class="n">TagBoxArray</span> <span class="o">&amp;</span> <span class="n">tags</span><span class="p">,</span> <span class="kt">int</span> <span class="n">buffer</span><span class="p">,</span>
+                              <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">BoxArray</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">grids</span><span class="p">,</span>
+                              <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">DistributionMapping</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">dmap</span><span class="p">,</span>
+                              <span class="k">const</span> <span class="n">EB2</span><span class="o">::</span><span class="n">Level</span> <span class="o">&amp;</span> <span class="n">eb_lev</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">Geometry</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">geom</span> <span class="p">);</span>
+</pre></div>
+</div>
+<p>fills a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">TagBoxArray</span></span></code> with tags wherever the volume fraction is between 0
+and 1. This way any cut-cells a buffered of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">buffer</span></span></code> many neighbors is
+tagged for refinement. If we need finer control over the tagging, the function</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">FillLevelSetTags</span><span class="p">(</span> <span class="kt">int</span> <span class="n">lev</span><span class="p">,</span> <span class="n">TagBoxArray</span> <span class="o">&amp;</span> <span class="n">tags</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">phierr</span><span class="p">,</span>
+                              <span class="k">const</span> <span class="n">MultiFab</span> <span class="o">&amp;</span> <span class="n">levelset_data</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">Geometry</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">geom</span> <span class="p">);</span>
+</pre></div>
+</div>
+<p>takes a list of threshold level-set values (<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">Real</span></span><span class="operator"><span class="pre">&gt;</span></span> <span class="operator"><span class="pre">&amp;</span></span> <span class="name"><span class="pre">phierr</span></span></code>) and
+tags cells for refinement if the coarse estimate of the levelset
+(<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">levelset_data</span></span></code>) from level <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">lev</span></span></code> is less than <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">phierr</span></span><span class="punctuation"><span class="pre">[</span></span><span class="name"><span class="pre">lev</span></span><span class="punctuation"><span class="pre">]</span></span></code>.</p>
+<p>The following code would then fill a multi-level hierarchy of level-sets
+contained in <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">&gt;</span></span> <span class="name"><span class="pre">level_sets</span></span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">//___________________________________________________________________________</span>
+<span class="c1">// Start with level zero</span>
+
+<span class="n">EBFArrayBoxFactory</span> <span class="nf">eb_factory</span><span class="p">(</span><span class="o">*</span> <span class="n">eb_levels</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">grids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dmap</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                              <span class="p">{</span><span class="n">eb_pad</span><span class="p">,</span> <span class="n">eb_pad</span><span class="p">,</span> <span class="n">leb_pad</span><span class="p">},</span> <span class="n">EBSupport</span><span class="o">::</span><span class="n">full</span><span class="p">);</span>
+
+<span class="c1">// NOTE: reference BoxArray is not nodal</span>
+<span class="n">BoxArray</span> <span class="n">nd_ba</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">convert</span><span class="p">(</span><span class="n">grids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">IntVect</span><span class="o">::</span><span class="n">TheNodeVector</span><span class="p">());</span>
+
+<span class="n">level_sets</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">define</span><span class="p">(</span><span class="n">nd_ba</span><span class="p">,</span> <span class="n">dmap</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="p">);</span>
+<span class="n">iMultiFab</span> <span class="nf">valid</span><span class="p">(</span><span class="n">nd_ba</span><span class="p">,</span> <span class="n">dmap</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="p">);</span>
+
+<span class="c1">// NOTE: implicit function data might not be on the right grids</span>
+<span class="n">MultiFab</span> <span class="n">impfunc</span> <span class="o">=</span> <span class="n">MFUtil</span><span class="o">::</span><span class="n">regrid</span><span class="p">(</span><span class="n">nd_ba</span><span class="p">,</span> <span class="n">dmap</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">implicit_functions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">true</span><span class="p">);</span>
+
+<span class="n">LSFactory</span><span class="o">::</span><span class="n">fill_data</span><span class="p">(</span><span class="n">level_sets</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">valid</span><span class="p">,</span> <span class="n">ebfactory</span><span class="p">,</span> <span class="n">impfunc</span><span class="p">,</span>
+                     <span class="mi">32</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+
+<span class="c1">//___________________________________________________________________________</span>
+<span class="c1">// Fill finer levels, using coarser level to estimate level-set</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">lev</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">lev</span> <span class="o">&lt;</span> <span class="n">nlev</span><span class="p">;</span> <span class="n">lev</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="c1">// NOTE: reference BoxArray is not nodal</span>
+         <span class="n">BoxArray</span> <span class="n">ba</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">convert</span><span class="p">(</span><span class="n">grids</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">IntVect</span><span class="o">::</span><span class="n">TheNodeVector</span><span class="p">());</span>
+         <span class="n">level_sets</span><span class="p">[</span><span class="n">lev</span><span class="p">].</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span> <span class="n">MultiFab</span><span class="p">);</span>
+         <span class="n">iMultiFab</span> <span class="nf">valid</span><span class="p">(</span><span class="n">ba</span><span class="p">,</span> <span class="n">dmap</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="p">);</span>
+
+         <span class="c1">// Fills level_sets[lev] with coarse data</span>
+         <span class="n">LSCoreBase</span><span class="o">::</span><span class="n">MakeNewLevelFromCoarse</span><span class="p">(</span> <span class="n">level_sets</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">level_sets</span><span class="p">[</span><span class="n">lev</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                                            <span class="n">ba</span><span class="p">,</span> <span class="n">dmap</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="n">lev</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                                            <span class="n">bcs_ls</span><span class="p">,</span> <span class="n">refRatio</span><span class="p">(</span><span class="n">lev</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+
+         <span class="n">EBFArrayBoxFactory</span> <span class="nf">eb_factory</span><span class="p">(</span><span class="o">*</span> <span class="n">eb_levels</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">geom</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">grids</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">dmap</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span>
+                                       <span class="p">{</span><span class="n">eb_pad</span><span class="p">,</span> <span class="n">eb_pad</span><span class="p">,</span> <span class="n">eb_pad</span><span class="p">},</span> <span class="n">EBSupport</span><span class="o">::</span><span class="n">full</span><span class="p">);</span>
+
+         <span class="c1">// NOTE: implicit function data might not be on the right grids</span>
+         <span class="n">MultiFab</span> <span class="n">impfunc</span> <span class="o">=</span> <span class="n">MFUtil</span><span class="o">::</span><span class="n">regrid</span><span class="p">(</span><span class="n">ba</span><span class="p">,</span> <span class="n">dmap</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">implicit_functions</span><span class="p">[</span><span class="n">lev</span><span class="p">]);</span>
+
+         <span class="n">IntVect</span> <span class="n">ebt_size</span><span class="p">{</span><span class="n">AMREX_D_DECL</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)};</span> <span class="c1">// Fudge factors...</span>
+         <span class="n">LSCoreBase</span><span class="o">::</span><span class="n">FillLevelSet</span><span class="p">(</span><span class="n">level_sets</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">level_sets</span><span class="p">[</span><span class="n">lev</span><span class="p">],</span> <span class="n">eb_factory</span><span class="p">,</span> <span class="n">impfunc</span><span class="p">,</span>
+                                  <span class="n">ebt_size</span><span class="p">,</span> <span class="n">eb_pad</span><span class="p">,</span> <span class="n">geom</span><span class="p">[</span><span class="n">lev</span><span class="p">]);</span>
+     <span class="p">}</span>
+</pre></div>
+</div>
+<p>Here the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="keyword"><span class="pre">const</span></span> <span class="name"><span class="pre">EB2</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Level</span></span> <span class="operator"><span class="pre">*&gt;</span></span> <span class="name"><span class="pre">eb_levels</span></span></code> has been filled while
+initializing the embedded boundaries. At the same time, the implicit functions
+need to be saved to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">&gt;</span></span> <span class="name"><span class="pre">implicit_functions</span></span></code>. The user also
+needs to specify the level-set boundary conditions in <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">BCRec</span></span><span class="operator"><span class="pre">&gt;</span></span>
+<span class="name"><span class="pre">bcs_ls</span></span></code>. Note that the function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCoreBase</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">FillLevelSet</span></span></code> uses the coarse
+level-set as an upper bound to the tile size used for testing EB facets.</p>
+</div>
+<div class="section" id="using-lscore">
+<h2>Using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code><a class="headerlink" href="#using-lscore" title="Permalink to this headline">¶</a></h2>
+<p>The process described in the previous section is automated in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code>
+class. It is derived from <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCoreBase</span></span></code>, which in turn is derived from
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AmrCore</span></span></code> (cf. <a class="reference internal" href="AmrCore_Chapter.html#chap-amrcore"><span class="std std-ref">AmrCore Source Code</span></a>). <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code> is a template class
+depending on the embedded boundary implicit function. This way, it can build new
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">EB2</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Level</span></span></code> objects for every new level that is needed.</p>
+<p>Since <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code> is a template class, it might lead to problems in
+applications where the template parameter can depend of runtime parameters. This
+is the reason why it derives from the base class <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCoreBase</span></span></code>.
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCore</span></span></code> overwrites the virtual function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MakeNewLevelFromScratch</span></span></code> in
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LSCoreBase</span></span></code>. The application can then employ the following polymorphism to
+construct the level-set;</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">LSCoreBase</span> <span class="o">*</span> <span class="n">ls_core</span><span class="p">;</span>
+
+<span class="c1">// sets ls_core pointer</span>
+<span class="n">make_my_eb</span><span class="p">(</span><span class="n">ls_core</span><span class="p">);</span>
+
+<span class="n">ls_core</span><span class="o">-&gt;</span><span class="n">InitData</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>where the function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">make_my_eb</span></span></code> defines the actual EB geometry:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">make_my_eb</span><span class="p">(</span><span class="n">LSCoreBase</span> <span class="o">*&amp;</span> <span class="n">ls_core</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// MyIF is an EB2 Implicit Fuction</span>
+    <span class="n">GeometryShop</span><span class="o">&lt;</span><span class="n">MyIF</span><span class="o">&gt;</span> <span class="n">gshop</span><span class="p">;</span>
+
+    <span class="c1">// Build an EB geometry shop here</span>
+
+    <span class="n">ls_core</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LSCore</span><span class="o">&lt;</span><span class="n">MyIF</span><span class="o">&gt;</span><span class="p">(</span><span class="n">gshop</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">make_my_eb</span></span></code> is only defines the EB geometry. The function call
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ls_core</span></span><span class="operator"><span class="pre">-&gt;</span></span><span class="name"><span class="pre">InitData</span></span><span class="punctuation"><span class="pre">()</span></span></code> constructs level hierarchy and fills it with
+level-set values.</p>
 </div>
 </div>
 <div class="section" id="linear-solvers">
