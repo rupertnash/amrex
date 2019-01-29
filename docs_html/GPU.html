@@ -367,7 +367,7 @@ can run it and that will generate results like:</p>
 which is inside <code class="docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">amrex</span></code>. For example, the GPU configuration
 class <code class="docutils literal notranslate"><span class="pre">Device</span></code> can be referenced to at <code class="docutils literal notranslate"><span class="pre">amrex::Gpu::Device</span></code>. Other
 important objects in the Gpu namespace include objects designed to work
-with GPU memory spaces, such as <code class="docutils literal notranslate"><span class="pre">Gpu::AsyncFab</span></code> a temporary
+with GPU memory spaces, such as <code class="docutils literal notranslate"><span class="pre">AsyncFab</span></code> a temporary
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> designed to work with CUDA streams.</p>
 <p>For portability, AMReX defines some macros for CUDA function qualifiers
 and they should be preferred to allow execution with <code class="docutils literal notranslate"><span class="pre">USE_CUDA=FALSE</span></code>.
@@ -503,7 +503,7 @@ the avarage value of all the boundary cells of a <code class="code cpp c++ docut
 <span class="c1">// Find the average value of boundary cells.</span>
 <span class="p">{</span>
     <span class="n">Real</span> <span class="n">avg_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">Gpu</span><span class="o">::</span><span class="n">AsyncArray</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="n">a_avg</span><span class="p">(</span><span class="o">&amp;</span><span class="n">avg_val</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>     <span class="c1">// Build AsyncArray</span>
+    <span class="n">AsyncArray</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="n">a_avg</span><span class="p">(</span><span class="o">&amp;</span><span class="n">avg_val</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>     <span class="c1">// Build AsyncArray</span>
     <span class="n">Real</span><span class="o">*</span> <span class="n">d_avg</span> <span class="o">=</span> <span class="n">a_avg</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>                   <span class="c1">// Get associated device ptr.</span>
 
     <span class="kt">long</span> <span class="n">total_cells</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -518,7 +518,7 @@ the avarage value of all the boundary cells of a <code class="code cpp c++ docut
         <span class="p">{</span>
             <span class="c1">// Create AsyncArray for boxes describing boundary and</span>
             <span class="c1">//    obtain associated device pointer.</span>
-            <span class="n">Gpu</span><span class="o">::</span><span class="n">AsyncArray</span><span class="o">&lt;</span><span class="n">Box</span><span class="o">&gt;</span> <span class="n">async_boxes</span><span class="p">(</span><span class="n">blst</span><span class="p">.</span><span class="n">data</span><span class="p">().</span><span class="n">data</span><span class="p">(),</span> <span class="n">nboxes</span><span class="p">);</span>
+            <span class="n">AsyncArray</span><span class="o">&lt;</span><span class="n">Box</span><span class="o">&gt;</span> <span class="n">async_boxes</span><span class="p">(</span><span class="n">blst</span><span class="p">.</span><span class="n">data</span><span class="p">().</span><span class="n">data</span><span class="p">(),</span> <span class="n">nboxes</span><span class="p">);</span>
             <span class="n">Box</span> <span class="k">const</span><span class="o">*</span> <span class="n">pboxes</span> <span class="o">=</span> <span class="n">async_boxes</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
 
             <span class="kt">long</span> <span class="n">ncells</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -693,13 +693,13 @@ pointers for the CPU and GPU <code class="code cpp c++ docutils literal notransl
 metadata to minimize data movement.  The <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncFab</span></span></code> is async-safe and can
 be used inside of an <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loop without reducing CPU-GPU asynchronicity.
 It is portable, reducing to a simple <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> pointer when ran without
-CUDA.  An example of using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">AsyncFab</span></span></code> is given below:</p>
+CUDA.  An example of using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncFab</span></span></code> is given below:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">some_multifab</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span>
 <span class="p">{</span>
    <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">bx</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">validbox</span><span class="p">();</span>
 
    <span class="c1">// Create temporary FAB with given box &amp; number of components.</span>
-   <span class="n">Gpu</span><span class="o">::</span><span class="n">AsyncFab</span> <span class="n">q_box</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+   <span class="n">AsyncFab</span> <span class="nf">q_box</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
    <span class="n">FArrayBox</span><span class="o">*</span> <span class="n">q_fab</span> <span class="o">=</span> <span class="n">q_box</span><span class="p">.</span><span class="n">fabPtr</span><span class="p">();</span>  <span class="c1">// Get device pointer to fab.</span>
 
    <span class="n">AMREX_LAUNCH_DEVICE_LAMBDA</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">tbx</span><span class="p">,</span>
@@ -1032,14 +1032,14 @@ still need it.</p>
 <p>One way to fix this is put the temporary <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> objects in a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> defined outside the loop.  This creates a separate
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> for each loop iteration, eliminating the race
-condition.  Another way is to use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">AsyncFab</span></span></code> designed for
-this kind of situation.  The code below shows how <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">AsyncFab</span></span></code>
+condition.  Another way is to use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncFab</span></span></code> designed for
+this kind of situation.  The code below shows how <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AsyncFab</span></span></code>
 is used and how this MFIter loop can be rewritten for GPUs.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">uin</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">vbx</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">validbox</span><span class="p">();</span>              <span class="c1">// f2 work domain</span>
     <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">gbx</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">grow</span><span class="p">(</span><span class="n">vbx</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>          <span class="c1">// f1 work domain</span>
-    <span class="n">Gpu</span><span class="o">::</span><span class="n">AsyncFab</span> <span class="n">q</span><span class="p">(</span><span class="n">gbx</span><span class="p">);</span>                         <span class="c1">// Local, GPU managed FArrayBox</span>
+    <span class="n">AsyncFab</span> <span class="nf">q</span><span class="p">(</span><span class="n">gbx</span><span class="p">);</span>                              <span class="c1">// Local, GPU managed FArrayBox</span>
     <span class="n">FArrayBox</span> <span class="k">const</span><span class="o">*</span> <span class="n">uinfab</span>  <span class="o">=</span> <span class="n">uin</span><span class="p">.</span><span class="n">fabPtr</span><span class="p">();</span>      <span class="c1">// Managed GPU capturable</span>
     <span class="n">FArrayBox</span>      <span class="o">*</span> <span class="n">uoutfab</span> <span class="o">=</span> <span class="n">uout</span><span class="p">.</span><span class="n">fabPtr</span><span class="p">();</span>     <span class="c1">//   pointers to MultiFab&#39;s FABs.</span>
 
