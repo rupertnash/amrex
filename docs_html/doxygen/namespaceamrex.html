@@ -1595,6 +1595,8 @@ Functions</h2></td></tr>
 <tr class="separator:af3d0b55f537815a445e708f01eede78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca824ed9a83373a83533e948d2175dee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#aca824ed9a83373a83533e948d2175dee">TagCutCells</a> (<a class="el" href="classamrex_1_1_tag_box_array.html">TagBoxArray</a> &amp;tags, const <a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;state)</td></tr>
 <tr class="separator:aca824ed9a83373a83533e948d2175dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae146edcedfbd7eb8509f8c334b764d84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ae146edcedfbd7eb8509f8c334b764d84">TagVolfrac</a> (<a class="el" href="classamrex_1_1_tag_box_array.html">TagBoxArray</a> &amp;tags, const <a class="el" href="classamrex_1_1_multi_fab.html">MultiFab</a> &amp;volfrac, Real tol)</td></tr>
+<tr class="separator:ae146edcedfbd7eb8509f8c334b764d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac45d936bf5764d4fc75c7d483c93afaa"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ac45d936bf5764d4fc75c7d483c93afaa">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classamrex_1_1_e_b_cell_flag.html">EBCellFlag</a> &amp;flag)</td></tr>
 <tr class="separator:ac45d936bf5764d4fc75c7d483c93afaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3c5c0681fda33ffa62120cefe254379"><td class="memItemLeft" align="right" valign="top">std::unique_ptr<br class="typebreak"/>
@@ -11472,34 +11474,6 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
 
 </div>
 </div>
-<a class="anchor" id="ac38f92b345723f71defea15e208ee644"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; amrex::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Orientation &amp;&#160;</td>
-          <td class="paramname"><em>o</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write to an ostream in ASCII format. </p>
-
-</div>
-</div>
 <a class="anchor" id="a73fb53c873d555a7a3cc7b33e88a5f33"></a>
 <div class="memitem">
 <div class="memproto">
@@ -11525,6 +11499,34 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
 </div><div class="memdoc">
 
 <p>Write an <a class="el" href="classamrex_1_1_index_type.html" title="Cell-Based or Node-Based Indices. ">IndexType</a> to an ostream in ASCII. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac38f92b345723f71defea15e208ee644"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; amrex::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Orientation &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write to an ostream in ASCII format. </p>
 
 </div>
 </div>
@@ -14912,6 +14914,38 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
           <td></td>
           <td class="paramtype">const MultiFab &amp;&#160;</td>
           <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae146edcedfbd7eb8509f8c334b764d84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::TagVolfrac </td>
+          <td>(</td>
+          <td class="paramtype">TagBoxArray &amp;&#160;</td>
+          <td class="paramname"><em>tags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MultiFab &amp;&#160;</td>
+          <td class="paramname"><em>volfrac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

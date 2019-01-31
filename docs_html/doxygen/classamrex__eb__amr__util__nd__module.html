@@ -94,6 +94,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aec225bdef32f9ffd4483c896a6feb098"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex__eb__amr__util__nd__module.html#aec225bdef32f9ffd4483c896a6feb098">amrex_tag_cutcells</a> (lo, hi, tag, tlo, thi, flag, flo, fhi, tagval, clearval)</td></tr>
 <tr class="separator:aec225bdef32f9ffd4483c896a6feb098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582ddb4824de821c4d3a762e83537499"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex__eb__amr__util__nd__module.html#a582ddb4824de821c4d3a762e83537499">amrex_tag_volfrac</a> (lo, hi, tag, tag_lo, tag_hi, vfrac, vfrac_lo, vfrac_hi, set, clear, tol)</td></tr>
+<tr class="separator:a582ddb4824de821c4d3a762e83537499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function/Subroutine Documentation</h2>
 <a class="anchor" id="aec225bdef32f9ffd4483c896a6feb098"></a>
@@ -159,6 +161,86 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">character(kind=c_char)&#160;</td>
           <td class="paramname"><em>clearval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a582ddb4824de821c4d3a762e83537499"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public amrex_eb_amr_util_nd_module::amrex_tag_volfrac </td>
+          <td>(</td>
+          <td class="paramtype">integer(c_int), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>lo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer(c_int), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>hi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(c_char), dimension(tag_lo(1):tag_hi(1),                                   tag_lo(2):tag_hi(2),                                   tag_lo(3):tag_hi(3)), intent(inout)&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer(c_int), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>tag_lo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer(c_int), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>tag_hi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(<a class="el" href="_a_m_re_x___r_e_a_l_8_h.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(vfrac_lo(1):vfrac_hi(1),                                     vfrac_lo(2):vfrac_hi(2),                                     vfrac_lo(3):vfrac_hi(3)), intent(in)&#160;</td>
+          <td class="paramname"><em>vfrac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer(c_int), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>vfrac_lo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer(c_int), dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>vfrac_hi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(c_char)&#160;</td>
+          <td class="paramname"><em>set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(c_char)&#160;</td>
+          <td class="paramname"><em>clear</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real(<a class="el" href="_a_m_re_x___r_e_a_l_8_h.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>)&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

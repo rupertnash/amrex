@@ -94,8 +94,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5803ddaf59010326592ef10261b1d89f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex__eb__tagging__module.html#a5803ddaf59010326592ef10261b1d89f">amrex_eb_levelset_error</a> (tag, tag_lo, tag_hi, state, state_lo, state_hi, set, clear, lo, hi, dx, problo, time, phierr)</td></tr>
 <tr class="separator:a5803ddaf59010326592ef10261b1d89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ade49e512694c3b10ca6e5e230234d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex__eb__tagging__module.html#a91ade49e512694c3b10ca6e5e230234d">amrex_eb_volfrac_error</a> (tag, tag_lo, tag_hi, state, state_lo, state_hi, set, clear, tol, lo, hi, dx, problo)</td></tr>
-<tr class="separator:a91ade49e512694c3b10ca6e5e230234d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function/Subroutine Documentation</h2>
 <a class="anchor" id="a5803ddaf59010326592ef10261b1d89f"></a>
@@ -185,98 +183,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">real(<a class="el" href="_a_m_re_x___r_e_a_l_8_h.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), intent(in)&#160;</td>
           <td class="paramname"><em>phierr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a91ade49e512694c3b10ca6e5e230234d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine amrex_eb_tagging_module::amrex_eb_volfrac_error </td>
-          <td>(</td>
-          <td class="paramtype">integer, dimension(tag_lo(1):tag_hi(1),                                                          tag_lo(2):tag_hi(2),                                                          tag_lo(3):tag_hi(3)), intent(out)&#160;</td>
-          <td class="paramname"><em>tag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>tag_lo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>tag_hi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(<a class="el" href="_a_m_re_x___r_e_a_l_8_h.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(state_lo(1):state_hi(1),                                                            state_lo(2):state_hi(2),                                                            state_lo(3):state_hi(3)), intent(in)&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>state_lo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>state_hi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>set</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>clear</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(<a class="el" href="_a_m_re_x___r_e_a_l_8_h.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>tol</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>lo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>hi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(<a class="el" href="_a_m_re_x___r_e_a_l_8_h.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(<a class="el" href="_a_m_re_x___r_e_a_l_8_h.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>problo</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
