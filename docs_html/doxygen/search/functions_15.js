@@ -29,6 +29,7 @@ var searchData=
   ['updateinsitu',['updateInSitu',['../classamrex_1_1_amr.html#a8a6cfcdb14e8d28779382ac6406ab2ca',1,'amrex::Amr']]],
   ['updateneighbors',['updateNeighbors',['../classamrex_1_1_neighbor_particle_container.html#a8a376cb2270fcaff181f9792f2932f6e',1,'amrex::NeighborParticleContainer']]],
   ['upperindex',['UpperIndex',['../classamrex_1_1_coord_sys.html#a963f59d99a41920b77dc7464f15b09bd',1,'amrex::CoordSys']]],
+  ['usecudaawarempi',['UseCudaAwareMpi',['../namespaceamrex_1_1_parallel_descriptor.html#ae8c3c8f911eed6fd673f79ddc6b09fd9',1,'amrex::ParallelDescriptor']]],
   ['useeb2',['useEB2',['../namespaceamrex_1_1_e_b2.html#ad7f55d0b557cb48b84323df22a77d9d0',1,'amrex::EB2']]],
   ['usefixedcoarsegrids',['useFixedCoarseGrids',['../classamrex_1_1_amr_mesh.html#ae2cad7cb8252ec6d3512afc904a9e7e9',1,'amrex::AmrMesh']]],
   ['usefixeduptolevel',['useFixedUpToLevel',['../classamrex_1_1_amr_mesh.html#a6da8eed8962368ecd9b7b62fb38c283a',1,'amrex::AmrMesh']]],

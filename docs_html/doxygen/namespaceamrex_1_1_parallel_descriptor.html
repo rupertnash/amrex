@@ -121,6 +121,12 @@ Functions</h2></td></tr>
 <tr class="memitem:adc667e1643fbfe75b057369aed1ca519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#adc667e1643fbfe75b057369aed1ca519">StartParallel</a> (int *argc=0, char ***argv=0, <a class="el" href="_a_m_re_x__ccse-mpi_8_h.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a> mpi_comm=<a class="el" href="_a_m_re_x__ccse-mpi_8_h.html#ac57c1fc8484fb9b5c8359a559851107b">MPI_COMM_WORLD</a>)</td></tr>
 <tr class="memdesc:adc667e1643fbfe75b057369aed1ca519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform any needed parallel initialization. This MUST be the first routine in this class called from within a program.  <a href="#adc667e1643fbfe75b057369aed1ca519">More...</a><br/></td></tr>
 <tr class="separator:adc667e1643fbfe75b057369aed1ca519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916170832821539e49f051409018ffcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#a916170832821539e49f051409018ffcb">Initialize</a> ()</td></tr>
+<tr class="separator:a916170832821539e49f051409018ffcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95032768c19f94a64196f85fefeee239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#a95032768c19f94a64196f85fefeee239">Finalize</a> ()</td></tr>
+<tr class="separator:a95032768c19f94a64196f85fefeee239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c3c8f911eed6fd673f79ddc6b09fd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#ae8c3c8f911eed6fd673f79ddc6b09fd9">UseCudaAwareMpi</a> ()</td></tr>
+<tr class="separator:ae8c3c8f911eed6fd673f79ddc6b09fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5ce3cf99985348d87f77ba2c811514f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#af5ce3cf99985348d87f77ba2c811514f">StartTeams</a> ()</td></tr>
 <tr class="memdesc:af5ce3cf99985348d87f77ba2c811514f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split the process pool into teams.  <a href="#af5ce3cf99985348d87f77ba2c811514f">More...</a><br/></td></tr>
 <tr class="separator:af5ce3cf99985348d87f77ba2c811514f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -439,6 +445,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:abf1f8b11d69baab03a99dcca8cbd4ca1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#abf1f8b11d69baab03a99dcca8cbd4ca1">use_cuda_aware_mpi</a> = true</td></tr>
+<tr class="separator:abf1f8b11d69baab03a99dcca8cbd4ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a80b6d86037c06fed7ef5fb0d2a8d28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structamrex_1_1_parallel_descriptor_1_1_process_team.html">ProcessTeam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#a9a80b6d86037c06fed7ef5fb0d2a8d28">m_Team</a></td></tr>
 <tr class="separator:a9a80b6d86037c06fed7ef5fb0d2a8d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af87612855c6b73a8cc9f11ed5bd0d3f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_m_re_x__ccse-mpi_8_h.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex_1_1_parallel_descriptor.html#af87612855c6b73a8cc9f11ed5bd0d3f9">m_comm</a> = <a class="el" href="_a_m_re_x__ccse-mpi_8_h.html#a9c299ed1c4c5eaa48a6446c85fb2d689">MPI_COMM_NULL</a></td></tr>
@@ -1004,6 +1012,21 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a95032768c19f94a64196f85fefeee239"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::ParallelDescriptor::Finalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a5e16712b9f4c3f14537cd0b561758aa5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1216,6 +1239,21 @@ template&lt;class T &gt; </div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a916170832821539e49f051409018ffcb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::ParallelDescriptor::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3978,6 +4016,29 @@ template&lt;typename F &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ae8c3c8f911eed6fd673f79ddc6b09fd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool amrex::ParallelDescriptor::UseCudaAwareMpi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4a3a4d36732e6b65907ea76570142b7e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4157,6 +4218,18 @@ template&lt;typename F &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structamrex_1_1_parallel_descriptor_1_1_process_team.html">ProcessTeam</a> amrex::ParallelDescriptor::m_Team</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf1f8b11d69baab03a99dcca8cbd4ca1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amrex::ParallelDescriptor::use_cuda_aware_mpi = true</td>
         </tr>
       </table>
 </div><div class="memdoc">
