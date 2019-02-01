@@ -1,8 +1,8 @@
 var searchData=
 [
   ['y',['y',['../structamrex_1_1_dim3.html#a5b607ff8424cba649fe2c3c19f34714b',1,'amrex::Dim3']]],
-  ['y2der',['Y2DER',['../_a_m_re_x___i_n_t_e_r_p_b_n_d_r_y_d_a_t_a__3_d_8_f90.html#a426aa726ff15d4389d4fa4ef9d4b5510',1,'AMReX_INTERPBNDRYDATA_3D.F90']]],
-  ['yafluxregister',['YAFluxRegister',['../classamrex_1_1_y_a_flux_register.html',1,'amrex']]],
+  ['yafluxreg_5fcrseadd',['yafluxreg_crseadd',['../namespaceamrex.html#a74aa3abcfec3f6850dbaea7de03029a9',1,'amrex::yafluxreg_crseadd(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, Real dtdx, int nc)'],['../namespaceamrex.html#ab63d8a264abb43a4926626082f0f1de2',1,'amrex::yafluxreg_crseadd(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, FArrayBox const &amp;fyfab, Real dtdx, Real dtdy, int nc)'],['../namespaceamrex.html#a687fea23dc5c32271e55bc37f26f9a50',1,'amrex::yafluxreg_crseadd(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, FArrayBox const &amp;fyfab, FArrayBox const &amp;fzfab, Real dtdx, Real dtdy, Real dtdz, int nc)']]],
+  ['yafluxreg_5ffineadd',['yafluxreg_fineadd',['../namespaceamrex.html#a1a28ca65d066ae432cc050cf7e6231c7',1,'amrex']]],
   ['yafluxregister',['YAFluxRegister',['../classamrex_1_1_y_a_flux_register.html#abfac49b8daf5d0b0303aaa24a4f7751a',1,'amrex::YAFluxRegister::YAFluxRegister()=default'],['../classamrex_1_1_y_a_flux_register.html#a4cb85ba705d31548325bd3f09c6f17ff',1,'amrex::YAFluxRegister::YAFluxRegister(const BoxArray &amp;fba, const BoxArray &amp;cba, const DistributionMapping &amp;fdm, const DistributionMapping &amp;cdm, const Geometry &amp;fgeom, const Geometry &amp;cgeom, const IntVect &amp;ref_ratio, int fine_lev, int nvar)']]],
-  ['yder',['YDER',['../_a_m_re_x___i_n_t_e_r_p_b_n_d_r_y_d_a_t_a__3_d_8_f90.html#ab9e4b79501cc47488b6532a963bd9ca2',1,'AMReX_INTERPBNDRYDATA_3D.F90']]]
+  ['yafluxregister',['YAFluxRegister',['../classamrex_1_1_y_a_flux_register.html',1,'amrex']]]
 ];

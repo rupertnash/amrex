@@ -20,7 +20,7 @@ var searchData=
   ['regrid_5fon_5frestart',['regrid_on_restart',['../namespaceamrex.html#a54360d5e4005db7d308c6aff7628d08d',1,'amrex']]],
   ['regtest_5freduction',['regtest_reduction',['../namespaceamrex_1_1system.html#af12338a7a6375c2c45658695baac797e',1,'amrex::system']]],
   ['regular',['regular',['../classamrex__eb2__2d__moudle.html#ac1b0472b3a4778d74e4ab107d5ef7792',1,'amrex_eb2_2d_moudle::regular()'],['../classamrex__eb2__3d__module.html#a929da3fd1633639eba8a169803125e34',1,'amrex_eb2_3d_module::regular()'],['../classamrex__ebcellflag__module.html#adb0a0516e63c6b90231902627fd51da1',1,'amrex_ebcellflag_module::regular()']]],
-  ['reredistribution_5fthreshold',['reredistribution_threshold',['../classamrex__eb__flux__reg__nd__module.html#a8d860b9e75233824b4f5a87412dbb696',1,'amrex_eb_flux_reg_nd_module']]],
+  ['reredistribution_5fthreshold',['reredistribution_threshold',['../classamrex__eb__flux__reg__nd__module.html#a0688dcea64b51e2f058407b826f95045',1,'amrex_eb_flux_reg_nd_module']]],
   ['res',['res',['../_a_m_re_x_8cpp.html#ab0bd7560790c13b656fd58e17e35143e',1,'AMReX.cpp']]],
   ['restart_5fchkfile',['restart_chkfile',['../classamrex_1_1_amr.html#ac00b1478382804abeb82dd75b4ab5194',1,'amrex::Amr::restart_chkfile()'],['../classamrex_1_1_l_s_core_base.html#aa206bdb1903bb394742e18267dcbfc11',1,'amrex::LSCoreBase::restart_chkfile()']]],
   ['restart_5fpltfile',['restart_pltfile',['../classamrex_1_1_amr.html#a295b3f0ab02158ef294ed68349f41dae',1,'amrex::Amr']]],

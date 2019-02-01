@@ -31,7 +31,7 @@ var searchData=
   ['fileprefixprepost',['filePrefixPrePost',['../classamrex_1_1_particle_container.html#a98129e6f756bf24d39487b5fbaf54568',1,'amrex::ParticleContainer']]],
   ['fillboxid',['fillBoxId',['../structamrex_1_1_fab_array_base_1_1_fab_com_tag.html#af506bfcebba0efde3dc8f5dbf9244191',1,'amrex::FabArrayBase::FabComTag::fillBoxId()'],['../structamrex_1_1_fab_copy_descriptor.html#abe60f2cf30aac61d68454a6823d1e3a4',1,'amrex::FabCopyDescriptor::fillBoxId()']]],
   ['filltype',['fillType',['../structamrex_1_1_fab_copy_descriptor.html#acbfb910d7582f3e32b2e263e1581e382',1,'amrex::FabCopyDescriptor']]],
-  ['fine_5fcell',['fine_cell',['../classamrex__ya__flux__reg__nd__module.html#a546dab6f9dff0e1cf820b4e75541cb7c',1,'amrex_ya_flux_reg_nd_module']]],
+  ['fine_5fcell',['fine_cell',['../classamrex__eb__flux__reg__nd__module.html#aa221a3ae37a8e49741bf7503ddfbf026',1,'amrex_eb_flux_reg_nd_module']]],
   ['fine_5fgrid_5fidx',['fine_grid_idx',['../structamrex_1_1_fab_array_base_1_1_c_finfo.html#aca354eb516dc263308380e26666bb0b7',1,'amrex::FabArrayBase::CFinfo']]],
   ['fine_5fratio',['fine_ratio',['../classamrex_1_1_amr_level.html#a109f988dd098fdb2a6b854a742015397',1,'amrex::AmrLevel']]],
   ['finebnd',['finebnd',['../namespaceamrex_1_1_extrapolater.html#a84bd1ce2743440bc77f2be80eea8bee4',1,'amrex::Extrapolater']]],

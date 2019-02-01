@@ -108,7 +108,6 @@ var searchData=
   ['numcomps',['NumComps',['../structamrex_1_1_num_comps.html',1,'amrex']]],
   ['numcomps',['NumComps',['../structamrex_1_1_num_comps.html#a7a7aab028de1cb7ad51bf0a872a01a7f',1,'amrex::NumComps']]],
   ['numdatalogs',['NumDataLogs',['../classamrex_1_1_amr.html#a83eb74ba9a4cd5a567729224d043e940',1,'amrex::Amr']]],
-  ['numderiv',['NUMDERIV',['../_a_m_re_x___i_n_t_e_r_p_b_n_d_r_y_d_a_t_a__1_d_8_f90.html#ad8fdc184d6f1cef563d422c5bfa5d2e6',1,'NUMDERIV():&#160;AMReX_INTERPBNDRYDATA_1D.F90'],['../_a_m_re_x___i_n_t_e_r_p_b_n_d_r_y_d_a_t_a__2_d_8_f90.html#ad8fdc184d6f1cef563d422c5bfa5d2e6',1,'NUMDERIV():&#160;AMReX_INTERPBNDRYDATA_2D.F90'],['../_a_m_re_x___i_n_t_e_r_p_b_n_d_r_y_d_a_t_a__3_d_8_f90.html#ad8fdc184d6f1cef563d422c5bfa5d2e6',1,'NUMDERIV():&#160;AMReX_INTERPBNDRYDATA_3D.F90']]],
   ['numderive',['numDerive',['../classamrex_1_1_derive_rec.html#a6983369832ab41c88c48109ec9696192',1,'amrex::DeriveRec']]],
   ['numgrids',['numGrids',['../classamrex_1_1_amr.html#a491beb9efe091fdd65275940c2961bb5',1,'amrex::Amr::numGrids()'],['../classamrex_1_1_amr.html#afa60ea4bfaa0b3a3c4f517b0e5a4d048',1,'amrex::Amr::numGrids(int lev)'],['../classamrex_1_1_amr_level.html#a2cd4b72bfd25b2c90aaa5b2e0badbdfe',1,'amrex::AmrLevel::numGrids()']]],
   ['numlevels',['numLevels',['../classamrex_1_1_particle_container.html#a2edf149588bf5390e8fc14ad2e64d7ba',1,'amrex::ParticleContainer']]],
