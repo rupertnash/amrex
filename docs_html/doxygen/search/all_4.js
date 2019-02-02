@@ -71,7 +71,6 @@ var searchData=
   ['dm_5fcfb',['dm_cfb',['../structamrex_1_1_fab_array_base_1_1_c_finfo.html#aeb127de6351fbe080c4d924c38e6a9db',1,'amrex::FabArrayBase::CFinfo']]],
   ['dm_5fcrse_5fpatch',['dm_crse_patch',['../structamrex_1_1_fab_array_base_1_1_f_pinfo.html#a0e15dc8cb52e6b5486f6cb4c89612771',1,'amrex::FabArrayBase::FPinfo']]],
   ['dmap',['dmap',['../classamrex_1_1_amr_level.html#ab0ab7555be82910d8100d7bc3aa55d1d',1,'amrex::AmrLevel::dmap()'],['../classamrex_1_1_amr_mesh.html#ab7f8457c3e5a0dc0295247f005e5a107',1,'amrex::AmrMesh::dmap()']]],
-  ['do_5fasync_5fsends',['do_async_sends',['../classamrex_1_1_fab_array_base.html#a70e36cc6b3a88bc821e4cadd72d3a8de',1,'amrex::FabArrayBase']]],
   ['do_5finitval',['do_initval',['../classamrex_1_1_f_array_box.html#ab0b477e69a1fe773b7467810181a3056',1,'amrex::FArrayBox']]],
   ['do_5flinear_5flimiting',['do_linear_limiting',['../classamrex_1_1_cell_conservative_linear.html#a7817252503faedf1d87fcbdcc89c3509',1,'amrex::CellConservativeLinear']]],
   ['do_5fmax',['do_max',['../namespaceamrex_1_1_e_b2_1_1_u_i_f__detail.html#afea19dafbd80995f5bf2547d66a50581',1,'amrex::EB2::UIF_detail::do_max(const RealArray &amp;p, F &amp;&amp;f)'],['../namespaceamrex_1_1_e_b2_1_1_u_i_f__detail.html#a1f6c13ec185ac1bb88c0a724bb933c98',1,'amrex::EB2::UIF_detail::do_max(const RealArray &amp;p, F &amp;&amp;f, Fs &amp;...fs)']]],
