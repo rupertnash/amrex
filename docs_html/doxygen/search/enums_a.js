@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['side',['Side',['../classamrex_1_1_orientation.html#a877c697bbab9de21af4012197ba76410',1,'amrex::Orientation']]],
-  ['strategy',['Strategy',['../classamrex_1_1_distribution_mapping.html#ad8e078b643635f0027eb797c2d54d3b8',1,'amrex::DistributionMapping::Strategy()'],['../classamrex_1_1_fork_join.html#a72de18d1d16fadce31b830834ffff282',1,'amrex::ForkJoin::Strategy()']]]
+  ['ordering',['Ordering',['../classamrex_1_1IntDescriptor.html#a330214b8c0c3e224aecd2d2d95c0a839',1,'amrex::IntDescriptor::Ordering()'],['../classamrex_1_1FABio.html#adbdc54b2ed6a4fa2d0cfd19076e5cc39',1,'amrex::FABio::Ordering()']]]
 ];

@@ -1,0 +1,1020 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="AMReX__ParticleTile_8H" kind="file" language="C++">
+    <compoundname>AMReX_ParticleTile.H</compoundname>
+    <includes refid="AMReX__Particle_8H" local="no">AMReX_Particle.H</includes>
+    <includes refid="AMReX__ArrayOfStructs_8H" local="no">AMReX_ArrayOfStructs.H</includes>
+    <includes refid="AMReX__StructOfArrays_8H" local="no">AMReX_StructOfArrays.H</includes>
+    <includes refid="AMReX__Vector_8H" local="no">AMReX_Vector.H</includes>
+    <includes refid="AMReX__IndexSequence_8H" local="no">AMReX_IndexSequence.H</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">array</includes>
+    <includes local="no">cassert</includes>
+    <includedby refid="AMReX__Particles_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particles.H</includedby>
+    <incdepgraph>
+      <node id="50141">
+        <label>AMReX_ParallelContext.H</label>
+        <link refid="AMReX__ParallelContext_8H"/>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50142" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50089" relation="include">
+        </childnode>
+      </node>
+      <node id="50156">
+        <label>iomanip</label>
+      </node>
+      <node id="50106">
+        <label>functional</label>
+      </node>
+      <node id="50137">
+        <label>AMReX_BoxArray.H</label>
+        <link refid="AMReX__BoxArray_8H"/>
+        <childnode refid="50100" relation="include">
+        </childnode>
+        <childnode refid="50117" relation="include">
+        </childnode>
+        <childnode refid="50132" relation="include">
+        </childnode>
+        <childnode refid="50138" relation="include">
+        </childnode>
+        <childnode refid="50110" relation="include">
+        </childnode>
+        <childnode refid="50119" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+      </node>
+      <node id="50125">
+        <label>AMReX_BoxIterator.H</label>
+        <link refid="AMReX__BoxIterator_8H"/>
+        <childnode refid="50091" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50096" relation="include">
+        </childnode>
+        <childnode refid="50090" relation="include">
+        </childnode>
+      </node>
+      <node id="50093">
+        <label>limits</label>
+      </node>
+      <node id="50124">
+        <label>AMReX_BLProfiler.H</label>
+        <link refid="AMReX__BLProfiler_8H"/>
+        <childnode refid="50081" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+      </node>
+      <node id="50153">
+        <label>AMReX_CudaReduce.H</label>
+        <link refid="AMReX__CudaReduce_8H"/>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50131" relation="include">
+        </childnode>
+      </node>
+      <node id="50157">
+        <label>AMReX_CudaContainers.H</label>
+        <link refid="AMReX__CudaContainers_8H"/>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50154" relation="include">
+        </childnode>
+      </node>
+      <node id="50085">
+        <label>AMReX_Box.H</label>
+        <link refid="AMReX__Box_8H"/>
+        <childnode refid="50086" relation="include">
+        </childnode>
+        <childnode refid="50087" relation="include">
+        </childnode>
+        <childnode refid="50088" relation="include">
+        </childnode>
+        <childnode refid="50089" relation="include">
+        </childnode>
+        <childnode refid="50090" relation="include">
+        </childnode>
+        <childnode refid="50110" relation="include">
+        </childnode>
+        <childnode refid="50111" relation="include">
+        </childnode>
+        <childnode refid="50096" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50112" relation="include">
+        </childnode>
+      </node>
+      <node id="50163">
+        <label>AMReX_StructOfArrays.H</label>
+        <link refid="AMReX__StructOfArrays_8H"/>
+        <childnode refid="50087" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50157" relation="include">
+        </childnode>
+      </node>
+      <node id="50139">
+        <label>AMReX_DistributionMapping.H</label>
+        <link refid="AMReX__DistributionMapping_8H"/>
+        <childnode refid="50132" relation="include">
+        </childnode>
+        <childnode refid="50093" relation="include">
+        </childnode>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50117" relation="include">
+        </childnode>
+        <childnode refid="50103" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50140" relation="include">
+        </childnode>
+      </node>
+      <node id="50162">
+        <label>AMReX_ArrayOfStructs.H</label>
+        <link refid="AMReX__ArrayOfStructs_8H"/>
+        <childnode refid="50080" relation="include">
+        </childnode>
+        <childnode refid="50157" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+      </node>
+      <node id="50090">
+        <label>AMReX_IntVect.H</label>
+        <link refid="AMReX__IntVect_8H"/>
+        <childnode refid="50086" relation="include">
+        </childnode>
+        <childnode refid="50091" relation="include">
+        </childnode>
+        <childnode refid="50092" relation="include">
+        </childnode>
+        <childnode refid="50093" relation="include">
+        </childnode>
+        <childnode refid="50094" relation="include">
+        </childnode>
+        <childnode refid="50095" relation="include">
+        </childnode>
+        <childnode refid="50089" relation="include">
+        </childnode>
+        <childnode refid="50096" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50083" relation="include">
+        </childnode>
+        <childnode refid="50101" relation="include">
+        </childnode>
+      </node>
+      <node id="50103">
+        <label>AMReX.H</label>
+        <link refid="AMReX_8H"/>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50089" relation="include">
+        </childnode>
+        <childnode refid="50104" relation="include">
+        </childnode>
+        <childnode refid="50100" relation="include">
+        </childnode>
+        <childnode refid="50106" relation="include">
+        </childnode>
+        <childnode refid="50081" relation="include">
+        </childnode>
+        <childnode refid="50107" relation="include">
+        </childnode>
+      </node>
+      <node id="50126">
+        <label>AMReX_MakeType.H</label>
+        <link refid="AMReX__MakeType_8H"/>
+      </node>
+      <node id="50080">
+        <label>AMReX_Particle.H</label>
+        <link refid="AMReX__Particle_8H"/>
+        <childnode refid="50081" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50084" relation="include">
+        </childnode>
+        <childnode refid="50090" relation="include">
+        </childnode>
+      </node>
+      <node id="50130">
+        <label>AMReX_GpuError.H</label>
+        <link refid="AMReX__GpuError_8H"/>
+        <childnode refid="50131" relation="include">
+        </childnode>
+        <childnode refid="50081" relation="include">
+        </childnode>
+      </node>
+      <node id="50108">
+        <label>AMReX_Vector.H</label>
+        <link refid="AMReX__Vector_8H"/>
+        <childnode refid="50095" relation="include">
+        </childnode>
+        <childnode refid="50109" relation="include">
+        </childnode>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+      </node>
+      <node id="50155">
+        <label>AMReX_Print.H</label>
+        <link refid="AMReX__Print_8H"/>
+        <childnode refid="50145" relation="include">
+        </childnode>
+        <childnode refid="50142" relation="include">
+        </childnode>
+        <childnode refid="50156" relation="include">
+        </childnode>
+        <childnode refid="50103" relation="include">
+        </childnode>
+        <childnode refid="50141" relation="include">
+        </childnode>
+        <childnode refid="50140" relation="include">
+        </childnode>
+      </node>
+      <node id="50092">
+        <label>cmath</label>
+      </node>
+      <node id="50159">
+        <label>AMReX_CudaAsyncArray.H</label>
+        <link refid="AMReX__CudaAsyncArray_8H"/>
+        <childnode refid="50117" relation="include">
+        </childnode>
+        <childnode refid="50160" relation="include">
+        </childnode>
+        <childnode refid="50091" relation="include">
+        </childnode>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50116" relation="include">
+        </childnode>
+        <childnode refid="50114" relation="include">
+        </childnode>
+        <childnode refid="50151" relation="include">
+        </childnode>
+      </node>
+      <node id="50166">
+        <label>cassert</label>
+      </node>
+      <node id="50105">
+        <label>stdexcept</label>
+      </node>
+      <node id="50149">
+        <label>numeric</label>
+      </node>
+      <node id="50119">
+        <label>AMReX_BoxList.H</label>
+        <link refid="AMReX__BoxList_8H"/>
+        <childnode refid="50086" relation="include">
+        </childnode>
+        <childnode refid="50090" relation="include">
+        </childnode>
+        <childnode refid="50110" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+      </node>
+      <node id="50118">
+        <label>AMReX_BaseFab.H</label>
+        <link refid="AMReX__BaseFab_8H"/>
+        <childnode refid="50092" relation="include">
+        </childnode>
+        <childnode refid="50091" relation="include">
+        </childnode>
+        <childnode refid="50095" relation="include">
+        </childnode>
+        <childnode refid="50093" relation="include">
+        </childnode>
+        <childnode refid="50094" relation="include">
+        </childnode>
+        <childnode refid="50087" relation="include">
+        </childnode>
+        <childnode refid="50083" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50119" relation="include">
+        </childnode>
+        <childnode refid="50120" relation="include">
+        </childnode>
+        <childnode refid="50121" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50124" relation="include">
+        </childnode>
+        <childnode refid="50125" relation="include">
+        </childnode>
+        <childnode refid="50126" relation="include">
+        </childnode>
+        <childnode refid="50127" relation="include">
+        </childnode>
+      </node>
+      <node id="50081">
+        <label>string</label>
+      </node>
+      <node id="50154">
+        <label>AMReX_CudaAllocators.H</label>
+        <link refid="AMReX__CudaAllocators_8H"/>
+        <childnode refid="50132" relation="include">
+        </childnode>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50093" relation="include">
+        </childnode>
+        <childnode refid="50155" relation="include">
+        </childnode>
+        <childnode refid="50116" relation="include">
+        </childnode>
+        <childnode refid="50151" relation="include">
+        </childnode>
+      </node>
+      <node id="50132">
+        <label>map</label>
+      </node>
+      <node id="50164">
+        <label>AMReX_IndexSequence.H</label>
+        <link refid="AMReX__IndexSequence_8H"/>
+        <childnode refid="50099" relation="include">
+        </childnode>
+      </node>
+      <node id="50142">
+        <label>fstream</label>
+      </node>
+      <node id="50088">
+        <label>AMReX_ArrayLim.H</label>
+        <link refid="AMReX__ArrayLim_8H"/>
+        <childnode refid="50082" relation="include">
+        </childnode>
+      </node>
+      <node id="50097">
+        <label>AMReX_Array.H</label>
+        <link refid="AMReX__Array_8H"/>
+        <childnode refid="50087" relation="include">
+        </childnode>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50099" relation="include">
+        </childnode>
+        <childnode refid="50100" relation="include">
+        </childnode>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50096" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+      </node>
+      <node id="50151">
+        <label>AMReX_CudaDevice.H</label>
+        <link refid="AMReX__CudaDevice_8H"/>
+        <childnode refid="50091" relation="include">
+        </childnode>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50087" relation="include">
+        </childnode>
+        <childnode refid="50103" relation="include">
+        </childnode>
+        <childnode refid="50131" relation="include">
+        </childnode>
+        <childnode refid="50130" relation="include">
+        </childnode>
+        <childnode refid="50113" relation="include">
+        </childnode>
+      </node>
+      <node id="50096">
+        <label>AMReX_SPACE.H</label>
+        <link refid="AMReX__SPACE_8H"/>
+      </node>
+      <node id="50083">
+        <label>AMReX_Extension.H</label>
+        <link refid="AMReX__Extension_8H"/>
+      </node>
+      <node id="50128">
+        <label>AMReX_GpuLaunch.H</label>
+        <link refid="AMReX__GpuLaunch_8H"/>
+        <childnode refid="50129" relation="include">
+        </childnode>
+      </node>
+      <node id="50134">
+        <label>sys/types.h</label>
+      </node>
+      <node id="50148">
+        <label>typeinfo</label>
+      </node>
+      <node id="50107">
+        <label>cstdio</label>
+      </node>
+      <node id="50114">
+        <label>AMReX_TypeTraits.H</label>
+        <link refid="AMReX__TypeTraits_8H"/>
+        <childnode refid="50115" relation="include">
+        </childnode>
+      </node>
+      <node id="50113">
+        <label>AMReX_GpuControl.H</label>
+        <link refid="AMReX__GpuControl_8H"/>
+      </node>
+      <node id="50165">
+        <label>tuple</label>
+      </node>
+      <node id="50143">
+        <label>AMReX_BLBackTrace.H</label>
+        <link refid="AMReX__BLBackTrace_8H"/>
+        <childnode refid="50144" relation="include">
+        </childnode>
+        <childnode refid="50081" relation="include">
+        </childnode>
+        <childnode refid="50099" relation="include">
+        </childnode>
+        <childnode refid="50145" relation="include">
+        </childnode>
+        <childnode refid="50107" relation="include">
+        </childnode>
+        <childnode refid="50091" relation="include">
+        </childnode>
+        <childnode refid="50146" relation="include">
+        </childnode>
+        <childnode refid="50147" relation="include">
+        </childnode>
+      </node>
+      <node id="50135">
+        <label>unistd.h</label>
+      </node>
+      <node id="50144">
+        <label>stack</label>
+      </node>
+      <node id="50109">
+        <label>vector</label>
+      </node>
+      <node id="50161">
+        <label>AMReX_FabFactory.H</label>
+        <link refid="AMReX__FabFactory_8H"/>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50155" relation="include">
+        </childnode>
+        <childnode refid="50126" relation="include">
+        </childnode>
+      </node>
+      <node id="50102">
+        <label>AMReX_BLassert.H</label>
+        <link refid="AMReX__BLassert_8H"/>
+        <childnode refid="50103" relation="include">
+        </childnode>
+      </node>
+      <node id="50150">
+        <label>AMReX_CudaRange.H</label>
+        <link refid="AMReX__CudaRange_8H"/>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50130" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50114" relation="include">
+        </childnode>
+      </node>
+      <node id="50101">
+        <label>AMReX_GpuQualifiers.H</label>
+        <link refid="AMReX__GpuQualifiers_8H"/>
+      </node>
+      <node id="50099">
+        <label>utility</label>
+      </node>
+      <node id="50087">
+        <label>array</label>
+      </node>
+      <node id="50084">
+        <label>AMReX_FArrayBox.H</label>
+        <link refid="AMReX__FArrayBox_8H"/>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50118" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50096" relation="include">
+        </childnode>
+        <childnode refid="50161" relation="include">
+        </childnode>
+        <childnode refid="50092" relation="include">
+        </childnode>
+      </node>
+      <node id="50145">
+        <label>sstream</label>
+      </node>
+      <node id="50104">
+        <label>AMReX_Exception.H</label>
+        <link refid="AMReX__Exception_8H"/>
+        <childnode refid="50105" relation="include">
+        </childnode>
+      </node>
+      <node id="50158">
+        <label>AMReX_CudaAsyncFab.H</label>
+        <link refid="AMReX__CudaAsyncFab_8H"/>
+        <childnode refid="50098" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+      </node>
+      <node id="50140">
+        <label>AMReX_ParallelDescriptor.H</label>
+        <link refid="AMReX__ParallelDescriptor_8H"/>
+        <childnode refid="50089" relation="include">
+        </childnode>
+        <childnode refid="50141" relation="include">
+        </childnode>
+        <childnode refid="50143" relation="include">
+        </childnode>
+        <childnode refid="50124" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50100" relation="include">
+        </childnode>
+        <childnode refid="50109" relation="include">
+        </childnode>
+        <childnode refid="50081" relation="include">
+        </childnode>
+        <childnode refid="50148" relation="include">
+        </childnode>
+        <childnode refid="50095" relation="include">
+        </childnode>
+        <childnode refid="50106" relation="include">
+        </childnode>
+        <childnode refid="50093" relation="include">
+        </childnode>
+        <childnode refid="50149" relation="include">
+        </childnode>
+      </node>
+      <node id="50131">
+        <label>AMReX_Utility.H</label>
+        <link refid="AMReX__Utility_8H"/>
+        <childnode refid="50091" relation="include">
+        </childnode>
+        <childnode refid="50100" relation="include">
+        </childnode>
+        <childnode refid="50081" relation="include">
+        </childnode>
+        <childnode refid="50132" relation="include">
+        </childnode>
+        <childnode refid="50133" relation="include">
+        </childnode>
+        <childnode refid="50115" relation="include">
+        </childnode>
+        <childnode refid="50134" relation="include">
+        </childnode>
+        <childnode refid="50135" relation="include">
+        </childnode>
+        <childnode refid="50136" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50137" relation="include">
+        </childnode>
+        <childnode refid="50139" relation="include">
+        </childnode>
+        <childnode refid="50140" relation="include">
+        </childnode>
+      </node>
+      <node id="50116">
+        <label>AMReX_Arena.H</label>
+        <link refid="AMReX__Arena_8H"/>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50117" relation="include">
+        </childnode>
+      </node>
+      <node id="50111">
+        <label>AMReX_Orientation.H</label>
+        <link refid="AMReX__Orientation_8H"/>
+        <childnode refid="50086" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50096" relation="include">
+        </childnode>
+        <childnode refid="50101" relation="include">
+        </childnode>
+      </node>
+      <node id="50112">
+        <label>AMReX_CudaMemory.H</label>
+        <link refid="AMReX__CudaMemory_8H"/>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50113" relation="include">
+        </childnode>
+        <childnode refid="50114" relation="include">
+        </childnode>
+        <childnode refid="50116" relation="include">
+        </childnode>
+        <childnode refid="50091" relation="include">
+        </childnode>
+      </node>
+      <node id="50136">
+        <label>sys/wait.h</label>
+      </node>
+      <node id="50086">
+        <label>iosfwd</label>
+      </node>
+      <node id="50091">
+        <label>cstdlib</label>
+      </node>
+      <node id="50147">
+        <label>cfenv</label>
+      </node>
+      <node id="50100">
+        <label>iostream</label>
+      </node>
+      <node id="50110">
+        <label>AMReX_IndexType.H</label>
+        <link refid="AMReX__IndexType_8H"/>
+        <childnode refid="50086" relation="include">
+        </childnode>
+        <childnode refid="50089" relation="include">
+        </childnode>
+        <childnode refid="50090" relation="include">
+        </childnode>
+        <childnode refid="50096" relation="include">
+        </childnode>
+      </node>
+      <node id="50117">
+        <label>cstddef</label>
+      </node>
+      <node id="50138">
+        <label>unordered_map</label>
+      </node>
+      <node id="50127">
+        <label>AMReX_Gpu.H</label>
+        <link refid="AMReX__Gpu_8H"/>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50113" relation="include">
+        </childnode>
+        <childnode refid="50128" relation="include">
+        </childnode>
+        <childnode refid="50130" relation="include">
+        </childnode>
+        <childnode refid="50112" relation="include">
+        </childnode>
+        <childnode refid="50150" relation="include">
+        </childnode>
+        <childnode refid="50152" relation="include">
+        </childnode>
+        <childnode refid="50153" relation="include">
+        </childnode>
+        <childnode refid="50151" relation="include">
+        </childnode>
+        <childnode refid="50154" relation="include">
+        </childnode>
+        <childnode refid="50157" relation="include">
+        </childnode>
+        <childnode refid="50158" relation="include">
+        </childnode>
+        <childnode refid="50159" relation="include">
+        </childnode>
+      </node>
+      <node id="50094">
+        <label>climits</label>
+      </node>
+      <node id="50123">
+        <label>mutex</label>
+      </node>
+      <node id="50133">
+        <label>chrono</label>
+      </node>
+      <node id="50146">
+        <label>csignal</label>
+      </node>
+      <node id="50129">
+        <label>AMReX_CudaLaunch.H</label>
+        <link refid="AMReX__CudaLaunch_8H"/>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50113" relation="include">
+        </childnode>
+        <childnode refid="50130" relation="include">
+        </childnode>
+        <childnode refid="50150" relation="include">
+        </childnode>
+        <childnode refid="50151" relation="include">
+        </childnode>
+        <childnode refid="50085" relation="include">
+        </childnode>
+        <childnode refid="50083" relation="include">
+        </childnode>
+        <childnode refid="50102" relation="include">
+        </childnode>
+        <childnode refid="50114" relation="include">
+        </childnode>
+        <childnode refid="50117" relation="include">
+        </childnode>
+        <childnode refid="50093" relation="include">
+        </childnode>
+      </node>
+      <node id="50121">
+        <label>AMReX_CArena.H</label>
+        <link refid="AMReX__CArena_8H"/>
+        <childnode refid="50117" relation="include">
+        </childnode>
+        <childnode refid="50122" relation="include">
+        </childnode>
+        <childnode refid="50109" relation="include">
+        </childnode>
+        <childnode refid="50123" relation="include">
+        </childnode>
+        <childnode refid="50116" relation="include">
+        </childnode>
+      </node>
+      <node id="50115">
+        <label>type_traits</label>
+      </node>
+      <node id="50122">
+        <label>set</label>
+      </node>
+      <node id="50120">
+        <label>AMReX_BArena.H</label>
+        <link refid="AMReX__BArena_8H"/>
+        <childnode refid="50116" relation="include">
+        </childnode>
+      </node>
+      <node id="50089">
+        <label>AMReX_ccse-mpi.H</label>
+        <link refid="AMReX__ccse-mpi_8H"/>
+      </node>
+      <node id="50095">
+        <label>algorithm</label>
+      </node>
+      <node id="50160">
+        <label>cstring</label>
+      </node>
+      <node id="50079">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H</label>
+        <link refid="AMReX_ParticleTile.H"/>
+        <childnode refid="50080" relation="include">
+        </childnode>
+        <childnode refid="50162" relation="include">
+        </childnode>
+        <childnode refid="50163" relation="include">
+        </childnode>
+        <childnode refid="50108" relation="include">
+        </childnode>
+        <childnode refid="50164" relation="include">
+        </childnode>
+        <childnode refid="50165" relation="include">
+        </childnode>
+        <childnode refid="50087" relation="include">
+        </childnode>
+        <childnode refid="50166" relation="include">
+        </childnode>
+      </node>
+      <node id="50098">
+        <label>memory</label>
+      </node>
+      <node id="50152">
+        <label>AMReX_CudaUtility.H</label>
+        <link refid="AMReX__CudaUtility_8H"/>
+        <childnode refid="50101" relation="include">
+        </childnode>
+        <childnode refid="50151" relation="include">
+        </childnode>
+        <childnode refid="50083" relation="include">
+        </childnode>
+        <childnode refid="50082" relation="include">
+        </childnode>
+        <childnode refid="50097" relation="include">
+        </childnode>
+        <childnode refid="50100" relation="include">
+        </childnode>
+        <childnode refid="50092" relation="include">
+        </childnode>
+      </node>
+      <node id="50082">
+        <label>AMReX_REAL.H</label>
+        <link refid="AMReX__REAL_8H"/>
+        <childnode refid="50083" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="50171">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_LoadBalanceKD.cpp</label>
+        <link refid="AMReX__LoadBalanceKD_8cpp"/>
+      </node>
+      <node id="50172">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborParticles.H</label>
+        <link refid="AMReX__NeighborParticles_8H"/>
+      </node>
+      <node id="50169">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrParticles.H</label>
+        <link refid="AMReX__AmrParticles_8H"/>
+      </node>
+      <node id="50173">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_TracerParticles.H</label>
+        <link refid="AMReX__TracerParticles_8H"/>
+        <childnode refid="50169" relation="include">
+        </childnode>
+        <childnode refid="50174" relation="include">
+        </childnode>
+      </node>
+      <node id="50170">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_LoadBalanceKD.H</label>
+        <link refid="AMReX__LoadBalanceKD_8H"/>
+        <childnode refid="50171" relation="include">
+        </childnode>
+      </node>
+      <node id="50168">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particles.H</label>
+        <link refid="AMReX__Particles_8H"/>
+        <childnode refid="50169" relation="include">
+        </childnode>
+        <childnode refid="50170" relation="include">
+        </childnode>
+        <childnode refid="50172" relation="include">
+        </childnode>
+        <childnode refid="50173" relation="include">
+        </childnode>
+      </node>
+      <node id="50174">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_TracerParticles.cpp</label>
+        <link refid="AMReX__TracerParticles_8cpp"/>
+      </node>
+      <node id="50167">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H</label>
+        <link refid="AMReX_ParticleTile.H"/>
+        <childnode refid="50168" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structamrex_1_1ParticleTile" prot="public">amrex::ParticleTile</innerclass>
+    <innernamespace refid="namespaceamrex">amrex</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>AMREX_PARTICLETILE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_PARTICLETILE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__Particle_8H" kindref="compound">AMReX_Particle.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__ArrayOfStructs_8H" kindref="compound">AMReX_ArrayOfStructs.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__StructOfArrays_8H" kindref="compound">AMReX_StructOfArrays.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__Vector_8H" kindref="compound">AMReX_Vector.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__IndexSequence_8H" kindref="compound">AMReX_IndexSequence.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thrust/tuple.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thrust/iterator/zip_iterator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thrust/device_ptr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex" kindref="compound">amrex</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructInt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NArrayReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NArrayInt&gt;</highlight></codeline>
+<codeline lineno="23" refid="structamrex_1_1ParticleTile" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structamrex_1_1ParticleTile" kindref="compound">ParticleTile</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25" refid="structamrex_1_1ParticleTile_1ad1c67821792f0858b9cdb5a6a98a1b14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1Particle" kindref="compound">ParticleType</ref><sp/>=<sp/><ref refid="structamrex_1_1Particle" kindref="compound">Particle&lt;NStructReal, NStructInt&gt;</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structamrex_1_1ParticleTile_1ab10926418fb9524de6ea3f822892e1d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1ArrayOfStructs" kindref="compound">AoS</ref><sp/>=<sp/><ref refid="classamrex_1_1ArrayOfStructs" kindref="compound">ArrayOfStructs&lt;NStructReal, NStructInt&gt;</ref>;</highlight></codeline>
+<codeline lineno="28" refid="structamrex_1_1ParticleTile_1a2b2ec393547273e1b25b09dd8a2462de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a2b2ec393547273e1b25b09dd8a2462de" kindref="member">ParticleVector</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1ArrayOfStructs_1ae30aa8c493160f31bfda73126c09eed9" kindref="member">AoS::ParticleVector</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structamrex_1_1ParticleTile_1ae6b0bb596eb811ce93f8ba2ec6b46589" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1StructOfArrays" kindref="compound">SoA</ref><sp/>=<sp/><ref refid="structamrex_1_1StructOfArrays" kindref="compound">StructOfArrays&lt;NArrayReal, NArrayInt&gt;</ref>;</highlight></codeline>
+<codeline lineno="31" refid="structamrex_1_1ParticleTile_1a1842dcadd4e11fcf017bb29c91491a56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a1842dcadd4e11fcf017bb29c91491a56" kindref="member">RealVector</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1StructOfArrays_1ac78510b872fa9a2af6ffaaaeb9ecebfb" kindref="member">SoA::RealVector</ref>;</highlight></codeline>
+<codeline lineno="32" refid="structamrex_1_1ParticleTile_1aa0ea8933b8870b1e808211a000be6614" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1aa0ea8933b8870b1e808211a000be6614" kindref="member">IntVector</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1StructOfArrays_1a1309b958dfc6b3244609e24544a2b37e" kindref="member">SoA::IntVector</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structamrex_1_1ParticleTile_1ae7a25ea8a470f799053e431918ee6699" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ArrayOfStructs" kindref="compound">AoS</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1ae7a25ea8a470f799053e431918ee6699" kindref="member">GetArrayOfStructs</ref><sp/>()<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="35" refid="structamrex_1_1ParticleTile_1a8d95866b677d5c175717eba9f44922bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1ArrayOfStructs" kindref="compound">AoS</ref>&amp;<sp/><ref refid="structamrex_1_1ParticleTile_1a8d95866b677d5c175717eba9f44922bf" kindref="member">GetArrayOfStructs</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structamrex_1_1ParticleTile_1ab58f152b1c9b0ec6c7e7556ef3273868" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1StructOfArrays" kindref="compound">SoA</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1ab58f152b1c9b0ec6c7e7556ef3273868" kindref="member">GetStructOfArrays</ref><sp/>()<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="38" refid="structamrex_1_1ParticleTile_1a02fe1dcb8e8389f64f916449409e63ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1StructOfArrays" kindref="compound">SoA</ref>&amp;<sp/><ref refid="structamrex_1_1ParticleTile_1a02fe1dcb8e8389f64f916449409e63ef" kindref="member">GetStructOfArrays</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structamrex_1_1ParticleTile_1ac83e79dd2e2babd95c5938cf89164802" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1ac83e79dd2e2babd95c5938cf89164802" kindref="member">empty</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>.<ref refid="classamrex_1_1ArrayOfStructs_1a49c864501f9266bd0669d8ac96f0a6c9" kindref="member">empty</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structamrex_1_1ParticleTile_1a1784ab6d8ccaf82cf65799ce336289a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="structamrex_1_1ParticleTile_1a1784ab6d8ccaf82cf65799ce336289a9" kindref="member">size</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>.<ref refid="classamrex_1_1ArrayOfStructs_1a1c415d4d53f3a207c3e6c31a3906c8e7" kindref="member">size</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structamrex_1_1ParticleTile_1a80b9e96e04c429ac908a7772478f3f29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a80b9e96e04c429ac908a7772478f3f29" kindref="member">numParticles</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>.<ref refid="classamrex_1_1ArrayOfStructs_1a97fb96cfe3eae08a5eece375511c0cc7" kindref="member">numParticles</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structamrex_1_1ParticleTile_1a01c6271c92fabf63be8ceef8e8bf3ebc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a01c6271c92fabf63be8ceef8e8bf3ebc" kindref="member">resize</ref>(std::size_t<sp/>count)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1adb315c6b4e14918ddef7a86fb893ee2a" kindref="member">resize</ref>(count);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>.<ref refid="classamrex_1_1ArrayOfStructs_1a74abec66d89584e1409d0efbb8a79bfa" kindref="member">resize</ref>(count);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structamrex_1_1ParticleTile_1a8b973bf091c4a1b348c77e3a0bcc9bf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a8b973bf091c4a1b348c77e3a0bcc9bf6" kindref="member">push_back</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1Particle" kindref="compound">ParticleType</ref>&amp;<sp/>p)<sp/>{<sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>().<ref refid="classamrex_1_1ArrayOfStructs_1a67b6c5b2f81f26b376136defe549dfe6" kindref="member">push_back</ref>(p);<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="structamrex_1_1ParticleTile_1a796489360bf44d5e6cb7f728aa577c0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a796489360bf44d5e6cb7f728aa577c0f" kindref="member">push_back_real</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp,<sp/>Real<sp/>v)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1aedb040a21ebc05bf0a46116e20f8422d" kindref="member">GetRealData</ref>(comp).push_back(v);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structamrex_1_1ParticleTile_1a03a7e16d333b1f95b6f5f7884a498473" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a03a7e16d333b1f95b6f5f7884a498473" kindref="member">push_back_real</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;Real,<sp/>NArrayReal&gt;&amp;<sp/>v)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>NArrayReal;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1aedb040a21ebc05bf0a46116e20f8422d" kindref="member">GetRealData</ref>(i).push_back(v[i]);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="structamrex_1_1ParticleTile_1abf242e0a766f0dd4c734782134a00adc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1abf242e0a766f0dd4c734782134a00adc" kindref="member">push_back_real</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real*<sp/>beg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real*<sp/><ref refid="namespaceamrex_1a9519b5209a86bace52c1d901c5bb5aa4" kindref="member">end</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1aedb040a21ebc05bf0a46116e20f8422d" kindref="member">GetRealData</ref>(comp).end();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1aedb040a21ebc05bf0a46116e20f8422d" kindref="member">GetRealData</ref>(comp).insert(it,<sp/>beg,<sp/>end);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structamrex_1_1ParticleTile_1af3367372fba363e641912b4216c87620" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1af3367372fba363e641912b4216c87620" kindref="member">push_back_real</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp,<sp/>std::size_t<sp/>npar,<sp/>Real<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>new_size<sp/>=<sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1aedb040a21ebc05bf0a46116e20f8422d" kindref="member">GetRealData</ref>(comp).size()<sp/>+<sp/>npar;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1aedb040a21ebc05bf0a46116e20f8422d" kindref="member">GetRealData</ref>(comp).resize(new_size,<sp/>v);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="structamrex_1_1ParticleTile_1aaa93fb5f97848d4083e3072478beef19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1aaa93fb5f97848d4083e3072478beef19" kindref="member">push_back_int</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1a93cbbaf1f932ea050b89d581b54de065" kindref="member">GetIntData</ref>(comp).push_back(v);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="structamrex_1_1ParticleTile_1a381fade9ed18d842350fbac57bb474ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a381fade9ed18d842350fbac57bb474ac" kindref="member">push_back_int</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;int,<sp/>NArrayInt&gt;&amp;<sp/>v)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>NArrayInt;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1a93cbbaf1f932ea050b89d581b54de065" kindref="member">GetIntData</ref>(i).push_back(v[i]);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="structamrex_1_1ParticleTile_1a511592b9a1fec7fbaf7920fd9332e4cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a511592b9a1fec7fbaf7920fd9332e4cc" kindref="member">push_back_int</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>beg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="namespaceamrex_1a9519b5209a86bace52c1d901c5bb5aa4" kindref="member">end</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1a93cbbaf1f932ea050b89d581b54de065" kindref="member">GetIntData</ref>(comp).end();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1a93cbbaf1f932ea050b89d581b54de065" kindref="member">GetIntData</ref>(comp).insert(it,<sp/>beg,<sp/>end);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="structamrex_1_1ParticleTile_1a968af2f28750e166c7523aed1329b3cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structamrex_1_1ParticleTile_1a968af2f28750e166c7523aed1329b3cd" kindref="member">push_back_int</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp,<sp/>std::size_t<sp/>npar,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>new_size<sp/>=<sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1a93cbbaf1f932ea050b89d581b54de065" kindref="member">GetIntData</ref>(comp).size()<sp/>+<sp/>npar;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>.<ref refid="structamrex_1_1StructOfArrays_1a93cbbaf1f932ea050b89d581b54de065" kindref="member">GetIntData</ref>(comp).resize(new_size,<sp/>v);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ArrayOfStructs" kindref="compound">AoS</ref><sp/><ref refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" kindref="member">m_aos_tile</ref>;</highlight></codeline>
+<codeline lineno="132" refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1StructOfArrays" kindref="compound">SoA</ref><sp/><ref refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" kindref="member">m_soa_tile</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>amrex;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>AMREX_PARTICLETILE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H"/>
+  </compounddef>
+</doxygen>

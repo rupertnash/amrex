@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="AMReX__OMPDepositionHelper__nd_8F90" kind="file" language="Fortran">
+    <compoundname>AMReX_OMPDepositionHelper_nd.F90</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="AMReX__OMPDepositionHelper__nd_8F90_1a476e8d8d98871aa8d5fbf0c8a6ff4259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>subroutine</type>
+        <definition>subroutine amrex_atomic_accumulate_fab</definition>
+        <argsstring>(local_fab, tile_lo, tile_hi, global_fab, lo, hi, nc)</argsstring>
+        <name>amrex_atomic_accumulate_fab</name>
+        <param>
+          <type>local_fab</type>
+          <defname>local_fab</defname>
+        </param>
+        <param>
+          <type>tile_lo</type>
+          <defname>tile_lo</defname>
+        </param>
+        <param>
+          <type>tile_hi</type>
+          <defname>tile_hi</defname>
+        </param>
+        <param>
+          <type>global_fab</type>
+          <defname>global_fab</defname>
+        </param>
+        <param>
+          <type>lo</type>
+          <defname>lo</defname>
+        </param>
+        <param>
+          <type>hi</type>
+          <defname>hi</defname>
+        </param>
+        <param>
+          <type>nc</type>
+          <defname>nc</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_OMPDepositionHelper_nd.F90" line="1" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_OMPDepositionHelper_nd.F90" bodystart="4" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__OMPDepositionHelper__nd_8F90_1a476e8d8d98871aa8d5fbf0c8a6ff4259" kindref="member">amrex_atomic_accumulate_fab</ref>(local_fab,<sp/>tile_lo,<sp/>tile_hi,<sp/>&amp;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>global_fab,<sp/>lo,<sp/>hi,<sp/>nc)<sp/>&amp;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>bind(c,<sp/>name=</highlight><highlight class="stringliteral">&apos;amrex_atomic_accumulate_fab&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">use<sp/></highlight><highlight class="normal">iso_c_binding</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">use<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex__fort__module" kindref="compound">amrex_fort_module</ref></highlight><highlight class="keywordtype">,<sp/>only</highlight><highlight class="normal"><sp/>:<sp/><ref refid="AMReX__REAL_8H_1a9c34e09baf6d4d1b12637402203f9e9e" kindref="member">amrex_real</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">implicit<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">value</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::<sp/>nc</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::<sp/>lo(3)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::<sp/>hi(3)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>::<sp/>global_fab(lo(1):hi(1),<sp/>lo(2):hi(2),<sp/>lo(3):hi(3),nc)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::<sp/>tile_lo(3)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::<sp/>tile_hi(3)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>::<sp/>local_fab(tile_lo(1):tile_hi(1),<sp/>tile_lo(2):tile_hi(2),<sp/>tile_lo(3):tile_hi(3),<sp/>nc)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::<sp/>i,j,k,comp</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>comp<sp/>=<sp/>1,<sp/>nc</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>tile_lo(3),<sp/>tile_hi(3)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>tile_lo(2),<sp/>tile_hi(2)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>tile_lo(1),<sp/>tile_hi(1)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">!$omp<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>global_fab(i,j,k,comp)<sp/>=<sp/>global_fab(i,j,k,comp)<sp/>+<sp/>local_fab(i,j,k,comp)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">!$omp<sp/>end<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="keywordflow"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordflow"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordflow"><sp/><sp/><sp/><sp/><sp/>end<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordflow"><sp/><sp/>end<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">end<sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__OMPDepositionHelper__nd_8F90_1a476e8d8d98871aa8d5fbf0c8a6ff4259" kindref="member">amrex_atomic_accumulate_fab</ref></highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_OMPDepositionHelper_nd.F90"/>
+  </compounddef>
+</doxygen>

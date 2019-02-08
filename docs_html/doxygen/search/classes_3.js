@@ -1,14 +1,22 @@
 var searchData=
 [
-  ['defaultfabfactory',['DefaultFabFactory',['../classamrex_1_1_default_fab_factory.html',1,'amrex']]],
-  ['derivelist',['DeriveList',['../classamrex_1_1_derive_list.html',1,'amrex']]],
-  ['deriverec',['DeriveRec',['../classamrex_1_1_derive_rec.html',1,'amrex']]],
-  ['descriptorlist',['DescriptorList',['../classamrex_1_1_descriptor_list.html',1,'amrex']]],
-  ['destcomp',['DestComp',['../structamrex_1_1_dest_comp.html',1,'amrex']]],
-  ['device',['Device',['../classamrex_1_1_cuda_1_1_device.html',1,'amrex::Cuda']]],
-  ['devicescalar',['DeviceScalar',['../structamrex_1_1_cuda_1_1_device_scalar.html',1,'amrex::Cuda']]],
-  ['differenceif',['DifferenceIF',['../classamrex_1_1_e_b2_1_1_difference_i_f.html',1,'amrex::EB2']]],
-  ['dim3',['Dim3',['../structamrex_1_1_dim3.html',1,'amrex']]],
-  ['distfcnelement2d',['distFcnElement2d',['../classamrex_1_1dist_fcn_element2d.html',1,'amrex']]],
-  ['distributionmapping',['DistributionMapping',['../classamrex_1_1_distribution_mapping.html',1,'amrex']]]
+  ['datablock',['DataBlock',['../structCommProfStats_1_1DataBlock.html',1,'CommProfStats']]],
+  ['datablock',['DataBlock',['../structRegionsProfStats_1_1DataBlock.html',1,'RegionsProfStats']]],
+  ['dataservices',['DataServices',['../classamrex_1_1DataServices.html',1,'amrex']]],
+  ['defaultfabfactory',['DefaultFabFactory',['../classamrex_1_1DefaultFabFactory.html',1,'amrex']]],
+  ['derivelist',['DeriveList',['../classamrex_1_1DeriveList.html',1,'amrex']]],
+  ['deriverec',['DeriveRec',['../classamrex_1_1DeriveRec.html',1,'amrex']]],
+  ['descriptorlist',['DescriptorList',['../classamrex_1_1DescriptorList.html',1,'amrex']]],
+  ['descriptormap',['DescriptorMap',['../classamrex_1_1InSituUtils_1_1DescriptorMap.html',1,'amrex::InSituUtils']]],
+  ['destcomp',['DestComp',['../structamrex_1_1DestComp.html',1,'amrex']]],
+  ['device',['Device',['../classamrex_1_1Cuda_1_1Device.html',1,'amrex::Cuda']]],
+  ['devicescalar',['DeviceScalar',['../structamrex_1_1Cuda_1_1DeviceScalar.html',1,'amrex::Cuda']]],
+  ['dfft',['Dfft',['../classhacc_1_1Dfft.html',1,'hacc']]],
+  ['differenceif',['DifferenceIF',['../classamrex_1_1EB2_1_1DifferenceIF.html',1,'amrex::EB2']]],
+  ['dim3',['Dim3',['../structamrex_1_1Dim3.html',1,'amrex']]],
+  ['distfcnelement2d',['distFcnElement2d',['../classamrex_1_1distFcnElement2d.html',1,'amrex']]],
+  ['distribution',['Distribution',['../classhacc_1_1Distribution.html',1,'hacc']]],
+  ['distribution_5ft',['distribution_t',['../structdistribution__t.html',1,'']]],
+  ['distributionmapping',['DistributionMapping',['../classamrex_1_1DistributionMapping.html',1,'amrex']]],
+  ['divvis',['DivVis',['../classamrex_1_1DivVis.html',1,'amrex']]]
 ];

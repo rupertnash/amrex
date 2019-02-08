@@ -1,0 +1,2221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1MLMG" kind="class" language="C++" prot="public">
+    <compoundname>amrex::MLMG</compoundname>
+    <includes refid="AMReX__MLMG_8H" local="no">AMReX_MLMG.H</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4df" prot="public" static="no">
+        <name>BottomSolver</name>
+        <enumvalue id="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfaa24fa9dac0801f55f51de06cd8f9d132" prot="public">
+          <name>smoother</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfae123b37d2b5fd373237e049a1e68ca13" prot="public">
+          <name>bicgstab</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa6e9cf3eef65da697796cf33f27eb0f57" prot="public">
+          <name>cg</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b" prot="public">
+          <name>hypre</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa1c626ad40ecbe4497cfe809fbc98f31f" prot="public">
+          <name>petsc</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="26" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classamrex_1_1MLMG_1a864ffbd5cc09c630993c949c5d890d0f" prot="public" static="no">
+        <type><ref refid="classamrex_1_1MLLinOp_1a5aa01a1ef6b0b3a471f02f65ae4b4884" kindref="member">MLLinOp::BCMode</ref></type>
+        <definition>using amrex::MLMG::BCMode =  MLLinOp::BCMode</definition>
+        <argsstring></argsstring>
+        <name>BCMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="23" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classamrex_1_1MLMG_1a93725420770bf42d532f9ee7dea87c2f" prot="public" static="no">
+        <type><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3" kindref="member">MLLinOp::Location</ref></type>
+        <definition>using amrex::MLMG::Location =  MLLinOp::Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001" prot="private" static="no">
+        <name>timer_types</name>
+        <enumvalue id="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001a9806779ed6ebcc94ecd07dbb3ff6acca" prot="private">
+          <name>solve_time</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001af8c1043cde20f8e1d9d022abb2c9ffad" prot="private">
+          <name>iter_time</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001accea4ad3befe3a4c0c996cacbc4b1fb3" prot="private">
+          <name>bottom_time</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001ae447a282e35218ac782b215c4a1fccfc" prot="private">
+          <name>ntimers</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="224" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="224" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classamrex_1_1MLMG_1a7b344595276c27ed17dacb3ea1fb95aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class MLCGSolver</definition>
+        <argsstring></argsstring>
+        <name>MLCGSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="21" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1af81888354825d23d402d7787f0fe4dc9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="142" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ae4f94ee42b8da24efdafd34b023e2457" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::max_iters</definition>
+        <argsstring></argsstring>
+        <name>max_iters</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="143" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a16a61c9fe1782c8afde4a096b564fb90" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::do_fixed_number_of_iters</definition>
+        <argsstring></argsstring>
+        <name>do_fixed_number_of_iters</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="144" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a8519bc33f4e84ff1b590cf406c0c9506" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::nu1</definition>
+        <argsstring></argsstring>
+        <name>nu1</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>pre </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="146" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a647e21342109e81cc50bc8825bc852ce" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::nu2</definition>
+        <argsstring></argsstring>
+        <name>nu2</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>post </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="147" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a4076f55caa5454e91c6ca50f1d2d6c10" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::nuf</definition>
+        <argsstring></argsstring>
+        <name>nuf</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+<para>when smoother is used as bottom solver </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="148" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ae8120b974758c572d1463ee286204e10" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::nub</definition>
+        <argsstring></argsstring>
+        <name>nub</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>aditional smoothing after bottom cg solver </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="149" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1aefc9d57def6cdc2851da4d26e38e092f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::max_fmg_iters</definition>
+        <argsstring></argsstring>
+        <name>max_fmg_iters</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="151" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a1a607f195669be23b48131ae81e35b25" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4df" kindref="member">BottomSolver</ref></type>
+        <definition>BottomSolver amrex::MLMG::bottom_solver</definition>
+        <argsstring></argsstring>
+        <name>bottom_solver</name>
+        <initializer>= <ref refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfae123b37d2b5fd373237e049a1e68ca13" kindref="member">BottomSolver::bicgstab</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="153" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ae2f4cd61322f224e598377431f47dde5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::bottom_verbose</definition>
+        <argsstring></argsstring>
+        <name>bottom_verbose</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="154" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a37be121e8fe2e8e8341198486fc07d0e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::bottom_maxiter</definition>
+        <argsstring></argsstring>
+        <name>bottom_maxiter</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="155" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a20ed3ce546f3fa0f009d66fd9bd1f2bc" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real amrex::MLMG::bottom_reltol</definition>
+        <argsstring></argsstring>
+        <name>bottom_reltol</name>
+        <initializer>= 1.e-4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="156" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a383d3320ac67af7ea304a3fad4c53ff6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::always_use_bnorm</definition>
+        <argsstring></argsstring>
+        <name>always_use_bnorm</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="158" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ac6ee903a66f419d1ed10533cc13bd4e4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::final_fill_bc</definition>
+        <argsstring></argsstring>
+        <name>final_fill_bc</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="160" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a9bfa9f478ad10977b4c60b176b00250b" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1MLLinOp" kindref="compound">MLLinOp</ref> &amp;</type>
+        <definition>MLLinOp&amp; amrex::MLMG::linop</definition>
+        <argsstring></argsstring>
+        <name>linop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="162" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1abfda726f45d63f473cacf3cab3a5b063" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::namrlevs</definition>
+        <argsstring></argsstring>
+        <name>namrlevs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1aa10d7e4fe3c243857a5493ca548b0f55" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::finest_amr_lev</definition>
+        <argsstring></argsstring>
+        <name>finest_amr_lev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="164" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ad02719958a8fc22e7843935f5ff1e407" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::MLMG::linop_prepared</definition>
+        <argsstring></argsstring>
+        <name>linop_prepared</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="166" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a0988de0b7355cc6067a0512759cac21e" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long amrex::MLMG::solve_called</definition>
+        <argsstring></argsstring>
+        <name>solve_called</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="167" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a5de6da3652a1625f6640f4cb80451501" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::do_nsolve</definition>
+        <argsstring></argsstring>
+        <name>do_nsolve</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>N Solve. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="171" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a8eba5d6f50bda8d65cb4481e57a557a5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MLMG::nsolve_grid_size</definition>
+        <argsstring></argsstring>
+        <name>nsolve_grid_size</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="172" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a51b70e5b31f450b486ff39b013d9440c" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classamrex_1_1MLLinOp" kindref="compound">MLLinOp</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;MLLinOp&gt; amrex::MLMG::ns_linop</definition>
+        <argsstring></argsstring>
+        <name>ns_linop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="173" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ab20f4feb5164d7f9ee8bcbfaf6b8c497" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classamrex_1_1MLMG" kindref="compound">MLMG</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;MLMG&gt; amrex::MLMG::ns_mlmg</definition>
+        <argsstring></argsstring>
+        <name>ns_mlmg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a976935c58886c588cb51f006fd875809" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;MultiFab&gt; amrex::MLMG::ns_sol</definition>
+        <argsstring></argsstring>
+        <name>ns_sol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="175" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1aed64acecaae43cecb817b689d1da5e54" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;MultiFab&gt; amrex::MLMG::ns_rhs</definition>
+        <argsstring></argsstring>
+        <name>ns_rhs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="176" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a2bb3673229f43eac4c351ce53a287226" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; std::unique_ptr&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt; &gt;</type>
+        <definition>Vector&lt;std::unique_ptr&lt;MultiFab&gt; &gt; amrex::MLMG::sol_raii</definition>
+        <argsstring></argsstring>
+        <name>sol_raii</name>
+        <briefdescription>
+<para><ref refid="classamrex_1_1Hypre" kindref="compound">Hypre</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>PETSc To avoid confusion, terms like sol, cor, rhs, res, ... etc. are in the frame of the original equation, not the correction form </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="203" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a45e3c66f8db400e00135eb8a4d97217b" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt;</type>
+        <definition>Vector&lt;MultiFab*&gt; amrex::MLMG::sol</definition>
+        <argsstring></argsstring>
+        <name>sol</name>
+        <briefdescription>
+<para>alias to argument a_sol </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="204" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1abc8a02638fb38ec33c9567569a501317" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt;</type>
+        <definition>Vector&lt;MultiFab&gt; amrex::MLMG::rhs</definition>
+        <argsstring></argsstring>
+        <name>rhs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy of original rhs </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="205" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a86dd40d4379f5831102e595cecfad692" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt; &gt;</type>
+        <definition>Vector&lt;Vector&lt;MultiFab&gt; &gt; amrex::MLMG::res</definition>
+        <argsstring></argsstring>
+        <name>res</name>
+        <briefdescription>
+<para>L(sol) = rhs. </para>        </briefdescription>
+        <detaileddescription>
+<para>First <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>: <ref refid="classamrex_1_1Amr" kindref="compound">Amr</ref> levels. 0 is the coarest level Second <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>: MG levels. 0 is the finest level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="213" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1aee464af91d358583757fd104da92b407" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; std::unique_ptr&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt; &gt; &gt;</type>
+        <definition>Vector&lt;Vector&lt;std::unique_ptr&lt;MultiFab&gt; &gt; &gt; amrex::MLMG::cor</definition>
+        <argsstring></argsstring>
+        <name>cor</name>
+        <briefdescription>
+<para>= rhs - L(sol) </para>        </briefdescription>
+        <detaileddescription>
+<para>L(cor) = res </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="214" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ad74a7a55ad770900e7028fbfea7119ee" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; std::unique_ptr&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt; &gt; &gt;</type>
+        <definition>Vector&lt;Vector&lt;std::unique_ptr&lt;MultiFab&gt; &gt; &gt; amrex::MLMG::cor_hold</definition>
+        <argsstring></argsstring>
+        <name>cor_hold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="215" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a265ef6b4e1fa8487d48ee612843c3cd4" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt; &gt;</type>
+        <definition>Vector&lt;Vector&lt;MultiFab&gt; &gt; amrex::MLMG::rescor</definition>
+        <argsstring></argsstring>
+        <name>rescor</name>
+        <briefdescription>
+<para>= res - L(cor) Residual of the correction form </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="216" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a67cedda5ad0584d823d1d4fa12d57274" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; std::unique_ptr&lt; <ref refid="classamrex_1_1iMultiFab" kindref="compound">iMultiFab</ref> &gt; &gt;</type>
+        <definition>Vector&lt;std::unique_ptr&lt;iMultiFab&gt; &gt; amrex::MLMG::fine_mask</definition>
+        <argsstring></argsstring>
+        <name>fine_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="218" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1acbd5fc7b1f0af79ee6eb5daa55b890fb" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &gt;</type>
+        <definition>Vector&lt;Vector&lt;Real&gt; &gt; amrex::MLMG::volinv</definition>
+        <argsstring></argsstring>
+        <name>volinv</name>
+        <briefdescription>
+<para>used by makeSolvable </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="220" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1ab013a4dc85f37684f9e65f63b5318fc9" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; std::unique_ptr&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &gt; &gt;</type>
+        <definition>Vector&lt;std::unique_ptr&lt;MultiFab&gt; &gt; amrex::MLMG::scratch</definition>
+        <argsstring></argsstring>
+        <name>scratch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="222" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MLMG_1a60c47161b03df19f998710df25c494fd" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt;</type>
+        <definition>Vector&lt;Real&gt; amrex::MLMG::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="225" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a4d80ba0f675a1b751f35d66d04253dd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MLMG::MLMG</definition>
+        <argsstring>(MLLinOp &amp;a_lp)</argsstring>
+        <name>MLMG</name>
+        <param>
+          <type><ref refid="classamrex_1_1MLLinOp" kindref="compound">MLLinOp</ref> &amp;</type>
+          <declname>a_lp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a12c3c0793a39356963dd1824588b7593" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MLMG::~MLMG</definition>
+        <argsstring>()</argsstring>
+        <name>~MLMG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="29" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="49" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aac3bf11b184d411fb030c53a6a3604eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::MLMG::solve</definition>
+        <argsstring>(const Vector&lt; MultiFab * &gt; &amp;a_sol, const Vector&lt; MultiFab const * &gt; &amp;a_rhs, Real a_tol_rel, Real a_tol_abs)</argsstring>
+        <name>solve</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_sol</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> const * &gt; &amp;</type>
+          <declname>a_rhs</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>a_tol_rel</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>a_tol_abs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="31" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="53" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a6fcfa52ef82ffa84f1e4358c6b3fd3c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::getGradSolution</definition>
+        <argsstring>(const Vector&lt; Array&lt; MultiFab *, AMREX_SPACEDIM &gt; &gt; &amp;a_grad_sol, Location a_loc=Location::FaceCenter)</argsstring>
+        <name>getGradSolution</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> *, AMREX_SPACEDIM &gt; &gt; &amp;</type>
+          <declname>a_grad_sol</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3" kindref="member">Location</ref></type>
+          <declname>a_loc</declname>
+          <defval><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3ad1a130e88790663b2124d7dbd3e9f81e" kindref="member">Location::FaceCenter</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="34" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1227" bodyend="1234"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a5b6cd8f9dd955924d2f84832cfd5fba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::getFluxes</definition>
+        <argsstring>(const Vector&lt; Array&lt; MultiFab *, AMREX_SPACEDIM &gt; &gt; &amp;a_flux, Location a_loc=Location::FaceCenter)</argsstring>
+        <name>getFluxes</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> *, AMREX_SPACEDIM &gt; &gt; &amp;</type>
+          <declname>a_flux</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3" kindref="member">Location</ref></type>
+          <declname>a_loc</declname>
+          <defval><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3ad1a130e88790663b2124d7dbd3e9f81e" kindref="member">Location::FaceCenter</ref></defval>
+        </param>
+        <briefdescription>
+<para>For <computeroutput>(alpha * a - beta * (del dot b grad)) phi = rhs</computeroutput>, flux means <computeroutput>-b grad phi</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_flux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_loc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="43" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1237" bodyend="1245"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a0e86186d43f71b7b14d416eea7c9df08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::getFluxes</definition>
+        <argsstring>(const Vector&lt; Array&lt; MultiFab *, AMREX_SPACEDIM &gt; &gt; &amp;a_flux, const Vector&lt; MultiFab * &gt; &amp;a_sol, Location a_loc=Location::FaceCenter)</argsstring>
+        <name>getFluxes</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> *, AMREX_SPACEDIM &gt; &gt; &amp;</type>
+          <declname>a_flux</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_sol</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3" kindref="member">Location</ref></type>
+          <declname>a_loc</declname>
+          <defval><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3ad1a130e88790663b2124d7dbd3e9f81e" kindref="member">Location::FaceCenter</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="45" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1248" bodyend="1258"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1af93f7cf59f1c90df369168bc2bb329a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::getFluxes</definition>
+        <argsstring>(const Vector&lt; MultiFab * &gt; &amp;a_flux, Location a_loc=Location::CellCenter)</argsstring>
+        <name>getFluxes</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_flux</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3" kindref="member">Location</ref></type>
+          <declname>a_loc</declname>
+          <defval><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3af5c101b5f19e97166e7531ffa1c706c4" kindref="member">Location::CellCenter</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="48" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1261" bodyend="1265"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a12345fa67435aad59199d2d09c352190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::getFluxes</definition>
+        <argsstring>(const Vector&lt; MultiFab * &gt; &amp;a_flux, const Vector&lt; MultiFab * &gt; &amp;a_sol, Location a_loc=Location::CellCenter)</argsstring>
+        <name>getFluxes</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_flux</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_sol</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3" kindref="member">Location</ref></type>
+          <declname>a_loc</declname>
+          <defval><ref refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3af5c101b5f19e97166e7531ffa1c706c4" kindref="member">Location::CellCenter</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="49" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1268" bodyend="1297"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aa99271a622e85b790d8fa3e07fbafb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::compResidual</definition>
+        <argsstring>(const Vector&lt; MultiFab * &gt; &amp;a_res, const Vector&lt; MultiFab * &gt; &amp;a_sol, const Vector&lt; MultiFab const * &gt; &amp;a_rhs)</argsstring>
+        <name>compResidual</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_res</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_sol</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> const * &gt; &amp;</type>
+          <declname>a_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1300" bodyend="1367"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a152881811aacd123a2c8b02d00cb154c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::apply</definition>
+        <argsstring>(const Vector&lt; MultiFab * &gt; &amp;out, const Vector&lt; MultiFab * &gt; &amp;in)</argsstring>
+        <name>apply</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para><computeroutput>out = L(in)</computeroutput>. Note that, if no actual solve is needed, one could turn off multigrid coarsening by constructing a <ref refid="classamrex_1_1MLLinOp" kindref="compound">MLLinOp</ref> object with an appropriate <ref refid="structamrex_1_1LPInfo" kindref="compound">LPInfo</ref> object (e.g., with LPInfo().setMaxCoarseningLevel(0)). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="61" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1370" bodyend="1434"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a06e681096e1ca9cff44897da043d6a34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setVerbose</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setVerbose</name>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="63" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aa5d92f86511d9e05ff5ec54992740b54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setMaxIter</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setMaxIter</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="64" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a026691c7428fa67a27aa49cf40d64e8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setMaxFmgIter</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setMaxFmgIter</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="65" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1ab9299ade1d763de0f45ab78328ab1f7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setFixedIter</definition>
+        <argsstring>(int nit)</argsstring>
+        <name>setFixedIter</name>
+        <param>
+          <type>int</type>
+          <declname>nit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="66" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aa53217c1e2a8b751af6b3a288287259d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setPreSmooth</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setPreSmooth</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="68" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1adffd66f2f848975141c5b33c4d6f05d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setPostSmooth</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setPostSmooth</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="69" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a3d09977cd9678c55f8f7d4be13dc5079" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setFinalSmooth</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setFinalSmooth</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="70" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a41cb6f541c562e5b6c10b7101c1d511e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setBottomSmooth</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setBottomSmooth</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="71" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1acc665bf147e1353e8f2f52b9b363632c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setBottomSolver</definition>
+        <argsstring>(BottomSolver s)</argsstring>
+        <name>setBottomSolver</name>
+        <param>
+          <type><ref refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4df" kindref="member">BottomSolver</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="73" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a64f957fd61f0e0350edd2bd90e1e3c90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setBottomVerbose</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setBottomVerbose</name>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a1c151af32b52cb036bf12d81149c3c17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setBottomMaxIter</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setBottomMaxIter</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="75" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a6df95299ddde40a40dbbd9e117825914" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setBottomTolerance</definition>
+        <argsstring>(Real t)</argsstring>
+        <name>setBottomTolerance</name>
+        <param>
+          <type>Real</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="76" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a5f61d8ce93356664b78a32388b396c35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setCGVerbose</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setCGVerbose</name>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="77" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a7ff8ea99fe4481015aa32b2e385dfb1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setCGMaxIter</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setCGMaxIter</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="78" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a77343134f92c0911aa42b7e7945ba23b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setCGTolerance</definition>
+        <argsstring>(Real t)</argsstring>
+        <name>setCGTolerance</name>
+        <param>
+          <type>Real</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="79" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1ae8f450042dd012c1fba322c726994fdd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setAlwaysUseBNorm</definition>
+        <argsstring>(int flag)</argsstring>
+        <name>setAlwaysUseBNorm</name>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="81" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a63240a28c5f5be11fc4d45038351ad14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setFinalFillBC</definition>
+        <argsstring>(int flag)</argsstring>
+        <name>setFinalFillBC</name>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="83" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a040f3220baf1eb8d4a7263599427db64" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::MLMG::numAMRLevels</definition>
+        <argsstring>() const </argsstring>
+        <name>numAMRLevels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="85" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a8ecbc9a186e43877fdd05637c4a24189" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setNSolve</definition>
+        <argsstring>(int flag)</argsstring>
+        <name>setNSolve</name>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="87" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1afe3b554e359344639dc70535a3e4726a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::setNSolveGridSize</definition>
+        <argsstring>(int s)</argsstring>
+        <name>setNSolveGridSize</name>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a996893d07fc4ae7a2efb074a010c1041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::prepareForSolve</definition>
+        <argsstring>(const Vector&lt; MultiFab * &gt; &amp;a_sol, const Vector&lt; MultiFab const * &gt; &amp;a_rhs)</argsstring>
+        <name>prepareForSolve</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> * &gt; &amp;</type>
+          <declname>a_sol</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> const * &gt; &amp;</type>
+          <declname>a_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="99" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1021" bodyend="1200"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a955977f98a355020f4808fd4acefe76f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::prepareForNSolve</definition>
+        <argsstring>()</argsstring>
+        <name>prepareForNSolve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="101" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1203" bodyend="1224"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a97f2d0353ab1bbb9e4db171de41e2501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::oneIter</definition>
+        <argsstring>(int iter)</argsstring>
+        <name>oneIter</name>
+        <param>
+          <type>int</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="103" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="195" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a38df331fcb36de71c4af020b2e1117ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::miniCycle</definition>
+        <argsstring>(int alev)</argsstring>
+        <name>miniCycle</name>
+        <param>
+          <type>int</type>
+          <declname>alev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="105" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="352" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a6b92f271588ce53fd24d1f7b2c1442a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::mgVcycle</definition>
+        <argsstring>(int amrlev, int mglev)</argsstring>
+        <name>mgVcycle</name>
+        <param>
+          <type>int</type>
+          <declname>amrlev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mglev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="107" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="381" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a7085d7450d545c1f593954d5e445af02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::mgFcycle</definition>
+        <argsstring>()</argsstring>
+        <name>mgFcycle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="108" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="495" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a105413ba8fce8beab99c2b7f11f0f028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::bottomSolve</definition>
+        <argsstring>()</argsstring>
+        <name>bottomSolve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="110" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="784" bodyend="794"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1ac67a9c44825a6f8c44a9ad53020e3109" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::NSolve</definition>
+        <argsstring>(MLMG &amp;a_solver, MultiFab &amp;a_sol, MultiFab &amp;a_rhs)</argsstring>
+        <name>NSolve</name>
+        <param>
+          <type><ref refid="classamrex_1_1MLMG" kindref="compound">MLMG</ref> &amp;</type>
+          <declname>a_solver</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>a_sol</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>a_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="111" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="797" bodyend="809"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a68fb3d9c54966ec9e5fda98b4b0cf169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::actualBottomSolve</definition>
+        <argsstring>()</argsstring>
+        <name>actualBottomSolve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="112" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="812" bodyend="892"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a6e3b238696c2c79000390a6a98f7b9e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::computeMLResidual</definition>
+        <argsstring>(int amrlevmax)</argsstring>
+        <name>computeMLResidual</name>
+        <param>
+          <type>int</type>
+          <declname>amrlevmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="114" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="260" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1af609ac426f564d969f87201e8189eaf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::computeResidual</definition>
+        <argsstring>(int alev)</argsstring>
+        <name>computeResidual</name>
+        <param>
+          <type>int</type>
+          <declname>alev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="115" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="277" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aa802d8378f3912da5b884fcc07c2351b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::computeResWithCrseSolFineCor</definition>
+        <argsstring>(int crse_amr_lev, int fine_amr_lev)</argsstring>
+        <name>computeResWithCrseSolFineCor</name>
+        <param>
+          <type>int</type>
+          <declname>crse_amr_lev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fine_amr_lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="116" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="294" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a97d673162294d25b9b325b636cb9183d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::computeResWithCrseCorFineCor</definition>
+        <argsstring>(int fine_amr_lev)</argsstring>
+        <name>computeResWithCrseCorFineCor</name>
+        <param>
+          <type>int</type>
+          <declname>fine_amr_lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="117" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="333" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a884666fcc4158d42a4f01c83e5d454dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::interpCorrection</definition>
+        <argsstring>(int alev)</argsstring>
+        <name>interpCorrection</name>
+        <param>
+          <type>int</type>
+          <declname>alev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="118" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="531" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a43e3d241603fb49ce0dbef1058e97118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::interpCorrection</definition>
+        <argsstring>(int alev, int mglev)</argsstring>
+        <name>interpCorrection</name>
+        <param>
+          <type>int</type>
+          <declname>alev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mglev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="119" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="631" bodyend="732"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1ae1d69e956c3e0a266b4b2c43c2881e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::addInterpCorrection</definition>
+        <argsstring>(int alev, int mglev)</argsstring>
+        <name>addInterpCorrection</name>
+        <param>
+          <type>int</type>
+          <declname>alev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mglev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="120" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="736" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a725d6dc0cc3c20d8baa48b883805863c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::computeResOfCorrection</definition>
+        <argsstring>(int amrlev, int mglev)</argsstring>
+        <name>computeResOfCorrection</name>
+        <param>
+          <type>int</type>
+          <declname>amrlev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mglev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="122" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="771" bodyend="778"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a3ee68a8bba6178a55d1ca183be3f6fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::MLMG::ResNormInf</definition>
+        <argsstring>(int amrlev, bool local=false)</argsstring>
+        <name>ResNormInf</name>
+        <param>
+          <type>int</type>
+          <declname>amrlev</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>local</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="124" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="896" bodyend="926"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aa86c7015c1ee9cfde217cef76c1a55a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::MLMG::MLResNormInf</definition>
+        <argsstring>(int alevmax, bool local=false)</argsstring>
+        <name>MLResNormInf</name>
+        <param>
+          <type>int</type>
+          <declname>alevmax</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>local</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="125" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="930" bodyend="940"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a2f0fcfb202fff08a11c25408b72dd505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::MLMG::MLRhsNormInf</definition>
+        <argsstring>(bool local=false)</argsstring>
+        <name>MLRhsNormInf</name>
+        <param>
+          <type>bool</type>
+          <declname>local</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="126" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="944" bodyend="974"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aa2a89a45fc288f18494a1304ce6fe5e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::buildFineMask</definition>
+        <argsstring>()</argsstring>
+        <name>buildFineMask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="127" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="977" bodyend="1018"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a92c1d883b63949e33c6acba2c0e19c6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::averageDownAndSync</definition>
+        <argsstring>()</argsstring>
+        <name>averageDownAndSync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="129" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1437" bodyend="1470"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a3cd643e6bf9f7e6d9d2b8cb7fa0b7c71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::computeVolInv</definition>
+        <argsstring>()</argsstring>
+        <name>computeVolInv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="131" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1473" bodyend="1525"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1ae5f98b72769ed94a44f850aa8aa1e1ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::makeSolvable</definition>
+        <argsstring>()</argsstring>
+        <name>makeSolvable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="132" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1528" bodyend="1578"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a818eb5c5d459af91e960acec44627869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::makeSolvable</definition>
+        <argsstring>(int amrlev, int mglev, MultiFab &amp;mf)</argsstring>
+        <name>makeSolvable</name>
+        <param>
+          <type>int</type>
+          <declname>amrlev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mglev</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>mf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="133" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1581" bodyend="1623"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1ad037f6167a4370eef5d2e1b3361cc238" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::MLMG::getNodalSum</definition>
+        <argsstring>(int amrlev, int mglev, MultiFab &amp;mf) const </argsstring>
+        <name>getNodalSum</name>
+        <param>
+          <type>int</type>
+          <declname>amrlev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mglev</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>mf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="134" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1626" bodyend="1635"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1aaf664a17642380d701b1b7b08e10fa63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::bottomSolveWithHypre</definition>
+        <argsstring>(MultiFab &amp;x, const MultiFab &amp;b)</argsstring>
+        <name>bottomSolveWithHypre</name>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="136" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1638" bodyend="1669"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMG_1a1d9aa957bda2ed06061254fb7e187c3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMG::bottomSolveWithPETSc</definition>
+        <argsstring>(MultiFab &amp;x, const MultiFab &amp;b)</argsstring>
+        <name>bottomSolveWithPETSc</name>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="138" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.cpp" bodystart="1672" bodyend="1701"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4010">
+        <label>std::vector&lt; MPI_Status, std::allocator&lt; MPI_Status &gt; &gt;</label>
+      </node>
+      <node id="3994">
+        <label>amrex::FabArrayBase::CacheStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1CacheStats"/>
+        <childnode refid="3995" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3997">
+        <label>amrex::FabArrayBase::FabArrayStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
+      </node>
+      <node id="3990">
+        <label>amrex::IntVect</label>
+        <link refid="classamrex_1_1IntVect"/>
+        <childnode refid="3990" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="3973">
+        <label>amrex::Vector&lt; std::unique_ptr&lt; amrex::MultiFab &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3974" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3987">
+        <label>Real</label>
+      </node>
+      <node id="4011">
+        <label>amrex::Vector&lt; MPI_Request &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4012" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3964">
+        <label>amrex::MLMG</label>
+        <link refid="classamrex_1_1MLMG"/>
+        <childnode refid="3965" relation="usage">
+          <edgelabel>rescor</edgelabel>
+          <edgelabel>res</edgelabel>
+        </childnode>
+        <childnode refid="3967" relation="usage">
+          <edgelabel>timer</edgelabel>
+        </childnode>
+        <childnode refid="3969" relation="usage">
+          <edgelabel>sol</edgelabel>
+        </childnode>
+        <childnode refid="3971" relation="usage">
+          <edgelabel>fine_mask</edgelabel>
+        </childnode>
+        <childnode refid="3973" relation="usage">
+          <edgelabel>scratch</edgelabel>
+          <edgelabel>sol_raii</edgelabel>
+        </childnode>
+        <childnode refid="3975" relation="usage">
+          <edgelabel>volinv</edgelabel>
+        </childnode>
+        <childnode refid="3977" relation="usage">
+          <edgelabel>rhs</edgelabel>
+        </childnode>
+        <childnode refid="3979" relation="usage">
+          <edgelabel>cor</edgelabel>
+          <edgelabel>cor_hold</edgelabel>
+        </childnode>
+        <childnode refid="3981" relation="usage">
+          <edgelabel>linop</edgelabel>
+        </childnode>
+        <childnode refid="3987" relation="usage">
+          <edgelabel>bottom_reltol</edgelabel>
+        </childnode>
+      </node>
+      <node id="3966">
+        <label>std::vector&lt; amrex::Vector&lt; amrex::MultiFab &gt;, std::allocator&lt; amrex::Vector&lt; amrex::MultiFab &gt; &gt; &gt;</label>
+      </node>
+      <node id="3988">
+        <label>amrex::Vector&lt; amrex::Vector&lt; amrex::BoxArray &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3989" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3989">
+        <label>std::vector&lt; amrex::Vector&lt; amrex::BoxArray &gt;, std::allocator&lt; amrex::Vector&lt; amrex::BoxArray &gt; &gt; &gt;</label>
+      </node>
+      <node id="3998">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3999" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3995">
+        <label>string</label>
+      </node>
+      <node id="4013">
+        <label>amrex::Periodicity</label>
+        <link refid="classamrex_1_1Periodicity"/>
+        <childnode refid="3990" relation="usage">
+          <edgelabel>period</edgelabel>
+        </childnode>
+      </node>
+      <node id="4007">
+        <label>std::vector&lt; char *, std::allocator&lt; char * &gt; &gt;</label>
+      </node>
+      <node id="3968">
+        <label>std::vector&lt; Real, std::allocator&lt; Real &gt; &gt;</label>
+      </node>
+      <node id="4006">
+        <label>amrex::Vector&lt; char * &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4007" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3977">
+        <label>amrex::Vector&lt; amrex::MultiFab &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3978" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3982">
+        <label>amrex::Vector&lt; amrex::Vector&lt; std::unique_ptr&lt; amrex::FabFactory&lt; amrex::FArrayBox &gt; &gt; &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3983" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3985">
+        <label>std::vector&lt; amrex::Vector&lt; amrex::Geometry &gt;, std::allocator&lt; amrex::Vector&lt; amrex::Geometry &gt; &gt; &gt;</label>
+      </node>
+      <node id="4008">
+        <label>amrex::FabArray&lt; FAB &gt;::ShMem</label>
+        <link refid="structamrex_1_1FabArray_1_1ShMem"/>
+      </node>
+      <node id="3976">
+        <label>std::vector&lt; amrex::Vector&lt; Real &gt;, std::allocator&lt; amrex::Vector&lt; Real &gt; &gt; &gt;</label>
+      </node>
+      <node id="3984">
+        <label>amrex::Vector&lt; amrex::Vector&lt; amrex::Geometry &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3985" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3986">
+        <label>amrex::RealVect</label>
+        <link refid="classamrex_1_1RealVect"/>
+        <childnode refid="3986" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+        <childnode refid="3987" relation="usage">
+          <edgelabel>vect</edgelabel>
+        </childnode>
+      </node>
+      <node id="3979">
+        <label>amrex::Vector&lt; amrex::Vector&lt; std::unique_ptr&lt; amrex::MultiFab &gt; &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3980" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4014">
+        <label>amrex::Vector&lt; amrex::Vector&lt; amrex::DistributionMapping &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4015" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3974">
+        <label>std::vector&lt; std::unique_ptr&lt; amrex::MultiFab &gt;, std::allocator&lt; std::unique_ptr&lt; amrex::MultiFab &gt; &gt; &gt;</label>
+      </node>
+      <node id="4012">
+        <label>std::vector&lt; MPI_Request, std::allocator&lt; MPI_Request &gt; &gt;</label>
+      </node>
+      <node id="3999">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="4004">
+        <label>amrex::BoxArray</label>
+        <link refid="classamrex_1_1BoxArray"/>
+        <childnode refid="3990" relation="usage">
+          <edgelabel>m_crse_ratio</edgelabel>
+        </childnode>
+        <childnode refid="4005" relation="usage">
+          <edgelabel>m_typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="3981">
+        <label>amrex::MLLinOp</label>
+        <link refid="classamrex_1_1MLLinOp"/>
+        <childnode refid="3982" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="3984" relation="usage">
+          <edgelabel>m_geom</edgelabel>
+        </childnode>
+        <childnode refid="3986" relation="usage">
+          <edgelabel>m_coarse_bc_loc</edgelabel>
+        </childnode>
+        <childnode refid="3988" relation="usage">
+          <edgelabel>m_grids</edgelabel>
+        </childnode>
+        <childnode refid="3990" relation="usage">
+          <edgelabel>m_ixtype</edgelabel>
+        </childnode>
+        <childnode refid="3991" relation="usage">
+          <edgelabel>m_coarse_data_for_bc</edgelabel>
+        </childnode>
+        <childnode refid="3998" relation="usage">
+          <edgelabel>m_domain_covered</edgelabel>
+          <edgelabel>m_amr_ref_ratio</edgelabel>
+          <edgelabel>m_num_mg_levels</edgelabel>
+        </childnode>
+        <childnode refid="4014" relation="usage">
+          <edgelabel>m_dmap</edgelabel>
+        </childnode>
+        <childnode refid="3981" relation="usage">
+          <edgelabel>m_parent</edgelabel>
+        </childnode>
+        <childnode refid="4016" relation="usage">
+          <edgelabel>info</edgelabel>
+        </childnode>
+      </node>
+      <node id="3965">
+        <label>amrex::Vector&lt; amrex::Vector&lt; amrex::MultiFab &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3966" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3971">
+        <label>amrex::Vector&lt; std::unique_ptr&lt; amrex::iMultiFab &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3972" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4002">
+        <label>amrex::DistributionMapping::RefID</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1RefID"/>
+        <childnode refid="4003" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="4009">
+        <label>amrex::Vector&lt; MPI_Status &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3970">
+        <label>std::vector&lt; amrex::MultiFab *, std::allocator&lt; amrex::MultiFab * &gt; &gt;</label>
+      </node>
+      <node id="4016">
+        <label>amrex::LPInfo</label>
+        <link refid="structamrex_1_1LPInfo"/>
+      </node>
+      <node id="4005">
+        <label>amrex::IndexType</label>
+        <link refid="classamrex_1_1IndexType"/>
+      </node>
+      <node id="4003">
+        <label>amrex::DistributionMapping::Ref</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1Ref"/>
+        <childnode refid="3998" relation="usage">
+          <edgelabel>m_index_array</edgelabel>
+          <edgelabel>m_pmap</edgelabel>
+        </childnode>
+      </node>
+      <node id="3996">
+        <label>amrex::DistributionMapping</label>
+        <link refid="classamrex_1_1DistributionMapping"/>
+      </node>
+      <node id="4000">
+        <label>amrex::FabArrayBase::BDKey</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1BDKey"/>
+        <childnode refid="4001" relation="usage">
+          <edgelabel>m_ba_id</edgelabel>
+        </childnode>
+        <childnode refid="4002" relation="usage">
+          <edgelabel>m_dm_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="3980">
+        <label>std::vector&lt; amrex::Vector&lt; std::unique_ptr&lt; amrex::MultiFab &gt; &gt;, std::allocator&lt; amrex::Vector&lt; std::unique_ptr&lt; amrex::MultiFab &gt; &gt; &gt; &gt;</label>
+      </node>
+      <node id="3967">
+        <label>amrex::Vector&lt; Real &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3991">
+        <label>amrex::MultiFab</label>
+        <link refid="classamrex_1_1MultiFab"/>
+        <childnode refid="3992" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3972">
+        <label>std::vector&lt; std::unique_ptr&lt; amrex::iMultiFab &gt;, std::allocator&lt; std::unique_ptr&lt; amrex::iMultiFab &gt; &gt; &gt;</label>
+      </node>
+      <node id="3978">
+        <label>std::vector&lt; amrex::MultiFab, std::allocator&lt; amrex::MultiFab &gt; &gt;</label>
+      </node>
+      <node id="3992">
+        <label>amrex::FabArray&lt; FArrayBox &gt;</label>
+        <link refid="classamrex_1_1FabArray"/>
+        <childnode refid="3993" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3990" relation="usage">
+          <edgelabel>fb_nghost</edgelabel>
+        </childnode>
+        <childnode refid="3998" relation="usage">
+          <edgelabel>fb_recv_size</edgelabel>
+          <edgelabel>fb_recv_from</edgelabel>
+        </childnode>
+        <childnode refid="4006" relation="usage">
+          <edgelabel>fb_recv_data</edgelabel>
+          <edgelabel>fb_send_data</edgelabel>
+        </childnode>
+        <childnode refid="4008" relation="usage">
+          <edgelabel>shmem</edgelabel>
+        </childnode>
+        <childnode refid="4009" relation="usage">
+          <edgelabel>fb_recv_stat</edgelabel>
+        </childnode>
+        <childnode refid="4011" relation="usage">
+          <edgelabel>fb_send_reqs</edgelabel>
+          <edgelabel>fb_recv_reqs</edgelabel>
+        </childnode>
+        <childnode refid="4013" relation="usage">
+          <edgelabel>fb_period</edgelabel>
+        </childnode>
+      </node>
+      <node id="4001">
+        <label>amrex::BoxArray::RefID</label>
+        <link refid="structamrex_1_1BoxArray_1_1RefID"/>
+      </node>
+      <node id="3975">
+        <label>amrex::Vector&lt; amrex::Vector&lt; Real &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3976" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3969">
+        <label>amrex::Vector&lt; amrex::MultiFab * &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3970" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3993">
+        <label>amrex::FabArrayBase</label>
+        <link refid="classamrex_1_1FabArrayBase"/>
+        <childnode refid="3994" relation="usage">
+          <edgelabel>m_FBC_stats</edgelabel>
+          <edgelabel>m_FPinfo_stats</edgelabel>
+          <edgelabel>m_CFinfo_stats</edgelabel>
+          <edgelabel>m_TAC_stats</edgelabel>
+          <edgelabel>m_CPC_stats</edgelabel>
+        </childnode>
+        <childnode refid="3996" relation="usage">
+          <edgelabel>distributionMap</edgelabel>
+        </childnode>
+        <childnode refid="3990" relation="usage">
+          <edgelabel>n_grow</edgelabel>
+          <edgelabel>comm_tile_size</edgelabel>
+          <edgelabel>mfiter_tile_size</edgelabel>
+          <edgelabel>mfghostiter_tile_size</edgelabel>
+        </childnode>
+        <childnode refid="3997" relation="usage">
+          <edgelabel>m_FA_stats</edgelabel>
+        </childnode>
+        <childnode refid="3998" relation="usage">
+          <edgelabel>indexArray</edgelabel>
+        </childnode>
+        <childnode refid="4000" relation="usage">
+          <edgelabel>m_bdkey</edgelabel>
+        </childnode>
+        <childnode refid="4004" relation="usage">
+          <edgelabel>boxarray</edgelabel>
+        </childnode>
+      </node>
+      <node id="4015">
+        <label>std::vector&lt; amrex::Vector&lt; amrex::DistributionMapping &gt;, std::allocator&lt; amrex::Vector&lt; amrex::DistributionMapping &gt; &gt; &gt;</label>
+      </node>
+      <node id="3983">
+        <label>std::vector&lt; amrex::Vector&lt; std::unique_ptr&lt; amrex::FabFactory&lt; amrex::FArrayBox &gt; &gt; &gt;, std::allocator&lt; amrex::Vector&lt; std::unique_ptr&lt; amrex::FabFactory&lt; amrex::FArrayBox &gt; &gt; &gt; &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" line="18" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMG.H" bodystart="17" bodyend="226"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1MLMG_1a68fb3d9c54966ec9e5fda98b4b0cf169" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>actualBottomSolve</name></member>
+      <member refid="classamrex_1_1MLMG_1ae1d69e956c3e0a266b4b2c43c2881e3a" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>addInterpCorrection</name></member>
+      <member refid="classamrex_1_1MLMG_1a383d3320ac67af7ea304a3fad4c53ff6" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>always_use_bnorm</name></member>
+      <member refid="classamrex_1_1MLMG_1a152881811aacd123a2c8b02d00cb154c" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>apply</name></member>
+      <member refid="classamrex_1_1MLMG_1a92c1d883b63949e33c6acba2c0e19c6b" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>averageDownAndSync</name></member>
+      <member refid="classamrex_1_1MLMG_1a864ffbd5cc09c630993c949c5d890d0f" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>BCMode</name></member>
+      <member refid="classamrex_1_1MLMG_1a37be121e8fe2e8e8341198486fc07d0e" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottom_maxiter</name></member>
+      <member refid="classamrex_1_1MLMG_1a20ed3ce546f3fa0f009d66fd9bd1f2bc" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottom_reltol</name></member>
+      <member refid="classamrex_1_1MLMG_1a1a607f195669be23b48131ae81e35b25" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottom_solver</name></member>
+      <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001accea4ad3befe3a4c0c996cacbc4b1fb3" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottom_time</name></member>
+      <member refid="classamrex_1_1MLMG_1ae2f4cd61322f224e598377431f47dde5" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottom_verbose</name></member>
+      <member refid="classamrex_1_1MLMG_1a105413ba8fce8beab99c2b7f11f0f028" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottomSolve</name></member>
+      <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4df" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>BottomSolver</name></member>
+      <member refid="classamrex_1_1MLMG_1aaf664a17642380d701b1b7b08e10fa63" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottomSolveWithHypre</name></member>
+      <member refid="classamrex_1_1MLMG_1a1d9aa957bda2ed06061254fb7e187c3f" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>bottomSolveWithPETSc</name></member>
+      <member refid="classamrex_1_1MLMG_1aa2a89a45fc288f18494a1304ce6fe5e2" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>buildFineMask</name></member>
+      <member refid="classamrex_1_1MLMG_1aa99271a622e85b790d8fa3e07fbafb96" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>compResidual</name></member>
+      <member refid="classamrex_1_1MLMG_1a6e3b238696c2c79000390a6a98f7b9e9" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>computeMLResidual</name></member>
+      <member refid="classamrex_1_1MLMG_1af609ac426f564d969f87201e8189eaf1" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>computeResidual</name></member>
+      <member refid="classamrex_1_1MLMG_1a725d6dc0cc3c20d8baa48b883805863c" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>computeResOfCorrection</name></member>
+      <member refid="classamrex_1_1MLMG_1a97d673162294d25b9b325b636cb9183d" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>computeResWithCrseCorFineCor</name></member>
+      <member refid="classamrex_1_1MLMG_1aa802d8378f3912da5b884fcc07c2351b" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>computeResWithCrseSolFineCor</name></member>
+      <member refid="classamrex_1_1MLMG_1a3cd643e6bf9f7e6d9d2b8cb7fa0b7c71" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>computeVolInv</name></member>
+      <member refid="classamrex_1_1MLMG_1aee464af91d358583757fd104da92b407" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>cor</name></member>
+      <member refid="classamrex_1_1MLMG_1ad74a7a55ad770900e7028fbfea7119ee" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>cor_hold</name></member>
+      <member refid="classamrex_1_1MLMG_1a16a61c9fe1782c8afde4a096b564fb90" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>do_fixed_number_of_iters</name></member>
+      <member refid="classamrex_1_1MLMG_1a5de6da3652a1625f6640f4cb80451501" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>do_nsolve</name></member>
+      <member refid="classamrex_1_1MLMG_1ac6ee903a66f419d1ed10533cc13bd4e4" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>final_fill_bc</name></member>
+      <member refid="classamrex_1_1MLMG_1a67cedda5ad0584d823d1d4fa12d57274" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>fine_mask</name></member>
+      <member refid="classamrex_1_1MLMG_1aa10d7e4fe3c243857a5493ca548b0f55" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>finest_amr_lev</name></member>
+      <member refid="classamrex_1_1MLMG_1a5b6cd8f9dd955924d2f84832cfd5fba8" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>getFluxes</name></member>
+      <member refid="classamrex_1_1MLMG_1a0e86186d43f71b7b14d416eea7c9df08" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>getFluxes</name></member>
+      <member refid="classamrex_1_1MLMG_1af93f7cf59f1c90df369168bc2bb329a7" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>getFluxes</name></member>
+      <member refid="classamrex_1_1MLMG_1a12345fa67435aad59199d2d09c352190" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>getFluxes</name></member>
+      <member refid="classamrex_1_1MLMG_1a6fcfa52ef82ffa84f1e4358c6b3fd3c6" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>getGradSolution</name></member>
+      <member refid="classamrex_1_1MLMG_1ad037f6167a4370eef5d2e1b3361cc238" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>getNodalSum</name></member>
+      <member refid="classamrex_1_1MLMG_1a884666fcc4158d42a4f01c83e5d454dc" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>interpCorrection</name></member>
+      <member refid="classamrex_1_1MLMG_1a43e3d241603fb49ce0dbef1058e97118" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>interpCorrection</name></member>
+      <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001af8c1043cde20f8e1d9d022abb2c9ffad" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>iter_time</name></member>
+      <member refid="classamrex_1_1MLMG_1a9bfa9f478ad10977b4c60b176b00250b" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>linop</name></member>
+      <member refid="classamrex_1_1MLMG_1ad02719958a8fc22e7843935f5ff1e407" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>linop_prepared</name></member>
+      <member refid="classamrex_1_1MLMG_1a93725420770bf42d532f9ee7dea87c2f" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>Location</name></member>
+      <member refid="classamrex_1_1MLMG_1ae5f98b72769ed94a44f850aa8aa1e1ba" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>makeSolvable</name></member>
+      <member refid="classamrex_1_1MLMG_1a818eb5c5d459af91e960acec44627869" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>makeSolvable</name></member>
+      <member refid="classamrex_1_1MLMG_1aefc9d57def6cdc2851da4d26e38e092f" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>max_fmg_iters</name></member>
+      <member refid="classamrex_1_1MLMG_1ae4f94ee42b8da24efdafd34b023e2457" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>max_iters</name></member>
+      <member refid="classamrex_1_1MLMG_1a7085d7450d545c1f593954d5e445af02" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>mgFcycle</name></member>
+      <member refid="classamrex_1_1MLMG_1a6b92f271588ce53fd24d1f7b2c1442a0" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>mgVcycle</name></member>
+      <member refid="classamrex_1_1MLMG_1a38df331fcb36de71c4af020b2e1117ed" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>miniCycle</name></member>
+      <member refid="classamrex_1_1MLMG_1a7b344595276c27ed17dacb3ea1fb95aa" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>MLCGSolver</name></member>
+      <member refid="classamrex_1_1MLMG_1a4d80ba0f675a1b751f35d66d04253dd6" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>MLMG</name></member>
+      <member refid="classamrex_1_1MLMG_1aa86c7015c1ee9cfde217cef76c1a55a5" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>MLResNormInf</name></member>
+      <member refid="classamrex_1_1MLMG_1a2f0fcfb202fff08a11c25408b72dd505" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>MLRhsNormInf</name></member>
+      <member refid="classamrex_1_1MLMG_1abfda726f45d63f473cacf3cab3a5b063" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>namrlevs</name></member>
+      <member refid="classamrex_1_1MLMG_1a51b70e5b31f450b486ff39b013d9440c" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>ns_linop</name></member>
+      <member refid="classamrex_1_1MLMG_1ab20f4feb5164d7f9ee8bcbfaf6b8c497" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>ns_mlmg</name></member>
+      <member refid="classamrex_1_1MLMG_1aed64acecaae43cecb817b689d1da5e54" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>ns_rhs</name></member>
+      <member refid="classamrex_1_1MLMG_1a976935c58886c588cb51f006fd875809" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>ns_sol</name></member>
+      <member refid="classamrex_1_1MLMG_1ac67a9c44825a6f8c44a9ad53020e3109" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>NSolve</name></member>
+      <member refid="classamrex_1_1MLMG_1a8eba5d6f50bda8d65cb4481e57a557a5" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>nsolve_grid_size</name></member>
+      <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001ae447a282e35218ac782b215c4a1fccfc" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>ntimers</name></member>
+      <member refid="classamrex_1_1MLMG_1a8519bc33f4e84ff1b590cf406c0c9506" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>nu1</name></member>
+      <member refid="classamrex_1_1MLMG_1a647e21342109e81cc50bc8825bc852ce" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>nu2</name></member>
+      <member refid="classamrex_1_1MLMG_1ae8120b974758c572d1463ee286204e10" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>nub</name></member>
+      <member refid="classamrex_1_1MLMG_1a4076f55caa5454e91c6ca50f1d2d6c10" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>nuf</name></member>
+      <member refid="classamrex_1_1MLMG_1a040f3220baf1eb8d4a7263599427db64" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>numAMRLevels</name></member>
+      <member refid="classamrex_1_1MLMG_1a97f2d0353ab1bbb9e4db171de41e2501" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>oneIter</name></member>
+      <member refid="classamrex_1_1MLMG_1a955977f98a355020f4808fd4acefe76f" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>prepareForNSolve</name></member>
+      <member refid="classamrex_1_1MLMG_1a996893d07fc4ae7a2efb074a010c1041" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>prepareForSolve</name></member>
+      <member refid="classamrex_1_1MLMG_1a86dd40d4379f5831102e595cecfad692" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>res</name></member>
+      <member refid="classamrex_1_1MLMG_1a265ef6b4e1fa8487d48ee612843c3cd4" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>rescor</name></member>
+      <member refid="classamrex_1_1MLMG_1a3ee68a8bba6178a55d1ca183be3f6fb3" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>ResNormInf</name></member>
+      <member refid="classamrex_1_1MLMG_1abc8a02638fb38ec33c9567569a501317" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>rhs</name></member>
+      <member refid="classamrex_1_1MLMG_1ab013a4dc85f37684f9e65f63b5318fc9" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>scratch</name></member>
+      <member refid="classamrex_1_1MLMG_1ae8f450042dd012c1fba322c726994fdd" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setAlwaysUseBNorm</name></member>
+      <member refid="classamrex_1_1MLMG_1a1c151af32b52cb036bf12d81149c3c17" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setBottomMaxIter</name></member>
+      <member refid="classamrex_1_1MLMG_1a41cb6f541c562e5b6c10b7101c1d511e" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setBottomSmooth</name></member>
+      <member refid="classamrex_1_1MLMG_1acc665bf147e1353e8f2f52b9b363632c" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setBottomSolver</name></member>
+      <member refid="classamrex_1_1MLMG_1a6df95299ddde40a40dbbd9e117825914" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setBottomTolerance</name></member>
+      <member refid="classamrex_1_1MLMG_1a64f957fd61f0e0350edd2bd90e1e3c90" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setBottomVerbose</name></member>
+      <member refid="classamrex_1_1MLMG_1a7ff8ea99fe4481015aa32b2e385dfb1a" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setCGMaxIter</name></member>
+      <member refid="classamrex_1_1MLMG_1a77343134f92c0911aa42b7e7945ba23b" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setCGTolerance</name></member>
+      <member refid="classamrex_1_1MLMG_1a5f61d8ce93356664b78a32388b396c35" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setCGVerbose</name></member>
+      <member refid="classamrex_1_1MLMG_1a63240a28c5f5be11fc4d45038351ad14" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setFinalFillBC</name></member>
+      <member refid="classamrex_1_1MLMG_1a3d09977cd9678c55f8f7d4be13dc5079" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setFinalSmooth</name></member>
+      <member refid="classamrex_1_1MLMG_1ab9299ade1d763de0f45ab78328ab1f7b" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setFixedIter</name></member>
+      <member refid="classamrex_1_1MLMG_1a026691c7428fa67a27aa49cf40d64e8e" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setMaxFmgIter</name></member>
+      <member refid="classamrex_1_1MLMG_1aa5d92f86511d9e05ff5ec54992740b54" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setMaxIter</name></member>
+      <member refid="classamrex_1_1MLMG_1a8ecbc9a186e43877fdd05637c4a24189" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setNSolve</name></member>
+      <member refid="classamrex_1_1MLMG_1afe3b554e359344639dc70535a3e4726a" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setNSolveGridSize</name></member>
+      <member refid="classamrex_1_1MLMG_1adffd66f2f848975141c5b33c4d6f05d3" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setPostSmooth</name></member>
+      <member refid="classamrex_1_1MLMG_1aa53217c1e2a8b751af6b3a288287259d" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setPreSmooth</name></member>
+      <member refid="classamrex_1_1MLMG_1a06e681096e1ca9cff44897da043d6a34" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>setVerbose</name></member>
+      <member refid="classamrex_1_1MLMG_1a45e3c66f8db400e00135eb8a4d97217b" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>sol</name></member>
+      <member refid="classamrex_1_1MLMG_1a2bb3673229f43eac4c351ce53a287226" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>sol_raii</name></member>
+      <member refid="classamrex_1_1MLMG_1aac3bf11b184d411fb030c53a6a3604eb" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>solve</name></member>
+      <member refid="classamrex_1_1MLMG_1a0988de0b7355cc6067a0512759cac21e" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>solve_called</name></member>
+      <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001a9806779ed6ebcc94ecd07dbb3ff6acca" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>solve_time</name></member>
+      <member refid="classamrex_1_1MLMG_1a60c47161b03df19f998710df25c494fd" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>timer</name></member>
+      <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>timer_types</name></member>
+      <member refid="classamrex_1_1MLMG_1af81888354825d23d402d7787f0fe4dc9" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>verbose</name></member>
+      <member refid="classamrex_1_1MLMG_1acbd5fc7b1f0af79ee6eb5daa55b890fb" prot="private" virt="non-virtual"><scope>amrex::MLMG</scope><name>volinv</name></member>
+      <member refid="classamrex_1_1MLMG_1a12c3c0793a39356963dd1824588b7593" prot="public" virt="non-virtual"><scope>amrex::MLMG</scope><name>~MLMG</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

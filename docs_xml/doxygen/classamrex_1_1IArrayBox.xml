@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1IArrayBox" kind="class" language="C++" prot="public">
+    <compoundname>amrex::IArrayBox</compoundname>
+    <basecompoundref refid="classamrex_1_1BaseFab" prot="public" virt="non-virtual">amrex::BaseFab&lt; int &gt;</basecompoundref>
+    <includes refid="AMReX__IArrayBox_8H" local="no">AMReX_IArrayBox.H</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classamrex_1_1IArrayBox_1a775df7bf092a1173c172bd7ec7dd3f37" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::IArrayBox::do_initval</definition>
+        <argsstring></argsstring>
+        <name>do_initval</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="78" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1a439cad17ea336cf0f362b2063c5581dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::IArrayBox::IArrayBox</definition>
+        <argsstring>()</argsstring>
+        <name>IArrayBox</name>
+        <briefdescription>
+<para>Construct an invalid FAB with no memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="39" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1a3334c50433d5c6bf7a9c2b82c02e8c7f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::IArrayBox::IArrayBox</definition>
+        <argsstring>(const Box &amp;b, int ncomp=1, bool alloc=true, bool shared=false)</argsstring>
+        <name>IArrayBox</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alloc</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>shared</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Construct an initial FAB with the data space allocated but not inititialized. ncomp is the number of components (variables) at each data point in the <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="45" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp" bodystart="48" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1aa94e7b72db1dbbccb037e5b4e38d23ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::IArrayBox::IArrayBox</definition>
+        <argsstring>(const IArrayBox &amp;rhs, MakeType make_type, int scomp, int ncomp)</argsstring>
+        <name>IArrayBox</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6" kindref="member">MakeType</ref></type>
+          <declname>make_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1ac05e603b189bd8c2ecbe4bdafb4272a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::IArrayBox::~IArrayBox</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IArrayBox</name>
+        <briefdescription>
+<para>The destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1aeba2de0a08ff8906f30a58a9cf04270c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::IArrayBox::IArrayBox</definition>
+        <argsstring>(IArrayBox &amp;&amp;rhs) noexcept=default</argsstring>
+        <name>IArrayBox</name>
+        <param>
+          <type><ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1a2d392519e9ba2d0c847e4d0005edb1e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::IArrayBox::IArrayBox</definition>
+        <argsstring>(const IArrayBox &amp;)=delete</argsstring>
+        <name>IArrayBox</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1a1f15c661d9fa23250901595a7e7e2179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;</type>
+        <definition>IArrayBox&amp; amrex::IArrayBox::operator=</definition>
+        <argsstring>(const IArrayBox &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1a684c32bf8f70f624272652284da549c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;</type>
+        <definition>IArrayBox&amp; amrex::IArrayBox::operator=</definition>
+        <argsstring>(IArrayBox &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1a7a69e7b5e4555f66f2e1bf3cbd269e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> &amp;</type>
+        <definition>IArrayBox &amp; amrex::IArrayBox::operator=</definition>
+        <argsstring>(const int &amp;r)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Set the fab to the value r. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="66" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1ab4da50b98000eb197a2b1050a5e2fd51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::IArrayBox::resize</definition>
+        <argsstring>(const Box &amp;b, int N=1)</argsstring>
+        <name>resize</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>For debugging purposes we hide <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> version and do some extra work. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="69" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp" bodystart="83" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1aff085ec8097788fc08d663f81062154e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::IArrayBox::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Initialize from <ref refid="classamrex_1_1ParmParse" kindref="compound">ParmParse</ref> with &quot;fab&quot; prefix. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="73" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1IArrayBox_1a9fe8b1d3b2da351d3701dd7c44ca1139" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::IArrayBox::Finalize</definition>
+        <argsstring>()</argsstring>
+        <name>Finalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Fortran Array of ints. </para>    </briefdescription>
+    <detaileddescription>
+<para>iFortran Array <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&apos;s (generally called iFAB&apos;s) are objects constructed to emulate the FORTRAN array. Useful operations can be performed upon FAB&apos;s in C++, and they provide a convenient interface to FORTRAN when it is necessary to retreat into that language.</para><para><ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> is derived from <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab&lt;int&gt;</ref>. <ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> adds additional useful capabilities which make sense for int types, such as L**p norms.</para><para>The C pre-processor macro AMREX_SPACEDIM must be defined to use this class. The internal precision of FARRAYBOX objects is set by defining either BL_USE_FLOAT or BL_USE_DOUBLE</para><para>This is NOT a polymorphic class.</para><para>This class does NOT provide a copy constructor or assignment operator. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2629">
+        <label>amrex::BaseFab&lt; int &gt;</label>
+        <link refid="classamrex_1_1BaseFab"/>
+        <childnode refid="2630" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2628">
+        <label>amrex::IArrayBox</label>
+        <link refid="classamrex_1_1IArrayBox"/>
+        <childnode refid="2629" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2631">
+        <label>amrex::Cuda::Managed</label>
+        <link refid="structamrex_1_1Cuda_1_1Managed"/>
+      </node>
+      <node id="2630">
+        <label>amrex::BaseFabData&lt; int &gt;</label>
+        <link refid="structamrex_1_1BaseFabData"/>
+        <childnode refid="2631" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2633">
+        <label>amrex::BaseFab&lt; int &gt;</label>
+        <link refid="classamrex_1_1BaseFab"/>
+        <childnode refid="2634" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2637">
+        <label>amrex::IntVect</label>
+        <link refid="classamrex_1_1IntVect"/>
+        <childnode refid="2637" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="2636">
+        <label>amrex::Box</label>
+        <link refid="classamrex_1_1Box"/>
+        <childnode refid="2637" relation="usage">
+          <edgelabel>bigend</edgelabel>
+          <edgelabel>smallend</edgelabel>
+        </childnode>
+        <childnode refid="2638" relation="usage">
+          <edgelabel>btype</edgelabel>
+        </childnode>
+      </node>
+      <node id="2632">
+        <label>amrex::IArrayBox</label>
+        <link refid="classamrex_1_1IArrayBox"/>
+        <childnode refid="2633" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2635">
+        <label>amrex::Cuda::Managed</label>
+        <link refid="structamrex_1_1Cuda_1_1Managed"/>
+      </node>
+      <node id="2638">
+        <label>amrex::IndexType</label>
+        <link refid="classamrex_1_1IndexType"/>
+      </node>
+      <node id="2634">
+        <label>amrex::BaseFabData&lt; int &gt;</label>
+        <link refid="structamrex_1_1BaseFabData"/>
+        <childnode refid="2635" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2636" relation="usage">
+          <edgelabel>domain</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" line="36" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.H" bodystart="33" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1BaseFab_1ac0524eae6ec305b852de57d6047a7576" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>abs</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8d3e8c2bf488c78564ef0883e6f85ee1" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>abs</name></member>
+      <member refid="classamrex_1_1BaseFab_1ae741c4dc133eb489d8758053117235f9" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>abs</name></member>
+      <member refid="classamrex_1_1BaseFab_1adf8918db4ee6f9d222859ad901eac5a6" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>Accumulate</name></member>
+      <member refid="classamrex_1_1BaseFab_1a95efb9c4e922502d9cc00e0c2810a653" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>addFromMem</name></member>
+      <member refid="classamrex_1_1BaseFab_1ac48fb723135505bcdbab6d222b431c3d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>addproduct</name></member>
+      <member refid="classamrex_1_1BaseFab_1a29f9aadcd0425b0f85d3531b7935cbfc" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>array</name></member>
+      <member refid="classamrex_1_1BaseFab_1a507ea7283b4aa16abadc04f4c03417db" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>array</name></member>
+      <member refid="classamrex_1_1BaseFab_1a345d7ad251b316ce2f331d3f1352ccc7" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>atomicAdd</name></member>
+      <member refid="classamrex_1_1BaseFab_1afcbfaeb81cfcf27cc287efbb95e36bf2" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>atomicAdd</name></member>
+      <member refid="classamrex_1_1BaseFab_1a1373c3e7317e6dbd1fd096d64eb6382b" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>atomicAdd</name></member>
+      <member refid="classamrex_1_1BaseFab_1a97a66fe791c4c372f7802c42f326b0f2" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>atomicAdd</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6017e314248a4604dda1766d45a6e909" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFab</name></member>
+      <member refid="classamrex_1_1BaseFab_1a21b294f3d6ae71c992c0f82b88349cf7" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFab</name></member>
+      <member refid="classamrex_1_1BaseFab_1a4b890373aa053ba5cd3aae0bf5483c1c" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFab</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8553c8f3915ded4cacfba0c490b98bc5" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFab</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6b0fa577ec8190137939f503041e7bf7" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFab</name></member>
+      <member refid="classamrex_1_1BaseFab_1aa2ce65c438db70645899b1d0c09f2455" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFab</name></member>
+      <member refid="structamrex_1_1BaseFabData_1ae851b3db06b509d1d48eae2885fc2634" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFabData</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a2c734fc3f402e0749da3a52dba9f1077" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>BaseFabData</name></member>
+      <member refid="classamrex_1_1BaseFab_1acfe73c8c4f64b855526010e08a43b81f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>bigEnd</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2aa1b6e1d3edbd342d4088efb8af7a09" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>box</name></member>
+      <member refid="classamrex_1_1BaseFab_1a3ac1c517bd0fc4554a0fefdf3399c1d2" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>clear</name></member>
+      <member refid="classamrex_1_1BaseFab_1aa0893d6dd365f10e8c0e4a71e76da7df" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>const_array</name></member>
+      <member refid="classamrex_1_1BaseFab_1a64285cca3023c348236d89a51fe630bb" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>contains</name></member>
+      <member refid="classamrex_1_1BaseFab_1abc408b0dc682ac005aacc26f07681f88" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>contains</name></member>
+      <member refid="classamrex_1_1BaseFab_1a484d671ba6fe6cccc510138ddeb4da91" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>copy</name></member>
+      <member refid="classamrex_1_1BaseFab_1ae93aac87861aecebef856760a67bd224" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>copy</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8183ce50eb2882fa7432cd08989cba52" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>copy</name></member>
+      <member refid="classamrex_1_1BaseFab_1adad18c665a8476fd4de0db869b840b47" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>copy</name></member>
+      <member refid="classamrex_1_1BaseFab_1a4345d4f7bba86e25f0014f783c99c75f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>copy</name></member>
+      <member refid="classamrex_1_1BaseFab_1a64e7cbc58fef7db5aa45af0021f9b377" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>copyFromMem</name></member>
+      <member refid="classamrex_1_1BaseFab_1ae584df6aca08b4e9bfab50d3cd993276" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>copyToMem</name></member>
+      <member refid="classamrex_1_1BaseFab_1a81ce9114cdf48361604499087aa808ce" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dataPtr</name></member>
+      <member refid="classamrex_1_1BaseFab_1a161dca3379a67c08693fc8e2314221ac" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dataPtr</name></member>
+      <member refid="classamrex_1_1BaseFab_1a9942f7f61307517765587390cbdbf3b9" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dataPtr</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6cc59018dd69189d6dad03e15a789397" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dataPtr</name></member>
+      <member refid="classamrex_1_1BaseFab_1a35dc22f1d61f4fb05ab75ae93f683d14" prot="protected" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>define</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2bc4ef97cb2c64f1fa6f1a8de6f93821" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6a3d264300fdffc9e14ad712af82a822" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1a18dfa6d0e983a57ec92f6c422386a605" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6621ad715ba55d436dcebda1e3ec0f55" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1ac25f269e8e1c4307902ad09c2d728709" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1a5877cf7630896d4ba902fb36e59f8887" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1ae1a2bd024441eef1c869626f1a871af2" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1a7733c2537e1291e5442b9d835fbf23e8" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1a44fdfc6fdede53987cd5d5adc85af09f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>divide</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a775df7bf092a1173c172bd7ec7dd3f37" prot="private" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>do_initval</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a004be47a38cb5df475b32595083287a3" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>domain</name></member>
+      <member refid="classamrex_1_1BaseFab_1a81a9d5484313edfb2de1e67f9bb05002" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dot</name></member>
+      <member refid="classamrex_1_1BaseFab_1aa472bbb9c3ef78afd467a223b52d62c8" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dot</name></member>
+      <member refid="classamrex_1_1BaseFab_1a54dd8d176040beb8abf52c6e43471119" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dotmask</name></member>
+      <member refid="classamrex_1_1BaseFab_1ac76c9c1bb59b8940e81d920649622e15" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dotmask</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a18c921a6524bd14b6d5304528a4b5448" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>dptr</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a9fe8b1d3b2da351d3701dd7c44ca1139" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>Finalize</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8b7a90fd14ef0e464e005e101dd59a0f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ForEach</name></member>
+      <member refid="classamrex_1_1BaseFab_1a000e6a091bd1f0b025bf5d512c95e50d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ForEach</name></member>
+      <member refid="classamrex_1_1BaseFab_1a300f43fd3951d0c59518fb88bef9404d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ForEach</name></member>
+      <member refid="classamrex_1_1BaseFab_1a65753da86da93c6174cae0511f20d512" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ForEach</name></member>
+      <member refid="classamrex_1_1BaseFab_1a189e0db95bc9e9ac7eed6194e18212ab" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ForEachIV</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2a648b16c3eec5751eb43d147aa3c2d6" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ForEachIV</name></member>
+      <member refid="classamrex_1_1BaseFab_1a93c389f2a95b16abfe6e9e7c038c3060" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>getVal</name></member>
+      <member refid="classamrex_1_1BaseFab_1a914f69a2932b5fbad99dcb77d9bca23e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>getVal</name></member>
+      <member refid="classamrex_1_1BaseFab_1a52fbfbe748301495ed0f024c987618a0" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>hiVect</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a439cad17ea336cf0f362b2063c5581dd" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>IArrayBox</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a3334c50433d5c6bf7a9c2b82c02e8c7f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>IArrayBox</name></member>
+      <member refid="classamrex_1_1IArrayBox_1aa94e7b72db1dbbccb037e5b4e38d23ab" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>IArrayBox</name></member>
+      <member refid="classamrex_1_1IArrayBox_1aeba2de0a08ff8906f30a58a9cf04270c" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>IArrayBox</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a2d392519e9ba2d0c847e4d0005edb1e3" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>IArrayBox</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8732403a88b24873910607885ca5e3cf" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>indexFromValue</name></member>
+      <member refid="classamrex_1_1IArrayBox_1aff085ec8097788fc08d663f81062154e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>Initialize</name></member>
+      <member refid="classamrex_1_1BaseFab_1a1190c11fa239b18643e2874a1aba2b72" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>invert</name></member>
+      <member refid="classamrex_1_1BaseFab_1a551b5f50620f34772440a8026066af5d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>invert</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad17ee48187d57f709a8c76b28331b512" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>invert</name></member>
+      <member refid="classamrex_1_1BaseFab_1a222a9d98587c0fdbf71e58805f08f7a7" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>invert</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8575f433a0623847c45b59813d3dff3e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>isAllocated</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8cc7fa79866b2813a9066ba15dfb655d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>isCopyOMPSafe</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad3beda8f6a06625e5a83e3dd7469fb8d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>length</name></member>
+      <member refid="classamrex_1_1BaseFab_1a0bd629273b118fac9f246a11e0b61f2d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>linComb</name></member>
+      <member refid="classamrex_1_1BaseFab_1a765820d64b6a7e2c2bf3d520357e0d12" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>linInterp</name></member>
+      <member refid="classamrex_1_1BaseFab_1a9e99051fdb93f75aeea6c78f0e5b6015" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>linInterp</name></member>
+      <member refid="classamrex_1_1BaseFab_1a582b36096b45c17409a7e3cd727d1685" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>loVect</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6dabf0f469da83b64d7a9f02d4c1bca0" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maskEQ</name></member>
+      <member refid="classamrex_1_1BaseFab_1ab9ddfb40de13c5b1e502f6bff746d666" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maskGE</name></member>
+      <member refid="classamrex_1_1BaseFab_1a9a3a05285febfab17074c1b3af98d6f6" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maskGT</name></member>
+      <member refid="classamrex_1_1BaseFab_1af9aee588c920c9dec291eccbf56c830a" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maskLE</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6624d957b64aa34698507ea8120701f1" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maskLT</name></member>
+      <member refid="classamrex_1_1BaseFab_1a25f1cddaa4e6967ed317c075facf9179" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>max</name></member>
+      <member refid="classamrex_1_1BaseFab_1ac9a67bcdbfa3cb4078d7c66cb6dacda5" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>max</name></member>
+      <member refid="classamrex_1_1BaseFab_1a9ee3d81a4e7286e24f7bcc4cda4603d8" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maxabs</name></member>
+      <member refid="classamrex_1_1BaseFab_1abaad922b5b3f2d8932a951c1162c57cf" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maxabs</name></member>
+      <member refid="classamrex_1_1BaseFab_1a892c8364260d932f2e3c30b0183fe3ed" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maxIndex</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad46646b0e560b8e157c343ef49b3f705" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maxIndex</name></member>
+      <member refid="classamrex_1_1BaseFab_1af12aec945760df0326b93daf898e7018" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>maxIndex</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8618856e332c893cf2de9d129a902b68" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>min</name></member>
+      <member refid="classamrex_1_1BaseFab_1adc217d44878f039c6df9d19cd1411f01" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>min</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6f390ded7efa45cca2ff2d2735ad40e5" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minIndex</name></member>
+      <member refid="classamrex_1_1BaseFab_1adbeda4c344771e34b0ee4a58424a6d90" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minIndex</name></member>
+      <member refid="classamrex_1_1BaseFab_1a48a2429bdc7bfb9c6cd7e2a58fe4d1f3" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minIndex</name></member>
+      <member refid="classamrex_1_1BaseFab_1acb1bb8acee9d2ede2afdd8469b317d9a" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a7d2451cc250f38debc07dcc58b537855" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a05d8a7d054a8646abd742f6a4aa68232" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minus</name></member>
+      <member refid="classamrex_1_1BaseFab_1af7568f9b4b40b108d42a7c5d9a4e395c" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a4d446e2efcd6095cff01c39dcb73b9ad" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minus</name></member>
+      <member refid="classamrex_1_1BaseFab_1acf9c57427d6f3697b030aad42300cc40" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minus</name></member>
+      <member refid="classamrex_1_1BaseFab_1ab9557c205cc78f9fcbdece106acc80c9" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>minus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a866b002fb0b633aea52b4406fa0c0e6d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1af1feb66c16f14ead3003285a38104a81" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1a0b3ae78d3eddfe1152158a3c3ad73059" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1a60948e4bbcad9b2ec521ce98f4a657eb" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1a5705da801c72e9be54df53ebab31652f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1a058d5353226ac376dce44b7795e42109" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2090602372cc9e82008f929f481d468e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1aafd6e96f9e35e386dd4e284a83320b85" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1acd7eb4fd0ff41f230673f10f4fe11b9b" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>mult</name></member>
+      <member refid="classamrex_1_1BaseFab_1aa73fc622684ab72e56cea73475bfda03" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>nBytes</name></member>
+      <member refid="classamrex_1_1BaseFab_1a90f3b612c793dbf91556ec3833ccedb8" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>nBytes</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2e8d0dbafadf28636a93892b4f21534f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>nComp</name></member>
+      <member refid="classamrex_1_1BaseFab_1a35ff45ac272c8816baf7cd21f713cd3d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>nCompPtr</name></member>
+      <member refid="classamrex_1_1BaseFab_1a84a02a2431982556de8aac85fba189eb" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>negate</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2bfef876596c377a7b903788039f00f1" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>negate</name></member>
+      <member refid="classamrex_1_1BaseFab_1a5a38c17ee5d46b395fd42868ccae752f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>negate</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad0205612fa397ed97bc447122d422599" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>negate</name></member>
+      <member refid="classamrex_1_1BaseFab_1a60df68f01bc5eae4c30b9145bbc6e0d2" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>norm</name></member>
+      <member refid="classamrex_1_1BaseFab_1a0a11df916edd44ec4a2ff3042fbb6d29" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>norm</name></member>
+      <member refid="classamrex_1_1BaseFab_1a7c575e550822c9bbb02b234938b81949" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>norminfmask</name></member>
+      <member refid="classamrex_1_1BaseFab_1acccb2dad98fdafe4450f3489fcd12927" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>numPts</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a9e0d16aba820042ba77a256b3e342bc5" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>nvar</name></member>
+      <member refid="classamrex_1_1BaseFab_1ab6952e47b8add4a4f1017b2cfa430a38" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1BaseFab_1aff6794d0895a3ec356328fee18796778" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6593ae5861f64348dc4388446b300388" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1BaseFab_1a95adf1030a76281644c4470b98306372" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1BaseFab_1a18dc30e67698f2d5683c5b4dae3995c1" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator*=</name></member>
+      <member refid="classamrex_1_1BaseFab_1ada1b218d1a6532820a084dcbc2738ba3" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator*=</name></member>
+      <member refid="classamrex_1_1BaseFab_1a08ffbd67b2759f8abb7ef05c96430b2a" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator+=</name></member>
+      <member refid="classamrex_1_1BaseFab_1a3d9d2800818ca673b0876203ac1a9209" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator+=</name></member>
+      <member refid="classamrex_1_1BaseFab_1a876fa492b8ece8a0e15a7cf4c90d4903" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator-=</name></member>
+      <member refid="classamrex_1_1BaseFab_1ace9a76b9085cb3d624b28198220dc558" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator-=</name></member>
+      <member refid="classamrex_1_1BaseFab_1a5cb9603f0df8cda79dd1a68e307bdd00" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator/=</name></member>
+      <member refid="classamrex_1_1BaseFab_1ae91d924948ac95d5fd89091d4264f408" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator/=</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a1f15c661d9fa23250901595a7e7e2179" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a684c32bf8f70f624272652284da549c4" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1IArrayBox_1a7a69e7b5e4555f66f2e1bf3cbd269e7e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BaseFab_1a9a52c7475015824cfb60e6c67ecad522" prot="public" virt="non-virtual" ambiguityscope="BaseFab&lt; int &gt;::"><scope>amrex::IArrayBox</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BaseFab_1ae3101a71fce4d1d50de1fca73ff4b0f4" prot="public" virt="non-virtual" ambiguityscope="BaseFab&lt; int &gt;::"><scope>amrex::IArrayBox</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8dd48d336ca4b999838da5a6b505e9bb" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a3f3ad06f30f9c314efca6718fd0140bb" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a33f0a64642489048660a63a6c091e58a" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1ac4e38cc8fb4fb3169567555fa1579f67" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad6b3b8336c97149718f1c3a934b3d1d1" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a477f4ce212ed09e7569729439bfab34b" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1aacf6914d2c27a3554e47637c84876a89" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1af0ba2f8c7ee844da990a77d20e2ebfd0" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a856afc841fdded5e020fa4b8f8e6b10a" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BaseFab_1a736fa70a93d3e7b82fa62b4663260e11" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>preAllocatable</name></member>
+      <member refid="classamrex_1_1BaseFab_1aff17a74b88f31aacf589d8c287da5481" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>protected_divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1abe23e8cba5db7c01314fef78ee355621" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>protected_divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad865f65086e92c05cde2ec0e1cae61b0" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>protected_divide</name></member>
+      <member refid="classamrex_1_1BaseFab_1adc9190f866f8aee8530f201a840de665" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>protected_divide</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a16e2d3ceee6c7fd51947348985ba86f8" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ptr_owner</name></member>
+      <member refid="classamrex_1_1IArrayBox_1ab4da50b98000eb197a2b1050a5e2fd51" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>resize</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad65fe547361698123f2618ee18baf63e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>saxpy</name></member>
+      <member refid="classamrex_1_1BaseFab_1a91af8b5a4a71f821a388401fa9e0279e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>saxpy</name></member>
+      <member refid="classamrex_1_1BaseFab_1ac460412b5daefe384829ab0464ae0ea3" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>SetBoxType</name></member>
+      <member refid="classamrex_1_1BaseFab_1aa6907e0dfdc7768224a2e54f7e5d6fd2" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setComplement</name></member>
+      <member refid="classamrex_1_1BaseFab_1a19ba60b7d03f922319cc87e1ab25dd1d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setComplement</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a62e0869c74a07fe1ccf3c015c2d4ea90" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setOwner</name></member>
+      <member refid="classamrex_1_1BaseFab_1af1269949b1c246220e7f36d19e97bcee" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setPtr</name></member>
+      <member refid="classamrex_1_1BaseFab_1afa9e4bc89ae38b7862a401fe97985efd" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setVal</name></member>
+      <member refid="classamrex_1_1BaseFab_1a68fd29514f11eda70880d1172dae326e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setVal</name></member>
+      <member refid="classamrex_1_1BaseFab_1ab0747f810a2c4bc3821a686e956de84e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setVal</name></member>
+      <member refid="classamrex_1_1BaseFab_1ac08a6eac8d94c264a3b67b0d135c152a" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setVal</name></member>
+      <member refid="classamrex_1_1BaseFab_1a022b880b09787c73e585fdebfda5303f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setVal</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2fb6313848d1717b6cd2e2eceff51de3" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setValIf</name></member>
+      <member refid="classamrex_1_1BaseFab_1a18b3be509ec2536f55a282a0994ecd03" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setValIf</name></member>
+      <member refid="classamrex_1_1BaseFab_1ab7596aabb99e562f60cd15e5d3135728" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setValIfNot</name></member>
+      <member refid="classamrex_1_1BaseFab_1aca970eff8d6ba7ba6b97371d06c0e33b" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setValIfNot</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8f221f66494e0bceba7f8c3890d5a4d5" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>setValIfNot</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a5894675ed07e11741a736c438bc03a02" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>shared_memory</name></member>
+      <member refid="classamrex_1_1BaseFab_1a2b7c56cabab358c5c5caa13dba8dfb54" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>shift</name></member>
+      <member refid="classamrex_1_1BaseFab_1aab93975ecb4ac58ac1d10cbf7810d277" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>shift</name></member>
+      <member refid="classamrex_1_1BaseFab_1aeb04853ec8941d1e6e78ae0a0eca66bd" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>shiftHalf</name></member>
+      <member refid="classamrex_1_1BaseFab_1a720fc0770123bf244d7c208a84546d4c" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>shiftHalf</name></member>
+      <member refid="classamrex_1_1BaseFab_1ad0cfb0f6e67ad14d298ca854002dfddb" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>size</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6538e2e536cb7584413f99f595cd5c91" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>smallEnd</name></member>
+      <member refid="classamrex_1_1BaseFab_1a3240bbfcec9b19a91ae1e7dd64be06e9" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>sum</name></member>
+      <member refid="classamrex_1_1BaseFab_1a4927eca6c8fe147b7577ea7394c83e44" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>sum</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8b457da0b66d4dd01d4c5b31a6e13da6" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>sum</name></member>
+      <member refid="classamrex_1_1BaseFab_1aa26c0f47162e9b477507246416636db6" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>Transform</name></member>
+      <member refid="classamrex_1_1BaseFab_1a5783c191c7c8a187b1fb858199b26d89" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>Transform</name></member>
+      <member refid="structamrex_1_1BaseFabData_1a377f301bd074d9ac12b092167603d64b" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>truesize</name></member>
+      <member refid="classamrex_1_1BaseFab_1aac8f37b7bba5334a86bf90b58fb062d8" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>value_type</name></member>
+      <member refid="classamrex_1_1BaseFab_1adb83a0a0efd9f91065640bffc6602fd3" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1a85450e927863704ad95d9ab6ab13b480" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1ae75c0ad8b4862d9fbce715efd30f5005" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1a68b0f0227347810c6b7fedf4501d2cb4" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1a6e90de9f8d56481df053d29029df888e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1a3bff54f389fb13d944ad648324ee992d" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1a3146d1723be65c885c1c4bcf62f3885f" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1a282a64425bfd1ae84ae566c3665288b8" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1aa208e737dbe2096b16238c636e4dbb39" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1afc531098eeb898ce3a8f2343615dff7c" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>view</name></member>
+      <member refid="classamrex_1_1BaseFab_1a8a03474ffe7b19214717854594196f17" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>xpay</name></member>
+      <member refid="classamrex_1_1BaseFab_1a442cc6eaf0d47323491f0922e2266a6a" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>~BaseFab</name></member>
+      <member refid="classamrex_1_1IArrayBox_1ac05e603b189bd8c2ecbe4bdafb4272a2" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>~IArrayBox</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

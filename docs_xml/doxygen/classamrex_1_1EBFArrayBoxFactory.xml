@@ -1,0 +1,819 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1EBFArrayBoxFactory" kind="class" language="C++" prot="public">
+    <compoundname>amrex::EBFArrayBoxFactory</compoundname>
+    <basecompoundref refid="classamrex_1_1FabFactory" prot="public" virt="non-virtual">amrex::FabFactory&lt; FArrayBox &gt;</basecompoundref>
+    <includes refid="AMReX__EBFabFactory_8H" local="no">AMReX_EBFabFactory.H</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classamrex_1_1EBFArrayBoxFactory_1a0121434aeeb0ad87903dd1401803c1ba" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceamrex_1a7de82761ed632e5ee0b9f912c856aebc" kindref="member">EBSupport</ref></type>
+        <definition>EBSupport amrex::EBFArrayBoxFactory::m_support</definition>
+        <argsstring></argsstring>
+        <name>m_support</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="77" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1EBFArrayBoxFactory_1a0dece5de11da52cba439675d6f632976" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref></type>
+        <definition>Geometry amrex::EBFArrayBoxFactory::m_geom</definition>
+        <argsstring></argsstring>
+        <name>m_geom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="78" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1EBFArrayBoxFactory_1a0495e6651f6bc2531a88c903354da409" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classamrex_1_1EBDataCollection" kindref="compound">EBDataCollection</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;EBDataCollection&gt; amrex::EBFArrayBoxFactory::m_ebdc</definition>
+        <argsstring></argsstring>
+        <name>m_ebdc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="79" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1EBFArrayBoxFactory_1a9077580d8ff605511c26c67b023364e8" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1EB2_1_1Level" kindref="compound">EB2::Level</ref> const *</type>
+        <definition>EB2::Level const* amrex::EBFArrayBoxFactory::m_parent</definition>
+        <argsstring></argsstring>
+        <name>m_parent</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="80" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1ae76b4a906830e7b5094edc438e6cc9b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::EBFArrayBoxFactory::EBFArrayBoxFactory</definition>
+        <argsstring>(const EB2::Level &amp;a_level, const Geometry &amp;a_geom, const BoxArray &amp;a_ba, const DistributionMapping &amp;a_dm, const Vector&lt; int &gt; &amp;a_ngrow, EBSupport a_support)</argsstring>
+        <name>EBFArrayBoxFactory</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1EB2_1_1Level" kindref="compound">EB2::Level</ref> &amp;</type>
+          <declname>a_level</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>a_geom</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>a_ba</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>a_dm</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>a_ngrow</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a7de82761ed632e5ee0b9f912c856aebc" kindref="member">EBSupport</ref></type>
+          <declname>a_support</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="14" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1ad501654118cdfebf0f2b0d68fb5a6cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual amrex::EBFArrayBoxFactory::~EBFArrayBoxFactory</definition>
+        <argsstring>()=default</argsstring>
+        <name>~EBFArrayBoxFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1aff3ee653b5be6f3b58ec1c34ae2f461f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::EBFArrayBoxFactory::EBFArrayBoxFactory</definition>
+        <argsstring>(const EBFArrayBoxFactory &amp;)=default</argsstring>
+        <name>EBFArrayBoxFactory</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1EBFArrayBoxFactory" kindref="compound">EBFArrayBoxFactory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1aad2e2bde5474a8a144c900d5bfaa5e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::EBFArrayBoxFactory::EBFArrayBoxFactory</definition>
+        <argsstring>(EBFArrayBoxFactory &amp;&amp;) noexcept=default</argsstring>
+        <name>EBFArrayBoxFactory</name>
+        <param>
+          <type><ref refid="classamrex_1_1EBFArrayBoxFactory" kindref="compound">EBFArrayBoxFactory</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1aa671c88f9bbc88f7824352ef14fedc45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::EBFArrayBoxFactory::EBFArrayBoxFactory</definition>
+        <argsstring>()=delete</argsstring>
+        <name>EBFArrayBoxFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1ad9569bd1f5ab3e6e1667c1b023463cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1EBFArrayBoxFactory" kindref="compound">EBFArrayBoxFactory</ref> &amp;</type>
+        <definition>EBFArrayBoxFactory&amp; amrex::EBFArrayBoxFactory::operator=</definition>
+        <argsstring>(const EBFArrayBoxFactory &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1EBFArrayBoxFactory" kindref="compound">EBFArrayBoxFactory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a3116ec053a7957bb79f63b84867401da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1EBFArrayBoxFactory" kindref="compound">EBFArrayBoxFactory</ref> &amp;</type>
+        <definition>EBFArrayBoxFactory&amp; amrex::EBFArrayBoxFactory::operator=</definition>
+        <argsstring>(EBFArrayBoxFactory &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classamrex_1_1EBFArrayBoxFactory" kindref="compound">EBFArrayBoxFactory</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1af4895e37eae210a93ca7d2b0493a250e" prot="public" static="no" const="yes" explicit="no" inline="no" final="yes" virt="virtual">
+        <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> *</type>
+        <definition>FArrayBox * amrex::EBFArrayBoxFactory::create</definition>
+        <argsstring>(const Box &amp;box, int ncomps, const FabInfo &amp;info, int box_index) const final</argsstring>
+        <name>create</name>
+        <reimplements refid="classamrex_1_1FabFactory_1aa4b55a312064a0753e8dc73e8ea28d7f">create</reimplements>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ncomps</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structamrex_1_1FabInfo" kindref="compound">FabInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>box_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="36" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="26" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a25f6eca7dc8d4f2269fec54f5d20f079" prot="public" static="no" const="yes" explicit="no" inline="no" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void amrex::EBFArrayBoxFactory::destroy</definition>
+        <argsstring>(FArrayBox *fab) const final</argsstring>
+        <name>destroy</name>
+        <reimplements refid="classamrex_1_1FabFactory_1a62e57972e3054a6f7ed1cdb9c0426c09">destroy</reimplements>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> *</type>
+          <declname>fab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="38" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="41" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a2d942d0e7c5fa2e3dc6c4ef56d52f53d" prot="public" static="no" const="yes" explicit="no" inline="no" final="yes" virt="virtual">
+        <type><ref refid="classamrex_1_1EBFArrayBoxFactory" kindref="compound">EBFArrayBoxFactory</ref> *</type>
+        <definition>EBFArrayBoxFactory * amrex::EBFArrayBoxFactory::clone</definition>
+        <argsstring>() const final</argsstring>
+        <name>clone</name>
+        <reimplements refid="classamrex_1_1FabFactory_1a16e2317a8e500a4a1bc7ad6c64fcc892">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="45" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a6f80f3dc8e8d612d2ff36b585087d771" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; <ref refid="classamrex_1_1EBCellFlagFab" kindref="compound">EBCellFlagFab</ref> &gt; &amp;</type>
+        <definition>const FabArray&lt;EBCellFlagFab&gt;&amp; amrex::EBFArrayBoxFactory::getMultiEBCellFlagFab</definition>
+        <argsstring>() const </argsstring>
+        <name>getMultiEBCellFlagFab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="47" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="47" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1af649407fa3a21df9a178c8253bcb1ae3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+        <definition>const MultiFab&amp; amrex::EBFArrayBoxFactory::getVolFrac</definition>
+        <argsstring>() const </argsstring>
+        <name>getVolFrac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1af23eeff00f0d391521cec65b4e9c6169" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1MultiCutFab" kindref="compound">MultiCutFab</ref> &amp;</type>
+        <definition>const MultiCutFab&amp; amrex::EBFArrayBoxFactory::getCentroid</definition>
+        <argsstring>() const </argsstring>
+        <name>getCentroid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="52" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a0a90a77c3e304a37eb6887a0ba355bbc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1MultiCutFab" kindref="compound">MultiCutFab</ref> &amp;</type>
+        <definition>const MultiCutFab&amp; amrex::EBFArrayBoxFactory::getBndryCent</definition>
+        <argsstring>() const </argsstring>
+        <name>getBndryCent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="54" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1ac5f1b76f5c6d8eaed0616434870cfa42" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1MultiCutFab" kindref="compound">MultiCutFab</ref> &amp;</type>
+        <definition>const MultiCutFab&amp; amrex::EBFArrayBoxFactory::getBndryNormal</definition>
+        <argsstring>() const </argsstring>
+        <name>getBndryNormal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="56" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1aafe92a73f5433e28da867e9449ef8c53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1MultiCutFab" kindref="compound">MultiCutFab</ref> &amp;</type>
+        <definition>const MultiCutFab&amp; amrex::EBFArrayBoxFactory::getBndryArea</definition>
+        <argsstring>() const </argsstring>
+        <name>getBndryArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="58" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a050f8512feccdc465b04a199a0da464c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; const <ref refid="classamrex_1_1MultiCutFab" kindref="compound">MultiCutFab</ref> *, AMREX_SPACEDIM &gt;</type>
+        <definition>Array&lt;const MultiCutFab*,AMREX_SPACEDIM&gt; amrex::EBFArrayBoxFactory::getAreaFrac</definition>
+        <argsstring>() const </argsstring>
+        <name>getAreaFrac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="60" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a6dd9b014fb580e71213725b99af8c116" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; const <ref refid="classamrex_1_1MultiCutFab" kindref="compound">MultiCutFab</ref> *, AMREX_SPACEDIM &gt;</type>
+        <definition>Array&lt;const MultiCutFab*,AMREX_SPACEDIM&gt; amrex::EBFArrayBoxFactory::getFaceCent</definition>
+        <argsstring>() const </argsstring>
+        <name>getFaceCent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="64" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a6646e73547be1575f0eb9e6e4c7f0c33" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classamrex_1_1EB2_1_1Level" kindref="compound">EB2::Level</ref> const *</type>
+        <definition>EB2::Level const* amrex::EBFArrayBoxFactory::getEBLevel</definition>
+        <argsstring>() const </argsstring>
+        <name>getEBLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="68" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1adb3d24e3caaa5fa299dcca429d51dfc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1EB2_1_1IndexSpace" kindref="compound">EB2::IndexSpace</ref> const *</type>
+        <definition>EB2::IndexSpace const * amrex::EBFArrayBoxFactory::getEBIndexSpace</definition>
+        <argsstring>() const </argsstring>
+        <name>getEBIndexSpace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="69" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a56eea5861d1aeba2fe1c4a19b6333eaa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::EBFArrayBoxFactory::maxCoarseningLevel</definition>
+        <argsstring>() const </argsstring>
+        <name>maxCoarseningLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="70" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1a1b1494555be943906d0adf28ad2f6051" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+        <definition>const DistributionMapping &amp; amrex::EBFArrayBoxFactory::DistributionMap</definition>
+        <argsstring>() const </argsstring>
+        <name>DistributionMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="72" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBFArrayBoxFactory_1ae44a570b6c63b82cea2c147466785d7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+        <definition>const BoxArray &amp; amrex::EBFArrayBoxFactory::boxArray</definition>
+        <argsstring>() const </argsstring>
+        <name>boxArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="73" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1243">
+        <label>amrex::FabFactory&lt; FArrayBox &gt;</label>
+        <link refid="classamrex_1_1FabFactory"/>
+      </node>
+      <node id="1242">
+        <label>amrex::EBFArrayBoxFactory</label>
+        <link refid="classamrex_1_1EBFArrayBoxFactory"/>
+        <childnode refid="1243" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1275">
+        <label>std::vector&lt; MPI_Status, std::allocator&lt; MPI_Status &gt; &gt;</label>
+      </node>
+      <node id="1261">
+        <label>amrex::FabArrayBase::CacheStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1CacheStats"/>
+        <childnode refid="1262" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="1263">
+        <label>amrex::FabArrayBase::FabArrayStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
+      </node>
+      <node id="1254">
+        <label>amrex::EB2::IndexSpace</label>
+        <link refid="classamrex_1_1EB2_1_1IndexSpace"/>
+        <childnode refid="1255" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="1251">
+        <label>amrex::IntVect</label>
+        <link refid="classamrex_1_1IntVect"/>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="1245">
+        <label>amrex::FabFactory&lt; FArrayBox &gt;</label>
+        <link refid="classamrex_1_1FabFactory"/>
+      </node>
+      <node id="1248">
+        <label>Real</label>
+      </node>
+      <node id="1276">
+        <label>amrex::Vector&lt; MPI_Request &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="1277" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1282">
+        <label>std::vector&lt; GFab, std::allocator&lt; GFab &gt; &gt;</label>
+      </node>
+      <node id="1264">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="1265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1262">
+        <label>string</label>
+      </node>
+      <node id="1278">
+        <label>amrex::Periodicity</label>
+        <link refid="classamrex_1_1Periodicity"/>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>period</edgelabel>
+        </childnode>
+      </node>
+      <node id="1272">
+        <label>std::vector&lt; char *, std::allocator&lt; char * &gt; &gt;</label>
+      </node>
+      <node id="1271">
+        <label>amrex::Vector&lt; char * &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="1272" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1244">
+        <label>amrex::EBFArrayBoxFactory</label>
+        <link refid="classamrex_1_1EBFArrayBoxFactory"/>
+        <childnode refid="1245" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1246" relation="usage">
+          <edgelabel>m_geom</edgelabel>
+        </childnode>
+        <childnode refid="1253" relation="usage">
+          <edgelabel>m_parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="1256">
+        <label>std::vector&lt; std::unique_ptr&lt; amrex::EB2::IndexSpace &gt;, std::allocator&lt; std::unique_ptr&lt; amrex::EB2::IndexSpace &gt; &gt; &gt;</label>
+      </node>
+      <node id="1281">
+        <label>amrex::Vector&lt; GFab &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="1282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1279">
+        <label>amrex::EB2::MultiGFab</label>
+        <link refid="classamrex_1_1EB2_1_1MultiGFab"/>
+        <childnode refid="1280" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1273">
+        <label>amrex::FabArray&lt; FAB &gt;::ShMem</label>
+        <link refid="structamrex_1_1FabArray_1_1ShMem"/>
+      </node>
+      <node id="1283">
+        <label>amrex::FabArray&lt; amrex::EBCellFlagFab &gt;</label>
+        <link refid="classamrex_1_1FabArray"/>
+        <childnode refid="1260" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>fb_nghost</edgelabel>
+        </childnode>
+        <childnode refid="1264" relation="usage">
+          <edgelabel>fb_recv_size</edgelabel>
+          <edgelabel>fb_recv_from</edgelabel>
+        </childnode>
+        <childnode refid="1271" relation="usage">
+          <edgelabel>fb_recv_data</edgelabel>
+          <edgelabel>fb_send_data</edgelabel>
+        </childnode>
+        <childnode refid="1273" relation="usage">
+          <edgelabel>shmem</edgelabel>
+        </childnode>
+        <childnode refid="1274" relation="usage">
+          <edgelabel>fb_recv_stat</edgelabel>
+        </childnode>
+        <childnode refid="1276" relation="usage">
+          <edgelabel>fb_send_reqs</edgelabel>
+          <edgelabel>fb_recv_reqs</edgelabel>
+        </childnode>
+        <childnode refid="1278" relation="usage">
+          <edgelabel>fb_period</edgelabel>
+        </childnode>
+      </node>
+      <node id="1277">
+        <label>std::vector&lt; MPI_Request, std::allocator&lt; MPI_Request &gt; &gt;</label>
+      </node>
+      <node id="1265">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="1270">
+        <label>amrex::BoxArray</label>
+        <link refid="classamrex_1_1BoxArray"/>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>m_crse_ratio</edgelabel>
+        </childnode>
+        <childnode refid="1252" relation="usage">
+          <edgelabel>m_typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="1249">
+        <label>amrex::RealBox</label>
+        <link refid="classamrex_1_1RealBox"/>
+        <childnode refid="1248" relation="usage">
+          <edgelabel>xhi</edgelabel>
+          <edgelabel>xlo</edgelabel>
+        </childnode>
+      </node>
+      <node id="1255">
+        <label>amrex::Vector&lt; std::unique_ptr&lt; amrex::EB2::IndexSpace &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="1256" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1250">
+        <label>amrex::Box</label>
+        <link refid="classamrex_1_1Box"/>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>bigend</edgelabel>
+          <edgelabel>smallend</edgelabel>
+        </childnode>
+        <childnode refid="1252" relation="usage">
+          <edgelabel>btype</edgelabel>
+        </childnode>
+      </node>
+      <node id="1280">
+        <label>amrex::LayoutData&lt; GFab &gt;</label>
+        <link refid="classamrex_1_1LayoutData"/>
+        <childnode refid="1260" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1281" relation="usage">
+          <edgelabel>m_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="1268">
+        <label>amrex::DistributionMapping::RefID</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1RefID"/>
+        <childnode refid="1269" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="1274">
+        <label>amrex::Vector&lt; MPI_Status &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="1275" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1247">
+        <label>amrex::CoordSys</label>
+        <link refid="classamrex_1_1CoordSys"/>
+        <childnode refid="1248" relation="usage">
+          <edgelabel>inv_dx</edgelabel>
+          <edgelabel>offset</edgelabel>
+          <edgelabel>dx</edgelabel>
+        </childnode>
+      </node>
+      <node id="1252">
+        <label>amrex::IndexType</label>
+        <link refid="classamrex_1_1IndexType"/>
+      </node>
+      <node id="1269">
+        <label>amrex::DistributionMapping::Ref</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1Ref"/>
+        <childnode refid="1264" relation="usage">
+          <edgelabel>m_index_array</edgelabel>
+          <edgelabel>m_pmap</edgelabel>
+        </childnode>
+      </node>
+      <node id="1257">
+        <label>amrex::DistributionMapping</label>
+        <link refid="classamrex_1_1DistributionMapping"/>
+      </node>
+      <node id="1266">
+        <label>amrex::FabArrayBase::BDKey</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1BDKey"/>
+        <childnode refid="1267" relation="usage">
+          <edgelabel>m_ba_id</edgelabel>
+        </childnode>
+        <childnode refid="1268" relation="usage">
+          <edgelabel>m_dm_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="1258">
+        <label>amrex::MultiFab</label>
+        <link refid="classamrex_1_1MultiFab"/>
+        <childnode refid="1259" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1246">
+        <label>amrex::Geometry</label>
+        <link refid="classamrex_1_1Geometry"/>
+        <childnode refid="1247" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1249" relation="usage">
+          <edgelabel>prob_domain</edgelabel>
+        </childnode>
+        <childnode refid="1250" relation="usage">
+          <edgelabel>domain</edgelabel>
+        </childnode>
+      </node>
+      <node id="1259">
+        <label>amrex::FabArray&lt; FArrayBox &gt;</label>
+        <link refid="classamrex_1_1FabArray"/>
+        <childnode refid="1260" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>fb_nghost</edgelabel>
+        </childnode>
+        <childnode refid="1264" relation="usage">
+          <edgelabel>fb_recv_size</edgelabel>
+          <edgelabel>fb_recv_from</edgelabel>
+        </childnode>
+        <childnode refid="1271" relation="usage">
+          <edgelabel>fb_recv_data</edgelabel>
+          <edgelabel>fb_send_data</edgelabel>
+        </childnode>
+        <childnode refid="1273" relation="usage">
+          <edgelabel>shmem</edgelabel>
+        </childnode>
+        <childnode refid="1274" relation="usage">
+          <edgelabel>fb_recv_stat</edgelabel>
+        </childnode>
+        <childnode refid="1276" relation="usage">
+          <edgelabel>fb_send_reqs</edgelabel>
+          <edgelabel>fb_recv_reqs</edgelabel>
+        </childnode>
+        <childnode refid="1278" relation="usage">
+          <edgelabel>fb_period</edgelabel>
+        </childnode>
+      </node>
+      <node id="1253">
+        <label>amrex::EB2::Level</label>
+        <link refid="classamrex_1_1EB2_1_1Level"/>
+        <childnode refid="1246" relation="usage">
+          <edgelabel>m_geom</edgelabel>
+        </childnode>
+        <childnode refid="1254" relation="usage">
+          <edgelabel>m_parent</edgelabel>
+        </childnode>
+        <childnode refid="1257" relation="usage">
+          <edgelabel>m_dmap</edgelabel>
+        </childnode>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>m_ngrow</edgelabel>
+        </childnode>
+        <childnode refid="1258" relation="usage">
+          <edgelabel>m_bndryarea</edgelabel>
+          <edgelabel>m_levelset</edgelabel>
+          <edgelabel>m_bndrycent</edgelabel>
+          <edgelabel>m_centroid</edgelabel>
+          <edgelabel>m_bndrynorm</edgelabel>
+          <edgelabel>m_volfrac</edgelabel>
+        </childnode>
+        <childnode refid="1279" relation="usage">
+          <edgelabel>m_mgf</edgelabel>
+        </childnode>
+        <childnode refid="1283" relation="usage">
+          <edgelabel>m_cellflag</edgelabel>
+        </childnode>
+        <childnode refid="1270" relation="usage">
+          <edgelabel>m_covered_grids</edgelabel>
+          <edgelabel>m_grids</edgelabel>
+        </childnode>
+      </node>
+      <node id="1267">
+        <label>amrex::BoxArray::RefID</label>
+        <link refid="structamrex_1_1BoxArray_1_1RefID"/>
+      </node>
+      <node id="1260">
+        <label>amrex::FabArrayBase</label>
+        <link refid="classamrex_1_1FabArrayBase"/>
+        <childnode refid="1261" relation="usage">
+          <edgelabel>m_FBC_stats</edgelabel>
+          <edgelabel>m_FPinfo_stats</edgelabel>
+          <edgelabel>m_CFinfo_stats</edgelabel>
+          <edgelabel>m_TAC_stats</edgelabel>
+          <edgelabel>m_CPC_stats</edgelabel>
+        </childnode>
+        <childnode refid="1257" relation="usage">
+          <edgelabel>distributionMap</edgelabel>
+        </childnode>
+        <childnode refid="1251" relation="usage">
+          <edgelabel>n_grow</edgelabel>
+          <edgelabel>comm_tile_size</edgelabel>
+          <edgelabel>mfiter_tile_size</edgelabel>
+          <edgelabel>mfghostiter_tile_size</edgelabel>
+        </childnode>
+        <childnode refid="1263" relation="usage">
+          <edgelabel>m_FA_stats</edgelabel>
+        </childnode>
+        <childnode refid="1264" relation="usage">
+          <edgelabel>indexArray</edgelabel>
+        </childnode>
+        <childnode refid="1266" relation="usage">
+          <edgelabel>m_bdkey</edgelabel>
+        </childnode>
+        <childnode refid="1270" relation="usage">
+          <edgelabel>boxarray</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" line="21" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFabFactory.H" bodystart="19" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1ae44a570b6c63b82cea2c147466785d7e" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>boxArray</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a2d942d0e7c5fa2e3dc6c4ef56d52f53d" prot="public" virt="virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>clone</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1af4895e37eae210a93ca7d2b0493a250e" prot="public" virt="virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>create</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a25f6eca7dc8d4f2269fec54f5d20f079" prot="public" virt="virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>destroy</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a1b1494555be943906d0adf28ad2f6051" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>DistributionMap</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1ae76b4a906830e7b5094edc438e6cc9b9" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>EBFArrayBoxFactory</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1aff3ee653b5be6f3b58ec1c34ae2f461f" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>EBFArrayBoxFactory</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1aad2e2bde5474a8a144c900d5bfaa5e8c" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>EBFArrayBoxFactory</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1aa671c88f9bbc88f7824352ef14fedc45" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>EBFArrayBoxFactory</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a050f8512feccdc465b04a199a0da464c" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getAreaFrac</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1aafe92a73f5433e28da867e9449ef8c53" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getBndryArea</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a0a90a77c3e304a37eb6887a0ba355bbc" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getBndryCent</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1ac5f1b76f5c6d8eaed0616434870cfa42" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getBndryNormal</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1af23eeff00f0d391521cec65b4e9c6169" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getCentroid</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1adb3d24e3caaa5fa299dcca429d51dfc2" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getEBIndexSpace</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a6646e73547be1575f0eb9e6e4c7f0c33" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getEBLevel</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a6dd9b014fb580e71213725b99af8c116" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getFaceCent</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a6f80f3dc8e8d612d2ff36b585087d771" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getMultiEBCellFlagFab</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1af649407fa3a21df9a178c8253bcb1ae3" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>getVolFrac</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a0495e6651f6bc2531a88c903354da409" prot="private" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>m_ebdc</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a0dece5de11da52cba439675d6f632976" prot="private" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>m_geom</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a9077580d8ff605511c26c67b023364e8" prot="private" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>m_parent</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a0121434aeeb0ad87903dd1401803c1ba" prot="private" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>m_support</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a56eea5861d1aeba2fe1c4a19b6333eaa" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>maxCoarseningLevel</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1ad9569bd1f5ab3e6e1667c1b023463cf8" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1a3116ec053a7957bb79f63b84867401da" prot="public" virt="non-virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1EBFArrayBoxFactory_1ad501654118cdfebf0f2b0d68fb5a6cc1" prot="public" virt="virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>~EBFArrayBoxFactory</name></member>
+      <member refid="classamrex_1_1FabFactory_1af726b92f11c995d2a3225f3fa8a0754b" prot="public" virt="virtual"><scope>amrex::EBFArrayBoxFactory</scope><name>~FabFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

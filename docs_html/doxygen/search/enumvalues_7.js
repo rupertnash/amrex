@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['knapsack',['KNAPSACK',['../classamrex_1_1_distribution_mapping.html#ad8e078b643635f0027eb797c2d54d3b8a6f5ec418bb5db591c4b5780f00cce82e',1,'amrex::DistributionMapping']]]
+  ['hiddencell',['HIDDENCELL',['../namespaceamrex_1_1InSituUtils.html#a7c36b2f21774c997bbc295eb09a36530a09da97af948ccd39faf2c0b3ed78185f',1,'amrex::InSituUtils']]],
+  ['hiddenpoint',['HIDDENPOINT',['../namespaceamrex_1_1InSituUtils.html#ad3ac3134f4a39a0f979b1e491849fa3aa447a8b1040c94692e04c089e4634dac1',1,'amrex::InSituUtils']]],
+  ['high',['high',['../classamrex_1_1Orientation.html#a877c697bbab9de21af4012197ba76410ae82bb2777abd5901ea82ca6721b716a8',1,'amrex::Orientation']]],
+  ['highconnectivitycell',['HIGHCONNECTIVITYCELL',['../namespaceamrex_1_1InSituUtils.html#a7c36b2f21774c997bbc295eb09a36530a3e1bde285ee10aa4deb44c451f20edd6',1,'amrex::InSituUtils']]],
+  ['homogeneous',['Homogeneous',['../classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884a548465e8241b26162c8e0a7b0cdfc5e7',1,'amrex::MLLinOp']]],
+  ['homogeneous_5fbc',['Homogeneous_BC',['../classamrex_1_1LinOp.html#ad5f2fc8009714c47dc63ff6a7a73a5deae1724332b6960ec73ce5040947963f78',1,'amrex::LinOp']]],
+  ['hypre',['hypre',['../classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b',1,'amrex::MLMG']]]
 ];

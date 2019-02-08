@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="AMReX__InSituBridge_8cpp" kind="file" language="C++">
+    <compoundname>AMReX_InSituBridge.cpp</compoundname>
+    <includes refid="AMReX__InSituBridge_8H" local="no">AMReX_InSituBridge.H</includes>
+    <includes refid="AMReX__ParmParse_8H" local="no">AMReX_ParmParse.H</includes>
+    <incdepgraph>
+      <node id="42166">
+        <label>list</label>
+      </node>
+      <node id="42161">
+        <label>functional</label>
+      </node>
+      <node id="42155">
+        <label>AMReX.H</label>
+        <link refid="AMReX_8H"/>
+        <childnode refid="42156" relation="include">
+        </childnode>
+        <childnode refid="42157" relation="include">
+        </childnode>
+        <childnode refid="42158" relation="include">
+        </childnode>
+        <childnode refid="42160" relation="include">
+        </childnode>
+        <childnode refid="42161" relation="include">
+        </childnode>
+        <childnode refid="42149" relation="include">
+        </childnode>
+        <childnode refid="42162" relation="include">
+        </childnode>
+      </node>
+      <node id="42150">
+        <label>AMReX_Vector.H</label>
+        <link refid="AMReX__Vector_8H"/>
+        <childnode refid="42151" relation="include">
+        </childnode>
+        <childnode refid="42152" relation="include">
+        </childnode>
+        <childnode refid="42153" relation="include">
+        </childnode>
+        <childnode refid="42154" relation="include">
+        </childnode>
+      </node>
+      <node id="42159">
+        <label>stdexcept</label>
+      </node>
+      <node id="42149">
+        <label>string</label>
+      </node>
+      <node id="42148">
+        <label>AMReX_InSituBridge.H</label>
+        <link refid="AMReX__InSituBridge_8H"/>
+        <childnode refid="42149" relation="include">
+        </childnode>
+        <childnode refid="42150" relation="include">
+        </childnode>
+      </node>
+      <node id="42162">
+        <label>cstdio</label>
+      </node>
+      <node id="42164">
+        <label>stack</label>
+      </node>
+      <node id="42152">
+        <label>vector</label>
+      </node>
+      <node id="42154">
+        <label>AMReX_BLassert.H</label>
+        <link refid="AMReX__BLassert_8H"/>
+        <childnode refid="42155" relation="include">
+        </childnode>
+      </node>
+      <node id="42156">
+        <label>AMReX_GpuQualifiers.H</label>
+        <link refid="AMReX__GpuQualifiers_8H"/>
+      </node>
+      <node id="42167">
+        <label>array</label>
+      </node>
+      <node id="42158">
+        <label>AMReX_Exception.H</label>
+        <link refid="AMReX__Exception_8H"/>
+        <childnode refid="42159" relation="include">
+        </childnode>
+      </node>
+      <node id="42165">
+        <label>iosfwd</label>
+      </node>
+      <node id="42160">
+        <label>iostream</label>
+      </node>
+      <node id="42147">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Extern/SENSEI/AMReX_InSituBridge.cpp</label>
+        <link refid="AMReX_InSituBridge.cpp"/>
+        <childnode refid="42148" relation="include">
+        </childnode>
+        <childnode refid="42163" relation="include">
+        </childnode>
+      </node>
+      <node id="42157">
+        <label>AMReX_ccse-mpi.H</label>
+        <link refid="AMReX__ccse-mpi_8H"/>
+      </node>
+      <node id="42163">
+        <label>AMReX_ParmParse.H</label>
+        <link refid="AMReX__ParmParse_8H"/>
+        <childnode refid="42164" relation="include">
+        </childnode>
+        <childnode refid="42149" relation="include">
+        </childnode>
+        <childnode refid="42165" relation="include">
+        </childnode>
+        <childnode refid="42152" relation="include">
+        </childnode>
+        <childnode refid="42166" relation="include">
+        </childnode>
+        <childnode refid="42167" relation="include">
+        </childnode>
+      </node>
+      <node id="42151">
+        <label>algorithm</label>
+      </node>
+      <node id="42153">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceamrex">amrex</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__InSituBridge_8H" kindref="compound">AMReX_InSituBridge.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__ParmParse_8H" kindref="compound">AMReX_ParmParse.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BL_USE_SENSEI_INSITU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DataAdaptor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;AnalysisAdaptor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ConfigurableAnalysis.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;timer/Timer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__AmrDataAdaptor_8H" kindref="compound">AMReX_AmrDataAdaptor.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__AmrMeshDataAdaptor_8H" kindref="compound">AMReX_AmrMeshDataAdaptor.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex" kindref="compound">amrex</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="classamrex_1_1InSituBridge_1a6c866fc3219625267ae1e50ba7bec240" kindref="member">InSituBridge::InSituBridge</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">#if<sp/>defined(BL_USE_MPI)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>comm(<ref refid="AMReX__ccse-mpi_8H_1a9c299ed1c4c5eaa48a6446c85fb2d689" kindref="member">MPI_COMM_NULL</ref>),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">#if<sp/>defined(BL_USE_SENSEI_INSITU)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>analysis_adaptor(nullptr),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">#endif</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>enabled(0),<sp/>frequency(1),<sp/>counter(0),<sp/>pinMesh(0)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(BL_USE_SENSEI_INSITU)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ae6af1524fbe3cd8da106c62a0707deb9" kindref="member">timer::Initialize</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="classamrex_1_1InSituBridge_1a826dc660a178377d78530da110fb8eed" kindref="member">InSituBridge::~InSituBridge</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(BL_USE_SENSEI_INSITU)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(analysis_adaptor)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>analysis_adaptor-&gt;Delete();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a98433bd642d901d057750276875f85f6" kindref="member">timer::Finalize</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="classamrex_1_1InSituBridge_1aff7833aedc8bfc852c830c35cefe928c" kindref="member">InSituBridge::initialize</ref>()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(BL_USE_SENSEI_INSITU)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t0<sp/>=<sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>timer::MarkEvent<sp/>event(</highlight><highlight class="stringliteral">&quot;InSituBridge::initialize&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>config<sp/>from<sp/>ParmParse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>ParmParse<sp/>pp(</highlight><highlight class="stringliteral">&quot;sensei&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>pp.query(</highlight><highlight class="stringliteral">&quot;enabled&quot;</highlight><highlight class="normal">,<sp/><ref refid="classamrex_1_1InSituBridge_1a479b95e65f876998b375cdbaba5ed658" kindref="member">enabled</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classamrex_1_1InSituBridge_1a479b95e65f876998b375cdbaba5ed658" kindref="member">enabled</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>pp.query(</highlight><highlight class="stringliteral">&quot;config&quot;</highlight><highlight class="normal">,<sp/><ref refid="classamrex_1_1InSituBridge_1a1ebf5d26f2262a8604ef624ebc72fdf2" kindref="member">config</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>pp.query(</highlight><highlight class="stringliteral">&quot;frequency&quot;</highlight><highlight class="normal">,<sp/><ref refid="classamrex_1_1InSituBridge_1a1f8a76f22bde94cbfc3c495aa50877e7" kindref="member">frequency</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>pp.query(</highlight><highlight class="stringliteral">&quot;pin_mesh&quot;</highlight><highlight class="normal">,<sp/><ref refid="classamrex_1_1InSituBridge_1a3cf163ea993bb9ab3a642bb0b16e9d90" kindref="member">pinMesh</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SENSEI<sp/>Begin<sp/>initialize...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>invalid<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1InSituBridge_1a1ebf5d26f2262a8604ef624ebc72fdf2" kindref="member">config</ref>.empty())</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a1e213ab52cdac41e691ab49370b30a34" kindref="member">amrex::ErrorStream</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Missing<sp/>SENSEI<sp/>XML<sp/>configuration.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1InSituBridge_1a1f8a76f22bde94cbfc3c495aa50877e7" kindref="member">frequency</ref><sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a1e213ab52cdac41e691ab49370b30a34" kindref="member">amrex::ErrorStream</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Frequency<sp/>must<sp/>be<sp/>greater<sp/>or<sp/>equal<sp/>to<sp/>1.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>and<sp/>initialize<sp/>the<sp/>analysis<sp/>adaptor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>sensei::ConfigurableAnalysis<sp/>*aa<sp/>=<sp/>sensei::ConfigurableAnalysis::New();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(BL_USE_MPI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(comm<sp/>!=<sp/><ref refid="AMReX__ccse-mpi_8H_1a9c299ed1c4c5eaa48a6446c85fb2d689" kindref="member">MPI_COMM_NULL</ref>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aa-&gt;SetCommunicator(comm);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aa-&gt;Initialize(<ref refid="classamrex_1_1InSituBridge_1a1ebf5d26f2262a8604ef624ebc72fdf2" kindref="member">config</ref>))</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aa-&gt;Delete();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aa<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>analysis_adaptor<sp/>=<sp/>aa;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t1<sp/>=<sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>std::chrono::duration_cast&lt;std::chrono::duration&lt;double&gt;&gt;(t1<sp/>-<sp/>t0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SENSEI<sp/>initialize<sp/>complete<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>dt.count()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>sec)&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="classamrex_1_1InSituBridge_1adb5a0dd2bc78011f72b1c9881139094b" kindref="member">InSituBridge::doUpdate</ref>()</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>analysis_adaptor<sp/>&amp;&amp;<sp/>(<ref refid="classamrex_1_1InSituBridge_1a1f8a76f22bde94cbfc3c495aa50877e7" kindref="member">frequency</ref><sp/>&gt;<sp/>0)<sp/>&amp;&amp;<sp/>((<ref refid="classamrex_1_1InSituBridge_1acba77d88ac888913a071c5a5ec180542" kindref="member">counter</ref><sp/>%<sp/><ref refid="classamrex_1_1InSituBridge_1a1f8a76f22bde94cbfc3c495aa50877e7" kindref="member">frequency</ref>)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1InSituBridge_1acba77d88ac888913a071c5a5ec180542" kindref="member">counter</ref><sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><ref refid="classamrex_1_1InSituBridge_1a85eb163d1194d5afb39217626b876971" kindref="member">InSituBridge::finalize</ref>()</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(BL_USE_SENSEI_INSITU)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!analysis_adaptor)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SENSEI<sp/>Begin<sp/>finalize...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t0<sp/>=<sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>timer::MarkEvent<sp/>event(</highlight><highlight class="stringliteral">&quot;InSituBridge::finalize&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>analysis_adaptor-&gt;Finalize();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t1<sp/>=<sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>std::chrono::duration_cast&lt;std::chrono::duration&lt;double&gt;&gt;(t1<sp/>-<sp/>t0);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SENSEI<sp/>finalize<sp/>complete<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>dt.count()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>sec)&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Extern/SENSEI/AMReX_InSituBridge.cpp"/>
+  </compounddef>
+</doxygen>

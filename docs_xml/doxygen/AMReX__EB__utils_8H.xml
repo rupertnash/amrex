@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="AMReX__EB__utils_8H" kind="file" language="C++">
+    <compoundname>AMReX_EB_utils.H</compoundname>
+    <includes refid="AMReX_8H" local="no">AMReX.H</includes>
+    <includedby refid="AMReX__EB__levelset_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_levelset.cpp</includedby>
+    <includedby refid="AMReX__EB__LSCore_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_LSCore.H</includedby>
+    <includedby refid="AMReX__EB__LSCoreBase_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_LSCoreBase.cpp</includedby>
+    <includedby refid="AMReX__EB__utils_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_utils.cpp</includedby>
+    <incdepgraph>
+      <node id="36019">
+        <label>functional</label>
+      </node>
+      <node id="36013">
+        <label>AMReX.H</label>
+        <link refid="AMReX_8H"/>
+        <childnode refid="36014" relation="include">
+        </childnode>
+        <childnode refid="36015" relation="include">
+        </childnode>
+        <childnode refid="36016" relation="include">
+        </childnode>
+        <childnode refid="36018" relation="include">
+        </childnode>
+        <childnode refid="36019" relation="include">
+        </childnode>
+        <childnode refid="36020" relation="include">
+        </childnode>
+        <childnode refid="36021" relation="include">
+        </childnode>
+      </node>
+      <node id="36017">
+        <label>stdexcept</label>
+      </node>
+      <node id="36020">
+        <label>string</label>
+      </node>
+      <node id="36021">
+        <label>cstdio</label>
+      </node>
+      <node id="36014">
+        <label>AMReX_GpuQualifiers.H</label>
+        <link refid="AMReX__GpuQualifiers_8H"/>
+      </node>
+      <node id="36016">
+        <label>AMReX_Exception.H</label>
+        <link refid="AMReX__Exception_8H"/>
+        <childnode refid="36017" relation="include">
+        </childnode>
+      </node>
+      <node id="36018">
+        <label>iostream</label>
+      </node>
+      <node id="36015">
+        <label>AMReX_ccse-mpi.H</label>
+        <link refid="AMReX__ccse-mpi_8H"/>
+      </node>
+      <node id="36012">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_utils.H</label>
+        <link refid="AMReX_EB_utils.H"/>
+        <childnode refid="36013" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="36026">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_utils.cpp</label>
+        <link refid="AMReX__EB__utils_8cpp"/>
+      </node>
+      <node id="36025">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_LSCoreBase.cpp</label>
+        <link refid="AMReX__EB__LSCoreBase_8cpp"/>
+      </node>
+      <node id="36023">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_levelset.cpp</label>
+        <link refid="AMReX__EB__levelset_8cpp"/>
+      </node>
+      <node id="36024">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_LSCore.H</label>
+        <link refid="AMReX__EB__LSCore_8H"/>
+      </node>
+      <node id="36022">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_utils.H</label>
+        <link refid="AMReX_EB_utils.H"/>
+        <childnode refid="36023" relation="include">
+        </childnode>
+        <childnode refid="36024" relation="include">
+        </childnode>
+        <childnode refid="36025" relation="include">
+        </childnode>
+        <childnode refid="36026" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceamrex">amrex</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>AMREX_EB_UTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_EB_UTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX_8H" kindref="compound">AMReX.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex" kindref="compound">amrex</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1af3d0b55f537815a445e708f01eede78d" kindref="member">FillEBNormals</ref>(MultiFab<sp/>&amp;<sp/>normals,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EBFArrayBoxFactory<sp/>&amp;<sp/>eb_factory,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Geometry<sp/>&amp;<sp/>geom);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB_utils.H"/>
+  </compounddef>
+</doxygen>

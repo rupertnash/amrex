@@ -1,0 +1,945 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1FillPatchIteratorHelper" kind="class" language="C++" prot="public">
+    <compoundname>amrex::FillPatchIteratorHelper</compoundname>
+    <includes refid="AMReX__AmrLevel_8H" local="no">AMReX_AmrLevel.H</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classamrex_1_1FillPatchIteratorHelper_1a39d92a4048c0af0c7b1737d5c4e0c334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class FillPatchIterator</definition>
+        <argsstring></argsstring>
+        <name>FillPatchIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="706" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="706" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a5ca572ea2e2269cf1173bb0240f3c544" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1AmrLevel" kindref="compound">AmrLevel</ref> &amp;</type>
+        <definition>AmrLevel&amp; amrex::FillPatchIteratorHelper::m_amrlevel</definition>
+        <argsstring></argsstring>
+        <name>m_amrlevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="741" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="741" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a560bc6de77dae8edbb3c9587eb53f03d" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+        <definition>MultiFab&amp; amrex::FillPatchIteratorHelper::m_leveldata</definition>
+        <argsstring></argsstring>
+        <name>m_leveldata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="742" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="742" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1aaf087145837f2626f17e9e93b71ff985" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1MultiFabCopyDescriptor" kindref="compound">MultiFabCopyDescriptor</ref></type>
+        <definition>MultiFabCopyDescriptor amrex::FillPatchIteratorHelper::m_mfcd</definition>
+        <argsstring></argsstring>
+        <name>m_mfcd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="743" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="743" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1adaa101ebcbc10df6a2a761ea3fb3e78b" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="namespaceamrex_1a270e267cbd0e472dd8297d46a9c76854" kindref="member">MultiFabId</ref> &gt; &gt;</type>
+        <definition>Vector&lt; Vector&lt;MultiFabId&gt; &gt; amrex::FillPatchIteratorHelper::m_mfid</definition>
+        <argsstring></argsstring>
+        <name>m_mfid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="744" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="744" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1af0e183d350296703e8deaebb9a88f81a" prot="private" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Interpolater" kindref="compound">Interpolater</ref> *</type>
+        <definition>Interpolater* amrex::FillPatchIteratorHelper::m_map</definition>
+        <argsstring></argsstring>
+        <name>m_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="745" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="745" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1ae1577679bfb4ab104a875852a9dbecda" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &gt;</type>
+        <definition>std::map&lt;int,Box&gt; amrex::FillPatchIteratorHelper::m_ba</definition>
+        <argsstring></argsstring>
+        <name>m_ba</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="746" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="746" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1ac669cda0914a26ea86c2c118e10791dc" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real amrex::FillPatchIteratorHelper::m_time</definition>
+        <argsstring></argsstring>
+        <name>m_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="747" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="747" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a86e3e6118853e3c7624e46167f7766f7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::FillPatchIteratorHelper::m_growsize</definition>
+        <argsstring></argsstring>
+        <name>m_growsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="748" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="748" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1aa73689929eae42431f0f210d8bb28fee" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::FillPatchIteratorHelper::m_index</definition>
+        <argsstring></argsstring>
+        <name>m_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="749" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="749" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a77d378e6f4445b1b52d50e81d97c85fc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::FillPatchIteratorHelper::m_scomp</definition>
+        <argsstring></argsstring>
+        <name>m_scomp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="750" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="750" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1ac4b64e926d1d6763788ee539be3f5d3e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::FillPatchIteratorHelper::m_ncomp</definition>
+        <argsstring></argsstring>
+        <name>m_ncomp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="751" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="751" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a629f8512e45e8f0109a740bfcb7ae412" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::FillPatchIteratorHelper::m_FixUpCorners</definition>
+        <argsstring></argsstring>
+        <name>m_FixUpCorners</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="752" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="752" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a6c671b8216fcac05344ff477ff2eae56" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt; int,Vector&lt; Vector&lt;Box&gt; &gt; &gt; amrex::FillPatchIteratorHelper::m_fbox</definition>
+        <argsstring></argsstring>
+        <name>m_fbox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="754" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a1ed0eb57ec7521b07ea2918df59e5bbd" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt; int,Vector&lt; Vector&lt;Box&gt; &gt; &gt; amrex::FillPatchIteratorHelper::m_cbox</definition>
+        <argsstring></argsstring>
+        <name>m_cbox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="755" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="755" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1FillPatchIteratorHelper_1a2df3ae174e52a21bb158cde96f9498a4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1FillBoxId" kindref="compound">FillBoxId</ref> &gt; &gt; &gt; &gt;</type>
+        <definition>std::map&lt; int,Vector&lt; Vector&lt; Vector&lt;FillBoxId&gt; &gt; &gt; &gt; amrex::FillPatchIteratorHelper::m_fbid</definition>
+        <argsstring></argsstring>
+        <name>m_fbid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="756" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="756" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1a10439c4fa30c39a2f12ba939498ab887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::FillPatchIteratorHelper::FillPatchIteratorHelper</definition>
+        <argsstring>(AmrLevel &amp;amrlevel, MultiFab &amp;leveldata)</argsstring>
+        <name>FillPatchIteratorHelper</name>
+        <param>
+          <type><ref refid="classamrex_1_1AmrLevel" kindref="compound">AmrLevel</ref> &amp;</type>
+          <declname>amrlevel</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>leveldata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="708" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.cpp" bodystart="612" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1a89aee65d44395bf8969b6ec3da5bd5d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::FillPatchIteratorHelper::FillPatchIteratorHelper</definition>
+        <argsstring>(AmrLevel &amp;amrlevel, MultiFab &amp;leveldata, int boxGrow, Real time, int state_indx, int scomp, int ncomp, Interpolater *mapper)</argsstring>
+        <name>FillPatchIteratorHelper</name>
+        <param>
+          <type><ref refid="classamrex_1_1AmrLevel" kindref="compound">AmrLevel</ref> &amp;</type>
+          <declname>amrlevel</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>leveldata</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>boxGrow</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>state_indx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Interpolater" kindref="compound">Interpolater</ref> *</type>
+          <declname>mapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="711" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.cpp" bodystart="629" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1af634eccf2d0d201220687d5b8bfe50fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::FillPatchIteratorHelper::Initialize</definition>
+        <argsstring>(int boxGrow, Real time, int state_indx, int scomp, int ncomp, Interpolater *mapper)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>int</type>
+          <declname>boxGrow</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>state_indx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Interpolater" kindref="compound">Interpolater</ref> *</type>
+          <declname>mapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="720" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.cpp" bodystart="683" bodyend="929"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1ab0e6743c4dbe5632040213a1c6616510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::FillPatchIteratorHelper::~FillPatchIteratorHelper</definition>
+        <argsstring>()</argsstring>
+        <name>~FillPatchIteratorHelper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="727" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.cpp" bodystart="1455" bodyend="1455"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1a9cf2d33e663f0311539a96633ff7560d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::FillPatchIteratorHelper::fill</definition>
+        <argsstring>(FArrayBox &amp;fab, int dcomp, int idx)</argsstring>
+        <name>fill</name>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>fab</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dcomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="729" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.cpp" bodystart="1207" bodyend="1453"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1ae4075b85a37079586a0717c6223de190" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::FillPatchIteratorHelper::FillPatchIteratorHelper</definition>
+        <argsstring>()</argsstring>
+        <name>FillPatchIteratorHelper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="735" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1aae84913534a102443b326a934fb332fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::FillPatchIteratorHelper::FillPatchIteratorHelper</definition>
+        <argsstring>(const FillPatchIteratorHelper &amp;rhs)</argsstring>
+        <name>FillPatchIteratorHelper</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1FillPatchIteratorHelper" kindref="compound">FillPatchIteratorHelper</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="736" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1FillPatchIteratorHelper_1a1dea2e7280c98e94f9efd74d445f884e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1FillPatchIteratorHelper" kindref="compound">FillPatchIteratorHelper</ref> &amp;</type>
+        <definition>FillPatchIteratorHelper&amp; amrex::FillPatchIteratorHelper::operator=</definition>
+        <argsstring>(const FillPatchIteratorHelper &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1FillPatchIteratorHelper" kindref="compound">FillPatchIteratorHelper</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="737" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2156">
+        <label>amrex::LevelBld</label>
+        <link refid="classamrex_1_1LevelBld"/>
+      </node>
+      <node id="2129">
+        <label>std::vector&lt; MPI_Status, std::allocator&lt; MPI_Status &gt; &gt;</label>
+      </node>
+      <node id="2142">
+        <label>std::vector&lt; amrex::BoxArray, std::allocator&lt; amrex::BoxArray &gt; &gt;</label>
+      </node>
+      <node id="2106">
+        <label>amrex::FillPatchIteratorHelper</label>
+        <link refid="classamrex_1_1FillPatchIteratorHelper"/>
+        <childnode refid="2107" relation="usage">
+          <edgelabel>m_mfid</edgelabel>
+        </childnode>
+        <childnode refid="2109" relation="usage">
+          <edgelabel>m_leveldata</edgelabel>
+        </childnode>
+        <childnode refid="2133" relation="usage">
+          <edgelabel>m_map</edgelabel>
+        </childnode>
+        <childnode refid="2134" relation="usage">
+          <edgelabel>m_amrlevel</edgelabel>
+        </childnode>
+        <childnode refid="2167" relation="usage">
+          <edgelabel>m_mfcd</edgelabel>
+        </childnode>
+        <childnode refid="2147" relation="usage">
+          <edgelabel>m_time</edgelabel>
+        </childnode>
+      </node>
+      <node id="2112">
+        <label>amrex::FabArrayBase::CacheStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1CacheStats"/>
+        <childnode refid="2113" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="2134">
+        <label>amrex::AmrLevel</label>
+        <link refid="classamrex_1_1AmrLevel"/>
+        <childnode refid="2135" relation="usage">
+          <edgelabel>derive_lst</edgelabel>
+        </childnode>
+        <childnode refid="2136" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="2158" relation="usage">
+          <edgelabel>geom</edgelabel>
+        </childnode>
+        <childnode refid="2162" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="2164" relation="usage">
+          <edgelabel>desc_lst</edgelabel>
+        </childnode>
+        <childnode refid="2114" relation="usage">
+          <edgelabel>dmap</edgelabel>
+        </childnode>
+        <childnode refid="2115" relation="usage">
+          <edgelabel>fine_ratio</edgelabel>
+          <edgelabel>crse_ratio</edgelabel>
+        </childnode>
+        <childnode refid="2161" relation="usage">
+          <edgelabel>m_AreaToTag</edgelabel>
+        </childnode>
+        <childnode refid="2123" relation="usage">
+          <edgelabel>nodal_grids</edgelabel>
+          <edgelabel>grids</edgelabel>
+          <edgelabel>m_AreaNotToTag</edgelabel>
+          <edgelabel>edge_grids</edgelabel>
+        </childnode>
+      </node>
+      <node id="2116">
+        <label>amrex::FabArrayBase::FabArrayStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
+      </node>
+      <node id="2155">
+        <label>std::vector&lt; std::unique_ptr&lt; std::fstream &gt;, std::allocator&lt; std::unique_ptr&lt; std::fstream &gt; &gt; &gt;</label>
+      </node>
+      <node id="2135">
+        <label>amrex::DeriveList</label>
+        <link refid="classamrex_1_1DeriveList"/>
+      </node>
+      <node id="2115">
+        <label>amrex::IntVect</label>
+        <link refid="classamrex_1_1IntVect"/>
+        <childnode refid="2115" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="2151">
+        <label>std::vector&lt; std::unique_ptr&lt; amrex::AmrLevel &gt;, std::allocator&lt; std::unique_ptr&lt; amrex::AmrLevel &gt; &gt; &gt;</label>
+      </node>
+      <node id="2150">
+        <label>amrex::Vector&lt; std::unique_ptr&lt; amrex::AmrLevel &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2151" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2147">
+        <label>Real</label>
+      </node>
+      <node id="2146">
+        <label>std::vector&lt; amrex::Geometry, std::allocator&lt; amrex::Geometry &gt; &gt;</label>
+      </node>
+      <node id="2137">
+        <label>amrex::AmrCore</label>
+        <link refid="classamrex_1_1AmrCore"/>
+        <childnode refid="2138" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2166">
+        <label>std::vector&lt; std::unique_ptr&lt; amrex::StateDescriptor &gt;, std::allocator&lt; std::unique_ptr&lt; amrex::StateDescriptor &gt; &gt; &gt;</label>
+      </node>
+      <node id="2130">
+        <label>amrex::Vector&lt; MPI_Request &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2131" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2153">
+        <label>std::vector&lt; std::string, std::allocator&lt; std::string &gt; &gt;</label>
+      </node>
+      <node id="2139">
+        <label>amrex::Vector&lt; amrex::DistributionMapping &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2140" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2117">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2113">
+        <label>string</label>
+      </node>
+      <node id="2132">
+        <label>amrex::Periodicity</label>
+        <link refid="classamrex_1_1Periodicity"/>
+        <childnode refid="2115" relation="usage">
+          <edgelabel>period</edgelabel>
+        </childnode>
+      </node>
+      <node id="2136">
+        <label>amrex::Amr</label>
+        <link refid="classamrex_1_1Amr"/>
+        <childnode refid="2137" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2148" relation="usage">
+          <edgelabel>dt_min</edgelabel>
+          <edgelabel>dt_level</edgelabel>
+        </childnode>
+        <childnode refid="2150" relation="usage">
+          <edgelabel>amr_level</edgelabel>
+        </childnode>
+        <childnode refid="2152" relation="usage">
+          <edgelabel>datalogname</edgelabel>
+        </childnode>
+        <childnode refid="2154" relation="usage">
+          <edgelabel>datalog</edgelabel>
+        </childnode>
+        <childnode refid="2117" relation="usage">
+          <edgelabel>n_cycle</edgelabel>
+          <edgelabel>level_count</edgelabel>
+          <edgelabel>regrid_int</edgelabel>
+          <edgelabel>level_steps</edgelabel>
+        </childnode>
+        <childnode refid="2156" relation="usage">
+          <edgelabel>levelbld</edgelabel>
+        </childnode>
+        <childnode refid="2113" relation="usage">
+          <edgelabel>small_plot_file_root</edgelabel>
+          <edgelabel>initial_grids_file</edgelabel>
+          <edgelabel>check_file_root</edgelabel>
+          <edgelabel>regrid_grids_file</edgelabel>
+          <edgelabel>subcycling_mode</edgelabel>
+          <edgelabel>plot_file_root</edgelabel>
+          <edgelabel>restart_chkfile</edgelabel>
+          <edgelabel>probin_file</edgelabel>
+          <edgelabel>restart_pltfile</edgelabel>
+        </childnode>
+        <childnode refid="2141" relation="usage">
+          <edgelabel>regrid_ba</edgelabel>
+          <edgelabel>initial_ba</edgelabel>
+        </childnode>
+        <childnode refid="2157" relation="usage">
+          <edgelabel>gridlog</edgelabel>
+          <edgelabel>runlog</edgelabel>
+          <edgelabel>runlog_terse</edgelabel>
+        </childnode>
+        <childnode refid="2147" relation="usage">
+          <edgelabel>check_per</edgelabel>
+          <edgelabel>start_time</edgelabel>
+          <edgelabel>small_plot_per</edgelabel>
+          <edgelabel>cumtime</edgelabel>
+          <edgelabel>plot_per</edgelabel>
+          <edgelabel>loadbalance_max_fac</edgelabel>
+        </childnode>
+      </node>
+      <node id="2126">
+        <label>std::vector&lt; char *, std::allocator&lt; char * &gt; &gt;</label>
+      </node>
+      <node id="2107">
+        <label>amrex::Vector&lt; amrex::Vector&lt; amrex::FabArrayId &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2108" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2167">
+        <label>amrex::MultiFabCopyDescriptor</label>
+        <link refid="classamrex_1_1MultiFabCopyDescriptor"/>
+        <childnode refid="2168" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2149">
+        <label>std::vector&lt; Real, std::allocator&lt; Real &gt; &gt;</label>
+      </node>
+      <node id="2141">
+        <label>amrex::Vector&lt; amrex::BoxArray &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2142" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2125">
+        <label>amrex::Vector&lt; char * &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2126" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2127">
+        <label>amrex::FabArray&lt; FAB &gt;::ShMem</label>
+        <link refid="structamrex_1_1FabArray_1_1ShMem"/>
+      </node>
+      <node id="2133">
+        <label>amrex::Interpolater</label>
+        <link refid="classamrex_1_1Interpolater"/>
+      </node>
+      <node id="2140">
+        <label>std::vector&lt; amrex::DistributionMapping, std::allocator&lt; amrex::DistributionMapping &gt; &gt;</label>
+      </node>
+      <node id="2143">
+        <label>amrex::Vector&lt; amrex::IntVect &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2144" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2131">
+        <label>std::vector&lt; MPI_Request, std::allocator&lt; MPI_Request &gt; &gt;</label>
+      </node>
+      <node id="2154">
+        <label>amrex::Vector&lt; std::unique_ptr&lt; std::fstream &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2118">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="2123">
+        <label>amrex::BoxArray</label>
+        <link refid="classamrex_1_1BoxArray"/>
+        <childnode refid="2115" relation="usage">
+          <edgelabel>m_crse_ratio</edgelabel>
+        </childnode>
+        <childnode refid="2124" relation="usage">
+          <edgelabel>m_typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="2162">
+        <label>amrex::Vector&lt; amrex::StateData &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2163" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2160">
+        <label>amrex::RealBox</label>
+        <link refid="classamrex_1_1RealBox"/>
+        <childnode refid="2147" relation="usage">
+          <edgelabel>xhi</edgelabel>
+          <edgelabel>xlo</edgelabel>
+        </childnode>
+      </node>
+      <node id="2161">
+        <label>amrex::Box</label>
+        <link refid="classamrex_1_1Box"/>
+        <childnode refid="2115" relation="usage">
+          <edgelabel>bigend</edgelabel>
+          <edgelabel>smallend</edgelabel>
+        </childnode>
+        <childnode refid="2124" relation="usage">
+          <edgelabel>btype</edgelabel>
+        </childnode>
+      </node>
+      <node id="2157">
+        <label>ofstream</label>
+      </node>
+      <node id="2121">
+        <label>amrex::DistributionMapping::RefID</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1RefID"/>
+        <childnode refid="2122" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="2128">
+        <label>amrex::Vector&lt; MPI_Status &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2129" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2163">
+        <label>std::vector&lt; amrex::StateData, std::allocator&lt; amrex::StateData &gt; &gt;</label>
+      </node>
+      <node id="2159">
+        <label>amrex::CoordSys</label>
+        <link refid="classamrex_1_1CoordSys"/>
+        <childnode refid="2147" relation="usage">
+          <edgelabel>inv_dx</edgelabel>
+          <edgelabel>offset</edgelabel>
+          <edgelabel>dx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2168">
+        <label>amrex::FabArrayCopyDescriptor&lt; FArrayBox &gt;</label>
+        <link refid="classamrex_1_1FabArrayCopyDescriptor"/>
+      </node>
+      <node id="2124">
+        <label>amrex::IndexType</label>
+        <link refid="classamrex_1_1IndexType"/>
+      </node>
+      <node id="2165">
+        <label>amrex::Vector&lt; std::unique_ptr&lt; amrex::StateDescriptor &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2166" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2122">
+        <label>amrex::DistributionMapping::Ref</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1Ref"/>
+        <childnode refid="2117" relation="usage">
+          <edgelabel>m_index_array</edgelabel>
+          <edgelabel>m_pmap</edgelabel>
+        </childnode>
+      </node>
+      <node id="2152">
+        <label>amrex::Vector&lt; std::string &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2153" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2164">
+        <label>amrex::DescriptorList</label>
+        <link refid="classamrex_1_1DescriptorList"/>
+        <childnode refid="2165" relation="usage">
+          <edgelabel>desc</edgelabel>
+        </childnode>
+      </node>
+      <node id="2114">
+        <label>amrex::DistributionMapping</label>
+        <link refid="classamrex_1_1DistributionMapping"/>
+      </node>
+      <node id="2119">
+        <label>amrex::FabArrayBase::BDKey</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1BDKey"/>
+        <childnode refid="2120" relation="usage">
+          <edgelabel>m_ba_id</edgelabel>
+        </childnode>
+        <childnode refid="2121" relation="usage">
+          <edgelabel>m_dm_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="2144">
+        <label>std::vector&lt; amrex::IntVect, std::allocator&lt; amrex::IntVect &gt; &gt;</label>
+      </node>
+      <node id="2148">
+        <label>amrex::Vector&lt; Real &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2149" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2109">
+        <label>amrex::MultiFab</label>
+        <link refid="classamrex_1_1MultiFab"/>
+        <childnode refid="2110" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2158">
+        <label>amrex::Geometry</label>
+        <link refid="classamrex_1_1Geometry"/>
+        <childnode refid="2159" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2160" relation="usage">
+          <edgelabel>prob_domain</edgelabel>
+        </childnode>
+        <childnode refid="2161" relation="usage">
+          <edgelabel>domain</edgelabel>
+        </childnode>
+      </node>
+      <node id="2108">
+        <label>std::vector&lt; amrex::Vector&lt; amrex::FabArrayId &gt;, std::allocator&lt; amrex::Vector&lt; amrex::FabArrayId &gt; &gt; &gt;</label>
+      </node>
+      <node id="2145">
+        <label>amrex::Vector&lt; amrex::Geometry &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2146" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2110">
+        <label>amrex::FabArray&lt; FArrayBox &gt;</label>
+        <link refid="classamrex_1_1FabArray"/>
+        <childnode refid="2111" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2115" relation="usage">
+          <edgelabel>fb_nghost</edgelabel>
+        </childnode>
+        <childnode refid="2117" relation="usage">
+          <edgelabel>fb_recv_size</edgelabel>
+          <edgelabel>fb_recv_from</edgelabel>
+        </childnode>
+        <childnode refid="2125" relation="usage">
+          <edgelabel>fb_recv_data</edgelabel>
+          <edgelabel>fb_send_data</edgelabel>
+        </childnode>
+        <childnode refid="2127" relation="usage">
+          <edgelabel>shmem</edgelabel>
+        </childnode>
+        <childnode refid="2128" relation="usage">
+          <edgelabel>fb_recv_stat</edgelabel>
+        </childnode>
+        <childnode refid="2130" relation="usage">
+          <edgelabel>fb_send_reqs</edgelabel>
+          <edgelabel>fb_recv_reqs</edgelabel>
+        </childnode>
+        <childnode refid="2132" relation="usage">
+          <edgelabel>fb_period</edgelabel>
+        </childnode>
+      </node>
+      <node id="2138">
+        <label>amrex::AmrMesh</label>
+        <link refid="classamrex_1_1AmrMesh"/>
+        <childnode refid="2139" relation="usage">
+          <edgelabel>dmap</edgelabel>
+        </childnode>
+        <childnode refid="2117" relation="usage">
+          <edgelabel>n_error_buf</edgelabel>
+        </childnode>
+        <childnode refid="2141" relation="usage">
+          <edgelabel>grids</edgelabel>
+        </childnode>
+        <childnode refid="2143" relation="usage">
+          <edgelabel>blocking_factor</edgelabel>
+          <edgelabel>max_grid_size</edgelabel>
+          <edgelabel>ref_ratio</edgelabel>
+        </childnode>
+        <childnode refid="2145" relation="usage">
+          <edgelabel>geom</edgelabel>
+        </childnode>
+        <childnode refid="2147" relation="usage">
+          <edgelabel>grid_eff</edgelabel>
+        </childnode>
+      </node>
+      <node id="2120">
+        <label>amrex::BoxArray::RefID</label>
+        <link refid="structamrex_1_1BoxArray_1_1RefID"/>
+      </node>
+      <node id="2111">
+        <label>amrex::FabArrayBase</label>
+        <link refid="classamrex_1_1FabArrayBase"/>
+        <childnode refid="2112" relation="usage">
+          <edgelabel>m_FBC_stats</edgelabel>
+          <edgelabel>m_FPinfo_stats</edgelabel>
+          <edgelabel>m_CFinfo_stats</edgelabel>
+          <edgelabel>m_TAC_stats</edgelabel>
+          <edgelabel>m_CPC_stats</edgelabel>
+        </childnode>
+        <childnode refid="2114" relation="usage">
+          <edgelabel>distributionMap</edgelabel>
+        </childnode>
+        <childnode refid="2115" relation="usage">
+          <edgelabel>n_grow</edgelabel>
+          <edgelabel>comm_tile_size</edgelabel>
+          <edgelabel>mfiter_tile_size</edgelabel>
+          <edgelabel>mfghostiter_tile_size</edgelabel>
+        </childnode>
+        <childnode refid="2116" relation="usage">
+          <edgelabel>m_FA_stats</edgelabel>
+        </childnode>
+        <childnode refid="2117" relation="usage">
+          <edgelabel>indexArray</edgelabel>
+        </childnode>
+        <childnode refid="2119" relation="usage">
+          <edgelabel>m_bdkey</edgelabel>
+        </childnode>
+        <childnode refid="2123" relation="usage">
+          <edgelabel>boxarray</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" line="703" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_AmrLevel.H" bodystart="702" bodyend="757"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a9cf2d33e663f0311539a96633ff7560d" prot="public" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>fill</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a39d92a4048c0af0c7b1737d5c4e0c334" prot="public" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>FillPatchIterator</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a10439c4fa30c39a2f12ba939498ab887" prot="public" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>FillPatchIteratorHelper</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a89aee65d44395bf8969b6ec3da5bd5d1" prot="public" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>FillPatchIteratorHelper</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1ae4075b85a37079586a0717c6223de190" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>FillPatchIteratorHelper</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1aae84913534a102443b326a934fb332fc" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>FillPatchIteratorHelper</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1af634eccf2d0d201220687d5b8bfe50fd" prot="public" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>Initialize</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a5ca572ea2e2269cf1173bb0240f3c544" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_amrlevel</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1ae1577679bfb4ab104a875852a9dbecda" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_ba</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a1ed0eb57ec7521b07ea2918df59e5bbd" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_cbox</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a2df3ae174e52a21bb158cde96f9498a4" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_fbid</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a6c671b8216fcac05344ff477ff2eae56" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_fbox</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a629f8512e45e8f0109a740bfcb7ae412" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_FixUpCorners</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a86e3e6118853e3c7624e46167f7766f7" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_growsize</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1aa73689929eae42431f0f210d8bb28fee" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_index</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a560bc6de77dae8edbb3c9587eb53f03d" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_leveldata</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1af0e183d350296703e8deaebb9a88f81a" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_map</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1aaf087145837f2626f17e9e93b71ff985" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_mfcd</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1adaa101ebcbc10df6a2a761ea3fb3e78b" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_mfid</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1ac4b64e926d1d6763788ee539be3f5d3e" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_ncomp</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a77d378e6f4445b1b52d50e81d97c85fc" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_scomp</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1ac669cda0914a26ea86c2c118e10791dc" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>m_time</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1a1dea2e7280c98e94f9efd74d445f884e" prot="private" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1FillPatchIteratorHelper_1ab0e6743c4dbe5632040213a1c6616510" prot="public" virt="non-virtual"><scope>amrex::FillPatchIteratorHelper</scope><name>~FillPatchIteratorHelper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

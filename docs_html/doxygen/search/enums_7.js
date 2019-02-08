@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['ordering',['Ordering',['../classamrex_1_1_int_descriptor.html#a330214b8c0c3e224aecd2d2d95c0a839',1,'amrex::IntDescriptor::Ordering()'],['../classamrex_1_1_f_a_bio.html#adbdc54b2ed6a4fa2d0cfd19076e5cc39',1,'amrex::FABio::Ordering()']]]
+  ['intent',['Intent',['../classamrex_1_1ForkJoin.html#a3acf0d91b32d1d08dbe32046028f1466',1,'amrex::ForkJoin']]],
+  ['interface',['Interface',['../classamrex_1_1Hypre.html#af08fbb42b4509a32e7f20a6101dfd13f',1,'amrex::Hypre']]],
+  ['interpem_5ft',['InterpEM_t',['../namespaceamrex.html#a2f30e076962c1c148d279b63851d80df',1,'amrex']]]
 ];

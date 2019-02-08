@@ -1,0 +1,659 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1MLMGBndry" kind="class" language="C++" prot="public">
+    <compoundname>amrex::MLMGBndry</compoundname>
+    <basecompoundref refid="classamrex_1_1InterpBndryData" prot="public" virt="non-virtual">amrex::InterpBndryData</basecompoundref>
+    <includes refid="AMReX__MLMGBndry_8H" local="no">AMReX_MLMGBndry.H</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classamrex_1_1MLMGBndry_1a7987ee87e2e57e021adc5ead071808e4" prot="public" static="no">
+        <type><ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; <ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref>, 2 *<ref refid="AMReX__SPACE_8H_1af66ac7d7c04dad9fd54778fe5a4e816f" kindref="member">BL_SPACEDIM</ref> &gt;</type>
+        <definition>using amrex::MLMGBndry::BCTuple =  Array&lt;BoundCond,2*BL_SPACEDIM&gt;</definition>
+        <argsstring></argsstring>
+        <name>BCTuple</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="15" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1a8fe84be4cd2455b7786d06d7b1274c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MLMGBndry::MLMGBndry</definition>
+        <argsstring>(const BoxArray &amp;_grids, const DistributionMapping &amp;_dmap, int _ncomp, const Geometry &amp;_geom)</argsstring>
+        <name>MLMGBndry</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>_grids</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>_dmap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_ncomp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>_geom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="17" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1a7a9f443e5f333ab543149f2036880e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>amrex::MLMGBndry::~MLMGBndry</definition>
+        <argsstring>() override</argsstring>
+        <name>~MLMGBndry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="22" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1a25293b479f35c3e76661aa9ac6833d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MLMGBndry::MLMGBndry</definition>
+        <argsstring>(MLMGBndry &amp;&amp;rhs)=delete</argsstring>
+        <name>MLMGBndry</name>
+        <param>
+          <type><ref refid="classamrex_1_1MLMGBndry" kindref="compound">MLMGBndry</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1aa3d8c964cb965c1870744aea5d2b8d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MLMGBndry::MLMGBndry</definition>
+        <argsstring>(const MLMGBndry &amp;rhs)=delete</argsstring>
+        <name>MLMGBndry</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1MLMGBndry" kindref="compound">MLMGBndry</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1ad0563f74b1cce4dca6484ce6d27b4ae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1MLMGBndry" kindref="compound">MLMGBndry</ref> &amp;</type>
+        <definition>MLMGBndry&amp; amrex::MLMGBndry::operator=</definition>
+        <argsstring>(const MLMGBndry &amp;rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1MLMGBndry" kindref="compound">MLMGBndry</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1a238168f5e306bb894cdf2a161a0cafef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1MLMGBndry" kindref="compound">MLMGBndry</ref> &amp;</type>
+        <definition>MLMGBndry&amp; amrex::MLMGBndry::operator=</definition>
+        <argsstring>(MLMGBndry &amp;&amp;rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classamrex_1_1MLMGBndry" kindref="compound">MLMGBndry</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1ab275e73cd469ae75b78c9d2cfb6ec4df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMGBndry::setLOBndryConds</definition>
+        <argsstring>(const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;lo, const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;hi, int ratio, const RealVect &amp;a_loc)</argsstring>
+        <name>setLOBndryConds</name>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ratio</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1RealVect" kindref="compound">RealVect</ref> &amp;</type>
+          <declname>a_loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="29" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="16" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1a073ddf59071d13b75e388c4d9992b7ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MLMGBndry::setBoxBC</definition>
+        <argsstring>(RealTuple &amp;bloc, BCTuple &amp;bctag, const Box &amp;bx, const Box &amp;domain, const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;lo, const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;hi, const Real *dx, int ratio, const RealVect &amp;a_loc)</argsstring>
+        <name>setBoxBC</name>
+        <param>
+          <type><ref refid="classamrex_1_1BndryData_1a7d818a2a4471876ea96580404b662b0f" kindref="member">RealTuple</ref> &amp;</type>
+          <declname>bloc</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1MLMGBndry_1a7987ee87e2e57e021adc5ead071808e4" kindref="member">BCTuple</ref> &amp;</type>
+          <declname>bctag</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>bx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>domain</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ratio</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1RealVect" kindref="compound">RealVect</ref> &amp;</type>
+          <declname>a_loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="33" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="45" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4019">
+        <label>amrex::BndryData</label>
+        <link refid="classamrex_1_1BndryData"/>
+        <childnode refid="4020" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4018">
+        <label>amrex::InterpBndryData</label>
+        <link refid="classamrex_1_1InterpBndryData"/>
+        <childnode refid="4019" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4017">
+        <label>amrex::MLMGBndry</label>
+        <link refid="classamrex_1_1MLMGBndry"/>
+        <childnode refid="4018" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4020">
+        <label>amrex::BndryRegister</label>
+        <link refid="classamrex_1_1BndryRegister"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4046">
+        <label>std::vector&lt; MPI_Status, std::allocator&lt; MPI_Status &gt; &gt;</label>
+      </node>
+      <node id="4029">
+        <label>amrex::FabArrayBase::CacheStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1CacheStats"/>
+        <childnode refid="4030" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4033">
+        <label>amrex::FabArrayBase::FabArrayStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
+      </node>
+      <node id="4032">
+        <label>amrex::IntVect</label>
+        <link refid="classamrex_1_1IntVect"/>
+        <childnode refid="4032" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="4060">
+        <label>amrex::LayoutData&lt; amrex::Vector&lt; amrex::Vector&lt; amrex::BoundCond &gt; &gt; &gt;</label>
+        <link refid="classamrex_1_1LayoutData"/>
+        <childnode refid="4028" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>m_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="4052">
+        <label>Real</label>
+      </node>
+      <node id="4047">
+        <label>amrex::Vector&lt; MPI_Request &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4048" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4023">
+        <label>amrex::BndryData</label>
+        <link refid="classamrex_1_1BndryData"/>
+        <childnode refid="4024" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4050" relation="usage">
+          <edgelabel>geom</edgelabel>
+        </childnode>
+        <childnode refid="4055" relation="usage">
+          <edgelabel>bcloc</edgelabel>
+        </childnode>
+        <childnode refid="4058" relation="usage">
+          <edgelabel>masks</edgelabel>
+        </childnode>
+        <childnode refid="4060" relation="usage">
+          <edgelabel>bcond</edgelabel>
+        </childnode>
+      </node>
+      <node id="4034">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4035" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4030">
+        <label>string</label>
+      </node>
+      <node id="4049">
+        <label>amrex::Periodicity</label>
+        <link refid="classamrex_1_1Periodicity"/>
+        <childnode refid="4032" relation="usage">
+          <edgelabel>period</edgelabel>
+        </childnode>
+      </node>
+      <node id="4043">
+        <label>std::vector&lt; char *, std::allocator&lt; char * &gt; &gt;</label>
+      </node>
+      <node id="4059">
+        <label>std::vector&lt; amrex::MultiMask, std::allocator&lt; amrex::MultiMask &gt; &gt;</label>
+      </node>
+      <node id="4042">
+        <label>amrex::Vector&lt; char * &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4043" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4062">
+        <label>std::vector&lt; amrex::Vector&lt; amrex::Vector&lt; amrex::BoundCond &gt; &gt;, std::allocator&lt; amrex::Vector&lt; amrex::Vector&lt; amrex::BoundCond &gt; &gt; &gt; &gt;</label>
+      </node>
+      <node id="4044">
+        <label>amrex::FabArray&lt; FAB &gt;::ShMem</label>
+        <link refid="structamrex_1_1FabArray_1_1ShMem"/>
+      </node>
+      <node id="4058">
+        <label>amrex::Vector&lt; amrex::MultiMask &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4059" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4048">
+        <label>std::vector&lt; MPI_Request, std::allocator&lt; MPI_Request &gt; &gt;</label>
+      </node>
+      <node id="4035">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="4040">
+        <label>amrex::BoxArray</label>
+        <link refid="classamrex_1_1BoxArray"/>
+        <childnode refid="4032" relation="usage">
+          <edgelabel>m_crse_ratio</edgelabel>
+        </childnode>
+        <childnode refid="4041" relation="usage">
+          <edgelabel>m_typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="4053">
+        <label>amrex::RealBox</label>
+        <link refid="classamrex_1_1RealBox"/>
+        <childnode refid="4052" relation="usage">
+          <edgelabel>xhi</edgelabel>
+          <edgelabel>xlo</edgelabel>
+        </childnode>
+      </node>
+      <node id="4022">
+        <label>amrex::InterpBndryData</label>
+        <link refid="classamrex_1_1InterpBndryData"/>
+        <childnode refid="4023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4061">
+        <label>amrex::Vector&lt; amrex::Vector&lt; amrex::Vector&lt; amrex::BoundCond &gt; &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4062" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4054">
+        <label>amrex::Box</label>
+        <link refid="classamrex_1_1Box"/>
+        <childnode refid="4032" relation="usage">
+          <edgelabel>bigend</edgelabel>
+          <edgelabel>smallend</edgelabel>
+        </childnode>
+        <childnode refid="4041" relation="usage">
+          <edgelabel>btype</edgelabel>
+        </childnode>
+      </node>
+      <node id="4038">
+        <label>amrex::DistributionMapping::RefID</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1RefID"/>
+        <childnode refid="4039" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="4045">
+        <label>amrex::Vector&lt; MPI_Status &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4046" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4021">
+        <label>amrex::MLMGBndry</label>
+        <link refid="classamrex_1_1MLMGBndry"/>
+        <childnode refid="4022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4051">
+        <label>amrex::CoordSys</label>
+        <link refid="classamrex_1_1CoordSys"/>
+        <childnode refid="4052" relation="usage">
+          <edgelabel>inv_dx</edgelabel>
+          <edgelabel>offset</edgelabel>
+          <edgelabel>dx</edgelabel>
+        </childnode>
+      </node>
+      <node id="4041">
+        <label>amrex::IndexType</label>
+        <link refid="classamrex_1_1IndexType"/>
+      </node>
+      <node id="4039">
+        <label>amrex::DistributionMapping::Ref</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1Ref"/>
+        <childnode refid="4034" relation="usage">
+          <edgelabel>m_index_array</edgelabel>
+          <edgelabel>m_pmap</edgelabel>
+        </childnode>
+      </node>
+      <node id="4025">
+        <label>amrex::FabSet</label>
+        <link refid="classamrex_1_1FabSet"/>
+        <childnode refid="4026" relation="usage">
+          <edgelabel>m_mf</edgelabel>
+        </childnode>
+      </node>
+      <node id="4031">
+        <label>amrex::DistributionMapping</label>
+        <link refid="classamrex_1_1DistributionMapping"/>
+      </node>
+      <node id="4036">
+        <label>amrex::FabArrayBase::BDKey</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1BDKey"/>
+        <childnode refid="4037" relation="usage">
+          <edgelabel>m_ba_id</edgelabel>
+        </childnode>
+        <childnode refid="4038" relation="usage">
+          <edgelabel>m_dm_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="4026">
+        <label>amrex::MultiFab</label>
+        <link refid="classamrex_1_1MultiFab"/>
+        <childnode refid="4027" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4024">
+        <label>amrex::BndryRegister</label>
+        <link refid="classamrex_1_1BndryRegister"/>
+        <childnode refid="4025" relation="usage">
+          <edgelabel>bndry</edgelabel>
+        </childnode>
+        <childnode refid="4040" relation="usage">
+          <edgelabel>grids</edgelabel>
+        </childnode>
+      </node>
+      <node id="4050">
+        <label>amrex::Geometry</label>
+        <link refid="classamrex_1_1Geometry"/>
+        <childnode refid="4051" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4053" relation="usage">
+          <edgelabel>prob_domain</edgelabel>
+        </childnode>
+        <childnode refid="4054" relation="usage">
+          <edgelabel>domain</edgelabel>
+        </childnode>
+      </node>
+      <node id="4057">
+        <label>std::vector&lt; RealTuple, std::allocator&lt; RealTuple &gt; &gt;</label>
+      </node>
+      <node id="4055">
+        <label>amrex::LayoutData&lt; RealTuple &gt;</label>
+        <link refid="classamrex_1_1LayoutData"/>
+        <childnode refid="4028" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4056" relation="usage">
+          <edgelabel>m_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="4056">
+        <label>amrex::Vector&lt; RealTuple &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="4057" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4027">
+        <label>amrex::FabArray&lt; FArrayBox &gt;</label>
+        <link refid="classamrex_1_1FabArray"/>
+        <childnode refid="4028" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4032" relation="usage">
+          <edgelabel>fb_nghost</edgelabel>
+        </childnode>
+        <childnode refid="4034" relation="usage">
+          <edgelabel>fb_recv_size</edgelabel>
+          <edgelabel>fb_recv_from</edgelabel>
+        </childnode>
+        <childnode refid="4042" relation="usage">
+          <edgelabel>fb_recv_data</edgelabel>
+          <edgelabel>fb_send_data</edgelabel>
+        </childnode>
+        <childnode refid="4044" relation="usage">
+          <edgelabel>shmem</edgelabel>
+        </childnode>
+        <childnode refid="4045" relation="usage">
+          <edgelabel>fb_recv_stat</edgelabel>
+        </childnode>
+        <childnode refid="4047" relation="usage">
+          <edgelabel>fb_send_reqs</edgelabel>
+          <edgelabel>fb_recv_reqs</edgelabel>
+        </childnode>
+        <childnode refid="4049" relation="usage">
+          <edgelabel>fb_period</edgelabel>
+        </childnode>
+      </node>
+      <node id="4037">
+        <label>amrex::BoxArray::RefID</label>
+        <link refid="structamrex_1_1BoxArray_1_1RefID"/>
+      </node>
+      <node id="4028">
+        <label>amrex::FabArrayBase</label>
+        <link refid="classamrex_1_1FabArrayBase"/>
+        <childnode refid="4029" relation="usage">
+          <edgelabel>m_FBC_stats</edgelabel>
+          <edgelabel>m_FPinfo_stats</edgelabel>
+          <edgelabel>m_CFinfo_stats</edgelabel>
+          <edgelabel>m_TAC_stats</edgelabel>
+          <edgelabel>m_CPC_stats</edgelabel>
+        </childnode>
+        <childnode refid="4031" relation="usage">
+          <edgelabel>distributionMap</edgelabel>
+        </childnode>
+        <childnode refid="4032" relation="usage">
+          <edgelabel>n_grow</edgelabel>
+          <edgelabel>comm_tile_size</edgelabel>
+          <edgelabel>mfiter_tile_size</edgelabel>
+          <edgelabel>mfghostiter_tile_size</edgelabel>
+        </childnode>
+        <childnode refid="4033" relation="usage">
+          <edgelabel>m_FA_stats</edgelabel>
+        </childnode>
+        <childnode refid="4034" relation="usage">
+          <edgelabel>indexArray</edgelabel>
+        </childnode>
+        <childnode refid="4036" relation="usage">
+          <edgelabel>m_bdkey</edgelabel>
+        </childnode>
+        <childnode refid="4040" relation="usage">
+          <edgelabel>boxarray</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" bodystart="9" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1BndryData_1a30e8975eaca9018ee72a0f5e9600e590" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bcloc</name></member>
+      <member refid="classamrex_1_1BndryData_1a33b33d468118587f694c916018b3f3fb" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bcond</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1a7987ee87e2e57e021adc5ead071808e4" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BCTuple</name></member>
+      <member refid="classamrex_1_1BndryRegister_1adb20e61942a04f1783a0e82598583bc9" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bndry</name></member>
+      <member refid="classamrex_1_1BndryData_1ab8a5406d852c7de4c05ac02bdd0a77f1" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bndryConds</name></member>
+      <member refid="classamrex_1_1BndryData_1a3abec41878582e8a35c02e2af899f825" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bndryConds</name></member>
+      <member refid="classamrex_1_1BndryData_1ab457b09149421e355517818948f919da" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryData</name></member>
+      <member refid="classamrex_1_1BndryData_1a1d889161b75f5cb49d91b6da56c3596b" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryData</name></member>
+      <member refid="classamrex_1_1BndryData_1af682ca27d245a4002c2e8f47b7c96ec3" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryData</name></member>
+      <member refid="classamrex_1_1BndryData_1a0ce8e12e17b925619b9792d6469e1904" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryData</name></member>
+      <member refid="classamrex_1_1BndryData_1a3364806eade7e8c543c3aa8e981ef647" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bndryLocs</name></member>
+      <member refid="classamrex_1_1BndryData_1a398c0bfbfc75054e4ed928f2d471f01f" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bndryLocs</name></member>
+      <member refid="classamrex_1_1BndryData_1aa8c20bd9fc86c683f4fd30ea35fc36b8" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bndryMasks</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a2e0643f95fc9ab16d35be25248dd600c" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryRegister</name></member>
+      <member refid="classamrex_1_1BndryRegister_1aecf2bfb5d33fc73dc7fff1da73df6cb3" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryRegister</name></member>
+      <member refid="classamrex_1_1BndryRegister_1ada2a8c68444266b0a43501e0bbbfb187" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryRegister</name></member>
+      <member refid="classamrex_1_1BndryRegister_1ae816eecbaf5ba41568607d00441d3420" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryRegister</name></member>
+      <member refid="classamrex_1_1BndryData_1a1dda85c44389cab72395c792b0386896" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bndryValues</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a2dd6a9486577bf514eb29818eee5cb21" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>BndryValuesDoIt</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a481cc8f63d2903492d64ddd2d1733b41" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>boxes</name></member>
+      <member refid="classamrex_1_1BndryRegister_1acb41d395fa564b8c3c9d46327920d239" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>clear</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a361e5f4f34fe99325481f704c661c2ed" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>Copy</name></member>
+      <member refid="classamrex_1_1BndryRegister_1af9a7b006622b33878423e6be4fd7fcc3" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>copyFrom</name></member>
+      <member refid="classamrex_1_1BndryData_1a4d31afbfcfb31a6229877bb9ad880fb9a843d5274aec429fe8bea1719d6162727" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>covered</name></member>
+      <member refid="classamrex_1_1BndryData_1a3457a4bb428e2f1478f95e76fd15a9df" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>define</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a7ac16569b9b981389bb8a08a6d99e89e" prot="public" virt="non-virtual" ambiguityscope="amrex::BndryRegister::"><scope>amrex::MLMGBndry</scope><name>define</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a50339ee95902a57f40f9251322cbd143" prot="public" virt="non-virtual" ambiguityscope="amrex::BndryRegister::"><scope>amrex::MLMGBndry</scope><name>define</name></member>
+      <member refid="classamrex_1_1BndryRegister_1ad71f22436e694026955933b99acb0967" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>DistributionMap</name></member>
+      <member refid="classamrex_1_1BndryData_1a2aee61504e5cdef7ac8af1986bff5c6c" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>geom</name></member>
+      <member refid="classamrex_1_1BndryData_1ac482be6820a4120131b022012a86ef72" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>getDomain</name></member>
+      <member refid="classamrex_1_1BndryData_1adce6abb674ff8e274d9a42b296a28b90" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>getGeom</name></member>
+      <member refid="classamrex_1_1BndryRegister_1ae15db9f8fcfd9583ae5907d4cf69eeb9" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>grids</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a3c37f7ae3bebb39f7fac821540e10227" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>IBD_max_order_DEF</name></member>
+      <member refid="classamrex_1_1BndryData_1a86d75e0d19f16438072188201b4e6dea" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>init</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a02832dac3fe498a4a60c84024d2fa2ad" prot="public" virt="non-virtual" ambiguityscope="amrex::BndryRegister::"><scope>amrex::MLMGBndry</scope><name>init</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a4ebe1cee4ef46fae4fb6d53219e10dc6" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>InterpBndryData</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1aacdd08122e12fb3d39a4102127cbf2ac" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>InterpBndryData</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1ab2cb364c5c9b8f308e807ac22cd64460" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>InterpBndryData</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1aaf5621e5b48610f485a220c581374dea" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>InterpBndryData</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a081060fb3475eb5b2a2b5a620ca98bcb" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>linComb</name></member>
+      <member refid="classamrex_1_1BndryData_1a93c9313da3c49504432d4eefb95fab98" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>m_defined</name></member>
+      <member refid="classamrex_1_1BndryData_1a407bf2d353db9c58b6205a43b2d500bd" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>m_ncomp</name></member>
+      <member refid="classamrex_1_1BndryData_1af590a7b776cc9ccee49e607a3e84671d" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>masks</name></member>
+      <member refid="classamrex_1_1BndryData_1a4d31afbfcfb31a6229877bb9ad880fb9" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>MaskVal</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1ac44f35418adba2d5b16a824b57ebeb37" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>maxOrderDEF</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1a8fe84be4cd2455b7786d06d7b1274c4c" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>MLMGBndry</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1a25293b479f35c3e76661aa9ac6833d61" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>MLMGBndry</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1aa3d8c964cb965c1870744aea5d2b8d61" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>MLMGBndry</name></member>
+      <member refid="classamrex_1_1BndryData_1a6c88764e5e9b1ba6b1b07645b11a211c" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>nComp</name></member>
+      <member refid="classamrex_1_1BndryData_1a4d31afbfcfb31a6229877bb9ad880fb9a54f598ca1ea830b90bd86719dd843014" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>not_covered</name></member>
+      <member refid="classamrex_1_1BndryData_1a4d31afbfcfb31a6229877bb9ad880fb9a22450c0e6f732b3f87827b12e1b20aa5" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>NumMaskVals</name></member>
+      <member refid="classamrex_1_1BndryRegister_1ad0674b001bc3b0a4b75d1029e94312c2" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>operator+=</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1ad0563f74b1cce4dca6484ce6d27b4ae2" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1a238168f5e306bb894cdf2a161a0cafef" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1ad0d8f84e27d334aaccb3d207e438edbf" prot="public" virt="non-virtual" ambiguityscope="amrex::InterpBndryData::"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a9e3a19f47c44b99ca92c3042a730c160" prot="public" virt="non-virtual" ambiguityscope="amrex::InterpBndryData::"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BndryData_1a7a048ebe06e3f4bd0eda04267d099526" prot="public" virt="non-virtual" ambiguityscope="amrex::BndryData::"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BndryData_1a91c68a0f4629147dee1b0d6a9105ce91" prot="public" virt="non-virtual" ambiguityscope="amrex::BndryData::"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BndryRegister_1aca9e7d7c7f5c551ed60dde97cab4cc76" prot="public" virt="non-virtual" ambiguityscope="amrex::BndryRegister::"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a09b5da018d193a820c808b1f2cab5095" prot="public" virt="non-virtual" ambiguityscope="amrex::BndryRegister::"><scope>amrex::MLMGBndry</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1BndryData_1ad2dad66809918e892ccbf90dd509d311" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1BndryData_1afbf3c10d53c95653c44daded3342135e" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1BndryData_1a4d31afbfcfb31a6229877bb9ad880fb9aa3c78d810a253d1eace3c04595537ff1" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>outside_domain</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a1fbfbedbc701bb9f20fa7487bff20bdf" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>plus</name></member>
+      <member refid="classamrex_1_1BndryRegister_1ab19d96f57df527f106a7f53c2590b65a" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>plusFrom</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a4cb1af64eb4645b6e6398c1839ecabe7" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>read</name></member>
+      <member refid="classamrex_1_1BndryData_1a7d818a2a4471876ea96580404b662b0f" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>RealTuple</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a4dd747e3d5e6b38f92d23d9bae511bbd" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>setBndryConds</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a834b29613637b7aedd5ada18b7e33080" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>setBndryConds</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1aed3688b851edabbdefbcbe81c5f51b21" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>setBndryValues</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a2cd3291710fa05174dedeae1237696fa" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>setBndryValues</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a7059969ab7be0a1abf225299f0096563" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>setBndryValues</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1ab141baee1bcdc61e9f49d5c4114a7a01" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>setBndryValues</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a8883417c1aab8d1739c01f17ad19893f" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>setBndryValues</name></member>
+      <member refid="classamrex_1_1BndryData_1af443b0b57b946e734d3cb66f04fd9239" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoundCond</name></member>
+      <member refid="classamrex_1_1BndryData_1a456d0cb35f180f411b8d150e28f91f09" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoundCond</name></member>
+      <member refid="classamrex_1_1BndryData_1a44e524e3b30a1da2ffb58bfc0088b63a" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoundLoc</name></member>
+      <member refid="classamrex_1_1BndryData_1a033f43a569cff309d92a6b500a5dc28d" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoundLoc</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1a073ddf59071d13b75e388c4d9992b7ec" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoxBC</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a4da05261825b0d26b246bf5c5b5fb586" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoxes</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a93b74ec9e39f3c4ad998f20e4ed1e8ee" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setHomogValues</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1ab275e73cd469ae75b78c9d2cfb6ec4df" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setLOBndryConds</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a8a45cb99b2e11388c149bf277120fbc9" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setVal</name></member>
+      <member refid="classamrex_1_1BndryData_1a61edf10b80242729e8aa3e6978a8606e" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setValue</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a1d90d4d170241cd5fba0ff90640bb163" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>size</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1a6801628a380e0cec5714dd9e5fe8621b" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>updateBndryValues</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1af1f588505ed7575ed35fcfddfaeb5bfc" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>updateBndryValues</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a72d84522ffa27cd1d702aaeeccd1a585" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>write</name></member>
+      <member refid="classamrex_1_1BndryData_1ad6ebc5a788a82c41a8b1bffc8e589440" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>~BndryData</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a3607c6a07e3dd764daaf2cb5301f1a59" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>~BndryRegister</name></member>
+      <member refid="classamrex_1_1InterpBndryData_1aba3d2785516360221c4a05c8fa56cc68" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>~InterpBndryData</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1a7a9f443e5f333ab543149f2036880e80" prot="public" virt="virtual"><scope>amrex::MLMGBndry</scope><name>~MLMGBndry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

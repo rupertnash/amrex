@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kdtree',['KDTree',['../classamrex_1_1_k_d_tree.html',1,'amrex']]]
+  ['kdnode',['KDNode',['../structamrex_1_1KDTree_1_1KDNode.html',1,'amrex::KDTree']]],
+  ['kdtree',['KDTree',['../classamrex_1_1KDTree.html',1,'amrex']]]
 ];

@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['range_5fimpl',['range_impl',['../structamrex_1_1_cuda_1_1range__detail_1_1range__impl.html',1,'amrex::Cuda::range_detail']]],
-  ['realbox',['RealBox',['../classamrex_1_1_real_box.html',1,'amrex']]],
-  ['realdescriptor',['RealDescriptor',['../classamrex_1_1_real_descriptor.html',1,'amrex']]],
-  ['realvect',['RealVect',['../classamrex_1_1_real_vect.html',1,'amrex']]],
-  ['record',['Record',['../classamrex_1_1_parm_parse_1_1_record.html',1,'amrex::ParmParse']]],
-  ['refid',['RefID',['../structamrex_1_1_distribution_mapping_1_1_ref_i_d.html',1,'amrex::DistributionMapping']]],
-  ['refid',['RefID',['../structamrex_1_1_box_array_1_1_ref_i_d.html',1,'amrex::BoxArray']]],
-  ['rm_5ft',['rm_t',['../unionamrex_1_1_particle_1_1rm__t.html',1,'amrex::Particle']]],
-  ['rotationif',['RotationIF',['../classamrex_1_1_e_b2_1_1_rotation_i_f.html',1,'amrex::EB2']]]
+  ['range_5fimpl',['range_impl',['../structamrex_1_1Cuda_1_1range__detail_1_1range__impl.html',1,'amrex::Cuda::range_detail']]],
+  ['realbox',['RealBox',['../classamrex_1_1RealBox.html',1,'amrex']]],
+  ['realdescriptor',['RealDescriptor',['../classamrex_1_1RealDescriptor.html',1,'amrex']]],
+  ['realvect',['RealVect',['../classamrex_1_1RealVect.html',1,'amrex']]],
+  ['rebind',['rebind',['../structhacc_1_1AlignedAllocator_1_1rebind.html',1,'hacc::AlignedAllocator']]],
+  ['record',['Record',['../classamrex_1_1ParmParse_1_1Record.html',1,'amrex::ParmParse']]],
+  ['reductionentry',['ReductionEntry',['../structCommProfStats_1_1ReductionEntry.html',1,'CommProfStats']]],
+  ['ref',['Ref',['../structamrex_1_1DistributionMapping_1_1Ref.html',1,'amrex::DistributionMapping']]],
+  ['refid',['RefID',['../structamrex_1_1BoxArray_1_1RefID.html',1,'amrex::BoxArray']]],
+  ['refid',['RefID',['../structamrex_1_1DistributionMapping_1_1RefID.html',1,'amrex::DistributionMapping']]],
+  ['regionsprofstats',['RegionsProfStats',['../classRegionsProfStats.html',1,'']]],
+  ['rm_5ft',['rm_t',['../unionamrex_1_1Particle_1_1rm__t.html',1,'amrex::Particle']]],
+  ['rotationif',['RotationIF',['../classamrex_1_1EB2_1_1RotationIF.html',1,'amrex::EB2']]]
 ];

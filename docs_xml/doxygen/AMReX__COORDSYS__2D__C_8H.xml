@@ -1,0 +1,1021 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="AMReX__COORDSYS__2D__C_8H" kind="file" language="C++">
+    <compoundname>AMReX_COORDSYS_2D_C.H</compoundname>
+    <includes refid="AMReX__Gpu_8H" local="no">AMReX_Gpu.H</includes>
+    <includes refid="AMReX__Array_8H" local="no">AMReX_Array.H</includes>
+    <includes refid="AMReX__FArrayBox_8H" local="no">AMReX_FArrayBox.H</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="11271">
+        <label>AMReX_ParallelContext.H</label>
+        <link refid="AMReX__ParallelContext_8H"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11272" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+        <childnode refid="11238" relation="include">
+        </childnode>
+      </node>
+      <node id="11287">
+        <label>iomanip</label>
+      </node>
+      <node id="11241">
+        <label>functional</label>
+      </node>
+      <node id="11266">
+        <label>AMReX_BoxArray.H</label>
+        <link refid="AMReX__BoxArray_8H"/>
+        <childnode refid="11228" relation="include">
+        </childnode>
+        <childnode refid="11265" relation="include">
+        </childnode>
+        <childnode refid="11230" relation="include">
+        </childnode>
+        <childnode refid="11267" relation="include">
+        </childnode>
+        <childnode refid="11260" relation="include">
+        </childnode>
+        <childnode refid="11268" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+      </node>
+      <node id="11298">
+        <label>AMReX_BoxIterator.H</label>
+        <link refid="AMReX__BoxIterator_8H"/>
+        <childnode refid="11227" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11256" relation="include">
+        </childnode>
+      </node>
+      <node id="11258">
+        <label>limits</label>
+      </node>
+      <node id="11278">
+        <label>AMReX_BLProfiler.H</label>
+        <link refid="AMReX__BLProfiler_8H"/>
+        <childnode refid="11229" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+      </node>
+      <node id="11284">
+        <label>AMReX_CudaReduce.H</label>
+        <link refid="AMReX__CudaReduce_8H"/>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11226" relation="include">
+        </childnode>
+      </node>
+      <node id="11288">
+        <label>AMReX_CudaContainers.H</label>
+        <link refid="AMReX__CudaContainers_8H"/>
+        <childnode refid="11250" relation="include">
+        </childnode>
+        <childnode refid="11285" relation="include">
+        </childnode>
+      </node>
+      <node id="11253">
+        <label>AMReX_Box.H</label>
+        <link refid="AMReX__Box_8H"/>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11246" relation="include">
+        </childnode>
+        <childnode refid="11255" relation="include">
+        </childnode>
+        <childnode refid="11238" relation="include">
+        </childnode>
+        <childnode refid="11256" relation="include">
+        </childnode>
+        <childnode refid="11260" relation="include">
+        </childnode>
+        <childnode refid="11261" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+        <childnode refid="11262" relation="include">
+        </childnode>
+      </node>
+      <node id="11269">
+        <label>AMReX_DistributionMapping.H</label>
+        <link refid="AMReX__DistributionMapping_8H"/>
+        <childnode refid="11230" relation="include">
+        </childnode>
+        <childnode refid="11258" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11265" relation="include">
+        </childnode>
+        <childnode refid="11237" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11270" relation="include">
+        </childnode>
+      </node>
+      <node id="11256">
+        <label>AMReX_IntVect.H</label>
+        <link refid="AMReX__IntVect_8H"/>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11227" relation="include">
+        </childnode>
+        <childnode refid="11257" relation="include">
+        </childnode>
+        <childnode refid="11258" relation="include">
+        </childnode>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11251" relation="include">
+        </childnode>
+        <childnode refid="11238" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11221" relation="include">
+        </childnode>
+      </node>
+      <node id="11237">
+        <label>AMReX.H</label>
+        <link refid="AMReX_8H"/>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11238" relation="include">
+        </childnode>
+        <childnode refid="11239" relation="include">
+        </childnode>
+        <childnode refid="11228" relation="include">
+        </childnode>
+        <childnode refid="11241" relation="include">
+        </childnode>
+        <childnode refid="11229" relation="include">
+        </childnode>
+        <childnode refid="11242" relation="include">
+        </childnode>
+      </node>
+      <node id="11299">
+        <label>AMReX_MakeType.H</label>
+        <link refid="AMReX__MakeType_8H"/>
+      </node>
+      <node id="11225">
+        <label>AMReX_GpuError.H</label>
+        <link refid="AMReX__GpuError_8H"/>
+        <childnode refid="11226" relation="include">
+        </childnode>
+        <childnode refid="11229" relation="include">
+        </childnode>
+      </node>
+      <node id="11250">
+        <label>AMReX_Vector.H</label>
+        <link refid="AMReX__Vector_8H"/>
+        <childnode refid="11251" relation="include">
+        </childnode>
+        <childnode refid="11252" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+      </node>
+      <node id="11286">
+        <label>AMReX_Print.H</label>
+        <link refid="AMReX__Print_8H"/>
+        <childnode refid="11275" relation="include">
+        </childnode>
+        <childnode refid="11272" relation="include">
+        </childnode>
+        <childnode refid="11287" relation="include">
+        </childnode>
+        <childnode refid="11237" relation="include">
+        </childnode>
+        <childnode refid="11271" relation="include">
+        </childnode>
+        <childnode refid="11270" relation="include">
+        </childnode>
+      </node>
+      <node id="11257">
+        <label>cmath</label>
+      </node>
+      <node id="11290">
+        <label>AMReX_CudaAsyncArray.H</label>
+        <link refid="AMReX__CudaAsyncArray_8H"/>
+        <childnode refid="11265" relation="include">
+        </childnode>
+        <childnode refid="11291" relation="include">
+        </childnode>
+        <childnode refid="11227" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11264" relation="include">
+        </childnode>
+        <childnode refid="11263" relation="include">
+        </childnode>
+        <childnode refid="11282" relation="include">
+        </childnode>
+      </node>
+      <node id="11240">
+        <label>stdexcept</label>
+      </node>
+      <node id="11280">
+        <label>numeric</label>
+      </node>
+      <node id="11268">
+        <label>AMReX_BoxList.H</label>
+        <link refid="AMReX__BoxList_8H"/>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11256" relation="include">
+        </childnode>
+        <childnode refid="11260" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+      </node>
+      <node id="11293">
+        <label>AMReX_BaseFab.H</label>
+        <link refid="AMReX__BaseFab_8H"/>
+        <childnode refid="11257" relation="include">
+        </childnode>
+        <childnode refid="11227" relation="include">
+        </childnode>
+        <childnode refid="11251" relation="include">
+        </childnode>
+        <childnode refid="11258" relation="include">
+        </childnode>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11246" relation="include">
+        </childnode>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11268" relation="include">
+        </childnode>
+        <childnode refid="11294" relation="include">
+        </childnode>
+        <childnode refid="11295" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11278" relation="include">
+        </childnode>
+        <childnode refid="11298" relation="include">
+        </childnode>
+        <childnode refid="11299" relation="include">
+        </childnode>
+        <childnode refid="11220" relation="include">
+        </childnode>
+      </node>
+      <node id="11229">
+        <label>string</label>
+      </node>
+      <node id="11285">
+        <label>AMReX_CudaAllocators.H</label>
+        <link refid="AMReX__CudaAllocators_8H"/>
+        <childnode refid="11230" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11258" relation="include">
+        </childnode>
+        <childnode refid="11286" relation="include">
+        </childnode>
+        <childnode refid="11264" relation="include">
+        </childnode>
+        <childnode refid="11282" relation="include">
+        </childnode>
+      </node>
+      <node id="11230">
+        <label>map</label>
+      </node>
+      <node id="11272">
+        <label>fstream</label>
+      </node>
+      <node id="11255">
+        <label>AMReX_ArrayLim.H</label>
+        <link refid="AMReX__ArrayLim_8H"/>
+        <childnode refid="11243" relation="include">
+        </childnode>
+      </node>
+      <node id="11245">
+        <label>AMReX_Array.H</label>
+        <link refid="AMReX__Array_8H"/>
+        <childnode refid="11246" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11248" relation="include">
+        </childnode>
+        <childnode refid="11228" relation="include">
+        </childnode>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+      </node>
+      <node id="11282">
+        <label>AMReX_CudaDevice.H</label>
+        <link refid="AMReX__CudaDevice_8H"/>
+        <childnode refid="11227" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11246" relation="include">
+        </childnode>
+        <childnode refid="11237" relation="include">
+        </childnode>
+        <childnode refid="11226" relation="include">
+        </childnode>
+        <childnode refid="11225" relation="include">
+        </childnode>
+        <childnode refid="11222" relation="include">
+        </childnode>
+      </node>
+      <node id="11249">
+        <label>AMReX_SPACE.H</label>
+        <link refid="AMReX__SPACE_8H"/>
+      </node>
+      <node id="11244">
+        <label>AMReX_Extension.H</label>
+        <link refid="AMReX__Extension_8H"/>
+      </node>
+      <node id="11223">
+        <label>AMReX_GpuLaunch.H</label>
+        <link refid="AMReX__GpuLaunch_8H"/>
+        <childnode refid="11224" relation="include">
+        </childnode>
+      </node>
+      <node id="11233">
+        <label>sys/types.h</label>
+      </node>
+      <node id="11279">
+        <label>typeinfo</label>
+      </node>
+      <node id="11242">
+        <label>cstdio</label>
+      </node>
+      <node id="11263">
+        <label>AMReX_TypeTraits.H</label>
+        <link refid="AMReX__TypeTraits_8H"/>
+        <childnode refid="11232" relation="include">
+        </childnode>
+      </node>
+      <node id="11222">
+        <label>AMReX_GpuControl.H</label>
+        <link refid="AMReX__GpuControl_8H"/>
+      </node>
+      <node id="11273">
+        <label>AMReX_BLBackTrace.H</label>
+        <link refid="AMReX__BLBackTrace_8H"/>
+        <childnode refid="11274" relation="include">
+        </childnode>
+        <childnode refid="11229" relation="include">
+        </childnode>
+        <childnode refid="11248" relation="include">
+        </childnode>
+        <childnode refid="11275" relation="include">
+        </childnode>
+        <childnode refid="11242" relation="include">
+        </childnode>
+        <childnode refid="11227" relation="include">
+        </childnode>
+        <childnode refid="11276" relation="include">
+        </childnode>
+        <childnode refid="11277" relation="include">
+        </childnode>
+      </node>
+      <node id="11234">
+        <label>unistd.h</label>
+      </node>
+      <node id="11274">
+        <label>stack</label>
+      </node>
+      <node id="11252">
+        <label>vector</label>
+      </node>
+      <node id="11300">
+        <label>AMReX_FabFactory.H</label>
+        <link refid="AMReX__FabFactory_8H"/>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11286" relation="include">
+        </childnode>
+        <childnode refid="11299" relation="include">
+        </childnode>
+      </node>
+      <node id="11236">
+        <label>AMReX_BLassert.H</label>
+        <link refid="AMReX__BLassert_8H"/>
+        <childnode refid="11237" relation="include">
+        </childnode>
+      </node>
+      <node id="11219">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_COORDSYS_2D_C.H</label>
+        <link refid="AMReX_COORDSYS_2D_C.H"/>
+        <childnode refid="11220" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11292" relation="include">
+        </childnode>
+        <childnode refid="11257" relation="include">
+        </childnode>
+      </node>
+      <node id="11281">
+        <label>AMReX_CudaRange.H</label>
+        <link refid="AMReX__CudaRange_8H"/>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11225" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11263" relation="include">
+        </childnode>
+      </node>
+      <node id="11221">
+        <label>AMReX_GpuQualifiers.H</label>
+        <link refid="AMReX__GpuQualifiers_8H"/>
+      </node>
+      <node id="11248">
+        <label>utility</label>
+      </node>
+      <node id="11246">
+        <label>array</label>
+      </node>
+      <node id="11292">
+        <label>AMReX_FArrayBox.H</label>
+        <link refid="AMReX__FArrayBox_8H"/>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11293" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11300" relation="include">
+        </childnode>
+        <childnode refid="11257" relation="include">
+        </childnode>
+      </node>
+      <node id="11275">
+        <label>sstream</label>
+      </node>
+      <node id="11239">
+        <label>AMReX_Exception.H</label>
+        <link refid="AMReX__Exception_8H"/>
+        <childnode refid="11240" relation="include">
+        </childnode>
+      </node>
+      <node id="11289">
+        <label>AMReX_CudaAsyncFab.H</label>
+        <link refid="AMReX__CudaAsyncFab_8H"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+      </node>
+      <node id="11270">
+        <label>AMReX_ParallelDescriptor.H</label>
+        <link refid="AMReX__ParallelDescriptor_8H"/>
+        <childnode refid="11238" relation="include">
+        </childnode>
+        <childnode refid="11271" relation="include">
+        </childnode>
+        <childnode refid="11273" relation="include">
+        </childnode>
+        <childnode refid="11278" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11228" relation="include">
+        </childnode>
+        <childnode refid="11252" relation="include">
+        </childnode>
+        <childnode refid="11229" relation="include">
+        </childnode>
+        <childnode refid="11279" relation="include">
+        </childnode>
+        <childnode refid="11251" relation="include">
+        </childnode>
+        <childnode refid="11241" relation="include">
+        </childnode>
+        <childnode refid="11258" relation="include">
+        </childnode>
+        <childnode refid="11280" relation="include">
+        </childnode>
+      </node>
+      <node id="11226">
+        <label>AMReX_Utility.H</label>
+        <link refid="AMReX__Utility_8H"/>
+        <childnode refid="11227" relation="include">
+        </childnode>
+        <childnode refid="11228" relation="include">
+        </childnode>
+        <childnode refid="11229" relation="include">
+        </childnode>
+        <childnode refid="11230" relation="include">
+        </childnode>
+        <childnode refid="11231" relation="include">
+        </childnode>
+        <childnode refid="11232" relation="include">
+        </childnode>
+        <childnode refid="11233" relation="include">
+        </childnode>
+        <childnode refid="11234" relation="include">
+        </childnode>
+        <childnode refid="11235" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11266" relation="include">
+        </childnode>
+        <childnode refid="11269" relation="include">
+        </childnode>
+        <childnode refid="11270" relation="include">
+        </childnode>
+      </node>
+      <node id="11264">
+        <label>AMReX_Arena.H</label>
+        <link refid="AMReX__Arena_8H"/>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11265" relation="include">
+        </childnode>
+      </node>
+      <node id="11261">
+        <label>AMReX_Orientation.H</label>
+        <link refid="AMReX__Orientation_8H"/>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11221" relation="include">
+        </childnode>
+      </node>
+      <node id="11262">
+        <label>AMReX_CudaMemory.H</label>
+        <link refid="AMReX__CudaMemory_8H"/>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11222" relation="include">
+        </childnode>
+        <childnode refid="11263" relation="include">
+        </childnode>
+        <childnode refid="11264" relation="include">
+        </childnode>
+        <childnode refid="11227" relation="include">
+        </childnode>
+      </node>
+      <node id="11254">
+        <label>iosfwd</label>
+      </node>
+      <node id="11235">
+        <label>sys/wait.h</label>
+      </node>
+      <node id="11227">
+        <label>cstdlib</label>
+      </node>
+      <node id="11277">
+        <label>cfenv</label>
+      </node>
+      <node id="11228">
+        <label>iostream</label>
+      </node>
+      <node id="11260">
+        <label>AMReX_IndexType.H</label>
+        <link refid="AMReX__IndexType_8H"/>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11238" relation="include">
+        </childnode>
+        <childnode refid="11256" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+      </node>
+      <node id="11265">
+        <label>cstddef</label>
+      </node>
+      <node id="11267">
+        <label>unordered_map</label>
+      </node>
+      <node id="11220">
+        <label>AMReX_Gpu.H</label>
+        <link refid="AMReX__Gpu_8H"/>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11222" relation="include">
+        </childnode>
+        <childnode refid="11223" relation="include">
+        </childnode>
+        <childnode refid="11225" relation="include">
+        </childnode>
+        <childnode refid="11262" relation="include">
+        </childnode>
+        <childnode refid="11281" relation="include">
+        </childnode>
+        <childnode refid="11283" relation="include">
+        </childnode>
+        <childnode refid="11284" relation="include">
+        </childnode>
+        <childnode refid="11282" relation="include">
+        </childnode>
+        <childnode refid="11285" relation="include">
+        </childnode>
+        <childnode refid="11288" relation="include">
+        </childnode>
+        <childnode refid="11289" relation="include">
+        </childnode>
+        <childnode refid="11290" relation="include">
+        </childnode>
+      </node>
+      <node id="11259">
+        <label>climits</label>
+      </node>
+      <node id="11297">
+        <label>mutex</label>
+      </node>
+      <node id="11231">
+        <label>chrono</label>
+      </node>
+      <node id="11276">
+        <label>csignal</label>
+      </node>
+      <node id="11224">
+        <label>AMReX_CudaLaunch.H</label>
+        <link refid="AMReX__CudaLaunch_8H"/>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11222" relation="include">
+        </childnode>
+        <childnode refid="11225" relation="include">
+        </childnode>
+        <childnode refid="11281" relation="include">
+        </childnode>
+        <childnode refid="11282" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11236" relation="include">
+        </childnode>
+        <childnode refid="11263" relation="include">
+        </childnode>
+        <childnode refid="11265" relation="include">
+        </childnode>
+        <childnode refid="11258" relation="include">
+        </childnode>
+      </node>
+      <node id="11295">
+        <label>AMReX_CArena.H</label>
+        <link refid="AMReX__CArena_8H"/>
+        <childnode refid="11265" relation="include">
+        </childnode>
+        <childnode refid="11296" relation="include">
+        </childnode>
+        <childnode refid="11252" relation="include">
+        </childnode>
+        <childnode refid="11297" relation="include">
+        </childnode>
+        <childnode refid="11264" relation="include">
+        </childnode>
+      </node>
+      <node id="11232">
+        <label>type_traits</label>
+      </node>
+      <node id="11296">
+        <label>set</label>
+      </node>
+      <node id="11294">
+        <label>AMReX_BArena.H</label>
+        <link refid="AMReX__BArena_8H"/>
+        <childnode refid="11264" relation="include">
+        </childnode>
+      </node>
+      <node id="11238">
+        <label>AMReX_ccse-mpi.H</label>
+        <link refid="AMReX__ccse-mpi_8H"/>
+      </node>
+      <node id="11251">
+        <label>algorithm</label>
+      </node>
+      <node id="11291">
+        <label>cstring</label>
+      </node>
+      <node id="11247">
+        <label>memory</label>
+      </node>
+      <node id="11283">
+        <label>AMReX_CudaUtility.H</label>
+        <link refid="AMReX__CudaUtility_8H"/>
+        <childnode refid="11221" relation="include">
+        </childnode>
+        <childnode refid="11282" relation="include">
+        </childnode>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11228" relation="include">
+        </childnode>
+        <childnode refid="11257" relation="include">
+        </childnode>
+      </node>
+      <node id="11243">
+        <label>AMReX_REAL.H</label>
+        <link refid="AMReX__REAL_8H"/>
+        <childnode refid="11244" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceamrex">amrex</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>AMREX_COORDSYS_2D_C_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_COORDSYS_2D_C_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__Gpu_8H" kindref="compound">AMReX_Gpu.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__Array_8H" kindref="compound">AMReX_Array.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__FArrayBox_8H" kindref="compound">AMReX_FArrayBox.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex" kindref="compound">amrex</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="namespaceamrex_1a8d89429afe7132a4e3c616e4d4be8846" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1ad400e946944f8f475f2d6380aa14a231" kindref="member">amrex_setvol</ref><sp/>(<ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>bx,<sp/><ref refid="structamrex_1_1Array4" kindref="compound">Array4&lt;Real&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>vol,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray&lt;Real,2&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>offset,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray&lt;Real,2&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>dx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coord)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a47d61948fc32994fdf5e72090a97d41d" kindref="member">amrex::lbound</ref>(bx);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a3c96656cd70fd8fd4022cfb81deb15e3" kindref="member">amrex::ubound</ref>(bx);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coord<sp/>==<sp/>0)<sp/></highlight><highlight class="comment">//<sp/>Cartesian</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>dv<sp/>=<sp/>dx[0]*dx[1];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vol(i,j,0)<sp/>=<sp/>dv;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coord<sp/>==<sp/>1)<sp/></highlight><highlight class="comment">//<sp/>r-z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real<sp/>pi<sp/>=<sp/>3.1415926535897932;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ri<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ro<sp/>=<sp/>ri<sp/>+<sp/>dx[0];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>v<sp/>=<sp/>pi*dx[1]*dx[0]*(ro<sp/>+<sp/>ri);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vol(i,j,0)<sp/>=<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">std::abs</ref>(v);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>r-theta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real<sp/>pi<sp/>=<sp/>3.1415926535897932;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ti<sp/>=<sp/>offset[1]<sp/>+<sp/>dx[1]*(j);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>to<sp/>=<sp/>ti<sp/>+<sp/>dx[1];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>tmp<sp/>=<sp/>(2.*pi)*(std::cos(ti)-std::cos(to))/3.0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ri<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ro<sp/>=<sp/>ri<sp/>+<sp/>dx[0];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>v<sp/>=<sp/>tmp*(ro-ri)*(ro*ro+ro*ri+ri*ri);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vol(i,j,0)<sp/>=<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">std::abs</ref>(v);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="namespaceamrex_1a5d5ab6b8bb9147a809a079659678d9a9" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1ac26e22356854f0e76eaf1caaa55f010d" kindref="member">amrex_setarea</ref><sp/>(<ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>bx,<sp/><ref refid="structamrex_1_1Array4" kindref="compound">Array4&lt;Real&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>area,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray&lt;Real,2&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>offset,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray&lt;Real,2&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>dx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dir,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coord)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a47d61948fc32994fdf5e72090a97d41d" kindref="member">amrex::lbound</ref>(bx);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a3c96656cd70fd8fd4022cfb81deb15e3" kindref="member">amrex::ubound</ref>(bx);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coord<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>a<sp/>=<sp/>(dir<sp/>==<sp/>0)<sp/>?<sp/>dx[1]<sp/>:<sp/>dx[0];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area(i,j,0)<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coord<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real<sp/>pi<sp/>=<sp/>3.1415926535897932;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dir<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ri<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>a<sp/>=<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">std::abs</ref>((2.*pi)*ri*dx[1]);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area(i,j,0)<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>rc<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i+0.5);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>a<sp/>=<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">std::abs</ref>(dx[0]*(2.*pi)*rc);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area(i,j,0)<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real<sp/>pi<sp/>=<sp/>3.1415926535897932;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dir<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ti<sp/>=<sp/>offset[1]<sp/>+<sp/>dx[1]*(j);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>to<sp/>=<sp/>ti<sp/>+<sp/>dx[1];</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>tmp<sp/>=<sp/>(2.*pi)*(std::cos(ti)-std::cos(to));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ri<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>a<sp/>=<sp/>tmp*ri*ri;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area(i,j,0)<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ti<sp/>=<sp/>offset[1]<sp/>+<sp/>dx[1]*(j);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>tmp<sp/>=<sp/>pi*std::sin(ti);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ri<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ro<sp/>=<sp/>ri<sp/>+<sp/>dx[0];</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>a<sp/>=<sp/>tmp*(ro-ri)*(ro+ri);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area(i,j,0)<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="namespaceamrex_1aaad93bc55e38d5293ee2284b5136c35b" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1ad68346161ed50c00b7a1bb6035bebd91" kindref="member">amrex_setdloga</ref><sp/>(<ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>bx,<sp/><ref refid="structamrex_1_1Array4" kindref="compound">Array4&lt;Real&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>dloga,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray&lt;Real,2&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>offset,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray&lt;Real,2&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>dx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dir,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coord)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a47d61948fc32994fdf5e72090a97d41d" kindref="member">amrex::lbound</ref>(bx);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a3c96656cd70fd8fd4022cfb81deb15e3" kindref="member">amrex::ubound</ref>(bx);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coord<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dloga(i,j,0)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coord<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dir<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>rc<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i+0.5);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dloga(i,j,0)<sp/>=<sp/>1.0/rc;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dloga(i,j,0)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dir<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>rc<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i+0.5);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dloga(i,j,0)<sp/>=<sp/>2.0/rc;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo.y;<sp/>j<sp/>&lt;=<sp/>hi.y;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>ti<sp/>=<sp/>offset[1]<sp/>+<sp/>dx[1]*(j);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>to<sp/>=<sp/>ti<sp/>+<sp/>dx[1];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>tmp<sp/>=<sp/>1.0/std::tan(0.5*(ti+to));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Extension_8H_1a8c414106ab987031039a0ad05bb2519b" kindref="member">AMREX_PRAGMA_SIMD</ref></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo.x;<sp/>i<sp/>&lt;=<sp/>hi.x;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>rc<sp/>=<sp/>offset[0]<sp/>+<sp/>dx[0]*(i+0.5);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dloga(i,j,0)<sp/>=<sp/>tmp/rc;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_COORDSYS_2D_C.H"/>
+  </compounddef>
+</doxygen>

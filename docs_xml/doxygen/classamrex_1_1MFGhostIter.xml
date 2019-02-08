@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1MFGhostIter" kind="class" language="C++" prot="public">
+    <compoundname>amrex::MFGhostIter</compoundname>
+    <basecompoundref refid="classamrex_1_1MFIter" prot="public" virt="non-virtual">amrex::MFIter</basecompoundref>
+    <includes refid="AMReX__MFIter_8H" local="no">AMReX_MFIter.H</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classamrex_1_1MFGhostIter_1ac0f73b4439a279cfaf8e200a2739abf4" prot="private" static="no" mutable="no">
+        <type><ref refid="structamrex_1_1FabArrayBase_1_1TileArray" kindref="compound">FabArrayBase::TileArray</ref></type>
+        <definition>FabArrayBase::TileArray amrex::MFGhostIter::lta</definition>
+        <argsstring></argsstring>
+        <name>lta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="218" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1MFGhostIter_1a2af23493d978ba121e15f39b9da67648" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFGhostIter::MFGhostIter</definition>
+        <argsstring>(const FabArrayBase &amp;fabarray)</argsstring>
+        <name>MFGhostIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> &amp;</type>
+          <declname>fabarray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="215" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="564" bodyend="569"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classamrex_1_1MFGhostIter_1a991ab1e598e14f1172c2411d488a6d6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MFGhostIter::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="217" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="572" bodyend="644"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Iterate over ghost cells. Lots of <ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref> functions do not work. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3505">
+        <label>amrex::MFIter</label>
+        <link refid="classamrex_1_1MFIter"/>
+      </node>
+      <node id="3504">
+        <label>amrex::MFGhostIter</label>
+        <link refid="classamrex_1_1MFGhostIter"/>
+        <childnode refid="3505" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3507">
+        <label>amrex::MFIter</label>
+        <link refid="classamrex_1_1MFIter"/>
+        <childnode refid="3508" relation="usage">
+          <edgelabel>fabArray</edgelabel>
+        </childnode>
+        <childnode refid="3512" relation="usage">
+          <edgelabel>tile_size</edgelabel>
+        </childnode>
+        <childnode refid="3514" relation="usage">
+          <edgelabel>index_map</edgelabel>
+          <edgelabel>local_index_map</edgelabel>
+          <edgelabel>local_tile_index_map</edgelabel>
+          <edgelabel>num_local_tiles</edgelabel>
+        </childnode>
+        <childnode refid="3522" relation="usage">
+          <edgelabel>tile_array</edgelabel>
+        </childnode>
+        <childnode refid="3521" relation="usage">
+          <edgelabel>typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="3509">
+        <label>amrex::FabArrayBase::CacheStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1CacheStats"/>
+        <childnode refid="3510" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3513">
+        <label>amrex::FabArrayBase::FabArrayStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
+      </node>
+      <node id="3523">
+        <label>std::vector&lt; amrex::Box, std::allocator&lt; amrex::Box &gt; &gt;</label>
+      </node>
+      <node id="3512">
+        <label>amrex::IntVect</label>
+        <link refid="classamrex_1_1IntVect"/>
+        <childnode refid="3512" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="3514">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3515" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3510">
+        <label>string</label>
+      </node>
+      <node id="3515">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="3520">
+        <label>amrex::BoxArray</label>
+        <link refid="classamrex_1_1BoxArray"/>
+        <childnode refid="3512" relation="usage">
+          <edgelabel>m_crse_ratio</edgelabel>
+        </childnode>
+        <childnode refid="3521" relation="usage">
+          <edgelabel>m_typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="3518">
+        <label>amrex::DistributionMapping::RefID</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1RefID"/>
+        <childnode refid="3519" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="3524">
+        <label>amrex::FabArrayBase::TileArray</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1TileArray"/>
+        <childnode refid="3514" relation="usage">
+          <edgelabel>indexMap</edgelabel>
+          <edgelabel>localTileIndexMap</edgelabel>
+          <edgelabel>numLocalTiles</edgelabel>
+          <edgelabel>localIndexMap</edgelabel>
+        </childnode>
+        <childnode refid="3522" relation="usage">
+          <edgelabel>tileArray</edgelabel>
+        </childnode>
+      </node>
+      <node id="3506">
+        <label>amrex::MFGhostIter</label>
+        <link refid="classamrex_1_1MFGhostIter"/>
+        <childnode refid="3507" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3524" relation="usage">
+          <edgelabel>lta</edgelabel>
+        </childnode>
+      </node>
+      <node id="3521">
+        <label>amrex::IndexType</label>
+        <link refid="classamrex_1_1IndexType"/>
+      </node>
+      <node id="3519">
+        <label>amrex::DistributionMapping::Ref</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1Ref"/>
+        <childnode refid="3514" relation="usage">
+          <edgelabel>m_index_array</edgelabel>
+          <edgelabel>m_pmap</edgelabel>
+        </childnode>
+      </node>
+      <node id="3511">
+        <label>amrex::DistributionMapping</label>
+        <link refid="classamrex_1_1DistributionMapping"/>
+      </node>
+      <node id="3516">
+        <label>amrex::FabArrayBase::BDKey</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1BDKey"/>
+        <childnode refid="3517" relation="usage">
+          <edgelabel>m_ba_id</edgelabel>
+        </childnode>
+        <childnode refid="3518" relation="usage">
+          <edgelabel>m_dm_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="3517">
+        <label>amrex::BoxArray::RefID</label>
+        <link refid="structamrex_1_1BoxArray_1_1RefID"/>
+      </node>
+      <node id="3522">
+        <label>amrex::Vector&lt; amrex::Box &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3523" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3508">
+        <label>amrex::FabArrayBase</label>
+        <link refid="classamrex_1_1FabArrayBase"/>
+        <childnode refid="3509" relation="usage">
+          <edgelabel>m_FBC_stats</edgelabel>
+          <edgelabel>m_FPinfo_stats</edgelabel>
+          <edgelabel>m_CFinfo_stats</edgelabel>
+          <edgelabel>m_TAC_stats</edgelabel>
+          <edgelabel>m_CPC_stats</edgelabel>
+        </childnode>
+        <childnode refid="3511" relation="usage">
+          <edgelabel>distributionMap</edgelabel>
+        </childnode>
+        <childnode refid="3512" relation="usage">
+          <edgelabel>n_grow</edgelabel>
+          <edgelabel>comm_tile_size</edgelabel>
+          <edgelabel>mfiter_tile_size</edgelabel>
+          <edgelabel>mfghostiter_tile_size</edgelabel>
+        </childnode>
+        <childnode refid="3513" relation="usage">
+          <edgelabel>m_FA_stats</edgelabel>
+        </childnode>
+        <childnode refid="3514" relation="usage">
+          <edgelabel>indexArray</edgelabel>
+        </childnode>
+        <childnode refid="3516" relation="usage">
+          <edgelabel>m_bdkey</edgelabel>
+        </childnode>
+        <childnode refid="3520" relation="usage">
+          <edgelabel>boxarray</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="213" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="210" bodyend="219"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a96650cf6d7f0f21d0f4b118ae897d008" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>AllBoxes</name></member>
+      <member refid="classamrex_1_1MFIter_1a65b335b52bc54d9eaf7030a4fce20cf8" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>beginIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1abfba09b9f27138141e9758d1a8ea2e4b" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>currentIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1aa0e30190e5049564ed6c4d722c4d9f27" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>DistributionMap</name></member>
+      <member refid="classamrex_1_1MFIter_1a16fa2d144bcc71d665056de5938c4b32" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>dynamic</name></member>
+      <member refid="classamrex_1_1MFIter_1a427faab13c7d1f9d72b476452df519e1" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>endIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1a198baf9d7f4a208f217569a0c6f02183" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>fabArray</name></member>
+      <member refid="classamrex_1_1MFIter_1ad7d06509805d87abd88522648072e05c" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>fabbox</name></member>
+      <member refid="classamrex_1_1MFIter_1a1184620f493f560be355cf02e5a0e619" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>flags</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>Flags</name></member>
+      <member refid="classamrex_1_1MFIter_1ac2dc7f181e0901e36ffb6918b9caa9a4" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>grownnodaltilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a92db306d7f182316e0350bbd82c7c809" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>grownnodaltilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a47910f5a556870e1ba7e2e5734075cb8" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>growntilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1af72042687093d0139899798b905c245b" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>growntilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a4d0d4d533f7d916b28e2223f9d4e4f07" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>index</name></member>
+      <member refid="classamrex_1_1MFIter_1ac482cbbf5ecee6f2593a3e4437623082" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>index_map</name></member>
+      <member refid="classamrex_1_1MFGhostIter_1a991ab1e598e14f1172c2411d488a6d6b" prot="private" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>Initialize</name></member>
+      <member refid="classamrex_1_1MFIter_1ad1cb993a973d541776b06c959d1ae3cd" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>isValid</name></member>
+      <member refid="classamrex_1_1MFIter_1a5fac49b957fa7be5d08f86899d6ce37a" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>length</name></member>
+      <member refid="classamrex_1_1MFIter_1a8a8cdb1fbae0dace9fcc0dc622c3409d" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>local_index_map</name></member>
+      <member refid="classamrex_1_1MFIter_1a72828c9a333be0dfff3e89e350fd0e11" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>local_tile_index_map</name></member>
+      <member refid="classamrex_1_1MFIter_1a0287cec92e00fb111b559123590206f8" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>LocalIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1a16c99a93d11fc7240730f332e2586b9b" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>LocalTileIndex</name></member>
+      <member refid="classamrex_1_1MFGhostIter_1ac0f73b4439a279cfaf8e200a2739abf4" prot="private" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>lta</name></member>
+      <member refid="classamrex_1_1MFIter_1ab32b9180b7d33b0f9afdc25e9b14bd3e" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>m_fa</name></member>
+      <member refid="classamrex_1_1MFGhostIter_1a2af23493d978ba121e15f39b9da67648" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFGhostIter</name></member>
+      <member refid="classamrex_1_1MFIter_1aac055187a5b4d7200fc77827dc28a76c" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1ae7623281ac9e772db1fc5085a64aeeca" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a1d9668de99635aa50096d0f091d8b9b0" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a830e42aee76ec9fe8dae8bdd262e0b2d" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1ad7a19e95ba128febb94b27d2a9d97ef1" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a970e636bf6a2d744068483806ddb7944" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a2c0a016e1d5d69073f2cab81e7c6a095" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1aecfd3f3ef12e8703caad5794968ff06a" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a66b92b6dbfbe1a498ba614df28817709" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a07296b12634219c4a15337435852a67b" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>nextDynamicIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1a9c69e3a5196ec1466c349566cada2a2b" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>nodaltilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38af1e51da50b24860035a3665786fe9d14" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>NoTeamBarrier</name></member>
+      <member refid="classamrex_1_1MFIter_1a967c3c48ccb4f316911d06fcaccb29fa" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>num_local_tiles</name></member>
+      <member refid="classamrex_1_1MFIter_1af2fd15d47b733fec41ff3ed293b6ccb9" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>numLocalTiles</name></member>
+      <member refid="classamrex_1_1MFIter_1ad163462bff3679b60d12d6a92f3a69f6" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>operator++</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a30a84aa6392dc4536c6761c0cf72b097" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>SkipInit</name></member>
+      <member refid="classamrex_1_1MFIter_1a0d943179eca5b0805f3a42e183a666cd" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>theFabArrayBase</name></member>
+      <member refid="classamrex_1_1MFIter_1a10b2f0f6900d23295fe25fd526153f43" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>tile_array</name></member>
+      <member refid="classamrex_1_1MFIter_1ae64d80e0b2d14e9209c426a0654e8a1f" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>tile_size</name></member>
+      <member refid="classamrex_1_1MFIter_1a5ee5aa32becbbb2490764c1b59399bf2" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>tilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a38d6ae3b5ed3802c272809feb7eb4168" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>tilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a34fd1729c06d788a8a7fc1e706832501" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>tilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a84a7a1c6a16dd352f210e4a66ee8a138" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>tileIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a1db74b1bbdeb756077e4bc33e25a2740" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>Tiling</name></member>
+      <member refid="classamrex_1_1MFIter_1a1406cbb9152b357a39e877b78eb8ff0d" prot="protected" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>typ</name></member>
+      <member refid="classamrex_1_1MFIter_1a3b646c3a8d9530997d5804769c47b335" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>validbox</name></member>
+      <member refid="classamrex_1_1MFIter_1aac3223d243bff8f86cbd227b8f1af866" prot="public" virt="non-virtual"><scope>amrex::MFGhostIter</scope><name>~MFIter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

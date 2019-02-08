@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['yafluxregister',['YAFluxRegister',['../classamrex_1_1_y_a_flux_register.html',1,'amrex']]]
+  ['xyplotdatalist',['XYPlotDataList',['../classamrex_1_1XYPlotDataList.html',1,'amrex']]],
+  ['xyplotdatalistlink',['XYPlotDataListLink',['../classamrex_1_1XYPlotDataListLink.html',1,'amrex']]]
 ];

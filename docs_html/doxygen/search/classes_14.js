@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['weightedbox',['WeightedBox',['../classamrex_1_1_weighted_box.html',1,'amrex']]],
-  ['weightedboxlist',['WeightedBoxList',['../classamrex_1_1_weighted_box_list.html',1,'amrex']]]
+  ['weightedbox',['WeightedBox',['../classamrex_1_1WeightedBox.html',1,'amrex']]],
+  ['weightedboxlist',['WeightedBoxList',['../classamrex_1_1WeightedBoxList.html',1,'amrex']]]
 ];

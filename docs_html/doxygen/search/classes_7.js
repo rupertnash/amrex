@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['header',['Header',['../structamrex_1_1_vis_m_f_1_1_header.html',1,'amrex::VisMF']]]
+  ['header',['Header',['../structamrex_1_1VisMF_1_1Header.html',1,'amrex::VisMF']]],
+  ['hypre',['Hypre',['../classamrex_1_1Hypre.html',1,'amrex']]],
+  ['hypreabeclap',['HypreABecLap',['../classamrex_1_1HypreABecLap.html',1,'amrex']]],
+  ['hypreabeclap2',['HypreABecLap2',['../classamrex_1_1HypreABecLap2.html',1,'amrex']]],
+  ['hypreabeclap3',['HypreABecLap3',['../classamrex_1_1HypreABecLap3.html',1,'amrex']]]
 ];

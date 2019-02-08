@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['max',['max',['../classamrex_1_1_real_vect.html#adeff5f3f2cd622d9b994b1c70fc854fb',1,'amrex::RealVect']]],
-  ['mfghostiter',['MFGhostIter',['../classamrex_1_1_fab_array_base.html#a0730c47ed240b86d1a24126a0adf6b13',1,'amrex::FabArrayBase']]],
-  ['mfgraph',['MFGraph',['../classamrex_1_1_fab_array.html#a60f56cd45cbe9dc96de858a4ecc30f5a',1,'amrex::FabArray::MFGraph()'],['../classamrex_1_1_amr.html#a60f56cd45cbe9dc96de858a4ecc30f5a',1,'amrex::Amr::MFGraph()'],['../classamrex_1_1_amr_level.html#a60f56cd45cbe9dc96de858a4ecc30f5a',1,'amrex::AmrLevel::MFGraph()']]],
-  ['mfiter',['MFIter',['../classamrex_1_1_fab_array_base.html#a11fd6aa3197ac10c8fb27ee5a5c96d57',1,'amrex::FabArrayBase']]],
-  ['min',['min',['../classamrex_1_1_real_vect.html#a46789da7b76900c32e27ff5ab54643b2',1,'amrex::RealVect']]],
-  ['multimaskiter',['MultiMaskIter',['../classamrex_1_1_multi_mask.html#a543302181bedff3235f600544f96197f',1,'amrex::MultiMask']]]
+  ['max',['max',['../classamrex_1_1RealVect.html#adeff5f3f2cd622d9b994b1c70fc854fb',1,'amrex::RealVect']]],
+  ['mfghostiter',['MFGhostIter',['../classamrex_1_1FabArrayBase.html#a0730c47ed240b86d1a24126a0adf6b13',1,'amrex::FabArrayBase']]],
+  ['mfgraph',['MFGraph',['../classamrex_1_1Amr.html#a60f56cd45cbe9dc96de858a4ecc30f5a',1,'amrex::Amr::MFGraph()'],['../classamrex_1_1AmrLevel.html#a60f56cd45cbe9dc96de858a4ecc30f5a',1,'amrex::AmrLevel::MFGraph()'],['../classamrex_1_1FabArray.html#a60f56cd45cbe9dc96de858a4ecc30f5a',1,'amrex::FabArray::MFGraph()']]],
+  ['mfiter',['MFIter',['../classamrex_1_1FabArrayBase.html#a11fd6aa3197ac10c8fb27ee5a5c96d57',1,'amrex::FabArrayBase']]],
+  ['min',['min',['../classamrex_1_1RealVect.html#a46789da7b76900c32e27ff5ab54643b2',1,'amrex::RealVect']]],
+  ['mlabeclaplacian',['MLABecLaplacian',['../classamrex_1_1MLLinOp.html#ada5e4315ec415d41c21e9e092d0dd478',1,'amrex::MLLinOp']]],
+  ['mlcgsolver',['MLCGSolver',['../classamrex_1_1MLCellABecLap.html#a7b344595276c27ed17dacb3ea1fb95aa',1,'amrex::MLCellABecLap::MLCGSolver()'],['../classamrex_1_1MLCellLinOp.html#a7b344595276c27ed17dacb3ea1fb95aa',1,'amrex::MLCellLinOp::MLCGSolver()'],['../classamrex_1_1MLLinOp.html#a7b344595276c27ed17dacb3ea1fb95aa',1,'amrex::MLLinOp::MLCGSolver()'],['../classamrex_1_1MLMG.html#a7b344595276c27ed17dacb3ea1fb95aa',1,'amrex::MLMG::MLCGSolver()'],['../classamrex_1_1MLNodeLinOp.html#a7b344595276c27ed17dacb3ea1fb95aa',1,'amrex::MLNodeLinOp::MLCGSolver()']]],
+  ['mlmg',['MLMG',['../classamrex_1_1MLCellABecLap.html#a1b4821805159b0595b6b7b1e0135b54f',1,'amrex::MLCellABecLap::MLMG()'],['../classamrex_1_1MLCellLinOp.html#a1b4821805159b0595b6b7b1e0135b54f',1,'amrex::MLCellLinOp::MLMG()'],['../classamrex_1_1MLLinOp.html#a1b4821805159b0595b6b7b1e0135b54f',1,'amrex::MLLinOp::MLMG()'],['../classamrex_1_1MLNodeLinOp.html#a1b4821805159b0595b6b7b1e0135b54f',1,'amrex::MLNodeLinOp::MLMG()']]],
+  ['mlpoisson',['MLPoisson',['../classamrex_1_1MLLinOp.html#a6b8679aecd5dee44bee1b262c40e8f8f',1,'amrex::MLLinOp']]],
+  ['multimaskiter',['MultiMaskIter',['../classamrex_1_1MultiMask.html#a543302181bedff3235f600544f96197f',1,'amrex::MultiMask']]]
 ];

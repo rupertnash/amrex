@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1EBCellConservativeLinear" kind="class" language="C++" prot="public">
+    <compoundname>amrex::EBCellConservativeLinear</compoundname>
+    <basecompoundref refid="classamrex_1_1CellConservativeLinear" prot="public" virt="non-virtual">amrex::CellConservativeLinear</basecompoundref>
+    <includes refid="AMReX__EBInterpolater_8H" local="no">AMReX_EBInterpolater.H</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1EBCellConservativeLinear_1ab5650d05e33391801cca870ab398040b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::EBCellConservativeLinear::EBCellConservativeLinear</definition>
+        <argsstring>(bool do_linear_limiting_=true)</argsstring>
+        <name>EBCellConservativeLinear</name>
+        <param>
+          <type>bool</type>
+          <declname>do_linear_limiting_</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.H" line="13" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBCellConservativeLinear_1a35b416bd79f57d83c7de458463e76c59" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>amrex::EBCellConservativeLinear::~EBCellConservativeLinear</definition>
+        <argsstring>() override</argsstring>
+        <name>~EBCellConservativeLinear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.H" line="15" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EBCellConservativeLinear_1ae0e80652e09be1c195e8c05021a47c46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void amrex::EBCellConservativeLinear::interp</definition>
+        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; &amp;bcr, int actual_comp, int actual_state) override</argsstring>
+        <name>interp</name>
+        <reimplements refid="classamrex_1_1CellConservativeLinear_1a1dcdd95c1f60ab100420aa431c939861">interp</reimplements>
+        <param>
+          <type>const <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>crse</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>crse_comp</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>fine</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fine_comp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>fine_region</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>ratio</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>crse_geom</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>fine_geom</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1BCRec" kindref="compound">BCRec</ref> &gt; &amp;</type>
+          <declname>bcr</declname>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Coarse to fine interpolation in space. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.H" line="17" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.cpp" bodystart="23" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1173">
+        <label>amrex::Interpolater</label>
+        <link refid="classamrex_1_1Interpolater"/>
+      </node>
+      <node id="1171">
+        <label>amrex::EBCellConservativeLinear</label>
+        <link refid="classamrex_1_1EBCellConservativeLinear"/>
+        <childnode refid="1172" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1172">
+        <label>amrex::CellConservativeLinear</label>
+        <link refid="classamrex_1_1CellConservativeLinear"/>
+        <childnode refid="1173" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1176">
+        <label>amrex::Interpolater</label>
+        <link refid="classamrex_1_1Interpolater"/>
+      </node>
+      <node id="1174">
+        <label>amrex::EBCellConservativeLinear</label>
+        <link refid="classamrex_1_1EBCellConservativeLinear"/>
+        <childnode refid="1175" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1175">
+        <label>amrex::CellConservativeLinear</label>
+        <link refid="classamrex_1_1CellConservativeLinear"/>
+        <childnode refid="1176" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.H" line="10" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.H" bodystart="8" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1Interpolater_1a076d83ba84b125ee187a18aa8d60ee3e" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>BoxCoarsener</name></member>
+      <member refid="classamrex_1_1CellConservativeLinear_1a47aef6594f54746b09c4230b68f4e978" prot="public" virt="non-virtual"><scope>amrex::EBCellConservativeLinear</scope><name>CellConservativeLinear</name></member>
+      <member refid="classamrex_1_1CellConservativeLinear_1aeec138a1454f98de65aa6ec019a1cdc4" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>CoarseBox</name></member>
+      <member refid="classamrex_1_1CellConservativeLinear_1ac9afd317e78f1c6d5581c251a9afe819" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>CoarseBox</name></member>
+      <member refid="classamrex_1_1CellConservativeLinear_1a7817252503faedf1d87fcbdcc89c3509" prot="protected" virt="non-virtual"><scope>amrex::EBCellConservativeLinear</scope><name>do_linear_limiting</name></member>
+      <member refid="classamrex_1_1EBCellConservativeLinear_1ab5650d05e33391801cca870ab398040b" prot="public" virt="non-virtual"><scope>amrex::EBCellConservativeLinear</scope><name>EBCellConservativeLinear</name></member>
+      <member refid="classamrex_1_1Interpolater_1aa2f8d685993329ef439ea2925bee9cc7" prot="public" virt="non-virtual"><scope>amrex::EBCellConservativeLinear</scope><name>GetBCArray</name></member>
+      <member refid="classamrex_1_1EBCellConservativeLinear_1ae0e80652e09be1c195e8c05021a47c46" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>interp</name></member>
+      <member refid="classamrex_1_1Interpolater_1aeaaef0ff2178ce688d0c48d6e1d89049" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>protect</name></member>
+      <member refid="classamrex_1_1CellConservativeLinear_1a6d6fcd6f8a4397afacebc3e357fa70e4" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>~CellConservativeLinear</name></member>
+      <member refid="classamrex_1_1EBCellConservativeLinear_1a35b416bd79f57d83c7de458463e76c59" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>~EBCellConservativeLinear</name></member>
+      <member refid="classamrex_1_1Interpolater_1ad53e63eaa9b2b9b140c98f73969f2164" prot="public" virt="virtual"><scope>amrex::EBCellConservativeLinear</scope><name>~Interpolater</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

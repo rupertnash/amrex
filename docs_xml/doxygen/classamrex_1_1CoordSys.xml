@@ -1,0 +1,1381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1CoordSys" kind="class" language="C++" prot="public">
+    <compoundname>amrex::CoordSys</compoundname>
+    <derivedcompoundref refid="classamrex_1_1Geometry" prot="public" virt="non-virtual">amrex::Geometry</derivedcompoundref>
+    <includes refid="AMReX__CoordSys_8H" local="no">AMReX_CoordSys.H</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806eba" prot="public" static="no">
+        <name>CoordType</name>
+        <enumvalue id="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaa2debcd8f37986ae0e3c488f583234ccc" prot="public">
+          <name>undef</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaa773443060faab3679fd6637fbb386086" prot="public">
+          <name>cartesian</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaa090e74483c754250a5e0ee448bdfe8b3" prot="public">
+          <name>RZ</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaaa0c55dfafca5806f988babd974f5b158" prot="public">
+          <name>SPHERICAL</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classamrex_1_1CoordSys_1a7d23e22bdc876c2b6f832f29f7b48c35" prot="protected" static="yes" mutable="no">
+        <type><ref refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806eba" kindref="member">CoordType</ref></type>
+        <definition>CoordSys::CoordType amrex::CoordSys::c_sys</definition>
+        <argsstring></argsstring>
+        <name>c_sys</name>
+        <initializer>= <ref refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaa2debcd8f37986ae0e3c488f583234ccc" kindref="member">CoordSys::undef</ref></initializer>
+        <briefdescription>
+<para>Static data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="262" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1CoordSys_1ac98571898c246591a5ae1dfd30d72829" prot="protected" static="yes" mutable="no">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::offset</definition>
+        <argsstring>[AMREX_SPACEDIM]</argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="263" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classamrex_1_1CoordSys_1a178c38de0cae8e587e4c34541db7f45b" prot="protected" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::dx[AMREX_SPACEDIM]</definition>
+        <argsstring>[AMREX_SPACEDIM]</argsstring>
+        <name>dx</name>
+        <briefdescription>
+<para>Non-static data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="266" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1CoordSys_1a09a58ce8c24e2ad549c98754fd2adaeb" prot="protected" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::inv_dx[AMREX_SPACEDIM]</definition>
+        <argsstring>[AMREX_SPACEDIM]</argsstring>
+        <name>inv_dx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="267" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1CoordSys_1abee8e858b3ca22a33388275e0a2cfcbf" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::CoordSys::ok</definition>
+        <argsstring></argsstring>
+        <name>ok</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="268" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classamrex_1_1CoordSys_1a4db09c25776b9c0b4dfb9b49cbfe4aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const CoordSys &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>os</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+<para>Nice ASCII output. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="26" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="476" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="friend" id="classamrex_1_1CoordSys_1a24251fbdbd3497be0c9ef8a30260aa41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::istream &amp;</type>
+        <definition>std::istream&amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;, CoordSys &amp;)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <defname>is</defname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+<para>Nice ASCII input. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="29" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="496" bodyend="517"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a2050a523bf85efe20fef4ef62db4a8d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::CoordSys::CoordSys</definition>
+        <argsstring>()</argsstring>
+        <name>CoordSys</name>
+        <briefdescription>
+<para>Default constructor to undefined state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="32" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a416d64647d1553fbf387cb7f44fab4f9" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::CoordSys::CoordSys</definition>
+        <argsstring>(const Real *cell_dx)</argsstring>
+        <name>CoordSys</name>
+        <param>
+          <type>const Real *</type>
+          <declname>cell_dx</declname>
+        </param>
+        <briefdescription>
+<para>Construct, specify a cell size, and low end of index range. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="35" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a1d7e80f93fece05cfe429c16f36f9e9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::CoordSys::~CoordSys</definition>
+        <argsstring>()=default</argsstring>
+        <name>~CoordSys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a6026e660cc195d06cf966e3ad09c2cc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::CoordSys::CoordSys</definition>
+        <argsstring>(const CoordSys &amp;rhs)=default</argsstring>
+        <name>CoordSys</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1acde5af02e950f7de8d64044e3c378342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::CoordSys::CoordSys</definition>
+        <argsstring>(CoordSys &amp;&amp;rhs) noexcept=default</argsstring>
+        <name>CoordSys</name>
+        <param>
+          <type><ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a12bcf6eec38424a7f71387215d1ea4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;</type>
+        <definition>CoordSys&amp; amrex::CoordSys::operator=</definition>
+        <argsstring>(const CoordSys &amp;rhs)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1ab4ede9ab39bfb6f6445e6eb71ba686a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;</type>
+        <definition>CoordSys&amp; amrex::CoordSys::operator=</definition>
+        <argsstring>(CoordSys &amp;&amp;rhs)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classamrex_1_1CoordSys" kindref="compound">CoordSys</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a48ffc9604867e10ae012228873c944d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::define</definition>
+        <argsstring>(const Real *cell_dx)</argsstring>
+        <name>define</name>
+        <param>
+          <type>const Real *</type>
+          <declname>cell_dx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize after construction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="44" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="67" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1aa9fe64171f27487e0bfff3b4e35d1ea1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Real *</type>
+        <definition>const Real* amrex::CoordSys::CellSize</definition>
+        <argsstring>() const </argsstring>
+        <name>CellSize</name>
+        <briefdescription>
+<para>Returns the cellsize for each coordinate direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a1e92dbd36c87256b350b7e8845690d17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::CellSize</definition>
+        <argsstring>(int dir) const </argsstring>
+        <name>CellSize</name>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns the cellsize for the specified coordinate direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="77" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a68a78be6f86da18daa843ac6d4f2922d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt;</type>
+        <definition>GpuArray&lt;Real,AMREX_SPACEDIM&gt; amrex::CoordSys::CellSizeArray</definition>
+        <argsstring>() const </argsstring>
+        <name>CellSizeArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="79" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a3b5a3879b50d95cfcffb2eca6839ffdf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Real *</type>
+        <definition>const Real* amrex::CoordSys::InvCellSize</definition>
+        <argsstring>() const </argsstring>
+        <name>InvCellSize</name>
+        <briefdescription>
+<para>Returns the inverse cellsize for each coordinate direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="85" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1af7b3c8a30273ae111a02e07c3a3604dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::InvCellSize</definition>
+        <argsstring>(int dir) const </argsstring>
+        <name>InvCellSize</name>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns the inverse cellsize for the specified coordinate direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a92f96253ece1adcd3af193a5647e953c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt;</type>
+        <definition>GpuArray&lt;Real,AMREX_SPACEDIM&gt; amrex::CoordSys::InvCellSizeArray</definition>
+        <argsstring>() const </argsstring>
+        <name>InvCellSizeArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="90" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a55a586831b4ba1bc3b3c731fc9d93c96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::CellCenter</definition>
+        <argsstring>(int point, int dir) const </argsstring>
+        <name>CellCenter</name>
+        <param>
+          <type>int</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns location of cell center in specified direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="96" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a299b717a3de17d2a4c447723a8fb1790" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::CellCenter</definition>
+        <argsstring>(const IntVect &amp;point, Vector&lt; Real &gt; &amp;loc) const </argsstring>
+        <name>CellCenter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Return location of cell center. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="102" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="96" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1ab404c03de7def7ba32cf6ca962965465" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::CellCenter</definition>
+        <argsstring>(const IntVect &amp;point, Real *loc) const </argsstring>
+        <name>CellCenter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>Real *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Return location of cell center. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="105" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="84" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1af2bb51d02cc1e6b1a939edf4009aeda7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::LoEdge</definition>
+        <argsstring>(int point, int dir) const </argsstring>
+        <name>LoEdge</name>
+        <param>
+          <type>int</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns location of lo edge in specified direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="108" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a34ab0bcc602a8a775cae738549022b92" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::LoEdge</definition>
+        <argsstring>(const IntVect &amp;point, int dir) const </argsstring>
+        <name>LoEdge</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Equivalent to LoEdge(point[dir], dir). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="114" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a6cc93c44bedafac2167296a6b6d4d768" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::HiEdge</definition>
+        <argsstring>(int point, int dir) const </argsstring>
+        <name>HiEdge</name>
+        <param>
+          <type>int</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns location of hi edge in specified direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="120" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a45f85ca4da7da28586f9017993ff2e20" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::HiEdge</definition>
+        <argsstring>(const IntVect &amp;point, int dir) const </argsstring>
+        <name>HiEdge</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Equivalent to HiEdge(point[dir], dir). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="126" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a2dcdb0a45c122eda67be803f6949323a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::LoFace</definition>
+        <argsstring>(const IntVect &amp;point, int dir, Vector&lt; Real &gt; &amp;loc) const </argsstring>
+        <name>LoFace</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Sets location of lo face into loc. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="132" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="119" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1aa835141b4863563b14cd7b095f6e6de4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::LoFace</definition>
+        <argsstring>(const IntVect &amp;point, int dir, Real *loc) const </argsstring>
+        <name>LoFace</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>Real *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Sets location of lo face into loc. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="135" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="105" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a4fef4d2ff7eb46a8bd5b700ed14800be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::HiFace</definition>
+        <argsstring>(const IntVect &amp;point, int dir, Vector&lt; Real &gt; &amp;loc) const </argsstring>
+        <name>HiFace</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Sets location of hi face into loc. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="138" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="142" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a6143da1f22da4a94625827025132a350" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::HiFace</definition>
+        <argsstring>(const IntVect &amp;point, int dir, Real *loc) const </argsstring>
+        <name>HiFace</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>Real *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Sets location of hi face into loc. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="141" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="128" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a9fb5a8168d5a44fe79cd9aa7bddd36be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::LoNode</definition>
+        <argsstring>(const IntVect &amp;point, Vector&lt; Real &gt; &amp;loc) const </argsstring>
+        <name>LoNode</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Return location of lower left hand corner. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="144" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="163" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a20ddced2d3470f1b745c64f0fa6fd38a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::LoNode</definition>
+        <argsstring>(const IntVect &amp;point, Real *loc) const </argsstring>
+        <name>LoNode</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>Real *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Return location of lower left hand corner. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="147" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="151" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a9f4d497fb8dd8ba09f4d2c070aae3a81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::HiNode</definition>
+        <argsstring>(const IntVect &amp;point, Vector&lt; Real &gt; &amp;loc) const </argsstring>
+        <name>HiNode</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Return location of upper right hand corner. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="150" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="183" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a7140fcb19bc78edf6559e378df23289b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::HiNode</definition>
+        <argsstring>(const IntVect &amp;point, Real *loc) const </argsstring>
+        <name>HiNode</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>Real *</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Return location of upper right hand corner. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="153" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="171" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a9ed02259d7b3868c587c183872da15b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
+        <definition>IntVect amrex::CoordSys::CellIndex</definition>
+        <argsstring>(const Real *point) const </argsstring>
+        <name>CellIndex</name>
+        <param>
+          <type>const Real *</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Returns cell centered index of cell containing point. This may return undesired results if point is on a cell boundary. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="159" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="191" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a770125c3000b060dd95b440100b56526" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
+        <definition>IntVect amrex::CoordSys::LowerIndex</definition>
+        <argsstring>(const Real *point) const </argsstring>
+        <name>LowerIndex</name>
+        <param>
+          <type>const Real *</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Returns node centered index of lower left hand corner of cell containing this point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="164" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="204" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a963f59d99a41920b77dc7464f15b09bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
+        <definition>IntVect amrex::CoordSys::UpperIndex</definition>
+        <argsstring>(const Real *point) const </argsstring>
+        <name>UpperIndex</name>
+        <param>
+          <type>const Real *</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Returns node centered index of upper right hand corner of cell containing this point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="169" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="217" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1afe2abbcf933db2ec20289e47454323b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::SetVolume</definition>
+        <argsstring>(FArrayBox &amp;vol, const Box &amp;region) const </argsstring>
+        <name>SetVolume</name>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Compute cell volumes in given region and place them into input FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="246" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a237a3bec32b9ac52c318e0017d6a0356" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::GetVolume</definition>
+        <argsstring>(FArrayBox &amp;vol, const Box &amp;region) const </argsstring>
+        <name>GetVolume</name>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Compute cell volumes in given region and place them into resize()d input FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="179" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="238" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1aa8c98e55f1e8c9befed53dc7daf811bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> *</type>
+        <definition>FArrayBox * amrex::CoordSys::GetVolume</definition>
+        <argsstring>(const Box &amp;region) const </argsstring>
+        <name>GetVolume</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Compute cell volumes in given region and place them into new()d FAB. It is the user&apos;s respoinsibility to delete the returned FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="185" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="230" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a8538a8117cf9e6db134eee5196c0b970" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::SetDLogA</definition>
+        <argsstring>(FArrayBox &amp;dloga, const Box &amp;region, int dir) const </argsstring>
+        <name>SetDLogA</name>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>dloga</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Compute d(log(A))/dr at cell centers in given region and place them into input FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="190" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="291" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1ab10ebd157943128ed09f04fb5bb4ca1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::GetDLogA</definition>
+        <argsstring>(FArrayBox &amp;dloga, const Box &amp;region, int dir) const </argsstring>
+        <name>GetDLogA</name>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>dloga</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Compute d(log(A))/dr at cell centers in given region and return the results in the resize()d input FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="195" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="273" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a1e01ad041a58bbcf3787a7110aff29b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> *</type>
+        <definition>FArrayBox * amrex::CoordSys::GetDLogA</definition>
+        <argsstring>(const Box &amp;region, int dir) const </argsstring>
+        <name>GetDLogA</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Compute d(log(A))/dr at cell centers in given region and return the results in a new()d FAB. It is the user&apos;s responsibility to delete the returned FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="202" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="282" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1aad6b67f8c4aa070b4099d77aa0155368" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::Volume</definition>
+        <argsstring>(const IntVect &amp;point) const </argsstring>
+        <name>Volume</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Return the volume of the specified cell. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="205" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="520" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1aeb0f186559f5184778243d196fb71541" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::Volume</definition>
+        <argsstring>(const Real xlo[AMREX_SPACEDIM], const Real xhi[AMREX_SPACEDIM]) const </argsstring>
+        <name>Volume</name>
+        <param>
+          <type>const Real</type>
+          <declname>xlo</declname>
+          <array>[AMREX_SPACEDIM]</array>
+        </param>
+        <param>
+          <type>const Real</type>
+          <declname>xhi</declname>
+          <array>[AMREX_SPACEDIM]</array>
+        </param>
+        <briefdescription>
+<para>Return the volume of the specified cell. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="208" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="530" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1addd25ef6595e734e8c05f880387852ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::SetFaceArea</definition>
+        <argsstring>(FArrayBox &amp;area, const Box &amp;region, int dir) const </argsstring>
+        <name>SetFaceArea</name>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>area</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Compute area of cell faces in given region and given index direction and return the result in input FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="215" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="338" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1acf7a0320a6ee296a68ff9db371667931" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::GetFaceArea</definition>
+        <argsstring>(FArrayBox &amp;area, const Box &amp;region, int dir) const </argsstring>
+        <name>GetFaceArea</name>
+        <param>
+          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
+          <declname>area</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Compute area of cell faces in given region and given index direction and return the result in resize()d input FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="221" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="327" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1aaa25660d494efd0ed6ff7ad0f3edc59f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> *</type>
+        <definition>FArrayBox * amrex::CoordSys::GetFaceArea</definition>
+        <argsstring>(const Box &amp;region, int dir) const </argsstring>
+        <name>GetFaceArea</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Compute area of cell faces in given region and given index direction and return the result in new()d FAB. It is the user&apos;s responsibility to delete the FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="228" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="318" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1ab14c442ffac8392371dd23e2774b0fe9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::AreaLo</definition>
+        <argsstring>(const IntVect &amp;point, int dir) const </argsstring>
+        <name>AreaLo</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns lo face area of given cell in direction dir. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="231" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="550" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a3e1d2ff0c6b24081c8e11882f3e4d52a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::CoordSys::AreaHi</definition>
+        <argsstring>(const IntVect &amp;point, int dir) const </argsstring>
+        <name>AreaHi</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns hi face area of given cell in direction dir. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="234" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="586" bodyend="619"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a26a42d74f648516769b87bbb5d6730ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::GetEdgeLoc</definition>
+        <argsstring>(Vector&lt; Real &gt; &amp;loc, const Box &amp;region, int dir) const </argsstring>
+        <name>GetEdgeLoc</name>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Return array of physical locations of cell edges in the resize()d input array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="240" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="365" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a4826233fc01d64e54c79e5efc681cdc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::GetCellLoc</definition>
+        <argsstring>(Vector&lt; Real &gt; &amp;loc, const Box &amp;region, int dir) const </argsstring>
+        <name>GetCellLoc</name>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Return array of physical locations of cell centers in the resize()d input array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="246" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="384" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1ab67f7c1a3a7ceedff602c800d8279a17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::GetEdgeVolCoord</definition>
+        <argsstring>(Vector&lt; Real &gt; &amp;loc, const Box &amp;region, int dir) const </argsstring>
+        <name>GetEdgeVolCoord</name>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Return array of volume coordinates at cell edges for region in given direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="252" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="403" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a5b4f25568384aadd06b027071caf4afa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::GetCellVolCoord</definition>
+        <argsstring>(Vector&lt; Real &gt; &amp;loc, const Box &amp;region, int dir) const </argsstring>
+        <name>GetCellVolCoord</name>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt; &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>region</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Return array of volume coordinates at cell centers for region in given direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="258" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="440" bodyend="473"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1ad89efc543fd9a402a861439dfb3ed625" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void amrex::CoordSys::SetCoord</definition>
+        <argsstring>(CoordType coord)</argsstring>
+        <name>SetCoord</name>
+        <param>
+          <type><ref refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806eba" kindref="member">CoordType</ref></type>
+          <declname>coord</declname>
+        </param>
+        <briefdescription>
+<para>Set the CoordType. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="47" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a4125c12241aead6f1ba39316d18bec26" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806eba" kindref="member">CoordType</ref></type>
+        <definition>CoordSys::CoordType amrex::CoordSys::Coord</definition>
+        <argsstring>()</argsstring>
+        <name>Coord</name>
+        <briefdescription>
+<para>Returns the CoordType. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a51a15de25fa3980be23f00847f23f84c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::CoordSys::CoordInt</definition>
+        <argsstring>()</argsstring>
+        <name>CoordInt</name>
+        <briefdescription>
+<para>Returns the CoordType as an int. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="53" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="31" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a2f3c0e6479f912c83a6827cfb1b8b1dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::CoordSys::IsSPHERICAL</definition>
+        <argsstring>()</argsstring>
+        <name>IsSPHERICAL</name>
+        <briefdescription>
+<para>Is CoordType == SPHERICAL? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="56" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="273" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1a22380ba22f76517b32feb45df56c22b9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::CoordSys::IsRZ</definition>
+        <argsstring>()</argsstring>
+        <name>IsRZ</name>
+        <briefdescription>
+<para>Is CoordType == RZ? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="59" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="286" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1aaf6692009d76d8dc91e3f6367ecade06" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool amrex::CoordSys::IsCartesian</definition>
+        <argsstring>()</argsstring>
+        <name>IsCartesian</name>
+        <briefdescription>
+<para>Is CoordType == cartesion? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="62" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1ade4395049efa81ffa1edc6244ae0ac20" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::CoordSys::SetOffset</definition>
+        <argsstring>(const Real *x_lo)</argsstring>
+        <name>SetOffset</name>
+        <param>
+          <type>const Real *</type>
+          <declname>x_lo</declname>
+        </param>
+        <briefdescription>
+<para>Sets the offset for each coordinate direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="65" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1acb88160a1b738ca38276b7a24cc619da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Real *</type>
+        <definition>static const Real* amrex::CoordSys::Offset</definition>
+        <argsstring>()</argsstring>
+        <name>Offset</name>
+        <briefdescription>
+<para>Returns the offset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="68" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1CoordSys_1acfb88686b7594af7003c8ae262f75db2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>static Real amrex::CoordSys::Offset</definition>
+        <argsstring>(int dir)</argsstring>
+        <name>Offset</name>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Returns the offset for the specified coordinate direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="71" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="71" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Coordinate System. </para>    </briefdescription>
+    <detaileddescription>
+<para>Routines for mapping between physical coordinate system and index space. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="970">
+        <label>amrex::CoordSys</label>
+        <link refid="classamrex_1_1CoordSys"/>
+      </node>
+      <node id="971">
+        <label>amrex::Geometry</label>
+        <link refid="classamrex_1_1Geometry"/>
+        <childnode refid="970" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="973">
+        <label>Real</label>
+      </node>
+      <node id="972">
+        <label>amrex::CoordSys</label>
+        <link refid="classamrex_1_1CoordSys"/>
+        <childnode refid="973" relation="usage">
+          <edgelabel>inv_dx</edgelabel>
+          <edgelabel>offset</edgelabel>
+          <edgelabel>dx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" line="21" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.H" bodystart="20" bodyend="269"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1CoordSys_1a3e1d2ff0c6b24081c8e11882f3e4d52a" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>AreaHi</name></member>
+      <member refid="classamrex_1_1CoordSys_1ab14c442ffac8392371dd23e2774b0fe9" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>AreaLo</name></member>
+      <member refid="classamrex_1_1CoordSys_1a7d23e22bdc876c2b6f832f29f7b48c35" prot="protected" virt="non-virtual"><scope>amrex::CoordSys</scope><name>c_sys</name></member>
+      <member refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaa773443060faab3679fd6637fbb386086" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>cartesian</name></member>
+      <member refid="classamrex_1_1CoordSys_1a55a586831b4ba1bc3b3c731fc9d93c96" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CellCenter</name></member>
+      <member refid="classamrex_1_1CoordSys_1a299b717a3de17d2a4c447723a8fb1790" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CellCenter</name></member>
+      <member refid="classamrex_1_1CoordSys_1ab404c03de7def7ba32cf6ca962965465" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CellCenter</name></member>
+      <member refid="classamrex_1_1CoordSys_1a9ed02259d7b3868c587c183872da15b3" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CellIndex</name></member>
+      <member refid="classamrex_1_1CoordSys_1aa9fe64171f27487e0bfff3b4e35d1ea1" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CellSize</name></member>
+      <member refid="classamrex_1_1CoordSys_1a1e92dbd36c87256b350b7e8845690d17" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CellSize</name></member>
+      <member refid="classamrex_1_1CoordSys_1a68a78be6f86da18daa843ac6d4f2922d" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CellSizeArray</name></member>
+      <member refid="classamrex_1_1CoordSys_1a4125c12241aead6f1ba39316d18bec26" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>Coord</name></member>
+      <member refid="classamrex_1_1CoordSys_1a51a15de25fa3980be23f00847f23f84c" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CoordInt</name></member>
+      <member refid="classamrex_1_1CoordSys_1a2050a523bf85efe20fef4ef62db4a8d6" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CoordSys</name></member>
+      <member refid="classamrex_1_1CoordSys_1a416d64647d1553fbf387cb7f44fab4f9" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CoordSys</name></member>
+      <member refid="classamrex_1_1CoordSys_1a6026e660cc195d06cf966e3ad09c2cc9" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CoordSys</name></member>
+      <member refid="classamrex_1_1CoordSys_1acde5af02e950f7de8d64044e3c378342" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CoordSys</name></member>
+      <member refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806eba" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>CoordType</name></member>
+      <member refid="classamrex_1_1CoordSys_1a48ffc9604867e10ae012228873c944d4" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>define</name></member>
+      <member refid="classamrex_1_1CoordSys_1a178c38de0cae8e587e4c34541db7f45b" prot="protected" virt="non-virtual"><scope>amrex::CoordSys</scope><name>dx</name></member>
+      <member refid="classamrex_1_1CoordSys_1a4826233fc01d64e54c79e5efc681cdc7" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetCellLoc</name></member>
+      <member refid="classamrex_1_1CoordSys_1a5b4f25568384aadd06b027071caf4afa" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetCellVolCoord</name></member>
+      <member refid="classamrex_1_1CoordSys_1ab10ebd157943128ed09f04fb5bb4ca1d" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetDLogA</name></member>
+      <member refid="classamrex_1_1CoordSys_1a1e01ad041a58bbcf3787a7110aff29b1" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetDLogA</name></member>
+      <member refid="classamrex_1_1CoordSys_1a26a42d74f648516769b87bbb5d6730ed" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetEdgeLoc</name></member>
+      <member refid="classamrex_1_1CoordSys_1ab67f7c1a3a7ceedff602c800d8279a17" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetEdgeVolCoord</name></member>
+      <member refid="classamrex_1_1CoordSys_1acf7a0320a6ee296a68ff9db371667931" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetFaceArea</name></member>
+      <member refid="classamrex_1_1CoordSys_1aaa25660d494efd0ed6ff7ad0f3edc59f" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetFaceArea</name></member>
+      <member refid="classamrex_1_1CoordSys_1a237a3bec32b9ac52c318e0017d6a0356" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetVolume</name></member>
+      <member refid="classamrex_1_1CoordSys_1aa8c98e55f1e8c9befed53dc7daf811bc" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>GetVolume</name></member>
+      <member refid="classamrex_1_1CoordSys_1a6cc93c44bedafac2167296a6b6d4d768" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>HiEdge</name></member>
+      <member refid="classamrex_1_1CoordSys_1a45f85ca4da7da28586f9017993ff2e20" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>HiEdge</name></member>
+      <member refid="classamrex_1_1CoordSys_1a4fef4d2ff7eb46a8bd5b700ed14800be" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>HiFace</name></member>
+      <member refid="classamrex_1_1CoordSys_1a6143da1f22da4a94625827025132a350" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>HiFace</name></member>
+      <member refid="classamrex_1_1CoordSys_1a9f4d497fb8dd8ba09f4d2c070aae3a81" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>HiNode</name></member>
+      <member refid="classamrex_1_1CoordSys_1a7140fcb19bc78edf6559e378df23289b" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>HiNode</name></member>
+      <member refid="classamrex_1_1CoordSys_1a09a58ce8c24e2ad549c98754fd2adaeb" prot="protected" virt="non-virtual"><scope>amrex::CoordSys</scope><name>inv_dx</name></member>
+      <member refid="classamrex_1_1CoordSys_1a3b5a3879b50d95cfcffb2eca6839ffdf" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>InvCellSize</name></member>
+      <member refid="classamrex_1_1CoordSys_1af7b3c8a30273ae111a02e07c3a3604dc" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>InvCellSize</name></member>
+      <member refid="classamrex_1_1CoordSys_1a92f96253ece1adcd3af193a5647e953c" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>InvCellSizeArray</name></member>
+      <member refid="classamrex_1_1CoordSys_1aaf6692009d76d8dc91e3f6367ecade06" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>IsCartesian</name></member>
+      <member refid="classamrex_1_1CoordSys_1a22380ba22f76517b32feb45df56c22b9" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>IsRZ</name></member>
+      <member refid="classamrex_1_1CoordSys_1a2f3c0e6479f912c83a6827cfb1b8b1dd" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>IsSPHERICAL</name></member>
+      <member refid="classamrex_1_1CoordSys_1af2bb51d02cc1e6b1a939edf4009aeda7" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>LoEdge</name></member>
+      <member refid="classamrex_1_1CoordSys_1a34ab0bcc602a8a775cae738549022b92" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>LoEdge</name></member>
+      <member refid="classamrex_1_1CoordSys_1a2dcdb0a45c122eda67be803f6949323a" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>LoFace</name></member>
+      <member refid="classamrex_1_1CoordSys_1aa835141b4863563b14cd7b095f6e6de4" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>LoFace</name></member>
+      <member refid="classamrex_1_1CoordSys_1a9fb5a8168d5a44fe79cd9aa7bddd36be" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>LoNode</name></member>
+      <member refid="classamrex_1_1CoordSys_1a20ddced2d3470f1b745c64f0fa6fd38a" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>LoNode</name></member>
+      <member refid="classamrex_1_1CoordSys_1a770125c3000b060dd95b440100b56526" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>LowerIndex</name></member>
+      <member refid="classamrex_1_1CoordSys_1ac98571898c246591a5ae1dfd30d72829" prot="protected" virt="non-virtual"><scope>amrex::CoordSys</scope><name>offset</name></member>
+      <member refid="classamrex_1_1CoordSys_1acb88160a1b738ca38276b7a24cc619da" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>Offset</name></member>
+      <member refid="classamrex_1_1CoordSys_1acfb88686b7594af7003c8ae262f75db2" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>Offset</name></member>
+      <member refid="classamrex_1_1CoordSys_1abee8e858b3ca22a33388275e0a2cfcbf" prot="protected" virt="non-virtual"><scope>amrex::CoordSys</scope><name>ok</name></member>
+      <member refid="classamrex_1_1CoordSys_1a4db09c25776b9c0b4dfb9b49cbfe4aa6" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classamrex_1_1CoordSys_1a12bcf6eec38424a7f71387215d1ea4a8" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1CoordSys_1ab4ede9ab39bfb6f6445e6eb71ba686a9" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1CoordSys_1a24251fbdbd3497be0c9ef8a30260aa41" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaa090e74483c754250a5e0ee448bdfe8b3" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>RZ</name></member>
+      <member refid="classamrex_1_1CoordSys_1ad89efc543fd9a402a861439dfb3ed625" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>SetCoord</name></member>
+      <member refid="classamrex_1_1CoordSys_1a8538a8117cf9e6db134eee5196c0b970" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>SetDLogA</name></member>
+      <member refid="classamrex_1_1CoordSys_1addd25ef6595e734e8c05f880387852ff" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>SetFaceArea</name></member>
+      <member refid="classamrex_1_1CoordSys_1ade4395049efa81ffa1edc6244ae0ac20" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>SetOffset</name></member>
+      <member refid="classamrex_1_1CoordSys_1afe2abbcf933db2ec20289e47454323b2" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>SetVolume</name></member>
+      <member refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaaa0c55dfafca5806f988babd974f5b158" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>SPHERICAL</name></member>
+      <member refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaa2debcd8f37986ae0e3c488f583234ccc" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>undef</name></member>
+      <member refid="classamrex_1_1CoordSys_1a963f59d99a41920b77dc7464f15b09bd" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>UpperIndex</name></member>
+      <member refid="classamrex_1_1CoordSys_1aad6b67f8c4aa070b4099d77aa0155368" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>Volume</name></member>
+      <member refid="classamrex_1_1CoordSys_1aeb0f186559f5184778243d196fb71541" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>Volume</name></member>
+      <member refid="classamrex_1_1CoordSys_1a1d7e80f93fece05cfe429c16f36f9e9f" prot="public" virt="non-virtual"><scope>amrex::CoordSys</scope><name>~CoordSys</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

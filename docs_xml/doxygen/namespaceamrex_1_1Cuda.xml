@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceamrex_1_1Cuda" kind="namespace" language="C++">
+    <compoundname>amrex::Cuda</compoundname>
+    <innerclass refid="classamrex_1_1Cuda_1_1AsyncArray" prot="public">amrex::Cuda::AsyncArray</innerclass>
+    <innerclass refid="classamrex_1_1Cuda_1_1AsyncFab" prot="public">amrex::Cuda::AsyncFab</innerclass>
+    <innerclass refid="classamrex_1_1Cuda_1_1AsyncFabImpl" prot="public">amrex::Cuda::AsyncFabImpl</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1ComponentBox" prot="public">amrex::Cuda::ComponentBox</innerclass>
+    <innerclass refid="classamrex_1_1Cuda_1_1Device" prot="public">amrex::Cuda::Device</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1DeviceScalar" prot="public">amrex::Cuda::DeviceScalar</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1GridSize" prot="public">amrex::Cuda::GridSize</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1LaunchSafeGuard" prot="public">amrex::Cuda::LaunchSafeGuard</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1Managed" prot="public">amrex::Cuda::Managed</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1ManagedData" prot="public">amrex::Cuda::ManagedData</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1Pinned" prot="public">amrex::Cuda::Pinned</innerclass>
+    <innerclass refid="classamrex_1_1Cuda_1_1StreamIter" prot="public">amrex::Cuda::StreamIter</innerclass>
+    <innernamespace refid="namespaceamrex_1_1Cuda_1_1Atomic">amrex::Cuda::Atomic</innernamespace>
+    <innernamespace refid="namespaceamrex_1_1Cuda_1_1range__detail">amrex::Cuda::range_detail</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceamrex_1_1Cuda_1a7f12f082e7e48f63e8a21bcde83b9b06" prot="public" static="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; T &gt;</type>
+        <definition>using amrex::Cuda::DeviceVector = typedef Vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>DeviceVector</name>
+        <briefdescription>
+<para>When <ref refid="namespaceamrex_1_1Cuda" kindref="compound">Cuda</ref> is off, all these containers revert to <ref refid="classamrex_1_1Vector" kindref="compound">amrex::Vector</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" line="276" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceamrex_1_1Cuda_1adcb14c2960a046890c80ce8039d80e59" prot="public" static="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; T &gt;</type>
+        <definition>using amrex::Cuda::HostVector = typedef Vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>HostVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" line="279" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceamrex_1_1Cuda_1a5314068a19afe6abfe5c1ced153a374d" prot="public" static="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; T &gt;</type>
+        <definition>using amrex::Cuda::ManagedVector = typedef Vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>ManagedVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" line="282" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceamrex_1_1Cuda_1a7e4bb643564213a315b372b600df7514" prot="public" static="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; T &gt;</type>
+        <definition>using amrex::Cuda::ManagedDeviceVector = typedef Vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>ManagedDeviceVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" line="285" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceamrex_1_1Cuda_1afd599901ad1e0e3c5103e1ba5a16b2c0" prot="public" static="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; T &gt;</type>
+        <definition>using amrex::Cuda::PinnedDeviceVector = typedef Vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>PinnedDeviceVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" line="288" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceamrex_1_1Cuda_1a9ba96123e03ff5f8169a5a1b4d1116e3" prot="public" static="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; T &gt;</type>
+        <definition>using amrex::Cuda::PolymorphicDeviceVector = typedef Vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>PolymorphicDeviceVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" line="291" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ab4c79aa24eaa3c0661f182a819586f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class InIter</type>
+          </param>
+          <param>
+            <type>class OutIter</type>
+          </param>
+        </templateparamlist>
+        <type>OutIter</type>
+        <definition>OutIter amrex::Cuda::thrust_copy</definition>
+        <argsstring>(InIter begin, InIter end, OutIter result)</argsstring>
+        <name>thrust_copy</name>
+        <param>
+          <type>InIter</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>InIter</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" line="295" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaContainers.H" bodystart="295" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a473fa828b8130db28e98e03079650256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::Cuda::getGridSize</definition>
+        <argsstring>(FabArrayBase const &amp;fa, int ngrow, LayoutData&lt; GridSize &gt; &amp;gs, int &amp;ntotblocks)</argsstring>
+        <name>getGridSize</name>
+        <param>
+          <type><ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> const &amp;</type>
+          <declname>fa</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngrow</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1LayoutData" kindref="compound">LayoutData</ref>&lt; <ref refid="structamrex_1_1Cuda_1_1GridSize" kindref="compound">GridSize</ref> &gt; &amp;</type>
+          <declname>gs</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>ntotblocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaLaunch.H" line="765" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a2ec73ba43363b9168ca35f7bb6e53d02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>AMREX_GPU_HOST_DEVICE Box amrex::Cuda::getThreadBox</definition>
+        <argsstring>(const Box &amp;bx, long offset)</argsstring>
+        <name>getThreadBox</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>bx</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaLaunch.H" line="769" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaLaunch.H" bodystart="769" bodyend="784"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ac68f37e6280919c47ff3432e6e7e0f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="structamrex_1_1Cuda_1_1range__detail_1_1range__impl" kindref="compound">range_detail::range_impl</ref>&lt; T &gt;</type>
+        <definition>AMREX_GPU_HOST_DEVICE range_detail::range_impl&lt;T&gt; amrex::Cuda::Range</definition>
+        <argsstring>(T const &amp;b)</argsstring>
+        <name>Range</name>
+        <param>
+          <type>T const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaRange.H" line="98" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaRange.H" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a4fa5cfd090a82a56b004c145c69216f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> T</type>
+        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE T amrex::Cuda::LDG</definition>
+        <argsstring>(Array4&lt; T &gt; const &amp;a, int i, int j, int k)</argsstring>
+        <name>LDG</name>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; T &gt; const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="20" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ad8aab707a6cb53b718256ca6c7764b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> T</type>
+        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE T amrex::Cuda::LDG</definition>
+        <argsstring>(Array4&lt; T &gt; const &amp;a, int i, int j, int k, int n)</argsstring>
+        <name>LDG</name>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; T &gt; const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="30" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="30" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a08b0f53908894e37a373856f847db007" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::Cuda::isManaged</definition>
+        <argsstring>(void const *p)</argsstring>
+        <name>isManaged</name>
+        <param>
+          <type>void const *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="38" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="38" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a830d0009d87ee834fee5454355d145b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::Cuda::isDevicePtr</definition>
+        <argsstring>(void const *p)</argsstring>
+        <name>isDevicePtr</name>
+        <param>
+          <type>void const *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a7abbfe9b1c23cf435400aa42077daed1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::Cuda::isPinnedPtr</definition>
+        <argsstring>(void const *p)</argsstring>
+        <name>isPinnedPtr</name>
+        <param>
+          <type>void const *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="62" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="62" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::Cuda::isGpuPtr</definition>
+        <argsstring>(void const *p)</argsstring>
+        <name>isGpuPtr</name>
+        <param>
+          <type>void const *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="74" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ac20c6f2f06d9b680ab731dca15afa1f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> bool</type>
+        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE bool amrex::Cuda::isnan</definition>
+        <argsstring>(T m)</argsstring>
+        <name>isnan</name>
+        <param>
+          <type>T</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="278" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="278" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a67d087372613f5071acc7ffeff303846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> bool</type>
+        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE bool amrex::Cuda::isinf</definition>
+        <argsstring>(T m)</argsstring>
+        <name>isinf</name>
+        <param>
+          <type>T</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="289" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="289" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a4eb712380d2714aa1c219d3a8e4c410c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool amrex::Cuda::inLaunchRegion</definition>
+        <argsstring>()</argsstring>
+        <name>inLaunchRegion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="35" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a0ede47532d20f65dcdd0e43d112a75f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool amrex::Cuda::notInLaunchRegion</definition>
+        <argsstring>()</argsstring>
+        <name>notInLaunchRegion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="36" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ae11904029c754d4740018e77948d9445" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool amrex::Cuda::setLaunchRegion</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setLaunchRegion</name>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="37" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="37" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaAsyncArray.H" line="19" column="1"/>
+  </compounddef>
+</doxygen>

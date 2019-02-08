@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['table',['Table',['../classamrex_1_1_parm_parse.html#a328b966e328a476f04a86c758c9bc6c1',1,'amrex::ParmParse']]],
-  ['tacache',['TACache',['../classamrex_1_1_fab_array_base.html#acefd7d2a27952d4bac78ac9befcda8eb',1,'amrex::FabArrayBase']]],
-  ['tagtype',['TagType',['../classamrex_1_1_tag_box.html#aa3eab6b001470948ab883ec074459049',1,'amrex::TagBox::TagType()'],['../classamrex_1_1_tag_box_array.html#aacc3ef7b971c8c55ba4a0bb74492b019',1,'amrex::TagBoxArray::TagType()']]],
-  ['tamap',['TAMap',['../classamrex_1_1_fab_array_base.html#a905802e4dcdc5377e09d455fc80f0400',1,'amrex::FabArrayBase']]],
-  ['team_5ft',['team_t',['../structamrex_1_1_parallel_descriptor_1_1_process_team.html#aa8f4a38d26a8eb15889375e241e82ac6',1,'amrex::ParallelDescriptor::ProcessTeam']]],
-  ['tracerpariter',['TracerParIter',['../namespaceamrex.html#a2172ed493dfadbd34d5cdb72995f96af',1,'amrex']]],
-  ['tuple',['Tuple',['../namespaceamrex.html#a62563da3fe4e55c8bba5b5e1aadf2495',1,'amrex']]],
-  ['type',['type',['../structamrex_1_1make_index_sequence_helper.html#a0593e400aeef7678c9a1a086640a1a82',1,'amrex::makeIndexSequenceHelper::type()'],['../structamrex_1_1make_index_sequence_helper_3_010_00_01_i_ss_8_8_8_4.html#a1e872336e5c74ff5a5acf72af21c7afc',1,'amrex::makeIndexSequenceHelper&lt; 0, ISs...&gt;::type()']]],
-  ['type_5ft',['Type_t',['../namespaceamrex_1_1_e_b2.html#ad5118c9d34449d5fcba10d141751b0d6',1,'amrex::EB2']]]
+  ['realarray',['RealArray',['../namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f',1,'amrex']]],
+  ['realtuple',['RealTuple',['../classamrex_1_1BndryData.html#a7d818a2a4471876ea96580404b662b0f',1,'amrex::BndryData::RealTuple()'],['../classamrex_1_1MLCellLinOp.html#ae233eeb511516448492f38fe53fa9cd9',1,'amrex::MLCellLinOp::RealTuple()']]],
+  ['realtype',['RealType',['../classamrex_1_1ArrayOfStructs.html#a6694efa287bd1d39554c85d773d1a894',1,'amrex::ArrayOfStructs::RealType()'],['../structamrex_1_1Particle.html#a57e2e923cf77341e715f8cf41b15fcac',1,'amrex::Particle::RealType()'],['../structamrex_1_1ParticleCommData.html#a8cd595a307d981117b1ca716232e621c',1,'amrex::ParticleCommData::RealType()'],['../classamrex_1_1ParticleContainer.html#aa415f73a03aab24593ffe0d99075e329',1,'amrex::ParticleContainer::RealType()']]],
+  ['realvector',['RealVector',['../classamrex_1_1ParticleContainer.html#a0e7c4cbdae01b74faec61771f467d029',1,'amrex::ParticleContainer::RealVector()'],['../classamrex_1_1ParIterBase.html#ac2d8a045e7c6a2acbd836da7fae652fa',1,'amrex::ParIterBase::RealVector()'],['../classamrex_1_1ParIter.html#a5d9c0b319450a522a17a890f16939a92',1,'amrex::ParIter::RealVector()'],['../classamrex_1_1ParConstIter.html#a130289305ad39fd0f594342ec1d992d9',1,'amrex::ParConstIter::RealVector()'],['../structamrex_1_1ParticleTile.html#a1842dcadd4e11fcf017bb29c91491a56',1,'amrex::ParticleTile::RealVector()'],['../structamrex_1_1StructOfArrays.html#ac78510b872fa9a2af6ffaaaeb9ecebfb',1,'amrex::StructOfArrays::RealVector()']]],
+  ['reference',['reference',['../classhacc_1_1AlignedAllocator.html#a5830ffb5779f9588ce9f9040b4ac5db7',1,'hacc::AlignedAllocator']]],
+  ['runtimeerror',['RuntimeError',['../namespaceamrex.html#ac3aaf3d47b0fc6e69f9405fcebcdc4fe',1,'amrex']]]
 ];

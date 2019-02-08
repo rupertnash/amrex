@@ -1,0 +1,1449 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1AmrMesh" kind="class" language="C++" prot="public">
+    <compoundname>amrex::AmrMesh</compoundname>
+    <derivedcompoundref refid="classamrex_1_1AmrCore" prot="public" virt="non-virtual">amrex::AmrCore</derivedcompoundref>
+    <includes refid="AMReX__AmrMesh_8H" local="no">AMReX_AmrMesh.H</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a6d04a0b73b03b5a0008edc4effaeeb44" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="167" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1ac488c17bc512ae46995817401dc7a8e7" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::max_level</definition>
+        <argsstring></argsstring>
+        <name>max_level</name>
+        <briefdescription>
+<para>Maximum allowed level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="168" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a7e3c7fc2f5598fdd4132536724933f2a" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt;</type>
+        <definition>Vector&lt;IntVect&gt; amrex::AmrMesh::ref_ratio</definition>
+        <argsstring></argsstring>
+        <name>ref_ratio</name>
+        <briefdescription>
+<para>Refinement ratios [0:finest_level-1]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="169" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a7a466d1cfea1c18c35128fb5a7c5793f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::finest_level</definition>
+        <argsstring></argsstring>
+        <name>finest_level</name>
+        <briefdescription>
+<para>Current finest level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="171" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1ad8752d2dfe5714cdecef8fa9eddb1c7e" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt;</type>
+        <definition>Vector&lt;int&gt; amrex::AmrMesh::n_error_buf</definition>
+        <argsstring></argsstring>
+        <name>n_error_buf</name>
+        <briefdescription>
+<para>Buffer cells around each tagged cell. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="173" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1acdbddd33ae38b3d038fcaa14ce05e039" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt;</type>
+        <definition>Vector&lt;IntVect&gt; amrex::AmrMesh::blocking_factor</definition>
+        <argsstring></argsstring>
+        <name>blocking_factor</name>
+        <briefdescription>
+<para>Blocking factor in grid generation (by level). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a716b7e6169d4d0a537970445941e7391" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt;</type>
+        <definition>Vector&lt;IntVect&gt; amrex::AmrMesh::max_grid_size</definition>
+        <argsstring></argsstring>
+        <name>max_grid_size</name>
+        <briefdescription>
+<para>Maximum allowable grid size (by level). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="175" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1ae75a2551575e5fd697ab4dc8754541ad" prot="protected" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real amrex::AmrMesh::grid_eff</definition>
+        <argsstring></argsstring>
+        <name>grid_eff</name>
+        <briefdescription>
+<para>Grid efficiency. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="176" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1afe23a9a66345fa657da022fc5a3cb349" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::n_proper</definition>
+        <argsstring></argsstring>
+        <name>n_proper</name>
+        <briefdescription>
+<para><heading level="1">cells required for proper nesting.</heading>
+</para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="177" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a3162b5c3697f4ce32d585ca434ac40a5" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::AmrMesh::use_fixed_coarse_grids</definition>
+        <argsstring></argsstring>
+        <name>use_fixed_coarse_grids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="179" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a15a5406d39363635d73cc1d986546fe7" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::use_fixed_upto_level</definition>
+        <argsstring></argsstring>
+        <name>use_fixed_upto_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="180" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a95059679c4b3343198edadf7d9d860e5" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::AmrMesh::refine_grid_layout</definition>
+        <argsstring></argsstring>
+        <name>refine_grid_layout</name>
+        <briefdescription>
+<para>chop up grids to have the number of grids no less the number of procs </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="181" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a8d2f6e5a9f3f46c76d44215f83455475" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::AmrMesh::check_input</definition>
+        <argsstring></argsstring>
+        <name>check_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="182" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1ad47540768ade1598333374d48d3b9593" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::AmrMesh::iterate_on_new_grids</definition>
+        <argsstring></argsstring>
+        <name>iterate_on_new_grids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="184" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1abaf8432668e3b350306a62e8662f4f96" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::AmrMesh::use_new_chop</definition>
+        <argsstring></argsstring>
+        <name>use_new_chop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="185" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1a239ef06043779ea301395ae14876d6cb" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &gt;</type>
+        <definition>Vector&lt;Geometry&gt; amrex::AmrMesh::geom</definition>
+        <argsstring></argsstring>
+        <name>geom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="187" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1ab7f8457c3e5a0dc0295247f005e5a107" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &gt;</type>
+        <definition>Vector&lt;DistributionMapping&gt; amrex::AmrMesh::dmap</definition>
+        <argsstring></argsstring>
+        <name>dmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="188" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1AmrMesh_1ae53347adc8a239367f153d3705a8ed25" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &gt;</type>
+        <definition>Vector&lt;BoxArray&gt; amrex::AmrMesh::grids</definition>
+        <argsstring></argsstring>
+        <name>grids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="189" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a163e8a28e1f841b2c174d6d34664e2d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::AmrMesh::AmrMesh</definition>
+        <argsstring>()</argsstring>
+        <name>AmrMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="18" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="30" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a13509f5a978e31215ea7e48c5c3803f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::AmrMesh::AmrMesh</definition>
+        <argsstring>(const RealBox *rb, int max_level_in, const Vector&lt; int &gt; &amp;n_cell_in, int coord=-1, std::vector&lt; int &gt; refrat=std::vector&lt; int &gt;())</argsstring>
+        <name>AmrMesh</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1RealBox" kindref="compound">RealBox</ref> *</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_level_in</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>n_cell_in</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coord</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>refrat</declname>
+          <defval>std::vector&lt; int &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="19" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1aa3d1b57d3957feca7d0f897ec2e62824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::AmrMesh::AmrMesh</definition>
+        <argsstring>(const AmrMesh &amp;rhs)=delete</argsstring>
+        <name>AmrMesh</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1AmrMesh" kindref="compound">AmrMesh</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a51e0432968299f0c83f90d9b79376a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1AmrMesh" kindref="compound">AmrMesh</ref> &amp;</type>
+        <definition>AmrMesh&amp; amrex::AmrMesh::operator=</definition>
+        <argsstring>(const AmrMesh &amp;rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1AmrMesh" kindref="compound">AmrMesh</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a10865e07f3aae297cdea041881e7b9ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>amrex::AmrMesh::~AmrMesh</definition>
+        <argsstring>()</argsstring>
+        <name>~AmrMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="25" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ac92b13d13b4c315b5a31e87dcecf0a4b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::Verbose</definition>
+        <argsstring>() const </argsstring>
+        <name>Verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="27" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1aea00f147dbeb1bde2760a0fa24286bd9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::maxLevel</definition>
+        <argsstring>() const </argsstring>
+        <name>maxLevel</name>
+        <briefdescription>
+<para>Return the max level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="30" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ac902a82d3d86fe6272a14455533794c7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::finestLevel</definition>
+        <argsstring>() const </argsstring>
+        <name>finestLevel</name>
+        <briefdescription>
+<para>Return the finest level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="33" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a2e4c36a7be2ae0b6bfa9285a9b7c6111" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
+        <definition>IntVect amrex::AmrMesh::refRatio</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>refRatio</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+<para>Return the refinement ratio for level lev. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="36" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a9585220bf789c9401b6c056ff3b143b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::MaxRefRatio</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>MaxRefRatio</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+<para>Return the maximum refinement ratio in any direction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="39" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="328" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a2158bdfbb3869bd064fb1c0804df364e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt; &amp;</type>
+        <definition>const Vector&lt;IntVect&gt;&amp; amrex::AmrMesh::refRatio</definition>
+        <argsstring>() const </argsstring>
+        <name>refRatio</name>
+        <briefdescription>
+<para>Return refinement ratios between all levels. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="42" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1aaeb239304f0f2f1fe5e3fa5d3abc1a9b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &gt; &amp;</type>
+        <definition>const Vector&lt;Geometry&gt;&amp; amrex::AmrMesh::Geom</definition>
+        <argsstring>() const </argsstring>
+        <name>Geom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="44" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a53988099dc97d12785e8fd8a7652d0d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &gt; &amp;</type>
+        <definition>const Vector&lt;DistributionMapping&gt;&amp; amrex::AmrMesh::DistributionMap</definition>
+        <argsstring>() const </argsstring>
+        <name>DistributionMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="45" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a8d6a6c8a9b9ef9c9d8bce0699f3be93e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &gt; &amp;</type>
+        <definition>const Vector&lt;BoxArray&gt;&amp; amrex::AmrMesh::boxArray</definition>
+        <argsstring>() const </argsstring>
+        <name>boxArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="46" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a295b5e008a877007c0cc9c9b0fa4fc0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <definition>const Geometry&amp; amrex::AmrMesh::Geom</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>Geom</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="48" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a0e239204ca8c8cf3d581fda8b3366252" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+        <definition>const DistributionMapping&amp; amrex::AmrMesh::DistributionMap</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>DistributionMap</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="49" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a54cca3df5cf5c60c9405e5d1cd4c4f8f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+        <definition>const BoxArray&amp; amrex::AmrMesh::boxArray</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>boxArray</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1aaffe8a1a71800d6bdf2867b28a261348" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &gt; &amp;</type>
+        <definition>Vector&lt;Geometry&gt;&amp; amrex::AmrMesh::Geom</definition>
+        <argsstring>()</argsstring>
+        <name>Geom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="52" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ab522170762d0d76e7c79aefe0d14e37a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <definition>Geometry&amp; amrex::AmrMesh::Geom</definition>
+        <argsstring>(int lev)</argsstring>
+        <name>Geom</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="53" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a830c3115a58fada88b7cfaf5bba9996c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetMaxGridSize</definition>
+        <argsstring>(int new_mgs)</argsstring>
+        <name>SetMaxGridSize</name>
+        <param>
+          <type>int</type>
+          <declname>new_mgs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="55" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a3632af824dc67123e7b7b349dd77c227" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetMaxGridSize</definition>
+        <argsstring>(const IntVect &amp;new_mgs)</argsstring>
+        <name>SetMaxGridSize</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>new_mgs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="58" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a5da3d393a4a7ea75579945ac53681150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetMaxGridSize</definition>
+        <argsstring>(const Vector&lt; int &gt; &amp;new_mgs)</argsstring>
+        <name>SetMaxGridSize</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>new_mgs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="61" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="61" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ad084f5309ca7d7c78e49b41b1da7e162" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetMaxGridSize</definition>
+        <argsstring>(const Vector&lt; IntVect &gt; &amp;new_mgs)</argsstring>
+        <name>SetMaxGridSize</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt; &amp;</type>
+          <declname>new_mgs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="67" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1aa743b181a5d29f05adce20c9bd5c3173" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetBlockingFactor</definition>
+        <argsstring>(int new_bf)</argsstring>
+        <name>SetBlockingFactor</name>
+        <param>
+          <type>int</type>
+          <declname>new_bf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="71" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ae47a62015f3ddf3a52a271323f2a3828" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetBlockingFactor</definition>
+        <argsstring>(const IntVect &amp;new_bf)</argsstring>
+        <name>SetBlockingFactor</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>new_bf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ad0c4a96bcf21f498b214fecc2fdfef3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetBlockingFactor</definition>
+        <argsstring>(const Vector&lt; int &gt; &amp;new_bf)</argsstring>
+        <name>SetBlockingFactor</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>new_bf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="77" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="77" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a146cb4c0e5a204d58b3f516153a593ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetBlockingFactor</definition>
+        <argsstring>(const Vector&lt; IntVect &gt; &amp;new_bf)</argsstring>
+        <name>SetBlockingFactor</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt; &amp;</type>
+          <declname>new_bf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="83" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1aa3a9e81cccf0f19be22844cdc7ebe7d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetGridEff</definition>
+        <argsstring>(Real eff)</argsstring>
+        <name>SetGridEff</name>
+        <param>
+          <type>Real</type>
+          <declname>eff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="87" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a346a473f2c40d271ecb69c0e99859b05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetNProper</definition>
+        <argsstring>(int n)</argsstring>
+        <name>SetNProper</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a7bedfae41bcead7ccfa7693f43763533" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetFinestLevel</definition>
+        <argsstring>(int new_finest_level)</argsstring>
+        <name>SetFinestLevel</name>
+        <param>
+          <type>int</type>
+          <declname>new_finest_level</declname>
+        </param>
+        <briefdescription>
+<para>Set ref_ratio would require rebuiling <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="92" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a84861fe9f00d18e0bc7f4091e8f08a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetDistributionMap</definition>
+        <argsstring>(int lev, const DistributionMapping &amp;dmap_in)</argsstring>
+        <name>SetDistributionMap</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>dmap_in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="93" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="337" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a6253ef6827795b0f670e1a8efaa6709a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetBoxArray</definition>
+        <argsstring>(int lev, const BoxArray &amp;ba_in)</argsstring>
+        <name>SetBoxArray</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>ba_in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1aa8db6878bddff314cc4df64fe7b12825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::ClearDistributionMap</definition>
+        <argsstring>(int lev)</argsstring>
+        <name>ClearDistributionMap</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="96" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="349" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a24e965c9a584a412abceac81a5b65f47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::ClearBoxArray</definition>
+        <argsstring>(int lev)</argsstring>
+        <name>ClearBoxArray</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="97" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="355" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a9341984f2f6514c334c1d38ba791e2c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::nErrorBuf</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>nErrorBuf</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of buffer cells in error estimator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="100" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a2c08ef5c6a3bd4da664288e1f7fa1759" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real amrex::AmrMesh::gridEff</definition>
+        <argsstring>() const </argsstring>
+        <name>gridEff</name>
+        <briefdescription>
+<para>Return the minimum allowable grid efficiency. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="103" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a494fab0322e18b55d1b957018f2a4037" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::nProper</definition>
+        <argsstring>() const </argsstring>
+        <name>nProper</name>
+        <briefdescription>
+<para>Return the number of cells to define proper nesting. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="106" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a2d3e04e87d90cf8d088aa27e6ee9098b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+        <definition>const IntVect&amp; amrex::AmrMesh::blockingFactor</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>blockingFactor</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+<para>Return the blocking factor at level lev. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="109" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ab955b0c5a36cd0989a248b265124e5fc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+        <definition>const IntVect&amp; amrex::AmrMesh::maxGridSize</definition>
+        <argsstring>(int lev) const </argsstring>
+        <name>maxGridSize</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+<para>Return the largest allowable grid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="112" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a224e25326b0df70be8488f5b7e6a349f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::AmrMesh::LevelDefined</definition>
+        <argsstring>(int lev)</argsstring>
+        <name>LevelDefined</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="114" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="361" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ae2cad7cb8252ec6d3512afc904a9e7e9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::AmrMesh::useFixedCoarseGrids</definition>
+        <argsstring>() const </argsstring>
+        <name>useFixedCoarseGrids</name>
+        <briefdescription>
+<para>Should we keep the coarser grids fixed (and not regrid those levels) at all? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="117" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a6da8eed8962368ecd9b7b62fb38c283a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::AmrMesh::useFixedUpToLevel</definition>
+        <argsstring>() const </argsstring>
+        <name>useFixedUpToLevel</name>
+        <briefdescription>
+<para>Up to what level should we keep the coarser grids fixed (and not regrid those levels)? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="120" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a29bca4cd9fb61c896130db020528e56f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::ChopGrids</definition>
+        <argsstring>(int lev, BoxArray &amp;ba, int target_size) const </argsstring>
+        <name>ChopGrids</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>ba</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>target_size</declname>
+        </param>
+        <briefdescription>
+<para>&quot;Try&quot; to chop up grids so that the number of boxes in the <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> is greater than the target_size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="123" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="367" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a962d1689c8b7444f4b2c8a077d3f4766" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref></type>
+        <definition>BoxArray amrex::AmrMesh::MakeBaseGrids</definition>
+        <argsstring>() const </argsstring>
+        <name>MakeBaseGrids</name>
+        <briefdescription>
+<para>Make a level 0 grids covering the whole domain. It does NOT install the new grids. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="126" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="386" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1acb422930e8e69fc386727f45607e114b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::MakeNewGrids</definition>
+        <argsstring>(int lbase, Real time, int &amp;new_finest, Vector&lt; BoxArray &gt; &amp;new_grids)</argsstring>
+        <name>MakeNewGrids</name>
+        <param>
+          <type>int</type>
+          <declname>lbase</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>new_finest</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &gt; &amp;</type>
+          <declname>new_grids</declname>
+        </param>
+        <briefdescription>
+<para>Make new grids based on error estimates. This functin expects that valid BoxArrays exist in this-&gt;grids from level lbase to level this-&gt;finest_level (the current finest level). new_grids. On return, the new finest level is stored in new_finest, and the new grids are stored in new_grids from Array element lbase+1 to new_finest_level (unless fixed grids are used). Note that this function adds at most one more level to the existing levels, and it may remove all levels above the base level. This function does not change the value of this-&gt;finest_level, nor does it modifies any BoxArrays stored in this-&gt;grids. It also does not modify new_grids&apos;s elements outside the range [lbase+1,new_finest_level]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="142" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="402" bodyend="709"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a0bf56e73af1dfffcba7bfcadad887751" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::MakeNewGrids</definition>
+        <argsstring>(Real time=0.0)</argsstring>
+        <name>MakeNewGrids</name>
+        <param>
+          <type>Real</type>
+          <declname>time</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>This function makes new grid for all levels (including level 0). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="145" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="712" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a0c2b59ddec7e4f8b4d2fbbdb44cf0e3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void amrex::AmrMesh::MakeNewLevelFromScratch</definition>
+        <argsstring>(int lev, Real time, const BoxArray &amp;ba, const DistributionMapping &amp;dm)</argsstring>
+        <name>MakeNewLevelFromScratch</name>
+        <reimplementedby refid="classamrex_1_1LSCore_1aef08d0e705a4320bd5b9929bc02b1690">MakeNewLevelFromScratch</reimplementedby>
+        <reimplementedby refid="classamrex_1_1AmrCore_1af037642d569d83cfe2ca14de640a4d28">MakeNewLevelFromScratch</reimplementedby>
+        <reimplementedby refid="classamrex_1_1LSCoreBase_1aa7bc5e980ea04512e48b2c04fa1f3105">MakeNewLevelFromScratch</reimplementedby>
+        <reimplementedby refid="classamrex_1_1Amr_1aeb8d43eac6a57205c148ed7736339bcc">MakeNewLevelFromScratch</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>ba</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>dm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called by the second version of MakeNewGrids. Make a new level from scratch using provided <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> and <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref>. Only used during initialization. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="150" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a12f861395ddfa08181bebf191733b3e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void amrex::AmrMesh::ErrorEst</definition>
+        <argsstring>(int lev, TagBoxArray &amp;tags, Real time, int ngrow)</argsstring>
+        <name>ErrorEst</name>
+        <reimplementedby refid="classamrex_1_1AmrCore_1aa0f5dabb31da45d02a320a11caa96875">ErrorEst</reimplementedby>
+        <reimplementedby refid="classamrex_1_1LSCoreBase_1aff7378920896f28c99d297fcd5e27bf2">ErrorEst</reimplementedby>
+        <reimplementedby refid="classamrex_1_1Amr_1a80b107efe79904f079c92600156e523d">ErrorEst</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1TagBoxArray" kindref="compound">TagBoxArray</ref> &amp;</type>
+          <declname>tags</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngrow</declname>
+        </param>
+        <briefdescription>
+<para>Tag cells for refinement. <ref refid="classamrex_1_1TagBoxArray" kindref="compound">TagBoxArray</ref> tags is built on level lev grids. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="153" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a5830766b42f260b125443b90f40b0a96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void amrex::AmrMesh::ManualTagsPlacement</definition>
+        <argsstring>(int lev, TagBoxArray &amp;tags, const Vector&lt; IntVect &gt; &amp;bf_lev)</argsstring>
+        <name>ManualTagsPlacement</name>
+        <reimplementedby refid="classamrex_1_1Amr_1a9d0e58b8aaa0cac0a8cd432f37198197">ManualTagsPlacement</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1TagBoxArray" kindref="compound">TagBoxArray</ref> &amp;</type>
+          <declname>tags</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt; &amp;</type>
+          <declname>bf_lev</declname>
+        </param>
+        <briefdescription>
+<para>Manually tag. Note that tags is built on level lev grids coarsened by bf_lev[lev]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="156" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a9650ac46b08412a6d487deee85930294" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref></type>
+        <definition>virtual BoxArray amrex::AmrMesh::GetAreaNotToTag</definition>
+        <argsstring>(int lev)</argsstring>
+        <name>GetAreaNotToTag</name>
+        <reimplementedby refid="classamrex_1_1Amr_1af6388eb0b60035305b92b00398c67762">GetAreaNotToTag</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="158" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a3e7aff8507b10562f5054396e711aa2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long amrex::AmrMesh::CountCells</definition>
+        <argsstring>(int lev)</argsstring>
+        <name>CountCells</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="160" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="899" bodyend="902"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a5381e6f1c519958a8ce3911673c11dfe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="162" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a70e260deb8a680a23f0a38ff10296142" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::Finalize</definition>
+        <argsstring>()</argsstring>
+        <name>Finalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a9274bfc294d53126644ed437ac83fe56" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::checkInput</definition>
+        <argsstring>()</argsstring>
+        <name>checkInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="191" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="836" bodyend="896"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ae30c9c8d31c0671c35e181b8d2057444" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetIterateToFalse</definition>
+        <argsstring>()</argsstring>
+        <name>SetIterateToFalse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="193" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a0560bc5909d40c4128ad6ff179ed7c5e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::SetUseNewChop</definition>
+        <argsstring>()</argsstring>
+        <name>SetUseNewChop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="197" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="197" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a6e425fd42753a583ee1cd01736a55d22" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::InitAmrMesh</definition>
+        <argsstring>(int max_level_in, const Vector&lt; int &gt; &amp;n_cell_in, std::vector&lt; int &gt; refrat=std::vector&lt; int &gt;())</argsstring>
+        <name>InitAmrMesh</name>
+        <param>
+          <type>int</type>
+          <declname>max_level_in</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
+          <declname>n_cell_in</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>refrat</declname>
+          <defval>std::vector&lt; int &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="203" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="54" bodyend="325"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a680927b289fb21b7308ab643168d8c79" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::AmrMesh::ProjPeriodic</definition>
+        <argsstring>(BoxList &amp;bd, const Geometry &amp;geom)</argsstring>
+        <name>ProjPeriodic</name>
+        <param>
+          <type><ref refid="classamrex_1_1BoxList" kindref="compound">BoxList</ref> &amp;</type>
+          <declname>bd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>geom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="206" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="784" bodyend="833"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="439">
+        <label>amrex::LSCoreBase</label>
+        <link refid="classamrex_1_1LSCoreBase"/>
+        <childnode refid="437" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="437">
+        <label>amrex::AmrCore</label>
+        <link refid="classamrex_1_1AmrCore"/>
+        <childnode refid="436" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="438">
+        <label>amrex::Amr</label>
+        <link refid="classamrex_1_1Amr"/>
+        <childnode refid="437" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="436">
+        <label>amrex::AmrMesh</label>
+        <link refid="classamrex_1_1AmrMesh"/>
+      </node>
+      <node id="440">
+        <label>amrex::LSCore&lt; F &gt;</label>
+        <link refid="classamrex_1_1LSCore"/>
+        <childnode refid="439" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="447">
+        <label>std::vector&lt; amrex::BoxArray, std::allocator&lt; amrex::BoxArray &gt; &gt;</label>
+      </node>
+      <node id="452">
+        <label>Real</label>
+      </node>
+      <node id="451">
+        <label>std::vector&lt; amrex::Geometry, std::allocator&lt; amrex::Geometry &gt; &gt;</label>
+      </node>
+      <node id="442">
+        <label>amrex::Vector&lt; amrex::DistributionMapping &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="443" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="444">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="446">
+        <label>amrex::Vector&lt; amrex::BoxArray &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="447" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>std::vector&lt; amrex::DistributionMapping, std::allocator&lt; amrex::DistributionMapping &gt; &gt;</label>
+      </node>
+      <node id="448">
+        <label>amrex::Vector&lt; amrex::IntVect &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="449" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="445">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="449">
+        <label>std::vector&lt; amrex::IntVect, std::allocator&lt; amrex::IntVect &gt; &gt;</label>
+      </node>
+      <node id="450">
+        <label>amrex::Vector&lt; amrex::Geometry &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="451" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="441">
+        <label>amrex::AmrMesh</label>
+        <link refid="classamrex_1_1AmrMesh"/>
+        <childnode refid="442" relation="usage">
+          <edgelabel>dmap</edgelabel>
+        </childnode>
+        <childnode refid="444" relation="usage">
+          <edgelabel>n_error_buf</edgelabel>
+        </childnode>
+        <childnode refid="446" relation="usage">
+          <edgelabel>grids</edgelabel>
+        </childnode>
+        <childnode refid="448" relation="usage">
+          <edgelabel>blocking_factor</edgelabel>
+          <edgelabel>max_grid_size</edgelabel>
+          <edgelabel>ref_ratio</edgelabel>
+        </childnode>
+        <childnode refid="450" relation="usage">
+          <edgelabel>geom</edgelabel>
+        </childnode>
+        <childnode refid="452" relation="usage">
+          <edgelabel>grid_eff</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="16" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="15" bodyend="207"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1AmrMesh_1a163e8a28e1f841b2c174d6d34664e2d3" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>AmrMesh</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a13509f5a978e31215ea7e48c5c3803f8" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>AmrMesh</name></member>
+      <member refid="classamrex_1_1AmrMesh_1aa3d1b57d3957feca7d0f897ec2e62824" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>AmrMesh</name></member>
+      <member refid="classamrex_1_1AmrMesh_1acdbddd33ae38b3d038fcaa14ce05e039" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>blocking_factor</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a2d3e04e87d90cf8d088aa27e6ee9098b" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>blockingFactor</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a8d6a6c8a9b9ef9c9d8bce0699f3be93e" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>boxArray</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a54cca3df5cf5c60c9405e5d1cd4c4f8f" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>boxArray</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a8d2f6e5a9f3f46c76d44215f83455475" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>check_input</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a9274bfc294d53126644ed437ac83fe56" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>checkInput</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a29bca4cd9fb61c896130db020528e56f" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>ChopGrids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a24e965c9a584a412abceac81a5b65f47" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>ClearBoxArray</name></member>
+      <member refid="classamrex_1_1AmrMesh_1aa8db6878bddff314cc4df64fe7b12825" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>ClearDistributionMap</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a3e7aff8507b10562f5054396e711aa2f" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>CountCells</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a53988099dc97d12785e8fd8a7652d0d2" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>DistributionMap</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a0e239204ca8c8cf3d581fda8b3366252" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>DistributionMap</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ab7f8457c3e5a0dc0295247f005e5a107" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>dmap</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a12f861395ddfa08181bebf191733b3e7" prot="public" virt="virtual"><scope>amrex::AmrMesh</scope><name>ErrorEst</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a70e260deb8a680a23f0a38ff10296142" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Finalize</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a7a466d1cfea1c18c35128fb5a7c5793f" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>finest_level</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ac902a82d3d86fe6272a14455533794c7" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>finestLevel</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a239ef06043779ea301395ae14876d6cb" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>geom</name></member>
+      <member refid="classamrex_1_1AmrMesh_1aaeb239304f0f2f1fe5e3fa5d3abc1a9b" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Geom</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a295b5e008a877007c0cc9c9b0fa4fc0b" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Geom</name></member>
+      <member refid="classamrex_1_1AmrMesh_1aaffe8a1a71800d6bdf2867b28a261348" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Geom</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ab522170762d0d76e7c79aefe0d14e37a" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Geom</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a9650ac46b08412a6d487deee85930294" prot="public" virt="virtual"><scope>amrex::AmrMesh</scope><name>GetAreaNotToTag</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ae75a2551575e5fd697ab4dc8754541ad" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>grid_eff</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a2c08ef5c6a3bd4da664288e1f7fa1759" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>gridEff</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ae53347adc8a239367f153d3705a8ed25" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>grids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a6e425fd42753a583ee1cd01736a55d22" prot="private" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>InitAmrMesh</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a5381e6f1c519958a8ce3911673c11dfe" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Initialize</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ad47540768ade1598333374d48d3b9593" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>iterate_on_new_grids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a224e25326b0df70be8488f5b7e6a349f" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>LevelDefined</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a962d1689c8b7444f4b2c8a077d3f4766" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>MakeBaseGrids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1acb422930e8e69fc386727f45607e114b" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>MakeNewGrids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a0bf56e73af1dfffcba7bfcadad887751" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>MakeNewGrids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a0c2b59ddec7e4f8b4d2fbbdb44cf0e3d" prot="public" virt="virtual"><scope>amrex::AmrMesh</scope><name>MakeNewLevelFromScratch</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a5830766b42f260b125443b90f40b0a96" prot="public" virt="virtual"><scope>amrex::AmrMesh</scope><name>ManualTagsPlacement</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a716b7e6169d4d0a537970445941e7391" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>max_grid_size</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ac488c17bc512ae46995817401dc7a8e7" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>max_level</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ab955b0c5a36cd0989a248b265124e5fc" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>maxGridSize</name></member>
+      <member refid="classamrex_1_1AmrMesh_1aea00f147dbeb1bde2760a0fa24286bd9" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>maxLevel</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a9585220bf789c9401b6c056ff3b143b1" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>MaxRefRatio</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ad8752d2dfe5714cdecef8fa9eddb1c7e" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>n_error_buf</name></member>
+      <member refid="classamrex_1_1AmrMesh_1afe23a9a66345fa657da022fc5a3cb349" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>n_proper</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a9341984f2f6514c334c1d38ba791e2c1" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>nErrorBuf</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a494fab0322e18b55d1b957018f2a4037" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>nProper</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a51e0432968299f0c83f90d9b79376a6c" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>operator=</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a680927b289fb21b7308ab643168d8c79" prot="private" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>ProjPeriodic</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a7e3c7fc2f5598fdd4132536724933f2a" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>ref_ratio</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a95059679c4b3343198edadf7d9d860e5" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>refine_grid_layout</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a2e4c36a7be2ae0b6bfa9285a9b7c6111" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>refRatio</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a2158bdfbb3869bd064fb1c0804df364e" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>refRatio</name></member>
+      <member refid="classamrex_1_1AmrMesh_1aa743b181a5d29f05adce20c9bd5c3173" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetBlockingFactor</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ae47a62015f3ddf3a52a271323f2a3828" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetBlockingFactor</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ad0c4a96bcf21f498b214fecc2fdfef3d" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetBlockingFactor</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a146cb4c0e5a204d58b3f516153a593ce" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetBlockingFactor</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a6253ef6827795b0f670e1a8efaa6709a" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetBoxArray</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a84861fe9f00d18e0bc7f4091e8f08a34" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetDistributionMap</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a7bedfae41bcead7ccfa7693f43763533" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetFinestLevel</name></member>
+      <member refid="classamrex_1_1AmrMesh_1aa3a9e81cccf0f19be22844cdc7ebe7d1" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetGridEff</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ae30c9c8d31c0671c35e181b8d2057444" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetIterateToFalse</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a830c3115a58fada88b7cfaf5bba9996c" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetMaxGridSize</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a3632af824dc67123e7b7b349dd77c227" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetMaxGridSize</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a5da3d393a4a7ea75579945ac53681150" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetMaxGridSize</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ad084f5309ca7d7c78e49b41b1da7e162" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetMaxGridSize</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a346a473f2c40d271ecb69c0e99859b05" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetNProper</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a0560bc5909d40c4128ad6ff179ed7c5e" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>SetUseNewChop</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a3162b5c3697f4ce32d585ca434ac40a5" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>use_fixed_coarse_grids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a15a5406d39363635d73cc1d986546fe7" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>use_fixed_upto_level</name></member>
+      <member refid="classamrex_1_1AmrMesh_1abaf8432668e3b350306a62e8662f4f96" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>use_new_chop</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ae2cad7cb8252ec6d3512afc904a9e7e9" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>useFixedCoarseGrids</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a6da8eed8962368ecd9b7b62fb38c283a" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>useFixedUpToLevel</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a6d04a0b73b03b5a0008edc4effaeeb44" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>verbose</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ac92b13d13b4c315b5a31e87dcecf0a4b" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Verbose</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a10865e07f3aae297cdea041881e7b9ab" prot="public" virt="virtual"><scope>amrex::AmrMesh</scope><name>~AmrMesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

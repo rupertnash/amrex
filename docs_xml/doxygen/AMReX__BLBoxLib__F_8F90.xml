@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="AMReX__BLBoxLib__F_8F90" kind="file" language="Fortran">
+    <compoundname>AMReX_BLBoxLib_F.F90</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="AMReX__BLBoxLib__F_8F90_1a38d08cc20035cc13da419836003ad89f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>subroutine</type>
+        <definition>subroutine bl_error</definition>
+        <argsstring>(str)</argsstring>
+        <name>bl_error</name>
+        <param>
+          <type>str</type>
+          <defname>str</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLBoxLib_F.F90" line="4" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLBoxLib_F.F90" bodystart="5" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="AMReX__BLBoxLib__F_8F90_1aa8b6d32b739ed686da8f15f74356b75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>subroutine</type>
+        <definition>subroutine bl_warning</definition>
+        <argsstring>(str)</argsstring>
+        <name>bl_warning</name>
+        <param>
+          <type>str</type>
+          <defname>str</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLBoxLib_F.F90" line="18" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLBoxLib_F.F90" bodystart="19" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="AMReX__BLBoxLib__F_8F90_1aa0ea63ca45b43484924fe0feebf85153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>subroutine</type>
+        <definition>subroutine bl_abort</definition>
+        <argsstring>(str)</argsstring>
+        <name>bl_abort</name>
+        <param>
+          <type>str</type>
+          <defname>str</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLBoxLib_F.F90" line="32" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLBoxLib_F.F90" bodystart="33" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">!-----------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword"><sp/><sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLBoxLib__F_8F90_1a38d08cc20035cc13da419836003ad89f" kindref="member">bl_error</ref>(str)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">character*(*)</highlight><highlight class="normal"><sp/>::<sp/>str</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">parameter</highlight><highlight class="normal"><sp/>::<sp/>nstr<sp/>=<sp/>256</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>::<sp/><ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>(nstr)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">flush</highlight><highlight class="normal">(6)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">call<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLutil__F_8F90_1a98b9d6b75a6d264b95da602f2d79e7ea" kindref="member">bl_str2int</ref>(<ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>,<sp/>nstr,<sp/>str)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">call<sp/></highlight><highlight class="normal">bl_error_cpp(<ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>,<sp/>nstr)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword"><sp/><sp/>end<sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLBoxLib__F_8F90_1a38d08cc20035cc13da419836003ad89f" kindref="member">bl_error</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">!-----------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword"><sp/><sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLBoxLib__F_8F90_1aa8b6d32b739ed686da8f15f74356b75e" kindref="member">bl_warning</ref>(str)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">character*(*)</highlight><highlight class="normal"><sp/>::<sp/>str</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">parameter</highlight><highlight class="normal"><sp/>::<sp/>nstr<sp/>=<sp/>256</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>::<sp/><ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>(nstr)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">flush</highlight><highlight class="normal">(6)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">call<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLutil__F_8F90_1a98b9d6b75a6d264b95da602f2d79e7ea" kindref="member">bl_str2int</ref>(<ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>,<sp/>nstr,<sp/>str)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">call<sp/></highlight><highlight class="normal">bl_warning_cpp(<ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>,<sp/>nstr)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword"><sp/><sp/>end<sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLBoxLib__F_8F90_1aa8b6d32b739ed686da8f15f74356b75e" kindref="member">bl_warning</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">!-----------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword"><sp/><sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLBoxLib__F_8F90_1aa0ea63ca45b43484924fe0feebf85153" kindref="member">bl_abort</ref>(str)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">character*(*)</highlight><highlight class="normal"><sp/>::<sp/>str</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">parameter</highlight><highlight class="normal"><sp/>::<sp/>nstr<sp/>=<sp/>256</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>::<sp/><ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>(nstr)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">flush</highlight><highlight class="normal">(6)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">call<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLutil__F_8F90_1a98b9d6b75a6d264b95da602f2d79e7ea" kindref="member">bl_str2int</ref>(<ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>,<sp/>nstr,<sp/>str)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">call<sp/></highlight><highlight class="normal">bl_abort_cpp(<ref refid="AMReX_8cpp_1aeb4d5a00f2dec5130d5810db7725dee7" kindref="member">istr</ref>,<sp/>nstr)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword"><sp/><sp/>end<sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="AMReX__BLBoxLib__F_8F90_1aa0ea63ca45b43484924fe0feebf85153" kindref="member">bl_abort</ref></highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLBoxLib_F.F90"/>
+  </compounddef>
+</doxygen>

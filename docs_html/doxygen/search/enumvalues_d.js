@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['regular',['regular',['../namespaceamrex.html#abd2e3d292645433cefc947725585f87aaaf37d08ae228a87dc6b265fd1019c97d',1,'amrex']]],
-  ['reverseorder',['ReverseOrder',['../classamrex_1_1_int_descriptor.html#a330214b8c0c3e224aecd2d2d95c0a839a4df03ba7689cd2d0b2bceb929c949b61',1,'amrex::IntDescriptor']]],
-  ['roundrobin',['ROUNDROBIN',['../classamrex_1_1_distribution_mapping.html#ad8e078b643635f0027eb797c2d54d3b8a787ff5451e57a2271607a0143b75a38d',1,'amrex::DistributionMapping']]],
-  ['rrsfc',['RRSFC',['../classamrex_1_1_distribution_mapping.html#ad8e078b643635f0027eb797c2d54d3b8a75876358b1ba6c4d337b466fc4404217',1,'amrex::DistributionMapping']]],
-  ['rz',['RZ',['../classamrex_1_1_coord_sys.html#afb633344fd17c5565ce2fff188806ebaa090e74483c754250a5e0ee448bdfe8b3',1,'amrex::CoordSys']]]
+  ['off',['OFF',['../classBLProfStats.html#ababb4629f7a4f662fdd590b9e857f2f4a414e7c26da0e02a38a2765ff8e4ffa34',1,'BLProfStats']]],
+  ['on',['ON',['../classBLProfStats.html#ababb4629f7a4f662fdd590b9e857f2f4aa1da950ff7ae21cd354932a94d62d7e0',1,'BLProfStats']]],
+  ['onefilepercpu',['OneFilePerCPU',['../classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156a93fcd009ee92168a4e419161fc19635b',1,'amrex::VisMF']]],
+  ['out',['out',['../classamrex_1_1ForkJoin.html#a3acf0d91b32d1d08dbe32046028f1466ac68271a63ddbc431c307beb7d2918275',1,'amrex::ForkJoin']]],
+  ['outside_5fdomain',['outside_domain',['../classamrex_1_1BndryData.html#a4d31afbfcfb31a6229877bb9ad880fb9aa3c78d810a253d1eace3c04595537ff1',1,'amrex::BndryData']]]
 ];

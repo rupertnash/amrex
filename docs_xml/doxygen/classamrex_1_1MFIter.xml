@@ -1,0 +1,1066 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classamrex_1_1MFIter" kind="class" language="C++" prot="public">
+    <compoundname>amrex::MFIter</compoundname>
+    <derivedcompoundref refid="classamrex_1_1FabSetIter" prot="public" virt="non-virtual">amrex::FabSetIter</derivedcompoundref>
+    <derivedcompoundref refid="classamrex_1_1FillPatchIterator" prot="public" virt="non-virtual">amrex::FillPatchIterator</derivedcompoundref>
+    <derivedcompoundref refid="classamrex_1_1MFGhostIter" prot="public" virt="non-virtual">amrex::MFGhostIter</derivedcompoundref>
+    <derivedcompoundref refid="classamrex_1_1MultiMaskIter" prot="public" virt="non-virtual">amrex::MultiMaskIter</derivedcompoundref>
+    <derivedcompoundref refid="classamrex_1_1ParIterBase" prot="public" virt="non-virtual">amrex::ParIterBase&lt; is_const, NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classamrex_1_1ParIterBase" prot="public" virt="non-virtual">amrex::ParIterBase&lt; false, NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classamrex_1_1ParIterBase" prot="public" virt="non-virtual">amrex::ParIterBase&lt; true, NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</derivedcompoundref>
+    <includes refid="AMReX__MFIter_8H" local="no">AMReX_MFIter.H</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38" prot="public" static="no">
+        <name>Flags</name>
+        <enumvalue id="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a1db74b1bbdeb756077e4bc33e25a2740" prot="public">
+          <name>Tiling</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+<para>Tiling: Enabling the tiling mode. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a96650cf6d7f0f21d0f4b118ae897d008" prot="public">
+          <name>AllBoxes</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+<para>AllBoxes: If on, all threads/workers loop over all boxes without tiling. This essentially loops over indexMap. Note that many functions won&apos;t work with this. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38af1e51da50b24860035a3665786fe9d14" prot="public">
+          <name>NoTeamBarrier</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+<para>NoTeamBarrier: This option is for Team only. If on, there is no barrier in <ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref> dtor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a30a84aa6392dc4536c6761c0cf72b097" prot="public">
+          <name>SkipInit</name>
+          <initializer>= 0x08</initializer>
+          <briefdescription>
+<para>SkipInit: Used by <ref refid="classamrex_1_1MFGhostIter" kindref="compound">MFGhostIter</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags that specify tiling modes. All these flags are off by default. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="50" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1ab32b9180b7d33b0f9afdc25e9b14bd3e" prot="protected" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &gt; &gt;</type>
+        <definition>std::unique_ptr&lt;FabArray&lt;FArrayBox&gt; &gt; amrex::MFIter::m_fa</definition>
+        <argsstring></argsstring>
+        <name>m_fa</name>
+        <briefdescription>
+<para>This must be the first memeber! </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a198baf9d7f4a208f217569a0c6f02183" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> &amp;</type>
+        <definition>const FabArrayBase&amp; amrex::MFIter::fabArray</definition>
+        <argsstring></argsstring>
+        <name>fabArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="176" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1ae64d80e0b2d14e9209c426a0654e8a1f" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
+        <definition>IntVect amrex::MFIter::tile_size</definition>
+        <argsstring></argsstring>
+        <name>tile_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="178" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a1184620f493f560be355cf02e5a0e619" prot="protected" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char amrex::MFIter::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="180" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1abfba09b9f27138141e9758d1a8ea2e4b" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MFIter::currentIndex</definition>
+        <argsstring></argsstring>
+        <name>currentIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="181" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a65b335b52bc54d9eaf7030a4fce20cf8" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MFIter::beginIndex</definition>
+        <argsstring></argsstring>
+        <name>beginIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="182" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a427faab13c7d1f9d72b476452df519e1" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MFIter::endIndex</definition>
+        <argsstring></argsstring>
+        <name>endIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="183" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a1406cbb9152b357a39e877b78eb8ff0d" prot="protected" static="no" mutable="no">
+        <type><ref refid="classamrex_1_1IndexType" kindref="compound">IndexType</ref></type>
+        <definition>IndexType amrex::MFIter::typ</definition>
+        <argsstring></argsstring>
+        <name>typ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="184" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a16fa2d144bcc71d665056de5938c4b32" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool amrex::MFIter::dynamic</definition>
+        <argsstring></argsstring>
+        <name>dynamic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="186" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1ac482cbbf5ecee6f2593a3e4437623082" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; *</type>
+        <definition>const Vector&lt;int&gt;* amrex::MFIter::index_map</definition>
+        <argsstring></argsstring>
+        <name>index_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="188" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a8a8cdb1fbae0dace9fcc0dc622c3409d" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; *</type>
+        <definition>const Vector&lt;int&gt;* amrex::MFIter::local_index_map</definition>
+        <argsstring></argsstring>
+        <name>local_index_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="189" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a10b2f0f6900d23295fe25fd526153f43" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &gt; *</type>
+        <definition>const Vector&lt;Box&gt;* amrex::MFIter::tile_array</definition>
+        <argsstring></argsstring>
+        <name>tile_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="190" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a72828c9a333be0dfff3e89e350fd0e11" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; *</type>
+        <definition>const Vector&lt;int&gt;* amrex::MFIter::local_tile_index_map</definition>
+        <argsstring></argsstring>
+        <name>local_tile_index_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="191" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a967c3c48ccb4f316911d06fcaccb29fa" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; *</type>
+        <definition>const Vector&lt;int&gt;* amrex::MFIter::num_local_tiles</definition>
+        <argsstring></argsstring>
+        <name>num_local_tiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="192" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classamrex_1_1MFIter_1a07296b12634219c4a15337435852a67b" prot="protected" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int amrex::MFIter::nextDynamicIndex</definition>
+        <argsstring></argsstring>
+        <name>nextDynamicIndex</name>
+        <initializer>= std::numeric_limits&lt;int&gt;::<ref refid="namespaceamrex_1af030cf6f4fd19d9e092d9af517ca7d15" kindref="member">min</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="204" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classamrex_1_1MFIter_1aac055187a5b4d7200fc77827dc28a76c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const FabArrayBase &amp;fabarray, unsigned char flags_=0)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> &amp;</type>
+          <declname>fabarray</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>flags_</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>The default constructor does not enable tiling (flags_ is set to 0 by default). However, the tiling mode can be enabled by explicitly turning the tiling flag on (i.e. flags_ = Tiling). The tile size in this case is defined by <ref refid="classamrex_1_1FabArrayBase_1a8635aa060ab92c84d2641b61e0584052" kindref="member">FabArrayBase::mfiter_tile_size</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="10" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1ae7623281ac9e772db1fc5085a64aeeca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const FabArrayBase &amp;fabarray, bool do_tiling)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> &amp;</type>
+          <declname>fabarray</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>do_tiling</declname>
+        </param>
+        <briefdescription>
+<para>Enable tiling with the default tile size, which is defined by <ref refid="classamrex_1_1FabArrayBase_1a8635aa060ab92c84d2641b61e0584052" kindref="member">FabArrayBase::mfiter_tile_size</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="78" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="26" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a1d9668de99635aa50096d0f091d8b9b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const FabArrayBase &amp;fabarray, const IntVect &amp;tilesize, unsigned char flags_=0)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> &amp;</type>
+          <declname>fabarray</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>tilesize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>flags_</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Enable tiling with explicit tile size and flags (See type Flags for more information) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="82" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="42" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a830e42aee76ec9fe8dae8bdd262e0b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const BoxArray &amp;ba, const DistributionMapping &amp;dm, unsigned char flags_=0)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>ba</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>dm</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>flags_</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="86" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="59" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1ad7a19e95ba128febb94b27d2a9d97ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const BoxArray &amp;ba, const DistributionMapping &amp;dm, bool do_tiling)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>ba</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>dm</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>do_tiling</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="77" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a970e636bf6a2d744068483806ddb7944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const BoxArray &amp;ba, const DistributionMapping &amp;dm, const IntVect &amp;tilesize, unsigned char flags_=0)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>ba</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>dm</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>tilesize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>flags_</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="90" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="96" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a2c0a016e1d5d69073f2cab81e7c6a095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const FabArrayBase &amp;fabarray, const MFItInfo &amp;info)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> &amp;</type>
+          <declname>fabarray</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structamrex_1_1MFItInfo" kindref="compound">MFItInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="93" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="147" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1aecfd3f3ef12e8703caad5794968ff06a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(const BoxArray &amp;ba, const DistributionMapping &amp;dm, const MFItInfo &amp;info)</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
+          <declname>ba</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+          <declname>dm</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structamrex_1_1MFItInfo" kindref="compound">MFItInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="95" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="116" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a66b92b6dbfbe1a498ba614df28817709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::MFIter</definition>
+        <argsstring>(MFIter &amp;&amp;rhs)=default</argsstring>
+        <name>MFIter</name>
+        <param>
+          <type><ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1aac3223d243bff8f86cbd227b8f1af866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::MFIter::~MFIter</definition>
+        <argsstring>()</argsstring>
+        <name>~MFIter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="100" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="176" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a5ee5aa32becbbb2490764c1b59399bf2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::tilebox</definition>
+        <argsstring>() const </argsstring>
+        <name>tilebox</name>
+        <briefdescription>
+<para>Return the tile <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> at the current index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="103" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="301" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a38d6ae3b5ed3802c272809feb7eb4168" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::tilebox</definition>
+        <argsstring>(const IntVect &amp;nodal) const </argsstring>
+        <name>tilebox</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+<para>Return the tilebox with provided nodal flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="106" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="322" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a34fd1729c06d788a8a7fc1e706832501" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::tilebox</definition>
+        <argsstring>(const IntVect &amp;nodal, const IntVect &amp;ngrow) const </argsstring>
+        <name>tilebox</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>ngrow</declname>
+        </param>
+        <briefdescription>
+<para>Return the tilebox with provided nodal flag and grown cells. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="109" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="344" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a9c69e3a5196ec1466c349566cada2a2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::nodaltilebox</definition>
+        <argsstring>(int dir=-1) const </argsstring>
+        <name>nodaltilebox</name>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Return the dir-nodal (or all nodal if dir&lt;0) <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> at the current index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="112" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="360" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a47910f5a556870e1ba7e2e5734075cb8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::growntilebox</definition>
+        <argsstring>(int ng=-1000000) const </argsstring>
+        <name>growntilebox</name>
+        <param>
+          <type>int</type>
+          <declname>ng</declname>
+          <defval>-1000000</defval>
+        </param>
+        <briefdescription>
+<para>Return the tile box at the current index grown to include ghost cells. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="115" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="388" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1af72042687093d0139899798b905c245b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::growntilebox</definition>
+        <argsstring>(const IntVect &amp;ng) const </argsstring>
+        <name>growntilebox</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>ng</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="117" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="406" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1ac2dc7f181e0901e36ffb6918b9caa9a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::grownnodaltilebox</definition>
+        <argsstring>(int dir=-1, int ng=-1000000) const </argsstring>
+        <name>grownnodaltilebox</name>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ng</declname>
+          <defval>-1000000</defval>
+        </param>
+        <briefdescription>
+<para>Return the dir-nodal (or all nodal if dir&lt;0) box grown to include ghost cells. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="120" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="422" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a92db306d7f182316e0350bbd82c7c809" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::grownnodaltilebox</definition>
+        <argsstring>(int dir, const IntVect &amp;ng) const </argsstring>
+        <name>grownnodaltilebox</name>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>ng</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="122" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="430" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a3b646c3a8d9530997d5804769c47b335" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::validbox</definition>
+        <argsstring>() const </argsstring>
+        <name>validbox</name>
+        <briefdescription>
+<para>Return the valid <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> in which the current tile resides. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="125" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1ad7d06509805d87abd88522648072e05c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
+        <definition>Box amrex::MFIter::fabbox</definition>
+        <argsstring>() const </argsstring>
+        <name>fabbox</name>
+        <briefdescription>
+<para>Return the <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> of the FAB at which we currently point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="128" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1ad163462bff3679b60d12d6a92f3a69f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MFIter::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+<para>Increment iterator to the next tile we own. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="131" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="447" bodyend="487"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1ad1cb993a973d541776b06c959d1ae3cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool amrex::MFIter::isValid</definition>
+        <argsstring>() const </argsstring>
+        <name>isValid</name>
+        <briefdescription>
+<para>Is the iterator valid i.e. is it associated with a FAB? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="134" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a4d0d4d533f7d916b28e2223f9d4e4f07" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::MFIter::index</definition>
+        <argsstring>() const </argsstring>
+        <name>index</name>
+        <briefdescription>
+<para>The index into the underlying <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> of the current FAB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="137" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="137" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a5fac49b957fa7be5d08f86899d6ce37a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::MFIter::length</definition>
+        <argsstring>() const </argsstring>
+        <name>length</name>
+        <briefdescription>
+<para>The number of indices. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="140" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a16c99a93d11fc7240730f332e2586b9b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::MFIter::LocalTileIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>LocalTileIndex</name>
+        <briefdescription>
+<para>The current local tile index in the current grid;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="143" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1af2fd15d47b733fec41ff3ed293b6ccb9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::MFIter::numLocalTiles</definition>
+        <argsstring>() const </argsstring>
+        <name>numLocalTiles</name>
+        <briefdescription>
+<para>The the number of tiles in the current grid;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="146" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a0287cec92e00fb111b559123590206f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::MFIter::LocalIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>LocalIndex</name>
+        <briefdescription>
+<para>Return local index into the vector of fab pointers, m_fabs_v When AllBoxes is on, local_index_map is a nullptr and local index is current index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a0d943179eca5b0805f3a42e183a666cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> &amp;</type>
+        <definition>const FabArrayBase&amp; amrex::MFIter::theFabArrayBase</definition>
+        <argsstring>() const </argsstring>
+        <name>theFabArrayBase</name>
+        <briefdescription>
+<para>Constant reference to <ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref> over which we&apos;re iterating. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="166" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1a84a7a1c6a16dd352f210e4a66ee8a138" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::MFIter::tileIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>tileIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="168" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1MFIter_1aa0e30190e5049564ed6c4d722c4d9f27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
+        <definition>const DistributionMapping&amp; amrex::MFIter::DistributionMap</definition>
+        <argsstring>() const </argsstring>
+        <name>DistributionMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="170" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="170" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classamrex_1_1MFIter_1addaa9305a4ee5dda972e835164b70e29" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::MFIter::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="206" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.cpp" bodystart="205" bodyend="298"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3529">
+        <label>amrex::MFIter</label>
+        <link refid="classamrex_1_1MFIter"/>
+      </node>
+      <node id="3537">
+        <label>amrex::ParIterBase&lt; true, NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</label>
+        <link refid="classamrex_1_1ParIterBase"/>
+        <childnode refid="3529" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3535">
+        <label>amrex::ParIterBase&lt; false, NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</label>
+        <link refid="classamrex_1_1ParIterBase"/>
+        <childnode refid="3529" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3531">
+        <label>amrex::FillPatchIterator</label>
+        <link refid="classamrex_1_1FillPatchIterator"/>
+        <childnode refid="3529" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3536">
+        <label>amrex::ParIter&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</label>
+        <link refid="classamrex_1_1ParIter"/>
+        <childnode refid="3535" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3538">
+        <label>amrex::ParConstIter&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</label>
+        <link refid="classamrex_1_1ParConstIter"/>
+        <childnode refid="3537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3532">
+        <label>amrex::MFGhostIter</label>
+        <link refid="classamrex_1_1MFGhostIter"/>
+        <childnode refid="3529" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3530">
+        <label>amrex::FabSetIter</label>
+        <link refid="classamrex_1_1FabSetIter"/>
+        <childnode refid="3529" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3533">
+        <label>amrex::MultiMaskIter</label>
+        <link refid="classamrex_1_1MultiMaskIter"/>
+        <childnode refid="3529" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3534">
+        <label>amrex::ParIterBase&lt; is_const, NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</label>
+        <link refid="classamrex_1_1ParIterBase"/>
+        <childnode refid="3529" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3539">
+        <label>amrex::MFIter</label>
+        <link refid="classamrex_1_1MFIter"/>
+        <childnode refid="3540" relation="usage">
+          <edgelabel>fabArray</edgelabel>
+        </childnode>
+        <childnode refid="3544" relation="usage">
+          <edgelabel>tile_size</edgelabel>
+        </childnode>
+        <childnode refid="3546" relation="usage">
+          <edgelabel>index_map</edgelabel>
+          <edgelabel>local_index_map</edgelabel>
+          <edgelabel>local_tile_index_map</edgelabel>
+          <edgelabel>num_local_tiles</edgelabel>
+        </childnode>
+        <childnode refid="3554" relation="usage">
+          <edgelabel>tile_array</edgelabel>
+        </childnode>
+        <childnode refid="3553" relation="usage">
+          <edgelabel>typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="3541">
+        <label>amrex::FabArrayBase::CacheStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1CacheStats"/>
+        <childnode refid="3542" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3545">
+        <label>amrex::FabArrayBase::FabArrayStats</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
+      </node>
+      <node id="3555">
+        <label>std::vector&lt; amrex::Box, std::allocator&lt; amrex::Box &gt; &gt;</label>
+      </node>
+      <node id="3544">
+        <label>amrex::IntVect</label>
+        <link refid="classamrex_1_1IntVect"/>
+        <childnode refid="3544" relation="usage">
+          <edgelabel>Unit</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="3546">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3547" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3542">
+        <label>string</label>
+      </node>
+      <node id="3547">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="3552">
+        <label>amrex::BoxArray</label>
+        <link refid="classamrex_1_1BoxArray"/>
+        <childnode refid="3544" relation="usage">
+          <edgelabel>m_crse_ratio</edgelabel>
+        </childnode>
+        <childnode refid="3553" relation="usage">
+          <edgelabel>m_typ</edgelabel>
+        </childnode>
+      </node>
+      <node id="3550">
+        <label>amrex::DistributionMapping::RefID</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1RefID"/>
+        <childnode refid="3551" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="3553">
+        <label>amrex::IndexType</label>
+        <link refid="classamrex_1_1IndexType"/>
+      </node>
+      <node id="3551">
+        <label>amrex::DistributionMapping::Ref</label>
+        <link refid="structamrex_1_1DistributionMapping_1_1Ref"/>
+        <childnode refid="3546" relation="usage">
+          <edgelabel>m_index_array</edgelabel>
+          <edgelabel>m_pmap</edgelabel>
+        </childnode>
+      </node>
+      <node id="3543">
+        <label>amrex::DistributionMapping</label>
+        <link refid="classamrex_1_1DistributionMapping"/>
+      </node>
+      <node id="3548">
+        <label>amrex::FabArrayBase::BDKey</label>
+        <link refid="structamrex_1_1FabArrayBase_1_1BDKey"/>
+        <childnode refid="3549" relation="usage">
+          <edgelabel>m_ba_id</edgelabel>
+        </childnode>
+        <childnode refid="3550" relation="usage">
+          <edgelabel>m_dm_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="3549">
+        <label>amrex::BoxArray::RefID</label>
+        <link refid="structamrex_1_1BoxArray_1_1RefID"/>
+      </node>
+      <node id="3554">
+        <label>amrex::Vector&lt; amrex::Box &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="3555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3540">
+        <label>amrex::FabArrayBase</label>
+        <link refid="classamrex_1_1FabArrayBase"/>
+        <childnode refid="3541" relation="usage">
+          <edgelabel>m_FBC_stats</edgelabel>
+          <edgelabel>m_FPinfo_stats</edgelabel>
+          <edgelabel>m_CFinfo_stats</edgelabel>
+          <edgelabel>m_TAC_stats</edgelabel>
+          <edgelabel>m_CPC_stats</edgelabel>
+        </childnode>
+        <childnode refid="3543" relation="usage">
+          <edgelabel>distributionMap</edgelabel>
+        </childnode>
+        <childnode refid="3544" relation="usage">
+          <edgelabel>n_grow</edgelabel>
+          <edgelabel>comm_tile_size</edgelabel>
+          <edgelabel>mfiter_tile_size</edgelabel>
+          <edgelabel>mfghostiter_tile_size</edgelabel>
+        </childnode>
+        <childnode refid="3545" relation="usage">
+          <edgelabel>m_FA_stats</edgelabel>
+        </childnode>
+        <childnode refid="3546" relation="usage">
+          <edgelabel>indexArray</edgelabel>
+        </childnode>
+        <childnode refid="3548" relation="usage">
+          <edgelabel>m_bdkey</edgelabel>
+        </childnode>
+        <childnode refid="3552" relation="usage">
+          <edgelabel>boxarray</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" line="47" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MFIter.H" bodystart="46" bodyend="207"/>
+    <listofallmembers>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a96650cf6d7f0f21d0f4b118ae897d008" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>AllBoxes</name></member>
+      <member refid="classamrex_1_1MFIter_1a65b335b52bc54d9eaf7030a4fce20cf8" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>beginIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1abfba09b9f27138141e9758d1a8ea2e4b" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>currentIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1aa0e30190e5049564ed6c4d722c4d9f27" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>DistributionMap</name></member>
+      <member refid="classamrex_1_1MFIter_1a16fa2d144bcc71d665056de5938c4b32" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>dynamic</name></member>
+      <member refid="classamrex_1_1MFIter_1a427faab13c7d1f9d72b476452df519e1" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>endIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1a198baf9d7f4a208f217569a0c6f02183" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>fabArray</name></member>
+      <member refid="classamrex_1_1MFIter_1ad7d06509805d87abd88522648072e05c" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>fabbox</name></member>
+      <member refid="classamrex_1_1MFIter_1a1184620f493f560be355cf02e5a0e619" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>flags</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>Flags</name></member>
+      <member refid="classamrex_1_1MFIter_1ac2dc7f181e0901e36ffb6918b9caa9a4" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>grownnodaltilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a92db306d7f182316e0350bbd82c7c809" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>grownnodaltilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a47910f5a556870e1ba7e2e5734075cb8" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>growntilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1af72042687093d0139899798b905c245b" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>growntilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a4d0d4d533f7d916b28e2223f9d4e4f07" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>index</name></member>
+      <member refid="classamrex_1_1MFIter_1ac482cbbf5ecee6f2593a3e4437623082" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>index_map</name></member>
+      <member refid="classamrex_1_1MFIter_1addaa9305a4ee5dda972e835164b70e29" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>Initialize</name></member>
+      <member refid="classamrex_1_1MFIter_1ad1cb993a973d541776b06c959d1ae3cd" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>isValid</name></member>
+      <member refid="classamrex_1_1MFIter_1a5fac49b957fa7be5d08f86899d6ce37a" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>length</name></member>
+      <member refid="classamrex_1_1MFIter_1a8a8cdb1fbae0dace9fcc0dc622c3409d" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>local_index_map</name></member>
+      <member refid="classamrex_1_1MFIter_1a72828c9a333be0dfff3e89e350fd0e11" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>local_tile_index_map</name></member>
+      <member refid="classamrex_1_1MFIter_1a0287cec92e00fb111b559123590206f8" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>LocalIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1a16c99a93d11fc7240730f332e2586b9b" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>LocalTileIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1ab32b9180b7d33b0f9afdc25e9b14bd3e" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>m_fa</name></member>
+      <member refid="classamrex_1_1MFIter_1aac055187a5b4d7200fc77827dc28a76c" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1ae7623281ac9e772db1fc5085a64aeeca" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a1d9668de99635aa50096d0f091d8b9b0" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a830e42aee76ec9fe8dae8bdd262e0b2d" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1ad7a19e95ba128febb94b27d2a9d97ef1" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a970e636bf6a2d744068483806ddb7944" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a2c0a016e1d5d69073f2cab81e7c6a095" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1aecfd3f3ef12e8703caad5794968ff06a" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a66b92b6dbfbe1a498ba614df28817709" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>MFIter</name></member>
+      <member refid="classamrex_1_1MFIter_1a07296b12634219c4a15337435852a67b" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>nextDynamicIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1a9c69e3a5196ec1466c349566cada2a2b" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>nodaltilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38af1e51da50b24860035a3665786fe9d14" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>NoTeamBarrier</name></member>
+      <member refid="classamrex_1_1MFIter_1a967c3c48ccb4f316911d06fcaccb29fa" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>num_local_tiles</name></member>
+      <member refid="classamrex_1_1MFIter_1af2fd15d47b733fec41ff3ed293b6ccb9" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>numLocalTiles</name></member>
+      <member refid="classamrex_1_1MFIter_1ad163462bff3679b60d12d6a92f3a69f6" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>operator++</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a30a84aa6392dc4536c6761c0cf72b097" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>SkipInit</name></member>
+      <member refid="classamrex_1_1MFIter_1a0d943179eca5b0805f3a42e183a666cd" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>theFabArrayBase</name></member>
+      <member refid="classamrex_1_1MFIter_1a10b2f0f6900d23295fe25fd526153f43" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>tile_array</name></member>
+      <member refid="classamrex_1_1MFIter_1ae64d80e0b2d14e9209c426a0654e8a1f" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>tile_size</name></member>
+      <member refid="classamrex_1_1MFIter_1a5ee5aa32becbbb2490764c1b59399bf2" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>tilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a38d6ae3b5ed3802c272809feb7eb4168" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>tilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a34fd1729c06d788a8a7fc1e706832501" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>tilebox</name></member>
+      <member refid="classamrex_1_1MFIter_1a84a7a1c6a16dd352f210e4a66ee8a138" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>tileIndex</name></member>
+      <member refid="classamrex_1_1MFIter_1af5cf94bce73f6da744dd94acc46cdf38a1db74b1bbdeb756077e4bc33e25a2740" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>Tiling</name></member>
+      <member refid="classamrex_1_1MFIter_1a1406cbb9152b357a39e877b78eb8ff0d" prot="protected" virt="non-virtual"><scope>amrex::MFIter</scope><name>typ</name></member>
+      <member refid="classamrex_1_1MFIter_1a3b646c3a8d9530997d5804769c47b335" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>validbox</name></member>
+      <member refid="classamrex_1_1MFIter_1aac3223d243bff8f86cbd227b8f1af866" prot="public" virt="non-virtual"><scope>amrex::MFIter</scope><name>~MFIter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
