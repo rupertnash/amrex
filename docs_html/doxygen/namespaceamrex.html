@@ -829,6 +829,13 @@ Functions</h2></td></tr>
 <tr class="separator:a95f0930ba986e82b33990bf2cc0423a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8bc35a2ad51cd8f62e3439b33423b00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#af8bc35a2ad51cd8f62e3439b33423b00">SetVerbose</a> (int v)</td></tr>
 <tr class="separator:af8bc35a2ad51cd8f62e3439b33423b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2451baea738a8717530466c13f37fe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a0b2451baea738a8717530466c13f37fe">get_command</a> ()</td></tr>
+<tr class="separator:a0b2451baea738a8717530466c13f37fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3d8f755663a93f3953f7cda5590cac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a0f3d8f755663a93f3953f7cda5590cac">command_argument_count</a> ()</td></tr>
+<tr class="separator:a0f3d8f755663a93f3953f7cda5590cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566544464dedd2d70fe9969fc79658cd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a566544464dedd2d70fe9969fc79658cd">get_command_argument</a> (int number)</td></tr>
+<tr class="memdesc:a566544464dedd2d70fe9969fc79658cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get command line arguments. The executable name is the zero-th argument. Return empty string if there are not that many arguments. std::string.  <a href="#a566544464dedd2d70fe9969fc79658cd">More...</a><br /></td></tr>
+<tr class="separator:a566544464dedd2d70fe9969fc79658cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d0fa7afb6bbeb5e81b5570445599fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a9d0fa7afb6bbeb5e81b5570445599fbf">GccPlacater</a> ()</td></tr>
 <tr class="separator:a9d0fa7afb6bbeb5e81b5570445599fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d1414946b992f39ca41f135f12a0d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Arena.html">Arena</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ae3d1414946b992f39ca41f135f12a0d1">The_Arena</a> ()</td></tr>
@@ -7211,6 +7218,21 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a0f3d8f755663a93f3953f7cda5590cac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amrex::command_argument_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a417fa2fe3545ffe81b848760bbe1bcd9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -9682,6 +9704,39 @@ template&lt;class B , class F &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b2451baea738a8717530466c13f37fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string amrex::get_command </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a566544464dedd2d70fe9969fc79658cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string amrex::get_command_argument </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get command line arguments. The executable name is the zero-th argument. Return empty string if there are not that many arguments. std::string. </p>
 
 </div>
 </div>
@@ -13968,32 +14023,6 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
 
 </div>
 </div>
-<a class="anchor" id="a255f1f8c5e709392a949283da47211f5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; amrex::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classamrex_1_1Mask.html">Mask</a> &amp;&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a1e3af8577a1ee3509e9bd184d2ab575a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -14019,6 +14048,32 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
 </div><div class="memdoc">
 
 <p>Nice ASCII output. </p>
+
+</div>
+</div>
+<a class="anchor" id="a255f1f8c5e709392a949283da47211f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; amrex::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1Mask.html">Mask</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -20014,56 +20069,6 @@ template&lt;typename To , typename From &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a74aa3abcfec3f6850dbaea7de03029a9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="AMReX__Extension_8H.html#aeb09e10bb31cfaa6b8928520c9041df9">AMREX_INLINE</a> void amrex::yafluxreg_crseadd </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;&#160;</td>
-          <td class="paramname"><em>bx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; int const  &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>flag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> const &amp;&#160;</td>
-          <td class="paramname"><em>fxfab</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>dtdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ab63d8a264abb43a4926626082f0f1de2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -20183,6 +20188,56 @@ template&lt;typename To , typename From &gt; </div>
           <td></td>
           <td class="paramtype">Real&#160;</td>
           <td class="paramname"><em>dtdz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a74aa3abcfec3f6850dbaea7de03029a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="AMReX__Extension_8H.html#aeb09e10bb31cfaa6b8928520c9041df9">AMREX_INLINE</a> void amrex::yafluxreg_crseadd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;&#160;</td>
+          <td class="paramname"><em>bx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; int const  &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> const &amp;&#160;</td>
+          <td class="paramname"><em>fxfab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>dtdx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

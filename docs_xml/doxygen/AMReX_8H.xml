@@ -4092,22 +4092,30 @@
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1a95f0930ba986e82b33990bf2cc0423a0" kindref="member">Verbose</ref><sp/>();</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1af8bc35a2ad51cd8f62e3439b33423b00" kindref="member">SetVerbose</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129" refid="namespaceamrex_1a9d0fa7afb6bbeb5e81b5570445599fbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1a9d0fa7afb6bbeb5e81b5570445599fbf" kindref="member">GccPlacater</ref><sp/>()</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;bool&gt;<sp/>a_b;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;char&gt;<sp/>a_c;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;int&gt;<sp/>a_i;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;long&gt;<sp/>a_l;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;unsigned<sp/>char&gt;<sp/>a_uc;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;unsigned<sp/>int&gt;<sp/>a_ui;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;unsigned<sp/>long&gt;<sp/>a_ul;</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;float&gt;<sp/>a_f;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;double&gt;<sp/>a_d;</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;std::string&gt;<sp/>a_s;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BL_AMREX_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>!<sp/>Get<sp/>the<sp/>entire<sp/>command<sp/>line<sp/>including<sp/>the<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespaceamrex_1a0b2451baea738a8717530466c13f37fe" kindref="member">get_command</ref><sp/>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>!<sp/>Get<sp/>number<sp/>of<sp/>command<sp/>line<sp/>arguments<sp/>after<sp/>the<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1a0f3d8f755663a93f3953f7cda5590cac" kindref="member">command_argument_count</ref><sp/>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespaceamrex_1a566544464dedd2d70fe9969fc79658cd" kindref="member">get_command_argument</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>number);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="namespaceamrex_1a9d0fa7afb6bbeb5e81b5570445599fbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1a9d0fa7afb6bbeb5e81b5570445599fbf" kindref="member">GccPlacater</ref><sp/>()</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;bool&gt;<sp/>a_b;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;char&gt;<sp/>a_c;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;int&gt;<sp/>a_i;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;long&gt;<sp/>a_l;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;unsigned<sp/>char&gt;<sp/>a_uc;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;unsigned<sp/>int&gt;<sp/>a_ui;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;unsigned<sp/>long&gt;<sp/>a_ul;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;float&gt;<sp/>a_f;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;double&gt;<sp/>a_d;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;std::string&gt;<sp/>a_s;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BL_AMREX_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H"/>
   </compounddef>

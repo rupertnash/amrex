@@ -15,6 +15,8 @@ var searchData=
   ['get_5fbeta',['get_beta',['../classamrex_1_1ABecLaplacian.html#a1e44aab98e812a24c04e7c0685855188',1,'amrex::ABecLaplacian::get_beta()'],['../classamrex_1_1LinOp.html#af245a02cfc92f3ddf30d6ace1c1683bb',1,'amrex::LinOp::get_beta()'],['../classamrex_1_1ABec4.html#aa3cb2ce5caf5ce37d3d16868e9108f8b',1,'amrex::ABec4::get_beta()'],['../classamrex_1_1DivVis.html#a7d9a701344aa31732bcae64631e6f4d2',1,'amrex::DivVis::get_beta()']]],
   ['get_5fcc_5fba',['get_cc_ba',['../classamrex_1_1LSFactory.html#a8be35b09b5a4d7be20bcabe1af21667d',1,'amrex::LSFactory']]],
   ['get_5fcell_5ftype',['get_cell_type',['../namespaceamrex__ebcellflag__module.html#a4e837dbfa10cc1075d4c603eddcda32a',1,'amrex_ebcellflag_module']]],
+  ['get_5fcommand',['get_command',['../namespaceamrex.html#a0b2451baea738a8717530466c13f37fe',1,'amrex']]],
+  ['get_5fcommand_5fargument',['get_command_argument',['../namespaceamrex.html#a566544464dedd2d70fe9969fc79658cd',1,'amrex']]],
   ['get_5fd',['get_d',['../classhacc_1_1Dfft.html#af811bb2dca600cc0f76358ff2affeba3',1,'hacc::Dfft']]],
   ['get_5fdata',['get_data',['../classamrex_1_1AmrLevel.html#abe82841aac412b6335912b1bd98da33b',1,'amrex::AmrLevel::get_data()'],['../classamrex_1_1LSFactory.html#a9b140ec1200d220b01566334c485b114',1,'amrex::LSFactory::get_data()'],['../classamrex_1_1LSFactory.html#a648e99521904e0c659048596643fe867',1,'amrex::LSFactory::get_data() const ']]],
   ['get_5fderive_5flst',['get_derive_lst',['../classamrex_1_1AmrLevel.html#ab2bc4d8607a84f29e2f0d5a5ca722048',1,'amrex::AmrLevel']]],
