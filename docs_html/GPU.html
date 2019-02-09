@@ -591,6 +591,11 @@ data on the GPU.</p>
 that uses CUDA managed memory. This is provided by <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">ManagedDeviceVector</span></span></code>.</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">thrust</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">copy</span></span></code> is also commonly used in AMReX applications. It can be
 implemented portably using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">thrust_copy</span></span></code>.</p>
+<p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">DeviceVector</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">ManagedDeviceVector</span></span></code> are configured to
+use the memory Arenas provided by AMReX (see <span class="xref std std-ref">sec:gpu:memory:</span>). This
+means that you can create temporary versions of these containers on-the-fly
+without needing to performance expensive device memory allocate and free
+operations.</p>
 </div>
 <div class="section" id="amrex-min-and-amrex-max">
 <h2>amrex::min and amrex::max<a class="headerlink" href="#amrex-min-and-amrex-max" title="Permalink to this headline">¶</a></h2>
