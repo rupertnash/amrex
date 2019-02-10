@@ -42,7 +42,7 @@ var searchData=
   ['hoextraptocc',['hoextraptocc',['../AMReX__FILCC__2D_8F90.html#aceaaec1fa1ad1f14d4a3b277da4f4a3c',1,'hoextraptocc(q, q_l1, q_l2, q_h1, q_h2, domlo, domhi, dx, xlo):&#160;AMReX_FILCC_2D.F90'],['../AMReX__FILCC__3D_8F90.html#a02ca9842cbb4347d6ba0a920c636fb7c',1,'hoextraptocc(q, q_l1, q_l2, q_l3, q_h1, q_h2, q_h3, domlo, domhi, dx, xlo):&#160;AMReX_FILCC_3D.F90']]],
   ['homogeneous',['Homogeneous',['../classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884a548465e8241b26162c8e0a7b0cdfc5e7',1,'amrex::MLLinOp']]],
   ['homogeneous_5fbc',['Homogeneous_BC',['../classamrex_1_1LinOp.html#ad5f2fc8009714c47dc63ff6a7a73a5deae1724332b6960ec73ce5040947963f78',1,'amrex::LinOp']]],
-  ['hostfab',['hostFab',['../classamrex_1_1Cuda_1_1AsyncFabImpl.html#ad7a1b684f12082cc64095114f15e0cab',1,'amrex::Cuda::AsyncFabImpl']]],
+  ['hostfab',['hostFab',['../classamrex_1_1Cuda_1_1AsyncFab.html#a015fea7eb1daf1698498552fc9065a4b',1,'amrex::Cuda::AsyncFab::hostFab()'],['../classamrex_1_1Cuda_1_1AsyncFabImpl.html#ad7a1b684f12082cc64095114f15e0cab',1,'amrex::Cuda::AsyncFabImpl::hostFab()']]],
   ['hostvalue',['hostValue',['../structamrex_1_1Cuda_1_1ManagedData.html#a0a138bbe2603de6d5624387fc6cf946d',1,'amrex::Cuda::ManagedData']]],
   ['hostvector',['HostVector',['../namespaceamrex_1_1Cuda.html#adcb14c2960a046890c80ce8039d80e59',1,'amrex::Cuda']]],
   ['how',['How',['../classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156',1,'amrex::VisMF']]],
