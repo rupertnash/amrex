@@ -131,6 +131,8 @@ var searchData=
   ['amrex_5fcudacontainers_2eh',['AMReX_CudaContainers.H',['../AMReX__CudaContainers_8H.html',1,'']]],
   ['amrex_5fcudadevice_2ecpp',['AMReX_CudaDevice.cpp',['../AMReX__CudaDevice_8cpp.html',1,'']]],
   ['amrex_5fcudadevice_2eh',['AMReX_CudaDevice.H',['../AMReX__CudaDevice_8H.html',1,'']]],
+  ['amrex_5fcudaelixir_2ecpp',['AMReX_CudaElixir.cpp',['../AMReX__CudaElixir_8cpp.html',1,'']]],
+  ['amrex_5fcudaelixir_2eh',['AMReX_CudaElixir.H',['../AMReX__CudaElixir_8H.html',1,'']]],
   ['amrex_5fcudalaunch_2ecpp',['AMReX_CudaLaunch.cpp',['../AMReX__CudaLaunch_8cpp.html',1,'']]],
   ['amrex_5fcudalaunch_2eh',['AMReX_CudaLaunch.H',['../AMReX__CudaLaunch_8H.html',1,'']]],
   ['amrex_5fcudamemory_2eh',['AMReX_CudaMemory.H',['../AMReX__CudaMemory_8H.html',1,'']]],

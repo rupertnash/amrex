@@ -272,7 +272,7 @@ var searchData=
   ['grid_5fplaces',['grid_places',['../classamrex_1_1Amr.html#a90155667257e3c51890f716ade65c5e7',1,'amrex::Amr']]],
   ['grideff',['gridEff',['../classamrex_1_1AmrMesh.html#a2c08ef5c6a3bd4da664288e1f7fa1759',1,'amrex::AmrMesh']]],
   ['gridline',['gridline',['../classamrex_1_1XYPlotDataList.html#abd0ed1322eaf065f16a171081fb46668',1,'amrex::XYPlotDataList::gridline()'],['../classamrex_1_1XYPlotDataList.html#aba289334da04db5d612c7568bb262993',1,'amrex::XYPlotDataList::Gridline() const ']]],
-  ['gridlochi',['gridLocHi',['../classamrex_1_1AmrData.html#a7d683070bd9df75f69f1f11257baff26',1,'amrex::AmrData::gridLocHi()'],['../classamrex_1_1AmrData.html#a783394e1b96853c027e417f780491d1a',1,'amrex::AmrData::GridLocHi() const ']]],
+  ['gridlochi',['GridLocHi',['../classamrex_1_1AmrData.html#a783394e1b96853c027e417f780491d1a',1,'amrex::AmrData::GridLocHi() const '],['../classamrex_1_1AmrData.html#a7d683070bd9df75f69f1f11257baff26',1,'amrex::AmrData::gridLocHi()']]],
   ['gridloclo',['GridLocLo',['../classamrex_1_1AmrData.html#a5d3da302bc2294d3fccb9c7e6bb38de8',1,'amrex::AmrData::GridLocLo() const '],['../classamrex_1_1AmrData.html#a28d407574c4e864763d7e30c5374a5f7',1,'amrex::AmrData::gridLocLo()']]],
   ['gridlog',['gridlog',['../classamrex_1_1Amr.html#a8faf7f22cccf4da975ca761f1920f5e8',1,'amrex::Amr']]],
   ['gridmap',['gridmap',['../structdistribution__t.html#aadae10ad5bacae5bceadd4eea37b12c6',1,'distribution_t']]],

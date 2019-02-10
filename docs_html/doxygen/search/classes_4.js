@@ -8,6 +8,7 @@ var searchData=
   ['ebfarrayboxfactory',['EBFArrayBoxFactory',['../classamrex_1_1EBFArrayBoxFactory.html',1,'amrex']]],
   ['ebfluxregister',['EBFluxRegister',['../classamrex_1_1EBFluxRegister.html',1,'amrex']]],
   ['edge',['Edge',['../structamrex_1_1EB2_1_1Edge.html',1,'amrex::EB2']]],
+  ['elixir',['Elixir',['../classamrex_1_1Cuda_1_1Elixir.html',1,'amrex::Cuda']]],
   ['ellipsoidif',['EllipsoidIF',['../classamrex_1_1EB2_1_1EllipsoidIF.html',1,'amrex::EB2']]],
   ['error',['Error',['../classhacc_1_1Error.html',1,'hacc']]],
   ['errorfunc',['ErrorFunc',['../classamrex_1_1ErrorRec_1_1ErrorFunc.html',1,'amrex::ErrorRec']]],

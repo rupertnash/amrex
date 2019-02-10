@@ -59,6 +59,7 @@ var searchData=
   ['_7eebdatacollection',['~EBDataCollection',['../classamrex_1_1EBDataCollection.html#ac0a68c8f5a6914b596f4c47f43d2f6aa',1,'amrex::EBDataCollection']]],
   ['_7eebfarraybox',['~EBFArrayBox',['../classamrex_1_1EBFArrayBox.html#a4f50980c0b4e0c9445ff2497cb2fc573',1,'amrex::EBFArrayBox']]],
   ['_7eebfarrayboxfactory',['~EBFArrayBoxFactory',['../classamrex_1_1EBFArrayBoxFactory.html#ad501654118cdfebf0f2b0d68fb5a6cc1',1,'amrex::EBFArrayBoxFactory']]],
+  ['_7eelixir',['~Elixir',['../classamrex_1_1Cuda_1_1Elixir.html#a431dead75b6711e27ec75ae2aa1efa22',1,'amrex::Cuda::Elixir']]],
   ['_7eellipsoidif',['~EllipsoidIF',['../classamrex_1_1EB2_1_1EllipsoidIF.html#a864a7d1e95d35e2e886ec6ecdfcb8ade',1,'amrex::EB2::EllipsoidIF']]],
   ['_7eerror',['~Error',['../classhacc_1_1Error.html#a7f45ff78177c6a3601796903bfd9fe60',1,'hacc::Error']]],
   ['_7eerrorfunc',['~ErrorFunc',['../classamrex_1_1ErrorRec_1_1ErrorFunc.html#a1a7a3ff62c2702366d99b2492fe905af',1,'amrex::ErrorRec::ErrorFunc']]],

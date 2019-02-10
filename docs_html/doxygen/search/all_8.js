@@ -51,7 +51,7 @@ var searchData=
   ['hwm_5fbuilds',['hwm_builds',['../structamrex_1_1MemProfiler_1_1NBuildsInfo.html#ac85d7c7f2a90d5d1025386987ad4aaa5',1,'amrex::MemProfiler::NBuildsInfo']]],
   ['hwm_5fbytes',['hwm_bytes',['../structamrex_1_1MemProfiler_1_1MemInfo.html#a0986f22c847ee689a532d882351b7ee0',1,'amrex::MemProfiler::MemInfo']]],
   ['hypre',['Hypre',['../classamrex_1_1Hypre.html',1,'amrex']]],
-  ['hypre',['Hypre',['../classamrex_1_1Hypre.html#afd2d6c32022a99d96f73485d03272ec9',1,'amrex::Hypre::Hypre()'],['../classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b',1,'amrex::MLMG::hypre()']]],
+  ['hypre',['hypre',['../classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b',1,'amrex::MLMG::hypre()'],['../classamrex_1_1Hypre.html#afd2d6c32022a99d96f73485d03272ec9',1,'amrex::Hypre::Hypre()']]],
   ['hypre_5fint',['hypre_int',['../namespaceamrex__hypre__fort__module.html#a37cff87c6ce6d7a323cb5165758c7623',1,'amrex_hypre_fort_module']]],
   ['hypreabeclap',['HypreABecLap',['../classamrex_1_1HypreABecLap.html#ad89a45864775721cb3101273d111965f',1,'amrex::HypreABecLap']]],
   ['hypreabeclap',['HypreABecLap',['../classamrex_1_1HypreABecLap.html',1,'amrex']]],
