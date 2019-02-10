@@ -521,6 +521,8 @@ var searchData=
   ['amrex_5fpetsc_2eh',['AMReX_PETSc.H',['../AMReX__PETSc_8H.html',1,'']]],
   ['amrex_5fphysbcfunct_2ecpp',['AMReX_PhysBCFunct.cpp',['../AMReX__PhysBCFunct_8cpp.html',1,'']]],
   ['amrex_5fphysbcfunct_2eh',['AMReX_PhysBCFunct.H',['../AMReX__PhysBCFunct_8H.html',1,'']]],
+  ['amrex_5fplotfiledataimpl_2ecpp',['AMReX_PlotFileDataImpl.cpp',['../AMReX__PlotFileDataImpl_8cpp.html',1,'']]],
+  ['amrex_5fplotfiledataimpl_2eh',['AMReX_PlotFileDataImpl.H',['../AMReX__PlotFileDataImpl_8H.html',1,'']]],
   ['amrex_5fplotfileutil_2ecpp',['AMReX_PlotFileUtil.cpp',['../AMReX__PlotFileUtil_8cpp.html',1,'']]],
   ['amrex_5fplotfileutil_2eh',['AMReX_PlotFileUtil.H',['../AMReX__PlotFileUtil_8H.html',1,'']]],
   ['amrex_5fprint_2eh',['AMReX_Print.H',['../AMReX__Print_8H.html',1,'']]],

@@ -185,6 +185,8 @@
     <innerclass refid="classamrex_1_1PETScABecLap" prot="public">amrex::PETScABecLap</innerclass>
     <innerclass refid="classamrex_1_1PhysBCFunct" prot="public">amrex::PhysBCFunct</innerclass>
     <innerclass refid="classamrex_1_1PhysBCFunctBase" prot="public">amrex::PhysBCFunctBase</innerclass>
+    <innerclass refid="classamrex_1_1PlotFileData" prot="public">amrex::PlotFileData</innerclass>
+    <innerclass refid="classamrex_1_1PlotFileDataImpl" prot="public">amrex::PlotFileDataImpl</innerclass>
     <innerclass refid="classamrex_1_1Print" prot="public">amrex::Print</innerclass>
     <innerclass refid="classamrex_1_1PrintToFile" prot="public">amrex::PrintToFile</innerclass>
     <innerclass refid="classamrex_1_1RealBox" prot="public">amrex::RealBox</innerclass>
@@ -3735,7 +3737,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="140" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="728" bodyend="731"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="140" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="728" bodyend="735"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a9d0fa7afb6bbeb5e81b5570445599fbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -7578,6 +7580,98 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" line="859" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" bodystart="859" bodyend="877"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a5a67d468c456558249ade6f9b145d719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class FAB</type>
+          </param>
+          <param>
+            <type>class bar</type>
+            <defval><ref refid="namespaceamrex_1a8690d4c6386d001b328b07257fe628a0" kindref="member">amrex::EnableIf_t</ref>&lt;IsBaseFab&lt;FAB&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void amrex::Abs</definition>
+        <argsstring>(FabArray&lt; FAB &gt; &amp;dst, FabArray&lt; FAB &gt; const &amp;src, int srccomp, int dstcomp, int numcomp, int nghost)</argsstring>
+        <name>Abs</name>
+        <param>
+          <type><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; FAB &gt; &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; FAB &gt; const &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>srccomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dstcomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numcomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nghost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" line="882" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" bodystart="882" bodyend="885"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a19b3cf73acf195779e25b011bf419818" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class FAB</type>
+          </param>
+          <param>
+            <type>class bar</type>
+            <defval><ref refid="namespaceamrex_1a8690d4c6386d001b328b07257fe628a0" kindref="member">amrex::EnableIf_t</ref>&lt;IsBaseFab&lt;FAB&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void amrex::Abs</definition>
+        <argsstring>(FabArray&lt; FAB &gt; &amp;dst, FabArray&lt; FAB &gt; const &amp;src, int srccomp, int dstcomp, int numcomp, const IntVect &amp;nghost)</argsstring>
+        <name>Abs</name>
+        <param>
+          <type><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; FAB &gt; &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; FAB &gt; const &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>srccomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dstcomp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numcomp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+          <declname>nghost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" line="890" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" bodystart="890" bodyend="908"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ac185c39750011cc24fb8c1a0b872a34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>

@@ -141,6 +141,7 @@ var searchData=
   ['_7ephysbcfunct',['~PhysBCFunct',['../classamrex_1_1PhysBCFunct.html#a757d3f880168d741648fada40531ba09',1,'amrex::PhysBCFunct']]],
   ['_7ephysbcfunctbase',['~PhysBCFunctBase',['../classamrex_1_1PhysBCFunctBase.html#a54055fe52e2bf47cb3e148ce4d644523',1,'amrex::PhysBCFunctBase']]],
   ['_7eplaneif',['~PlaneIF',['../classamrex_1_1EB2_1_1PlaneIF.html#a5eed1ff54bd47ee6ba0e8f07b22c2f5d',1,'amrex::EB2::PlaneIF']]],
+  ['_7eplotfiledataimpl',['~PlotFileDataImpl',['../classamrex_1_1PlotFileDataImpl.html#a316f5905166fb9d8dd4942fea21094d4',1,'amrex::PlotFileDataImpl']]],
   ['_7epolynomialif',['~PolynomialIF',['../classamrex_1_1EB2_1_1PolynomialIF.html#a75de3c71ff7ce9c1e159cdd8a85c07d0',1,'amrex::EB2::PolynomialIF']]],
   ['_7epp_5fentry',['~PP_entry',['../structamrex_1_1ParmParse_1_1PP__entry.html#a121320682d99b6520847915da1206ee2',1,'amrex::ParmParse::PP_entry']]],
   ['_7eprint',['~Print',['../classamrex_1_1Print.html#a3f708f9025b6a26a4e955258b8738a59',1,'amrex::Print']]],
