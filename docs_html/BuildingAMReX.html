@@ -333,12 +333,12 @@ how to customize the build process.</p>
 <div class="section" id="specifying-your-own-compiler">
 <span id="sec-build-local"></span><h2>Specifying your own compiler<a class="headerlink" href="#specifying-your-own-compiler" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">amrex/Tools/GNUMake/Make.local</span></code> file can also specify your own compile
-commands by setting the valiables <code class="docutils literal notranslate"><span class="pre">CXX</span></code>, <code class="docutils literal notranslate"><span class="pre">CC</span></code>, <code class="docutils literal notranslate"><span class="pre">FC</span></code>, and <code class="docutils literal notranslate"><span class="pre">F90</span></code>. This
-might be neccarry if your systems contains non-standard names for compiler
+commands by setting the variables <code class="docutils literal notranslate"><span class="pre">CXX</span></code>, <code class="docutils literal notranslate"><span class="pre">CC</span></code>, <code class="docutils literal notranslate"><span class="pre">FC</span></code>, and <code class="docutils literal notranslate"><span class="pre">F90</span></code>. This
+might be necessary if your systems contains non-standard names for compiler
 commands.</p>
 <p>For example, the following <code class="docutils literal notranslate"><span class="pre">amrex/Tools/GNUMake/Make.local</span></code> builds AMReX
 using a specific compiler (in this case <code class="docutils literal notranslate"><span class="pre">gcc-8</span></code>) without MPI. Whenever
-<code class="docutils literal notranslate"><span class="pre">USE_MPI</span></code>  is true, this confguration defaults to the appropriate
+<code class="docutils literal notranslate"><span class="pre">USE_MPI</span></code>  is true, this configuration defaults to the appropriate
 <code class="docutils literal notranslate"><span class="pre">mpixxx</span></code> command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ifeq <span class="o">(</span><span class="k">$(</span>USE_MPI<span class="k">)</span>,TRUE<span class="o">)</span>
   <span class="nv">CXX</span> <span class="o">=</span> mpicxx
@@ -359,7 +359,7 @@ the correct underlying compilers.</p>
 <div class="section" id="gcc-on-macos">
 <span id="sec-build-macos"></span><h2>GCC on macOS<a class="headerlink" href="#gcc-on-macos" title="Permalink to this headline">¶</a></h2>
 <p>The example configuration above should also run on the latest macOS. On macOS
-the default cxx compiler is clang, whereas the default fortran compiler is
+the default cxx compiler is clang, whereas the default Fortran compiler is
 gfortran. Sometimes it is good to avoid mixing compilers, in that case we can
 use the <code class="docutils literal notranslate"><span class="pre">Make.local</span></code> to force using GCC. However, macOS’ Xcode ships with its
 own (woefully outdated) version of GCC (4.2.1). It is therefore recommended to
@@ -380,7 +380,7 @@ using <code class="docutils literal notranslate"><span class="pre">gcc-8</span><
 that if you are building AMReX using homebrew’s gcc, it is recommended that you
 use homebrew’s mpich. Normally is it fine to simply install its binaries:
 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">mpich</span></code>. But if you are experiencing problems, we suggest
-building mpich usinging homebrew’s gcc: <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">mpich</span> <span class="pre">--cc=gcc-8</span></code>.</p>
+building mpich using homebrew’s gcc: <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">mpich</span> <span class="pre">--cc=gcc-8</span></code>.</p>
 </div>
 </div>
 <div class="section" id="building-libamrex">
@@ -600,7 +600,7 @@ to include the following line in the appropriate CMakeLists.txt file:</p>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">find_package</span> <span class="p">(</span><span class="s">AMReX</span> <span class="s">18</span> <span class="s">[REQUIRED]</span> <span class="s">[HINTS</span> <span class="s">/path/to/installdir/]</span> <span class="p">)</span>
 </pre></div>
 </div>
-<p>In the above snippet, <code class="docutils literal notranslate"><span class="pre">18</span></code> refer to the mininum AMReX version supporting
+<p>In the above snippet, <code class="docutils literal notranslate"><span class="pre">18</span></code> refer to the minimum AMReX version supporting
 the import feature discussed here.
 Linking AMReX to any target defined in your CMake project is done by including
 the following line in the appropriate CMakeLists.txt file</p>
