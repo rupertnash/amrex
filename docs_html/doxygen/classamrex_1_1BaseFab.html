@@ -148,8 +148,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48099208f15f741c739316388f61737a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a48099208f15f741c739316388f61737a">resize</a> (const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;b, int N=1)</td></tr>
 <tr class="memdesc:a48099208f15f741c739316388f61737a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function resizes a <a class="el" href="classamrex_1_1BaseFab.html" title="A Fortran Array-like Object BaseFab emulates the Fortran array concept. Useful operations can be perf...">BaseFab</a> so it covers the <a class="el" href="classamrex_1_1Box.html" title="A Rectangular Domain on an Integer Lattice. ">Box</a> b with N components.  <a href="#a48099208f15f741c739316388f61737a">More...</a><br /></td></tr>
 <tr class="separator:a48099208f15f741c739316388f61737a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b57d8b8545a209e300bd6d8444c3742"><td class="memItemLeft" align="right" valign="top">Elixir&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a6b57d8b8545a209e300bd6d8444c3742">elixir</a> ()</td></tr>
-<tr class="separator:a6b57d8b8545a209e300bd6d8444c3742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05c54627470af00eb89840eec8c7480"><td class="memTemplParams" colspan="2">template&lt;class  = typename std::enable_if&lt;std::is_trivially_destructible&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:ac05c54627470af00eb89840eec8c7480"><td class="memTemplItemLeft" align="right" valign="top">Elixir&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#ac05c54627470af00eb89840eec8c7480">elixir</a> ()</td></tr>
+<tr class="separator:ac05c54627470af00eb89840eec8c7480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac1c517bd0fc4554a0fefdf3399c1d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a3ac1c517bd0fc4554a0fefdf3399c1d2">clear</a> ()</td></tr>
 <tr class="memdesc:a3ac1c517bd0fc4554a0fefdf3399c1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function returns the <a class="el" href="classamrex_1_1BaseFab.html" title="A Fortran Array-like Object BaseFab emulates the Fortran array concept. Useful operations can be perf...">BaseFab</a> to the invalid state. The memory is freed.  <a href="#a3ac1c517bd0fc4554a0fefdf3399c1d2">More...</a><br /></td></tr>
 <tr class="separator:a3ac1c517bd0fc4554a0fefdf3399c1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2519,11 +2520,13 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6b57d8b8545a209e300bd6d8444c3742"></a>
+<a class="anchor" id="ac05c54627470af00eb89840eec8c7480"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;class  = typename std::enable_if&lt;std::is_trivially_destructible&lt;T&gt;::value&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">Elixir <a class="el" href="classamrex_1_1BaseFab.html">amrex::BaseFab</a>&lt; T &gt;::elixir </td>
