@@ -1418,6 +1418,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3a431197f206b148529308a7796d5039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb6a25ecc3b0a78548904c23c20c52a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1iMultiFab.html">iMultiFab</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#adb6a25ecc3b0a78548904c23c20c52a2">makeFineMask</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;cmf, const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;fba, const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;ratio)</td></tr>
 <tr class="separator:adb6a25ecc3b0a78548904c23c20c52a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b123b02ae07d8edcaaad7acdbfda099"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1iMultiFab.html">iMultiFab</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a3b123b02ae07d8edcaaad7acdbfda099">makeFineMask</a> (const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;cba, const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;cdm, const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;fba, const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;ratio)</td></tr>
+<tr class="separator:a3b123b02ae07d8edcaaad7acdbfda099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b179e68f86c4a06d176f587ec95148c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a7b179e68f86c4a06d176f587ec95148c">computeDivergence</a> (<a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;divu, const <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> const *, AMREX_SPACEDIM &gt; &amp;umac, const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;geom)</td></tr>
 <tr class="separator:a7b179e68f86c4a06d176f587ec95148c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19deaea1de1f8799e4c319910ef2dae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a19deaea1de1f8799e4c319910ef2dae4">isMFIterSafe</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;x, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;y)</td></tr>
@@ -12564,6 +12566,44 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a3b123b02ae07d8edcaaad7acdbfda099"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classamrex_1_1iMultiFab.html">iMultiFab</a> amrex::makeFineMask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td>
+          <td class="paramname"><em>cba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;&#160;</td>
+          <td class="paramname"><em>cdm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td>
+          <td class="paramname"><em>fba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;&#160;</td>
+          <td class="paramname"><em>ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aaae16c4ac3245574456ee8dc48c261be"></a>
 <div class="memitem">
 <div class="memproto">
@@ -14529,6 +14569,34 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1637e435aecce22da819f6df77982d2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; amrex::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;&#160;</td>
+          <td class="paramname"><em>hd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a <a class="el" href="structamrex_1_1VisMF_1_1Header.html" title="An on-disk FabArray&lt;FArrayBox&gt; contains this info in a header file. ">VisMF::Header</a> to an ostream in ASCII. </p>
+
+</div>
+</div>
 <a class="anchor" id="a85a195c43f85ba86fc9f4e450117678a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -14560,34 +14628,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1637e435aecce22da819f6df77982d2f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; amrex::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;&#160;</td>
-          <td class="paramname"><em>hd</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write a <a class="el" href="structamrex_1_1VisMF_1_1Header.html" title="An on-disk FabArray&lt;FArrayBox&gt; contains this info in a header file. ">VisMF::Header</a> to an ostream in ASCII. </p>
 
 </div>
 </div>
@@ -20183,7 +20223,7 @@ template&lt;typename To , typename From &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a74aa3abcfec3f6850dbaea7de03029a9"></a>
+<a class="anchor" id="a687fea23dc5c32271e55bc37f26f9a50"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -20214,8 +20254,32 @@ template&lt;typename To , typename From &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> const &amp;&#160;</td>
+          <td class="paramname"><em>fyfab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> const &amp;&#160;</td>
+          <td class="paramname"><em>fzfab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">Real&#160;</td>
           <td class="paramname"><em>dtdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>dtdy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>dtdz</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -20295,7 +20359,7 @@ template&lt;typename To , typename From &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a687fea23dc5c32271e55bc37f26f9a50"></a>
+<a class="anchor" id="a74aa3abcfec3f6850dbaea7de03029a9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -20326,32 +20390,8 @@ template&lt;typename To , typename From &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> const &amp;&#160;</td>
-          <td class="paramname"><em>fyfab</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> const &amp;&#160;</td>
-          <td class="paramname"><em>fzfab</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">Real&#160;</td>
           <td class="paramname"><em>dtdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>dtdy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>dtdz</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
