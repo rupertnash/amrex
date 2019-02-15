@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="131" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="131" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="170" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="170" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" prot="private" static="no" mutable="no">
         <type><ref refid="structamrex_1_1ParticleTile_1ae6b0bb596eb811ce93f8ba2ec6b46589" kindref="member">SoA</ref></type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="132" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="132" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="171" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="171" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -205,12 +205,12 @@
         <argsstring>() const </argsstring>
         <name>size</name>
         <briefdescription>
-        </briefdescription>
+<para>Returns the total number of particles (real and neighbor) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="42" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="42" bodyend="42"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="47" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a80b9e96e04c429ac908a7772478f3f29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -218,12 +218,81 @@
         <argsstring>() const </argsstring>
         <name>numParticles</name>
         <briefdescription>
+<para>Returns the number of real particles (excluding neighbors) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="53" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structamrex_1_1ParticleTile_1aee3b5ee01b533e4729d0420aa4005cbc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::ParticleTile&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::numRealParticles</definition>
+        <argsstring>() const </argsstring>
+        <name>numRealParticles</name>
+        <briefdescription>
+<para>Returns the number of real particles (excluding neighbors) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="59" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="structamrex_1_1ParticleTile_1a662308d06f08d47942da99598a776615" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::ParticleTile&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::numNeighborParticles</definition>
+        <argsstring>() const </argsstring>
+        <name>numNeighborParticles</name>
+        <briefdescription>
+<para>Returns the number of neighbor particles (excluding reals) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="65" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="structamrex_1_1ParticleTile_1a4b41c54867f5d9ebac044ed58d21410f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::ParticleTile&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::numTotalParticles</definition>
+        <argsstring>() const </argsstring>
+        <name>numTotalParticles</name>
+        <briefdescription>
+<para>Returns the total number of particles, real and neighbor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="71" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="structamrex_1_1ParticleTile_1a50a75be63954c07060b18d5abe885cf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::ParticleTile&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::setNumNeighbors</definition>
+        <argsstring>(int num_neighbors)</argsstring>
+        <name>setNumNeighbors</name>
+        <param>
+          <type>int</type>
+          <declname>num_neighbors</declname>
+        </param>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="44" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="44" bodyend="44"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="73" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structamrex_1_1ParticleTile_1a5e74996de3d89aa1995de42bf9b9a8da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int amrex::ParticleTile&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::getNumNeighbors</definition>
+        <argsstring>()</argsstring>
+        <name>getNumNeighbors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="79" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="79" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a01c6271c92fabf63be8ceef8e8bf3ebc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -240,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="46" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="46" bodyend="50"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="85" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="85" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a8b973bf091c4a1b348c77e3a0bcc9bf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -257,7 +326,7 @@
 <para>Add one particle to this tile. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="55" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="55" bodyend="55"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="94" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a796489360bf44d5e6cb7f728aa577c0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -278,7 +347,7 @@
 <para>Add a Real value to the struct-of-arrays at index comp. This sets the data for one particle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="61" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="61" bodyend="63"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="100" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="100" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a03a7e16d333b1f95b6f5f7884a498473" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -295,7 +364,7 @@
 <para>Add Real values to the struct-of-arrays, for all comps at once. This sets the data for one particle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="69" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="69" bodyend="73"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="108" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="108" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1abf242e0a766f0dd4c734782134a00adc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -320,7 +389,7 @@
 <para>Add a range of Real values to the struct-of-arrays for the given comp. This sets the data for several particles at once. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="79" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="79" bodyend="82"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="118" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="118" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1af3367372fba363e641912b4216c87620" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -345,7 +414,7 @@
 <para>Add npar copies of the Real value v to the struct-of-arrays for the given comp. This sets the data for several particles at once. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="88" bodyend="91"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="127" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="127" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1aaa93fb5f97848d4083e3072478beef19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -366,7 +435,7 @@
 <para>Add an int value to the struct-of-arrays at index comp. This sets the data for one particle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="97" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="97" bodyend="99"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="136" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="136" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a381fade9ed18d842350fbac57bb474ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -383,7 +452,7 @@
 <para>Add int values to the struct-of-arrays, for all comps at once. This sets the data for one particle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="105" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="105" bodyend="109"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="144" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="144" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a511592b9a1fec7fbaf7920fd9332e4cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -408,7 +477,7 @@
 <para>Add a range of int values to the struct-of-arrays for the given comp. This sets the data for several particles at once. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="115" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="115" bodyend="118"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="154" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="154" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1ParticleTile_1a968af2f28750e166c7523aed1329b3cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -433,7 +502,7 @@
 <para>Add npar copies of the int value v to the struct-of-arrays for the given comp. This sets the data for several particles at once. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="124" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="124" bodyend="127"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="163" bodyend="166"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -460,18 +529,22 @@
         <link refid="structamrex_1_1StructOfArrays"/>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="23" bodyend="133"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="23" bodyend="172"/>
     <listofallmembers>
       <member refid="structamrex_1_1ParticleTile_1ab10926418fb9524de6ea3f822892e1d3" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>AoS</name></member>
       <member refid="structamrex_1_1ParticleTile_1ac83e79dd2e2babd95c5938cf89164802" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>empty</name></member>
       <member refid="structamrex_1_1ParticleTile_1ae7a25ea8a470f799053e431918ee6699" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>GetArrayOfStructs</name></member>
       <member refid="structamrex_1_1ParticleTile_1a8d95866b677d5c175717eba9f44922bf" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>GetArrayOfStructs</name></member>
+      <member refid="structamrex_1_1ParticleTile_1a5e74996de3d89aa1995de42bf9b9a8da" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>getNumNeighbors</name></member>
       <member refid="structamrex_1_1ParticleTile_1ab58f152b1c9b0ec6c7e7556ef3273868" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>GetStructOfArrays</name></member>
       <member refid="structamrex_1_1ParticleTile_1a02fe1dcb8e8389f64f916449409e63ef" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>GetStructOfArrays</name></member>
       <member refid="structamrex_1_1ParticleTile_1aa0ea8933b8870b1e808211a000be6614" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>IntVector</name></member>
       <member refid="structamrex_1_1ParticleTile_1af7c73b9664c355ab9415113e1c032c88" prot="private" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>m_aos_tile</name></member>
       <member refid="structamrex_1_1ParticleTile_1a0be60c0c485396843c637a1022f5f260" prot="private" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>m_soa_tile</name></member>
+      <member refid="structamrex_1_1ParticleTile_1a662308d06f08d47942da99598a776615" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>numNeighborParticles</name></member>
       <member refid="structamrex_1_1ParticleTile_1a80b9e96e04c429ac908a7772478f3f29" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>numParticles</name></member>
+      <member refid="structamrex_1_1ParticleTile_1aee3b5ee01b533e4729d0420aa4005cbc" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>numRealParticles</name></member>
+      <member refid="structamrex_1_1ParticleTile_1a4b41c54867f5d9ebac044ed58d21410f" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>numTotalParticles</name></member>
       <member refid="structamrex_1_1ParticleTile_1ad1c67821792f0858b9cdb5a6a98a1b14" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>ParticleType</name></member>
       <member refid="structamrex_1_1ParticleTile_1a2b2ec393547273e1b25b09dd8a2462de" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>ParticleVector</name></member>
       <member refid="structamrex_1_1ParticleTile_1a8b973bf091c4a1b348c77e3a0bcc9bf6" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>push_back</name></member>
@@ -485,6 +558,7 @@
       <member refid="structamrex_1_1ParticleTile_1af3367372fba363e641912b4216c87620" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>push_back_real</name></member>
       <member refid="structamrex_1_1ParticleTile_1a1842dcadd4e11fcf017bb29c91491a56" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>RealVector</name></member>
       <member refid="structamrex_1_1ParticleTile_1a01c6271c92fabf63be8ceef8e8bf3ebc" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>resize</name></member>
+      <member refid="structamrex_1_1ParticleTile_1a50a75be63954c07060b18d5abe885cf8" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>setNumNeighbors</name></member>
       <member refid="structamrex_1_1ParticleTile_1a1784ab6d8ccaf82cf65799ce336289a9" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>size</name></member>
       <member refid="structamrex_1_1ParticleTile_1ae6b0bb596eb811ce93f8ba2ec6b46589" prot="public" virt="non-virtual"><scope>amrex::ParticleTile</scope><name>SoA</name></member>
     </listofallmembers>
