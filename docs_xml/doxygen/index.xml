@@ -6161,6 +6161,7 @@
     <member refid="classamrex_1_1MLABecLaplacian_1a850f02af43a26190e332319b9ddb8942" kind="function"><name>averageDownCoeffs</name></member>
     <member refid="classamrex_1_1MLABecLaplacian_1a9f80d265602f986fc8e4a4255ff3a525" kind="function"><name>averageDownCoeffsToCoarseAmrLevel</name></member>
     <member refid="classamrex_1_1MLABecLaplacian_1a4c648c8c2131afb622bc29f4aed80f8a" kind="function"><name>applyMetricTermsCoeffs</name></member>
+    <member refid="classamrex_1_1MLABecLaplacian_1ab420533ea06855a00bb5760d9d201dbb" kind="function"><name>FFlux</name></member>
   </compound>
   <compound refid="classamrex_1_1MLALaplacian" kind="class"><name>amrex::MLALaplacian</name>
     <member refid="classamrex_1_1MLALaplacian_1a9f52dcdbaab0fbc216169c6fb4405110" kind="variable"><name>m_a_scalar</name></member>
@@ -9586,6 +9587,20 @@
     <member refid="namespaceamrex_1a897f9881c98a276a81004760a2bf67b0" kind="function"><name>norm_inf</name></member>
     <member refid="namespaceamrex_1a98d93b35767e8e98fcdcfab5217f4e8f" kind="function"><name>Spacer</name></member>
     <member refid="namespaceamrex_1a98bcbcd1f5d14791eff59903fa738518" kind="function"><name>mg_cc_interp</name></member>
+    <member refid="namespaceamrex_1a9ae8dc022c68b6262f25814e33c10adb" kind="function"><name>mlabeclap_adotx</name></member>
+    <member refid="namespaceamrex_1a48745b92457352c145f29188d8e6f4a2" kind="function"><name>mlabeclap_normalize</name></member>
+    <member refid="namespaceamrex_1aac6d826a58e6b8d0c3d763cfc062dc31" kind="function"><name>mlabeclap_flux_x</name></member>
+    <member refid="namespaceamrex_1ae5667ae7f60cbfbf2527c0af25475a17" kind="function"><name>mlabeclap_flux_xface</name></member>
+    <member refid="namespaceamrex_1a29ba17a71c045f048cc7b8e851d4c72d" kind="function"><name>mlabeclap_adotx</name></member>
+    <member refid="namespaceamrex_1a6f96f99d29e9cb314b6b3bd4fc67b1ed" kind="function"><name>mlabeclap_normalize</name></member>
+    <member refid="namespaceamrex_1a727d1eaa982d26a88640b4f4d6a5f206" kind="function"><name>mlabeclap_flux_y</name></member>
+    <member refid="namespaceamrex_1acc206c3e9f67df9602f2846f575c91d8" kind="function"><name>mlabeclap_flux_yface</name></member>
+    <member refid="namespaceamrex_1a6810c9b5e57bea026e01028db834cb54" kind="function"><name>mlabeclap_adotx</name></member>
+    <member refid="namespaceamrex_1a1f0db3a6a0147e5e545534184c035480" kind="function"><name>mlabeclap_normalize</name></member>
+    <member refid="namespaceamrex_1a98c5e3a45b1640cacff6361a89d5c7cc" kind="function"><name>mlabeclap_flux_z</name></member>
+    <member refid="namespaceamrex_1a04e80e9759e9970268f7291643bebeff" kind="function"><name>mlabeclap_flux_zface</name></member>
+    <member refid="namespaceamrex_1a6d5f9554615ec4e2c857ded8fdb0b812" kind="function"><name>mlmg_lin_cc_interp_r2</name></member>
+    <member refid="namespaceamrex_1a72ec29e58d54b330c01ae154e492ac79" kind="function"><name>mlmg_lin_cc_interp_r4</name></member>
     <member refid="namespaceamrex_1ab612cdff7b506fd2884de82a842e95b8" kind="function"><name>operator&lt;&lt;</name></member>
     <member refid="namespaceamrex_1a680ccf73211338c29c896c0a5b4d18b7" kind="function"><name>getTileIndex</name></member>
   </compound>
@@ -9642,15 +9657,15 @@
   </compound>
   <compound refid="namespaceamrex_1_1_0D403" kind="namespace"><name>amrex::@403</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D421" kind="namespace"><name>amrex::@421</name>
-  </compound>
-  <compound refid="namespaceamrex_1_1_0D426" kind="namespace"><name>amrex::@426</name>
+  <compound refid="namespaceamrex_1_1_0D424" kind="namespace"><name>amrex::@424</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D429" kind="namespace"><name>amrex::@429</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D435" kind="namespace"><name>amrex::@435</name>
+  <compound refid="namespaceamrex_1_1_0D432" kind="namespace"><name>amrex::@432</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D451" kind="namespace"><name>amrex::@451</name>
+  <compound refid="namespaceamrex_1_1_0D442" kind="namespace"><name>amrex::@442</name>
+  </compound>
+  <compound refid="namespaceamrex_1_1_0D458" kind="namespace"><name>amrex::@458</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D49" kind="namespace"><name>amrex::@49</name>
   </compound>
@@ -10489,21 +10504,6 @@
     <member refid="namespaceamrex__mg__module_1aefd6bca3e9ed8536421d9a407e0ccb5d" kind="function"><name>amrex_mg_average</name></member>
     <member refid="namespaceamrex__mg__module_1aff56f90fd3b20a4398f7b4a4cca35062" kind="function"><name>amrex_mg_interp</name></member>
   </compound>
-  <compound refid="namespaceamrex__mlabeclap__1d__module" kind="namespace"><name>amrex_mlabeclap_1d_module</name>
-    <member refid="namespaceamrex__mlabeclap__1d__module_1a868af889bb6cc5fb0c17dbba84899780" kind="function"><name>amrex_mlabeclap_adotx</name></member>
-    <member refid="namespaceamrex__mlabeclap__1d__module_1a211f718dc94e87f5cd1b8fcd0bdd39b6" kind="function"><name>amrex_mlabeclap_normalize</name></member>
-    <member refid="namespaceamrex__mlabeclap__1d__module_1a07a856cfa4ffc345c30a38576c6fb45c" kind="function"><name>amrex_mlabeclap_flux</name></member>
-  </compound>
-  <compound refid="namespaceamrex__mlabeclap__2d__module" kind="namespace"><name>amrex_mlabeclap_2d_module</name>
-    <member refid="namespaceamrex__mlabeclap__2d__module_1ad60c57eb161a4583d8db3335af8861c0" kind="function"><name>amrex_mlabeclap_adotx</name></member>
-    <member refid="namespaceamrex__mlabeclap__2d__module_1a694173e8f1cb79a6bec543a5b2acbe6c" kind="function"><name>amrex_mlabeclap_normalize</name></member>
-    <member refid="namespaceamrex__mlabeclap__2d__module_1afed1904c867e811887f1e3b40a43bcf3" kind="function"><name>amrex_mlabeclap_flux</name></member>
-  </compound>
-  <compound refid="namespaceamrex__mlabeclap__3d__module" kind="namespace"><name>amrex_mlabeclap_3d_module</name>
-    <member refid="namespaceamrex__mlabeclap__3d__module_1a7e5c823ba577eece520b8807df67db24" kind="function"><name>amrex_mlabeclap_adotx</name></member>
-    <member refid="namespaceamrex__mlabeclap__3d__module_1ac6343bfa969f4d6871ad2e8bc43b443b" kind="function"><name>amrex_mlabeclap_normalize</name></member>
-    <member refid="namespaceamrex__mlabeclap__3d__module_1ae736746645069dafe177df4a6ccbb9d4" kind="function"><name>amrex_mlabeclap_flux</name></member>
-  </compound>
   <compound refid="namespaceamrex__mlalap__1d__module" kind="namespace"><name>amrex_mlalap_1d_module</name>
     <member refid="namespaceamrex__mlalap__1d__module_1a42841497a0590ba30e55c95559dd0e72" kind="function"><name>amrex_mlalap_adotx</name></member>
     <member refid="namespaceamrex__mlalap__1d__module_1acaa7a968cb72582ba0b7ededef509bbd" kind="function"><name>amrex_mlalap_normalize</name></member>
@@ -10574,13 +10574,10 @@
     <member refid="namespaceamrex__mllinop__nd__module_1af4f23128068764a8a9c8872ad0789e38" kind="function"><name>amrex_mllinop_apply_metric</name></member>
   </compound>
   <compound refid="namespaceamrex__mlmg__interp__module" kind="namespace"><name>amrex_mlmg_interp_module</name>
-    <member refid="namespaceamrex__mlmg__interp__module_1a74067f489acd49ff7c31c27a8dcb5053" kind="function"><name>amrex_mlmg_lin_cc_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1aab756a2346d835aacd7be21bb179e670" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1a7bfd78ec9883e6e4c68bdb302ae49c85" kind="function"><name>amrex_mlmg_eb_cc_interp</name></member>
-    <member refid="namespaceamrex__mlmg__interp__module_1a74067f489acd49ff7c31c27a8dcb5053" kind="function"><name>amrex_mlmg_lin_cc_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1aab756a2346d835aacd7be21bb179e670" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1a7bfd78ec9883e6e4c68bdb302ae49c85" kind="function"><name>amrex_mlmg_eb_cc_interp</name></member>
-    <member refid="namespaceamrex__mlmg__interp__module_1a74067f489acd49ff7c31c27a8dcb5053" kind="function"><name>amrex_mlmg_lin_cc_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1aab756a2346d835aacd7be21bb179e670" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1a7bfd78ec9883e6e4c68bdb302ae49c85" kind="function"><name>amrex_mlmg_eb_cc_interp</name></member>
   </compound>
@@ -12742,16 +12739,13 @@
   </compound>
   <compound refid="AMReX__MG__K_8H" kind="file"><name>AMReX_MG_K.H</name>
   </compound>
-  <compound refid="AMReX__MLABecLap__1d_8F90" kind="file"><name>AMReX_MLABecLap_1d.F90</name>
+  <compound refid="AMReX__MLABecLap__1D__K_8H" kind="file"><name>AMReX_MLABecLap_1D_K.H</name>
   </compound>
-  <compound refid="AMReX__MLABecLap__2d_8F90" kind="file"><name>AMReX_MLABecLap_2d.F90</name>
+  <compound refid="AMReX__MLABecLap__2D__K_8H" kind="file"><name>AMReX_MLABecLap_2D_K.H</name>
   </compound>
-  <compound refid="AMReX__MLABecLap__3d_8F90" kind="file"><name>AMReX_MLABecLap_3d.F90</name>
+  <compound refid="AMReX__MLABecLap__3D__K_8H" kind="file"><name>AMReX_MLABecLap_3D_K.H</name>
   </compound>
-  <compound refid="AMReX__MLABecLap__F_8H" kind="file"><name>AMReX_MLABecLap_F.H</name>
-    <member refid="AMReX__MLABecLap__F_8H_1a94a1f3112fd67039e0b6731e65ed18c2" kind="function"><name>amrex_mlabeclap_adotx</name></member>
-    <member refid="AMReX__MLABecLap__F_8H_1ab661a21d724e4dee7dc59ce3729f7497" kind="function"><name>amrex_mlabeclap_normalize</name></member>
-    <member refid="AMReX__MLABecLap__F_8H_1af3a6f34d7a3d28dd439ccb14c2d3c3be" kind="function"><name>amrex_mlabeclap_flux</name></member>
+  <compound refid="AMReX__MLABecLap__K_8H" kind="file"><name>AMReX_MLABecLap_K.H</name>
   </compound>
   <compound refid="AMReX__MLABecLaplacian_8cpp" kind="file"><name>AMReX_MLABecLaplacian.cpp</name>
   </compound>
@@ -12831,13 +12825,20 @@
   </compound>
   <compound refid="AMReX__MLMG__1d_8F90" kind="file"><name>AMReX_MLMG_1d.F90</name>
   </compound>
+  <compound refid="AMReX__MLMG__1D__K_8H" kind="file"><name>AMReX_MLMG_1D_K.H</name>
+  </compound>
   <compound refid="AMReX__MLMG__2d_8F90" kind="file"><name>AMReX_MLMG_2d.F90</name>
+  </compound>
+  <compound refid="AMReX__MLMG__2D__K_8H" kind="file"><name>AMReX_MLMG_2D_K.H</name>
   </compound>
   <compound refid="AMReX__MLMG__3d_8F90" kind="file"><name>AMReX_MLMG_3d.F90</name>
   </compound>
+  <compound refid="AMReX__MLMG__3D__K_8H" kind="file"><name>AMReX_MLMG_3D_K.H</name>
+  </compound>
   <compound refid="AMReX__MLMG__F_8H" kind="file"><name>AMReX_MLMG_F.H</name>
-    <member refid="AMReX__MLMG__F_8H_1a51d5f549fb702bbbebd311ad95190765" kind="function"><name>amrex_mlmg_lin_cc_interp</name></member>
     <member refid="AMReX__MLMG__F_8H_1af9b6d72e65f357245eaa9c11c1955cbc" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
+  </compound>
+  <compound refid="AMReX__MLMG__K_8H" kind="file"><name>AMReX_MLMG_K.H</name>
   </compound>
   <compound refid="AMReX__MLMGBndry_8cpp" kind="file"><name>AMReX_MLMGBndry.cpp</name>
   </compound>
