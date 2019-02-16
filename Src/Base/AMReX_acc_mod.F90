@@ -3,6 +3,8 @@ module amrex_acc_module
 
   implicit none
 
+  integer, save :: acc_async_queue
+
 contains
 
   subroutine amrex_initialize_acc (id) bind(c,name='amrex_initialize_acc')
@@ -22,5 +24,15 @@ contains
     call acc_shutdown(acc_device_nvidia)
 #endif
   end subroutine amrex_finalize_acc
+
+  subroutine amrex_set_acc_queue (queue) bind(c,name='amrex_set_acc_queue')
+
+    implicit none
+
+    integer, intent(in), value :: queue
+
+    acc_async_queue = queue
+
+  end subroutine amrex_set_acc_queue
 
 end module amrex_acc_module

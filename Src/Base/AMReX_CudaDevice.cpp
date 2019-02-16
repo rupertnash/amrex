@@ -7,6 +7,10 @@
 #include <AMReX_ParmParse.H>
 #include <AMReX_Print.H>
 
+#ifdef AMREX_USE_ACC
+#include "openacc.h"
+#endif
+
 #if defined(AMREX_USE_CUDA)
 #include <cuda_profiler_api.h>
 #if defined(AMREX_PROFILING) || defined (AMREX_TINY_PROFILING)
@@ -18,6 +22,7 @@
 extern "C" {
     void amrex_initialize_acc (int);
     void amrex_finalize_acc ();
+    void amrex_set_acc_queue (int);
 }
 #endif
 
@@ -38,6 +43,10 @@ dim3 Device::numThreadsOverride = dim3(0, 0, 0);
 dim3 Device::numBlocksOverride  = dim3(0, 0, 0);
 
 cudaDeviceProp Device::device_prop;
+#endif
+
+#if defined(AMREX_USE_ACC)
+int Device::acc_async_queue;
 #endif
 
 void
@@ -281,9 +290,19 @@ Device::setStreamIndex (const int idx)
 #ifdef AMREX_USE_CUDA
     if (idx < 0) {
         cuda_stream = 0;
+#ifdef AMREX_USE_ACC
+        acc_async_queue = acc_async_sync;
+#endif
     } else {
         cuda_stream = cuda_streams[idx % max_cuda_streams];
+#ifdef AMREX_USE_ACC
+        acc_async_queue = idx % max_cuda_streams;
+        acc_set_cuda_stream(acc_async_queue, &cuda_stream);
+#endif
     }
+#ifdef AMREX_USE_ACC
+    amrex_set_acc_queue(acc_async_queue);
+#endif
 #endif
 }
 
@@ -293,6 +312,9 @@ Device::synchronize ()
 #ifdef AMREX_USE_CUDA
     AMREX_GPU_SAFE_CALL(cudaDeviceSynchronize());
 #endif
+#ifdef AMREX_USE_ACC
+    #pragma acc wait;
+#endif
 }
 
 void
@@ -300,6 +322,9 @@ Device::streamSynchronize ()
 {
 #ifdef AMREX_USE_CUDA
     AMREX_GPU_SAFE_CALL(cudaStreamSynchronize(cuda_stream));
+#endif
+#ifdef AMREX_USE_ACC
+    #pragma acc wait(acc_async_queue);
 #endif
 }
 

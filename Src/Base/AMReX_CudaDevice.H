@@ -70,6 +70,10 @@ private:
 
     static cudaDeviceProp device_prop;
 #endif
+
+#if defined(AMREX_USE_ACC)
+    static int acc_async_queue;
+#endif
 };
 
 }}
