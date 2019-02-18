@@ -466,6 +466,10 @@ def update_fortran_procedures(ffile):
             # Detect any used functions from other modules
             subroutine_imported_functions = subroutine_imported_functions + get_function_uses(line)
 
+            # Skip OpenACC statements in the device version.
+            if ("!$acc" in line):
+                line = ""
+
         # Explicitly mark all newly created device targets as public.
 
         if "contains" in line.lower() and not line.strip().startswith('!'):
