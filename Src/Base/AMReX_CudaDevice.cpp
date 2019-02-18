@@ -297,7 +297,7 @@ Device::setStreamIndex (const int idx)
         cuda_stream = cuda_streams[idx % max_cuda_streams];
 #ifdef AMREX_USE_ACC
         acc_async_queue = idx % max_cuda_streams;
-        acc_set_cuda_stream(acc_async_queue, &cuda_stream);
+        acc_set_cuda_stream(acc_async_queue, cuda_stream);
 #endif
     }
 #ifdef AMREX_USE_ACC
