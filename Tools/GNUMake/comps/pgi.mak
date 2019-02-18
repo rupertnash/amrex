@@ -27,12 +27,6 @@ ifeq ($(USE_OMP),TRUE)
   GENERIC_PGI_FLAGS += -mp=nonuma -Minfo=mp
 endif
 
-ifeq ($(USE_ACC),TRUE)
-  GENERIC_PGI_FLAGS += -acc -ta=tesla:cc$(CUDA_ARCH) -Minfo=accel -mcmodel=medium
-else
-  GENERIC_PGI_FLAGS += -noacc
-endif
-
 ########################################################################
 ########################################################################
 ########################################################################
@@ -75,6 +69,15 @@ CFLAGS   += -c99
 CXXFLAGS += $(GENERIC_PGI_FLAGS)
 CFLAGS   += $(GENERIC_PGI_FLAGS)
 
+ifeq ($(USE_ACC),TRUE)
+  # Due to a conflict between pgc++ and nvcc (as of PGI 18.10), only enable
+  # OpenACC for Fortran code.
+  CFLAGS += -noacc
+  CXXFLAGS += -noacc
+else
+  GENERIC_PGI_FLAGS += -noacc
+endif
+
 endif # AMREX_CCOMP == pgi
 
 ########################################################################
@@ -93,6 +96,15 @@ F90 = pgfortran
 
 FFLAGS   =
 F90FLAGS =
+
+ifeq ($(USE_ACC),TRUE)
+  ACC_FLAGS = -acc -ta=tesla:cc$(CUDA_ARCH) -Minfo=accel -mcmodel=medium
+else
+  ACC_FLAGS = -noacc
+endif
+
+FFLAGS += $(ACC_FLAGS)
+F90FLAGS += $(ACC_FLAGS)
 
 ifeq ($(DEBUG),TRUE)
 
