@@ -25,13 +25,25 @@ contains
 #endif
   end subroutine amrex_finalize_acc
 
-  subroutine amrex_set_acc_queue (queue) bind(c,name='amrex_set_acc_queue')
+  subroutine amrex_set_acc_queue (queue, stream) bind(c,name='amrex_set_acc_queue')
+
+    use iso_c_binding, only: c_ptr
+#ifdef AMREX_USE_ACC
+    use openacc, only: acc_set_cuda_stream, acc_async_sync
+#endif
 
     implicit none
 
     integer, intent(in), value :: queue
+    type(c_ptr), intent(in), value :: stream
 
     acc_async_queue = queue
+#ifdef AMREX_USE_ACC
+    if (queue == -1) then
+       acc_async_queue = acc_async_sync
+    end if
+#endif
+    call acc_set_cuda_stream(acc_async_queue, stream)
 
   end subroutine amrex_set_acc_queue
 
