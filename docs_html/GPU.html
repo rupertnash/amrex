@@ -325,15 +325,14 @@ ran with three GPU streams.</span></p>
 <h2>Building with GNU Make<a class="headerlink" href="#building-with-gnu-make" title="Permalink to this headline">¶</a></h2>
 <p>To build AMReX with GPU support, add <code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code> to the
 <code class="docutils literal notranslate"><span class="pre">GNUmakefile</span></code> or as a command line argument.</p>
+<p>Only IBM and PGI support CUDA Fortran, which is also built when
+<code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code>.</p>
 <p>AMReX does not require OpenACC or CUDA Fortran, but application codes
 can use them if they are supported by the compiler.  For OpenACC support, add
 <code class="docutils literal notranslate"><span class="pre">USE_ACC=TRUE</span></code>.  PGI, Cray and GNU compilers support OpenACC.  Thus,
 for OpenACC, you must use <code class="docutils literal notranslate"><span class="pre">COMP=pgi</span></code>, <code class="docutils literal notranslate"><span class="pre">COMP=cray</span></code> or <code class="docutils literal notranslate"><span class="pre">COMP=gnu</span></code>.</p>
-<p>Only IBM and PGI support CUDA Fortran, which is also built when
-<code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code>.</p>
 <p>Currently, only IBM is supported with OpenMP offloading. To use OpenMP
-offloading, make with <code class="docutils literal notranslate"><span class="pre">USE_OMP_OFFLOAD=TRUE</span></code>.
-.. NOTE: IBM OpenMP is currently not supported with CUDA.</p>
+offloading, make with <code class="docutils literal notranslate"><span class="pre">USE_OMP_OFFLOAD=TRUE</span></code>.</p>
 <p>Compiling AMReX with CUDA requires compiling the code through NVIDIA’s
 CUDA compiler driver in addition to the standard compiler.  This driver
 is called <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> and it requires a host compiler to work through.
