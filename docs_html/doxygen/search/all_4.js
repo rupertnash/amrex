@@ -266,7 +266,7 @@ var searchData=
   ['dx_5feb_5fvect',['dx_eb_vect',['../classamrex_1_1LSFactory.html#a8509ec2056ef885bfd65e615f91be200',1,'amrex::LSFactory']]],
   ['dx_5fvect',['dx_vect',['../classamrex_1_1LSFactory.html#a69e5d562871b930a2647501d187f41ed',1,'amrex::LSFactory']]],
   ['dxbydt',['dxbydt',['../classamrex_1_1SplineDistFcnElement2d.html#afafcce62b8f105d73c3dcb97cbe828ee',1,'amrex::SplineDistFcnElement2d']]],
-  ['dxlevel',['dxLevel',['../classamrex_1_1AmrData.html#acf28800ea1c047a973e104f20c05fa4d',1,'amrex::AmrData::dxLevel()'],['../classamrex_1_1AmrData.html#ac9667311983ffb5b0f422eee0e878aab',1,'amrex::AmrData::DxLevel() const ']]],
+  ['dxlevel',['DxLevel',['../classamrex_1_1AmrData.html#ac9667311983ffb5b0f422eee0e878aab',1,'amrex::AmrData::DxLevel() const '],['../classamrex_1_1AmrData.html#acf28800ea1c047a973e104f20c05fa4d',1,'amrex::AmrData::dxLevel()']]],
   ['dxy',['DXY',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#a86606f5cdfbf91c94059a339f38961f4',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
   ['dxz',['DXZ',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#aaee5fd61544216e3cfc08f12419ea7b9',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
   ['dy',['Dy',['../classamrex_1_1SplineDistFcnElement2d.html#a9ef7c332f4ef1f1409c3dfec141c016a',1,'amrex::SplineDistFcnElement2d::Dy()'],['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#a993a7929a1ac695da576b8d876d90946',1,'DY():&#160;AMReX_MCINTERPBNDRYDATA_3D.F']]],

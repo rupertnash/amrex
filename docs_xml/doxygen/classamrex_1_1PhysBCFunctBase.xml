@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="classamrex_1_1PhysBCFunctBase" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>amrex::PhysBCFunctBase</compoundname>
+    <derivedcompoundref refid="classamrex_1_1NoOpPhysBCFunct" prot="public" virt="non-virtual">amrex::NoOpPhysBCFunct&lt; F &gt;</derivedcompoundref>
     <derivedcompoundref refid="classamrex_1_1PhysBCFunct" prot="public" virt="non-virtual">amrex::PhysBCFunct&lt; F &gt;</derivedcompoundref>
     <derivedcompoundref refid="classamrex_1_1StateDataPhysBCFunct" prot="public" virt="non-virtual">amrex::StateDataPhysBCFunct</derivedcompoundref>
     <includes refid="AMReX__PhysBCFunct_8H" local="no">AMReX_PhysBCFunct.H</includes>
@@ -12,6 +13,7 @@
         <argsstring>(MultiFab &amp;mf, int dcomp, int ncomp, Real time, int bccomp)=0</argsstring>
         <name>FillBoundary</name>
         <reimplementedby refid="classamrex_1_1PhysBCFunct_1ab0a5d612dc153f7eec7924c768bcc0fe">FillBoundary</reimplementedby>
+        <reimplementedby refid="classamrex_1_1NoOpPhysBCFunct_1a35ccc4d6ab1c6dffe04a76d524a7f402">FillBoundary</reimplementedby>
         <reimplementedby refid="classamrex_1_1StateDataPhysBCFunct_1aca4cbee3f5794dbe83c39dfe4c6b1900">FillBoundary</reimplementedby>
         <param>
           <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
@@ -60,20 +62,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4764">
+      <node id="4777">
         <label>amrex::PhysBCFunctBase</label>
         <link refid="classamrex_1_1PhysBCFunctBase"/>
       </node>
-      <node id="4766">
+      <node id="4780">
         <label>amrex::StateDataPhysBCFunct</label>
         <link refid="classamrex_1_1StateDataPhysBCFunct"/>
-        <childnode refid="4764" relation="public-inheritance">
+        <childnode refid="4777" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4765">
+      <node id="4778">
+        <label>amrex::NoOpPhysBCFunct&lt; F &gt;</label>
+        <link refid="classamrex_1_1NoOpPhysBCFunct"/>
+        <childnode refid="4777" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4779">
         <label>amrex::PhysBCFunct&lt; F &gt;</label>
         <link refid="classamrex_1_1PhysBCFunct"/>
-        <childnode refid="4764" relation="public-inheritance">
+        <childnode refid="4777" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
