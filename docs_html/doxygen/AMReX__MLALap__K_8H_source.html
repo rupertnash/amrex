@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>AMReX: /home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLALap_3d.F90 File Reference</title>
+<title>AMReX: /home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLALap_K.H Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,31 +85,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Modules</a> &#124;
-<a href="#func-members">Functions/Subroutines</a>  </div>
   <div class="headertitle">
-<div class="title">AMReX_MLALap_3d.F90 File Reference</div>  </div>
+<div class="title">AMReX_MLALap_K.H</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Modules</h2></td></tr>
-<tr class="memitem:namespaceamrex__mlalap__3d__module"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__mlalap__3d__module.html">amrex_mlalap_3d_module</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions/Subroutines</h2></td></tr>
-<tr class="memitem:ac08937ee3cdffd8eac630fd63c906d69"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__mlalap__3d__module.html#ac08937ee3cdffd8eac630fd63c906d69">amrex_mlalap_3d_module::amrex_mlalap_adotx</a> (lo, hi, y, ylo, yhi, x, xlo, xhi, a, alo, ahi, dxinv, alpha, beta)</td></tr>
-<tr class="separator:ac08937ee3cdffd8eac630fd63c906d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a904488d48196e28ebb705c1bd4acbe"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__mlalap__3d__module.html#a2a904488d48196e28ebb705c1bd4acbe">amrex_mlalap_3d_module::amrex_mlalap_normalize</a> (lo, hi, x, xlo, xhi, a, alo, ahi, dxinv, alpha, beta)</td></tr>
-<tr class="separator:a2a904488d48196e28ebb705c1bd4acbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a673a952da13686895cdc0f888d06d991"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__mlalap__3d__module.html#a673a952da13686895cdc0f888d06d991">amrex_mlalap_3d_module::amrex_mlalap_flux</a> (lo, hi, fx, fxlo, fxhi, fy, fylo, fyhi, fz, fzlo, fzhi, sol, slo, shi, dxinv, beta, face_only)</td></tr>
-<tr class="separator:a673a952da13686895cdc0f888d06d991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9766be892d189f1e55065f9aef933640"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__mlalap__3d__module.html#a9766be892d189f1e55065f9aef933640">amrex_mlalap_3d_module::amrex_mlalap_gsrb</a> (lo, hi, phi, hlo, hhi, rhs, rlo, rhi, f0, f0lo, f0hi, f1, f1lo, f1hi, f2, f2lo, f2hi, f3, f3lo, f3hi, f4, f4lo, f4hi, f5, f5lo, f5hi, m0, m0lo, m0hi, m1, m1lo, m1hi, m2, m2lo, m2hi, m3, m3lo, m3hi, m4, m4lo, m4hi, m5, m5lo, m5hi, a, alo, ahi, blo, bhi, dxinv, alpha, beta, redblack)</td></tr>
-<tr class="separator:a9766be892d189f1e55065f9aef933640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+<a href="AMReX__MLALap__K_8H.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef AMREX_MLALAP_K_H_</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define AMREX_MLALAP_K_H_</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="AMReX__FArrayBox_8H.html">AMReX_FArrayBox.H</a>&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#if (AMREX_SPACEDIM == 1)</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="AMReX__MLALap__1D__K_8H.html">AMReX_MLALap_1D_K.H</a>&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#elif (AMREX_SPACEDIM == 2)</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="AMReX__MLALap__2D__K_8H.html">AMReX_MLALap_2D_K.H</a>&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#else</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="AMReX__MLALap__3D__K_8H.html">AMReX_MLALap_3D_K.H</a>&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="AMReX__MLALap__2D__K_8H_html"><div class="ttname"><a href="AMReX__MLALap__2D__K_8H.html">AMReX_MLALap_2D_K.H</a></div></div>
+<div class="ttc" id="AMReX__FArrayBox_8H_html"><div class="ttname"><a href="AMReX__FArrayBox_8H.html">AMReX_FArrayBox.H</a></div></div>
+<div class="ttc" id="AMReX__MLALap__1D__K_8H_html"><div class="ttname"><a href="AMReX__MLALap__1D__K_8H.html">AMReX_MLALap_1D_K.H</a></div></div>
+<div class="ttc" id="AMReX__MLALap__3D__K_8H_html"><div class="ttname"><a href="AMReX__MLALap__3D__K_8H.html">AMReX_MLALap_3D_K.H</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -227,7 +227,7 @@ var searchData=
   ['nstep',['nStep',['../classamrex_1_1AmrLevel.html#ad6a79cb5a4a9a68096183e650138e030',1,'amrex::AmrLevel']]],
   ['nstr',['NSTR',['../AMReX_8cpp.html#ae078190369c20a6e00eec508f558852f',1,'AMReX.cpp']]],
   ['nstreamerrors',['nStreamErrors',['../classamrex_1_1StreamRetry.html#a56fbf590918f701816c5567f4869c6de',1,'amrex::StreamRetry::nStreamErrors()'],['../classamrex_1_1StreamRetry.html#ae894808026adb5099b7b36f193f39f7c',1,'amrex::StreamRetry::NStreamErrors()']]],
-  ['nstride',['nstride',['../structamrex_1_1FabView.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView']]],
+  ['nstride',['nstride',['../structamrex_1_1Array4.html#ac119008e55133b0231fe715d52f0813d',1,'amrex::Array4::nstride()'],['../structamrex_1_1FabView.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView::nstride()']]],
   ['nsweeps',['Nsweeps',['../classSDCstruct.html#a973e673b7bb450a404fb23411259c6ab',1,'SDCstruct']]],
   ['ntanghalfwidth',['NTangHalfWidth',['../classamrex_1_1BndryData.html#ad69d8769b561cfe76e6dd1cac73d7517',1,'amrex::BndryData']]],
   ['ntasks',['NTasks',['../classamrex_1_1ForkJoin.html#a4eaae5bd6eb7e83442d5db4529cf1443',1,'amrex::ForkJoin']]],
