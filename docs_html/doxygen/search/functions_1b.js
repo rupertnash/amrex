@@ -132,7 +132,6 @@ var searchData=
   ['_7emultimask',['~MultiMask',['../classamrex_1_1MultiMask.html#a600deffa74aedae8cd4a0dc4d40bb31e',1,'amrex::MultiMask']]],
   ['_7enfilesiter',['~NFilesIter',['../classamrex_1_1NFilesIter.html#a4f9a9917a9842e888fbdf9d45f5de52e',1,'amrex::NFilesIter']]],
   ['_7enodebilinear',['~NodeBilinear',['../classamrex_1_1NodeBilinear.html#a6420242043deed007eccffb7f763f226',1,'amrex::NodeBilinear']]],
-  ['_7enoopphysbcfunct',['~NoOpPhysBCFunct',['../classamrex_1_1NoOpPhysBCFunct.html#ad3ca6559579391fe80db6cebe0fa7241',1,'amrex::NoOpPhysBCFunct']]],
   ['_7epargdb',['~ParGDB',['../classamrex_1_1ParGDB.html#acf271a609c72007f8d679cec53947a35',1,'amrex::ParGDB']]],
   ['_7epargdbbase',['~ParGDBBase',['../classamrex_1_1ParGDBBase.html#adf64b954c8a5f29d4163808d9d17e5b7',1,'amrex::ParGDBBase']]],
   ['_7eparticlecontainer',['~ParticleContainer',['../classamrex_1_1ParticleContainer.html#a19844f745bc06b0d50ed462e1645c7b8',1,'amrex::ParticleContainer']]],
