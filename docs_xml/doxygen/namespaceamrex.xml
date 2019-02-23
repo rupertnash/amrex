@@ -17650,12 +17650,16 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLALap_3D_K.H" line="169" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLALap_3D_K.H" bodystart="169" bodyend="221"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1af2510b5ba778c0b1af07907b36345a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1aee5849e45817bc6efd3dc51d07c1daef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_apply_bc_x</definition>
-        <argsstring>(Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;masklo, Array4&lt; int const  &gt; const &amp;maskhi, BoundCond bctlo, BoundCond bcthi, Real bcllo, Real bclhi, Array4&lt; Real const  &gt; const &amp;bcvallo, Array4&lt; Real const  &gt; const &amp;bcvalhi, int maxorder, Real dxinv, int inhomog, int ncomp)</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dxinv, int inhomog, int ncomp)</argsstring>
         <name>mllinop_apply_bc_x</name>
         <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
+        <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>box</declname>
         </param>
@@ -17669,35 +17673,19 @@
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>masklo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>maskhi</declname>
+          <declname>mask</declname>
         </param>
         <param>
           <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bctlo</declname>
-        </param>
-        <param>
-          <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bcthi</declname>
+          <declname>bct</declname>
         </param>
         <param>
           <type>Real</type>
-          <declname>bcllo</declname>
-        </param>
-        <param>
-          <type>Real</type>
-          <declname>bclhi</declname>
+          <declname>bcl</declname>
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvallo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvalhi</declname>
+          <declname>bcval</declname>
         </param>
         <param>
           <type>int</type>
@@ -17721,13 +17709,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="12" bodyend="135"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="12" bodyend="79"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1aee3c481d08fcee8593206198be27eb1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a0f96c595494667598a6fdbd119d494bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_apply_bc_y</definition>
-        <argsstring>(Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;masklo, Array4&lt; int const  &gt; const &amp;maskhi, BoundCond bctlo, BoundCond bcthi, Real bcllo, Real bclhi, Array4&lt; Real const  &gt; const &amp;bcvallo, Array4&lt; Real const  &gt; const &amp;bcvalhi, int maxorder, Real dyinv, int inhomog, int ncomp)</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dyinv, int inhomog, int ncomp)</argsstring>
         <name>mllinop_apply_bc_y</name>
+        <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>box</declname>
@@ -17742,35 +17734,19 @@
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>masklo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>maskhi</declname>
+          <declname>mask</declname>
         </param>
         <param>
           <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bctlo</declname>
-        </param>
-        <param>
-          <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bcthi</declname>
+          <declname>bct</declname>
         </param>
         <param>
           <type>Real</type>
-          <declname>bcllo</declname>
-        </param>
-        <param>
-          <type>Real</type>
-          <declname>bclhi</declname>
+          <declname>bcl</declname>
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvallo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvalhi</declname>
+          <declname>bcval</declname>
         </param>
         <param>
           <type>int</type>
@@ -17794,13 +17770,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="138" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="138" bodyend="261"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="82" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="82" bodyend="149"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a667f65b4dd508892babec35ce265cdd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a53a2287d518f9e32c67938c66991c4e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_apply_bc_z</definition>
-        <argsstring>(Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;masklo, Array4&lt; int const  &gt; const &amp;maskhi, BoundCond bctlo, BoundCond bcthi, Real bcllo, Real bclhi, Array4&lt; Real const  &gt; const &amp;bcvallo, Array4&lt; Real const  &gt; const &amp;bcvalhi, int maxorder, Real dzinv, int inhomog, int ncomp)</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dzinv, int inhomog, int ncomp)</argsstring>
         <name>mllinop_apply_bc_z</name>
+        <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>box</declname>
@@ -17815,35 +17795,19 @@
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>masklo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>maskhi</declname>
+          <declname>mask</declname>
         </param>
         <param>
           <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bctlo</declname>
-        </param>
-        <param>
-          <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bcthi</declname>
+          <declname>bct</declname>
         </param>
         <param>
           <type>Real</type>
-          <declname>bcllo</declname>
-        </param>
-        <param>
-          <type>Real</type>
-          <declname>bclhi</declname>
+          <declname>bcl</declname>
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvallo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvalhi</declname>
+          <declname>bcval</declname>
         </param>
         <param>
           <type>int</type>
@@ -17867,13 +17831,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="264" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="264" bodyend="387"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="152" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="152" bodyend="219"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a584c119bd967f87f9c375faa54351896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a92817a5e45a4c2b89f86f8c9090f54f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_comp_interp_coef0_x</definition>
-        <argsstring>(Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;den, Array4&lt; int const  &gt; const &amp;masklo, Array4&lt; int const  &gt; const &amp;maskhi, BoundCond bctlo, BoundCond bcthi, Real bcllo, Real bclhi, Array4&lt; Real const  &gt; const &amp;bcvallo, Array4&lt; Real const  &gt; const &amp;bcvalhi, int maxorder, Real dxinv, int ncomp)</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dxinv, int ncomp)</argsstring>
         <name>mllinop_comp_interp_coef0_x</name>
+        <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>box</declname>
@@ -17884,39 +17852,19 @@
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
-          <declname>den</declname>
+          <declname>f</declname>
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>masklo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>maskhi</declname>
+          <declname>mask</declname>
         </param>
         <param>
           <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bctlo</declname>
-        </param>
-        <param>
-          <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bcthi</declname>
+          <declname>bct</declname>
         </param>
         <param>
           <type>Real</type>
-          <declname>bcllo</declname>
-        </param>
-        <param>
-          <type>Real</type>
-          <declname>bclhi</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvallo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvalhi</declname>
+          <declname>bcl</declname>
         </param>
         <param>
           <type>int</type>
@@ -17936,13 +17884,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="390" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="390" bodyend="490"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="222" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="222" bodyend="275"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a06e4ff2817c74514fb67e46d18eb15d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1ab673a755c3d2345bbd2a3787bb959461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_comp_interp_coef0_y</definition>
-        <argsstring>(Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;den, Array4&lt; int const  &gt; const &amp;masklo, Array4&lt; int const  &gt; const &amp;maskhi, BoundCond bctlo, BoundCond bcthi, Real bcllo, Real bclhi, Array4&lt; Real const  &gt; const &amp;bcvallo, Array4&lt; Real const  &gt; const &amp;bcvalhi, int maxorder, Real dyinv, int ncomp)</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dyinv, int ncomp)</argsstring>
         <name>mllinop_comp_interp_coef0_y</name>
+        <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>box</declname>
@@ -17953,39 +17905,19 @@
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
-          <declname>den</declname>
+          <declname>f</declname>
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>masklo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>maskhi</declname>
+          <declname>mask</declname>
         </param>
         <param>
           <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bctlo</declname>
-        </param>
-        <param>
-          <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bcthi</declname>
+          <declname>bct</declname>
         </param>
         <param>
           <type>Real</type>
-          <declname>bcllo</declname>
-        </param>
-        <param>
-          <type>Real</type>
-          <declname>bclhi</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvallo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvalhi</declname>
+          <declname>bcl</declname>
         </param>
         <param>
           <type>int</type>
@@ -18005,13 +17937,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="493" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="493" bodyend="593"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="278" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="278" bodyend="331"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a652aad8c6b6a0788cc9df1cc269360e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1ab59db902e6dcb23ee1cd81775237c844" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_comp_interp_coef0_z</definition>
-        <argsstring>(Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;den, Array4&lt; int const  &gt; const &amp;masklo, Array4&lt; int const  &gt; const &amp;maskhi, BoundCond bctlo, BoundCond bcthi, Real bcllo, Real bclhi, Array4&lt; Real const  &gt; const &amp;bcvallo, Array4&lt; Real const  &gt; const &amp;bcvalhi, int maxorder, Real dzinv, int ncomp)</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dzinv, int ncomp)</argsstring>
         <name>mllinop_comp_interp_coef0_z</name>
+        <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>box</declname>
@@ -18022,39 +17958,19 @@
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
-          <declname>den</declname>
+          <declname>f</declname>
         </param>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>masklo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; int const  &gt; const &amp;</type>
-          <declname>maskhi</declname>
+          <declname>mask</declname>
         </param>
         <param>
           <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bctlo</declname>
-        </param>
-        <param>
-          <type><ref refid="classamrex_1_1BoundCond" kindref="compound">BoundCond</ref></type>
-          <declname>bcthi</declname>
+          <declname>bct</declname>
         </param>
         <param>
           <type>Real</type>
-          <declname>bcllo</declname>
-        </param>
-        <param>
-          <type>Real</type>
-          <declname>bclhi</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvallo</declname>
-        </param>
-        <param>
-          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
-          <declname>bcvalhi</declname>
+          <declname>bcl</declname>
         </param>
         <param>
           <type>int</type>
@@ -18074,7 +17990,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="596" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="596" bodyend="696"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="334" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="334" bodyend="387"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a6d5f9554615ec4e2c857ded8fdb0b812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
