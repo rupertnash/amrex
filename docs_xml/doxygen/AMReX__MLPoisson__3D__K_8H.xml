@@ -4,20 +4,20 @@
     <compoundname>AMReX_MLPoisson_3D_K.H</compoundname>
     <includedby refid="AMReX__MLPoisson__K_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLPoisson_K.H</includedby>
     <invincdepgraph>
-      <node id="50684">
+      <node id="50682">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLPoisson.cpp</label>
         <link refid="AMReX__MLPoisson_8cpp"/>
       </node>
-      <node id="50682">
+      <node id="50680">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLPoisson_3D_K.H</label>
         <link refid="AMReX_MLPoisson_3D_K.H"/>
-        <childnode refid="50683" relation="include">
+        <childnode refid="50681" relation="include">
         </childnode>
       </node>
-      <node id="50683">
+      <node id="50681">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLPoisson_K.H</label>
         <link refid="AMReX__MLPoisson__K_8H"/>
-        <childnode refid="50684" relation="include">
+        <childnode refid="50682" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -196,12 +196,12 @@
 <codeline lineno="167"><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>g_m_d<sp/>=<sp/>gamma<sp/>+<sp/>dhx*(cf0+cf3)<sp/>+<sp/>dhy*(cf1+cf4)<sp/>+<sp/>dhz*(cf2+cf5);</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref><sp/>=<sp/>rhs(i,j,k)<sp/>-<sp/>gamma*phi(i,j,k)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>res<sp/>=<sp/>rhs(i,j,k)<sp/>-<sp/>gamma*phi(i,j,k)</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>dhx*(phi(i-1,j,k)<sp/>+<sp/>phi(i+1,j,k))</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>dhy*(phi(i,j-1,k)<sp/>+<sp/>phi(i,j+1,k))</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>dhz*(phi(i,j,k-1)<sp/>+<sp/>phi(i,j,k+1));</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi(i,j,k)<sp/>=<sp/>phi(i,j,k)<sp/>+<sp/>omega/g_m_d<sp/>*<sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi(i,j,k)<sp/>=<sp/>phi(i,j,k)<sp/>+<sp/>omega/g_m_d<sp/>*<sp/>res;</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>

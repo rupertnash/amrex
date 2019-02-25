@@ -148,7 +148,7 @@
 <codeline lineno="163"><highlight class="normal"></highlight></codeline>
 <codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">!-----------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="168"><highlight class="keyword"><sp/><sp/><sp/><sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex__abec__module_1a9c7ee1628800f73e1b951a7ab32381fc" kindref="member">amrex_abec_norma</ref>(<sp/>&amp;</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref>,<sp/>&amp;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res,<sp/>&amp;</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alpha,<sp/>beta,<sp/>&amp;</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a,<sp/>a_l1,a_h1,<sp/>&amp;</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bx,bx_l1,bx_h1,<sp/>&amp;</highlight></codeline>
@@ -156,7 +156,7 @@
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h<sp/>&amp;</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>bind(c,name=</highlight><highlight class="stringliteral">&apos;amrex_abec_norma&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>res</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>alpha,<sp/>beta</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>lo(<ref refid="namespaceamrex__fort__module_1a75dc0439ac63ce7bbde93929ee9c173c" kindref="member">bl_spacedim</ref>),<sp/>hi(<ref refid="namespaceamrex__fort__module_1a75dc0439ac63ce7bbde93929ee9c173c" kindref="member">bl_spacedim</ref>),<sp/>nc</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>a_l1,a_h1</highlight></codeline>
@@ -170,10 +170,10 @@
 <codeline lineno="188"><highlight class="normal"></highlight></codeline>
 <codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dhx<sp/>=<sp/>beta/h(1)**2</highlight></codeline>
 <codeline lineno="190"><highlight class="normal"></highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref><sp/>=<sp/>0.0d0</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/>0.0d0</highlight></codeline>
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>1,<sp/>nc</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo(1),<sp/>hi(1)</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref><sp/>=<sp/>max(<ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref>,<sp/>&amp;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/>max(res,<sp/>&amp;</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">abs</ref>(<sp/>alpha*a(i)<sp/>&amp;</highlight></codeline>
 <codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>dhx<sp/>*<sp/>(bx(i+1)<sp/>+<sp/>bx(i))<sp/>)<sp/>&amp;</highlight></codeline>
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">abs</ref>(-dhx*bx(i+1))<sp/>+<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">abs</ref>(-dhx*bx(i))<sp/>)</highlight></codeline>

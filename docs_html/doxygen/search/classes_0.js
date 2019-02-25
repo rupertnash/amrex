@@ -23,6 +23,7 @@ var searchData=
   ['amrex_5ffi_5fpd_5fmyproc',['amrex_fi_pd_myproc',['../interfaceamrex__paralleldescriptor__module_1_1amrex__fi__pd__myproc.html',1,'amrex_paralleldescriptor_module']]],
   ['amrex_5ffi_5fpd_5fnprocs',['amrex_fi_pd_nprocs',['../interfaceamrex__paralleldescriptor__module_1_1amrex__fi__pd__nprocs.html',1,'amrex_paralleldescriptor_module']]],
   ['amrex_5ffi_5fpd_5fwtime',['amrex_fi_pd_wtime',['../interfaceamrex__paralleldescriptor__module_1_1amrex__fi__pd__wtime.html',1,'amrex_paralleldescriptor_module']]],
+  ['amrex_5ffi_5fwarning',['amrex_fi_warning',['../interfaceamrex__error__module_1_1amrex__fi__warning.html',1,'amrex_error_module']]],
   ['amrex_5ffilcc',['amrex_filcc',['../interfaceamrex__filcc__module_1_1amrex__filcc.html',1,'amrex_filcc_module']]],
   ['amrex_5ffree',['amrex_free',['../interfaceamrex__fort__module_1_1amrex__free.html',1,'amrex_fort_module']]],
   ['amrex_5fmalloc',['amrex_malloc',['../interfaceamrex__fort__module_1_1amrex__malloc.html',1,'amrex_fort_module']]],

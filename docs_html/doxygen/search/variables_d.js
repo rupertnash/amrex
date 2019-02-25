@@ -67,7 +67,6 @@ var searchData=
   ['nsets',['nSets',['../classamrex_1_1NFilesIter.html#af0eab0426caa91fff3a64bcea5192ba3',1,'amrex::NFilesIter']]],
   ['nsolve_5fgrid_5fsize',['nsolve_grid_size',['../classamrex_1_1MLMG.html#a8eba5d6f50bda8d65cb4481e57a557a5',1,'amrex::MLMG']]],
   ['nsr',['nsr',['../classamrex_1_1DeriveRec.html#a5dd47ecd89eca47c1a2da2a3cee0675f',1,'amrex::DeriveRec']]],
-  ['nstr',['NSTR',['../AMReX_8cpp.html#ae078190369c20a6e00eec508f558852f',1,'AMReX.cpp']]],
   ['nstreamerrors',['nStreamErrors',['../classamrex_1_1StreamRetry.html#a56fbf590918f701816c5567f4869c6de',1,'amrex::StreamRetry']]],
   ['nstride',['nstride',['../structamrex_1_1Array4.html#ac119008e55133b0231fe715d52f0813d',1,'amrex::Array4::nstride()'],['../structamrex_1_1FabView.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView::nstride()']]],
   ['nsweeps',['Nsweeps',['../classSDCstruct.html#a973e673b7bb450a404fb23411259c6ab',1,'SDCstruct']]],

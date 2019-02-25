@@ -341,30 +341,9 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="797">
-        <label>amrex::BoxList</label>
-        <link refid="classamrex_1_1BoxList"/>
-      </node>
-      <node id="796">
-        <label>amrex::BoxDomain</label>
-        <link refid="classamrex_1_1BoxDomain"/>
-        <childnode refid="797" relation="protected-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="799">
         <label>amrex::BoxList</label>
         <link refid="classamrex_1_1BoxList"/>
-        <childnode refid="800" relation="usage">
-          <edgelabel>m_lbox</edgelabel>
-        </childnode>
-        <childnode refid="802" relation="usage">
-          <edgelabel>btype</edgelabel>
-        </childnode>
-      </node>
-      <node id="801">
-        <label>std::vector&lt; amrex::Box, std::allocator&lt; amrex::Box &gt; &gt;</label>
       </node>
       <node id="798">
         <label>amrex::BoxDomain</label>
@@ -372,14 +351,35 @@
         <childnode refid="799" relation="protected-inheritance">
         </childnode>
       </node>
-      <node id="802">
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="801">
+        <label>amrex::BoxList</label>
+        <link refid="classamrex_1_1BoxList"/>
+        <childnode refid="802" relation="usage">
+          <edgelabel>m_lbox</edgelabel>
+        </childnode>
+        <childnode refid="804" relation="usage">
+          <edgelabel>btype</edgelabel>
+        </childnode>
+      </node>
+      <node id="803">
+        <label>std::vector&lt; amrex::Box, std::allocator&lt; amrex::Box &gt; &gt;</label>
+      </node>
+      <node id="800">
+        <label>amrex::BoxDomain</label>
+        <link refid="classamrex_1_1BoxDomain"/>
+        <childnode refid="801" relation="protected-inheritance">
+        </childnode>
+      </node>
+      <node id="804">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
-      <node id="800">
+      <node id="802">
         <label>amrex::Vector&lt; amrex::Box &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="801" relation="public-inheritance">
+        <childnode refid="803" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

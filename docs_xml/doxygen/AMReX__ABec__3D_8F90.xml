@@ -92,7 +92,7 @@
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/><sp/>i,<sp/>j,<sp/>k,<sp/>ioff,<sp/>n</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>dhx,<sp/>dhy,<sp/>dhz,<sp/>cf0,<sp/>cf1,<sp/>cf2,<sp/>cf3,<sp/>cf4,<sp/>cf5</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>g_m_d,<sp/>gamma,<sp/>rho,<sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>g_m_d,<sp/>gamma,<sp/>rho,<sp/>res</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">!<sp/><sp/><sp/><sp/><sp/>This<sp/>factor<sp/>of<sp/>1.15<sp/>in<sp/>3D<sp/>does<sp/>over-relaxation<sp/>but<sp/>seems<sp/>to<sp/>consistently<sp/>reduce<sp/>the<sp/>number<sp/>of<sp/>V-cycles<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>omega</highlight></codeline>
@@ -138,8 +138,8 @@
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>dhz*(<sp/>bz(i,j,k<sp/><sp/>)*phi(i,j,k-1,n)<sp/>&amp;</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><sp/><sp/><sp/><sp/><sp/><sp/>bz(i,j,k+1)*phi(i,j,k+1,n)<sp/>)</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref><sp/>=<sp/><sp/>rhs(i,j,k,n)<sp/>-<sp/>(gamma*phi(i,j,k,n)<sp/>-<sp/>rho)</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi(i,j,k,n)<sp/>=<sp/>phi(i,j,k,n)<sp/>+<sp/>omega/g_m_d<sp/>*<sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/><sp/>rhs(i,j,k,n)<sp/>-<sp/>(gamma*phi(i,j,k,n)<sp/>-<sp/>rho)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi(i,j,k,n)<sp/>=<sp/>phi(i,j,k,n)<sp/>+<sp/>omega/g_m_d<sp/>*<sp/>res</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight></codeline>
 <codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordflow"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/>do</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordflow"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/>do</highlight><highlight class="normal"></highlight></codeline>
@@ -341,7 +341,7 @@
 <codeline lineno="378"><highlight class="normal"></highlight></codeline>
 <codeline lineno="379"><highlight class="normal"></highlight><highlight class="comment">!-----------------------------------------------------------------------</highlight></codeline>
 <codeline lineno="383"><highlight class="keyword"><sp/><sp/><sp/><sp/>subroutine<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex__abec__module_1a9c7ee1628800f73e1b951a7ab32381fc" kindref="member">amrex_abec_norma</ref>(<sp/>&amp;</highlight></codeline>
-<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref>,<sp/>&amp;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res,<sp/>&amp;</highlight></codeline>
 <codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alpha,<sp/>beta,<sp/>&amp;</highlight></codeline>
 <codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a,<sp/>a_l1,a_l2,a_l3,a_h1,a_h2,a_h3,<sp/>&amp;</highlight></codeline>
 <codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bx,bx_l1,bx_l2,bx_l3,bx_h1,bx_h2,bx_h3,<sp/>&amp;</highlight></codeline>
@@ -353,7 +353,7 @@
 <codeline lineno="393"><highlight class="normal"></highlight></codeline>
 <codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">implicit<sp/>none</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="395"><highlight class="normal"></highlight></codeline>
-<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>alpha,<sp/>beta,<sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">real(amrex_real)</highlight><highlight class="normal"><sp/>alpha,<sp/>beta,<sp/>res</highlight></codeline>
 <codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>lo(<ref refid="namespaceamrex__fort__module_1a75dc0439ac63ce7bbde93929ee9c173c" kindref="member">bl_spacedim</ref>),<sp/>hi(<ref refid="namespaceamrex__fort__module_1a75dc0439ac63ce7bbde93929ee9c173c" kindref="member">bl_spacedim</ref>),<sp/>nc</highlight></codeline>
 <codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>a_l1,a_l2,a_l3,a_h1,a_h2,a_h3</highlight></codeline>
 <codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>bx_l1,bx_l2,bx_l3,bx_h1,bx_h2,bx_h3</highlight></codeline>
@@ -372,13 +372,13 @@
 <codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dhy<sp/>=<sp/>beta/h(2)**2</highlight></codeline>
 <codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dhz<sp/>=<sp/>beta/h(3)**2</highlight></codeline>
 <codeline lineno="414"><highlight class="normal"></highlight></codeline>
-<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref><sp/>=<sp/>0.0d0</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/>0.0d0</highlight></codeline>
 <codeline lineno="416"><highlight class="normal"></highlight></codeline>
 <codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>1,<sp/>nc</highlight></codeline>
 <codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>lo(3),<sp/>hi(3)</highlight></codeline>
 <codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>lo(2),<sp/>hi(2)</highlight></codeline>
 <codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>lo(1),<sp/>hi(1)</highlight></codeline>
-<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref><sp/>=<sp/>max(<ref refid="AMReX_8cpp_1ab0bd7560790c13b656fd58e17e35143e" kindref="member">res</ref>,<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">abs</ref>(alpha*a(i,j,k)<sp/>&amp;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/>max(res,<sp/><ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">abs</ref>(alpha*a(i,j,k)<sp/>&amp;</highlight></codeline>
 <codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>dhx*(bx(i+1,j,k)<sp/>+<sp/>bx(i,j,k))<sp/>&amp;</highlight></codeline>
 <codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>dhy*(by(i,j+1,k)<sp/>+<sp/>by(i,j,k))<sp/>&amp;</highlight></codeline>
 <codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>dhz*(bz(i,j,k+1)<sp/>+<sp/>bz(i,j,k)))<sp/>&amp;</highlight></codeline>
