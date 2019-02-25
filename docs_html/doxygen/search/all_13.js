@@ -273,7 +273,7 @@ var searchData=
   ['settaglevels',['SetTagLevels',['../classamrex_1_1LSCoreBase.html#a6fed6ab0db7c3ca0f8f1a3d077b4364a',1,'amrex::LSCoreBase']]],
   ['settimelevel',['setTimeLevel',['../classamrex_1_1AmrLevel.html#a5b311a4d4139cce9025d1c41d28586b1',1,'amrex::AmrLevel::setTimeLevel()'],['../classamrex_1_1StateData.html#aa828fea0bc5b7fe08079dada98fbef0b',1,'amrex::StateData::setTimeLevel()']]],
   ['settype',['setType',['../classamrex_1_1Box.html#a01bfd9e88c202cb907354cdec26547eb',1,'amrex::Box::setType()'],['../classamrex_1_1IndexType.html#a33712c5b814a98ae6daebea22e89bec9',1,'amrex::IndexType::setType()'],['../classamrex_1_1EBCellFlagFab.html#ae51058e108a9ae622b2af20a8f7ce9ce',1,'amrex::EBCellFlagFab::setType()']]],
-  ['setup',['Setup',['../classamrex_1_1Geometry.html#ab8e39778598a7ec2c22bb3bb4b3b65f3',1,'amrex::Geometry']]],
+  ['setup',['Setup',['../classamrex_1_1Geometry.html#a2dd587e7c34bdc540c57e2fed659c3e2',1,'amrex::Geometry']]],
   ['setupmaps',['setUpMaps',['../classamrex_1_1StateDescriptor.html#af4b9e3df0cb65bc9425d8c88c4084073',1,'amrex::StateDescriptor']]],
   ['setusecg',['setUseCG',['../classamrex_1_1MultiGrid.html#a4162a92706ef60ccc3e9040d3f056754',1,'amrex::MultiGrid::setUseCG()'],['../classamrex_1_1MCMultiGrid.html#a50168c8c5c4c9da16cdcdc22b53c24c1',1,'amrex::MCMultiGrid::setUseCG()']]],
   ['setusedynamicsetselection',['SetUseDynamicSetSelection',['../classamrex_1_1VisMF.html#ae5edd64d22f48b760a17f2e1c7369df6',1,'amrex::VisMF']]],

@@ -17,7 +17,7 @@
 <para>Static data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="242" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="242" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="244" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="244" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1Geometry_1acbefa9780b6c7142a9da41fbd537ddea" prot="private" static="yes" mutable="no">
         <type>bool</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="243" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="243" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="245" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="245" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1Geometry_1af62cd34804aea5643a6fc2205495b7a2" prot="private" static="yes" mutable="no">
         <type><ref refid="classamrex_1_1RealBox" kindref="compound">RealBox</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="244" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="244" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="246" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="246" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -59,7 +59,7 @@
 <para>Non-static data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="247" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="247" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="249" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="249" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -76,10 +76,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="73" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="52" bodyend="52"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1Geometry_1ac084bd317349cde1c6819853d0ae50a1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1Geometry_1a3b4e7623d5229258d65b7b9b23289f65" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
         <definition>amrex::Geometry::Geometry</definition>
-        <argsstring>(const Box &amp;dom, const RealBox *rb=nullptr, int coord=-1, int *is_per=nullptr)</argsstring>
+        <argsstring>(const Box &amp;dom, const RealBox *rb=nullptr, int coord=-1, int const *is_per=nullptr)</argsstring>
         <name>Geometry</name>
         <param>
           <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
@@ -96,7 +96,7 @@
           <defval>-1</defval>
         </param>
         <param>
-          <type>int *</type>
+          <type>int const *</type>
           <declname>is_per</declname>
           <defval>nullptr</defval>
         </param>
@@ -107,6 +107,35 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="75" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1Geometry_1adaa66e678275f701242cba6a8bc0399f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>amrex::Geometry::Geometry</definition>
+        <argsstring>(const Box &amp;dom, const RealBox &amp;rb, int coord, Array&lt; int, AMREX_SPACEDIM &gt; const &amp;is_per)</argsstring>
+        <name>Geometry</name>
+        <param>
+          <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
+          <declname>dom</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1RealBox" kindref="compound">RealBox</ref> &amp;</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coord</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; int, AMREX_SPACEDIM &gt; const &amp;</type>
+          <declname>is_per</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="79" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="62" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a064dbb1fe7f6866145fd4f18a50275ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -119,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="80" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="82" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a61c7b8c8cbb3b7a39b4db6ed8eface07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -136,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="81" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="83" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a02c8a9fe2c0a14e7ca251ce48e97ee5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -153,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="82" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="84" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1accb415f1b74fa7e10a767254c3943e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
@@ -170,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="83" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="85" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a618075f58517e390e1329d37384fdbd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
@@ -187,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="84" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="86" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a9b368334625bfebbf3bf04ddd29318df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structamrex_1_1GeometryData" kindref="compound">GeometryData</ref></type>
@@ -200,12 +229,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="87" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="87" bodyend="91"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="89" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="89" bodyend="93"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1Geometry_1a866fa29eb2b6ea5c532a9688d22ab9c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1Geometry_1a4161151e41e5bf35f11061708eac8bb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::Geometry::define</definition>
-        <argsstring>(const Box &amp;dom, const RealBox *rb=0, int coord=-1, int *is_per=0)</argsstring>
+        <argsstring>(const Box &amp;dom, const RealBox *rb=0, int coord=-1, int const *is_per=nullptr)</argsstring>
         <name>define</name>
         <param>
           <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
@@ -222,9 +251,9 @@
           <defval>-1</defval>
         </param>
         <param>
-          <type>int *</type>
+          <type>int const *</type>
           <declname>is_per</declname>
-          <defval>0</defval>
+          <defval>nullptr</defval>
         </param>
         <briefdescription>
 <para>Set the rectangular domain after using default constructor. </para>        </briefdescription>
@@ -232,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="97" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="63" bodyend="92"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="99" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="69" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a34a66feb9b08cd9c5770ac23c37bea91" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
@@ -245,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="131" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="131" bodyend="131"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="133" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="133" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a692822d12e8c477bcd8881a422e12e88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -262,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="133" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="133" bodyend="133"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="135" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="135" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a81946ca10277194607c0f77bb20292f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -291,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="135" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="162" bodyend="169"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="137" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="168" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a996ccbe7c6e28e910ab1e7b4df899984" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -308,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="140" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="172" bodyend="181"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="142" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="178" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a6abd22b203f14b2c260a98c67d0d5ac0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -337,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="142" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="184" bodyend="190"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="144" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="190" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a5a43002aa3bc4e82382913508bf6c086" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -370,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="150" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="194" bodyend="208"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="152" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="200" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a0e71a65d177b0502e47a4277c7cfaa4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -403,7 +432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="159" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="212" bodyend="223"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="161" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="218" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a5cf9ff2be6e9a93db4ec61a5540752af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -424,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="165" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="226" bodyend="236"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="167" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="232" bodyend="242"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1ac2b6014beff4b28f21676e6527bea236" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -457,7 +486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="168" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="239" bodyend="246"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="170" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="245" bodyend="252"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1ac9995bee825c800a9e5cd343ab512f68" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -474,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="191" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="191" bodyend="191"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="193" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="193" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1ac76b6b9691289b3d5919ee2ee777a69f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1Periodicity" kindref="compound">Periodicity</ref></type>
@@ -487,7 +516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="193" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="193" bodyend="197"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="195" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="195" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a5d695b24e8652503765e0742a4971a28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -512,7 +541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="214" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="249" bodyend="324"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="216" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="255" bodyend="330"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a99fb67d06ad0223fa009372a5b37d5c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
@@ -529,7 +558,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="219" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="327" bodyend="336"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="221" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="333" bodyend="342"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1aaf24865f29323c8118e04574b0bc822d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
@@ -546,7 +575,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="221" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="339" bodyend="348"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="223" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="345" bodyend="354"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -561,12 +590,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="93" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="95" bodyend="102"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="95" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="101" bodyend="108"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1Geometry_1ab8e39778598a7ec2c22bb3bb4b3b65f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1Geometry_1a2dd587e7c34bdc540c57e2fed659c3e2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::Geometry::Setup</definition>
-        <argsstring>(const RealBox *rb=nullptr, int coord=-1, int *is_per=nullptr)</argsstring>
+        <argsstring>(const RealBox *rb=nullptr, int coord=-1, int const *is_per=nullptr)</argsstring>
         <name>Setup</name>
         <param>
           <type>const <ref refid="classamrex_1_1RealBox" kindref="compound">RealBox</ref> *</type>
@@ -579,7 +608,7 @@
           <defval>-1</defval>
         </param>
         <param>
-          <type>int *</type>
+          <type>int const *</type>
           <declname>is_per</declname>
           <defval>nullptr</defval>
         </param>
@@ -589,7 +618,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="95" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="105" bodyend="159"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="97" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="111" bodyend="165"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a5049084bde4fcdef07be09d317684a40" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1RealBox" kindref="compound">RealBox</ref> &amp;</type>
@@ -602,7 +631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="99" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="99" bodyend="99"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="101" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="101" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a89fc88836fb0e2c87a60891baa357a29" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -619,7 +648,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="101" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="101" bodyend="105"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="103" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="103" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1aa73e7f884ec26924a7250edb262f618d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const Real *</type>
@@ -632,7 +661,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="107" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="107" bodyend="107"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="109" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="109" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a98091e22b9e88c2f16dab3c7465b58d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const Real *</type>
@@ -645,7 +674,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="109" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="109" bodyend="109"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="111" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="111" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a84144d6e2cd88f655c6405116e77e204" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
@@ -662,7 +691,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="111" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="111" bodyend="111"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="113" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="113" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a9e0fcd9c7eee4824aebebdee9e106a99" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
@@ -679,7 +708,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="113" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="113" bodyend="113"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="115" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="115" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1aa7055f42e05eaa104ce57a99f482f56b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt;</type>
@@ -692,7 +721,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="115" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="115" bodyend="117"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="117" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="117" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1ac3378e9b164744d9c8c0dfb2e0e83527" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt;</type>
@@ -705,7 +734,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="119" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="119" bodyend="121"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="121" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="121" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1adec8c77c5504f0de92a2839d63e9b982" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
@@ -718,7 +747,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="124" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="124" bodyend="127"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="126" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="126" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1ade48b3a2213074be30f9e182f7067405" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
@@ -735,7 +764,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="129" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="129" bodyend="129"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="131" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="131" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1afa01c6e9ad7462682bef8e2dd95057d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -752,7 +781,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="174" bodyend="174"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="176" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="176" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1aafa98d4ce363a01f584f909b5eb2b698" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -765,7 +794,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="176" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="176" bodyend="179"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="178" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="178" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a8d72d686324ede94e130f9676c2cfbfb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -778,7 +807,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="181" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="181" bodyend="184"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="183" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="183" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1addc0f8048aca2353026013655b08a274" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; int, AMREX_SPACEDIM &gt;</type>
@@ -791,7 +820,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="185" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="185" bodyend="189"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="187" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="187" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a2acc2d9a8a70d621badc63479added6e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1Periodicity" kindref="compound">Periodicity</ref></type>
@@ -808,7 +837,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="199" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="199" bodyend="204"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="201" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="201" bodyend="206"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Geometry_1a29b7e5dbb80c1861f2032e2af4072398" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; bool, AMREX_SPACEDIM &gt;</type>
@@ -825,7 +854,7 @@
 <para>Set periodicity flags and return the old flags. Note that, unlike <ref refid="classamrex_1_1Periodicity" kindref="compound">Periodicity</ref> class, the flags are just boolean. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="226" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="226" bodyend="234"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="228" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="228" bodyend="236"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -840,7 +869,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="238" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="240" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -916,7 +945,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="70" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="67" bodyend="248"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="70" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="67" bodyend="250"/>
     <listofallmembers>
       <member refid="classamrex_1_1CoordSys_1a3e1d2ff0c6b24081c8e11882f3e4d52a" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>AreaHi</name></member>
       <member refid="classamrex_1_1CoordSys_1ab14c442ffac8392371dd23e2774b0fe9" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>AreaLo</name></member>
@@ -937,7 +966,7 @@
       <member refid="classamrex_1_1CoordSys_1acde5af02e950f7de8d64044e3c378342" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>CoordSys</name></member>
       <member refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806eba" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>CoordType</name></member>
       <member refid="classamrex_1_1Geometry_1a9b368334625bfebbf3bf04ddd29318df" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>data</name></member>
-      <member refid="classamrex_1_1Geometry_1a866fa29eb2b6ea5c532a9688d22ab9c6" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>define</name></member>
+      <member refid="classamrex_1_1Geometry_1a4161151e41e5bf35f11061708eac8bb6" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>define</name></member>
       <member refid="classamrex_1_1CoordSys_1a48ffc9604867e10ae012228873c944d4" prot="public" virt="non-virtual" ambiguityscope="amrex::CoordSys::"><scope>amrex::Geometry</scope><name>define</name></member>
       <member refid="classamrex_1_1Geometry_1a34a66feb9b08cd9c5770ac23c37bea91" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Domain</name></member>
       <member refid="classamrex_1_1Geometry_1a692822d12e8c477bcd8881a422e12e88" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Domain</name></member>
@@ -945,7 +974,8 @@
       <member refid="classamrex_1_1CoordSys_1a178c38de0cae8e587e4c34541db7f45b" prot="protected" virt="non-virtual"><scope>amrex::Geometry</scope><name>dx</name></member>
       <member refid="classamrex_1_1Geometry_1ab591b07ca64341d2b26a617775124e91" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Finalize</name></member>
       <member refid="classamrex_1_1Geometry_1ac51cb8015528aa5573e2bb904e193ea0" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Geometry</name></member>
-      <member refid="classamrex_1_1Geometry_1ac084bd317349cde1c6819853d0ae50a1" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Geometry</name></member>
+      <member refid="classamrex_1_1Geometry_1a3b4e7623d5229258d65b7b9b23289f65" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Geometry</name></member>
+      <member refid="classamrex_1_1Geometry_1adaa66e678275f701242cba6a8bc0399f" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Geometry</name></member>
       <member refid="classamrex_1_1Geometry_1a61c7b8c8cbb3b7a39b4db6ed8eface07" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Geometry</name></member>
       <member refid="classamrex_1_1Geometry_1a02c8a9fe2c0a14e7ca251ce48e97ee5b" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Geometry</name></member>
       <member refid="classamrex_1_1CoordSys_1a4826233fc01d64e54c79e5efc681cdc7" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>GetCellLoc</name></member>
@@ -1022,7 +1052,7 @@
       <member refid="classamrex_1_1CoordSys_1addd25ef6595e734e8c05f880387852ff" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>SetFaceArea</name></member>
       <member refid="classamrex_1_1CoordSys_1ade4395049efa81ffa1edc6244ae0ac20" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>SetOffset</name></member>
       <member refid="classamrex_1_1Geometry_1a29b7e5dbb80c1861f2032e2af4072398" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>setPeriodicity</name></member>
-      <member refid="classamrex_1_1Geometry_1ab8e39778598a7ec2c22bb3bb4b3b65f3" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Setup</name></member>
+      <member refid="classamrex_1_1Geometry_1a2dd587e7c34bdc540c57e2fed659c3e2" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>Setup</name></member>
       <member refid="classamrex_1_1CoordSys_1afe2abbcf933db2ec20289e47454323b2" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>SetVolume</name></member>
       <member refid="classamrex_1_1CoordSys_1afb633344fd17c5565ce2fff188806ebaaa0c55dfafca5806f988babd974f5b158" prot="public" virt="non-virtual"><scope>amrex::Geometry</scope><name>SPHERICAL</name></member>
       <member refid="classamrex_1_1Geometry_1a71b0e9a24e6f2b8833a0dfe6d9fbd5ac" prot="private" virt="non-virtual"><scope>amrex::Geometry</scope><name>spherical_origin_fix</name></member>
