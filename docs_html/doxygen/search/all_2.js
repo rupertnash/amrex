@@ -239,7 +239,7 @@ var searchData=
   ['bottomsolvewithhypre',['bottomSolveWithHypre',['../classamrex_1_1MLMG.html#aaf664a17642380d701b1b7b08e10fa63',1,'amrex::MLMG']]],
   ['bottomsolvewithpetsc',['bottomSolveWithPETSc',['../classamrex_1_1MLMG.html#a1d9aa957bda2ed06061254fb7e187c3f',1,'amrex::MLMG']]],
   ['boundarypointlist',['BoundaryPointList',['../classamrex_1_1Amr.html#a8dc323a910cf01ef443a1664ccabdf83',1,'amrex::Amr']]],
-  ['boundarywidth',['BoundaryWidth',['../classamrex_1_1AmrData.html#ae370a9476e1e6556480e195fe3ced254',1,'amrex::AmrData::BoundaryWidth() const '],['../classamrex_1_1AmrData.html#afe8bc6f5489bcdb1c869821656362357',1,'amrex::AmrData::boundaryWidth()']]],
+  ['boundarywidth',['boundaryWidth',['../classamrex_1_1AmrData.html#afe8bc6f5489bcdb1c869821656362357',1,'amrex::AmrData::boundaryWidth()'],['../classamrex_1_1AmrData.html#ae370a9476e1e6556480e195fe3ced254',1,'amrex::AmrData::BoundaryWidth() const ']]],
   ['boundcond',['BoundCond',['../classamrex_1_1BoundCond.html#aded28ccecb8dfd7f85c4719ca5e79181',1,'amrex::BoundCond::BoundCond()'],['../classamrex_1_1BoundCond.html#ac789286260177640a95555126836a04b',1,'amrex::BoundCond::BoundCond(int _bctype)']]],
   ['boundcond',['BoundCond',['../classamrex_1_1BoundCond.html',1,'amrex']]],
   ['box',['Box',['../classamrex_1_1Box.html',1,'amrex']]],

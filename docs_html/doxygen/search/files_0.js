@@ -139,6 +139,8 @@ var searchData=
   ['amrex_5fcudareduce_2eh',['AMReX_CudaReduce.H',['../AMReX__CudaReduce_8H.html',1,'']]],
   ['amrex_5fcudautility_2ecpp',['AMReX_CudaUtility.cpp',['../AMReX__CudaUtility_8cpp.html',1,'']]],
   ['amrex_5fcudautility_2eh',['AMReX_CudaUtility.H',['../AMReX__CudaUtility_8H.html',1,'']]],
+  ['amrex_5fdarena_2ecpp',['AMReX_DArena.cpp',['../AMReX__DArena_8cpp.html',1,'']]],
+  ['amrex_5fdarena_2eh',['AMReX_DArena.H',['../AMReX__DArena_8H.html',1,'']]],
   ['amrex_5fdataservices_2ecpp',['AMReX_DataServices.cpp',['../AMReX__DataServices_8cpp.html',1,'']]],
   ['amrex_5fdataservices_2eh',['AMReX_DataServices.H',['../AMReX__DataServices_8H.html',1,'']]],
   ['amrex_5fderive_2ecpp',['AMReX_Derive.cpp',['../AMReX__Derive_8cpp.html',1,'']]],

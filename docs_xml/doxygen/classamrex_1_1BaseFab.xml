@@ -4694,64 +4694,64 @@
     <detaileddescription>
 <para><ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> is a template class. Through use of the template, a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> may be based upon any class. So far at least, most applications have been based upon simple types like integers, real*4s, or real*8s. Most applications do not use BaseFabs directly, but utilize specialized classes derived from <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref>.</para><para><ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> objects depend on the dimensionality of space (indirectly through the DOMAIN <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> member). It is typical to define the macro SPACEDIM to be 1, 2, or 3 to indicate the dimension of space. See the discussion of class <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> for more information. A <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> contains a <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> DOMAIN, which indicates the integer indexing space over which the array is defined. A <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> also has NVAR components. By components, we mean that for each point in the rectangular indexing space, there are NVAR values associated with that point. A Fortran array corresponding to a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> would have (SPACEDIM+1) dimensions.</para><para>By design, the array layout in a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> mirrors that of a Fortran array. The first index (x direction for example) varies most rapidly, the next index (y direction), if any, varies next fastest. The component index varies last, after all the spatial indices.</para><para>It is sometimes convenient to be able to treat a sub-array within an existing <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> as a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> in its own right. This is often referred to as aliasing the <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref>. Note that when aliasing is used, the BaseFabs domain will not, in general, be the same as the parent BaseFabs domain, nor will the number of components. <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> is a dimension dependent class, so SPACEDIM must be defined as either 1, 2, or 3 when compiling.</para><para>This is NOT a polymorphic class.</para><para>It does NOT provide a copy constructor or assignment operator.</para><para>T MUST have a default constructor and an assignment operator. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="602">
+      <node id="603">
         <label>amrex::BaseFabData&lt; T &gt;</label>
         <link refid="structamrex_1_1BaseFabData"/>
-        <childnode refid="603" relation="public-inheritance">
+        <childnode refid="604" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="603">
+      <node id="604">
         <label>amrex::Cuda::Managed</label>
         <link refid="structamrex_1_1Cuda_1_1Managed"/>
       </node>
-      <node id="601">
+      <node id="602">
         <label>amrex::BaseFab&lt; T &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="602" relation="public-inheritance">
+        <childnode refid="603" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="608">
+      <node id="609">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
-        <childnode refid="608" relation="usage">
+        <childnode refid="609" relation="usage">
           <edgelabel>Unit</edgelabel>
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="607">
+      <node id="608">
         <label>amrex::Box</label>
         <link refid="classamrex_1_1Box"/>
-        <childnode refid="608" relation="usage">
+        <childnode refid="609" relation="usage">
           <edgelabel>bigend</edgelabel>
           <edgelabel>smallend</edgelabel>
         </childnode>
-        <childnode refid="609" relation="usage">
+        <childnode refid="610" relation="usage">
           <edgelabel>btype</edgelabel>
         </childnode>
       </node>
-      <node id="605">
+      <node id="606">
         <label>amrex::BaseFabData&lt; T &gt;</label>
         <link refid="structamrex_1_1BaseFabData"/>
-        <childnode refid="606" relation="public-inheritance">
+        <childnode refid="607" relation="public-inheritance">
         </childnode>
-        <childnode refid="607" relation="usage">
+        <childnode refid="608" relation="usage">
           <edgelabel>domain</edgelabel>
         </childnode>
       </node>
-      <node id="606">
+      <node id="607">
         <label>amrex::Cuda::Managed</label>
         <link refid="structamrex_1_1Cuda_1_1Managed"/>
       </node>
-      <node id="609">
+      <node id="610">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
-      <node id="604">
+      <node id="605">
         <label>amrex::BaseFab&lt; T &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="605" relation="public-inheritance">
+        <childnode refid="606" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

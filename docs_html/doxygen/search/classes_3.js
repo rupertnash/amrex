@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['darena',['DArena',['../classamrex_1_1DArena.html',1,'amrex']]],
   ['datablock',['DataBlock',['../structCommProfStats_1_1DataBlock.html',1,'CommProfStats']]],
   ['datablock',['DataBlock',['../structRegionsProfStats_1_1DataBlock.html',1,'RegionsProfStats']]],
   ['dataservices',['DataServices',['../classamrex_1_1DataServices.html',1,'amrex']]],

@@ -65,6 +65,7 @@ var searchData=
   ['totalbytesallocatedinfabshwm',['TotalBytesAllocatedInFabsHWM',['../namespaceamrex.html#aaca3a1407a187c460afd8a40325c0fac',1,'amrex']]],
   ['totalcellsallocatedinfabs',['TotalCellsAllocatedInFabs',['../namespaceamrex.html#ac607f13e7b18e09b26587b4ff806a5df',1,'amrex']]],
   ['totalcellsallocatedinfabshwm',['TotalCellsAllocatedInFabsHWM',['../namespaceamrex.html#af4d27d976bc68dc3af8e3d6953b8e044',1,'amrex']]],
+  ['totalmem',['totalMem',['../classamrex_1_1DArena.html#ac27feebfcb23c0487d2bb3973d4ac8c5',1,'amrex::DArena']]],
   ['totalnumberofparticles',['TotalNumberOfParticles',['../classamrex_1_1ParticleContainer.html#a7a672776ab2c219caa7e2b3124596a41',1,'amrex::ParticleContainer']]],
   ['toupper',['toUpper',['../namespaceamrex.html#afb53573f5330e4753ad1b562e5dd95ce',1,'amrex']]],
   ['tracedatavalid',['TraceDataValid',['../classRegionsProfStats.html#aa79c8344f7cc4813279668f8dcd08011',1,'RegionsProfStats']]],

@@ -46,6 +46,7 @@ var searchData=
   ['_7ecpc',['~CPC',['../structamrex_1_1FabArrayBase_1_1CPC.html#a97655cd5ccd143f3ab9c2a154d4d4f2f',1,'amrex::FabArrayBase::CPC']]],
   ['_7ecutfab',['~CutFab',['../classamrex_1_1CutFab.html#a2fed6fb2629c43fc12d1facb2c6045d9',1,'amrex::CutFab']]],
   ['_7ecylinderif',['~CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html#a139eafd595dac0dfe04c197a9562c65c',1,'amrex::EB2::CylinderIF']]],
+  ['_7edarena',['~DArena',['../classamrex_1_1DArena.html#a1c086ae3cdaba882bb0b4617878cd034',1,'amrex::DArena']]],
   ['_7edataservices',['~DataServices',['../classamrex_1_1DataServices.html#a5bdb39757dd7e9db803b69385f62a8c8',1,'amrex::DataServices']]],
   ['_7ederiverec',['~DeriveRec',['../classamrex_1_1DeriveRec.html#a3efcbfca10808d1a81e899f4d3448501',1,'amrex::DeriveRec']]],
   ['_7edevicescalar',['~DeviceScalar',['../structamrex_1_1Cuda_1_1DeviceScalar.html#a9ebd7ba719c1e8485cfdca1214c824ba',1,'amrex::Cuda::DeviceScalar']]],
