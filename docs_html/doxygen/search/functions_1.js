@@ -88,7 +88,7 @@ var searchData=
   ['alloc',['alloc',['../classamrex_1_1Arena.html#a46ce2cd5cfc039cec64548b031fbde2e',1,'amrex::Arena::alloc()'],['../classamrex_1_1BArena.html#a3f5a8cc7a0cb8013fe3bc8ba6270c510',1,'amrex::BArena::alloc()'],['../classamrex_1_1CArena.html#ae680f4f04d598438083ac596e4117c1f',1,'amrex::CArena::alloc()'],['../classamrex_1_1DArena.html#ae231217fe1f9796f26a006b122146940',1,'amrex::DArena::alloc()']]],
   ['allocate',['allocate',['../classhacc_1_1AlignedAllocator.html#aa3873295a150cc0fbed2a47c7db9caad',1,'hacc::AlignedAllocator']]],
   ['allocate_5forder',['allocate_order',['../classamrex_1_1DArena.html#a1ca2c5bbabce7267c652b6583b8da2b2',1,'amrex::DArena']]],
-  ['allocate_5fsystem',['allocate_system',['../classamrex_1_1DArena.html#a972efc31cb2ebb66c42c36fd46549037',1,'amrex::DArena']]],
+  ['allocate_5fsystem',['allocate_system',['../classamrex_1_1Arena.html#afc721e195430f79b2d1b287c490ef0fb',1,'amrex::Arena']]],
   ['allocateboxarray',['AllocateBoxArray',['../namespaceamrex_1_1InSituUtils.html#adcc32bbfdc881b55d739ac448f1d5d85',1,'amrex::InSituUtils']]],
   ['allocfabs',['AllocFabs',['../classamrex_1_1FabArray.html#a3955615f0b51b775ef0fc1a374e142ff',1,'amrex::FabArray']]],
   ['allocolddata',['allocOldData',['../classamrex_1_1AmrLevel.html#a6508a7e48f0d9da16e52fe4c79917ed3',1,'amrex::AmrLevel::allocOldData()'],['../classamrex_1_1StateData.html#ac696f694c50d2b6251f9576fabfdedcb',1,'amrex::StateData::allocOldData()']]],

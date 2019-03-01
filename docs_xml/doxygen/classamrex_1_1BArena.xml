@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.cpp" bodystart="5" bodyend="36"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.cpp" bodystart="5" bodyend="8"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1BArena_1a64267cbe47ae467eedfd819c6fc50cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.cpp" bodystart="39" bodyend="50"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.cpp" bodystart="11" bodyend="14"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -47,26 +47,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="596">
+      <node id="599">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
       </node>
-      <node id="595">
+      <node id="598">
         <label>amrex::BArena</label>
         <link refid="classamrex_1_1BArena"/>
-        <childnode refid="596" relation="public-inheritance">
+        <childnode refid="599" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="598">
+      <node id="602">
+        <label>amrex::ArenaInfo</label>
+        <link refid="structamrex_1_1ArenaInfo"/>
+      </node>
+      <node id="601">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
+        <childnode refid="602" relation="usage">
+          <edgelabel>arena_info</edgelabel>
+        </childnode>
       </node>
-      <node id="597">
+      <node id="600">
         <label>amrex::BArena</label>
         <link refid="classamrex_1_1BArena"/>
-        <childnode refid="598" relation="public-inheritance">
+        <childnode refid="601" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -75,6 +82,9 @@
       <member refid="classamrex_1_1Arena_1a253c417e0bd2863509c75d6250468a4e" prot="public" virt="non-virtual"><scope>amrex::BArena</scope><name>align</name></member>
       <member refid="classamrex_1_1Arena_1a52dd4bf03bb4d31899bca6ca3440760a" prot="protected" virt="non-virtual"><scope>amrex::BArena</scope><name>align_size</name></member>
       <member refid="classamrex_1_1BArena_1a3f5a8cc7a0cb8013fe3bc8ba6270c510" prot="public" virt="virtual"><scope>amrex::BArena</scope><name>alloc</name></member>
+      <member refid="classamrex_1_1Arena_1afc721e195430f79b2d1b287c490ef0fb" prot="protected" virt="non-virtual"><scope>amrex::BArena</scope><name>allocate_system</name></member>
+      <member refid="classamrex_1_1Arena_1aeb2158ba443c9b23ba0d12bcf38a66e1" prot="protected" virt="non-virtual"><scope>amrex::BArena</scope><name>arena_info</name></member>
+      <member refid="classamrex_1_1Arena_1a9267a7d1f5ca6f3d24154c06329bdbe7" prot="protected" virt="non-virtual"><scope>amrex::BArena</scope><name>deallocate_system</name></member>
       <member refid="classamrex_1_1Arena_1a06dd6197d2081d7dd4c1bed308edd387" prot="public" virt="non-virtual"><scope>amrex::BArena</scope><name>Finalize</name></member>
       <member refid="classamrex_1_1BArena_1a64267cbe47ae467eedfd819c6fc50cd2" prot="public" virt="virtual"><scope>amrex::BArena</scope><name>free</name></member>
       <member refid="classamrex_1_1Arena_1a9f40990a545f4d280e905117fc6a0786" prot="public" virt="non-virtual"><scope>amrex::BArena</scope><name>Initialize</name></member>

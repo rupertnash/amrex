@@ -48,6 +48,7 @@ var searchData=
   ['amrex_5freal_5fsize',['amrex_real_size',['../namespaceamrex__fort__module.html#a3a784a0f6a33f782704766ad87d4b791',1,'amrex_fort_module']]],
   ['amrex_5fspacedim',['amrex_spacedim',['../namespaceamrex__fort__module.html#a3e14daae142c150a3590f4db1a67f004',1,'amrex_fort_module']]],
   ['amrlev',['amrlev',['../classamrex_1_1MLCGSolver.html#a05e4c1a43d63239106f5468b33caa6e7',1,'amrex::MLCGSolver']]],
+  ['arena_5finfo',['arena_info',['../classamrex_1_1Arena.html#aeb2158ba443c9b23ba0d12bcf38a66e1',1,'amrex::Arena']]],
   ['ark_5fbad_5fdky',['ark_bad_dky',['../namespacefarkode__mod.html#aed9f14630cfa78000b16d72d1c981547',1,'farkode_mod']]],
   ['ark_5fbad_5fk',['ark_bad_k',['../namespacefarkode__mod.html#a25cc2155c01ebc3988f1b7a56c64674f',1,'farkode_mod']]],
   ['ark_5fbad_5ft',['ark_bad_t',['../namespacefarkode__mod.html#a6793845fcbcfdd3f38986343f26f54f8',1,'farkode_mod']]],

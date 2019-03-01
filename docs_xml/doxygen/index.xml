@@ -934,6 +934,7 @@
   </compound>
   <compound refid="classamrex_1_1Arena" kind="class"><name>amrex::Arena</name>
     <member refid="classamrex_1_1Arena_1a52dd4bf03bb4d31899bca6ca3440760a" kind="variable"><name>align_size</name></member>
+    <member refid="classamrex_1_1Arena_1aeb2158ba443c9b23ba0d12bcf38a66e1" kind="variable"><name>arena_info</name></member>
     <member refid="classamrex_1_1Arena_1a515142557e6b630fbad746e3c33776e5" kind="function"><name>~Arena</name></member>
     <member refid="classamrex_1_1Arena_1a46ce2cd5cfc039cec64548b031fbde2e" kind="function"><name>alloc</name></member>
     <member refid="classamrex_1_1Arena_1a0c7e0730574c98febb6ddca2712cb515" kind="function"><name>free</name></member>
@@ -941,6 +942,18 @@
     <member refid="classamrex_1_1Arena_1a9f40990a545f4d280e905117fc6a0786" kind="function"><name>Initialize</name></member>
     <member refid="classamrex_1_1Arena_1a506a68384da30629323d0839f13812c2" kind="function"><name>PrintUsage</name></member>
     <member refid="classamrex_1_1Arena_1a06dd6197d2081d7dd4c1bed308edd387" kind="function"><name>Finalize</name></member>
+    <member refid="classamrex_1_1Arena_1afc721e195430f79b2d1b287c490ef0fb" kind="function"><name>allocate_system</name></member>
+    <member refid="classamrex_1_1Arena_1a9267a7d1f5ca6f3d24154c06329bdbe7" kind="function"><name>deallocate_system</name></member>
+  </compound>
+  <compound refid="structamrex_1_1ArenaInfo" kind="struct"><name>amrex::ArenaInfo</name>
+    <member refid="structamrex_1_1ArenaInfo_1a961c961eb343a2fa091082a6f1717b16" kind="variable"><name>device_use_managed_memory</name></member>
+    <member refid="structamrex_1_1ArenaInfo_1a106f4ef6d447922447c63d296583e917" kind="variable"><name>device_set_readonly</name></member>
+    <member refid="structamrex_1_1ArenaInfo_1a0ab972913e7e764d7f0c88097ce1c619" kind="variable"><name>device_set_preferred</name></member>
+    <member refid="structamrex_1_1ArenaInfo_1a18ad35d706eda3be6347c90f86d68e81" kind="variable"><name>device_use_hostalloc</name></member>
+    <member refid="structamrex_1_1ArenaInfo_1a3504bb9d868071cd69560f3bb4cdc751" kind="function"><name>SetDeviceMemory</name></member>
+    <member refid="structamrex_1_1ArenaInfo_1af36aaf2533488ac67959244ae4187e57" kind="function"><name>SetReadOnly</name></member>
+    <member refid="structamrex_1_1ArenaInfo_1ad8b20e72ff45b3d363e152fc000f4a0d" kind="function"><name>SetPreferred</name></member>
+    <member refid="structamrex_1_1ArenaInfo_1a1660e389de86ed358fbfc1e78c0aae30" kind="function"><name>SetHostAlloc</name></member>
   </compound>
   <compound refid="structamrex_1_1Array4" kind="struct"><name>amrex::Array4</name>
     <member refid="structamrex_1_1Array4_1afc65a955f06b484f0ff95fa6ca5579e8" kind="variable"><name>p</name></member>
@@ -1991,7 +2004,7 @@
     <member refid="classamrex_1_1CArena_1a7bbf66f41bc3167185236bdcd6fe67a1" kind="variable"><name>m_hunk</name></member>
     <member refid="classamrex_1_1CArena_1a7ec2fcdaa0d06d1fceb739d0e1661751" kind="variable"><name>m_used</name></member>
     <member refid="classamrex_1_1CArena_1a445be9f2ccca25ca4d2c8db026400136" kind="variable"><name>carena_mutex</name></member>
-    <member refid="classamrex_1_1CArena_1abcda9d9ec7aa00c58e7db564dd2b23c3" kind="function"><name>CArena</name></member>
+    <member refid="classamrex_1_1CArena_1a43a76cc08d37a6c6174a05989d0bc60e" kind="function"><name>CArena</name></member>
     <member refid="classamrex_1_1CArena_1a1dc0400df161a7395380b6156678918a" kind="function"><name>CArena</name></member>
     <member refid="classamrex_1_1CArena_1ae491fc24a9163b864bc798acc7518852" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1CArena_1abca549bb11a9efb8b05dca10c32aab81" kind="function"><name>~CArena</name></member>
@@ -2412,7 +2425,7 @@
     <member refid="classamrex_1_1DArena_1a3c3130abd9ad3a07c1fc765e702f5301" kind="variable"><name>m_max_order</name></member>
     <member refid="classamrex_1_1DArena_1a3118de6f458432e9ebc3529e0101c87f" kind="variable"><name>m_mutex</name></member>
     <member refid="classamrex_1_1DArena_1aa60ef4331c287042fd3ea4e037c4fd42" kind="variable"><name>warning_printed</name></member>
-    <member refid="classamrex_1_1DArena_1afdccff87c9fb68de5144685b7e2bb90f" kind="function"><name>DArena</name></member>
+    <member refid="classamrex_1_1DArena_1a7cb796087fa7b90048cb294e5bd2a3a3" kind="function"><name>DArena</name></member>
     <member refid="classamrex_1_1DArena_1a41c0a4b57a9c225167b97d7fc936a2c8" kind="function"><name>DArena</name></member>
     <member refid="classamrex_1_1DArena_1aa80948acc5b6bd402b99377935f6dd8b" kind="function"><name>DArena</name></member>
     <member refid="classamrex_1_1DArena_1ae770fd4904c4054aea8602012daaf844" kind="function"><name>operator=</name></member>
@@ -2422,8 +2435,6 @@
     <member refid="classamrex_1_1DArena_1a334bde7e4a70a4fd2a7b09c216dfc504" kind="function"><name>free</name></member>
     <member refid="classamrex_1_1DArena_1ac27feebfcb23c0487d2bb3973d4ac8c5" kind="function"><name>totalMem</name></member>
     <member refid="classamrex_1_1DArena_1ab78d724a379d45a2b0c599dd19b80d4e" kind="function"><name>freeMem</name></member>
-    <member refid="classamrex_1_1DArena_1a972efc31cb2ebb66c42c36fd46549037" kind="function"><name>allocate_system</name></member>
-    <member refid="classamrex_1_1DArena_1adc2f8aac69469658fd741b762f389f11" kind="function"><name>deallocate_system</name></member>
     <member refid="classamrex_1_1DArena_1a1ca2c5bbabce7267c652b6583b8da2b2" kind="function"><name>allocate_order</name></member>
     <member refid="classamrex_1_1DArena_1aff39d5f7aae00008761d13e8cd4f429c" kind="function"><name>deallocate_order</name></member>
   </compound>
@@ -4234,11 +4245,11 @@
   <compound refid="interfacecvode__interface_1_1FCVodeSetMaxHnilWarns" kind="interface"><name>cvode_interface::FCVodeSetMaxHnilWarns</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetMaxHnilWarns_1a9ddf585e3841bea96030a871bba399a0" kind="function"><name>fcvodesetmaxhnilwarns</name></member>
   </compound>
-  <compound refid="interfacecvode__interface_1_1FCVodeSetMaxNonlinIters" kind="interface"><name>cvode_interface::FCVodeSetMaxNonlinIters</name>
-    <member refid="interfacecvode__interface_1_1FCVodeSetMaxNonlinIters_1ad6b0a8f20c3a2dfa195fc4cfd7453b96" kind="function"><name>fcvodesetmaxnonliniters</name></member>
-  </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetMaxNonlinIters" kind="interface"><name>fcvode_mod::FCVodeSetMaxNonlinIters</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetMaxNonlinIters_1a7a23328e99d55a427cf41e97df50d906" kind="function"><name>fcvodesetmaxnonliniters</name></member>
+  </compound>
+  <compound refid="interfacecvode__interface_1_1FCVodeSetMaxNonlinIters" kind="interface"><name>cvode_interface::FCVodeSetMaxNonlinIters</name>
+    <member refid="interfacecvode__interface_1_1FCVodeSetMaxNonlinIters_1ad6b0a8f20c3a2dfa195fc4cfd7453b96" kind="function"><name>fcvodesetmaxnonliniters</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetMaxNumSteps" kind="interface"><name>fcvode_mod::FCVodeSetMaxNumSteps</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetMaxNumSteps_1a8f870bf216fe2a8e6bc71e9450858b82" kind="function"><name>fcvodesetmaxnumsteps</name></member>
@@ -4252,11 +4263,11 @@
   <compound refid="interfacecvode__interface_1_1FCVodeSetMaxOrd" kind="interface"><name>cvode_interface::FCVodeSetMaxOrd</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetMaxOrd_1ae6c8c97135544f5f0c408e281870b635" kind="function"><name>fcvodesetmaxord</name></member>
   </compound>
-  <compound refid="interfacefcvode__mod_1_1FCVodeSetMaxStep" kind="interface"><name>fcvode_mod::FCVodeSetMaxStep</name>
-    <member refid="interfacefcvode__mod_1_1FCVodeSetMaxStep_1a20d70cf3f96d1cfb5286a4fbb937731a" kind="function"><name>fcvodesetmaxstep</name></member>
-  </compound>
   <compound refid="interfacecvode__interface_1_1FCVodeSetMaxStep" kind="interface"><name>cvode_interface::FCVodeSetMaxStep</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetMaxStep_1adfa724f4cdb98a11975beb3b83167e88" kind="function"><name>fcvodesetmaxstep</name></member>
+  </compound>
+  <compound refid="interfacefcvode__mod_1_1FCVodeSetMaxStep" kind="interface"><name>fcvode_mod::FCVodeSetMaxStep</name>
+    <member refid="interfacefcvode__mod_1_1FCVodeSetMaxStep_1a20d70cf3f96d1cfb5286a4fbb937731a" kind="function"><name>fcvodesetmaxstep</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetMinStep" kind="interface"><name>fcvode_mod::FCVodeSetMinStep</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetMinStep_1a047db9b408557071d7c9779305c11472" kind="function"><name>fcvodesetminstep</name></member>
@@ -4300,17 +4311,17 @@
   <compound refid="interfacecvode__interface_1_1FCVodeSetUserData" kind="interface"><name>cvode_interface::FCVodeSetUserData</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetUserData_1acd35d1e35b97378c6d28417c70b80eb4" kind="function"><name>fcvodesetuserdata</name></member>
   </compound>
-  <compound refid="interfacefcvode__mod_1_1FCVodeSStolerances" kind="interface"><name>fcvode_mod::FCVodeSStolerances</name>
-    <member refid="interfacefcvode__mod_1_1FCVodeSStolerances_1a9442ec182cc8bb17432c7baf3642c5e1" kind="function"><name>fcvodesstolerances</name></member>
-  </compound>
   <compound refid="interfacecvode__interface_1_1FCVodeSStolerances" kind="interface"><name>cvode_interface::FCVodeSStolerances</name>
     <member refid="interfacecvode__interface_1_1FCVodeSStolerances_1a45eac1456b791d947b02b5601618efbe" kind="function"><name>fcvodesstolerances</name></member>
   </compound>
-  <compound refid="interfacecvode__interface_1_1FCVodeSVtolerances" kind="interface"><name>cvode_interface::FCVodeSVtolerances</name>
-    <member refid="interfacecvode__interface_1_1FCVodeSVtolerances_1a9dd9c7edf26da50778551317aed65678" kind="function"><name>fcvodesvtolerances</name></member>
+  <compound refid="interfacefcvode__mod_1_1FCVodeSStolerances" kind="interface"><name>fcvode_mod::FCVodeSStolerances</name>
+    <member refid="interfacefcvode__mod_1_1FCVodeSStolerances_1a9442ec182cc8bb17432c7baf3642c5e1" kind="function"><name>fcvodesstolerances</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSVtolerances" kind="interface"><name>fcvode_mod::FCVodeSVtolerances</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSVtolerances_1ae918a6b2aa142464ce5f862ff535b011" kind="function"><name>fcvodesvtolerances</name></member>
+  </compound>
+  <compound refid="interfacecvode__interface_1_1FCVodeSVtolerances" kind="interface"><name>cvode_interface::FCVodeSVtolerances</name>
+    <member refid="interfacecvode__interface_1_1FCVodeSVtolerances_1a9dd9c7edf26da50778551317aed65678" kind="function"><name>fcvodesvtolerances</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeWFtolerances" kind="interface"><name>fcvode_mod::FCVodeWFtolerances</name>
     <member refid="interfacefcvode__mod_1_1FCVodeWFtolerances_1a1373c1b2d7f5897cef1ada75c25ed64f" kind="function"><name>fcvodewftolerances</name></member>
