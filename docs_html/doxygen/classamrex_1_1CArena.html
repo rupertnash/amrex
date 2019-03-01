@@ -165,9 +165,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a000d9e231672c9a28a72a05abec379fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1CArena.html#a9e8adf2bef58badafbefa442d69db64b">NL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1CArena.html#a000d9e231672c9a28a72a05abec379fb">m_freelist</a></td></tr>
 <tr class="memdesc:a000d9e231672c9a28a72a05abec379fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The free list of allocated but not currently used blocks. Maintained in lo to hi memory sorted order.  <a href="#a000d9e231672c9a28a72a05abec379fb">More...</a><br /></td></tr>
 <tr class="separator:a000d9e231672c9a28a72a05abec379fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aefbb38a35f73e48f12ce628ae76d68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1CArena.html#a9e8adf2bef58badafbefa442d69db64b">NL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1CArena.html#a6aefbb38a35f73e48f12ce628ae76d68">m_busylist</a></td></tr>
-<tr class="memdesc:a6aefbb38a35f73e48f12ce628ae76d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of busy blocks. A block is either on the freelist or on the blocklist, but not on both.  <a href="#a6aefbb38a35f73e48f12ce628ae76d68">More...</a><br /></td></tr>
-<tr class="separator:a6aefbb38a35f73e48f12ce628ae76d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88823438ee0e89721d65131d87d2f687"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classamrex_1_1CArena_1_1Node.html">Node</a>, <a class="el" href="structamrex_1_1CArena_1_1Node_1_1hash.html">Node::hash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1CArena.html#a88823438ee0e89721d65131d87d2f687">m_busylist</a></td></tr>
+<tr class="memdesc:a88823438ee0e89721d65131d87d2f687"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of busy blocks. A block is either on the freelist or on the blocklist, but not on both.  <a href="#a88823438ee0e89721d65131d87d2f687">More...</a><br /></td></tr>
+<tr class="separator:a88823438ee0e89721d65131d87d2f687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bbf66f41bc3167185236bdcd6fe67a1"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1CArena.html#a7bbf66f41bc3167185236bdcd6fe67a1">m_hunk</a></td></tr>
 <tr class="memdesc:a7bbf66f41bc3167185236bdcd6fe67a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimal size of hunks to request via ::operator new().  <a href="#a7bbf66f41bc3167185236bdcd6fe67a1">More...</a><br /></td></tr>
 <tr class="separator:a7bbf66f41bc3167185236bdcd6fe67a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -464,7 +464,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6aefbb38a35f73e48f12ce628ae76d68"></a>
+<a class="anchor" id="a88823438ee0e89721d65131d87d2f687"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -472,7 +472,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classamrex_1_1CArena.html#a9e8adf2bef58badafbefa442d69db64b">NL</a> amrex::CArena::m_busylist</td>
+          <td class="memname">std::unordered_set&lt;<a class="el" href="classamrex_1_1CArena_1_1Node.html">Node</a>, <a class="el" href="structamrex_1_1CArena_1_1Node_1_1hash.html">Node::hash</a>&gt; amrex::CArena::m_busylist</td>
         </tr>
       </table>
   </td>
