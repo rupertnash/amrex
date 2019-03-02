@@ -4102,6 +4102,18 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLassert.H" line="49" column="9" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLassert.H" bodystart="49" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="AMReX__BLassert_8H_1af408ceae14893d68f135d37b1088a5ee" prot="public" static="no">
+        <name>AMREX_GPU_ASSERT</name>
+        <param><defname>EX</defname></param>
+        <initializer>((void)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLassert.H" line="53" column="9" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLassert.H" bodystart="53" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -4158,7 +4170,14 @@
 <codeline lineno="48" refid="AMReX__BLassert_8H_1a1defc2bb8023a3e2599bfb2fc637cb43" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_ALWAYS_ASSERT_WITH_MESSAGE(EX,MSG)<sp/>(EX)?((void)0):amrex::Assert(<sp/>#<sp/>EX<sp/>,<sp/>__FILE__,<sp/>__LINE__<sp/>,<sp/>#<sp/>MSG)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="49" refid="AMReX__BLassert_8H_1abd471ebf6086189835e778f06c053833" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_ALWAYS_ASSERT(EX)<sp/>(EX)?((void)0):amrex::Assert(<sp/>#<sp/>EX<sp/>,<sp/>__FILE__,<sp/>__LINE__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BL_BL_ASSERT_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(AMREX_USE_GPU)<sp/>||<sp/>!defined(AMREX_DEBUG)<sp/>&amp;&amp;<sp/>!defined(AMREX_USE_ASSERTION)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="AMReX__BLassert_8H_1af408ceae14893d68f135d37b1088a5ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_GPU_ASSERT(EX)<sp/>((void)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_GPU_ASSERT(EX)<sp/>(EX)?((void)0):amrex::Assert(<sp/>#<sp/>EX<sp/>,<sp/>__FILE__,<sp/>__LINE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BL_BL_ASSERT_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLassert.H"/>
   </compounddef>

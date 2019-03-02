@@ -52,6 +52,7 @@ var searchData=
   ['amrex_5ffort_5flaunch',['AMREX_FORT_LAUNCH',['../AMReX__BLFort_8H.html#acfc68d72bfb2c480dc1fcffefb751a42',1,'AMReX_BLFort.H']]],
   ['amrex_5ffort_5flaunchable',['AMREX_FORT_LAUNCHABLE',['../AMReX__BLFort_8H.html#a6d79db1edf1129dd74b3a38a58e4e312',1,'AMReX_BLFort.H']]],
   ['amrex_5fget_5fmacro',['AMREX_GET_MACRO',['../AMReX__GpuLaunch_8H.html#ac8ec1cc313d4dad0d4c5bbe4bae0862a',1,'AMReX_GpuLaunch.H']]],
+  ['amrex_5fgpu_5fassert',['AMREX_GPU_ASSERT',['../AMReX__BLassert_8H.html#af408ceae14893d68f135d37b1088a5ee',1,'AMReX_BLassert.H']]],
   ['amrex_5fgpu_5fdevice',['AMREX_GPU_DEVICE',['../AMReX__GpuQualifiers_8H.html#a4e626ebf06898d71a9e0790877f1694f',1,'AMReX_GpuQualifiers.H']]],
   ['amrex_5fgpu_5fdevice_5fmanaged',['AMREX_GPU_DEVICE_MANAGED',['../AMReX__GpuQualifiers_8H.html#af6046c971c96ea0d02afe9ff80426144',1,'AMReX_GpuQualifiers.H']]],
   ['amrex_5fgpu_5ferror_5fcheck',['AMREX_GPU_ERROR_CHECK',['../AMReX__GpuError_8H.html#aff2d29ad26ba217734430c3d36f42dd1',1,'AMReX_GpuError.H']]],
