@@ -52,6 +52,7 @@ var searchData=
   ['check',['Check',['../classamrex_1_1VisMF.html#ae12f838572701049902254dfb46eb650',1,'amrex::VisMF']]],
   ['checkcommdata',['CheckCommData',['../classCommProfStats.html#a8c515e8da3ca3c3437cd0b5bd18c656d',1,'CommProfStats']]],
   ['checkdata',['CheckData',['../classBLProfStats.html#a9e8341b111020e68b25b6ac7e884de18',1,'BLProfStats']]],
+  ['checkdataptrconsistence',['checkDataPtrConsistence',['../classamrex_1_1FabArray.html#a64d657be280801532ab07395b0ea926b',1,'amrex::FabArray::checkDataPtrConsistence(T const *d, T const *h) const '],['../classamrex_1_1FabArray.html#a64d657be280801532ab07395b0ea926b',1,'amrex::FabArray::checkDataPtrConsistence(T const *d, T const *h) const ']]],
   ['checkinput',['checkInput',['../classamrex_1_1Amr.html#a0db8b6a43fba7580d8dc6571e64eceb2',1,'amrex::Amr::checkInput()'],['../classamrex_1_1AmrMesh.html#a9274bfc294d53126644ed437ac83fe56',1,'amrex::AmrMesh::checkInput()']]],
   ['checkint',['checkInt',['../classamrex_1_1Amr.html#a9da2c57ed924afcce094720e3a918060',1,'amrex::Amr']]],
   ['checknfiles',['CheckNFiles',['../classamrex_1_1NFilesIter.html#a0a8de2ff506c69fd9d2165fe0f294100',1,'amrex::NFilesIter']]],

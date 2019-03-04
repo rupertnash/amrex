@@ -229,6 +229,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aebc495aaac9123df9e82b5be03576489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6b131b73fe8a352542cf6e79a6bf251"><td class="memItemLeft" align="right" valign="top">FAB const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#af6b131b73fe8a352542cf6e79a6bf251">fabDevicePtr</a> (int K) const </td></tr>
 <tr class="separator:af6b131b73fe8a352542cf6e79a6bf251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d657be280801532ab07395b0ea926b"><td class="memTemplParams" colspan="2">template&lt;class T , typename std::enable_if&lt;!IsBaseFab&lt; T &gt;::value, int &gt;::type  = 0&gt; </td></tr>
+<tr class="memitem:a64d657be280801532ab07395b0ea926b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#a64d657be280801532ab07395b0ea926b">checkDataPtrConsistence</a> (T const *d, T const *h) const </td></tr>
+<tr class="separator:a64d657be280801532ab07395b0ea926b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d657be280801532ab07395b0ea926b"><td class="memTemplParams" colspan="2">template&lt;class T , typename std::enable_if&lt; IsBaseFab&lt; T &gt;::value, int &gt;::type  = 0&gt; </td></tr>
+<tr class="memitem:a64d657be280801532ab07395b0ea926b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#a64d657be280801532ab07395b0ea926b">checkDataPtrConsistence</a> (T const *d, T const *h) const </td></tr>
+<tr class="separator:a64d657be280801532ab07395b0ea926b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bb527e2f76e9b84c039dc8afd73411"><td class="memTemplParams" colspan="2">template&lt;class  = typename std::enable_if&lt;IsBaseFab&lt;FAB&gt;::value&gt;&gt; </td></tr>
 <tr class="memitem:a13bb527e2f76e9b84c039dc8afd73411"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; typename <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; FAB &gt;::<a class="el" href="classamrex_1_1FabArray.html#a2b04c30bcb209306838ed6a01bd7816a">value_type</a> const  &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#a13bb527e2f76e9b84c039dc8afd73411">array</a> (const <a class="el" href="classamrex_1_1MFIter.html">MFIter</a> &amp;mfi) const </td></tr>
 <tr class="separator:a13bb527e2f76e9b84c039dc8afd73411"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1194,6 +1200,82 @@ template&lt;class &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64d657be280801532ab07395b0ea926b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class FAB&gt; </div>
+<div class="memtemplate">
+template&lt;class T , typename std::enable_if&lt;!IsBaseFab&lt; T &gt;::value, int &gt;::type  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classamrex_1_1FabArray.html">amrex::FabArray</a>&lt; FAB &gt;::checkDataPtrConsistence </td>
+          <td>(</td>
+          <td class="paramtype">T const *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64d657be280801532ab07395b0ea926b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class FAB&gt; </div>
+<div class="memtemplate">
+template&lt;class T , typename std::enable_if&lt; IsBaseFab&lt; T &gt;::value, int &gt;::type  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classamrex_1_1FabArray.html">amrex::FabArray</a>&lt; FAB &gt;::checkDataPtrConsistence </td>
+          <td>(</td>
+          <td class="paramtype">T const *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const *&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
