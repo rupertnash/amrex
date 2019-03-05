@@ -117,7 +117,7 @@ var searchData=
   ['neighborcopytag',['NeighborCopyTag',['../structamrex_1_1NeighborParticleContainer_1_1NeighborCopyTag.html',1,'amrex::NeighborParticleContainer']]],
   ['neighborcopytag',['NeighborCopyTag',['../structamrex_1_1NeighborParticleContainer_1_1NeighborCopyTag.html#a7b698311da227ef3d000f1f453ec101a',1,'amrex::NeighborParticleContainer::NeighborCopyTag::NeighborCopyTag()'],['../structamrex_1_1NeighborParticleContainer_1_1NeighborCopyTag.html#a88cdab77c00b67a39c1a37d09cc5323d',1,'amrex::NeighborParticleContainer::NeighborCopyTag::NeighborCopyTag(int a_level, int a_grid, int a_tile)']]],
   ['neighbordata',['NeighborData',['../structamrex_1_1NeighborData.html',1,'amrex']]],
-  ['neighbordata',['NeighborData',['../structamrex_1_1NeighborData.html#ac5468f40adb51a2933ade783cd90fe80',1,'amrex::NeighborData']]],
+  ['neighbordata',['NeighborData',['../structamrex_1_1NeighborData.html#abeafc4c935be0c38da6bce31ed569ae9',1,'amrex::NeighborData']]],
   ['neighborindexmap',['NeighborIndexMap',['../structamrex_1_1NeighborParticleContainer_1_1NeighborIndexMap.html',1,'amrex::NeighborParticleContainer']]],
   ['neighborindexmap',['NeighborIndexMap',['../structamrex_1_1NeighborParticleContainer_1_1NeighborIndexMap.html#af88966ba4463658d4b3333adb0256d6b',1,'amrex::NeighborParticleContainer::NeighborIndexMap']]],
   ['neighborlist',['NeighborList',['../classamrex_1_1NeighborList.html',1,'amrex']]],

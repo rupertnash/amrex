@@ -998,12 +998,12 @@
 <codeline lineno="932"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>plev<sp/><sp/>=<sp/>m_particles[lev];</highlight></codeline>
 <codeline lineno="933"><highlight class="normal"></highlight></codeline>
 <codeline lineno="934"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temporaries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;amrex::IntVect&gt;</ref><sp/>cells_tmp;</highlight></codeline>
-<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>index_sequence_tmp;</highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;amrex::IntVect&gt;</ref><sp/>cells_tmp;</highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>index_sequence_tmp;</highlight></codeline>
 <codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ParticleContainer_1aaee7b7f9a52218b0ae9efcc9f1c5be58" kindref="member">ParticleVector</ref><sp/>aos_r;</highlight></codeline>
 <codeline lineno="938"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ParticleContainer_1a0e7c4cbdae01b74faec61771f467d029" kindref="member">RealVector</ref><sp/>rdata_r;</highlight></codeline>
 <codeline lineno="939"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ParticleContainer_1a6771cf4d68f77e662aa8ef3dc3e10230" kindref="member">IntVector</ref><sp/><sp/>idata_r;</highlight></codeline>
-<codeline lineno="940"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>grids_r;</highlight></codeline>
+<codeline lineno="940"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>grids_r;</highlight></codeline>
 <codeline lineno="941"><highlight class="normal"></highlight></codeline>
 <codeline lineno="942"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref><sp/>mfi(*redistribute_mask_ptr,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>mfi.<ref refid="classamrex_1_1MFIter_1ad1cb993a973d541776b06c959d1ae3cd" kindref="member">isValid</ref>();<sp/>++mfi)</highlight></codeline>
 <codeline lineno="943"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -1068,9 +1068,9 @@
 <codeline lineno="1002"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructInt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NArrayReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NArrayInt&gt;</highlight></codeline>
 <codeline lineno="1003"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1004"><highlight class="normal"><ref refid="classamrex_1_1ParticleContainer" kindref="compound">ParticleContainer&lt;NStructReal, NStructInt, NArrayReal, NArrayInt&gt;::</ref></highlight></codeline>
-<codeline lineno="1005" refid="classamrex_1_1ParticleContainer_1ad2041e26982c6c54d07a1dd30c0507df" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1ParticleContainer" kindref="compound">SortParticlesByBin</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1ParIterBase" kindref="compound">ParIterBase&lt;false,NStructReal,NStructInt,NArrayReal,NArrayInt&gt;</ref>&amp;<sp/>pti,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ng,<sp/></highlight></codeline>
-<codeline lineno="1006"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Cuda::DeviceVector&lt;int&gt;</ref>&amp;<sp/>bin_start,<sp/></highlight></codeline>
-<codeline lineno="1007"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Cuda::DeviceVector&lt;int&gt;</ref>&amp;<sp/>bin_stop,<sp/></highlight></codeline>
+<codeline lineno="1005" refid="classamrex_1_1ParticleContainer_1adc72681be46a17adef32523024926177" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1ParticleContainer" kindref="compound">SortParticlesByBin</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1ParIterBase" kindref="compound">ParIterBase&lt;false,NStructReal,NStructInt,NArrayReal,NArrayInt&gt;</ref>&amp;<sp/>pti,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ng,<sp/></highlight></codeline>
+<codeline lineno="1006"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref>&amp;<sp/>bin_start,<sp/></highlight></codeline>
+<codeline lineno="1007"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref>&amp;<sp/>bin_stop,<sp/></highlight></codeline>
 <codeline lineno="1008"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>bin_size)</highlight></codeline>
 <codeline lineno="1009"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="1010"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
@@ -1121,19 +1121,19 @@
 <codeline lineno="1055"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ParticleContainer_1aaee7b7f9a52218b0ae9efcc9f1c5be58" kindref="member">ParticleVector</ref><sp/>aos_r;</highlight></codeline>
 <codeline lineno="1056"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ParticleContainer_1a0e7c4cbdae01b74faec61771f467d029" kindref="member">RealVector</ref><sp/>rdata_r;</highlight></codeline>
 <codeline lineno="1057"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ParticleContainer_1a6771cf4d68f77e662aa8ef3dc3e10230" kindref="member">IntVector</ref><sp/><sp/>idata_r;</highlight></codeline>
-<codeline lineno="1058"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>grids_r;</highlight></codeline>
+<codeline lineno="1058"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>grids_r;</highlight></codeline>
 <codeline lineno="1059"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1060"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>lo;</highlight></codeline>
-<codeline lineno="1061"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>hi;</highlight></codeline>
-<codeline lineno="1062"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>output;</highlight></codeline>
+<codeline lineno="1060"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>lo;</highlight></codeline>
+<codeline lineno="1061"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>hi;</highlight></codeline>
+<codeline lineno="1062"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>output;</highlight></codeline>
 <codeline lineno="1063"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1064"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>grids_tmp;</highlight></codeline>
-<codeline lineno="1065"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>index_sequence_tmp;</highlight></codeline>
+<codeline lineno="1064"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>grids_tmp;</highlight></codeline>
+<codeline lineno="1065"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>index_sequence_tmp;</highlight></codeline>
 <codeline lineno="1066"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1067"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1ParticleContainer_1aaee7b7f9a52218b0ae9efcc9f1c5be58" kindref="member">ParticleVector</ref><sp/>aos_to_redistribute;</highlight></codeline>
 <codeline lineno="1068"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;<sp/>RealVector,<sp/>NArrayReal&gt;<sp/>real_arrays_to_redistribute;</highlight></codeline>
 <codeline lineno="1069"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;<sp/>IntVector,<sp/><sp/>NArrayInt<sp/>&gt;<sp/>int_arrays_to_redistribute;</highlight></codeline>
-<codeline lineno="1070"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>grids_to_redistribute;</highlight></codeline>
+<codeline lineno="1070"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>grids_to_redistribute;</highlight></codeline>
 <codeline lineno="1071"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1072"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>SendBuffer&gt;<sp/>not_ours;</highlight></codeline>
 <codeline lineno="1073"><highlight class="normal"></highlight></codeline>
@@ -1358,8 +1358,8 @@
 <codeline lineno="1292"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num_to_move<sp/>&gt;<sp/>0)</highlight></codeline>
 <codeline lineno="1294"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="1295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>grid_begin(num_grids+1);</highlight></codeline>
-<codeline lineno="1296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::DeviceVector&lt;int&gt;</ref><sp/>grid_end(num_grids+1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>grid_begin(num_grids+1);</highlight></codeline>
+<codeline lineno="1296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Vector" kindref="compound">Gpu::ManagedDeviceVector&lt;int&gt;</ref><sp/>grid_end(num_grids+1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="1297"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_sequence_tmp.resize(num_to_move);</highlight></codeline>
 <codeline lineno="1299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thrust::sequence(thrust::device,<sp/>index_sequence_tmp.begin(),<sp/>index_sequence_tmp.end());</highlight></codeline>

@@ -1471,10 +1471,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particles.H" line="401" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleContainerI.H" bodystart="920" bodyend="1000"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1ParticleContainer_1ad2041e26982c6c54d07a1dd30c0507df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1ParticleContainer_1adc72681be46a17adef32523024926177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::ParticleContainer&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::SortParticlesByBin</definition>
-        <argsstring>(const ParIterBase&lt; false, NStructReal, NStructInt, NArrayReal, NArrayInt &gt; &amp;pti, int ng, Cuda::DeviceVector&lt; int &gt; &amp;bin_start, Cuda::DeviceVector&lt; int &gt; &amp;bin_stop, const IntVect &amp;bin_size)</argsstring>
+        <argsstring>(const ParIterBase&lt; false, NStructReal, NStructInt, NArrayReal, NArrayInt &gt; &amp;pti, int ng, Gpu::ManagedDeviceVector&lt; int &gt; &amp;bin_start, Gpu::ManagedDeviceVector&lt; int &gt; &amp;bin_stop, const IntVect &amp;bin_size)</argsstring>
         <name>SortParticlesByBin</name>
         <param>
           <type>const <ref refid="classamrex_1_1ParIterBase" kindref="compound">ParIterBase</ref>&lt; false, NStructReal, NStructInt, NArrayReal, NArrayInt &gt; &amp;</type>
@@ -1485,11 +1485,11 @@
           <declname>ng</declname>
         </param>
         <param>
-          <type><ref refid="namespaceamrex_1_1Cuda_1a7f12f082e7e48f63e8a21bcde83b9b06" kindref="member">Cuda::DeviceVector</ref>&lt; int &gt; &amp;</type>
+          <type><ref refid="namespaceamrex_1_1Cuda_1a7e4bb643564213a315b372b600df7514" kindref="member">Gpu::ManagedDeviceVector</ref>&lt; int &gt; &amp;</type>
           <declname>bin_start</declname>
         </param>
         <param>
-          <type><ref refid="namespaceamrex_1_1Cuda_1a7f12f082e7e48f63e8a21bcde83b9b06" kindref="member">Cuda::DeviceVector</ref>&lt; int &gt; &amp;</type>
+          <type><ref refid="namespaceamrex_1_1Cuda_1a7e4bb643564213a315b372b600df7514" kindref="member">Gpu::ManagedDeviceVector</ref>&lt; int &gt; &amp;</type>
           <declname>bin_stop</declname>
         </param>
         <param>
@@ -3767,7 +3767,7 @@
       <member refid="classamrex_1_1ParticleContainer_1addb677e3ecf4c180476b73b4231eb509" prot="public" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>SetUseUnlink</name></member>
       <member refid="classamrex_1_1ParticleContainer_1a31677806416ae622294a0a8da91e8deb" prot="public" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>SetVerbose</name></member>
       <member refid="classamrex_1_1ParticleContainer_1a687d4752e63683529eecb23e0f25d3ff" prot="public" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>SoA</name></member>
-      <member refid="classamrex_1_1ParticleContainer_1ad2041e26982c6c54d07a1dd30c0507df" prot="public" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>SortParticlesByBin</name></member>
+      <member refid="classamrex_1_1ParticleContainer_1adc72681be46a17adef32523024926177" prot="public" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>SortParticlesByBin</name></member>
       <member refid="classamrex_1_1ParticleContainer_1a22e1d8ca180b542ad1610173f3a28d63" prot="public" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>SortParticlesByCell</name></member>
       <member refid="classamrex_1_1ParticleContainer_1af1e4d4ca50e58f86f09f55943902bffa" prot="public" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>sumParticleMass</name></member>
       <member refid="classamrex_1_1ParticleContainer_1a09a8f0a93ae94e2c92927635258b0ee5" prot="private" virt="non-virtual"><scope>amrex::ParticleContainer</scope><name>superparticle_size</name></member>

@@ -318,7 +318,7 @@ var searchData=
   ['solve_5fcg',['solve_cg',['../classamrex_1_1CGSolver.html#a5e82c4f3f85cce31876ddfb44d15ab3b',1,'amrex::CGSolver::solve_cg()'],['../classamrex_1_1MLCGSolver.html#a8f5383cd09372e80bdf1b309546f8424',1,'amrex::MLCGSolver::solve_cg()']]],
   ['solve_5fthomas',['solve_thomas',['../classamrex_1_1distFcnElement2d.html#aacd4e98c4afd778e94043c2f60418264',1,'amrex::distFcnElement2d']]],
   ['sort',['Sort',['../classamrex_1_1DistributionMapping.html#a65d02277c7532c3befd7d24aeda66a0d',1,'amrex::DistributionMapping']]],
-  ['sortparticlesbybin',['SortParticlesByBin',['../classamrex_1_1ParticleContainer.html#ad2041e26982c6c54d07a1dd30c0507df',1,'amrex::ParticleContainer']]],
+  ['sortparticlesbybin',['SortParticlesByBin',['../classamrex_1_1ParticleContainer.html#adc72681be46a17adef32523024926177',1,'amrex::ParticleContainer']]],
   ['sortparticlesbycell',['SortParticlesByCell',['../classamrex_1_1ParticleContainer.html#a22e1d8ca180b542ad1610173f3a28d63',1,'amrex::ParticleContainer']]],
   ['spacedim',['spaceDim',['../classamrex_1_1PlotFileDataImpl.html#aa21d94da42d19d58dff4b9922cf495b8',1,'amrex::PlotFileDataImpl::spaceDim()'],['../classamrex_1_1PlotFileData.html#a3ce1483028792bf57e35a393cdc30ef2',1,'amrex::PlotFileData::spaceDim()']]],
   ['spacer',['Spacer',['../namespaceamrex.html#a98d93b35767e8e98fcdcfab5217f4e8f',1,'amrex::Spacer(std::ostream &amp;os, int lev)'],['../namespaceamrex.html#a98d93b35767e8e98fcdcfab5217f4e8f',1,'amrex::Spacer(std::ostream &amp;os, int lev)']]],
