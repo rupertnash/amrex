@@ -80,6 +80,7 @@ var searchData=
   ['amrex_5fmfiter_5freduce_5fmax',['AMREX_MFITER_REDUCE_MAX',['../AMReX__BLFort_8H.html#a802870939f4eef1cb74ec4e5804db0a5',1,'AMReX_BLFort.H']]],
   ['amrex_5fmfiter_5freduce_5fmin',['AMREX_MFITER_REDUCE_MIN',['../AMReX__BLFort_8H.html#a4a91fa218319313c2d881b8331162792',1,'AMReX_BLFort.H']]],
   ['amrex_5fmfiter_5freduce_5fsum',['AMREX_MFITER_REDUCE_SUM',['../AMReX__BLFort_8H.html#abd353d48d8f6a098cf31f224ed2826f8',1,'AMReX_BLFort.H']]],
+  ['amrex_5fneighborparticlescpuimpl_5fh_5f',['AMREX_NEIGHBORPARTICLESCPUIMPL_H_',['../AMReX__NeighborParticles_8H.html#a7325c7d15b45ebdf69906ff46a105d8e',1,'AMReX_NeighborParticles.H']]],
   ['amrex_5fparallel_5ffor_5f1d',['AMREX_PARALLEL_FOR_1D',['../AMReX__GpuLaunch_8H.html#a775a21da7a0872eb04e5d779d8c3e579',1,'AMReX_GpuLaunch.H']]],
   ['amrex_5fparallel_5ffor_5f3d',['AMREX_PARALLEL_FOR_3D',['../AMReX__GpuLaunch_8H.html#a5276700f57c62c88725cd2015e45c304',1,'AMReX_GpuLaunch.H']]],
   ['amrex_5fparallel_5ffor_5f4d',['AMREX_PARALLEL_FOR_4D',['../AMReX__GpuLaunch_8H.html#a47b94de342e3db50339d953446f1b469',1,'AMReX_GpuLaunch.H']]],

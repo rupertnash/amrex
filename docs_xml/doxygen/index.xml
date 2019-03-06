@@ -7154,11 +7154,12 @@
     <member refid="classamrex_1_1NeighborParticleContainer_1abda283254c9aa57da66fa85e8bcd57da" kind="typedef"><name>AoS</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a244bb9e75cea8c215f5b50b6895ed54d" kind="typedef"><name>ParticleVector</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1aab80b7dbd7854b08358199dd39b7cfb9" kind="typedef"><name>IntVector</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1ac167c31e10246c5fb4316fa944971904" kind="typedef"><name>SendBuffer</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1ac8c7afd431ee1b19fb86a9eef8a597d6" kind="variable"><name>neighbors</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1ad6cd825744370d05ea2aef00a1501873" kind="variable"><name>neighbor_list</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a683d4fcc37d9b1553f64124f5d6adafe" kind="variable"><name>pdata_size</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a1e5039db78995c9f1e60c816780c91ab" kind="variable"><name>cdata_size</name></member>
-    <member refid="classamrex_1_1NeighborParticleContainer_1ad768701ff7b07d66cb0c75e0598eb0f3" kind="variable"><name>num_neighbor_cells</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1aa0f8017a2f345ca603b5f556933bcbac" kind="variable"><name>m_num_neighbor_cells</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1adfb06a7914ba86c456a40d81fbcbf464" kind="variable"><name>local_neighbors</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a40077fd2df61d9514fcf4b328f293695" kind="variable"><name>mask_ptr</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1aa6468cef6d3d4ebb86442a87c15a680c" kind="variable"><name>buffer_tag_cache</name></member>
@@ -7178,19 +7179,25 @@
     <member refid="classamrex_1_1NeighborParticleContainer_1aee1b7c1708cd7d226db64b05d590d1fd" kind="function"><name>Regrid</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a991c2e4f486d6cbb9cf74c326c1ad357" kind="function"><name>Regrid</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a2c1bf28f2552627e93d1587e977dd22a" kind="function"><name>fillNeighbors</name></member>
-    <member refid="classamrex_1_1NeighborParticleContainer_1a497db0eca21eb270f545e60f034aeb6a" kind="function"><name>cacheNeighborInfo</name></member>
-    <member refid="classamrex_1_1NeighborParticleContainer_1a8a376cb2270fcaff181f9792f2932f6e" kind="function"><name>updateNeighbors</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1add63262756c48b8f645f236c664067d0" kind="function"><name>updateNeighbors</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a287e510b67bfbb6bd4d500e5281e3329" kind="function"><name>clearNeighbors</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a19ee4c2e8c974ace13081d75d716a2b8" kind="function"><name>buildNeighborList</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1aac13e1f1c324181ce01a8f50fe3897d9" kind="function"><name>printNeighborList</name></member>
-    <member refid="classamrex_1_1NeighborParticleContainer_1a1dbfa826e9e8d142769e97b09a6531c4" kind="function"><name>printNeighborList</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a9c5eaf4a73e02b631f586b8d9eaa9b44" kind="function"><name>setRealCommComp</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a63cbb0b5b6c81df9e4321148bc960f32" kind="function"><name>setIntCommComp</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1aa2a2b46f097c98884103c3a7046e64f3" kind="function"><name>GetNeighbors</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1ae7d8a862326a9c892d628a23e1573ce2" kind="function"><name>GetNeighbors</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1ab57403660719dbda8f2002c09e37a858" kind="function"><name>GetNeighborList</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1ab2a705db9e8bcf7a5be6a7c697421771" kind="function"><name>GetNeighborList</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1aed1d7df235a9042894bb42785bb16b9f" kind="function"><name>RedistributeLocal</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1a012bd63d1761b8543c96d7345934427f" kind="function"><name>buildNeighborListCPU</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1a9f74276c1ebace7e7b32df978f0b78ee" kind="function"><name>printNeighborListCPU</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1aa67093443956c508eba7928ca9c43789" kind="function"><name>fillNeighborsCPU</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1a82b7b32706c360ef9da4f2501f0d2ef7" kind="function"><name>updateNeighborsCPU</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1ab52778d0154284955fa59e2e6bc36482" kind="function"><name>clearNeighborsCPU</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1a012bd63d1761b8543c96d7345934427f" kind="function"><name>buildNeighborListCPU</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a12e6522b1c75e8a3814f89089e2e1029" kind="function"><name>buildNeighborList</name></member>
+    <member refid="classamrex_1_1NeighborParticleContainer_1a497db0eca21eb270f545e60f034aeb6a" kind="function"><name>cacheNeighborInfo</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1af79112d043b45868fb00cf720d61b0a5" kind="function"><name>BuildMasks</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1a01f3711526aa5aff0183fc0eeee6a866" kind="function"><name>GetNeighborCommTags</name></member>
     <member refid="classamrex_1_1NeighborParticleContainer_1ace4a68e9536f7e36dd141825cdc04519" kind="function"><name>GetCommTagsBox</name></member>
@@ -9757,7 +9764,7 @@
   </compound>
   <compound refid="namespaceamrex_1_1_0D450" kind="namespace"><name>amrex::@450</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D470" kind="namespace"><name>amrex::@470</name>
+  <compound refid="namespaceamrex_1_1_0D472" kind="namespace"><name>amrex::@472</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D49" kind="namespace"><name>amrex::@49</name>
   </compound>
@@ -10876,7 +10883,6 @@
     <member refid="namespaceamrex__particle__module_1a40552f8f0a3b437977dd89e44f66af69" kind="function"><name>amrex_interpolate_cic</name></member>
     <member refid="namespaceamrex__particle__module_1a3b44c6e4cc46a43c6c1d985672578db2" kind="function"><name>amrex_particle_set_position</name></member>
     <member refid="namespaceamrex__particle__module_1ac1c18dd7ecce9186d2996155977e7272" kind="function"><name>amrex_particle_get_position</name></member>
-    <member refid="namespaceamrex__particle__module_1a62a73a4137e4ef07952fecb4b0cb76f9" kind="function"><name>amrex_build_nl</name></member>
     <member refid="namespaceamrex__particle__module_1a332e7b995aadb05f1bc9e0a89c964c64" kind="function"><name>amrex_deposit_cic</name></member>
     <member refid="namespaceamrex__particle__module_1a5f6b9ef05aa8927c97da3568498f3d3d" kind="function"><name>amrex_deposit_particle_dx_cic</name></member>
     <member refid="namespaceamrex__particle__module_1ad33fffb24f968bbdddffe052e34d2ebe" kind="function"><name>amrex_interpolate_cic</name></member>
@@ -10961,6 +10967,9 @@
     <member refid="namespacecvode__interface_1aba5dce0548501ab0798a1f8facc21c60" kind="variable"><name>cvspils_mem_fail</name></member>
     <member refid="namespacecvode__interface_1ac7c6d794535062e41f68f4c0df55475e" kind="variable"><name>cvspils_pmem_null</name></member>
     <member refid="namespacecvode__interface_1ab0af7e77c12d08a608cbd74113e0d797" kind="function"><name>fcvdense</name></member>
+  </compound>
+  <compound refid="namespacedetail" kind="namespace"><name>detail</name>
+    <member refid="namespacedetail_1a0fa3d037e44a1dbda0ab9b7362a2d9c1" kind="function"><name>getBoundaryBoxes</name></member>
   </compound>
   <compound refid="namespacefarkode__mod" kind="namespace"><name>farkode_mod</name>
     <member refid="namespacefarkode__mod_1a511e8cf40ba0661c12f2ef8e13c8001e" kind="variable"><name>ark_normal</name></member>
@@ -13002,6 +13011,11 @@
   <compound refid="AMReX__NeighborList_8H" kind="file"><name>AMReX_NeighborList.H</name>
   </compound>
   <compound refid="AMReX__NeighborParticles_8H" kind="file"><name>AMReX_NeighborParticles.H</name>
+  </compound>
+  <compound refid="AMReX__NeighborParticlesCPUImpl_8H" kind="file"><name>AMReX_NeighborParticlesCPUImpl.H</name>
+    <member refid="AMReX__NeighborParticles_8H_1a7325c7d15b45ebdf69906ff46a105d8e" kind="define"><name>AMREX_NEIGHBORPARTICLESCPUIMPL_H_</name></member>
+  </compound>
+  <compound refid="AMReX__NeighborParticlesGPUImpl_8H" kind="file"><name>AMReX_NeighborParticlesGPUImpl.H</name>
   </compound>
   <compound refid="AMReX__NeighborParticlesI_8H" kind="file"><name>AMReX_NeighborParticlesI.H</name>
   </compound>

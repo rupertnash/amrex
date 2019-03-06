@@ -88,7 +88,6 @@ var searchData=
   ['num_5fint_5fcomm_5fcomps',['num_int_comm_comps',['../classamrex_1_1ParticleContainer.html#a1677be256793e993c7adbfdae3c30b2e',1,'amrex::ParticleContainer']]],
   ['num_5flocal_5ftiles',['num_local_tiles',['../classamrex_1_1MFIter.html#a967c3c48ccb4f316911d06fcaccb29fa',1,'amrex::MFIter']]],
   ['num_5fmask_5fcomps',['num_mask_comps',['../classamrex_1_1NeighborParticleContainer.html#a436bb8b4cab5f2079831c68f4d3341ad',1,'amrex::NeighborParticleContainer']]],
-  ['num_5fneighbor_5fcells',['num_neighbor_cells',['../classamrex_1_1NeighborParticleContainer.html#ad768701ff7b07d66cb0c75e0598eb0f3',1,'amrex::NeighborParticleContainer']]],
   ['num_5fprocs_5fleft',['num_procs_left',['../structamrex_1_1KDTree_1_1KDNode.html#aa9e6b06a7c3c6359933108939e4e799c',1,'amrex::KDTree::KDNode']]],
   ['num_5freal_5fcomm_5fcomps',['num_real_comm_comps',['../classamrex_1_1ParticleContainer.html#a61ac370a6cc648a787b43ad6110156bc',1,'amrex::ParticleContainer']]],
   ['num_5fsnds',['num_snds',['../classamrex_1_1NeighborParticleContainer.html#a0223bc2e3edebb49c92f6565ba28dd4e',1,'amrex::NeighborParticleContainer']]],

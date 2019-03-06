@@ -114,8 +114,6 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a3b44c6e4cc46a43c6c1d985672578db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c18dd7ecce9186d2996155977e7272"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__particle__module.html#ac1c18dd7ecce9186d2996155977e7272">amrex_particle_get_position</a> (particles, ns, np, x, y, z)</td></tr>
 <tr class="separator:ac1c18dd7ecce9186d2996155977e7272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62a73a4137e4ef07952fecb4b0cb76f9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__particle__module.html#a62a73a4137e4ef07952fecb4b0cb76f9">amrex_build_nl</a> (particles, ns, np, nbor_list, size_nl, lo, hi, plo, dx)</td></tr>
-<tr class="separator:a62a73a4137e4ef07952fecb4b0cb76f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a332e7b995aadb05f1bc9e0a89c964c64"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__particle__module.html#a332e7b995aadb05f1bc9e0a89c964c64">amrex_deposit_cic</a> (particles, ns, np, nc, rho, lo, hi, plo, dx)</td></tr>
 <tr class="separator:a332e7b995aadb05f1bc9e0a89c964c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f6b9ef05aa8927c97da3568498f3d3d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__particle__module.html#a5f6b9ef05aa8927c97da3568498f3d3d">amrex_deposit_particle_dx_cic</a> (particles, ns, np, nc, rho, lo, hi, plo, dx, dx_particle)</td></tr>
@@ -124,82 +122,6 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:ad33fffb24f968bbdddffe052e34d2ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a class="anchor" id="a62a73a4137e4ef07952fecb4b0cb76f9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine amrex_particle_module::amrex_build_nl </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="complex-type_8h.html#ab4cafb1ab351d520eb09a05ebd0a1e13">real</a>(<a class="el" href="AMReX__Particles__F_8H.html#acb6d48305132f6aa2ad69f1aaa78e4c6">amrex_particle_real</a>), dimension(ns,np)&#160;</td>
-          <td class="paramname"><em>particles</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, value&#160;</td>
-          <td class="paramname"><em>ns</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, value&#160;</td>
-          <td class="paramname"><em>np</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(100000)&#160;</td>
-          <td class="paramname"><em>nbor_list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer&#160;</td>
-          <td class="paramname"><em>size_nl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3)&#160;</td>
-          <td class="paramname"><em>lo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(3)&#160;</td>
-          <td class="paramname"><em>hi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="complex-type_8h.html#ab4cafb1ab351d520eb09a05ebd0a1e13">real</a>(<a class="el" href="AMReX__REAL_8H.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(3)&#160;</td>
-          <td class="paramname"><em>plo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="complex-type_8h.html#ab4cafb1ab351d520eb09a05ebd0a1e13">real</a>(<a class="el" href="AMReX__REAL_8H.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(3)&#160;</td>
-          <td class="paramname"><em>dx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a0c4daf29af09bd3defb8181182540e71"></a>
 <div class="memitem">
 <div class="memproto">
