@@ -36,10 +36,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="19" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="20" bodyend="34"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1a4e3c1b9e69321a50f83dba9d9982a5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1a93c23682293ea89192c124d29b5f18de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>subroutine, public</type>
         <definition>subroutine, public amrex_mlebabeclap_2d_module::amrex_mlebabeclap_adotx</definition>
-        <argsstring>(lo, hi, y, ylo, yhi, x, xlo, xhi, a, alo, ahi, bx, bxlo, bxhi, by, bylo, byhi, ccm, cmlo, cmhi, flag, flo, fhi, vfrc, vlo, vhi, apx, axlo, axhi, apy, aylo, ayhi, fcx, cxlo, cxhi, fcy, cylo, cyhi, ba, balo, bahi, bc, bclo, bchi, beb, elo, ehi, is_eb_dirichlet, phieb, plo, phi, is_inhomog, dxinv, alpha, beta)</argsstring>
+        <argsstring>(lo, hi, y, ylo, yhi, x, xlo, xhi, a, alo, ahi, bx, bxlo, bxhi, by, bylo, byhi, ccm, cmlo, cmhi, flag, flo, fhi, vfrc, vlo, vhi, apx, axlo, axhi, apy, aylo, ayhi, fcx, cxlo, cxhi, fcy, cylo, cyhi, ba, balo, bahi, bc, bclo, bchi, beb, elo, ehi, is_dirichlet, is_ho_dirichlet, phieb, plo, phi, is_inhomog, dxinv, alpha, beta)</argsstring>
         <name>amrex_mlebabeclap_adotx</name>
         <param>
           <type>lo</type>
@@ -230,8 +230,12 @@
           <defname>ehi</defname>
         </param>
         <param>
-          <type>is_eb_dirichlet</type>
-          <defname>is_eb_dirichlet</defname>
+          <type>is_dirichlet</type>
+          <defname>is_dirichlet</defname>
+        </param>
+        <param>
+          <type>is_ho_dirichlet</type>
+          <defname>is_ho_dirichlet</defname>
         </param>
         <param>
           <type>phieb</type>
@@ -267,12 +271,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="37" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="43" bodyend="204"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="37" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="43" bodyend="243"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1ac56a18b5483c6a311e54d456d973e789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1ab7ff598de93cee3695836729fc099b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>subroutine, public</type>
         <definition>subroutine, public amrex_mlebabeclap_2d_module::amrex_mlebabeclap_gsrb</definition>
-        <argsstring>(lo, hi, phi, hlo, hhi, rhs, rlo, rhi, a, alo, ahi, bx, bxlo, bxhi, by, bylo, byhi, ccm, cmlo, cmhi, m0, m0lo, m0hi, m2, m2lo, m2hi, m1, m1lo, m1hi, m3, m3lo, m3hi, f0, f0lo, f0hi, f2, f2lo, f2hi, f1, f1lo, f1hi, f3, f3lo, f3hi, flag, flo, fhi, vfrc, vlo, vhi, apx, axlo, axhi, apy, aylo, ayhi, fcx, cxlo, cxhi, fcy, cylo, cyhi, ba, balo, bahi, bc, bclo, bchi, beb, elo, ehi, is_eb_dirichlet, dxinv, alpha, beta, redblack)</argsstring>
+        <argsstring>(lo, hi, phi, hlo, hhi, rhs, rlo, rhi, a, alo, ahi, bx, bxlo, bxhi, by, bylo, byhi, ccm, cmlo, cmhi, m0, m0lo, m0hi, m2, m2lo, m2hi, m1, m1lo, m1hi, m3, m3lo, m3hi, f0, f0lo, f0hi, f2, f2lo, f2hi, f1, f1lo, f1hi, f3, f3lo, f3hi, flag, flo, fhi, vfrc, vlo, vhi, apx, axlo, axhi, apy, aylo, ayhi, fcx, cxlo, cxhi, fcy, cylo, cyhi, ba, balo, bahi, bc, bclo, bchi, beb, elo, ehi, is_dirichlet, is_ho_dirichlet, phieb, p_lo, p_hi, is_inhomog, dxinv, alpha, beta, redblack)</argsstring>
         <name>amrex_mlebabeclap_gsrb</name>
         <param>
           <type>lo</type>
@@ -559,8 +563,28 @@
           <defname>ehi</defname>
         </param>
         <param>
-          <type>is_eb_dirichlet</type>
-          <defname>is_eb_dirichlet</defname>
+          <type>is_dirichlet</type>
+          <defname>is_dirichlet</defname>
+        </param>
+        <param>
+          <type>is_ho_dirichlet</type>
+          <defname>is_ho_dirichlet</defname>
+        </param>
+        <param>
+          <type>phieb</type>
+          <defname>phieb</defname>
+        </param>
+        <param>
+          <type>p_lo</type>
+          <defname>p_lo</defname>
+        </param>
+        <param>
+          <type>p_hi</type>
+          <defname>p_hi</defname>
+        </param>
+        <param>
+          <type>is_inhomog</type>
+          <defname>is_inhomog</defname>
         </param>
         <param>
           <type>dxinv</type>
@@ -584,12 +608,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="208" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="220" bodyend="441"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="247" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="260" bodyend="518"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1a76bdb8b4f62a638550c5c29621d38c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1a325f427de95ee1ae5d364f91a73e6b71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>subroutine, public</type>
         <definition>subroutine, public amrex_mlebabeclap_2d_module::amrex_mlebabeclap_normalize</definition>
-        <argsstring>(lo, hi, x, xlo, xhi, a, alo, ahi, bx, bxlo, bxhi, by, bylo, byhi, ccm, cmlo, cmhi, flag, flo, fhi, vfrc, vlo, vhi, apx, axlo, axhi, apy, aylo, ayhi, fcx, cxlo, cxhi, fcy, cylo, cyhi, ba, balo, bahi, bc, bclo, bchi, beb, elo, ehi, is_eb_dirichlet, dxinv, alpha, beta)</argsstring>
+        <argsstring>(lo, hi, x, xlo, xhi, a, alo, ahi, bx, bxlo, bxhi, by, bylo, byhi, ccm, cmlo, cmhi, flag, flo, fhi, vfrc, vlo, vhi, apx, axlo, axhi, apy, aylo, ayhi, fcx, cxlo, cxhi, fcy, cylo, cyhi, ba, balo, bahi, bc, bclo, bchi, beb, elo, ehi, is_dirichlet, is_ho_dirichlet, dxinv, alpha, beta)</argsstring>
         <name>amrex_mlebabeclap_normalize</name>
         <param>
           <type>lo</type>
@@ -768,8 +792,12 @@
           <defname>ehi</defname>
         </param>
         <param>
-          <type>is_eb_dirichlet</type>
-          <defname>is_eb_dirichlet</defname>
+          <type>is_dirichlet</type>
+          <defname>is_dirichlet</defname>
+        </param>
+        <param>
+          <type>is_ho_dirichlet</type>
+          <defname>is_ho_dirichlet</defname>
         </param>
         <param>
           <type>dxinv</type>
@@ -789,7 +817,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="445" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="450" bodyend="566"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="522" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="527" bodyend="640"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1a6e8596c40c4f8670689985a285c58c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>subroutine, public</type>
@@ -850,7 +878,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="570" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="572" bodyend="611"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="643" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="645" bodyend="684"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1a63e5a96995967814116532799d86fc52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>subroutine, public</type>
@@ -1015,7 +1043,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="614" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="620" bodyend="682"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="687" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="693" bodyend="755"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1ad7cb92f7868797e852076daebbea7fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>subroutine, public</type>
@@ -1156,7 +1184,105 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="685" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="690" bodyend="739"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="758" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="763" bodyend="812"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1ae0014a08fa6008a948c6498f12ee6611" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>subroutine</type>
+        <definition>subroutine amrex_mlebabeclap_2d_module::compute_dphidn_2d</definition>
+        <argsstring>(dudn, dxinv, i, j, phi, p_lo, p_hi, flag, flo, fhi, bct, phib, anrmx, anrmy)</argsstring>
+        <name>compute_dphidn_2d</name>
+        <param>
+          <type>dudn</type>
+          <defname>dudn</defname>
+        </param>
+        <param>
+          <type>dxinv</type>
+          <defname>dxinv</defname>
+        </param>
+        <param>
+          <type>i</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>j</type>
+          <defname>j</defname>
+        </param>
+        <param>
+          <type>phi</type>
+          <defname>phi</defname>
+        </param>
+        <param>
+          <type>p_lo</type>
+          <defname>p_lo</defname>
+        </param>
+        <param>
+          <type>p_hi</type>
+          <defname>p_hi</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <param>
+          <type>flo</type>
+          <defname>flo</defname>
+        </param>
+        <param>
+          <type>fhi</type>
+          <defname>fhi</defname>
+        </param>
+        <param>
+          <type>bct</type>
+          <defname>bct</defname>
+        </param>
+        <param>
+          <type>phib</type>
+          <defname>phib</defname>
+        </param>
+        <param>
+          <type>anrmx</type>
+          <defname>anrmx</defname>
+        </param>
+        <param>
+          <type>anrmy</type>
+          <defname>anrmy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="815" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="819" bodyend="909"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex__mlebabeclap__2d__module_1ad3ace4f488cfb94453523c4bd17a5356" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>subroutine</type>
+        <definition>subroutine amrex_mlebabeclap_2d_module::interp1d</definition>
+        <argsstring>(phi_interp, yit, v, flag)</argsstring>
+        <name>interp1d</name>
+        <param>
+          <type>phi_interp</type>
+          <defname>phi_interp</defname>
+        </param>
+        <param>
+          <type>yit</type>
+          <defname>yit</defname>
+        </param>
+        <param>
+          <type>v</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" line="912" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLEBABecLap_2d.F90" bodystart="913" bodyend="933"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

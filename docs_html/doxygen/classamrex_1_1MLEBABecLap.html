@@ -137,6 +137,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa85c8346fd88d47cf525b9ebd2d64322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a780796d3dee5dfa89cba56c05383868d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#a780796d3dee5dfa89cba56c05383868d">setEBDirichlet</a> (int amrlev, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;phi, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;beta)</td></tr>
 <tr class="separator:a780796d3dee5dfa89cba56c05383868d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9acab9bf4580bb611d63434f8e2daeed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#a9acab9bf4580bb611d63434f8e2daeed">setEBHomogDirichlet</a> (int amrlev, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;beta)</td></tr>
+<tr class="separator:a9acab9bf4580bb611d63434f8e2daeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac730d6c69ef59e9ed5436874a1081538"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#ac730d6c69ef59e9ed5436874a1081538">setEBHODirichlet</a> ()</td></tr>
+<tr class="separator:ac730d6c69ef59e9ed5436874a1081538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b6ffec4b2696d5c19b4e9639aae71a7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#a3b6ffec4b2696d5c19b4e9639aae71a7">needsUpdate</a> () const finaloverride</td></tr>
 <tr class="separator:a3b6ffec4b2696d5c19b4e9639aae71a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe421eb4fe906b1c2a4ba6a3a179ec79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#afe421eb4fe906b1c2a4ba6a3a179ec79">update</a> () finaloverride</td></tr>
@@ -357,6 +361,8 @@ Protected Attributes</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ad193fd3958c848d4182bff2117e29041"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#ad193fd3958c848d4182bff2117e29041">isEBDirichlet</a> () const </td></tr>
 <tr class="separator:ad193fd3958c848d4182bff2117e29041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab69a364823f2381be508fded5d411a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#aab69a364823f2381be508fded5d411a0">isHOEBDirichlet</a> () const </td></tr>
+<tr class="separator:aab69a364823f2381be508fded5d411a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8c66fd1d80767dce6eb87c29caaabad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#ac8c66fd1d80767dce6eb87c29caaabad">averageDownCoeffsSameAmrLevel</a> (<a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt; &amp;a, <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a>, AMREX_SPACEDIM &gt; &gt; &amp;b, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;b_eb)</td></tr>
 <tr class="separator:ac8c66fd1d80767dce6eb87c29caaabad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55ed8c27b04966126b3bd76c92735dbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#a55ed8c27b04966126b3bd76c92735dbf">averageDownCoeffs</a> ()</td></tr>
@@ -384,6 +390,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a69f0aa528f3437aed6e5fbc26d3f1820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11297b15320727df4d9e32d3b8085c06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#a11297b15320727df4d9e32d3b8085c06">m_is_eb_inhomog</a></td></tr>
 <tr class="separator:a11297b15320727df4d9e32d3b8085c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5079c6438c7cb9005188271820054283"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLEBABecLap.html#a5079c6438c7cb9005188271820054283">m_is_eb_ho_dir</a> = false</td></tr>
+<tr class="separator:a5079c6438c7cb9005188271820054283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -1360,6 +1368,29 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aab69a364823f2381be508fded5d411a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool amrex::MLEBABecLap::isHOEBDirichlet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abc36f2dee17e571ec97028c2445275ae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1720,6 +1751,47 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac730d6c69ef59e9ed5436874a1081538"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MLEBABecLap::setEBHODirichlet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9acab9bf4580bb611d63434f8e2daeed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MLEBABecLap::setEBHomogDirichlet </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amrlev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>beta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad3027675177497cdb23a984a50ebcb12"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1906,6 +1978,26 @@ Additional Inherited Members</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5079c6438c7cb9005188271820054283"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amrex::MLEBABecLap::m_is_eb_ho_dir = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
