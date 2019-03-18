@@ -18,10 +18,10 @@
       </param>
     </templateparamlist>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classamrex_1_1Vector_1a35ecf9c060d9d2b8f23cf60d088f1fca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1Vector_1add371cda18192f8465c53bdf3266385f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T &amp;</type>
         <definition>T&amp; amrex::Vector&lt; T, Allocator &gt;::operator[]</definition>
-        <argsstring>(std::size_t i)</argsstring>
+        <argsstring>(std::size_t i) noexcept</argsstring>
         <name>operator[]</name>
         <param>
           <type>std::size_t</type>
@@ -35,10 +35,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" line="37" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" bodystart="37" bodyend="41"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1Vector_1aac30959865d72ba3dc544400dae61abe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1Vector_1a1ecb329aef55714e4bbbe74980daec7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const T &amp;</type>
         <definition>const T&amp; amrex::Vector&lt; T, Allocator &gt;::operator[]</definition>
-        <argsstring>(std::size_t i) const </argsstring>
+        <argsstring>(std::size_t i) const noexcept</argsstring>
         <name>operator[]</name>
         <param>
           <type>std::size_t</type>
@@ -52,10 +52,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" line="43" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" bodystart="43" bodyend="47"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1Vector_1a314a950b356fb444c94b9f615ba0cd72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1Vector_1ab7e27d7251f3583037eee2d3333f53dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T *</type>
         <definition>T* amrex::Vector&lt; T, Allocator &gt;::dataPtr</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>dataPtr</name>
         <briefdescription>
 <para>get access to the underlying data pointer </para>        </briefdescription>
@@ -65,10 +65,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" bodystart="50" bodyend="50"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1Vector_1a0faf6219a05311b84e05c4d19a1c3e7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1Vector_1a417a1c35af1defbc46ec92e7c9eee93f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const T *</type>
         <definition>const T* amrex::Vector&lt; T, Allocator &gt;::dataPtr</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>dataPtr</name>
         <briefdescription>
 <para>get access to the underlying data pointer </para>        </briefdescription>
@@ -93,7 +93,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This class is a thin wrapper around std::vector. Unlike vector, <ref refid="classamrex_1_1Vector_1a35ecf9c060d9d2b8f23cf60d088f1fca" kindref="member">Vector::operator[]</ref> provides bound checking when compiled with DEBUG=TRUE. </para>    </briefdescription>
+<para>This class is a thin wrapper around std::vector. Unlike vector, <ref refid="classamrex_1_1Vector_1add371cda18192f8465c53bdf3266385f" kindref="member">Vector::operator[]</ref> provides bound checking when compiled with DEBUG=TRUE. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -120,10 +120,10 @@
     </collaborationgraph>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" line="32" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Vector.H" bodystart="29" bodyend="56"/>
     <listofallmembers>
-      <member refid="classamrex_1_1Vector_1a314a950b356fb444c94b9f615ba0cd72" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>dataPtr</name></member>
-      <member refid="classamrex_1_1Vector_1a0faf6219a05311b84e05c4d19a1c3e7b" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>dataPtr</name></member>
-      <member refid="classamrex_1_1Vector_1a35ecf9c060d9d2b8f23cf60d088f1fca" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>operator[]</name></member>
-      <member refid="classamrex_1_1Vector_1aac30959865d72ba3dc544400dae61abe" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1Vector_1ab7e27d7251f3583037eee2d3333f53dd" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>dataPtr</name></member>
+      <member refid="classamrex_1_1Vector_1a417a1c35af1defbc46ec92e7c9eee93f" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>dataPtr</name></member>
+      <member refid="classamrex_1_1Vector_1add371cda18192f8465c53bdf3266385f" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1Vector_1a1ecb329aef55714e4bbbe74980daec7b" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>operator[]</name></member>
       <member refid="classamrex_1_1Vector_1a509fc6837193e6fd97249b0c072c7830" prot="public" virt="non-virtual"><scope>amrex::Vector</scope><name>size</name></member>
     </listofallmembers>
   </compounddef>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hdf5handle',['HDF5Handle',['../classamrex_1_1RealVect.html#a6d43195bcf31df34f8faf73a8e4c361d',1,'amrex::RealVect']]]
+  ['lbound',['lbound',['../classamrex_1_1Box.html#afc31b87ed841fb33cc7a5403621abbc0',1,'amrex::Box']]],
+  ['length',['length',['../classamrex_1_1Box.html#a3ef34ad1300996b2a366a00d116ca4d2',1,'amrex::Box']]]
 ];

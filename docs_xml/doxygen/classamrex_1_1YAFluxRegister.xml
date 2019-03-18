@@ -321,10 +321,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.H" line="38" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.cpp" bodystart="231" bodyend="235"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1af1f29032a951f8bcf81022fe1117ec28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1aee85944d34c72b95d90a41e144709a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::YAFluxRegister::CrseAdd</definition>
-        <argsstring>(const MFIter &amp;mfi, const std::array&lt; FArrayBox const *, AMREX_SPACEDIM &gt; &amp;flux, const Real *dx, Real dt)</argsstring>
+        <argsstring>(const MFIter &amp;mfi, const std::array&lt; FArrayBox const *, AMREX_SPACEDIM &gt; &amp;flux, const Real *dx, Real dt) noexcept</argsstring>
         <name>CrseAdd</name>
         <param>
           <type>const <ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref> &amp;</type>
@@ -350,10 +350,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.H" line="40" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.cpp" bodystart="239" bodyend="274"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1a15dba278fa331ea86c49b3eabc9fae84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1ae815cfad2b1dd9acd84330c27a5f539d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::YAFluxRegister::FineAdd</definition>
-        <argsstring>(const MFIter &amp;mfi, const std::array&lt; FArrayBox const *, AMREX_SPACEDIM &gt; &amp;flux, const Real *dx, Real dt)</argsstring>
+        <argsstring>(const MFIter &amp;mfi, const std::array&lt; FArrayBox const *, AMREX_SPACEDIM &gt; &amp;flux, const Real *dx, Real dt) noexcept</argsstring>
         <name>FineAdd</name>
         <param>
           <type>const <ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref> &amp;</type>
@@ -401,10 +401,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.H" line="48" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.cpp" bodystart="365" bodyend="389"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1a979444c0ce6ada7dd42420b6c524c008" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1af466fe21e95a36341e6a099dcf9c5a97" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::YAFluxRegister::CrseHasWork</definition>
-        <argsstring>(const MFIter &amp;mfi) const </argsstring>
+        <argsstring>(const MFIter &amp;mfi) const noexcept</argsstring>
         <name>CrseHasWork</name>
         <param>
           <type>const <ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref> &amp;</type>
@@ -418,10 +418,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister.H" bodystart="50" bodyend="52"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1a6bc9afa9e8dd921dd61d4211df943e57" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1YAFluxRegister_1aac0df8bf308e353e01a5477f2c3fe458" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::YAFluxRegister::FineHasWork</definition>
-        <argsstring>(const MFIter &amp;mfi) const </argsstring>
+        <argsstring>(const MFIter &amp;mfi) const noexcept</argsstring>
         <name>FineHasWork</name>
         <param>
           <type>const <ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref> &amp;</type>
@@ -757,12 +757,12 @@
       <member refid="classamrex_1_1YAFluxRegister_1a793217326d57a18d473ad802963c1a39" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>CellType</name></member>
       <member refid="classamrex_1_1YAFluxRegister_1a793217326d57a18d473ad802963c1a39ad0f71b4da95e7cb4ed06cb9fc1be19a0" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>crse_cell</name></member>
       <member refid="classamrex_1_1YAFluxRegister_1a793217326d57a18d473ad802963c1a39ac5c1292509aea6d15b097b266dc73151" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>crse_fine_boundary_cell</name></member>
-      <member refid="classamrex_1_1YAFluxRegister_1af1f29032a951f8bcf81022fe1117ec28" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>CrseAdd</name></member>
-      <member refid="classamrex_1_1YAFluxRegister_1a979444c0ce6ada7dd42420b6c524c008" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>CrseHasWork</name></member>
+      <member refid="classamrex_1_1YAFluxRegister_1aee85944d34c72b95d90a41e144709a89" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>CrseAdd</name></member>
+      <member refid="classamrex_1_1YAFluxRegister_1af466fe21e95a36341e6a099dcf9c5a97" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>CrseHasWork</name></member>
       <member refid="classamrex_1_1YAFluxRegister_1a1c455cac046d9c693f48cd2b84533d17" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>define</name></member>
       <member refid="classamrex_1_1YAFluxRegister_1a793217326d57a18d473ad802963c1a39af227036442400df4bcf1b730c2eb4774" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>fine_cell</name></member>
-      <member refid="classamrex_1_1YAFluxRegister_1a15dba278fa331ea86c49b3eabc9fae84" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>FineAdd</name></member>
-      <member refid="classamrex_1_1YAFluxRegister_1a6bc9afa9e8dd921dd61d4211df943e57" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>FineHasWork</name></member>
+      <member refid="classamrex_1_1YAFluxRegister_1ae815cfad2b1dd9acd84330c27a5f539d" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>FineAdd</name></member>
+      <member refid="classamrex_1_1YAFluxRegister_1aac0df8bf308e353e01a5477f2c3fe458" prot="public" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>FineHasWork</name></member>
       <member refid="classamrex_1_1YAFluxRegister_1ae5fdcdbe4998bb8636e686763cebc949" prot="protected" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>m_cfp_fab</name></member>
       <member refid="classamrex_1_1YAFluxRegister_1a1de636a21ef7f808042c3ad6ebefd84e" prot="protected" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>m_cfp_localindex</name></member>
       <member refid="classamrex_1_1YAFluxRegister_1a31991246a5f75c0de9fbdfaf784db4d9" prot="protected" virt="non-virtual"><scope>amrex::YAFluxRegister</scope><name>m_cfp_mask</name></member>

@@ -3,7 +3,7 @@
   <compounddef id="namespaceamrex_1_1Cuda_1_1Atomic" kind="namespace" language="C++">
     <compoundname>amrex::Cuda::Atomic</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a8dbe9e6c8cf6f1969ea847d7a780d917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1ab71b77ad0a344a1e1d000ef1d741a8d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
@@ -11,7 +11,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Add</definition>
-        <argsstring>(T *sum, T value)</argsstring>
+        <argsstring>(T *sum, T value) noexcept</argsstring>
         <name>Add</name>
         <param>
           <type>T *</type>
@@ -29,10 +29,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="153" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="153" bodyend="160"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1aa02d381692b7072a2f1b4df08238f283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a5de58bfa2eee46ff6ef4d5ed73ab75e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Add</definition>
-        <argsstring>(long *sum, long value)</argsstring>
+        <argsstring>(long *sum, long value) noexcept</argsstring>
         <name>Add</name>
         <param>
           <type>long *</type>
@@ -50,7 +50,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="163" bodyend="170"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a35e5c734a4fd21b7a64332c23e7aea36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a625f670d931d093a3a018de3d9fe6a86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
@@ -58,7 +58,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Min</definition>
-        <argsstring>(T *m, T value)</argsstring>
+        <argsstring>(T *m, T value) noexcept</argsstring>
         <name>Min</name>
         <param>
           <type>T *</type>
@@ -76,10 +76,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="174" bodyend="181"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a1389209aa2d059162a24f1e143519b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1aa524285ebcfad4174178a10dbaf4ffbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Min</definition>
-        <argsstring>(int *m, int value)</argsstring>
+        <argsstring>(int *m, int value) noexcept</argsstring>
         <name>Min</name>
         <param>
           <type>int *</type>
@@ -97,10 +97,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="184" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="184" bodyend="191"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1abb8b1b76d8d3d26f77b5b34622005633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a783071f95180d5f289b6dad616012651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Min</definition>
-        <argsstring>(unsigned int *m, unsigned int value)</argsstring>
+        <argsstring>(unsigned int *m, unsigned int value) noexcept</argsstring>
         <name>Min</name>
         <param>
           <type>unsigned int *</type>
@@ -118,10 +118,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="194" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="194" bodyend="201"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1adc15ba4ec8434d7b6ca93c647f8a403f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a8b812d40d65ae7fc021e4d039337d52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Min</definition>
-        <argsstring>(unsigned long long int *m, unsigned long long int value)</argsstring>
+        <argsstring>(unsigned long long int *m, unsigned long long int value) noexcept</argsstring>
         <name>Min</name>
         <param>
           <type>unsigned long long int *</type>
@@ -139,7 +139,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="204" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="204" bodyend="211"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a8503a7805010063d5414c1f6dd336b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1acbb2e082eedbd8a8d780ebc1ab4e386c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
@@ -147,7 +147,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Max</definition>
-        <argsstring>(T *m, T value)</argsstring>
+        <argsstring>(T *m, T value) noexcept</argsstring>
         <name>Max</name>
         <param>
           <type>T *</type>
@@ -165,10 +165,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="215" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="215" bodyend="222"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a89b0b770499cff71440220f01a492bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a3903e559ee9d762fd6bba1e6867d6e23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Max</definition>
-        <argsstring>(int *m, int value)</argsstring>
+        <argsstring>(int *m, int value) noexcept</argsstring>
         <name>Max</name>
         <param>
           <type>int *</type>
@@ -186,10 +186,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="225" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="225" bodyend="232"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1ad4e48bcc36c5c4e63e3fc063fe782603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a4da0a3676618a6f2a580bd5068e8bb95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Max</definition>
-        <argsstring>(unsigned int *m, unsigned int value)</argsstring>
+        <argsstring>(unsigned int *m, unsigned int value) noexcept</argsstring>
         <name>Max</name>
         <param>
           <type>unsigned int *</type>
@@ -207,10 +207,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="235" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="235" bodyend="242"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a1c92c2608dfb470b81698e06eb2825aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1aa5aa3e2453218befd4e81d844661a9dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Max</definition>
-        <argsstring>(unsigned long long int *m, unsigned long long int value)</argsstring>
+        <argsstring>(unsigned long long int *m, unsigned long long int value) noexcept</argsstring>
         <name>Max</name>
         <param>
           <type>unsigned long long int *</type>
@@ -228,10 +228,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="245" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="245" bodyend="252"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1abcd8ac8d57b6932dd3cb16deaeca0f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1ad36a551f6be02706a394bcdfa055b11c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::Or</definition>
-        <argsstring>(int *m, int value)</argsstring>
+        <argsstring>(int *m, int value) noexcept</argsstring>
         <name>Or</name>
         <param>
           <type>int *</type>
@@ -249,10 +249,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="255" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="255" bodyend="262"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a8b78bce02226908af3a9db5f0718f095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a5b8e8b97c5d5de9556598d20b4301fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE void amrex::Cuda::Atomic::And</definition>
-        <argsstring>(int *m, int value)</argsstring>
+        <argsstring>(int *m, int value) noexcept</argsstring>
         <name>And</name>
         <param>
           <type>int *</type>
@@ -270,10 +270,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="265" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="265" bodyend="272"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1af848aaea96b6acdafe8caf72b36a4828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a33d559d35d5bd4f4a398b076c391ff07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> unsigned int</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE unsigned int amrex::Cuda::Atomic::Inc</definition>
-        <argsstring>(unsigned int *m, unsigned int value)</argsstring>
+        <argsstring>(unsigned int *m, unsigned int value) noexcept</argsstring>
         <name>Inc</name>
         <param>
           <type>unsigned int *</type>
@@ -291,10 +291,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="275" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="275" bodyend="282"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a2471e79a7a795387e1757c61da0cb9ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1_1Atomic_1a8bc6467a2953a103172f7dcca414ba15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> unsigned int</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE unsigned int amrex::Cuda::Atomic::Dec</definition>
-        <argsstring>(unsigned int *m, unsigned int value)</argsstring>
+        <argsstring>(unsigned int *m, unsigned int value) noexcept</argsstring>
         <name>Dec</name>
         <param>
           <type>unsigned int *</type>

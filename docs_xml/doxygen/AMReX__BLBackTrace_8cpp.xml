@@ -465,7 +465,7 @@
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>errfilename;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Backtrace.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a3deabb4447125ee364f9ca1c5a07c1e4" kindref="member">ParallelDescriptor::MyProc</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Backtrace.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a33162ef233c092e9e6fd75ab291b9b29" kindref="member">ParallelDescriptor::MyProc</ref>();</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex__omp__module_1a1f5881f02905de2162615538e3989e36" kindref="member">omp_get_thread_num</ref>();</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
@@ -495,7 +495,7 @@
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceamrex_1_1ParallelDescriptor_1a0455b3ad4f2a4c13b57d33e4c6325dca" kindref="member">ParallelDescriptor::NProcs</ref>()<sp/>&gt;<sp/>1)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceamrex_1_1ParallelDescriptor_1aa191723b5d24ceaf64e9d49f542cfcc2" kindref="member">ParallelDescriptor::NProcs</ref>()<sp/>&gt;<sp/>1)</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>sleep(3);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__linux__</highlight><highlight class="normal"></highlight></codeline>
@@ -583,7 +583,7 @@
 <codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceamrex__omp__module_1ad65feb81483b21194d98cfba40c0b8bb" kindref="member">omp_in_parallel</ref>())<sp/>{</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss0;</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>ss0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Proc.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a3deabb4447125ee364f9ca1c5a07c1e4" kindref="member">ParallelDescriptor::MyProc</ref>()</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>ss0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Proc.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a33162ef233c092e9e6fd75ab291b9b29" kindref="member">ParallelDescriptor::MyProc</ref>()</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>Thread<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex__omp__module_1a1f5881f02905de2162615538e3989e36" kindref="member">omp_get_thread_num</ref>()</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>s<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>BLBackTrace::bt_stack.push(std::make_pair(ss0.str(),<sp/>line_file));</highlight></codeline>
@@ -592,7 +592,7 @@
 <codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>parallel</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss0;</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Proc.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a3deabb4447125ee364f9ca1c5a07c1e4" kindref="member">ParallelDescriptor::MyProc</ref>()</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Proc.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a33162ef233c092e9e6fd75ab291b9b29" kindref="member">ParallelDescriptor::MyProc</ref>()</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>Master<sp/>Thread&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>s<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BLBackTrace::bt_stack.push(std::make_pair(ss0.str(),<sp/>line_file));</highlight></codeline>
@@ -600,7 +600,7 @@
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss0;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>ss0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Proc.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a3deabb4447125ee364f9ca1c5a07c1e4" kindref="member">ParallelDescriptor::MyProc</ref>()</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>ss0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Proc.<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a33162ef233c092e9e6fd75ab291b9b29" kindref="member">ParallelDescriptor::MyProc</ref>()</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>s<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>BLBackTrace::bt_stack.push(std::make_pair(ss0.str(),<sp/>line_file));</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
@@ -627,7 +627,7 @@
 <codeline lineno="205"><highlight class="normal">BLBTer::pop_bt_stack()</highlight></codeline>
 <codeline lineno="206"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!BLBackTrace::bt_stack.empty())<sp/>{</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(BLBackTrace::bt_stack.top().<ref refid="namespaceamrex_1a264e86a5ee72c5d32bf8498067ff2d91" kindref="member">second</ref>.compare(line_file)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(BLBackTrace::bt_stack.top().<ref refid="namespaceamrex_1a6f975f843338c8eada684f0e8e2c0cb7" kindref="member">second</ref>.compare(line_file)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BLBackTrace::bt_stack.pop();</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

@@ -162,24 +162,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aec2118e27e9938788a89f5dda28709f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a139c75b19d7740ff6b78b390ab7996d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a139c75b19d7740ff6b78b390ab7996d0">define</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &gt; &amp;a_geom, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &gt; &amp;a_grids, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &gt; &amp;a_dmap, const <a class="el" href="structamrex_1_1LPInfo.html">LPInfo</a> &amp;a_info, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; const * &gt; &amp;a_factory)</td></tr>
 <tr class="separator:a139c75b19d7740ff6b78b390ab7996d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f8c43bca7772706acace56cf0067ebb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a2f8c43bca7772706acace56cf0067ebb">setDomainBC</a> (const <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &amp;lobc, const <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &amp;hibc)</td></tr>
-<tr class="memdesc:a2f8c43bca7772706acace56cf0067ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boundary of the whole domain. This functions must be called, and must be called before other bc functions.  <a href="#a2f8c43bca7772706acace56cf0067ebb">More...</a><br /></td></tr>
-<tr class="separator:a2f8c43bca7772706acace56cf0067ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eae47420a806a218f08fbcfb2ce7eab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a2eae47420a806a218f08fbcfb2ce7eab">needsCoarseDataForBC</a> () const </td></tr>
-<tr class="memdesc:a2eae47420a806a218f08fbcfb2ce7eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needs coarse data for bc? If the lowest level grids does not cover the entire domain, coarse level data are needed for supplying Dirichlet bc at coarse/fine boundary, even when the domain bc is not Dirichlet.  <a href="#a2eae47420a806a218f08fbcfb2ce7eab">More...</a><br /></td></tr>
-<tr class="separator:a2eae47420a806a218f08fbcfb2ce7eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9217e108815b23ac024fe9b54888e2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ad9217e108815b23ac024fe9b54888e2a">setCoarseFineBC</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *crse, int crse_ratio)</td></tr>
-<tr class="memdesc:ad9217e108815b23ac024fe9b54888e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If needs coarse data for bc, this should be called. <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> crse does not need to have ghost cells. The data are at coarse resolution. If this is called, it <em>MUST</em> be called before <code>setLevelBC</code>. If crse is nullptr, then bc value is assumed to be zero.  <a href="#ad9217e108815b23ac024fe9b54888e2a">More...</a><br /></td></tr>
-<tr class="separator:ad9217e108815b23ac024fe9b54888e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa034da35bd05e1fb93b8d876a9840ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#aa034da35bd05e1fb93b8d876a9840ce3">setDomainBC</a> (const <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &amp;lobc, const <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &amp;hibc) noexcept</td></tr>
+<tr class="memdesc:aa034da35bd05e1fb93b8d876a9840ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boundary of the whole domain. This functions must be called, and must be called before other bc functions.  <a href="#aa034da35bd05e1fb93b8d876a9840ce3">More...</a><br /></td></tr>
+<tr class="separator:aa034da35bd05e1fb93b8d876a9840ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c150481b635dccaf83cfff3d38b11c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a0c150481b635dccaf83cfff3d38b11c7">needsCoarseDataForBC</a> () const noexcept</td></tr>
+<tr class="memdesc:a0c150481b635dccaf83cfff3d38b11c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needs coarse data for bc? If the lowest level grids does not cover the entire domain, coarse level data are needed for supplying Dirichlet bc at coarse/fine boundary, even when the domain bc is not Dirichlet.  <a href="#a0c150481b635dccaf83cfff3d38b11c7">More...</a><br /></td></tr>
+<tr class="separator:a0c150481b635dccaf83cfff3d38b11c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac161f1d53e925b82ba5defeb9b0efe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ac161f1d53e925b82ba5defeb9b0efe70">setCoarseFineBC</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *crse, int crse_ratio) noexcept</td></tr>
+<tr class="memdesc:ac161f1d53e925b82ba5defeb9b0efe70"><td class="mdescLeft">&#160;</td><td class="mdescRight">If needs coarse data for bc, this should be called. <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> crse does not need to have ghost cells. The data are at coarse resolution. If this is called, it <em>MUST</em> be called before <code>setLevelBC</code>. If crse is nullptr, then bc value is assumed to be zero.  <a href="#ac161f1d53e925b82ba5defeb9b0efe70">More...</a><br /></td></tr>
+<tr class="separator:ac161f1d53e925b82ba5defeb9b0efe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52d97117bad0d48c8e73546e7092e7dc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a52d97117bad0d48c8e73546e7092e7dc">setLevelBC</a> (int amrlev, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *levelbcdata)=0</td></tr>
 <tr class="memdesc:a52d97117bad0d48c8e73546e7092e7dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Must be called for each level. Argument <code>levelbcdata</code> is used to supply Dirichlet bc at the physical domain. However, even if there is no Dirichlet bc, this funcion must still be called. In that case, argument <code>levelbcdata</code> will be ignored and thus could be nullptr. The supplied <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> must have one ghost cell. Only the data outside the physical domain at Dirichlet boundary will be used. It is assumed that the data in those ghost cells outside the domain live exactly on the face of the physical domain. Argument <code>amrlev</code> is relative level such that the lowest to the solver is always 0.  <a href="#a52d97117bad0d48c8e73546e7092e7dc">More...</a><br /></td></tr>
 <tr class="separator:a52d97117bad0d48c8e73546e7092e7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33b5219a7565904bf3f1e320b9ceb2fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a33b5219a7565904bf3f1e320b9ceb2fe">setVerbose</a> (int v)</td></tr>
-<tr class="separator:a33b5219a7565904bf3f1e320b9ceb2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18be2937f7fc97e7cd7a086003367bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a18be2937f7fc97e7cd7a086003367bbd">setMaxOrder</a> (int o)</td></tr>
-<tr class="separator:a18be2937f7fc97e7cd7a086003367bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a539e8aa2dde2878271b518c562da22cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a539e8aa2dde2878271b518c562da22cd">getMaxOrder</a> () const </td></tr>
-<tr class="separator:a539e8aa2dde2878271b518c562da22cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d96a0475759eef80d096851fdedd411"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a4d96a0475759eef80d096851fdedd411">setVerbose</a> (int v) noexcept</td></tr>
+<tr class="separator:a4d96a0475759eef80d096851fdedd411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b72169ccf285c17f439c4e990c0f58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a45b72169ccf285c17f439c4e990c0f58">setMaxOrder</a> (int o) noexcept</td></tr>
+<tr class="separator:a45b72169ccf285c17f439c4e990c0f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1189e4016e7757083343a93649f102aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a1189e4016e7757083343a93649f102aa">getMaxOrder</a> () const noexcept</td></tr>
+<tr class="separator:a1189e4016e7757083343a93649f102aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd287b03ea1a73f47ba1f08bb10a484d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#acd287b03ea1a73f47ba1f08bb10a484d">getNComp</a> () const </td></tr>
 <tr class="separator:acd287b03ea1a73f47ba1f08bb10a484d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab68d7b11273242e632c9f8a422c911d7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ab68d7b11273242e632c9f8a422c911d7">needsUpdate</a> () const </td></tr>
@@ -242,33 +242,33 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9499bee82065be142da7257e4b4cae65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a9499bee82065be142da7257e4b4cae65">NAMRLevels</a> () const </td></tr>
-<tr class="memdesc:a9499bee82065be142da7257e4b4cae65"><td class="mdescLeft">&#160;</td><td class="mdescRight">functions  <a href="#a9499bee82065be142da7257e4b4cae65">More...</a><br /></td></tr>
-<tr class="separator:a9499bee82065be142da7257e4b4cae65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d31860d0c0b1f4eb1679bb36561b920"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a7d31860d0c0b1f4eb1679bb36561b920">NMGLevels</a> (int amrlev) const </td></tr>
-<tr class="separator:a7d31860d0c0b1f4eb1679bb36561b920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9992a7eb18c66153f5c1834d158ce5a7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a9992a7eb18c66153f5c1834d158ce5a7">AMRRefRatio</a> () const </td></tr>
-<tr class="separator:a9992a7eb18c66153f5c1834d158ce5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e8aac883541fb99eecd1ce929fb9d95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a3e8aac883541fb99eecd1ce929fb9d95">AMRRefRatio</a> (int amr_lev) const </td></tr>
-<tr class="separator:a3e8aac883541fb99eecd1ce929fb9d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4259c59d91cf4d9f499b88ddf506066d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a4259c59d91cf4d9f499b88ddf506066d">Geom</a> (int amr_lev, int mglev=0) const </td></tr>
-<tr class="separator:a4259c59d91cf4d9f499b88ddf506066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a6d0ccf94a8b6e1b248cdf1f6ac1a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ae3a6d0ccf94a8b6e1b248cdf1f6ac1a6">Factory</a> (int amr_lev, int mglev=0) const </td></tr>
-<tr class="separator:ae3a6d0ccf94a8b6e1b248cdf1f6ac1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d45d8aa3d055c80b7fa97148e0cfae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a58d45d8aa3d055c80b7fa97148e0cfae">isBottomActive</a> () const </td></tr>
-<tr class="separator:a58d45d8aa3d055c80b7fa97148e0cfae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1d350aa483803c4829193061929d999"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ab1d350aa483803c4829193061929d999">BottomCommunicator</a> () const </td></tr>
-<tr class="separator:ab1d350aa483803c4829193061929d999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95546d2327fb1fd23b8f36e1d72e0163"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a95546d2327fb1fd23b8f36e1d72e0163">Communicator</a> (int amrlev, int mglev) const </td></tr>
-<tr class="separator:a95546d2327fb1fd23b8f36e1d72e0163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54c7bb112ff9ee682f49142fc17c9b60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a54c7bb112ff9ee682f49142fc17c9b60">setCoarseFineBCLocation</a> (const <a class="el" href="classamrex_1_1RealVect.html">RealVect</a> &amp;cloc)</td></tr>
-<tr class="separator:a54c7bb112ff9ee682f49142fc17c9b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24676b3cbd7a5a6213124c5c38548b61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a24676b3cbd7a5a6213124c5c38548b61">doAgglomeration</a> () const </td></tr>
-<tr class="separator:a24676b3cbd7a5a6213124c5c38548b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853cb2ecda9218a782bf244177c13a74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a853cb2ecda9218a782bf244177c13a74">doConsolidation</a> () const </td></tr>
-<tr class="separator:a853cb2ecda9218a782bf244177c13a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b5b76f86c3e2ca139e8f4d634873e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a30b5b76f86c3e2ca139e8f4d634873e2">isCellCentered</a> () const </td></tr>
-<tr class="separator:a30b5b76f86c3e2ca139e8f4d634873e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcfe0a91f9b85388c17eee6172f02975"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#adcfe0a91f9b85388c17eee6172f02975">NAMRLevels</a> () const noexcept</td></tr>
+<tr class="memdesc:adcfe0a91f9b85388c17eee6172f02975"><td class="mdescLeft">&#160;</td><td class="mdescRight">functions  <a href="#adcfe0a91f9b85388c17eee6172f02975">More...</a><br /></td></tr>
+<tr class="separator:adcfe0a91f9b85388c17eee6172f02975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257d196611ba0ab9d861dc5e0dc23502"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a257d196611ba0ab9d861dc5e0dc23502">NMGLevels</a> (int amrlev) const noexcept</td></tr>
+<tr class="separator:a257d196611ba0ab9d861dc5e0dc23502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8effbacb86233a5334789092372a9bde"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a8effbacb86233a5334789092372a9bde">AMRRefRatio</a> () const noexcept</td></tr>
+<tr class="separator:a8effbacb86233a5334789092372a9bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80a224852d40e9dd01ef9e4d52cd1c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ac80a224852d40e9dd01ef9e4d52cd1c9">AMRRefRatio</a> (int amr_lev) const noexcept</td></tr>
+<tr class="separator:ac80a224852d40e9dd01ef9e4d52cd1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b1da16499dc7b95e807a28757e0c094"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a7b1da16499dc7b95e807a28757e0c094">Geom</a> (int amr_lev, int mglev=0) const noexcept</td></tr>
+<tr class="separator:a7b1da16499dc7b95e807a28757e0c094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb75c39ff8e715b524d79442b83a3fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a0eb75c39ff8e715b524d79442b83a3fb">Factory</a> (int amr_lev, int mglev=0) const noexcept</td></tr>
+<tr class="separator:a0eb75c39ff8e715b524d79442b83a3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c6883eef4d4dc55d3a5fe5c921113a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#aa1c6883eef4d4dc55d3a5fe5c921113a">isBottomActive</a> () const noexcept</td></tr>
+<tr class="separator:aa1c6883eef4d4dc55d3a5fe5c921113a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b33530b316399f5fb5314a846d9b7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a77b33530b316399f5fb5314a846d9b7e">BottomCommunicator</a> () const noexcept</td></tr>
+<tr class="separator:a77b33530b316399f5fb5314a846d9b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56dfc1030a8066132a2cb67334b1aaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ae56dfc1030a8066132a2cb67334b1aaa">Communicator</a> (int amrlev, int mglev) const noexcept</td></tr>
+<tr class="separator:ae56dfc1030a8066132a2cb67334b1aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c0882eb6092218dc09c5d60555ffed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ac0c0882eb6092218dc09c5d60555ffed">setCoarseFineBCLocation</a> (const <a class="el" href="classamrex_1_1RealVect.html">RealVect</a> &amp;cloc) noexcept</td></tr>
+<tr class="separator:ac0c0882eb6092218dc09c5d60555ffed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355691d7877fb9a9aabc65db76d0f2b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a355691d7877fb9a9aabc65db76d0f2b4">doAgglomeration</a> () const noexcept</td></tr>
+<tr class="separator:a355691d7877fb9a9aabc65db76d0f2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f98e0cf06f695dbad6052c5d53e00b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a79f98e0cf06f695dbad6052c5d53e00b">doConsolidation</a> () const noexcept</td></tr>
+<tr class="separator:a79f98e0cf06f695dbad6052c5d53e00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42fd2dfa3b0133f2b20a99026549900"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#aa42fd2dfa3b0133f2b20a99026549900">isCellCentered</a> () const noexcept</td></tr>
+<tr class="separator:aa42fd2dfa3b0133f2b20a99026549900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6249249666804079176507b88626a72c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a6249249666804079176507b88626a72c">make</a> (<a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt; &gt; &amp;mf, int nc, int ng) const </td></tr>
 <tr class="separator:a6249249666804079176507b88626a72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58f71c827253ca415f218f6cf77f1fb"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#af58f71c827253ca415f218f6cf77f1fb">makeFactory</a> (int amrlev, int mglev) const </td></tr>
@@ -548,7 +548,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a9992a7eb18c66153f5c1834d158ce5a7"></a>
+<a class="anchor" id="a8effbacb86233a5334789092372a9bde"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -564,14 +564,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a3e8aac883541fb99eecd1ce929fb9d95"></a>
+<a class="anchor" id="ac80a224852d40e9dd01ef9e4d52cd1c9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -588,7 +588,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -757,7 +757,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab1d350aa483803c4829193061929d999"></a>
+<a class="anchor" id="a77b33530b316399f5fb5314a846d9b7e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -773,14 +773,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a95546d2327fb1fd23b8f36e1d72e0163"></a>
+<a class="anchor" id="ae56dfc1030a8066132a2cb67334b1aaa"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -807,7 +807,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1112,7 +1112,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a24676b3cbd7a5a6213124c5c38548b61"></a>
+<a class="anchor" id="a355691d7877fb9a9aabc65db76d0f2b4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1128,14 +1128,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a853cb2ecda9218a782bf244177c13a74"></a>
+<a class="anchor" id="a79f98e0cf06f695dbad6052c5d53e00b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1151,14 +1151,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ae3a6d0ccf94a8b6e1b248cdf1f6ac1a6"></a>
+<a class="anchor" id="a0eb75c39ff8e715b524d79442b83a3fb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1185,7 +1185,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1293,7 +1293,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4259c59d91cf4d9f499b88ddf506066d"></a>
+<a class="anchor" id="a7b1da16499dc7b95e807a28757e0c094"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1320,7 +1320,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1405,7 +1405,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a539e8aa2dde2878271b518c562da22cd"></a>
+<a class="anchor" id="a1189e4016e7757083343a93649f102aa"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1421,7 +1421,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1522,7 +1522,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a58d45d8aa3d055c80b7fa97148e0cfae"></a>
+<a class="anchor" id="aa1c6883eef4d4dc55d3a5fe5c921113a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1538,7 +1538,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1570,7 +1570,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a30b5b76f86c3e2ca139e8f4d634873e2"></a>
+<a class="anchor" id="aa42fd2dfa3b0133f2b20a99026549900"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1586,7 +1586,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1825,7 +1825,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9499bee82065be142da7257e4b4cae65"></a>
+<a class="anchor" id="adcfe0a91f9b85388c17eee6172f02975"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1841,7 +1841,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1850,7 +1850,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2eae47420a806a218f08fbcfb2ce7eab"></a>
+<a class="anchor" id="a0c150481b635dccaf83cfff3d38b11c7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1866,7 +1866,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1900,7 +1900,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7d31860d0c0b1f4eb1679bb36561b920"></a>
+<a class="anchor" id="a257d196611ba0ab9d861dc5e0dc23502"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1917,7 +1917,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2219,9 +2219,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad9217e108815b23ac024fe9b54888e2a"></a>
+<a class="anchor" id="ac161f1d53e925b82ba5defeb9b0efe70"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void amrex::MLLinOp::setCoarseFineBC </td>
@@ -2241,6 +2244,11 @@ Friends</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>If needs coarse data for bc, this should be called. <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a> crse does not need to have ghost cells. The data are at coarse resolution. If this is called, it <em>MUST</em> be called before <code>setLevelBC</code>. If crse is nullptr, then bc value is assumed to be zero. </p>
@@ -2254,7 +2262,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a54c7bb112ff9ee682f49142fc17c9b60"></a>
+<a class="anchor" id="ac0c0882eb6092218dc09c5d60555ffed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2271,16 +2279,19 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a2f8c43bca7772706acace56cf0067ebb"></a>
+<a class="anchor" id="aa034da35bd05e1fb93b8d876a9840ce3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void amrex::MLLinOp::setDomainBC </td>
@@ -2300,6 +2311,11 @@ Friends</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Boundary of the whole domain. This functions must be called, and must be called before other bc functions. </p>
@@ -2358,7 +2374,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a18be2937f7fc97e7cd7a086003367bbd"></a>
+<a class="anchor" id="a45b72169ccf285c17f439c4e990c0f58"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2375,14 +2391,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a33b5219a7565904bf3f1e320b9ceb2fe"></a>
+<a class="anchor" id="a4d96a0475759eef80d096851fdedd411"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2399,7 +2415,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

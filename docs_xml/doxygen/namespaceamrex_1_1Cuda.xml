@@ -160,10 +160,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaLaunch.H" line="765" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a2ec73ba43363b9168ca35f7bb6e53d02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a2d4304ee440481fe9953b82f76f2b8c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE Box amrex::Cuda::getThreadBox</definition>
-        <argsstring>(const Box &amp;bx, long offset)</argsstring>
+        <argsstring>(const Box &amp;bx, long offset) noexcept</argsstring>
         <name>getThreadBox</name>
         <param>
           <type>const <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> &amp;</type>
@@ -181,7 +181,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaLaunch.H" line="769" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaLaunch.H" bodystart="769" bodyend="784"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ac68f37e6280919c47ff3432e6e7e0f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1af2d03fabad9378084ccfc0a1779ca3eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -189,7 +189,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="structamrex_1_1Cuda_1_1range__detail_1_1range__impl" kindref="compound">range_detail::range_impl</ref>&lt; T &gt;</type>
         <definition>AMREX_GPU_HOST_DEVICE range_detail::range_impl&lt;T&gt; amrex::Cuda::Range</definition>
-        <argsstring>(T const &amp;b)</argsstring>
+        <argsstring>(T const &amp;b) noexcept</argsstring>
         <name>Range</name>
         <param>
           <type>T const &amp;</type>
@@ -203,7 +203,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaRange.H" line="98" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaRange.H" bodystart="98" bodyend="98"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a4fa5cfd090a82a56b004c145c69216f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a2f223920b5bcc3686ba5448848e35884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -211,7 +211,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> T</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE T amrex::Cuda::LDG</definition>
-        <argsstring>(Array4&lt; T &gt; const &amp;a, int i, int j, int k)</argsstring>
+        <argsstring>(Array4&lt; T &gt; const &amp;a, int i, int j, int k) noexcept</argsstring>
         <name>LDG</name>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; T &gt; const &amp;</type>
@@ -237,7 +237,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="20" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="20" bodyend="26"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ad8aab707a6cb53b718256ca6c7764b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a5dcdd2bff3b031f0324806018ca111a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -245,7 +245,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> T</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE T amrex::Cuda::LDG</definition>
-        <argsstring>(Array4&lt; T &gt; const &amp;a, int i, int j, int k, int n)</argsstring>
+        <argsstring>(Array4&lt; T &gt; const &amp;a, int i, int j, int k, int n) noexcept</argsstring>
         <name>LDG</name>
         <param>
           <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; T &gt; const &amp;</type>
@@ -275,10 +275,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="30" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="30" bodyend="36"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a08b0f53908894e37a373856f847db007" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a783ab1aeeb947786fce4614be8c64235" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::Cuda::isManaged</definition>
-        <argsstring>(void const *p)</argsstring>
+        <argsstring>(void const *p) noexcept</argsstring>
         <name>isManaged</name>
         <param>
           <type>void const *</type>
@@ -292,10 +292,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="38" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="38" bodyend="48"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a830d0009d87ee834fee5454355d145b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ab2959e8650b21364828b9c137a8bd13b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::Cuda::isDevicePtr</definition>
-        <argsstring>(void const *p)</argsstring>
+        <argsstring>(void const *p) noexcept</argsstring>
         <name>isDevicePtr</name>
         <param>
           <type>void const *</type>
@@ -309,10 +309,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="50" bodyend="60"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a7abbfe9b1c23cf435400aa42077daed1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a3973d096dca736071b37a44cef712e0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::Cuda::isPinnedPtr</definition>
-        <argsstring>(void const *p)</argsstring>
+        <argsstring>(void const *p) noexcept</argsstring>
         <name>isPinnedPtr</name>
         <param>
           <type>void const *</type>
@@ -326,10 +326,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="62" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="62" bodyend="72"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::Cuda::isGpuPtr</definition>
-        <argsstring>(void const *p)</argsstring>
+        <argsstring>(void const *p) noexcept</argsstring>
         <name>isGpuPtr</name>
         <param>
           <type>void const *</type>
@@ -343,7 +343,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="74" bodyend="88"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ac20c6f2f06d9b680ab731dca15afa1f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a8cfec65d778fadcb4bd428d0f01fe5d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
@@ -351,7 +351,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE bool amrex::Cuda::isnan</definition>
-        <argsstring>(T m)</argsstring>
+        <argsstring>(T m) noexcept</argsstring>
         <name>isnan</name>
         <param>
           <type>T</type>
@@ -365,7 +365,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" line="298" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaUtility.H" bodystart="298" bodyend="305"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a67d087372613f5071acc7ffeff303846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a46a3f009b4dd1c7fda2597fc0053d601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>class T</type>
@@ -373,7 +373,7 @@
         </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE bool amrex::Cuda::isinf</definition>
-        <argsstring>(T m)</argsstring>
+        <argsstring>(T m) noexcept</argsstring>
         <name>isinf</name>
         <param>
           <type>T</type>

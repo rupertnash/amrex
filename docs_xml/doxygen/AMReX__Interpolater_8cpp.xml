@@ -1053,7 +1053,7 @@
 <codeline lineno="59"><highlight class="normal"><ref refid="classamrex_1_1NodeBilinear_1a12700b2249901dc280e6ab13e7c560f2" kindref="member">NodeBilinear::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fine,</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ratio)</highlight></codeline>
 <codeline lineno="61"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>AMREX_SPACEDIM;<sp/>i++)</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -1073,7 +1073,7 @@
 <codeline lineno="79"><highlight class="normal"><ref refid="classamrex_1_1NodeBilinear_1a12700b2249901dc280e6ab13e7c560f2" kindref="member">NodeBilinear::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/><sp/><sp/><sp/><sp/>fine,</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>ratio)</highlight></codeline>
 <codeline lineno="81"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>AMREX_SPACEDIM;<sp/>i++)</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -1108,21 +1108,21 @@
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>crsep<sp/>=<sp/>&amp;crse;</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox*<sp/>finep<sp/>=<sp/>&amp;fine;</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_slope<sp/><sp/>=<sp/>ncomp*(AMREX_D_TERM(2,*2,*2)-1);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box<sp/>cslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1a662eb2a651f7223db9bf62983d15f5c8" kindref="member">amrex::enclosedCells</ref>(<ref refid="classamrex_1_1Interpolater_1aa19cea2a6579112e6cf2fa2fb52ba6b6" kindref="member">CoarseBox</ref>(fine_region,<sp/>ratio));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box<sp/>cslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1aa02b0a29360fb450293dacfe9d4505ff" kindref="member">amrex::enclosedCells</ref>(<ref refid="classamrex_1_1Interpolater_1aa19cea2a6579112e6cf2fa2fb52ba6b6" kindref="member">CoarseBox</ref>(fine_region,<sp/>ratio));</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncFab<sp/>as_slopefab(cslope_bx,<sp/>num_slope);</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox*<sp/>slopefab<sp/>=<sp/>as_slopefab.fabPtr();</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(cslope_bx,<sp/>tbx,</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a2e494a9be5b8cf5220009925353803ac" kindref="member">amrex::nodebilin_slopes</ref>(tbx,<sp/>*slopefab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>ratio);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1add9917ae017a6756ddfcb5bd107b68cc" kindref="member">amrex::nodebilin_slopes</ref>(tbx,<sp/>*slopefab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>ratio);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(fine_region,<sp/>tbx,</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a9d60a612b5aa9a3f8e782d65aab8ed87" kindref="member">amrex::nodebilin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*slopefab,<sp/>*crsep,<sp/>crse_comp,<sp/>ratio);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a8eb4e4b513391ab25aaf53941fe9c361" kindref="member">amrex::nodebilin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*slopefab,<sp/>*crsep,<sp/>crse_comp,<sp/>ratio);</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="133"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
@@ -1132,17 +1132,17 @@
 <codeline lineno="138"><highlight class="normal"><ref refid="classamrex_1_1CellBilinear_1a445fff6a6e918e4b4a60392ecef5844c" kindref="member">CellBilinear::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fine,</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ratio)</highlight></codeline>
 <codeline lineno="140"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1Interpolater_1aa19cea2a6579112e6cf2fa2fb52ba6b6" kindref="member">CoarseBox</ref>(fine,<sp/>ratio*<ref refid="classamrex_1_1IntVect_1ac84309ce388ca3b13e72da61016a8b6f" kindref="member">IntVect::TheUnitVector</ref>());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1Interpolater_1aa19cea2a6579112e6cf2fa2fb52ba6b6" kindref="member">CoarseBox</ref>(fine,<sp/>ratio*<ref refid="classamrex_1_1IntVect_1a9be1f208f435dd8f579c07af1d1b1253" kindref="member">IntVect::TheUnitVector</ref>());</highlight></codeline>
 <codeline lineno="142"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal">Box</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"><ref refid="classamrex_1_1CellBilinear_1a445fff6a6e918e4b4a60392ecef5844c" kindref="member">CellBilinear::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/><sp/><sp/><sp/><sp/>fine,</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>ratio)</highlight></codeline>
 <codeline lineno="147"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>lo<sp/>=<sp/>fine.<ref refid="classamrex_1_1Box_1adb5a060e446eb4fe2b24326427b8e7e9" kindref="member">loVect</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>lo<sp/>=<sp/>fine.<ref refid="classamrex_1_1Box_1a8a029c1d95918fd6e6fe0afb141ed415" kindref="member">loVect</ref>();</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>hi<sp/>=<sp/>fine.hiVect();</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>clo<sp/>=<sp/>crse.loVect();</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>chi<sp/>=<sp/>crse.hiVect();</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
@@ -1239,7 +1239,7 @@
 <codeline lineno="245"><highlight class="normal"><ref refid="classamrex_1_1CellConservativeLinear_1aeec138a1454f98de65aa6ec019a1cdc4" kindref="member">CellConservativeLinear::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/><sp/><sp/><sp/><sp/>fine,</highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>ratio)</highlight></codeline>
 <codeline lineno="247"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(1);</highlight></codeline>
 <codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="251"><highlight class="normal">}</highlight></codeline>
@@ -1248,7 +1248,7 @@
 <codeline lineno="254"><highlight class="normal"><ref refid="classamrex_1_1CellConservativeLinear_1aeec138a1454f98de65aa6ec019a1cdc4" kindref="member">CellConservativeLinear::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fine,</highlight></codeline>
 <codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ratio)</highlight></codeline>
 <codeline lineno="256"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(1);</highlight></codeline>
 <codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="260"><highlight class="normal">}</highlight></codeline>
@@ -1275,10 +1275,10 @@
 <codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>crsep<sp/>=<sp/>&amp;crse;</highlight></codeline>
 <codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox*<sp/>finep<sp/>=<sp/>&amp;fine;</highlight></codeline>
 <codeline lineno="283"><highlight class="normal"></highlight></codeline>
-<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
 <codeline lineno="285"><highlight class="normal"></highlight></codeline>
 <codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>crse_region<sp/>=<sp/><ref refid="classamrex_1_1Interpolater_1aa19cea2a6579112e6cf2fa2fb52ba6b6" kindref="member">CoarseBox</ref>(fine_region,ratio);</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>cslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1a3ab74a1b499759c2a4418335e66aac00" kindref="member">amrex::grow</ref>(crse_region,-1);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>cslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1aabf2023f4fb69a7c5ee37e2507210781" kindref="member">amrex::grow</ref>(crse_region,-1);</highlight></codeline>
 <codeline lineno="288"><highlight class="normal"></highlight></codeline>
 <codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncArray&lt;BCRec&gt;<sp/>async_bcr(bcr.data(),<sp/>ncomp);</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>BCRec*<sp/>bcrp<sp/>=<sp/>async_bcr.data();</highlight></codeline>
@@ -1296,7 +1296,7 @@
 <codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncFab<sp/>as_ccfab(cslope_bx,<sp/>ntmp);</highlight></codeline>
 <codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox*<sp/>ccfab<sp/>=<sp/>as_ccfab.fabPtr();</highlight></codeline>
 <codeline lineno="304"><highlight class="normal"></highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Vector&lt;Real&gt;&amp;<sp/>vec_voff<sp/>=<sp/><ref refid="namespaceamrex_1a2b0118edc0dee59ed66fd069798d8b80" kindref="member">amrex::ccinterp_compute_voff</ref>(cslope_bx,<sp/>ratio,<sp/>crse_geom,<sp/>fine_geom);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Vector&lt;Real&gt;&amp;<sp/>vec_voff<sp/>=<sp/><ref refid="namespaceamrex_1a370603c76b9575c74c3663cb77943166" kindref="member">amrex::ccinterp_compute_voff</ref>(cslope_bx,<sp/>ratio,<sp/>crse_geom,<sp/>fine_geom);</highlight></codeline>
 <codeline lineno="306"><highlight class="normal"></highlight></codeline>
 <codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncArray&lt;Real&gt;<sp/>async_voff(vec_voff.data(),<sp/>vec_voff.size());</highlight></codeline>
 <codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>voff<sp/>=<sp/>async_voff.data();</highlight></codeline>
@@ -1304,37 +1304,37 @@
 <codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(do_linear_limiting)<sp/>{</highlight></codeline>
 <codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(cslope_bx,<sp/>tbx,</highlight></codeline>
 <codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a2c748db0779d9941a0558521e3c2af70" kindref="member">amrex::cellconslin_slopes_linlim</ref>(tbx,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>bcrp);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ae49bef0214cc56c9ce6fd6dd1e86691d" kindref="member">amrex::cellconslin_slopes_linlim</ref>(tbx,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>bcrp);</highlight></codeline>
 <codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="315"><highlight class="normal"></highlight></codeline>
 <codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(fine_region,<sp/>tbx,</highlight></codeline>
 <codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ac336a8e7fd83b37948aa3e75e9de8473" kindref="member">amrex::cellconslin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a6f05a9f8de00065ba5cc4f08872aaa8a" kindref="member">amrex::cellconslin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,</highlight></codeline>
 <codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>voff,<sp/>ratio);</highlight></codeline>
 <codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1a81d255eb1646965dfa1ca4df2cdf8f5f" kindref="member">amrex::refine</ref>(cslope_bx,ratio);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1af278a3be1baed7b0bbce95c10f6aa1d7" kindref="member">amrex::refine</ref>(cslope_bx,ratio);</highlight></codeline>
 <codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AsyncFab<sp/>as_fafab(fslope_bx,<sp/>ncomp);</highlight></codeline>
 <codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FArrayBox*<sp/>fafab<sp/>=<sp/>as_fafab.fabPtr();</highlight></codeline>
 <codeline lineno="325"><highlight class="normal"></highlight></codeline>
 <codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(cslope_bx,<sp/>tbx,</highlight></codeline>
 <codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a466dd6c4d1e26e9e1d503de5792f2c9c" kindref="member">amrex::cellconslin_slopes_mclim</ref>(tbx,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>bcrp);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a2264dd51bda2ea50b3a82b7a99d8427c" kindref="member">amrex::cellconslin_slopes_mclim</ref>(tbx,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>bcrp);</highlight></codeline>
 <codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="330"><highlight class="normal"></highlight></codeline>
 <codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(fslope_bx,<sp/>tbx,</highlight></codeline>
 <codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a64bad0eb2f3b52d2919d9fef5a3446e3" kindref="member">amrex::cellconslin_fine_alpha</ref>(tbx,<sp/>*fafab,<sp/>*ccfab,<sp/>ncomp,<sp/>voff,<sp/>ratio);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a76f2c42fb1be9c6eb880e4a66cdda60e" kindref="member">amrex::cellconslin_fine_alpha</ref>(tbx,<sp/>*fafab,<sp/>*ccfab,<sp/>ncomp,<sp/>voff,<sp/>ratio);</highlight></codeline>
 <codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="335"><highlight class="normal"></highlight></codeline>
 <codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(cslope_bx,<sp/>tbx,</highlight></codeline>
 <codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a389d014044632470da86b88f7b304311" kindref="member">amrex::cellconslin_slopes_mmlim</ref>(tbx,<sp/>*ccfab,<sp/>*fafab,<sp/>ncomp,<sp/>ratio);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a8e0c58f5b61701054f4adddcb245930d" kindref="member">amrex::cellconslin_slopes_mmlim</ref>(tbx,<sp/>*ccfab,<sp/>*fafab,<sp/>ncomp,<sp/>ratio);</highlight></codeline>
 <codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="340"><highlight class="normal"></highlight></codeline>
 <codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(fine_region,<sp/>tbx,</highlight></codeline>
 <codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ac336a8e7fd83b37948aa3e75e9de8473" kindref="member">amrex::cellconslin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a6f05a9f8de00065ba5cc4f08872aaa8a" kindref="member">amrex::cellconslin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,</highlight></codeline>
 <codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>voff,<sp/>ratio);</highlight></codeline>
 <codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1351,7 +1351,7 @@
 <codeline lineno="357"><highlight class="normal"><ref refid="classamrex_1_1CellQuadratic_1ac42aae63c74e1e3dbacbde8f2f0d8a0a" kindref="member">CellQuadratic::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/><sp/><sp/><sp/><sp/>fine,</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>ratio)</highlight></codeline>
 <codeline lineno="359"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(1);</highlight></codeline>
 <codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="363"><highlight class="normal">}</highlight></codeline>
@@ -1360,7 +1360,7 @@
 <codeline lineno="366"><highlight class="normal"><ref refid="classamrex_1_1CellQuadratic_1ac42aae63c74e1e3dbacbde8f2f0d8a0a" kindref="member">CellQuadratic::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fine,</highlight></codeline>
 <codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ratio)</highlight></codeline>
 <codeline lineno="368"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(1);</highlight></codeline>
 <codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="372"><highlight class="normal">}</highlight></codeline>
@@ -1386,8 +1386,8 @@
 <codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>target_fine_region<sp/>=<sp/>fine_region<sp/>&amp;<sp/>fine.box();</highlight></codeline>
 <codeline lineno="394"><highlight class="normal"></highlight></codeline>
-<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse_bx(<ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(target_fine_region,ratio));</highlight></codeline>
-<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>fslope_bx(<ref refid="namespaceamrex_1a81d255eb1646965dfa1ca4df2cdf8f5f" kindref="member">amrex::refine</ref>(crse_bx,ratio));</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse_bx(<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(target_fine_region,ratio));</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>fslope_bx(<ref refid="namespaceamrex_1af278a3be1baed7b0bbce95c10f6aa1d7" kindref="member">amrex::refine</ref>(crse_bx,ratio));</highlight></codeline>
 <codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>cslope_bx(crse_bx);</highlight></codeline>
 <codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/>cslope_bx.grow(1);</highlight></codeline>
 <codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(crse.box().contains(cslope_bx));</highlight></codeline>
@@ -1472,14 +1472,14 @@
 <codeline lineno="478"><highlight class="normal"><ref refid="classamrex_1_1PCInterp_1a4ab880728106de4887bc3f6fdedf03d8" kindref="member">PCInterp::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fine,</highlight></codeline>
 <codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ratio)</highlight></codeline>
 <codeline lineno="480"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="482"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="483"><highlight class="normal"></highlight></codeline>
 <codeline lineno="484"><highlight class="normal">Box</highlight></codeline>
 <codeline lineno="485"><highlight class="normal"><ref refid="classamrex_1_1PCInterp_1a4ab880728106de4887bc3f6fdedf03d8" kindref="member">PCInterp::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/><sp/><sp/><sp/><sp/>fine,</highlight></codeline>
 <codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>ratio)</highlight></codeline>
 <codeline lineno="487"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="489"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="490"><highlight class="normal"></highlight></codeline>
 <codeline lineno="491"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
@@ -1501,11 +1501,11 @@
 <codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>crsep<sp/>=<sp/>&amp;crse;</highlight></codeline>
 <codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox*<sp/>finep<sp/>=<sp/>&amp;fine;</highlight></codeline>
 <codeline lineno="509"><highlight class="normal"></highlight></codeline>
-<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
 <codeline lineno="511"><highlight class="normal"></highlight></codeline>
 <codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(fine_region,<sp/>tbx,</highlight></codeline>
 <codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ad06a75c97ed1084cfb1a17c9bde59767" kindref="member">amrex::pcinterp_interp</ref>(tbx,*finep,fine_comp,ncomp,*crsep,crse_comp,ratio);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ab2f106b0df83bfb5095ee0dfff198a1a" kindref="member">amrex::pcinterp_interp</ref>(tbx,*finep,fine_comp,ncomp,*crsep,crse_comp,ratio);</highlight></codeline>
 <codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="516"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="517"><highlight class="normal"></highlight></codeline>
@@ -1517,7 +1517,7 @@
 <codeline lineno="523"><highlight class="normal"><ref refid="classamrex_1_1CellConservativeProtected_1a4f7eb5ba7fb671882f36ee30f4550fc8" kindref="member">CellConservativeProtected::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/><sp/><sp/><sp/><sp/>fine,</highlight></codeline>
 <codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>ratio)</highlight></codeline>
 <codeline lineno="525"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(1);</highlight></codeline>
 <codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="529"><highlight class="normal">}</highlight></codeline>
@@ -1526,7 +1526,7 @@
 <codeline lineno="532"><highlight class="normal"><ref refid="classamrex_1_1CellConservativeProtected_1a4f7eb5ba7fb671882f36ee30f4550fc8" kindref="member">CellConservativeProtected::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fine,</highlight></codeline>
 <codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ratio)</highlight></codeline>
 <codeline lineno="534"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
 <codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(1);</highlight></codeline>
 <codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="538"><highlight class="normal">}</highlight></codeline>
@@ -1553,10 +1553,10 @@
 <codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>crsep<sp/>=<sp/>&amp;crse;</highlight></codeline>
 <codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox*<sp/>finep<sp/>=<sp/>&amp;fine;</highlight></codeline>
 <codeline lineno="561"><highlight class="normal"></highlight></codeline>
-<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a150657a79169b62ab878ec96eb3221df" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::LaunchSafeGuard<sp/>lg(<ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(crsep)<sp/>&amp;&amp;<sp/><ref refid="namespaceamrex_1_1Cuda_1a7c09af1fb1fe2bbbb8e86627525cacbf" kindref="member">Gpu::isGpuPtr</ref>(finep));</highlight></codeline>
 <codeline lineno="563"><highlight class="normal"></highlight></codeline>
 <codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>crse_region<sp/>=<sp/><ref refid="classamrex_1_1Interpolater_1aa19cea2a6579112e6cf2fa2fb52ba6b6" kindref="member">CoarseBox</ref>(fine_region,ratio);</highlight></codeline>
-<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>cslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1a3ab74a1b499759c2a4418335e66aac00" kindref="member">amrex::grow</ref>(crse_region,-1);</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>cslope_bx<sp/>=<sp/><ref refid="namespaceamrex_1aabf2023f4fb69a7c5ee37e2507210781" kindref="member">amrex::grow</ref>(crse_region,-1);</highlight></codeline>
 <codeline lineno="566"><highlight class="normal"></highlight></codeline>
 <codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncArray&lt;BCRec&gt;<sp/>async_bcr(bcr.data(),<sp/>ncomp);</highlight></codeline>
 <codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/>BCRec*<sp/>bcrp<sp/>=<sp/>async_bcr.data();</highlight></codeline>
@@ -1573,19 +1573,19 @@
 <codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncFab<sp/>as_ccfab(cslope_bx,<sp/>ntmp);</highlight></codeline>
 <codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/>FArrayBox*<sp/>ccfab<sp/>=<sp/>as_ccfab.fabPtr();</highlight></codeline>
 <codeline lineno="581"><highlight class="normal"></highlight></codeline>
-<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Vector&lt;Real&gt;&amp;<sp/>vec_voff<sp/>=<sp/><ref refid="namespaceamrex_1a2b0118edc0dee59ed66fd069798d8b80" kindref="member">amrex::ccinterp_compute_voff</ref>(cslope_bx,<sp/>ratio,<sp/>crse_geom,<sp/>fine_geom);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Vector&lt;Real&gt;&amp;<sp/>vec_voff<sp/>=<sp/><ref refid="namespaceamrex_1a370603c76b9575c74c3663cb77943166" kindref="member">amrex::ccinterp_compute_voff</ref>(cslope_bx,<sp/>ratio,<sp/>crse_geom,<sp/>fine_geom);</highlight></codeline>
 <codeline lineno="583"><highlight class="normal"></highlight></codeline>
 <codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncArray&lt;Real&gt;<sp/>async_voff(vec_voff.data(),<sp/>vec_voff.size());</highlight></codeline>
 <codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>voff<sp/>=<sp/>async_voff.data();</highlight></codeline>
 <codeline lineno="586"><highlight class="normal"></highlight></codeline>
 <codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(cslope_bx,<sp/>tbx,</highlight></codeline>
 <codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a2c748db0779d9941a0558521e3c2af70" kindref="member">amrex::cellconslin_slopes_linlim</ref>(tbx,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>bcrp);</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ae49bef0214cc56c9ce6fd6dd1e86691d" kindref="member">amrex::cellconslin_slopes_linlim</ref>(tbx,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,<sp/>ncomp,<sp/>bcrp);</highlight></codeline>
 <codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="591"><highlight class="normal"></highlight></codeline>
 <codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a20fce791cf3cebcb24e689bb5da837c0" kindref="member">AMREX_LAUNCH_HOST_DEVICE_LAMBDA</ref><sp/>(fine_region,<sp/>tbx,</highlight></codeline>
 <codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ac336a8e7fd83b37948aa3e75e9de8473" kindref="member">amrex::cellconslin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a6f05a9f8de00065ba5cc4f08872aaa8a" kindref="member">amrex::cellconslin_interp</ref>(tbx,<sp/>*finep,<sp/>fine_comp,<sp/>ncomp,<sp/>*ccfab,<sp/>*crsep,<sp/>crse_comp,</highlight></codeline>
 <codeline lineno="595"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>voff,<sp/>ratio);</highlight></codeline>
 <codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="597"><highlight class="normal">}</highlight></codeline>
@@ -1693,7 +1693,7 @@
 <codeline lineno="699"><highlight class="normal"><ref refid="classamrex_1_1CellConservativeQuartic_1a8c64516c8697291cf190a795a24b3a6e" kindref="member">CellConservativeQuartic::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>fine,</highlight></codeline>
 <codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ratio)</highlight></codeline>
 <codeline lineno="701"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse(<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio));</highlight></codeline>
 <codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(2);</highlight></codeline>
 <codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="705"><highlight class="normal">}</highlight></codeline>
@@ -1702,7 +1702,7 @@
 <codeline lineno="708"><highlight class="normal"><ref refid="classamrex_1_1CellConservativeQuartic_1a8c64516c8697291cf190a795a24b3a6e" kindref="member">CellConservativeQuartic::CoarseBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/><sp/><sp/><sp/><sp/>fine,</highlight></codeline>
 <codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>ratio)</highlight></codeline>
 <codeline lineno="710"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1ab4031a5b0f85cd24e5c2705b4178536e" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine,ratio);</highlight></codeline>
 <codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/>crse.grow(2);</highlight></codeline>
 <codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crse;</highlight></codeline>
 <codeline lineno="714"><highlight class="normal">}</highlight></codeline>
@@ -1742,7 +1742,7 @@
 <codeline lineno="748"><highlight class="normal"></highlight></codeline>
 <codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>crse_bx2(crse_bx);</highlight></codeline>
 <codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/>crse_bx2.grow(-2);</highlight></codeline>
-<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>fine_bx2<sp/>=<sp/><ref refid="namespaceamrex_1a81d255eb1646965dfa1ca4df2cdf8f5f" kindref="member">amrex::refine</ref>(crse_bx2,ratio);</highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/>Box<sp/>fine_bx2<sp/>=<sp/><ref refid="namespaceamrex_1af278a3be1baed7b0bbce95c10f6aa1d7" kindref="member">amrex::refine</ref>(crse_bx2,ratio);</highlight></codeline>
 <codeline lineno="752"><highlight class="normal"></highlight></codeline>
 <codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/>Real*<sp/>fdat<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>fine.dataPtr(fine_comp);</highlight></codeline>
 <codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Real*<sp/>cdat<sp/>=<sp/>crse.dataPtr(crse_comp);</highlight></codeline>

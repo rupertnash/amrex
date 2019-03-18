@@ -873,8 +873,8 @@
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BL_MEM_PROFILING</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1MemProfiler_1a60a5588f410871ac0d6c15c495979ed0" kindref="member">MemProfiler::add</ref>(</highlight><highlight class="stringliteral">&quot;Fab&quot;</highlight><highlight class="normal">,<sp/>std::function&lt;MemProfiler::MemInfo()&gt;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>([]<sp/>()<sp/>-&gt;<sp/>MemProfiler::MemInfo<sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1ae4e0f8aface4c69e30b8808160a07dff" kindref="member">amrex::TotalBytesAllocatedInFabs</ref>(),</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1aaca3a1407a187c460afd8a40325c0fac" kindref="member">amrex::TotalBytesAllocatedInFabsHWM</ref>()};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1a5a60914d2c1baa07ac74426c8f8a38c1" kindref="member">amrex::TotalBytesAllocatedInFabs</ref>(),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ad5d82f42b797fe16c6e2890c8a2fda73" kindref="member">amrex::TotalBytesAllocatedInFabsHWM</ref>()};</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}));</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -893,7 +893,7 @@
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><ref refid="namespaceamrex_1ae4e0f8aface4c69e30b8808160a07dff" kindref="member">TotalBytesAllocatedInFabs</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="namespaceamrex_1a5a60914d2c1baa07ac74426c8f8a38c1" kindref="member">TotalBytesAllocatedInFabs</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="68"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>r=0;</highlight></codeline>
@@ -908,7 +908,7 @@
 <codeline lineno="79"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><ref refid="namespaceamrex_1aaca3a1407a187c460afd8a40325c0fac" kindref="member">TotalBytesAllocatedInFabsHWM</ref>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="namespaceamrex_1ad5d82f42b797fe16c6e2890c8a2fda73" kindref="member">TotalBytesAllocatedInFabsHWM</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="83"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>r=0;</highlight></codeline>
@@ -923,7 +923,7 @@
 <codeline lineno="94"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><ref refid="namespaceamrex_1ac607f13e7b18e09b26587b4ff806a5df" kindref="member">TotalCellsAllocatedInFabs</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><ref refid="namespaceamrex_1abfb3a95e8312dd54fdd0263b0ebe5516" kindref="member">TotalCellsAllocatedInFabs</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="98"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>r=0;</highlight></codeline>
@@ -938,7 +938,7 @@
 <codeline lineno="109"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><ref refid="namespaceamrex_1af4d27d976bc68dc3af8e3d6953b8e044" kindref="member">TotalCellsAllocatedInFabsHWM</ref>()</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="namespaceamrex_1a328f8347f90603902734bad0b343a763" kindref="member">TotalCellsAllocatedInFabsHWM</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="113"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>r=0;</highlight></codeline>
@@ -953,7 +953,7 @@
 <codeline lineno="124"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><ref refid="namespaceamrex_1abddd18768ababe2fa8aa52a8ae441675" kindref="member">ResetTotalBytesAllocatedInFabsHWM</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="namespaceamrex_1a765c5cc6e670eb707740d51c99e7b35e" kindref="member">ResetTotalBytesAllocatedInFabsHWM</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="128"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>parallel</highlight><highlight class="normal"></highlight></codeline>
@@ -964,7 +964,7 @@
 <codeline lineno="135"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><ref refid="namespaceamrex_1a2d23320cbd486726af914b5bdb5b6d69" kindref="member">update_fab_stats</ref><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>szt)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><ref refid="namespaceamrex_1a4fbfaf2aadcc46966315c9edc993fe9a" kindref="member">update_fab_stats</ref><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>szt)<sp/>noexcept</highlight></codeline>
 <codeline lineno="139"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>tst<sp/>=<sp/>s*szt;</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1acb97f6f7553a0dbf1813a0faac636b90" kindref="member">amrex::private_total_bytes_allocated_in_fabs</ref><sp/>+=<sp/>tst;</highlight></codeline>

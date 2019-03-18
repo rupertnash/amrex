@@ -118,9 +118,9 @@ Inheritance diagram for amrex::BndryRegister:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2e0643f95fc9ab16d35be25248dd600c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a2e0643f95fc9ab16d35be25248dd600c">BndryRegister</a> ()</td></tr>
-<tr class="memdesc:a2e0643f95fc9ab16d35be25248dd600c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default constructor.  <a href="#a2e0643f95fc9ab16d35be25248dd600c">More...</a><br /></td></tr>
-<tr class="separator:a2e0643f95fc9ab16d35be25248dd600c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4688ce12aed07218f4eb52082c290c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#aa4688ce12aed07218f4eb52082c290c2">BndryRegister</a> () noexcept</td></tr>
+<tr class="memdesc:aa4688ce12aed07218f4eb52082c290c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default constructor.  <a href="#aa4688ce12aed07218f4eb52082c290c2">More...</a><br /></td></tr>
+<tr class="separator:aa4688ce12aed07218f4eb52082c290c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf2bfb5d33fc73dc7fff1da73df6cb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#aecf2bfb5d33fc73dc7fff1da73df6cb3">BndryRegister</a> (const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;grids_, const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;dmap, int in_rad, int out_rad, int extent_rad, int ncomp)</td></tr>
 <tr class="memdesc:aecf2bfb5d33fc73dc7fff1da73df6cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor, given number of cells in/out, extent and number of components (assumes cell-centered boxes, and allocates cell-centered FABs)  <a href="#aecf2bfb5d33fc73dc7fff1da73df6cb3">More...</a><br /></td></tr>
 <tr class="separator:aecf2bfb5d33fc73dc7fff1da73df6cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,18 +144,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a50339ee95902a57f40f9251322cbd143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb41d395fa564b8c3c9d46327920d239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#acb41d395fa564b8c3c9d46327920d239">clear</a> ()</td></tr>
 <tr class="separator:acb41d395fa564b8c3c9d46327920d239"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a481cc8f63d2903492d64ddd2d1733b41"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a481cc8f63d2903492d64ddd2d1733b41">boxes</a> () const </td></tr>
-<tr class="memdesc:a481cc8f63d2903492d64ddd2d1733b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get box domain (as an array of boxes).  <a href="#a481cc8f63d2903492d64ddd2d1733b41">More...</a><br /></td></tr>
-<tr class="separator:a481cc8f63d2903492d64ddd2d1733b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d90d4d170241cd5fba0ff90640bb163"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a1d90d4d170241cd5fba0ff90640bb163">size</a> () const </td></tr>
-<tr class="memdesc:a1d90d4d170241cd5fba0ff90640bb163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of grids in this domain.  <a href="#a1d90d4d170241cd5fba0ff90640bb163">More...</a><br /></td></tr>
-<tr class="separator:a1d90d4d170241cd5fba0ff90640bb163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5058be14bb5689f986b25ba4af72737"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1FabSet.html">FabSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#ac5058be14bb5689f986b25ba4af72737">operator[]</a> (<a class="el" href="classamrex_1_1Orientation.html">Orientation</a> face) const </td></tr>
-<tr class="memdesc:ac5058be14bb5689f986b25ba4af72737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return const set of FABs bounding the domain grid boxes on a given orientation.  <a href="#ac5058be14bb5689f986b25ba4af72737">More...</a><br /></td></tr>
-<tr class="separator:ac5058be14bb5689f986b25ba4af72737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9337910a82481f578536829e258c7a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1FabSet.html">FabSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#ae9337910a82481f578536829e258c7a2">operator[]</a> (<a class="el" href="classamrex_1_1Orientation.html">Orientation</a> face)</td></tr>
-<tr class="memdesc:ae9337910a82481f578536829e258c7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return set of FABs bounding the domain grid boxes on a given orientation.  <a href="#ae9337910a82481f578536829e258c7a2">More...</a><br /></td></tr>
-<tr class="separator:ae9337910a82481f578536829e258c7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013d3c766ec5b97ea88fa71f9cc810cb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a013d3c766ec5b97ea88fa71f9cc810cb">boxes</a> () const noexcept</td></tr>
+<tr class="memdesc:a013d3c766ec5b97ea88fa71f9cc810cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get box domain (as an array of boxes).  <a href="#a013d3c766ec5b97ea88fa71f9cc810cb">More...</a><br /></td></tr>
+<tr class="separator:a013d3c766ec5b97ea88fa71f9cc810cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32eadb3490dbaa29c79ebea0c0c8b8bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a32eadb3490dbaa29c79ebea0c0c8b8bd">size</a> () const noexcept</td></tr>
+<tr class="memdesc:a32eadb3490dbaa29c79ebea0c0c8b8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of grids in this domain.  <a href="#a32eadb3490dbaa29c79ebea0c0c8b8bd">More...</a><br /></td></tr>
+<tr class="separator:a32eadb3490dbaa29c79ebea0c0c8b8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8aa5237e5f88e11d7f0222c0732f0c8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1FabSet.html">FabSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#ab8aa5237e5f88e11d7f0222c0732f0c8">operator[]</a> (<a class="el" href="classamrex_1_1Orientation.html">Orientation</a> face) const noexcept</td></tr>
+<tr class="memdesc:ab8aa5237e5f88e11d7f0222c0732f0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return const set of FABs bounding the domain grid boxes on a given orientation.  <a href="#ab8aa5237e5f88e11d7f0222c0732f0c8">More...</a><br /></td></tr>
+<tr class="separator:ab8aa5237e5f88e11d7f0222c0732f0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca292141cd5f3342448df53bd8771ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1FabSet.html">FabSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a8ca292141cd5f3342448df53bd8771ca">operator[]</a> (<a class="el" href="classamrex_1_1Orientation.html">Orientation</a> face) noexcept</td></tr>
+<tr class="memdesc:a8ca292141cd5f3342448df53bd8771ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return set of FABs bounding the domain grid boxes on a given orientation.  <a href="#a8ca292141cd5f3342448df53bd8771ca">More...</a><br /></td></tr>
+<tr class="separator:a8ca292141cd5f3342448df53bd8771ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a45cb99b2e11388c149bf277120fbc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a8a45cb99b2e11388c149bf277120fbc9">setVal</a> (Real v)</td></tr>
 <tr class="memdesc:a8a45cb99b2e11388c149bf277120fbc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all boundary FABs to given value.  <a href="#a8a45cb99b2e11388c149bf277120fbc9">More...</a><br /></td></tr>
 <tr class="separator:a8a45cb99b2e11388c149bf277120fbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,10 +164,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad0674b001bc3b0a4b75d1029e94312c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fbfbedbc701bb9f20fa7487bff20bdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1BndryRegister.html">BndryRegister</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a1fbfbedbc701bb9f20fa7487bff20bdf">plus</a> (const <a class="el" href="classamrex_1_1BndryRegister.html">BndryRegister</a> &amp;rhs)</td></tr>
 <tr class="separator:a1fbfbedbc701bb9f20fa7487bff20bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a7b006622b33878423e6be4fd7fcc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1BndryRegister.html">BndryRegister</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#af9a7b006622b33878423e6be4fd7fcc3">copyFrom</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;src, int nghost, int src_comp, int dest_comp, int num_comp, const <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a> &amp;period=<a class="el" href="classamrex_1_1Periodicity.html#a38c75cba56d022201b4e1970534d5823">Periodicity::NonPeriodic</a>())</td></tr>
+<tr class="memitem:af9a7b006622b33878423e6be4fd7fcc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1BndryRegister.html">BndryRegister</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#af9a7b006622b33878423e6be4fd7fcc3">copyFrom</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;src, int nghost, int src_comp, int dest_comp, int num_comp, const <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a> &amp;period=<a class="el" href="classamrex_1_1Periodicity.html#a194e779bf59d1700830a35cecb5271a5">Periodicity::NonPeriodic</a>())</td></tr>
 <tr class="memdesc:af9a7b006622b33878423e6be4fd7fcc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the boundary FABs on intersection with given <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a>.  <a href="#af9a7b006622b33878423e6be4fd7fcc3">More...</a><br /></td></tr>
 <tr class="separator:af9a7b006622b33878423e6be4fd7fcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab19d96f57df527f106a7f53c2590b65a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1BndryRegister.html">BndryRegister</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#ab19d96f57df527f106a7f53c2590b65a">plusFrom</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;src, int nghost, int src_comp, int dest_comp, int num_comp, const <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a> &amp;period=<a class="el" href="classamrex_1_1Periodicity.html#a38c75cba56d022201b4e1970534d5823">Periodicity::NonPeriodic</a>())</td></tr>
+<tr class="memitem:ab19d96f57df527f106a7f53c2590b65a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1BndryRegister.html">BndryRegister</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#ab19d96f57df527f106a7f53c2590b65a">plusFrom</a> (const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;src, int nghost, int src_comp, int dest_comp, int num_comp, const <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a> &amp;period=<a class="el" href="classamrex_1_1Periodicity.html#a194e779bf59d1700830a35cecb5271a5">Periodicity::NonPeriodic</a>())</td></tr>
 <tr class="memdesc:ab19d96f57df527f106a7f53c2590b65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the boundary FABs on intersect with given <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a>.  <a href="#ab19d96f57df527f106a7f53c2590b65a">More...</a><br /></td></tr>
 <tr class="separator:ab19d96f57df527f106a7f53c2590b65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a081060fb3475eb5b2a2b5a620ca98bcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1BndryRegister.html">BndryRegister</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a081060fb3475eb5b2a2b5a620ca98bcb">linComb</a> (Real a, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;mfa, int a_comp, Real b, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;mfb, int b_comp, int dest_comp, int num_comp, int n_ghost=0)</td></tr>
@@ -176,9 +176,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4da05261825b0d26b246bf5c5b5fb586"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a4da05261825b0d26b246bf5c5b5fb586">setBoxes</a> (const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;<a class="el" href="classamrex_1_1BndryRegister.html#ae15db9f8fcfd9583ae5907d4cf69eeb9">grids</a>)</td></tr>
 <tr class="memdesc:a4da05261825b0d26b246bf5c5b5fb586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set box domain, if not set previously.  <a href="#a4da05261825b0d26b246bf5c5b5fb586">More...</a><br /></td></tr>
 <tr class="separator:a4da05261825b0d26b246bf5c5b5fb586"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad71f22436e694026955933b99acb0967"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#ad71f22436e694026955933b99acb0967">DistributionMap</a> () const </td></tr>
-<tr class="memdesc:ad71f22436e694026955933b99acb0967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to associated <a class="el" href="classamrex_1_1DistributionMapping.html" title="Calculates the distribution of FABs to MPI processes. ">DistributionMapping</a>.  <a href="#ad71f22436e694026955933b99acb0967">More...</a><br /></td></tr>
-<tr class="separator:ad71f22436e694026955933b99acb0967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543c6c7f9abadfda4cb25368007d14f8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a543c6c7f9abadfda4cb25368007d14f8">DistributionMap</a> () const noexcept</td></tr>
+<tr class="memdesc:a543c6c7f9abadfda4cb25368007d14f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to associated <a class="el" href="classamrex_1_1DistributionMapping.html" title="Calculates the distribution of FABs to MPI processes. ">DistributionMapping</a>.  <a href="#a543c6c7f9abadfda4cb25368007d14f8">More...</a><br /></td></tr>
+<tr class="separator:a543c6c7f9abadfda4cb25368007d14f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72d84522ffa27cd1d702aaeeccd1a585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BndryRegister.html#a72d84522ffa27cd1d702aaeeccd1a585">write</a> (const std::string &amp;name, std::ostream &amp;os) const </td></tr>
 <tr class="memdesc:a72d84522ffa27cd1d702aaeeccd1a585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write (used for writing to checkpoint)  <a href="#a72d84522ffa27cd1d702aaeeccd1a585">More...</a><br /></td></tr>
 <tr class="separator:a72d84522ffa27cd1d702aaeeccd1a585"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,9 +209,12 @@ Protected Attributes</h2></td></tr>
 <p>Non-default instantiation allocates a set of FABs, grown into and out of the bounding surfaces of each box in the <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a>. The width of the layer (in/out), as well as the "extent" of a bounding FABs (the number of nodes beyond the box boundaries, parallel to the grid surface) are determined by constructor argument. All boxes and FABs in this context are assumed to be cell-centered.</p>
 <p>A small number of linear mathematical operations are provided for BndryRegisters, as well as overloaded [] operators for access based on grid boundary orientation. The <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> domain of definition is accessible, but not resettable, </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2e0643f95fc9ab16d35be25248dd600c"></a>
+<a class="anchor" id="aa4688ce12aed07218f4eb52082c290c2"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">amrex::BndryRegister::BndryRegister </td>
@@ -220,6 +223,11 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>The default constructor. </p>
@@ -346,7 +354,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a481cc8f63d2903492d64ddd2d1733b41"></a>
+<a class="anchor" id="a013d3c766ec5b97ea88fa71f9cc810cb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -362,7 +370,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -460,7 +468,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a> &amp;&#160;</td>
-          <td class="paramname"><em>period</em> = <code><a class="el" href="classamrex_1_1Periodicity.html#a38c75cba56d022201b4e1970534d5823">Periodicity::NonPeriodic</a>()</code>&#160;</td>
+          <td class="paramname"><em>period</em> = <code><a class="el" href="classamrex_1_1Periodicity.html#a194e779bf59d1700830a35cecb5271a5">Periodicity::NonPeriodic</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -582,7 +590,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad71f22436e694026955933b99acb0967"></a>
+<a class="anchor" id="a543c6c7f9abadfda4cb25368007d14f8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -598,7 +606,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -755,7 +763,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac5058be14bb5689f986b25ba4af72737"></a>
+<a class="anchor" id="ab8aa5237e5f88e11d7f0222c0732f0c8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -772,7 +780,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -781,7 +789,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae9337910a82481f578536829e258c7a2"></a>
+<a class="anchor" id="a8ca292141cd5f3342448df53bd8771ca"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -798,7 +806,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -861,7 +869,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a> &amp;&#160;</td>
-          <td class="paramname"><em>period</em> = <code><a class="el" href="classamrex_1_1Periodicity.html#a38c75cba56d022201b4e1970534d5823">Periodicity::NonPeriodic</a>()</code>&#160;</td>
+          <td class="paramname"><em>period</em> = <code><a class="el" href="classamrex_1_1Periodicity.html#a194e779bf59d1700830a35cecb5271a5">Periodicity::NonPeriodic</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -939,7 +947,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1d90d4d170241cd5fba0ff90640bb163"></a>
+<a class="anchor" id="a32eadb3490dbaa29c79ebea0c0c8b8bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -955,7 +963,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -133,9 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a962f9d201153832198014fba04698410"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a962f9d201153832198014fba04698410">CreateLevelDirectory</a> (const std::string &amp;dir)</td></tr>
 <tr class="memdesc:a962f9d201153832198014fba04698410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the Level_ directory for checkpoint and plot files.  <a href="#a962f9d201153832198014fba04698410">More...</a><br /></td></tr>
 <tr class="separator:a962f9d201153832198014fba04698410"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3958f19527fb2eb83de947addb745862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a3958f19527fb2eb83de947addb745862">SetLevelDirectoryCreated</a> (bool ldc)</td></tr>
-<tr class="memdesc:a3958f19527fb2eb83de947addb745862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if the Level_ directory was created or to clear the value. CreateLevelDirectory sets levelDirectoryCreated = true.  <a href="#a3958f19527fb2eb83de947addb745862">More...</a><br /></td></tr>
-<tr class="separator:a3958f19527fb2eb83de947addb745862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b3a3f0806c790a05f39fae227042a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a33b3a3f0806c790a05f39fae227042a0">SetLevelDirectoryCreated</a> (bool ldc) noexcept</td></tr>
+<tr class="memdesc:a33b3a3f0806c790a05f39fae227042a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if the Level_ directory was created or to clear the value. CreateLevelDirectory sets levelDirectoryCreated = true.  <a href="#a33b3a3f0806c790a05f39fae227042a0">More...</a><br /></td></tr>
+<tr class="separator:a33b3a3f0806c790a05f39fae227042a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d52ecdd688997fd2d94260979c0205f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a8d52ecdd688997fd2d94260979c0205f">thePlotFileType</a> () const </td></tr>
 <tr class="memdesc:a8d52ecdd688997fd2d94260979c0205f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string written as the first item in <a class="el" href="classamrex_1_1AmrLevel.html#aac3f74f8caafcc7b7cf0d3b33480e5d7" title="Write plot file stuff to specified directory. This is a pure virtual function and hence MUST be imple...">writePlotFile()</a> at level zero. It is so we can distinguish between different types of plot files. This default "HyperCLaw-V1.1" is for VisIt software and some of our internal postprocessing routines.  <a href="#a8d52ecdd688997fd2d94260979c0205f">More...</a><br /></td></tr>
 <tr class="separator:a8d52ecdd688997fd2d94260979c0205f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,51 +216,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0aa73b17e9be18d811a21128c8c2f5f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a0aa73b17e9be18d811a21128c8c2f5f9">reset</a> ()</td></tr>
 <tr class="memdesc:a0aa73b17e9be18d811a21128c8c2f5f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset data to initial time by swapping new and old time data.  <a href="#a0aa73b17e9be18d811a21128c8c2f5f9">More...</a><br /></td></tr>
 <tr class="separator:a0aa73b17e9be18d811a21128c8c2f5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4fe2cf22c0b5afa7b61c0763aff8c9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ae4fe2cf22c0b5afa7b61c0763aff8c9b">Level</a> () const </td></tr>
-<tr class="memdesc:ae4fe2cf22c0b5afa7b61c0763aff8c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this <a class="el" href="classamrex_1_1AmrLevel.html" title="Virtual base class for managing individual levels. AmrLevel functions both as a container for state d...">AmrLevel</a>.  <a href="#ae4fe2cf22c0b5afa7b61c0763aff8c9b">More...</a><br /></td></tr>
-<tr class="separator:ae4fe2cf22c0b5afa7b61c0763aff8c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9899d3e0be4bc6e45d127a716da7ede"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ac9899d3e0be4bc6e45d127a716da7ede">boxArray</a> () const </td></tr>
-<tr class="memdesc:ac9899d3e0be4bc6e45d127a716da7ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of grids at this level.  <a href="#ac9899d3e0be4bc6e45d127a716da7ede">More...</a><br /></td></tr>
-<tr class="separator:ac9899d3e0be4bc6e45d127a716da7ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a950ba9dcfc4ab027644c9ce9613ec615"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a950ba9dcfc4ab027644c9ce9613ec615">getEdgeBoxArray</a> (int dir) const </td></tr>
-<tr class="separator:a950ba9dcfc4ab027644c9ce9613ec615"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c19c93fa3ce20420a484d9280ce2632"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a3c19c93fa3ce20420a484d9280ce2632">getNodalBoxArray</a> () const </td></tr>
-<tr class="separator:a3c19c93fa3ce20420a484d9280ce2632"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2a7b336f2f0a2817a16709b6c063cf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a7b2a7b336f2f0a2817a16709b6c063cf">DistributionMap</a> () const </td></tr>
-<tr class="separator:a7b2a7b336f2f0a2817a16709b6c063cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf556b8ae524800e555c29ba55dbc59e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aaf556b8ae524800e555c29ba55dbc59e">Factory</a> () const </td></tr>
-<tr class="separator:aaf556b8ae524800e555c29ba55dbc59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cd4b72bfd25b2c90aaa5b2e0badbdfe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a2cd4b72bfd25b2c90aaa5b2e0badbdfe">numGrids</a> () const </td></tr>
-<tr class="memdesc:a2cd4b72bfd25b2c90aaa5b2e0badbdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of grids at this level.  <a href="#a2cd4b72bfd25b2c90aaa5b2e0badbdfe">More...</a><br /></td></tr>
-<tr class="separator:a2cd4b72bfd25b2c90aaa5b2e0badbdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4df6731d78a56c7b54ddc55877650d14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a4df6731d78a56c7b54ddc55877650d14">numStates</a> () const </td></tr>
-<tr class="memdesc:a4df6731d78a56c7b54ddc55877650d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of states at this level.  <a href="#a4df6731d78a56c7b54ddc55877650d14">More...</a><br /></td></tr>
-<tr class="separator:a4df6731d78a56c7b54ddc55877650d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d2006342bf56a903fa3b1db8564869a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a3d2006342bf56a903fa3b1db8564869a">Domain</a> () const </td></tr>
-<tr class="memdesc:a3d2006342bf56a903fa3b1db8564869a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the indices defining physical domain.  <a href="#a3d2006342bf56a903fa3b1db8564869a">More...</a><br /></td></tr>
-<tr class="separator:a3d2006342bf56a903fa3b1db8564869a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6a79cb5a4a9a68096183e650138e030"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ad6a79cb5a4a9a68096183e650138e030">nStep</a> () const </td></tr>
-<tr class="memdesc:ad6a79cb5a4a9a68096183e650138e030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestep n at this level.  <a href="#ad6a79cb5a4a9a68096183e650138e030">More...</a><br /></td></tr>
-<tr class="separator:ad6a79cb5a4a9a68096183e650138e030"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12cef912681535eb3929e79625aff338"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a12cef912681535eb3929e79625aff338">Geom</a> () const </td></tr>
-<tr class="memdesc:a12cef912681535eb3929e79625aff338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry object.  <a href="#a12cef912681535eb3929e79625aff338">More...</a><br /></td></tr>
-<tr class="separator:a12cef912681535eb3929e79625aff338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0825becffdbef2ccddaddffc02ab7f7d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a0825becffdbef2ccddaddffc02ab7f7d">fineRatio</a> () const </td></tr>
-<tr class="separator:a0825becffdbef2ccddaddffc02ab7f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae27e1d507ec7a6314a7bb5ec7d2fc2cb"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ae27e1d507ec7a6314a7bb5ec7d2fc2cb">countCells</a> () const </td></tr>
-<tr class="memdesc:ae27e1d507ec7a6314a7bb5ec7d2fc2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns number of cells on level.  <a href="#ae27e1d507ec7a6314a7bb5ec7d2fc2cb">More...</a><br /></td></tr>
-<tr class="separator:ae27e1d507ec7a6314a7bb5ec7d2fc2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a419d28aa15b927e16741f3f6e35bb2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a5a419d28aa15b927e16741f3f6e35bb2">getAreaNotToTag</a> ()</td></tr>
-<tr class="memdesc:a5a419d28aa15b927e16741f3f6e35bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the area not to tag.  <a href="#a5a419d28aa15b927e16741f3f6e35bb2">More...</a><br /></td></tr>
-<tr class="separator:a5a419d28aa15b927e16741f3f6e35bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b10ac136d1f65033bca65ac9c87922"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a30b10ac136d1f65033bca65ac9c87922">getAreaToTag</a> ()</td></tr>
-<tr class="separator:a30b10ac136d1f65033bca65ac9c87922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18159b17b5d40999e3f38474e53f23ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a18159b17b5d40999e3f38474e53f23ff">Level</a> () const noexcept</td></tr>
+<tr class="memdesc:a18159b17b5d40999e3f38474e53f23ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this <a class="el" href="classamrex_1_1AmrLevel.html" title="Virtual base class for managing individual levels. AmrLevel functions both as a container for state d...">AmrLevel</a>.  <a href="#a18159b17b5d40999e3f38474e53f23ff">More...</a><br /></td></tr>
+<tr class="separator:a18159b17b5d40999e3f38474e53f23ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dcb930627bd80227fb86468425bd2d0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a7dcb930627bd80227fb86468425bd2d0">boxArray</a> () const noexcept</td></tr>
+<tr class="memdesc:a7dcb930627bd80227fb86468425bd2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of grids at this level.  <a href="#a7dcb930627bd80227fb86468425bd2d0">More...</a><br /></td></tr>
+<tr class="separator:a7dcb930627bd80227fb86468425bd2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3cf13198c2fc19f4d692b5282b1ddc5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ad3cf13198c2fc19f4d692b5282b1ddc5">getEdgeBoxArray</a> (int dir) const noexcept</td></tr>
+<tr class="separator:ad3cf13198c2fc19f4d692b5282b1ddc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0a9f5d2c0e0733ad3cbbda47912480"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a5f0a9f5d2c0e0733ad3cbbda47912480">getNodalBoxArray</a> () const noexcept</td></tr>
+<tr class="separator:a5f0a9f5d2c0e0733ad3cbbda47912480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d63aa23ccf6091e7af223a9b91569e9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a0d63aa23ccf6091e7af223a9b91569e9">DistributionMap</a> () const noexcept</td></tr>
+<tr class="separator:a0d63aa23ccf6091e7af223a9b91569e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8e1ff322aee598d7b72877b272545e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a1a8e1ff322aee598d7b72877b272545e">Factory</a> () const noexcept</td></tr>
+<tr class="separator:a1a8e1ff322aee598d7b72877b272545e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93e34dd07b1784fc7fe902331d232b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ae93e34dd07b1784fc7fe902331d232b2">numGrids</a> () const noexcept</td></tr>
+<tr class="memdesc:ae93e34dd07b1784fc7fe902331d232b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of grids at this level.  <a href="#ae93e34dd07b1784fc7fe902331d232b2">More...</a><br /></td></tr>
+<tr class="separator:ae93e34dd07b1784fc7fe902331d232b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9666a2babd9d59a595a2c3695f38f00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aa9666a2babd9d59a595a2c3695f38f00">numStates</a> () const noexcept</td></tr>
+<tr class="memdesc:aa9666a2babd9d59a595a2c3695f38f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of states at this level.  <a href="#aa9666a2babd9d59a595a2c3695f38f00">More...</a><br /></td></tr>
+<tr class="separator:aa9666a2babd9d59a595a2c3695f38f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81c3f65acdb48fa02f25a43b98baee7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#af81c3f65acdb48fa02f25a43b98baee7">Domain</a> () const noexcept</td></tr>
+<tr class="memdesc:af81c3f65acdb48fa02f25a43b98baee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the indices defining physical domain.  <a href="#af81c3f65acdb48fa02f25a43b98baee7">More...</a><br /></td></tr>
+<tr class="separator:af81c3f65acdb48fa02f25a43b98baee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66753a2ff2df956a5df08dd6cb9f81a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ac66753a2ff2df956a5df08dd6cb9f81a">nStep</a> () const noexcept</td></tr>
+<tr class="memdesc:ac66753a2ff2df956a5df08dd6cb9f81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestep n at this level.  <a href="#ac66753a2ff2df956a5df08dd6cb9f81a">More...</a><br /></td></tr>
+<tr class="separator:ac66753a2ff2df956a5df08dd6cb9f81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad535ebc3896c9f8c1ea3e6530ffc070e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ad535ebc3896c9f8c1ea3e6530ffc070e">Geom</a> () const noexcept</td></tr>
+<tr class="memdesc:ad535ebc3896c9f8c1ea3e6530ffc070e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry object.  <a href="#ad535ebc3896c9f8c1ea3e6530ffc070e">More...</a><br /></td></tr>
+<tr class="separator:ad535ebc3896c9f8c1ea3e6530ffc070e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb007c5f97c38ef4515b3a74d6873fa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a3fb007c5f97c38ef4515b3a74d6873fa">fineRatio</a> () const noexcept</td></tr>
+<tr class="separator:a3fb007c5f97c38ef4515b3a74d6873fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c27e66a313e012cb2189e8cff78217c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a8c27e66a313e012cb2189e8cff78217c">countCells</a> () const noexcept</td></tr>
+<tr class="memdesc:a8c27e66a313e012cb2189e8cff78217c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns number of cells on level.  <a href="#a8c27e66a313e012cb2189e8cff78217c">More...</a><br /></td></tr>
+<tr class="separator:a8c27e66a313e012cb2189e8cff78217c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd13b08745699794f3a991500e901974"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#afd13b08745699794f3a991500e901974">getAreaNotToTag</a> () noexcept</td></tr>
+<tr class="memdesc:afd13b08745699794f3a991500e901974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the area not to tag.  <a href="#afd13b08745699794f3a991500e901974">More...</a><br /></td></tr>
+<tr class="separator:afd13b08745699794f3a991500e901974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804883955eae48bd6992fb770324a981"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a804883955eae48bd6992fb770324a981">getAreaToTag</a> () noexcept</td></tr>
+<tr class="separator:a804883955eae48bd6992fb770324a981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a6ce272412a601c03330e55de170ea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a7a6ce272412a601c03330e55de170ea8">constructAreaNotToTag</a> ()</td></tr>
 <tr class="memdesc:a7a6ce272412a601c03330e55de170ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constuct the area not to tag.  <a href="#a7a6ce272412a601c03330e55de170ea8">More...</a><br /></td></tr>
 <tr class="separator:a7a6ce272412a601c03330e55de170ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f5d9741b9f2b73d0ffe50b7d4f8aeff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a8f5d9741b9f2b73d0ffe50b7d4f8aeff">setAreaNotToTag</a> (<a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;ba)</td></tr>
-<tr class="memdesc:a8f5d9741b9f2b73d0ffe50b7d4f8aeff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the area not to tag.  <a href="#a8f5d9741b9f2b73d0ffe50b7d4f8aeff">More...</a><br /></td></tr>
-<tr class="separator:a8f5d9741b9f2b73d0ffe50b7d4f8aeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca274822a300bceaaa023cc330d441ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aca274822a300bceaaa023cc330d441ba">setAreaNotToTag</a> (<a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;ba) noexcept</td></tr>
+<tr class="memdesc:aca274822a300bceaaa023cc330d441ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the area not to tag.  <a href="#aca274822a300bceaaa023cc330d441ba">More...</a><br /></td></tr>
+<tr class="separator:aca274822a300bceaaa023cc330d441ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75c6f30a5526b2d5dbbb24646f71dc8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a75c6f30a5526b2d5dbbb24646f71dc8b">errorEst</a> (<a class="el" href="classamrex_1_1TagBoxArray.html">TagBoxArray</a> &amp;tb, int clearval, int tagval, Real time, int n_error_buf=0, int ngrow=0)=0</td></tr>
 <tr class="memdesc:a75c6f30a5526b2d5dbbb24646f71dc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error estimation for regridding. This is a pure virtual function and hence MUST be implemented by derived classes.  <a href="#a75c6f30a5526b2d5dbbb24646f71dc8b">More...</a><br /></td></tr>
 <tr class="separator:a75c6f30a5526b2d5dbbb24646f71dc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,36 +276,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa57cb16059880124adbd17cba52c843d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aa57cb16059880124adbd17cba52c843d">derive</a> (const std::string &amp;name, Real time, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;mf, int dcomp)</td></tr>
 <tr class="memdesc:aa57cb16059880124adbd17cba52c843d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This version of <a class="el" href="classamrex_1_1AmrLevel.html#a2d67ff78f28ebc3850bda9ca476b7f9c" title="Returns a MultiFab containing the derived data for this level. The user is responsible for deleting t...">derive()</a> fills the dcomp'th component of mf with the derived quantity.  <a href="#aa57cb16059880124adbd17cba52c843d">More...</a><br /></td></tr>
 <tr class="separator:aa57cb16059880124adbd17cba52c843d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5322ce60c983bb72e78414052d9331db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1StateData.html">StateData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a5322ce60c983bb72e78414052d9331db">get_state_data</a> (int state_indx)</td></tr>
-<tr class="memdesc:a5322ce60c983bb72e78414052d9331db"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data object.  <a href="#a5322ce60c983bb72e78414052d9331db">More...</a><br /></td></tr>
-<tr class="separator:a5322ce60c983bb72e78414052d9331db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a024eee0459227e95a521789724a889c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a024eee0459227e95a521789724a889c8">get_old_data</a> (int state_indx)</td></tr>
-<tr class="memdesc:a024eee0459227e95a521789724a889c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at old time.  <a href="#a024eee0459227e95a521789724a889c8">More...</a><br /></td></tr>
-<tr class="separator:a024eee0459227e95a521789724a889c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa859d511ae880653d0d405b4484fdc37"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aa859d511ae880653d0d405b4484fdc37">get_old_data</a> (int state_indx) const </td></tr>
-<tr class="memdesc:aa859d511ae880653d0d405b4484fdc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at old time.  <a href="#aa859d511ae880653d0d405b4484fdc37">More...</a><br /></td></tr>
-<tr class="separator:aa859d511ae880653d0d405b4484fdc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab280e7294f07d7b30a28351aaef63cb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ab280e7294f07d7b30a28351aaef63cb8">get_new_data</a> (int state_indx)</td></tr>
-<tr class="memdesc:ab280e7294f07d7b30a28351aaef63cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at new time.  <a href="#ab280e7294f07d7b30a28351aaef63cb8">More...</a><br /></td></tr>
-<tr class="separator:ab280e7294f07d7b30a28351aaef63cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d73d0e950d7f442e047fabe4d93e217"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a9d73d0e950d7f442e047fabe4d93e217">get_new_data</a> (int state_indx) const </td></tr>
-<tr class="memdesc:a9d73d0e950d7f442e047fabe4d93e217"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at new time.  <a href="#a9d73d0e950d7f442e047fabe4d93e217">More...</a><br /></td></tr>
-<tr class="separator:a9d73d0e950d7f442e047fabe4d93e217"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b3188c06bca1fb98e5cf0eb8918b96a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a4b3188c06bca1fb98e5cf0eb8918b96a">postStepRegrid</a> ()</td></tr>
-<tr class="memdesc:a4b3188c06bca1fb98e5cf0eb8918b96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not we want a post-timestep regrid.  <a href="#a4b3188c06bca1fb98e5cf0eb8918b96a">More...</a><br /></td></tr>
-<tr class="separator:a4b3188c06bca1fb98e5cf0eb8918b96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f026bc206ee8ba0b85cd3bf3ede7474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a6f026bc206ee8ba0b85cd3bf3ede7474">setPostStepRegrid</a> (int new_val)</td></tr>
-<tr class="memdesc:a6f026bc206ee8ba0b85cd3bf3ede7474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new value for the post-timestep regrid trigger.  <a href="#a6f026bc206ee8ba0b85cd3bf3ede7474">More...</a><br /></td></tr>
-<tr class="separator:a6f026bc206ee8ba0b85cd3bf3ede7474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d26097cf45be9f3a69ea6a48e9bfabd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1StateData.html">StateData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a9d26097cf45be9f3a69ea6a48e9bfabd">get_state_data</a> (int state_indx) noexcept</td></tr>
+<tr class="memdesc:a9d26097cf45be9f3a69ea6a48e9bfabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data object.  <a href="#a9d26097cf45be9f3a69ea6a48e9bfabd">More...</a><br /></td></tr>
+<tr class="separator:a9d26097cf45be9f3a69ea6a48e9bfabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382aab120a9106f10ca000c930aa3bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a382aab120a9106f10ca000c930aa3bb4">get_old_data</a> (int state_indx) noexcept</td></tr>
+<tr class="memdesc:a382aab120a9106f10ca000c930aa3bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at old time.  <a href="#a382aab120a9106f10ca000c930aa3bb4">More...</a><br /></td></tr>
+<tr class="separator:a382aab120a9106f10ca000c930aa3bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699c7036091ffba601be980e985f12b2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a699c7036091ffba601be980e985f12b2">get_old_data</a> (int state_indx) const noexcept</td></tr>
+<tr class="memdesc:a699c7036091ffba601be980e985f12b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at old time.  <a href="#a699c7036091ffba601be980e985f12b2">More...</a><br /></td></tr>
+<tr class="separator:a699c7036091ffba601be980e985f12b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa28de2de47b2c2cb6fc60a0faa6f35b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aaa28de2de47b2c2cb6fc60a0faa6f35b">get_new_data</a> (int state_indx) noexcept</td></tr>
+<tr class="memdesc:aaa28de2de47b2c2cb6fc60a0faa6f35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at new time.  <a href="#aaa28de2de47b2c2cb6fc60a0faa6f35b">More...</a><br /></td></tr>
+<tr class="separator:aaa28de2de47b2c2cb6fc60a0faa6f35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3e47884145cbdb469ba13d9c93d80e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a0a3e47884145cbdb469ba13d9c93d80e">get_new_data</a> (int state_indx) const noexcept</td></tr>
+<tr class="memdesc:a0a3e47884145cbdb469ba13d9c93d80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">State data at new time.  <a href="#a0a3e47884145cbdb469ba13d9c93d80e">More...</a><br /></td></tr>
+<tr class="separator:a0a3e47884145cbdb469ba13d9c93d80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ed82244401ebc45c450909562445d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a89ed82244401ebc45c450909562445d8">postStepRegrid</a> () noexcept</td></tr>
+<tr class="memdesc:a89ed82244401ebc45c450909562445d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not we want a post-timestep regrid.  <a href="#a89ed82244401ebc45c450909562445d8">More...</a><br /></td></tr>
+<tr class="separator:a89ed82244401ebc45c450909562445d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3740e0877382738d1cd8d382909ef855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a3740e0877382738d1cd8d382909ef855">setPostStepRegrid</a> (int new_val) noexcept</td></tr>
+<tr class="memdesc:a3740e0877382738d1cd8d382909ef855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new value for the post-timestep regrid trigger.  <a href="#a3740e0877382738d1cd8d382909ef855">More...</a><br /></td></tr>
+<tr class="separator:a3740e0877382738d1cd8d382909ef855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fdf4e347142373696281d9269c6799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a69fdf4e347142373696281d9269c6799">UpdateDistributionMaps</a> (<a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;<a class="el" href="classamrex_1_1AmrLevel.html#ab0ab7555be82910d8100d7bc3aa55d1d">dmap</a>)</td></tr>
 <tr class="memdesc:a69fdf4e347142373696281d9269c6799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the distribution maps in <a class="el" href="classamrex_1_1StateData.html" title="Current and previous level-time data. ">StateData</a> based on the size of the map.  <a href="#a69fdf4e347142373696281d9269c6799">More...</a><br /></td></tr>
 <tr class="separator:a69fdf4e347142373696281d9269c6799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13fac03f8f84f602aea857521063b4b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a13fac03f8f84f602aea857521063b4b0">getBCArray</a> (int State_Type, int gridno, int scomp, int ncomp)</td></tr>
 <tr class="memdesc:a13fac03f8f84f602aea857521063b4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boundary condition access function.  <a href="#a13fac03f8f84f602aea857521063b4b0">More...</a><br /></td></tr>
 <tr class="separator:a13fac03f8f84f602aea857521063b4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe82841aac412b6335912b1bd98da33b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#abe82841aac412b6335912b1bd98da33b">get_data</a> (int state_indx, Real time)</td></tr>
-<tr class="memdesc:abe82841aac412b6335912b1bd98da33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get state data at specified index and time.  <a href="#abe82841aac412b6335912b1bd98da33b">More...</a><br /></td></tr>
-<tr class="separator:abe82841aac412b6335912b1bd98da33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f84c93c82667982bbec8f9215b630af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a5f84c93c82667982bbec8f9215b630af">get_data</a> (int state_indx, Real time) noexcept</td></tr>
+<tr class="memdesc:a5f84c93c82667982bbec8f9215b630af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get state data at specified index and time.  <a href="#a5f84c93c82667982bbec8f9215b630af">More...</a><br /></td></tr>
+<tr class="separator:a5f84c93c82667982bbec8f9215b630af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5bcc0602fbd0198b743f3391c7a227c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aa5bcc0602fbd0198b743f3391c7a227c">set_preferred_boundary_values</a> (<a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;S, int state_index, int scomp, int dcomp, int ncomp, Real time) const </td></tr>
 <tr class="memdesc:aa5bcc0602fbd0198b743f3391c7a227c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hack to allow override of (non-fine-fine) fillpatched boundary data.  <a href="#aa5bcc0602fbd0198b743f3391c7a227c">More...</a><br /></td></tr>
 <tr class="separator:aa5bcc0602fbd0198b743f3391c7a227c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -324,9 +324,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c91cb169c86fd95b76b5742687ad949"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a1c91cb169c86fd95b76b5742687ad949">WorkEstType</a> ()</td></tr>
 <tr class="memdesc:a1c91cb169c86fd95b76b5742687ad949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which state data type is for work estimates? -1 means none.  <a href="#a1c91cb169c86fd95b76b5742687ad949">More...</a><br /></td></tr>
 <tr class="separator:a1c91cb169c86fd95b76b5742687ad949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e1839662b5a9c5a40a3333dbe758be9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1AmrLevel.html#a83fa691ff414eb69f75eb6ae1f61b33a">TimeLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a1e1839662b5a9c5a40a3333dbe758be9">which_time</a> (int state_indx, Real time) const </td></tr>
-<tr class="memdesc:a1e1839662b5a9c5a40a3333dbe758be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one the TimeLevel enums. Asserts that time is between AmrOldTime and AmrNewTime.  <a href="#a1e1839662b5a9c5a40a3333dbe758be9">More...</a><br /></td></tr>
-<tr class="separator:a1e1839662b5a9c5a40a3333dbe758be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f60bcd444acf5b3acfe94db3981969"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1AmrLevel.html#a83fa691ff414eb69f75eb6ae1f61b33a">TimeLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a58f60bcd444acf5b3acfe94db3981969">which_time</a> (int state_indx, Real time) const noexcept</td></tr>
+<tr class="memdesc:a58f60bcd444acf5b3acfe94db3981969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one the TimeLevel enums. Asserts that time is between AmrOldTime and AmrNewTime.  <a href="#a58f60bcd444acf5b3acfe94db3981969">More...</a><br /></td></tr>
+<tr class="separator:a58f60bcd444acf5b3acfe94db3981969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1de622e094b4e64e2491a82a3acefc1d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a1de622e094b4e64e2491a82a3acefc1d">writePlotNow</a> ()</td></tr>
 <tr class="memdesc:a1de622e094b4e64e2491a82a3acefc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the <a class="el" href="classamrex_1_1AmrLevel.html" title="Virtual base class for managing individual levels. AmrLevel functions both as a container for state d...">AmrLevel</a> want <a class="el" href="classamrex_1_1Amr.html" title="Manage hierarchy of levels for time-dependent AMR computations. ">Amr</a> to write a plotfile now?  <a href="#a1de622e094b4e64e2491a82a3acefc1d">More...</a><br /></td></tr>
 <tr class="separator:a1de622e094b4e64e2491a82a3acefc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,12 +341,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:acaf1b5936e81691794578618126d813d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac96bd5573c5f63e798aa682a7d5756ae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ac96bd5573c5f63e798aa682a7d5756ae">FlushFPICache</a> ()</td></tr>
 <tr class="separator:ac96bd5573c5f63e798aa682a7d5756ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a793430bb1749761161877c0d18dddc4f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classamrex_1_1DescriptorList.html">DescriptorList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a793430bb1749761161877c0d18dddc4f">get_desc_lst</a> ()</td></tr>
-<tr class="memdesc:a793430bb1749761161877c0d18dddc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns list of Descriptors.  <a href="#a793430bb1749761161877c0d18dddc4f">More...</a><br /></td></tr>
-<tr class="separator:a793430bb1749761161877c0d18dddc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2bc4d8607a84f29e2f0d5a5ca722048"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classamrex_1_1DeriveList.html">DeriveList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ab2bc4d8607a84f29e2f0d5a5ca722048">get_derive_lst</a> ()</td></tr>
-<tr class="memdesc:ab2bc4d8607a84f29e2f0d5a5ca722048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns list of derived variables.  <a href="#ab2bc4d8607a84f29e2f0d5a5ca722048">More...</a><br /></td></tr>
-<tr class="separator:ab2bc4d8607a84f29e2f0d5a5ca722048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4092681e4db89552b5a53b0d1bb144fa"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classamrex_1_1DescriptorList.html">DescriptorList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a4092681e4db89552b5a53b0d1bb144fa">get_desc_lst</a> () noexcept</td></tr>
+<tr class="memdesc:a4092681e4db89552b5a53b0d1bb144fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns list of Descriptors.  <a href="#a4092681e4db89552b5a53b0d1bb144fa">More...</a><br /></td></tr>
+<tr class="separator:a4092681e4db89552b5a53b0d1bb144fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef50123ae8e520914847e15973b104a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classamrex_1_1DeriveList.html">DeriveList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a7ef50123ae8e520914847e15973b104a">get_derive_lst</a> () noexcept</td></tr>
+<tr class="memdesc:a7ef50123ae8e520914847e15973b104a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns list of derived variables.  <a href="#a7ef50123ae8e520914847e15973b104a">More...</a><br /></td></tr>
+<tr class="separator:a7ef50123ae8e520914847e15973b104a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55c1a2d0040ba28bf022fb293113a5f2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a55c1a2d0040ba28bf022fb293113a5f2">FillPatch</a> (<a class="el" href="classamrex_1_1AmrLevel.html">AmrLevel</a> &amp;amrlevel, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;leveldata, int boxGrow, Real time, int index, int scomp, int ncomp, int dcomp=0)</td></tr>
 <tr class="separator:a55c1a2d0040ba28bf022fb293113a5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72cce79d9f341c7f9a11addfcaec95f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#aa72cce79d9f341c7f9a11addfcaec95f">FillPatchAdd</a> (<a class="el" href="classamrex_1_1AmrLevel.html">AmrLevel</a> &amp;amrlevel, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;leveldata, int boxGrow, Real time, int index, int scomp, int ncomp, int dcomp=0)</td></tr>
@@ -354,9 +354,9 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0bfcce48a9fe973256d07dd1bb4d24c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a0bfcce48a9fe973256d07dd1bb4d24c8">AmrLevel</a> ()</td></tr>
-<tr class="memdesc:a0bfcce48a9fe973256d07dd1bb4d24c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructors &ndash; for derived classes.  <a href="#a0bfcce48a9fe973256d07dd1bb4d24c8">More...</a><br /></td></tr>
-<tr class="separator:a0bfcce48a9fe973256d07dd1bb4d24c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae244321a30ba83806ce8204b7c437480"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#ae244321a30ba83806ce8204b7c437480">AmrLevel</a> () noexcept</td></tr>
+<tr class="memdesc:ae244321a30ba83806ce8204b7c437480"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructors &ndash; for derived classes.  <a href="#ae244321a30ba83806ce8204b7c437480">More...</a><br /></td></tr>
+<tr class="separator:ae244321a30ba83806ce8204b7c437480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61c4e9f6256e714a271a0b1286961c96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#a61c4e9f6256e714a271a0b1286961c96">AmrLevel</a> (<a class="el" href="classamrex_1_1Amr.html">Amr</a> &amp;papa, int lev, const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;level_geom, const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp;bl, const <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &amp;dm, Real time)</td></tr>
 <tr class="separator:a61c4e9f6256e714a271a0b1286961c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addb399ac982bc95a1cb0456447f13e0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrLevel.html#addb399ac982bc95a1cb0456447f13e0e">AmrLevel</a> (const <a class="el" href="classamrex_1_1AmrLevel.html">AmrLevel</a> &amp;)=delete</td></tr>
@@ -481,7 +481,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0bfcce48a9fe973256d07dd1bb4d24c8"></a>
+<a class="anchor" id="ae244321a30ba83806ce8204b7c437480"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -497,7 +497,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -662,7 +662,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac9899d3e0be4bc6e45d127a716da7ede"></a>
+<a class="anchor" id="a7dcb930627bd80227fb86468425bd2d0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -678,7 +678,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -956,9 +956,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae27e1d507ec7a6314a7bb5ec7d2fc2cb"></a>
+<a class="anchor" id="a8c27e66a313e012cb2189e8cff78217c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">long amrex::AmrLevel::countCells </td>
@@ -967,6 +970,11 @@ Friends</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns number of cells on level. </p>
@@ -1089,7 +1097,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7b2a7b336f2f0a2817a16709b6c063cf"></a>
+<a class="anchor" id="a0d63aa23ccf6091e7af223a9b91569e9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1105,14 +1113,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a3d2006342bf56a903fa3b1db8564869a"></a>
+<a class="anchor" id="af81c3f65acdb48fa02f25a43b98baee7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1128,7 +1136,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1222,7 +1230,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaf556b8ae524800e555c29ba55dbc59e"></a>
+<a class="anchor" id="a1a8e1ff322aee598d7b72877b272545e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1238,7 +1246,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1443,7 +1451,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0825becffdbef2ccddaddffc02ab7f7d"></a>
+<a class="anchor" id="a3fb007c5f97c38ef4515b3a74d6873fa"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1459,7 +1467,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1514,7 +1522,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a12cef912681535eb3929e79625aff338"></a>
+<a class="anchor" id="ad535ebc3896c9f8c1ea3e6530ffc070e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1530,7 +1538,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1539,9 +1547,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abe82841aac412b6335912b1bd98da33b"></a>
+<a class="anchor" id="a5f84c93c82667982bbec8f9215b630af"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp; amrex::AmrLevel::get_data </td>
@@ -1561,13 +1572,18 @@ Friends</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get state data at specified index and time. </p>
 
 </div>
 </div>
-<a class="anchor" id="ab2bc4d8607a84f29e2f0d5a5ca722048"></a>
+<a class="anchor" id="a7ef50123ae8e520914847e15973b104a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1583,7 +1599,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1592,7 +1608,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a793430bb1749761161877c0d18dddc4f"></a>
+<a class="anchor" id="a4092681e4db89552b5a53b0d1bb144fa"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1608,7 +1624,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1617,7 +1633,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab280e7294f07d7b30a28351aaef63cb8"></a>
+<a class="anchor" id="aaa28de2de47b2c2cb6fc60a0faa6f35b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1634,7 +1650,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1643,7 +1659,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9d73d0e950d7f442e047fabe4d93e217"></a>
+<a class="anchor" id="a0a3e47884145cbdb469ba13d9c93d80e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1660,7 +1676,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1669,7 +1685,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a024eee0459227e95a521789724a889c8"></a>
+<a class="anchor" id="a382aab120a9106f10ca000c930aa3bb4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1686,7 +1702,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1695,7 +1711,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa859d511ae880653d0d405b4484fdc37"></a>
+<a class="anchor" id="a699c7036091ffba601be980e985f12b2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1712,7 +1728,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1721,7 +1737,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5322ce60c983bb72e78414052d9331db"></a>
+<a class="anchor" id="a9d26097cf45be9f3a69ea6a48e9bfabd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1738,7 +1754,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1747,9 +1763,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5a419d28aa15b927e16741f3f6e35bb2"></a>
+<a class="anchor" id="afd13b08745699794f3a991500e901974"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp; amrex::AmrLevel::getAreaNotToTag </td>
@@ -1758,15 +1777,23 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the area not to tag. </p>
 
 </div>
 </div>
-<a class="anchor" id="a30b10ac136d1f65033bca65ac9c87922"></a>
+<a class="anchor" id="a804883955eae48bd6992fb770324a981"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp; amrex::AmrLevel::getAreaToTag </td>
@@ -1775,6 +1802,11 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1819,9 +1851,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a950ba9dcfc4ab027644c9ce9613ec615"></a>
+<a class="anchor" id="ad3cf13198c2fc19f4d692b5282b1ddc5"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp; amrex::AmrLevel::getEdgeBoxArray </td>
@@ -1831,13 +1866,21 @@ Friends</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a3c19c93fa3ce20420a484d9280ce2632"></a>
+<a class="anchor" id="a5f0a9f5d2c0e0733ad3cbbda47912480"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &amp; amrex::AmrLevel::getNodalBoxArray </td>
@@ -1846,6 +1889,11 @@ Friends</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1967,7 +2015,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae4fe2cf22c0b5afa7b61c0763aff8c9b"></a>
+<a class="anchor" id="a18159b17b5d40999e3f38474e53f23ff"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1983,7 +2031,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2062,7 +2110,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad6a79cb5a4a9a68096183e650138e030"></a>
+<a class="anchor" id="ac66753a2ff2df956a5df08dd6cb9f81a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2078,7 +2126,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2087,7 +2135,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2cd4b72bfd25b2c90aaa5b2e0badbdfe"></a>
+<a class="anchor" id="ae93e34dd07b1784fc7fe902331d232b2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2103,7 +2151,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2112,7 +2160,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4df6731d78a56c7b54ddc55877650d14"></a>
+<a class="anchor" id="aa9666a2babd9d59a595a2c3695f38f00"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2128,7 +2176,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2350,7 +2398,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4b3188c06bca1fb98e5cf0eb8918b96a"></a>
+<a class="anchor" id="a89ed82244401ebc45c450909562445d8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2366,7 +2414,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2545,9 +2593,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8f5d9741b9f2b73d0ffe50b7d4f8aeff"></a>
+<a class="anchor" id="aca274822a300bceaaa023cc330d441ba"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void amrex::AmrLevel::setAreaNotToTag </td>
@@ -2557,13 +2608,18 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the area not to tag. </p>
 
 </div>
 </div>
-<a class="anchor" id="a3958f19527fb2eb83de947addb745862"></a>
+<a class="anchor" id="a33b3a3f0806c790a05f39fae227042a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2580,7 +2636,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2674,7 +2730,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6f026bc206ee8ba0b85cd3bf3ede7474"></a>
+<a class="anchor" id="a3740e0877382738d1cd8d382909ef855"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2691,7 +2747,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2810,9 +2866,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1e1839662b5a9c5a40a3333dbe758be9"></a>
+<a class="anchor" id="a58f60bcd444acf5b3acfe94db3981969"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classamrex_1_1AmrLevel.html#a83fa691ff414eb69f75eb6ae1f61b33a">AmrLevel::TimeLevel</a> amrex::AmrLevel::which_time </td>
@@ -2832,6 +2891,11 @@ Friends</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns one the TimeLevel enums. Asserts that time is between AmrOldTime and AmrNewTime. </p>

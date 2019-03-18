@@ -25,7 +25,7 @@
         <definition>const IntVect amrex::IntVect::Zero</definition>
         <argsstring></argsstring>
         <name>Zero</name>
-        <initializer>= <ref refid="classamrex_1_1IntVect_1acfa290124ab75f4a94ce37ef98870174" kindref="member">IntVect::TheZeroVector</ref>()</initializer>
+        <initializer>= <ref refid="classamrex_1_1IntVect_1ac6662b7a8729bb7d3790a81559b79cbb" kindref="member">IntVect::TheZeroVector</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -39,7 +39,7 @@
         <definition>const IntVect amrex::IntVect::Unit</definition>
         <argsstring></argsstring>
         <name>Unit</name>
-        <initializer>= <ref refid="classamrex_1_1IntVect_1ac84309ce388ca3b13e72da61016a8b6f" kindref="member">IntVect::TheUnitVector</ref>()</initializer>
+        <initializer>= <ref refid="classamrex_1_1IntVect_1a9be1f208f435dd8f579c07af1d1b1253" kindref="member">IntVect::TheUnitVector</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -122,10 +122,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a7f9d64098da66b79da46aef397ed8424" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> constexpr</type>
         <definition>AMREX_GPU_HOST_DEVICE constexpr amrex::IntVect::IntVect</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>IntVect</name>
         <briefdescription>
 <para>Construct an <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> whose components are all zero. </para>        </briefdescription>
@@ -135,10 +135,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="74" bodyend="74"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1af1913a982ac01cb0141959e0a2ca46e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aa22c324e7128b3164d547b0723b4b2d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> constexpr</type>
         <definition>AMREX_GPU_HOST_DEVICE constexpr amrex::IntVect::IntVect</definition>
-        <argsstring>(AMREX_D_DECL(int i, int j, int k))</argsstring>
+        <argsstring>(AMREX_D_DECL(int i, int j, int k)) noexcept</argsstring>
         <name>IntVect</name>
         <param>
           <type><ref refid="namespaceamrex_1a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd" kindref="member">AMREX_D_DECL</ref>(int i, int j, int k)</type>
@@ -151,10 +151,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="82" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="82" bodyend="82"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ad52ca212f8e11f63003e740ebb20c965" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ae9684c0f49b86a16a696f99521290fe9" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE amrex::IntVect::IntVect</definition>
-        <argsstring>(const int *a)</argsstring>
+        <argsstring>(const int *a) noexcept</argsstring>
         <name>IntVect</name>
         <param>
           <type>const int *</type>
@@ -168,10 +168,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="94" bodyend="94"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1aac40ef5545e9dfeb23d4b610beda22b8" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a964cade2a31b2c82990dcb7726dd5d1d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
         <definition>amrex::IntVect::IntVect</definition>
-        <argsstring>(const Vector&lt; int &gt; &amp;a)</argsstring>
+        <argsstring>(const Vector&lt; int &gt; &amp;a) noexcept</argsstring>
         <name>IntVect</name>
         <param>
           <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
@@ -185,10 +185,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="101" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="101" bodyend="103"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ae7973d3ec09cb18354a5e5a17ed466be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a268f9db4f5d0a78aeeebc3bb8f33081c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE Dim3 amrex::IntVect::dim3</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>dim3</name>
         <briefdescription>
         </briefdescription>
@@ -198,10 +198,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="108" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="108" bodyend="116"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1affa7e2debcb2a9d09ef55d44ff1efa56" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a8b1db956b695663c7a75a0d11106e4fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> int</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE int amrex::IntVect::sum</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>sum</name>
         <briefdescription>
         </briefdescription>
@@ -211,10 +211,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="123" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="123" bodyend="127"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1acfcb1dd0d3a3471c5bf5c8a74f55db0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ab3bf9b912e3ba519a4799d2bfd82fffc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> int</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE int amrex::IntVect::max</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>max</name>
         <briefdescription>
 <para>maximum (no absolute values) value </para>        </briefdescription>
@@ -224,10 +224,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="131" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="131" bodyend="141"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1adc4f4d1fc70c19b14562eea3e7645688" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a59b3f72c69e4e64d6b7841cc5bd5119d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> int</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE int amrex::IntVect::min</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>min</name>
         <briefdescription>
 <para>minimum (no absolute values) value </para>        </briefdescription>
@@ -237,10 +237,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="145" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="145" bodyend="155"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1adfada7f50dca399f16415b601b85d07e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a750ffa7edd4acc720c7cdddec6690f05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> int</type>
         <definition>AMREX_INLINE int amrex::IntVect::maxDir</definition>
-        <argsstring>(bool a_doAbsValue) const </argsstring>
+        <argsstring>(bool a_doAbsValue) const noexcept</argsstring>
         <name>maxDir</name>
         <param>
           <type>bool</type>
@@ -254,10 +254,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="159" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="548" bodyend="578"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a05f8e5d330921abcc074d83e2946165e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a4bca4c9e58bdc48003b232c3e4684845" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> int &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE int&amp; amrex::IntVect::operator[]</definition>
-        <argsstring>(int i)</argsstring>
+        <argsstring>(int i) noexcept</argsstring>
         <name>operator[]</name>
         <param>
           <type>int</type>
@@ -271,10 +271,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="163" bodyend="163"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ab63619645f3389c4b11d540364e3be5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1af90cb33f3f87b373541ef1599c7f3ba4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> const int &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE const int&amp; amrex::IntVect::operator[]</definition>
-        <argsstring>(int i) const </argsstring>
+        <argsstring>(int i) const noexcept</argsstring>
         <name>operator[]</name>
         <param>
           <type>int</type>
@@ -288,10 +288,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="167" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="167" bodyend="167"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ae5109996a0127e1237cd83d188ba8c23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a057c234a61ff795c4f2b2637eaa1395e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::setVal</definition>
-        <argsstring>(int i, int val)</argsstring>
+        <argsstring>(int i, int val) noexcept</argsstring>
         <name>setVal</name>
         <param>
           <type>int</type>
@@ -309,10 +309,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="171" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="171" bodyend="174"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a0d0b4eb86f6c854fec032cf2c10c5a8e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a1ca89f99ef866fc10c2eb9130ea9983d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> const int *</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE const int* amrex::IntVect::getVect</definition>
-        <argsstring>() const &amp;</argsstring>
+        <argsstring>() const &amp;noexcept</argsstring>
         <name>getVect</name>
         <briefdescription>
 <para>Returns a const pointer to an array of coordinates of the <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>. Useful for arguments to FORTRAN calls. </para>        </briefdescription>
@@ -322,10 +322,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="181" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="181" bodyend="181"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ad0012c7876b494561deae6a07fe8661e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1acb3f2aeb1a815e4ee0a420d85d0889f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> int *</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE int* amrex::IntVect::getVect</definition>
-        <argsstring>()&amp;</argsstring>
+        <argsstring>()&amp;noexcept</argsstring>
         <name>getVect</name>
         <briefdescription>
         </briefdescription>
@@ -348,10 +348,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="185" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ad023680503536d957e5c47e7a45d41de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a09ecb1037020a28be337135503f7185e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator==</definition>
-        <argsstring>(int val) const </argsstring>
+        <argsstring>(int val) const noexcept</argsstring>
         <name>operator==</name>
         <param>
           <type>int</type>
@@ -365,10 +365,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="189" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="189" bodyend="192"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ad182e0209e97b4180e88e0330e8e9977" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a2c927dc5cad880ea3850650dea0a1fc0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator!=</definition>
-        <argsstring>(int val) const </argsstring>
+        <argsstring>(int val) const noexcept</argsstring>
         <name>operator!=</name>
         <param>
           <type>int</type>
@@ -382,10 +382,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="196" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="196" bodyend="199"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a65968b2191e8e6b22cd0df32bb6de9cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a409bb3666aaac3e01a6cb0cf9ae44c12" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator==</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>operator==</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -399,10 +399,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="203" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="203" bodyend="206"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a983d645987f28832c38432aaf085e74c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1af63e5fa513b078d7361f869edac883c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator!=</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>operator!=</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -416,10 +416,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="209" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="209" bodyend="212"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1aa5dc73f3a5a27ece73d469560618b7af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a1b567351d6cef851cf5e8671b4ea1fd1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator&lt;</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>operator&lt;</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -433,10 +433,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="215" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="215" bodyend="225"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a918364db42574cf62240d051caad639b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a75001b2ed386536e84b530e7bf34c2b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator&lt;=</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>operator&lt;=</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -450,10 +450,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="228" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="228" bodyend="231"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1affd5332c086a70b647c5c836dff8e9d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ae51924a7d177d3c3f4d2cd6753c52361" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator&gt;</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>operator&gt;</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -467,10 +467,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="234" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="234" bodyend="237"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a4fd84fb039d7d07e68704ddbb7145bce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a381838d9c4c1b6094d7e921fdcb61147" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::operator&gt;=</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>operator&gt;=</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -484,10 +484,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="240" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="240" bodyend="243"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ab2afb2b7b9848db314ed95cb82d937e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a5f5612775af4288baa95b12020f6d9ad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::allLT</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>allLT</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -501,10 +501,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="249" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="249" bodyend="252"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a881ab2bba4dafdc4dc5e61d3be1bb59e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a7c950aec67e7af286250bf28efb831e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::allLE</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>allLE</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -518,10 +518,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="258" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="258" bodyend="261"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1abbd4bacb3f9e782bb55e4e829e34c0b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aae29530da7360af67a6d1b33b16abc23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::allGT</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>allGT</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -535,10 +535,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="267" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="267" bodyend="270"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a5f44e021015f5558cff8d7c0d5f301a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a09c05f3c278a867594390252ef348e1f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> bool</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE bool amrex::IntVect::allGE</definition>
-        <argsstring>(const IntVect &amp;rhs) const </argsstring>
+        <argsstring>(const IntVect &amp;rhs) const noexcept</argsstring>
         <name>allGE</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -552,10 +552,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="276" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="276" bodyend="279"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1add8379e2fedd23133fc1569367a7099a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a55fe07a9f9ea98217903782fbed199f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE const IntVect amrex::IntVect::operator+</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>operator+</name>
         <briefdescription>
 <para>Unary plus <ndash/> for completeness. </para>        </briefdescription>
@@ -565,10 +565,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="282" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="282" bodyend="282"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1aba3bb138d7abaf5d153e37168ab614ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a3587cfae802878a37dac1084dcd4426c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator-</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>operator-</name>
         <briefdescription>
 <para>Unary Minus <ndash/> negates all components. </para>        </briefdescription>
@@ -578,10 +578,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="285" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="285" bodyend="285"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1aba3d88618733f5f28065ef61a8324847" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a6e634f42f549105e7e33149d505e0f82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator+=</definition>
-        <argsstring>(int s)</argsstring>
+        <argsstring>(int s) noexcept</argsstring>
         <name>operator+=</name>
         <param>
           <type>int</type>
@@ -595,10 +595,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="288" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="288" bodyend="291"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1aca295d0d1557caf2c0a01b2717da188d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a1cb00f85af42c07d6777adca0ba4d754" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator+=</definition>
-        <argsstring>(const IntVect &amp;p)</argsstring>
+        <argsstring>(const IntVect &amp;p) noexcept</argsstring>
         <name>operator+=</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -612,10 +612,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="294" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="294" bodyend="297"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ae01500c3c23c7dd631701d74b65bd36d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ae904dceb67c9f6c623b256b5f7fd80aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator*=</definition>
-        <argsstring>(int s)</argsstring>
+        <argsstring>(int s) noexcept</argsstring>
         <name>operator*=</name>
         <param>
           <type>int</type>
@@ -629,10 +629,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="300" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="300" bodyend="303"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1afe2919afaa1a3b028680f3df4d5fd895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1afc712cd132209b38e53c6c84fc8c6e43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator*=</definition>
-        <argsstring>(const IntVect &amp;p)</argsstring>
+        <argsstring>(const IntVect &amp;p) noexcept</argsstring>
         <name>operator*=</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -646,10 +646,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="306" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="306" bodyend="309"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ae617d00916dadafc641afdae63f3ef50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a2b30f3e69fa17b97a83e4b05a88ae8fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator/=</definition>
-        <argsstring>(int s)</argsstring>
+        <argsstring>(int s) noexcept</argsstring>
         <name>operator/=</name>
         <param>
           <type>int</type>
@@ -663,10 +663,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="312" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="312" bodyend="315"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a11350d8f9906d3986a1c8dbba541c257" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aec9ef2804bc763e07c9afd16522b06e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator/=</definition>
-        <argsstring>(const IntVect &amp;p)</argsstring>
+        <argsstring>(const IntVect &amp;p) noexcept</argsstring>
         <name>operator/=</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -680,10 +680,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="318" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="318" bodyend="321"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a98df4abbfc66b22a5012c6521bb52ac3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ae30038bc92b2c336276ceeafa01c3370" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator-=</definition>
-        <argsstring>(int s)</argsstring>
+        <argsstring>(int s) noexcept</argsstring>
         <name>operator-=</name>
         <param>
           <type>int</type>
@@ -697,10 +697,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="324" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="324" bodyend="327"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a810a3fd1bd5e25779891852034094374" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1abf15f636b25cdcf3df65f150efe98be7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::operator-=</definition>
-        <argsstring>(const IntVect &amp;p)</argsstring>
+        <argsstring>(const IntVect &amp;p) noexcept</argsstring>
         <name>operator-=</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -714,10 +714,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="330" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="330" bodyend="333"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a068a747aa5f383d363ef5b1f50149b5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a2772c021ce93ad182f45132d82d02162" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator+</definition>
-        <argsstring>(const IntVect &amp;p) const </argsstring>
+        <argsstring>(const IntVect &amp;p) const noexcept</argsstring>
         <name>operator+</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -731,10 +731,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="336" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="336" bodyend="339"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a4ed93d600236edf73198d47ff8c397fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a2a4ce0a303b6d0cf018db7369781e99e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator+</definition>
-        <argsstring>(int s) const </argsstring>
+        <argsstring>(int s) const noexcept</argsstring>
         <name>operator+</name>
         <param>
           <type>int</type>
@@ -748,10 +748,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="342" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="342" bodyend="345"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ad5c5b8c72770a861117f4c5a8b0acdd6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ae19c54e5c4d73fa28f3592d34f3487cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator-</definition>
-        <argsstring>(const IntVect &amp;p) const </argsstring>
+        <argsstring>(const IntVect &amp;p) const noexcept</argsstring>
         <name>operator-</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -765,10 +765,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="348" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="348" bodyend="351"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a08243a38ff2b61230d923eb978ee3abe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1adf8f19f9db7701e805de9aa7b78dcda3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator-</definition>
-        <argsstring>(int s) const </argsstring>
+        <argsstring>(int s) const noexcept</argsstring>
         <name>operator-</name>
         <param>
           <type>int</type>
@@ -782,10 +782,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="354" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="354" bodyend="357"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a7e725313f81cff337e4274b104fd90c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a9f76438892915111dc98d1a84751d243" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator*</definition>
-        <argsstring>(const IntVect &amp;p) const </argsstring>
+        <argsstring>(const IntVect &amp;p) const noexcept</argsstring>
         <name>operator*</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -799,10 +799,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="360" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="360" bodyend="363"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ad0235e7341c987ca460358213b1e6895" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a451cf44629f4752e6c89112d7fa1c49c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator*</definition>
-        <argsstring>(int s) const </argsstring>
+        <argsstring>(int s) const noexcept</argsstring>
         <name>operator*</name>
         <param>
           <type>int</type>
@@ -816,10 +816,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="366" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="366" bodyend="369"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ab6b012c625d37fc91a929a23b0479bdc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a9b559dfe2404c666cd46f5d31a695707" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator/</definition>
-        <argsstring>(const IntVect &amp;p) const </argsstring>
+        <argsstring>(const IntVect &amp;p) const noexcept</argsstring>
         <name>operator/</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -833,10 +833,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="372" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="372" bodyend="375"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1aaeb62e57b23dbb059400440d8e8ef7ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aecd10010856465b10fa968202fca3c72" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect amrex::IntVect::operator/</definition>
-        <argsstring>(int s) const </argsstring>
+        <argsstring>(int s) const noexcept</argsstring>
         <name>operator/</name>
         <param>
           <type>int</type>
@@ -850,10 +850,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="378" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="378" bodyend="381"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1af968b565a87b1684bce7929bce05ae84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a544ff1ec357938b686c30060cd2e2be1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::min</definition>
-        <argsstring>(const IntVect &amp;p)</argsstring>
+        <argsstring>(const IntVect &amp;p) noexcept</argsstring>
         <name>min</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -867,10 +867,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="384" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="384" bodyend="390"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a2e5ba4565a73be262ed1a3db68b76e38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a5d7910051074c52afddbc66623494336" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::max</definition>
-        <argsstring>(const IntVect &amp;p)</argsstring>
+        <argsstring>(const IntVect &amp;p) noexcept</argsstring>
         <name>max</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -884,10 +884,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="393" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="393" bodyend="399"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ac271426f29f412ae3b005308036ce2ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a87c2e928fd7dcb95b620a81bc6b099ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::scale</definition>
-        <argsstring>(int s)</argsstring>
+        <argsstring>(int s) noexcept</argsstring>
         <name>scale</name>
         <param>
           <type>int</type>
@@ -901,10 +901,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="402" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="402" bodyend="402"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ac08a3f5045451b3e7404f59dc91dd8ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a3a49a4cb03e07231b98aff4cf2b546d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::reflect</definition>
-        <argsstring>(int ref_ix, int idir)</argsstring>
+        <argsstring>(int ref_ix, int idir) noexcept</argsstring>
         <name>reflect</name>
         <param>
           <type>int</type>
@@ -922,10 +922,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="408" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="408" bodyend="413"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a733738d6a4d8d66f89b5588885baad06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aa9803c8b7b2926299c58e658088be7db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::shift</definition>
-        <argsstring>(int coord, int s)</argsstring>
+        <argsstring>(int coord, int s) noexcept</argsstring>
         <name>shift</name>
         <param>
           <type>int</type>
@@ -943,10 +943,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="416" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="416" bodyend="419"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1aacb65eb6db7bddba46dc8998c773870f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a6c37e12d98b97002bf89c503b0c064e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::shift</definition>
-        <argsstring>(const IntVect &amp;iv)</argsstring>
+        <argsstring>(const IntVect &amp;iv) noexcept</argsstring>
         <name>shift</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -960,10 +960,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="422" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="422" bodyend="422"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ab0b1fce3db84a7030a1efb288bb8ea30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a1d8cb7cc5f3c974bbba4bbfc0ebaae5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE IntVect&amp; amrex::IntVect::diagShift</definition>
-        <argsstring>(int s)</argsstring>
+        <argsstring>(int s) noexcept</argsstring>
         <name>diagShift</name>
         <param>
           <type>int</type>
@@ -977,10 +977,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="425" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="425" bodyend="428"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a66d4cc30f33a60acae58e97df2bc4d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_INLINE IntVect &amp; amrex::IntVect::coarsen</definition>
-        <argsstring>(const IntVect &amp;p)</argsstring>
+        <argsstring>(const IntVect &amp;p) noexcept</argsstring>
         <name>coarsen</name>
         <param>
           <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
@@ -994,10 +994,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="431" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="533" bodyend="544"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1addf93c042610c36913a13da860196824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a2eac6014652f412ea98bc81a7934ea9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
         <definition>AMREX_INLINE IntVect &amp; amrex::IntVect::coarsen</definition>
-        <argsstring>(int p)</argsstring>
+        <argsstring>(int p) noexcept</argsstring>
         <name>coarsen</name>
         <param>
           <type>int</type>
@@ -1011,10 +1011,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="434" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="525" bodyend="529"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a9a9bbb2a7bc392f6694afeb866b6968a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ab475947988193854e6da058ff62d1ab4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>AMREX_INLINE void amrex::IntVect::linearOut</definition>
-        <argsstring>(void *a_buffer) const </argsstring>
+        <argsstring>(void *a_buffer) const noexcept</argsstring>
         <name>linearOut</name>
         <param>
           <type>void *</type>
@@ -1028,10 +1028,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="445" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="582" bodyend="591"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a0449d35a9dab1424a5a1bb8269dd3dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a7edd97722920f0e96ef81be04e7f1ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>AMREX_INLINE void amrex::IntVect::linearIn</definition>
-        <argsstring>(void *a_buffer)</argsstring>
+        <argsstring>(void *a_buffer) noexcept</argsstring>
         <name>linearIn</name>
         <param>
           <type>void *</type>
@@ -1047,10 +1047,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a8368b9488786a4ae262fc157536dd007" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aee066010c6492129ab20b3d26df6d4f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></type>
         <definition>static size_t AMREX_INLINE amrex::IntVect::linearSize</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>linearSize</name>
         <briefdescription>
 <para>for serialization </para>        </briefdescription>
@@ -1060,10 +1060,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="438" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="438" bodyend="442"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1acfa290124ab75f4a94ce37ef98870174" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1ac6662b7a8729bb7d3790a81559b79cbb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> static <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> constexpr <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE static AMREX_INLINE constexpr IntVect amrex::IntVect::TheZeroVector</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>TheZeroVector</name>
         <briefdescription>
 <para>This static member function returns a reference to a constant <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> object, all of whose AMREX_SPACEDIM arguments are set to zero (0). Figuratively, it is the zero vector in AMREX_SPACEDIM-dimensional space. It is provided as a convenient way to specify the zero vector. </para>        </briefdescription>
@@ -1073,10 +1073,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="455" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="455" bodyend="457"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1ac84309ce388ca3b13e72da61016a8b6f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a9be1f208f435dd8f579c07af1d1b1253" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> static <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> constexpr <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE static AMREX_INLINE constexpr IntVect amrex::IntVect::TheUnitVector</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>TheUnitVector</name>
         <briefdescription>
 <para>This static member function returns a reference to a constant <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> object, all of whose AMREX_SPACEDIM arguments are set to one (1). Figuratively, it is the unit vector in AMREX_SPACEDIM-dimensional space. It is provided as a convenient way to specify the unit vector. </para>        </briefdescription>
@@ -1086,10 +1086,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="465" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="465" bodyend="467"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a240a3ee005145e29344f3bfb20930257" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aa8f51564ef0e0a9c340350f0bd46ea29" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> static <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> constexpr <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE static AMREX_INLINE constexpr IntVect amrex::IntVect::TheDimensionVector</definition>
-        <argsstring>(int d)</argsstring>
+        <argsstring>(int d) noexcept</argsstring>
         <name>TheDimensionVector</name>
         <param>
           <type>int</type>
@@ -1103,10 +1103,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="474" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="474" bodyend="478"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a3d11a4337333fd88b12007f6ff31a347" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a22bbb4671a41570c840af20e78539961" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> static <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> constexpr <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE static AMREX_INLINE constexpr IntVect amrex::IntVect::TheNodeVector</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>TheNodeVector</name>
         <briefdescription>
 <para>This static member function returns a reference to a constant <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> object, all of whose AMREX_SPACEDIM arguments are set to <ref refid="classamrex_1_1IndexType_1a4bbe4fdc07aa019c3a4a6839cdafcccea410f04417a9413c9d3d862e84300eb05" kindref="member">IndexType::NODE</ref>. It is provided as a convenience to our users when defining Boxes. </para>        </briefdescription>
@@ -1116,10 +1116,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="485" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="485" bodyend="487"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a6233df3c5fbc8bc1865badb0693e6e12" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aad345711f51e972a5e2deef6270f5adc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> static <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> constexpr <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE static AMREX_INLINE constexpr IntVect amrex::IntVect::TheCellVector</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>TheCellVector</name>
         <briefdescription>
 <para>This static member function returns a reference to a constant <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> object, all of whose AMREX_SPACEDIM arguments are set to <ref refid="classamrex_1_1IndexType_1a4bbe4fdc07aa019c3a4a6839cdafcccea287ace89f7ffd266daab1798b3d48aa1" kindref="member">IndexType::CELL</ref>. It is provided as a convenience to our users when defining Boxes. </para>        </briefdescription>
@@ -1129,10 +1129,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="494" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="494" bodyend="496"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1a3b31b0ef2467531ba43f6be073f064d3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1aef5e45bf793c19542389df9496f15074" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> static <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> constexpr <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE static AMREX_INLINE constexpr IntVect amrex::IntVect::TheMaxVector</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>TheMaxVector</name>
         <briefdescription>
         </briefdescription>
@@ -1142,10 +1142,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="499" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="499" bodyend="505"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1IntVect_1afb310116ec660dbcee66f60ac63dde74" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1IntVect_1a7f2c63dec83e6356f8c48a591301a71a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> static <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> constexpr <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
         <definition>AMREX_GPU_HOST_DEVICE static AMREX_INLINE constexpr IntVect amrex::IntVect::TheMinVector</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>TheMinVector</name>
         <briefdescription>
         </briefdescription>
@@ -1172,74 +1172,74 @@
     </collaborationgraph>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="33" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="32" bodyend="521"/>
     <listofallmembers>
-      <member refid="classamrex_1_1IntVect_1a5f44e021015f5558cff8d7c0d5f301a4" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allGE</name></member>
-      <member refid="classamrex_1_1IntVect_1abbd4bacb3f9e782bb55e4e829e34c0b8" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allGT</name></member>
-      <member refid="classamrex_1_1IntVect_1a881ab2bba4dafdc4dc5e61d3be1bb59e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allLE</name></member>
-      <member refid="classamrex_1_1IntVect_1ab2afb2b7b9848db314ed95cb82d937e0" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allLT</name></member>
-      <member refid="classamrex_1_1IntVect_1a66d4cc30f33a60acae58e97df2bc4d13" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>coarsen</name></member>
-      <member refid="classamrex_1_1IntVect_1addf93c042610c36913a13da860196824" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>coarsen</name></member>
-      <member refid="classamrex_1_1IntVect_1ab0b1fce3db84a7030a1efb288bb8ea30" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>diagShift</name></member>
-      <member refid="classamrex_1_1IntVect_1ae7973d3ec09cb18354a5e5a17ed466be" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>dim3</name></member>
-      <member refid="classamrex_1_1IntVect_1a0d0b4eb86f6c854fec032cf2c10c5a8e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>getVect</name></member>
-      <member refid="classamrex_1_1IntVect_1ad0012c7876b494561deae6a07fe8661e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>getVect</name></member>
+      <member refid="classamrex_1_1IntVect_1a09c05f3c278a867594390252ef348e1f" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allGE</name></member>
+      <member refid="classamrex_1_1IntVect_1aae29530da7360af67a6d1b33b16abc23" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allGT</name></member>
+      <member refid="classamrex_1_1IntVect_1a7c950aec67e7af286250bf28efb831e8" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allLE</name></member>
+      <member refid="classamrex_1_1IntVect_1a5f5612775af4288baa95b12020f6d9ad" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>allLT</name></member>
+      <member refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>coarsen</name></member>
+      <member refid="classamrex_1_1IntVect_1a2eac6014652f412ea98bc81a7934ea9d" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>coarsen</name></member>
+      <member refid="classamrex_1_1IntVect_1a1d8cb7cc5f3c974bbba4bbfc0ebaae5a" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>diagShift</name></member>
+      <member refid="classamrex_1_1IntVect_1a268f9db4f5d0a78aeeebc3bb8f33081c" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>dim3</name></member>
+      <member refid="classamrex_1_1IntVect_1a1ca89f99ef866fc10c2eb9130ea9983d" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>getVect</name></member>
+      <member refid="classamrex_1_1IntVect_1acb3f2aeb1a815e4ee0a420d85d0889f8" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>getVect</name></member>
       <member refid="classamrex_1_1IntVect_1a77db629019eeac0383e74a8007df7512" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>getVect</name></member>
       <member refid="classamrex_1_1IntVect_1a0da0ad772b267330594cbcc72bb48c5c" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>hasher</name></member>
-      <member refid="classamrex_1_1IntVect_1a7f9d64098da66b79da46aef397ed8424" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
-      <member refid="classamrex_1_1IntVect_1af1913a982ac01cb0141959e0a2ca46e9" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
-      <member refid="classamrex_1_1IntVect_1ad52ca212f8e11f63003e740ebb20c965" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
-      <member refid="classamrex_1_1IntVect_1aac40ef5545e9dfeb23d4b610beda22b8" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
-      <member refid="classamrex_1_1IntVect_1a0449d35a9dab1424a5a1bb8269dd3dd4" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>linearIn</name></member>
-      <member refid="classamrex_1_1IntVect_1a9a9bbb2a7bc392f6694afeb866b6968a" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>linearOut</name></member>
-      <member refid="classamrex_1_1IntVect_1a8368b9488786a4ae262fc157536dd007" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>linearSize</name></member>
-      <member refid="classamrex_1_1IntVect_1acfcb1dd0d3a3471c5bf5c8a74f55db0b" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>max</name></member>
-      <member refid="classamrex_1_1IntVect_1a2e5ba4565a73be262ed1a3db68b76e38" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>max</name></member>
-      <member refid="classamrex_1_1IntVect_1adfada7f50dca399f16415b601b85d07e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>maxDir</name></member>
-      <member refid="classamrex_1_1IntVect_1adc4f4d1fc70c19b14562eea3e7645688" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>min</name></member>
-      <member refid="classamrex_1_1IntVect_1af968b565a87b1684bce7929bce05ae84" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>min</name></member>
-      <member refid="classamrex_1_1IntVect_1ad182e0209e97b4180e88e0330e8e9977" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator!=</name></member>
-      <member refid="classamrex_1_1IntVect_1a983d645987f28832c38432aaf085e74c" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator!=</name></member>
-      <member refid="classamrex_1_1IntVect_1a7e725313f81cff337e4274b104fd90c8" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*</name></member>
-      <member refid="classamrex_1_1IntVect_1ad0235e7341c987ca460358213b1e6895" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*</name></member>
-      <member refid="classamrex_1_1IntVect_1ae01500c3c23c7dd631701d74b65bd36d" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*=</name></member>
-      <member refid="classamrex_1_1IntVect_1afe2919afaa1a3b028680f3df4d5fd895" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*=</name></member>
-      <member refid="classamrex_1_1IntVect_1add8379e2fedd23133fc1569367a7099a" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+</name></member>
-      <member refid="classamrex_1_1IntVect_1a068a747aa5f383d363ef5b1f50149b5b" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+</name></member>
-      <member refid="classamrex_1_1IntVect_1a4ed93d600236edf73198d47ff8c397fd" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+</name></member>
-      <member refid="classamrex_1_1IntVect_1aba3d88618733f5f28065ef61a8324847" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+=</name></member>
-      <member refid="classamrex_1_1IntVect_1aca295d0d1557caf2c0a01b2717da188d" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+=</name></member>
-      <member refid="classamrex_1_1IntVect_1aba3bb138d7abaf5d153e37168ab614ce" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-</name></member>
-      <member refid="classamrex_1_1IntVect_1ad5c5b8c72770a861117f4c5a8b0acdd6" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-</name></member>
-      <member refid="classamrex_1_1IntVect_1a08243a38ff2b61230d923eb978ee3abe" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-</name></member>
-      <member refid="classamrex_1_1IntVect_1a98df4abbfc66b22a5012c6521bb52ac3" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-=</name></member>
-      <member refid="classamrex_1_1IntVect_1a810a3fd1bd5e25779891852034094374" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-=</name></member>
-      <member refid="classamrex_1_1IntVect_1ab6b012c625d37fc91a929a23b0479bdc" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/</name></member>
-      <member refid="classamrex_1_1IntVect_1aaeb62e57b23dbb059400440d8e8ef7ec" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/</name></member>
-      <member refid="classamrex_1_1IntVect_1ae617d00916dadafc641afdae63f3ef50" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/=</name></member>
-      <member refid="classamrex_1_1IntVect_1a11350d8f9906d3986a1c8dbba541c257" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/=</name></member>
-      <member refid="classamrex_1_1IntVect_1aa5dc73f3a5a27ece73d469560618b7af" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&lt;</name></member>
+      <member refid="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
+      <member refid="classamrex_1_1IntVect_1aa22c324e7128b3164d547b0723b4b2d4" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
+      <member refid="classamrex_1_1IntVect_1ae9684c0f49b86a16a696f99521290fe9" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
+      <member refid="classamrex_1_1IntVect_1a964cade2a31b2c82990dcb7726dd5d1d" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>IntVect</name></member>
+      <member refid="classamrex_1_1IntVect_1a7edd97722920f0e96ef81be04e7f1ca5" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>linearIn</name></member>
+      <member refid="classamrex_1_1IntVect_1ab475947988193854e6da058ff62d1ab4" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>linearOut</name></member>
+      <member refid="classamrex_1_1IntVect_1aee066010c6492129ab20b3d26df6d4f3" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>linearSize</name></member>
+      <member refid="classamrex_1_1IntVect_1ab3bf9b912e3ba519a4799d2bfd82fffc" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>max</name></member>
+      <member refid="classamrex_1_1IntVect_1a5d7910051074c52afddbc66623494336" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>max</name></member>
+      <member refid="classamrex_1_1IntVect_1a750ffa7edd4acc720c7cdddec6690f05" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>maxDir</name></member>
+      <member refid="classamrex_1_1IntVect_1a59b3f72c69e4e64d6b7841cc5bd5119d" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>min</name></member>
+      <member refid="classamrex_1_1IntVect_1a544ff1ec357938b686c30060cd2e2be1" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>min</name></member>
+      <member refid="classamrex_1_1IntVect_1a2c927dc5cad880ea3850650dea0a1fc0" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator!=</name></member>
+      <member refid="classamrex_1_1IntVect_1af63e5fa513b078d7361f869edac883c4" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator!=</name></member>
+      <member refid="classamrex_1_1IntVect_1a9f76438892915111dc98d1a84751d243" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*</name></member>
+      <member refid="classamrex_1_1IntVect_1a451cf44629f4752e6c89112d7fa1c49c" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*</name></member>
+      <member refid="classamrex_1_1IntVect_1ae904dceb67c9f6c623b256b5f7fd80aa" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*=</name></member>
+      <member refid="classamrex_1_1IntVect_1afc712cd132209b38e53c6c84fc8c6e43" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator*=</name></member>
+      <member refid="classamrex_1_1IntVect_1a55fe07a9f9ea98217903782fbed199f4" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+</name></member>
+      <member refid="classamrex_1_1IntVect_1a2772c021ce93ad182f45132d82d02162" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+</name></member>
+      <member refid="classamrex_1_1IntVect_1a2a4ce0a303b6d0cf018db7369781e99e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+</name></member>
+      <member refid="classamrex_1_1IntVect_1a6e634f42f549105e7e33149d505e0f82" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+=</name></member>
+      <member refid="classamrex_1_1IntVect_1a1cb00f85af42c07d6777adca0ba4d754" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator+=</name></member>
+      <member refid="classamrex_1_1IntVect_1a3587cfae802878a37dac1084dcd4426c" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-</name></member>
+      <member refid="classamrex_1_1IntVect_1ae19c54e5c4d73fa28f3592d34f3487cd" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-</name></member>
+      <member refid="classamrex_1_1IntVect_1adf8f19f9db7701e805de9aa7b78dcda3" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-</name></member>
+      <member refid="classamrex_1_1IntVect_1ae30038bc92b2c336276ceeafa01c3370" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-=</name></member>
+      <member refid="classamrex_1_1IntVect_1abf15f636b25cdcf3df65f150efe98be7" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator-=</name></member>
+      <member refid="classamrex_1_1IntVect_1a9b559dfe2404c666cd46f5d31a695707" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/</name></member>
+      <member refid="classamrex_1_1IntVect_1aecd10010856465b10fa968202fca3c72" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/</name></member>
+      <member refid="classamrex_1_1IntVect_1a2b30f3e69fa17b97a83e4b05a88ae8fa" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/=</name></member>
+      <member refid="classamrex_1_1IntVect_1aec9ef2804bc763e07c9afd16522b06e9" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator/=</name></member>
+      <member refid="classamrex_1_1IntVect_1a1b567351d6cef851cf5e8671b4ea1fd1" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&lt;</name></member>
       <member refid="classamrex_1_1IntVect_1a00108a6b83c8c90366f3aa103fc834cb" prot="private" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&lt;&lt;</name></member>
-      <member refid="classamrex_1_1IntVect_1a918364db42574cf62240d051caad639b" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&lt;=</name></member>
-      <member refid="classamrex_1_1IntVect_1ad023680503536d957e5c47e7a45d41de" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator==</name></member>
-      <member refid="classamrex_1_1IntVect_1a65968b2191e8e6b22cd0df32bb6de9cc" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator==</name></member>
-      <member refid="classamrex_1_1IntVect_1affd5332c086a70b647c5c836dff8e9d8" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&gt;</name></member>
-      <member refid="classamrex_1_1IntVect_1a4fd84fb039d7d07e68704ddbb7145bce" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&gt;=</name></member>
+      <member refid="classamrex_1_1IntVect_1a75001b2ed386536e84b530e7bf34c2b3" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&lt;=</name></member>
+      <member refid="classamrex_1_1IntVect_1a09ecb1037020a28be337135503f7185e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator==</name></member>
+      <member refid="classamrex_1_1IntVect_1a409bb3666aaac3e01a6cb0cf9ae44c12" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator==</name></member>
+      <member refid="classamrex_1_1IntVect_1ae51924a7d177d3c3f4d2cd6753c52361" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&gt;</name></member>
+      <member refid="classamrex_1_1IntVect_1a381838d9c4c1b6094d7e921fdcb61147" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&gt;=</name></member>
       <member refid="classamrex_1_1IntVect_1a1da4bfe27f128e362972e3ed4156e6f1" prot="private" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator&gt;&gt;</name></member>
-      <member refid="classamrex_1_1IntVect_1a05f8e5d330921abcc074d83e2946165e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator[]</name></member>
-      <member refid="classamrex_1_1IntVect_1ab63619645f3389c4b11d540364e3be5b" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1IntVect_1a4bca4c9e58bdc48003b232c3e4684845" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1IntVect_1af90cb33f3f87b373541ef1599c7f3ba4" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>operator[]</name></member>
       <member refid="classamrex_1_1IntVect_1adccd37eeac931837d637545e8eba842e" prot="private" virt="non-virtual"><scope>amrex::IntVect</scope><name>ParallelDescriptor::Mpi_typemap</name></member>
-      <member refid="classamrex_1_1IntVect_1ac08a3f5045451b3e7404f59dc91dd8ba" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>reflect</name></member>
-      <member refid="classamrex_1_1IntVect_1ac271426f29f412ae3b005308036ce2ea" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>scale</name></member>
-      <member refid="classamrex_1_1IntVect_1ae5109996a0127e1237cd83d188ba8c23" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>setVal</name></member>
-      <member refid="classamrex_1_1IntVect_1a733738d6a4d8d66f89b5588885baad06" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>shift</name></member>
-      <member refid="classamrex_1_1IntVect_1aacb65eb6db7bddba46dc8998c773870f" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>shift</name></member>
-      <member refid="classamrex_1_1IntVect_1affa7e2debcb2a9d09ef55d44ff1efa56" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>sum</name></member>
-      <member refid="classamrex_1_1IntVect_1a6233df3c5fbc8bc1865badb0693e6e12" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheCellVector</name></member>
-      <member refid="classamrex_1_1IntVect_1a240a3ee005145e29344f3bfb20930257" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheDimensionVector</name></member>
-      <member refid="classamrex_1_1IntVect_1a3b31b0ef2467531ba43f6be073f064d3" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheMaxVector</name></member>
-      <member refid="classamrex_1_1IntVect_1afb310116ec660dbcee66f60ac63dde74" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheMinVector</name></member>
-      <member refid="classamrex_1_1IntVect_1a3d11a4337333fd88b12007f6ff31a347" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheNodeVector</name></member>
-      <member refid="classamrex_1_1IntVect_1ac84309ce388ca3b13e72da61016a8b6f" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheUnitVector</name></member>
-      <member refid="classamrex_1_1IntVect_1acfa290124ab75f4a94ce37ef98870174" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheZeroVector</name></member>
+      <member refid="classamrex_1_1IntVect_1a3a49a4cb03e07231b98aff4cf2b546d3" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>reflect</name></member>
+      <member refid="classamrex_1_1IntVect_1a87c2e928fd7dcb95b620a81bc6b099ec" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>scale</name></member>
+      <member refid="classamrex_1_1IntVect_1a057c234a61ff795c4f2b2637eaa1395e" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>setVal</name></member>
+      <member refid="classamrex_1_1IntVect_1aa9803c8b7b2926299c58e658088be7db" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>shift</name></member>
+      <member refid="classamrex_1_1IntVect_1a6c37e12d98b97002bf89c503b0c064e1" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>shift</name></member>
+      <member refid="classamrex_1_1IntVect_1a8b1db956b695663c7a75a0d11106e4fe" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>sum</name></member>
+      <member refid="classamrex_1_1IntVect_1aad345711f51e972a5e2deef6270f5adc" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheCellVector</name></member>
+      <member refid="classamrex_1_1IntVect_1aa8f51564ef0e0a9c340350f0bd46ea29" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheDimensionVector</name></member>
+      <member refid="classamrex_1_1IntVect_1aef5e45bf793c19542389df9496f15074" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheMaxVector</name></member>
+      <member refid="classamrex_1_1IntVect_1a7f2c63dec83e6356f8c48a591301a71a" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheMinVector</name></member>
+      <member refid="classamrex_1_1IntVect_1a22bbb4671a41570c840af20e78539961" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheNodeVector</name></member>
+      <member refid="classamrex_1_1IntVect_1a9be1f208f435dd8f579c07af1d1b1253" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheUnitVector</name></member>
+      <member refid="classamrex_1_1IntVect_1ac6662b7a8729bb7d3790a81559b79cbb" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>TheZeroVector</name></member>
       <member refid="classamrex_1_1IntVect_1a93df7e94c6d2d07ea3eb7647500bf751" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>Unit</name></member>
       <member refid="classamrex_1_1IntVect_1aa90d26b430997cad2cfb8c21f6fb2e22" prot="private" virt="non-virtual"><scope>amrex::IntVect</scope><name>vect</name></member>
       <member refid="classamrex_1_1IntVect_1a5b50f516a319513a10154ef402c2717b" prot="public" virt="non-virtual"><scope>amrex::IntVect</scope><name>Zero</name></member>

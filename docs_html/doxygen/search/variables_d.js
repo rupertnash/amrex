@@ -37,7 +37,7 @@ var searchData=
   ['nextfillboxid',['nextFillBoxId',['../classamrex_1_1FabArrayCopyDescriptor.html#a57a30ba94f1d8f7e58eb686a5596e813',1,'amrex::FabArrayCopyDescriptor']]],
   ['nflags',['Nflags',['../classSDCstruct.html#af02a1ad3ee48fe2cd63b590a221ad1dd',1,'SDCstruct']]],
   ['ng',['ng',['../classamrex_1_1EB2_1_1GFab.html#aeda8ad7ebda39d029e5e7253b9ee1b6d',1,'amrex::EB2::GFab']]],
-  ['ngrow',['ngrow',['../classamrex_1_1StateDescriptor.html#ae0e3631c9cd4872714c6d926073d1a51',1,'amrex::StateDescriptor::ngrow()'],['../classamrex_1_1ErrorRec.html#a07e4582c7d12d9c0af8972fcbf214b89',1,'amrex::ErrorRec::ngrow()'],['../structamrex_1_1ForkJoin_1_1MFFork.html#ab30d7bacb605f55a7714f002a92f2cf6',1,'amrex::ForkJoin::MFFork::ngrow()'],['../classamrex_1_1AmrData.html#aaa772f863501b3d0a0c4a883b91b9083',1,'amrex::AmrData::nGrow()']]],
+  ['ngrow',['nGrow',['../classamrex_1_1AmrData.html#aaa772f863501b3d0a0c4a883b91b9083',1,'amrex::AmrData::nGrow()'],['../classamrex_1_1StateDescriptor.html#ae0e3631c9cd4872714c6d926073d1a51',1,'amrex::StateDescriptor::ngrow()'],['../classamrex_1_1ErrorRec.html#a07e4582c7d12d9c0af8972fcbf214b89',1,'amrex::ErrorRec::ngrow()'],['../structamrex_1_1ForkJoin_1_1MFFork.html#ab30d7bacb605f55a7714f002a92f2cf6',1,'amrex::ForkJoin::MFFork::ngrow()']]],
   ['nine',['nine',['../namespaceamrex__constants__module.html#aae50c9977dbcf4102a6360ab0f576b07',1,'amrex_constants_module']]],
   ['nineth',['nineth',['../namespaceamrex__constants__module.html#a92c54ddd1e792991bf2ffb06ab3397e2',1,'amrex_constants_module']]],
   ['nmax',['nmax',['../structamrex_1_1TinyProfiler_1_1ProcStats.html#a343114484ebc09ed13e3dfe2b16b9fae',1,'amrex::TinyProfiler::ProcStats']]],

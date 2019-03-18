@@ -221,7 +221,7 @@
         <param>
           <type>int</type>
           <declname>nprocs</declname>
-          <defval><ref refid="namespaceamrex_1_1ParallelDescriptor_1a0455b3ad4f2a4c13b57d33e4c6325dca" kindref="member">ParallelDescriptor::NProcs</ref>()</defval>
+          <defval><ref refid="namespaceamrex_1_1ParallelDescriptor_1aa191723b5d24ceaf64e9d49f542cfcc2" kindref="member">ParallelDescriptor::NProcs</ref>()</defval>
         </param>
         <briefdescription>
 <para>Build mapping out of <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> over nprocs processors. </para>        </briefdescription>
@@ -328,7 +328,7 @@
         <param>
           <type>int</type>
           <declname>nprocs</declname>
-          <defval><ref refid="namespaceamrex_1_1ParallelDescriptor_1a0455b3ad4f2a4c13b57d33e4c6325dca" kindref="member">ParallelDescriptor::NProcs</ref>()</defval>
+          <defval><ref refid="namespaceamrex_1_1ParallelDescriptor_1aa191723b5d24ceaf64e9d49f542cfcc2" kindref="member">ParallelDescriptor::NProcs</ref>()</defval>
         </param>
         <briefdescription>
 <para>Build mapping out of <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> over nprocs processors. You need to call this if you built your <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> with the default constructor. </para>        </briefdescription>
@@ -372,23 +372,23 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="89" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.cpp" bodystart="377" bodyend="381"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a6e5aeb1c096aabbcbdf1231cf74ec562" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1ac1cd8ab03f5ec883f167f4e1148d29ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
         <definition>const Vector&lt; int &gt; &amp; amrex::DistributionMapping::ProcessorMap</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>ProcessorMap</name>
         <briefdescription>
-<para>Returns a constant reference to the mapping of boxes in the underlying <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> to the CPU that holds the FAB on that <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>. <ref refid="classamrex_1_1DistributionMapping_1a6e5aeb1c096aabbcbdf1231cf74ec562" kindref="member">ProcessorMap()</ref>[i] is an integer in the interval [0, NCPU) where NCPU is the number of CPUs being used. </para>        </briefdescription>
+<para>Returns a constant reference to the mapping of boxes in the underlying <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> to the CPU that holds the FAB on that <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>. <ref refid="classamrex_1_1DistributionMapping_1ac1cd8ab03f5ec883f167f4e1148d29ee" kindref="member">ProcessorMap()</ref>[i] is an integer in the interval [0, NCPU) where NCPU is the number of CPUs being used. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="96" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a0a18c6e06c8b449b9c94fddc3af2e4fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a53e93a19abe4065d1078a9a4c6d8a490" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>long</type>
         <definition>long amrex::DistributionMapping::size</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>size</name>
         <briefdescription>
 <para>Length of the underlying processor map. </para>        </briefdescription>
@@ -398,10 +398,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="99" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" bodystart="99" bodyend="99"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a585c6569199e3fd65118f665c1980990" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a4347fca4f0c195db6e0bd668d1bc4ef1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>long</type>
         <definition>long amrex::DistributionMapping::capacity</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>capacity</name>
         <briefdescription>
         </briefdescription>
@@ -411,10 +411,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="100" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" bodystart="100" bodyend="100"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1ab72ed367c83842c3871988a1b4f72165" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a3e7cd82f169573dfa29f3d453a9a40b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::DistributionMapping::empty</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>empty</name>
         <briefdescription>
         </briefdescription>
@@ -424,10 +424,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="101" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" bodystart="101" bodyend="101"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a29c6230cb968fd1d0373707830cc92ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1abf8c0efdc1a505b5ef16203d2068f084" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>long</type>
         <definition>long amrex::DistributionMapping::linkCount</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>linkCount</name>
         <briefdescription>
 <para>Number of references to this <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref>. </para>        </briefdescription>
@@ -437,27 +437,27 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="104" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" bodystart="104" bodyend="104"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1afaf1ed03cf8866c2a65fd95e4ccf1474" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a051c0211689621d68f3565becf7adddd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int amrex::DistributionMapping::operator[]</definition>
-        <argsstring>(int index) const </argsstring>
+        <argsstring>(int index) const noexcept</argsstring>
         <name>operator[]</name>
         <param>
           <type>int</type>
           <declname>index</declname>
         </param>
         <briefdescription>
-<para>Equivalent to <ref refid="classamrex_1_1DistributionMapping_1a6e5aeb1c096aabbcbdf1231cf74ec562" kindref="member">ProcessorMap()</ref>[index]. </para>        </briefdescription>
+<para>Equivalent to <ref refid="classamrex_1_1DistributionMapping_1ac1cd8ab03f5ec883f167f4e1148d29ee" kindref="member">ProcessorMap()</ref>[index]. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="107" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" bodystart="107" bodyend="107"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1ad244ddc5df114bdf5182826df44bd652" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a924f7db8b7071a964375eeb077ed72dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::DistributionMapping::operator==</definition>
-        <argsstring>(const DistributionMapping &amp;rhs) const </argsstring>
+        <argsstring>(const DistributionMapping &amp;rhs) const noexcept</argsstring>
         <name>operator==</name>
         <param>
           <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
@@ -471,10 +471,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="120" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.cpp" bodystart="96" bodyend="99"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a1993927e22cfbb09e09004f96b63a3d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1a47d8be48dc04b300c928211027aa842f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::DistributionMapping::operator!=</definition>
-        <argsstring>(const DistributionMapping &amp;rhs) const </argsstring>
+        <argsstring>(const DistributionMapping &amp;rhs) const noexcept</argsstring>
         <name>operator!=</name>
         <param>
           <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
@@ -544,7 +544,7 @@
         <param>
           <type>int</type>
           <declname>nmax</declname>
-          <defval>std::numeric_limits&lt; int &gt;::<ref refid="namespaceamrex_1a5dfec0f824f9542a90dd78d1352c6c53" kindref="member">max</ref>()</defval>
+          <defval>std::numeric_limits&lt; int &gt;::<ref refid="namespaceamrex_1a52f2f2a0f432f41bcc6baa90b8af234a" kindref="member">max</ref>()</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -596,10 +596,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="132" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.cpp" bodystart="496" bodyend="528"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1af302a4fd3bda64053ffefb4efa792a6f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1DistributionMapping_1ac2246f88f7497945a0441732235d77b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structamrex_1_1DistributionMapping_1_1RefID" kindref="compound">RefID</ref></type>
         <definition>RefID amrex::DistributionMapping::getRefID</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>getRefID</name>
         <briefdescription>
 <para>This gives a unique ID of the reference, which is different from dmID above. </para>        </briefdescription>
@@ -730,7 +730,7 @@
         <param>
           <type>int</type>
           <declname>nmax</declname>
-          <defval>std::numeric_limits&lt; int &gt;::<ref refid="namespaceamrex_1a5dfec0f824f9542a90dd78d1352c6c53" kindref="member">max</ref>()</defval>
+          <defval>std::numeric_limits&lt; int &gt;::<ref refid="namespaceamrex_1a52f2f2a0f432f41bcc6baa90b8af234a" kindref="member">max</ref>()</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -980,7 +980,7 @@
         <param>
           <type>int</type>
           <declname>nmax</declname>
-          <defval>std::numeric_limits&lt; int &gt;::<ref refid="namespaceamrex_1a5dfec0f824f9542a90dd78d1352c6c53" kindref="member">max</ref>()</defval>
+          <defval>std::numeric_limits&lt; int &gt;::<ref refid="namespaceamrex_1a52f2f2a0f432f41bcc6baa90b8af234a" kindref="member">max</ref>()</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -1121,7 +1121,7 @@
 <para>This class calculates the distribution of FABs to MPI processes in a <ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref> in a multi-processor environment. By distribution is meant what MPI process in the multi-processor environment owns what FAB. Only the <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> on which the <ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref> is built is used in determining the distribution. The three types of distributions supported are round-robin, knapsack, and SFC. In the round-robin distribution FAB i is owned by CPU iN where N is total number of CPUs. In the knapsack distribution the FABs are partitioned across CPUs such that the total volume of the Boxes in the underlying <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> are as equal across CPUs as is possible. The SFC distribution is based on a space filling curve. </para>    </detaileddescription>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" line="39" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DistributionMapping.H" bodystart="38" bodyend="276"/>
     <listofallmembers>
-      <member refid="classamrex_1_1DistributionMapping_1a585c6569199e3fd65118f665c1980990" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>capacity</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1a4347fca4f0c195db6e0bd668d1bc4ef1" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>capacity</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a13b8da5248f3f1d03708e1b313345847" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>define</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a96e7ada9652464ab1d4b27d7af839c62" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>define</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a368e1c7d60259f1f979299bf15f7c22f" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>define</name></member>
@@ -1132,13 +1132,13 @@
       <member refid="classamrex_1_1DistributionMapping_1a940ddab8afa610cdbfddc60ce7f5d6c2" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>DistributionMapping</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a2a514250da8359a912c569ec864430da" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>DistributionMapping</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a69bb6c615b89909808e51b13bafba194" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>DistributionMapping</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1ab72ed367c83842c3871988a1b4f72165" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>empty</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1a3e7cd82f169573dfa29f3d453a9a40b9" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>empty</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a387a5ebdcf8845ac218d335706651b06" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>FabArray</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a4636f955857e2be478f7e1a6a43305ee" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>FabArrayBase</name></member>
       <member refid="classamrex_1_1DistributionMapping_1ac8ce7dd033d1e5a163617b7b06d1fab0" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>Finalize</name></member>
       <member refid="classamrex_1_1DistributionMapping_1aa680d94d22fd2dc0e9e6ab1c224113ff" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>getIndexArray</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a8eb230cc640400a27702a048a611b0af" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>getOwnerShip</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1af302a4fd3bda64053ffefb4efa792a6f" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>getRefID</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1ac2246f88f7497945a0441732235d77b0" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>getRefID</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a03ecb8f0d75887ecef410b64566586bc" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>Initialize</name></member>
       <member refid="classamrex_1_1DistributionMapping_1ad8e078b643635f0027eb797c2d54d3b8a6f5ec418bb5db591c4b5780f00cce82e" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>KNAPSACK</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a43db53d49a2e06ff06fa40a7e3d292a6" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>KnapSackDoIt</name></member>
@@ -1146,7 +1146,7 @@
       <member refid="classamrex_1_1DistributionMapping_1adee3630696a974eb1b9c22046f0dc653" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>KnapSackProcessorMap</name></member>
       <member refid="classamrex_1_1DistributionMapping_1acbe214292ef7da8223f4318919642ace" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>LeastUsedCPUs</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a55134783f651fecac1282ea2029428f3" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>LeastUsedTeams</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1a29c6230cb968fd1d0373707830cc92ee" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>linkCount</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1abf8c0efdc1a505b5ef16203d2068f084" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>linkCount</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a95551e22961bb882343412918b07396f" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>LIpair</name></member>
       <member refid="classamrex_1_1DistributionMapping_1aea78b384d1325786fc3738a66cb16a32" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>m_BuildMap</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a66d4a4d11b9ff6a159c90448e55b6885" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>m_ref</name></member>
@@ -1156,11 +1156,11 @@
       <member refid="classamrex_1_1DistributionMapping_1a70511fca0600a56369ce74f28cbc9d99" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>makeRoundRobin</name></member>
       <member refid="classamrex_1_1DistributionMapping_1aa07e2c79e1100575a40bdb8c2b3efe03" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>makeSFC</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a4bb54d936d3034fd9524e2065a1ab6cd" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>makeSFC</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1a1993927e22cfbb09e09004f96b63a3d9" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>operator!=</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1a47d8be48dc04b300c928211027aa842f" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>operator!=</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a4a5b297222a87e9a130fddc6cd1dbee6" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>operator=</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1ad244ddc5df114bdf5182826df44bd652" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>operator==</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1afaf1ed03cf8866c2a65fd95e4ccf1474" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>operator[]</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1a6e5aeb1c096aabbcbdf1231cf74ec562" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>ProcessorMap</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1a924f7db8b7071a964375eeb077ed72dc" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>operator==</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1a051c0211689621d68f3565becf7adddd" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1ac1cd8ab03f5ec883f167f4e1148d29ee" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>ProcessorMap</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a55afc17fcc72abd4f0f9bf4bd305ce4b" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>PVMF</name></member>
       <member refid="classamrex_1_1DistributionMapping_1ad8e078b643635f0027eb797c2d54d3b8a787ff5451e57a2271607a0143b75a38d" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>ROUNDROBIN</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a313e8110b092f0786f5224a927030fa5" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>RoundRobinDoIt</name></member>
@@ -1177,7 +1177,7 @@
       <member refid="classamrex_1_1DistributionMapping_1ad33d13c8fafe56d041a08c5fbc2b4f60" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>SFCProcessorMap</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a1960a437a27e870cd41e9e837c196a57" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>SFCProcessorMap</name></member>
       <member refid="classamrex_1_1DistributionMapping_1adf4cb2e119cdc165905af4fd8c5c7b71" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>SFCProcessorMapDoIt</name></member>
-      <member refid="classamrex_1_1DistributionMapping_1a0a18c6e06c8b449b9c94fddc3af2e4fa" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>size</name></member>
+      <member refid="classamrex_1_1DistributionMapping_1a53e93a19abe4065d1078a9a4c6d8a490" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>size</name></member>
       <member refid="classamrex_1_1DistributionMapping_1a65d02277c7532c3befd7d24aeda66a0d" prot="private" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>Sort</name></member>
       <member refid="classamrex_1_1DistributionMapping_1add9f7493d35af3e2ad724ce9e55322ba" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>strategy</name></member>
       <member refid="classamrex_1_1DistributionMapping_1ac41e6c0536cc22b8c0d71c0450e58df2" prot="public" virt="non-virtual"><scope>amrex::DistributionMapping</scope><name>strategy</name></member>

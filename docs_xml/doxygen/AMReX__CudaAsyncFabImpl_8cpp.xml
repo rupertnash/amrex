@@ -881,13 +881,13 @@
 <codeline lineno="36"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a1d6f0f69d10492cd715cbe21b8f5cab2" kindref="member">AsyncFabImpl::~AsyncFabImpl</ref><sp/>()<sp/>{}</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal">FArrayBox*</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a6843b3c675e5d05b65215fbfae6458a3" kindref="member">AsyncFabImpl::fabPtr</ref><sp/>()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a2586206b1f0bc00c810c80a93391a392" kindref="member">AsyncFabImpl::fabPtr</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(m_gpu_fab<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_gpu_fab.get();</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">FArrayBox&amp;<sp/><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1ad7a1b684f12082cc64095114f15e0cab" kindref="member">AsyncFabImpl::hostFab</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*m_gpu_fab;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">FArrayBox&amp;<sp/><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a5003a0c9e0cd519f8756915e7988cacf" kindref="member">AsyncFabImpl::hostFab</ref><sp/>()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*m_gpu_fab;<sp/>}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
@@ -999,14 +999,14 @@
 <codeline lineno="154"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight></codeline>
 <codeline lineno="156"><highlight class="normal">FArrayBox*</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a6843b3c675e5d05b65215fbfae6458a3" kindref="member">AsyncFabImpl::fabPtr</ref><sp/>()</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a2586206b1f0bc00c810c80a93391a392" kindref="member">AsyncFabImpl::fabPtr</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="158"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(m_gpu_fab<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_gpu_fab.get();</highlight></codeline>
 <codeline lineno="161"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
 <codeline lineno="163"><highlight class="normal">FArrayBox&amp;</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1ad7a1b684f12082cc64095114f15e0cab" kindref="member">AsyncFabImpl::hostFab</ref><sp/>()</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a5003a0c9e0cd519f8756915e7988cacf" kindref="member">AsyncFabImpl::hostFab</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="165"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_cpu_fab;</highlight></codeline>
 <codeline lineno="167"><highlight class="normal">}</highlight></codeline>
@@ -1018,7 +1018,7 @@
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceamrex_1_1Cuda_1a4eb712380d2714aa1c219d3a8e4c410c" kindref="member">inLaunchRegion</ref>())</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_cpu_fab_data<sp/>=<sp/>m_cpu_fab;</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_cpu_fab_data.<ref refid="structamrex_1_1BaseFabData_1a62e0869c74a07fe1ccf3c015c2d4ea90" kindref="member">setOwner</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_cpu_fab_data.<ref refid="structamrex_1_1BaseFabData_1aa826bfc656d07f0b2ab7c6a74a62b07a" kindref="member">setOwner</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuError_8H_1af0d8b69cc9585ca09e00607a8ead0f31" kindref="member">AMREX_GPU_SAFE_CALL</ref>(cudaMemcpyAsync(dest,<sp/>&amp;m_cpu_fab_data,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(BaseFabData&lt;Real&gt;),</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaMemcpyHostToDevice,<sp/>Device::cudaStream()));</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1057,9 +1057,9 @@
 <codeline lineno="212"><highlight class="normal"></highlight></codeline>
 <codeline lineno="213"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a1d6f0f69d10492cd715cbe21b8f5cab2" kindref="member">AsyncFabImpl::~AsyncFabImpl</ref><sp/>()<sp/>{}</highlight></codeline>
 <codeline lineno="214"><highlight class="normal"></highlight></codeline>
-<codeline lineno="215"><highlight class="normal">FArrayBox*<sp/><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a6843b3c675e5d05b65215fbfae6458a3" kindref="member">AsyncFabImpl::fabPtr</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_cpu_fab_alias;<sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">FArrayBox*<sp/><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a2586206b1f0bc00c810c80a93391a392" kindref="member">AsyncFabImpl::fabPtr</ref><sp/>()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_cpu_fab_alias;<sp/>}</highlight></codeline>
 <codeline lineno="216"><highlight class="normal"></highlight></codeline>
-<codeline lineno="217"><highlight class="normal">FArrayBox&amp;<sp/><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1ad7a1b684f12082cc64095114f15e0cab" kindref="member">AsyncFabImpl::hostFab</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*m_cpu_fab_alias;<sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">FArrayBox&amp;<sp/><ref refid="classamrex_1_1Cuda_1_1AsyncFabImpl_1a5003a0c9e0cd519f8756915e7988cacf" kindref="member">AsyncFabImpl::hostFab</ref><sp/>()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*m_cpu_fab_alias;<sp/>}</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"></highlight></codeline>
 <codeline lineno="219"><highlight class="normal">}}</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>

@@ -560,11 +560,11 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Cuda<sp/>{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1StreamIter_1ab05da9373633fa23b02a9a7bf458bac7" kindref="member">StreamIter::StreamIter</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_thread_safe)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1StreamIter_1acf396b9d080702d79eaecd9631a369e9" kindref="member">StreamIter::StreamIter</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_thread_safe)<sp/>noexcept</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>m_n(n),<sp/>m_i(0),<sp/>m_threadsafe(is_thread_safe)</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AMREX_USE_CUDA)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cuda_1_1Device_1a50d2b76ea6a1cf99afe785ac54c4eaa4" kindref="member">Cuda::Device::setStreamIndex</ref>(m_i);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cuda_1_1Device_1a52c23d02896e93579ae6da7df753ad55" kindref="member">Cuda::Device::setStreamIndex</ref>(m_i);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_OPENMP)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nthreads<sp/>=<sp/><ref refid="namespaceamrex__omp__module_1a1f567807c5ae4117153ee1e35cb0a418" kindref="member">omp_get_num_threads</ref>();</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nthreads<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
@@ -586,17 +586,17 @@
 <codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cuda_1_1Device_1ae01d7dcd4f13ed7a33ab92738a70e7d2" kindref="member">Cuda::Device::synchronize</ref>();</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuError_8H_1aff2d29ad26ba217734430c3d36f42dd1" kindref="member">AMREX_GPU_ERROR_CHECK</ref>();</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cuda_1_1Device_1af3b4bf2930bf2f797be2d7ffdd52073c" kindref="member">Cuda::Device::resetStreamIndex</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cuda_1_1Device_1a3027d09dd4cd1d8c2412acd80c5cba20" kindref="member">Cuda::Device::resetStreamIndex</ref>();</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1StreamIter_1aff83b5631536f2a57a017721f109f28e" kindref="member">StreamIter::operator++ </ref>()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="classamrex_1_1Cuda_1_1StreamIter_1a8e2546c248a4317b37726ca92a6284e5" kindref="member">StreamIter::operator++ </ref>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="56"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>++<ref refid="classamrex_1_1Cuda_1_1StreamIter_1a86731a19fd6da6a0e744b1286de0d094" kindref="member">m_i</ref>;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1Cuda_1_1StreamIter_1adecceb08f0c77acf2bca33e16da2df1f" kindref="member">m_threadsafe</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cuda_1_1Device_1a50d2b76ea6a1cf99afe785ac54c4eaa4" kindref="member">Cuda::Device::setStreamIndex</ref>(<ref refid="classamrex_1_1Cuda_1_1StreamIter_1a86731a19fd6da6a0e744b1286de0d094" kindref="member">m_i</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cuda_1_1Device_1a52c23d02896e93579ae6da7df753ad55" kindref="member">Cuda::Device::setStreamIndex</ref>(<ref refid="classamrex_1_1Cuda_1_1StreamIter_1a86731a19fd6da6a0e744b1286de0d094" kindref="member">m_i</ref>);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuError_8H_1aff2d29ad26ba217734430c3d36f42dd1" kindref="member">AMREX_GPU_ERROR_CHECK</ref>();</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="62"><highlight class="normal">}</highlight></codeline>

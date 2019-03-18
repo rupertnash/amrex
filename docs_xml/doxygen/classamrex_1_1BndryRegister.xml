@@ -34,10 +34,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classamrex_1_1BndryRegister_1a2e0643f95fc9ab16d35be25248dd600c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1BndryRegister_1aa4688ce12aed07218f4eb52082c290c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>amrex::BndryRegister::BndryRegister</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>BndryRegister</name>
         <briefdescription>
 <para>The default constructor. </para>        </briefdescription>
@@ -256,10 +256,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" line="109" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.cpp" bodystart="51" bodyend="57"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1BndryRegister_1a481cc8f63d2903492d64ddd2d1733b41" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1BndryRegister_1a013d3c766ec5b97ea88fa71f9cc810cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref> &amp;</type>
         <definition>const BoxArray&amp; amrex::BndryRegister::boxes</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>boxes</name>
         <briefdescription>
 <para>Get box domain (as an array of boxes). </para>        </briefdescription>
@@ -269,10 +269,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" line="112" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" bodystart="112" bodyend="112"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1BndryRegister_1a1d90d4d170241cd5fba0ff90640bb163" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1BndryRegister_1a32eadb3490dbaa29c79ebea0c0c8b8bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int amrex::BndryRegister::size</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>size</name>
         <briefdescription>
 <para>Return the number of grids in this domain. </para>        </briefdescription>
@@ -282,10 +282,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" line="115" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" bodystart="115" bodyend="115"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1BndryRegister_1ac5058be14bb5689f986b25ba4af72737" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1BndryRegister_1ab8aa5237e5f88e11d7f0222c0732f0c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1FabSet" kindref="compound">FabSet</ref> &amp;</type>
         <definition>const FabSet&amp; amrex::BndryRegister::operator[]</definition>
-        <argsstring>(Orientation face) const </argsstring>
+        <argsstring>(Orientation face) const noexcept</argsstring>
         <name>operator[]</name>
         <param>
           <type><ref refid="classamrex_1_1Orientation" kindref="compound">Orientation</ref></type>
@@ -299,10 +299,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" line="118" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" bodystart="118" bodyend="118"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1BndryRegister_1ae9337910a82481f578536829e258c7a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1BndryRegister_1a8ca292141cd5f3342448df53bd8771ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1FabSet" kindref="compound">FabSet</ref> &amp;</type>
         <definition>FabSet&amp; amrex::BndryRegister::operator[]</definition>
-        <argsstring>(Orientation face)</argsstring>
+        <argsstring>(Orientation face) noexcept</argsstring>
         <name>operator[]</name>
         <param>
           <type><ref refid="classamrex_1_1Orientation" kindref="compound">Orientation</ref></type>
@@ -395,7 +395,7 @@
         <param>
           <type>const <ref refid="classamrex_1_1Periodicity" kindref="compound">Periodicity</ref> &amp;</type>
           <declname>period</declname>
-          <defval><ref refid="classamrex_1_1Periodicity_1a38c75cba56d022201b4e1970534d5823" kindref="member">Periodicity::NonPeriodic</ref>()</defval>
+          <defval><ref refid="classamrex_1_1Periodicity_1a194e779bf59d1700830a35cecb5271a5" kindref="member">Periodicity::NonPeriodic</ref>()</defval>
         </param>
         <briefdescription>
 <para>Fill the boundary FABs on intersection with given <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref>. </para>        </briefdescription>
@@ -433,7 +433,7 @@
         <param>
           <type>const <ref refid="classamrex_1_1Periodicity" kindref="compound">Periodicity</ref> &amp;</type>
           <declname>period</declname>
-          <defval><ref refid="classamrex_1_1Periodicity_1a38c75cba56d022201b4e1970534d5823" kindref="member">Periodicity::NonPeriodic</ref>()</defval>
+          <defval><ref refid="classamrex_1_1Periodicity_1a194e779bf59d1700830a35cecb5271a5" kindref="member">Periodicity::NonPeriodic</ref>()</defval>
         </param>
         <briefdescription>
 <para>Increment the boundary FABs on intersect with given <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref>. </para>        </briefdescription>
@@ -510,10 +510,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" line="158" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.cpp" bodystart="207" bodyend="219"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1BndryRegister_1ad71f22436e694026955933b99acb0967" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1BndryRegister_1a543c6c7f9abadfda4cb25368007d14f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref> &amp;</type>
         <definition>const DistributionMapping&amp; amrex::BndryRegister::DistributionMap</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>DistributionMap</name>
         <briefdescription>
 <para>Returns constant reference to associated <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref>. </para>        </briefdescription>
@@ -858,31 +858,31 @@
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" line="67" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_BndryRegister.H" bodystart="66" bodyend="180"/>
     <listofallmembers>
       <member refid="classamrex_1_1BndryRegister_1adb20e61942a04f1783a0e82598583bc9" prot="protected" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>bndry</name></member>
-      <member refid="classamrex_1_1BndryRegister_1a2e0643f95fc9ab16d35be25248dd600c" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>BndryRegister</name></member>
+      <member refid="classamrex_1_1BndryRegister_1aa4688ce12aed07218f4eb52082c290c2" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>BndryRegister</name></member>
       <member refid="classamrex_1_1BndryRegister_1aecf2bfb5d33fc73dc7fff1da73df6cb3" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>BndryRegister</name></member>
       <member refid="classamrex_1_1BndryRegister_1ada2a8c68444266b0a43501e0bbbfb187" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>BndryRegister</name></member>
       <member refid="classamrex_1_1BndryRegister_1ae816eecbaf5ba41568607d00441d3420" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>BndryRegister</name></member>
-      <member refid="classamrex_1_1BndryRegister_1a481cc8f63d2903492d64ddd2d1733b41" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>boxes</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a013d3c766ec5b97ea88fa71f9cc810cb" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>boxes</name></member>
       <member refid="classamrex_1_1BndryRegister_1acb41d395fa564b8c3c9d46327920d239" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>clear</name></member>
       <member refid="classamrex_1_1BndryRegister_1a361e5f4f34fe99325481f704c661c2ed" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>Copy</name></member>
       <member refid="classamrex_1_1BndryRegister_1af9a7b006622b33878423e6be4fd7fcc3" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>copyFrom</name></member>
       <member refid="classamrex_1_1BndryRegister_1a7ac16569b9b981389bb8a08a6d99e89e" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>define</name></member>
       <member refid="classamrex_1_1BndryRegister_1a50339ee95902a57f40f9251322cbd143" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>define</name></member>
-      <member refid="classamrex_1_1BndryRegister_1ad71f22436e694026955933b99acb0967" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>DistributionMap</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a543c6c7f9abadfda4cb25368007d14f8" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>DistributionMap</name></member>
       <member refid="classamrex_1_1BndryRegister_1ae15db9f8fcfd9583ae5907d4cf69eeb9" prot="protected" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>grids</name></member>
       <member refid="classamrex_1_1BndryRegister_1a02832dac3fe498a4a60c84024d2fa2ad" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>init</name></member>
       <member refid="classamrex_1_1BndryRegister_1a081060fb3475eb5b2a2b5a620ca98bcb" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>linComb</name></member>
       <member refid="classamrex_1_1BndryRegister_1ad0674b001bc3b0a4b75d1029e94312c2" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>operator+=</name></member>
       <member refid="classamrex_1_1BndryRegister_1aca9e7d7c7f5c551ed60dde97cab4cc76" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>operator=</name></member>
       <member refid="classamrex_1_1BndryRegister_1a09b5da018d193a820c808b1f2cab5095" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>operator=</name></member>
-      <member refid="classamrex_1_1BndryRegister_1ac5058be14bb5689f986b25ba4af72737" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>operator[]</name></member>
-      <member refid="classamrex_1_1BndryRegister_1ae9337910a82481f578536829e258c7a2" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1BndryRegister_1ab8aa5237e5f88e11d7f0222c0732f0c8" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>operator[]</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a8ca292141cd5f3342448df53bd8771ca" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>operator[]</name></member>
       <member refid="classamrex_1_1BndryRegister_1a1fbfbedbc701bb9f20fa7487bff20bdf" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>plus</name></member>
       <member refid="classamrex_1_1BndryRegister_1ab19d96f57df527f106a7f53c2590b65a" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>plusFrom</name></member>
       <member refid="classamrex_1_1BndryRegister_1a4cb1af64eb4645b6e6398c1839ecabe7" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>read</name></member>
       <member refid="classamrex_1_1BndryRegister_1a4da05261825b0d26b246bf5c5b5fb586" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>setBoxes</name></member>
       <member refid="classamrex_1_1BndryRegister_1a8a45cb99b2e11388c149bf277120fbc9" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>setVal</name></member>
-      <member refid="classamrex_1_1BndryRegister_1a1d90d4d170241cd5fba0ff90640bb163" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>size</name></member>
+      <member refid="classamrex_1_1BndryRegister_1a32eadb3490dbaa29c79ebea0c0c8b8bd" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>size</name></member>
       <member refid="classamrex_1_1BndryRegister_1a72d84522ffa27cd1d702aaeeccd1a585" prot="public" virt="non-virtual"><scope>amrex::BndryRegister</scope><name>write</name></member>
       <member refid="classamrex_1_1BndryRegister_1a3607c6a07e3dd764daaf2cb5301f1a59" prot="public" virt="virtual"><scope>amrex::BndryRegister</scope><name>~BndryRegister</name></member>
     </listofallmembers>

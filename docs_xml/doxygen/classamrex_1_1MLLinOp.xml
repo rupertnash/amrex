@@ -668,10 +668,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="70" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.cpp" bodystart="125" bodyend="150"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a2f8c43bca7772706acace56cf0067ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1aa034da35bd05e1fb93b8d876a9840ce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::MLLinOp::setDomainBC</definition>
-        <argsstring>(const Array&lt; BCType, AMREX_SPACEDIM &gt; &amp;lobc, const Array&lt; BCType, AMREX_SPACEDIM &gt; &amp;hibc)</argsstring>
+        <argsstring>(const Array&lt; BCType, AMREX_SPACEDIM &gt; &amp;lobc, const Array&lt; BCType, AMREX_SPACEDIM &gt; &amp;hibc) noexcept</argsstring>
         <name>setDomainBC</name>
         <param>
           <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; <ref refid="classamrex_1_1MLLinOp_1ac2e55c34bf6b5c0ed53d0ef6a4625a3f" kindref="member">BCType</ref>, AMREX_SPACEDIM &gt; &amp;</type>
@@ -704,10 +704,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="84" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.cpp" bodystart="461" bodyend="476"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a2eae47420a806a218f08fbcfb2ce7eab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a0c150481b635dccaf83cfff3d38b11c7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::MLLinOp::needsCoarseDataForBC</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>needsCoarseDataForBC</name>
         <briefdescription>
 <para>Needs coarse data for bc? If the lowest level grids does not cover the entire domain, coarse level data are needed for supplying Dirichlet bc at coarse/fine boundary, even when the domain bc is not Dirichlet. </para>        </briefdescription>
@@ -717,10 +717,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="94" bodyend="94"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1ad9217e108815b23ac024fe9b54888e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1ac161f1d53e925b82ba5defeb9b0efe70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::MLLinOp::setCoarseFineBC</definition>
-        <argsstring>(const MultiFab *crse, int crse_ratio)</argsstring>
+        <argsstring>(const MultiFab *crse, int crse_ratio) noexcept</argsstring>
         <name>setCoarseFineBC</name>
         <param>
           <type>const <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> *</type>
@@ -791,10 +791,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="125" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a33b5219a7565904bf3f1e320b9ceb2fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a4d96a0475759eef80d096851fdedd411" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::MLLinOp::setVerbose</definition>
-        <argsstring>(int v)</argsstring>
+        <argsstring>(int v) noexcept</argsstring>
         <name>setVerbose</name>
         <param>
           <type>int</type>
@@ -808,10 +808,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="127" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="127" bodyend="127"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a18be2937f7fc97e7cd7a086003367bbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a45b72169ccf285c17f439c4e990c0f58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::MLLinOp::setMaxOrder</definition>
-        <argsstring>(int o)</argsstring>
+        <argsstring>(int o) noexcept</argsstring>
         <name>setMaxOrder</name>
         <param>
           <type>int</type>
@@ -825,10 +825,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="129" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="129" bodyend="129"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a539e8aa2dde2878271b518c562da22cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a1189e4016e7757083343a93649f102aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int amrex::MLLinOp::getMaxOrder</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>getMaxOrder</name>
         <briefdescription>
         </briefdescription>
@@ -1580,10 +1580,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a9499bee82065be142da7257e4b4cae65" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1adcfe0a91f9b85388c17eee6172f02975" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int amrex::MLLinOp::NAMRLevels</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>NAMRLevels</name>
         <briefdescription>
 <para>functions </para>        </briefdescription>
@@ -1593,10 +1593,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="258" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="258" bodyend="258"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a7d31860d0c0b1f4eb1679bb36561b920" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a257d196611ba0ab9d861dc5e0dc23502" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int amrex::MLLinOp::NMGLevels</definition>
-        <argsstring>(int amrlev) const </argsstring>
+        <argsstring>(int amrlev) const noexcept</argsstring>
         <name>NMGLevels</name>
         <param>
           <type>int</type>
@@ -1610,10 +1610,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="259" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="259" bodyend="259"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a9992a7eb18c66153f5c1834d158ce5a7" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a8effbacb86233a5334789092372a9bde" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; int &gt; &amp;</type>
         <definition>const Vector&lt;int&gt;&amp; amrex::MLLinOp::AMRRefRatio</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>AMRRefRatio</name>
         <briefdescription>
         </briefdescription>
@@ -1623,10 +1623,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="260" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="260" bodyend="260"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a3e8aac883541fb99eecd1ce929fb9d95" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1ac80a224852d40e9dd01ef9e4d52cd1c9" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int amrex::MLLinOp::AMRRefRatio</definition>
-        <argsstring>(int amr_lev) const </argsstring>
+        <argsstring>(int amr_lev) const noexcept</argsstring>
         <name>AMRRefRatio</name>
         <param>
           <type>int</type>
@@ -1640,10 +1640,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="261" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="261" bodyend="261"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a4259c59d91cf4d9f499b88ddf506066d" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a7b1da16499dc7b95e807a28757e0c094" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
         <definition>const Geometry&amp; amrex::MLLinOp::Geom</definition>
-        <argsstring>(int amr_lev, int mglev=0) const </argsstring>
+        <argsstring>(int amr_lev, int mglev=0) const noexcept</argsstring>
         <name>Geom</name>
         <param>
           <type>int</type>
@@ -1662,10 +1662,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="263" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="263" bodyend="263"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1ae3a6d0ccf94a8b6e1b248cdf1f6ac1a6" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a0eb75c39ff8e715b524d79442b83a3fb" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1FabFactory" kindref="compound">FabFactory</ref>&lt; <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &gt; const *</type>
         <definition>FabFactory&lt;FArrayBox&gt; const* amrex::MLLinOp::Factory</definition>
-        <argsstring>(int amr_lev, int mglev=0) const </argsstring>
+        <argsstring>(int amr_lev, int mglev=0) const noexcept</argsstring>
         <name>Factory</name>
         <param>
           <type>int</type>
@@ -1684,10 +1684,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="264" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="264" bodyend="266"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a58d45d8aa3d055c80b7fa97148e0cfae" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1aa1c6883eef4d4dc55d3a5fe5c921113a" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::MLLinOp::isBottomActive</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>isBottomActive</name>
         <briefdescription>
         </briefdescription>
@@ -1697,10 +1697,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="271" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="271" bodyend="271"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1ab1d350aa483803c4829193061929d999" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a77b33530b316399f5fb5314a846d9b7e" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__ccse-mpi_8H_1a68c509d4adb3f4a1d6fe3a9b0b87c7b9" kindref="member">MPI_Comm</ref></type>
         <definition>MPI_Comm amrex::MLLinOp::BottomCommunicator</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>BottomCommunicator</name>
         <briefdescription>
         </briefdescription>
@@ -1710,10 +1710,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="273" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="273" bodyend="273"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a95546d2327fb1fd23b8f36e1d72e0163" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1ae56dfc1030a8066132a2cb67334b1aaa" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__ccse-mpi_8H_1a68c509d4adb3f4a1d6fe3a9b0b87c7b9" kindref="member">MPI_Comm</ref></type>
         <definition>MPI_Comm amrex::MLLinOp::Communicator</definition>
-        <argsstring>(int amrlev, int mglev) const </argsstring>
+        <argsstring>(int amrlev, int mglev) const noexcept</argsstring>
         <name>Communicator</name>
         <param>
           <type>int</type>
@@ -1731,10 +1731,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="274" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="274" bodyend="280"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a54c7bb112ff9ee682f49142fc17c9b60" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1ac0c0882eb6092218dc09c5d60555ffed" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::MLLinOp::setCoarseFineBCLocation</definition>
-        <argsstring>(const RealVect &amp;cloc)</argsstring>
+        <argsstring>(const RealVect &amp;cloc) noexcept</argsstring>
         <name>setCoarseFineBCLocation</name>
         <param>
           <type>const <ref refid="classamrex_1_1RealVect" kindref="compound">RealVect</ref> &amp;</type>
@@ -1748,10 +1748,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="282" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="282" bodyend="282"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a24676b3cbd7a5a6213124c5c38548b61" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a355691d7877fb9a9aabc65db76d0f2b4" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::MLLinOp::doAgglomeration</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>doAgglomeration</name>
         <briefdescription>
         </briefdescription>
@@ -1761,10 +1761,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="284" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="284" bodyend="284"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a853cb2ecda9218a782bf244177c13a74" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a79f98e0cf06f695dbad6052c5d53e00b" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::MLLinOp::doConsolidation</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>doConsolidation</name>
         <briefdescription>
         </briefdescription>
@@ -1774,10 +1774,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="285" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="285" bodyend="285"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLLinOp_1a30b5b76f86c3e2ca139e8f4d634873e2" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLLinOp_1aa42fd2dfa3b0133f2b20a99026549900" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool amrex::MLLinOp::isCellCentered</definition>
-        <argsstring>() const </argsstring>
+        <argsstring>() const noexcept</argsstring>
         <name>isCellCentered</name>
         <briefdescription>
         </briefdescription>
@@ -2314,15 +2314,15 @@
     </collaborationgraph>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" line="44" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp.H" bodystart="43" bodyend="308"/>
     <listofallmembers>
-      <member refid="classamrex_1_1MLLinOp_1a9992a7eb18c66153f5c1834d158ce5a7" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>AMRRefRatio</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a3e8aac883541fb99eecd1ce929fb9d95" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>AMRRefRatio</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a8effbacb86233a5334789092372a9bde" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>AMRRefRatio</name></member>
+      <member refid="classamrex_1_1MLLinOp_1ac80a224852d40e9dd01ef9e4d52cd1c9" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>AMRRefRatio</name></member>
       <member refid="classamrex_1_1MLLinOp_1a01cdaaf631b81b52be1ffaf606d8f9e1" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>apply</name></member>
       <member refid="classamrex_1_1MLLinOp_1a1097a30ac7246a9ef37ab71e8281a8c9" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>applyMetricTerm</name></member>
       <member refid="classamrex_1_1MLLinOp_1a49e8248c4a3a27e8bfc77227bdfb433a" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>averageDownSolutionRHS</name></member>
       <member refid="classamrex_1_1MLLinOp_1a5aa01a1ef6b0b3a471f02f65ae4b4884" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>BCMode</name></member>
       <member refid="classamrex_1_1MLLinOp_1ac2e55c34bf6b5c0ed53d0ef6a4625a3f" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>BCType</name></member>
-      <member refid="classamrex_1_1MLLinOp_1ab1d350aa483803c4829193061929d999" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>BottomCommunicator</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a95546d2327fb1fd23b8f36e1d72e0163" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Communicator</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a77b33530b316399f5fb5314a846d9b7e" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>BottomCommunicator</name></member>
+      <member refid="classamrex_1_1MLLinOp_1ae56dfc1030a8066132a2cb67334b1aaa" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Communicator</name></member>
       <member refid="classamrex_1_1MLLinOp_1a5e7404bd72d5372194a5012f9783fd6c" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>compFlux</name></member>
       <member refid="classamrex_1_1MLLinOp_1aa811fc7672cda86a04b37b7a36380823" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>compGrad</name></member>
       <member refid="classamrex_1_1MLLinOp_1a824432661ed84da479fefccbf118f6fe" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>correctionResidual</name></member>
@@ -2330,23 +2330,23 @@
       <member refid="classamrex_1_1MLLinOp_1ae772fff45d8190c7c2c694931858b834" prot="private" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>defineAuxData</name></member>
       <member refid="classamrex_1_1MLLinOp_1a9288d1d0123d4e3d8097fd568a706a15" prot="private" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>defineBC</name></member>
       <member refid="classamrex_1_1MLLinOp_1a07740ce5e26ee8f463d6176b157fe06a" prot="private" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>defineGrids</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a24676b3cbd7a5a6213124c5c38548b61" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>doAgglomeration</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a853cb2ecda9218a782bf244177c13a74" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>doConsolidation</name></member>
-      <member refid="classamrex_1_1MLLinOp_1ae3a6d0ccf94a8b6e1b248cdf1f6ac1a6" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Factory</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a355691d7877fb9a9aabc65db76d0f2b4" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>doAgglomeration</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a79f98e0cf06f695dbad6052c5d53e00b" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>doConsolidation</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a0eb75c39ff8e715b524d79442b83a3fb" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Factory</name></member>
       <member refid="classamrex_1_1MLLinOp_1a93fed17bd53a16d98faaa1c8a6a6e401" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>fillSolutionBC</name></member>
       <member refid="classamrex_1_1MLLinOp_1ad00407760d4927438c355ba115aaad4e" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Finalize</name></member>
       <member refid="classamrex_1_1MLLinOp_1a5137ff000c6f8940f4b07a28f3bf9375" prot="public" virt="virtual"><scope>amrex::MLLinOp</scope><name>fixUpResidualMask</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a4259c59d91cf4d9f499b88ddf506066d" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Geom</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a7b1da16499dc7b95e807a28757e0c094" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Geom</name></member>
       <member refid="classamrex_1_1MLLinOp_1ae6a653e83929e0f2c41482551c10b4e8" prot="public" virt="virtual"><scope>amrex::MLLinOp</scope><name>getFluxes</name></member>
       <member refid="classamrex_1_1MLLinOp_1ad2419e6b4d384edbd5695daca078e310" prot="public" virt="virtual"><scope>amrex::MLLinOp</scope><name>getFluxes</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a539e8aa2dde2878271b518c562da22cd" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>getMaxOrder</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a1189e4016e7757083343a93649f102aa" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>getMaxOrder</name></member>
       <member refid="classamrex_1_1MLLinOp_1acd287b03ea1a73f47ba1f08bb10a484d" prot="public" virt="virtual"><scope>amrex::MLLinOp</scope><name>getNComp</name></member>
       <member refid="classamrex_1_1MLLinOp_1a85fa2f104bbfeaa73d55d589906ecd45" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>info</name></member>
       <member refid="classamrex_1_1MLLinOp_1a48b2fe73722eee0a1d50b6e0b9558174" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Initialize</name></member>
       <member refid="classamrex_1_1MLLinOp_1a55d585de64a0263a1b2308553cbaee13" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>interpolation</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a58d45d8aa3d055c80b7fa97148e0cfae" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>isBottomActive</name></member>
+      <member refid="classamrex_1_1MLLinOp_1aa1c6883eef4d4dc55d3a5fe5c921113a" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>isBottomActive</name></member>
       <member refid="classamrex_1_1MLLinOp_1aa6ff4935f1246d7c94ac38dc65c25d7d" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>isBottomSingular</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a30b5b76f86c3e2ca139e8f4d634873e2" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>isCellCentered</name></member>
+      <member refid="classamrex_1_1MLLinOp_1aa42fd2dfa3b0133f2b20a99026549900" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>isCellCentered</name></member>
       <member refid="classamrex_1_1MLLinOp_1aa8d6ef9e77180f9076ef5cb83f48bb50" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>isSingular</name></member>
       <member refid="classamrex_1_1MLLinOp_1a07cd0a7c45d6542e33a5d97aefe5bab3" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>Location</name></member>
       <member refid="classamrex_1_1MLLinOp_1a42ca524eb4deca1132be683805d2d7ab" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>m_amr_ref_ratio</name></member>
@@ -2386,10 +2386,10 @@
       <member refid="classamrex_1_1MLLinOp_1a69fbc0ca95c18b6e954c53abb41c885c" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>MLLinOp</name></member>
       <member refid="classamrex_1_1MLLinOp_1a1b4821805159b0595b6b7b1e0135b54f" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>MLMG</name></member>
       <member refid="classamrex_1_1MLLinOp_1a6b8679aecd5dee44bee1b262c40e8f8f" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>MLPoisson</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a9499bee82065be142da7257e4b4cae65" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>NAMRLevels</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a2eae47420a806a218f08fbcfb2ce7eab" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>needsCoarseDataForBC</name></member>
+      <member refid="classamrex_1_1MLLinOp_1adcfe0a91f9b85388c17eee6172f02975" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>NAMRLevels</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a0c150481b635dccaf83cfff3d38b11c7" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>needsCoarseDataForBC</name></member>
       <member refid="classamrex_1_1MLLinOp_1ab68d7b11273242e632c9f8a422c911d7" prot="public" virt="virtual"><scope>amrex::MLLinOp</scope><name>needsUpdate</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a7d31860d0c0b1f4eb1679bb36561b920" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>NMGLevels</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a257d196611ba0ab9d861dc5e0dc23502" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>NMGLevels</name></member>
       <member refid="classamrex_1_1MLLinOp_1a92b49ce3cd6f8877018a284c9a05663b" prot="public" virt="virtual"><scope>amrex::MLLinOp</scope><name>nodalSync</name></member>
       <member refid="classamrex_1_1MLLinOp_1a3e0f34318790ba3e087ecf8b870dd12f" prot="public" virt="virtual"><scope>amrex::MLLinOp</scope><name>normalize</name></member>
       <member refid="classamrex_1_1MLLinOp_1ad163e1fa25935bce528783de5adb6b1a" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>operator=</name></member>
@@ -2398,12 +2398,12 @@
       <member refid="classamrex_1_1MLLinOp_1a0c9c6f136cf005be3ce2c797b4b67537" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>reflux</name></member>
       <member refid="classamrex_1_1MLLinOp_1a62f7495893309fa4f4805bbea9b59b3b" prot="private" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>remapNeighborhoods</name></member>
       <member refid="classamrex_1_1MLLinOp_1a5a1bffd08a85405f9a9fbeed7c20fd97" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>restriction</name></member>
-      <member refid="classamrex_1_1MLLinOp_1ad9217e108815b23ac024fe9b54888e2a" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setCoarseFineBC</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a54c7bb112ff9ee682f49142fc17c9b60" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setCoarseFineBCLocation</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a2f8c43bca7772706acace56cf0067ebb" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setDomainBC</name></member>
+      <member refid="classamrex_1_1MLLinOp_1ac161f1d53e925b82ba5defeb9b0efe70" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setCoarseFineBC</name></member>
+      <member refid="classamrex_1_1MLLinOp_1ac0c0882eb6092218dc09c5d60555ffed" prot="protected" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setCoarseFineBCLocation</name></member>
+      <member refid="classamrex_1_1MLLinOp_1aa034da35bd05e1fb93b8d876a9840ce3" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setDomainBC</name></member>
       <member refid="classamrex_1_1MLLinOp_1a52d97117bad0d48c8e73546e7092e7dc" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>setLevelBC</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a18be2937f7fc97e7cd7a086003367bbd" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setMaxOrder</name></member>
-      <member refid="classamrex_1_1MLLinOp_1a33b5219a7565904bf3f1e320b9ceb2fe" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setVerbose</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a45b72169ccf285c17f439c4e990c0f58" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setMaxOrder</name></member>
+      <member refid="classamrex_1_1MLLinOp_1a4d96a0475759eef80d096851fdedd411" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>setVerbose</name></member>
       <member refid="classamrex_1_1MLLinOp_1acf3d13b45072c825f835b9b9a536e774" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>smooth</name></member>
       <member refid="classamrex_1_1MLLinOp_1a37cdc5b58be54be165fee5cc26a5f5e1" prot="public" virt="pure-virtual"><scope>amrex::MLLinOp</scope><name>solutionResidual</name></member>
       <member refid="classamrex_1_1MLLinOp_1a1f2821b4a51da49d862dae1e757bb8c3" prot="public" virt="non-virtual"><scope>amrex::MLLinOp</scope><name>StateMode</name></member>

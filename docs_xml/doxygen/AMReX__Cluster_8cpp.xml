@@ -416,16 +416,16 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="AMReX__Cluster_8cpp_1ab097eab7e3fccc8b0d3b24d44adcb0a2" kindref="member">CutStatus</ref><sp/>{<sp/>HoleCut=0,<sp/>SteepCut,<sp/>BisectCut,<sp/>InvalidCut<sp/>};</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a5df06d22d4968a4edb72d0e48b339a90" kindref="member">Cluster::Cluster</ref><sp/>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a555ab4c37437bb4e8bdfab10e02e1d13" kindref="member">Cluster::Cluster</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>m_ar(0)<sp/>{}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a5df06d22d4968a4edb72d0e48b339a90" kindref="member">Cluster::Cluster</ref><sp/>(IntVect*<sp/>a,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a555ab4c37437bb4e8bdfab10e02e1d13" kindref="member">Cluster::Cluster</ref><sp/>(IntVect*<sp/>a,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len)<sp/>noexcept</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>m_ar(a),</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>m_len(len)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cluster_1a609327af6ac8ee5902c0c7d0a6629772" kindref="member">m_ar</ref>(a),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cluster_1a8302246722728d2969d8647bcff28550" kindref="member">m_len</ref>(len)</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a24fe52f39e34b20dac818eb73af5e2b5" kindref="member">minBox</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cluster_1ae1575a7a7ef6b42efa8ddf43f838ddac" kindref="member">minBox</ref>();</highlight></codeline>
 <codeline lineno="22"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a245aad49a70fd519c6a23328c3ecee1f" kindref="member">Cluster::~Cluster</ref><sp/>()<sp/>{}</highlight></codeline>
@@ -437,10 +437,10 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">InBox</highlight></codeline>
 <codeline lineno="31"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>InBox<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>b)<sp/>:<sp/><ref refid="AMReX__Cluster_8cpp_1ad1bc6d45fa336c9ae08741100fe5f401" kindref="member">m_box</ref>(b)<sp/>{}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>InBox<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>b)<sp/>noexcept<sp/>:<sp/><ref refid="AMReX__Cluster_8cpp_1ad1bc6d45fa336c9ae08741100fe5f401" kindref="member">m_box</ref>(b)<sp/>{}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator()<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>iv)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="36"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator()<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IntVect&amp;<sp/>iv)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="AMReX__Cluster_8cpp_1ad1bc6d45fa336c9ae08741100fe5f401" kindref="member">m_box</ref>.contains(iv);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
@@ -448,11 +448,11 @@
 <codeline lineno="41"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a5df06d22d4968a4edb72d0e48b339a90" kindref="member">Cluster::Cluster</ref><sp/>(Cluster&amp;<sp/><sp/><sp/>c,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a555ab4c37437bb4e8bdfab10e02e1d13" kindref="member">Cluster::Cluster</ref><sp/>(<ref refid="classamrex_1_1Cluster_1a555ab4c37437bb4e8bdfab10e02e1d13" kindref="member">Cluster</ref>&amp;<sp/><sp/><sp/>c,</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>b)<sp/></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>m_ar(0),</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>m_len(0)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cluster_1a609327af6ac8ee5902c0c7d0a6629772" kindref="member">m_ar</ref>(0),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Cluster_1a8302246722728d2969d8647bcff28550" kindref="member">m_len</ref>(0)</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(b.ok());</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(c.m_ar<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>c.m_len<sp/>&gt;<sp/>0);</highlight></codeline>
@@ -497,7 +497,7 @@
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_len<sp/><sp/><sp/>=<sp/>prt_it<sp/>-<sp/>m_ar;</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.m_ar<sp/><sp/>=<sp/>prt_it;</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.m_len<sp/>=<sp/>c.m_len<sp/>-<sp/>m_len;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a24fe52f39e34b20dac818eb73af5e2b5" kindref="member">minBox</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ac126391385690269a13f91486ea608e2" kindref="member">minBox</ref>();</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.minBox();</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -525,8 +525,8 @@
 <codeline lineno="118"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1ae5a63154b89efabb280d13af57e6c876" kindref="member">Cluster::numTag</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>b)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="122"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a8e93641412706943851b5f91efcebb91" kindref="member">Cluster::numTag</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>b)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>cnt<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>m_len;<sp/>i++)</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -537,7 +537,7 @@
 <codeline lineno="130"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1a3c9b27aae16d1c0f9ff493c509963cdf" kindref="member">Cluster::minBox</ref><sp/>()</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><ref refid="classamrex_1_1Cluster_1ae1575a7a7ef6b42efa8ddf43f838ddac" kindref="member">Cluster::minBox</ref><sp/>()<sp/>noexcept</highlight></codeline>
 <codeline lineno="134"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_len<sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -738,7 +738,7 @@
 <codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(((m_ar+m_len)-prt_it)<sp/>==<sp/>nhi);</highlight></codeline>
 <codeline lineno="332"><highlight class="normal"></highlight></codeline>
 <codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>m_len<sp/>=<sp/>nlo;</highlight></codeline>
-<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a24fe52f39e34b20dac818eb73af5e2b5" kindref="member">minBox</ref>();</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ac126391385690269a13f91486ea608e2" kindref="member">minBox</ref>();</highlight></codeline>
 <codeline lineno="335"><highlight class="normal"></highlight></codeline>
 <codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Cluster(prt_it,<sp/>nhi);</highlight></codeline>
 <codeline lineno="337"><highlight class="normal">}</highlight></codeline>
@@ -833,7 +833,7 @@
 <codeline lineno="426"><highlight class="normal"></highlight></codeline>
 <codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Replace<sp/>the<sp/>current<sp/>box<sp/>by<sp/>the<sp/>part<sp/>of<sp/>the<sp/>box<sp/>&quot;below&quot;<sp/>the<sp/>cut</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_len<sp/>=<sp/>nlo;</highlight></codeline>
-<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a24fe52f39e34b20dac818eb73af5e2b5" kindref="member">minBox</ref>();</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ac126391385690269a13f91486ea608e2" kindref="member">minBox</ref>();</highlight></codeline>
 <codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(eff()<sp/>&gt;<sp/>oldeff)<sp/>||<sp/>(neweff<sp/>&gt;<sp/>oldeff)<sp/>||<sp/>n_try<sp/>&gt;<sp/>0)</highlight></codeline>
 <codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -846,7 +846,7 @@
 <codeline lineno="439"><highlight class="normal"></highlight></codeline>
 <codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Restore<sp/>the<sp/>original<sp/>box<sp/>and<sp/>try<sp/>again,<sp/>cutting<sp/>in<sp/>a<sp/>different<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_len<sp/>=<sp/>orig_mlen;</highlight></codeline>
-<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a24fe52f39e34b20dac818eb73af5e2b5" kindref="member">minBox</ref>();</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ac126391385690269a13f91486ea608e2" kindref="member">minBox</ref>();</highlight></codeline>
 <codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>invalid_dir<sp/>=<sp/>dir;</highlight></codeline>
 <codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
