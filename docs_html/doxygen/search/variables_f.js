@@ -20,6 +20,7 @@ var searchData=
   ['plot_5ffile_5froot',['plot_file_root',['../classamrex_1_1Amr.html#a6d91b6937dfb14b4b4777f640971b072',1,'amrex::Amr']]],
   ['plot_5ffiles_5foutput',['plot_files_output',['../namespaceamrex.html#a18ffd2e93f9a414d44ed7d7aa194f549',1,'amrex']]],
   ['plot_5fint',['plot_int',['../classamrex_1_1Amr.html#a8e9bb15131c1b8431dc0336678e0b1ea',1,'amrex::Amr::plot_int()'],['../classamrex_1_1LSCoreBase.html#a732e8fce0435ef4ea35fb6f7f265f8a0',1,'amrex::LSCoreBase::plot_int()']]],
+  ['plot_5flog_5fper',['plot_log_per',['../classamrex_1_1Amr.html#ac28ad84e2187c8094fe436eb5e5847d8',1,'amrex::Amr']]],
   ['plot_5fnfiles',['plot_nfiles',['../namespaceamrex.html#aee4d1d20e920bfb1eceeb7db0a36be0f',1,'amrex']]],
   ['plot_5fper',['plot_per',['../classamrex_1_1Amr.html#af097e0455a9da7e8e6a9dc131d1b96f2',1,'amrex::Amr']]],
   ['plotfile_5fon_5frestart',['plotfile_on_restart',['../namespaceamrex.html#a8e6b05f30acfc8c62599db29b80f0458',1,'amrex']]],
