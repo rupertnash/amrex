@@ -131,6 +131,10 @@ int main (int argc, char* argv[])
         std::cout << ParallelDescriptor::MyProc() << " : Time for GPU to complete " << nsteps << " FillBoundary(s) " << end_time - start_time << std::endl;
     }
 
+    ParallelDescriptor::Barrier();
+
+    amrex::Print() << std::endl << "************************************************" << std::endl;
+
     Gpu::setLaunchRegion(false);
     {
         // Setup the data outside the FillBoundary timers.
@@ -143,7 +147,7 @@ int main (int argc, char* argv[])
             GeometryData geomData = geom.data();
 
             amrex::launch(bx,
-            [=] AMREX_GPU_DEVICE (Box const& tbx)
+            [=] AMREX_GPU_HOST_DEVICE (Box const& tbx)
             {
                 initdata(tbx, phi, geomData);
             });
@@ -159,6 +163,8 @@ int main (int argc, char* argv[])
         std::cout << ParallelDescriptor::MyProc() << " : Time for CPU to complete " << nsteps << " FillBoundary(s) " << end_time - start_time << std::endl;
 
     }
+
+    ParallelDescriptor::Barrier();
 
     amrex::Print() << std::endl << "************************************************" << std::endl << std::endl;
     }
