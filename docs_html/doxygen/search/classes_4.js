@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['earena',['EArena',['../classamrex_1_1EArena.html',1,'amrex']]],
   ['ebcellconservativelinear',['EBCellConservativeLinear',['../classamrex_1_1EBCellConservativeLinear.html',1,'amrex']]],
   ['ebcellflag',['EBCellFlag',['../classamrex_1_1EBCellFlag.html',1,'amrex']]],
   ['ebcellflagfab',['EBCellFlagFab',['../classamrex_1_1EBCellFlagFab.html',1,'amrex']]],
@@ -10,6 +11,7 @@ var searchData=
   ['edge',['Edge',['../structamrex_1_1EB2_1_1Edge.html',1,'amrex::EB2']]],
   ['elixir',['Elixir',['../classamrex_1_1Cuda_1_1Elixir.html',1,'amrex::Cuda']]],
   ['ellipsoidif',['EllipsoidIF',['../classamrex_1_1EB2_1_1EllipsoidIF.html',1,'amrex::EB2']]],
+  ['equal',['equal',['../structamrex_1_1EArena_1_1Node_1_1equal.html',1,'amrex::EArena::Node']]],
   ['error',['Error',['../classhacc_1_1Error.html',1,'hacc']]],
   ['errorfunc',['ErrorFunc',['../classamrex_1_1ErrorRec_1_1ErrorFunc.html',1,'amrex::ErrorRec']]],
   ['errorfunc2',['ErrorFunc2',['../classamrex_1_1ErrorRec_1_1ErrorFunc2.html',1,'amrex::ErrorRec']]],

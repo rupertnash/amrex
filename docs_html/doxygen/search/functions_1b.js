@@ -56,6 +56,7 @@ var searchData=
   ['_7edistribution',['~Distribution',['../classhacc_1_1Distribution.html#afb7db67a5cbe65d16e4df2ad3f3aa582',1,'hacc::Distribution']]],
   ['_7edistributionmapping',['~DistributionMapping',['../classamrex_1_1DistributionMapping.html#a7d2161da6ad105c2a2189829433abfb8',1,'amrex::DistributionMapping']]],
   ['_7edivvis',['~DivVis',['../classamrex_1_1DivVis.html#aa258ebaec92785420ce8048007a2c98f',1,'amrex::DivVis']]],
+  ['_7eearena',['~EArena',['../classamrex_1_1EArena.html#aa7ffefaf198e2f27d6e28d6e92228a4a',1,'amrex::EArena']]],
   ['_7eebcellconservativelinear',['~EBCellConservativeLinear',['../classamrex_1_1EBCellConservativeLinear.html#a35b416bd79f57d83c7de458463e76c59',1,'amrex::EBCellConservativeLinear']]],
   ['_7eebdatacollection',['~EBDataCollection',['../classamrex_1_1EBDataCollection.html#ac0a68c8f5a6914b596f4c47f43d2f6aa',1,'amrex::EBDataCollection']]],
   ['_7eebfarraybox',['~EBFArrayBox',['../classamrex_1_1EBFArrayBox.html#a4f50980c0b4e0c9445ff2497cb2fc573',1,'amrex::EBFArrayBox']]],

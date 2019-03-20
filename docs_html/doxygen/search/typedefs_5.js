@@ -12,6 +12,7 @@ var searchData=
   ['fcdmapvaluetype',['FCDMapValueType',['../classamrex_1_1FabArrayCopyDescriptor.html#a7dbb7fefbfbc0e440c530541e09f3b65',1,'amrex::FabArrayCopyDescriptor']]],
   ['fpinfocache',['FPinfoCache',['../classamrex_1_1FabArrayBase.html#a68a25147d3410960af381727954394ba',1,'amrex::FabArrayBase']]],
   ['fpinfocacheiter',['FPinfoCacheIter',['../classamrex_1_1FabArrayBase.html#a3272dd508dcab2f679993ef1308a4278',1,'amrex::FabArrayBase']]],
+  ['freelist',['FreeList',['../classamrex_1_1EArena.html#a62a6459912f2dee99fb7dc6dfe60d851',1,'amrex::EArena']]],
   ['func',['Func',['../namespaceamrex_1_1Lazy.html#ac520a3dfdc05eaffb3b4eea05eea5668',1,'amrex::Lazy']]],
   ['funcque',['FuncQue',['../namespaceamrex_1_1Lazy.html#a17dde5bdf675b748b4cff2f01edd7fc5',1,'amrex::Lazy']]],
   ['functiontype',['FunctionType',['../classamrex_1_1EB2_1_1GeometryShop.html#ace77fd9544f05b7e9026f7907a7e37ed',1,'amrex::EB2::GeometryShop']]]

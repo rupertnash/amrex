@@ -86,7 +86,7 @@
         <argsstring></argsstring>
         <name>m_hunk</name>
         <briefdescription>
-<para>The minimal size of hunks to request via ::operator new(). </para>        </briefdescription>
+<para>The minimal size of hunks to request from system. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -191,10 +191,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CArena.H" line="38" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CArena.cpp" bodystart="24" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1CArena_1ae680f4f04d598438083ac596e4117c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classamrex_1_1CArena_1aeafab1fb8b884a0fc6ac916ae7d10321" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
         <type>void *</type>
         <definition>void * amrex::CArena::alloc</definition>
-        <argsstring>(std::size_t nbytes) override</argsstring>
+        <argsstring>(std::size_t nbytes) overridefinal</argsstring>
         <name>alloc</name>
         <reimplements refid="classamrex_1_1Arena_1a46ce2cd5cfc039cec64548b031fbde2e">alloc</reimplements>
         <param>
@@ -209,10 +209,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CArena.H" line="41" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CArena.cpp" bodystart="32" bodyend="104"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1CArena_1a3abe546ac10da68bd47ddbcf7e8f4d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classamrex_1_1CArena_1a6920342ae3cc9420d8e59915130e138e" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
         <type>void</type>
         <definition>void amrex::CArena::free</definition>
-        <argsstring>(void *ap) override</argsstring>
+        <argsstring>(void *ap) overridefinal</argsstring>
         <name>free</name>
         <reimplements refid="classamrex_1_1Arena_1a0c7e0730574c98febb6ddca2712cb515">free</reimplements>
         <param>
@@ -242,37 +242,37 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>A Concrete Class for Dynamic Memory Management This is a coalescing memory manager. It allocates (possibly) large chunks of heap space and apportions it out as requested. It merges together neighboring chunks on each <ref refid="classamrex_1_1CArena_1a3abe546ac10da68bd47ddbcf7e8f4d5f" kindref="member">free()</ref>. </para>    </briefdescription>
+<para>A Concrete Class for Dynamic Memory Management using first fit. This is a coalescing memory manager. It allocates (possibly) large chunks of heap space and apportions it out as requested. It merges together neighboring chunks on each <ref refid="classamrex_1_1CArena_1a6920342ae3cc9420d8e59915130e138e" kindref="member">free()</ref>. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="833">
+      <node id="834">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
       </node>
-      <node id="832">
+      <node id="833">
         <label>amrex::CArena</label>
         <link refid="classamrex_1_1CArena"/>
-        <childnode refid="833" relation="public-inheritance">
+        <childnode refid="834" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="836">
+      <node id="837">
         <label>amrex::ArenaInfo</label>
         <link refid="structamrex_1_1ArenaInfo"/>
       </node>
-      <node id="835">
+      <node id="836">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
-        <childnode refid="836" relation="usage">
+        <childnode refid="837" relation="usage">
           <edgelabel>arena_info</edgelabel>
         </childnode>
       </node>
-      <node id="834">
+      <node id="835">
         <label>amrex::CArena</label>
         <link refid="classamrex_1_1CArena"/>
-        <childnode refid="835" relation="public-inheritance">
+        <childnode refid="836" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -280,7 +280,7 @@
     <listofallmembers>
       <member refid="classamrex_1_1Arena_1a253c417e0bd2863509c75d6250468a4e" prot="public" virt="non-virtual"><scope>amrex::CArena</scope><name>align</name></member>
       <member refid="classamrex_1_1Arena_1a52dd4bf03bb4d31899bca6ca3440760a" prot="protected" virt="non-virtual"><scope>amrex::CArena</scope><name>align_size</name></member>
-      <member refid="classamrex_1_1CArena_1ae680f4f04d598438083ac596e4117c1f" prot="public" virt="virtual"><scope>amrex::CArena</scope><name>alloc</name></member>
+      <member refid="classamrex_1_1CArena_1aeafab1fb8b884a0fc6ac916ae7d10321" prot="public" virt="virtual"><scope>amrex::CArena</scope><name>alloc</name></member>
       <member refid="classamrex_1_1Arena_1afc721e195430f79b2d1b287c490ef0fb" prot="protected" virt="non-virtual"><scope>amrex::CArena</scope><name>allocate_system</name></member>
       <member refid="classamrex_1_1Arena_1aeb2158ba443c9b23ba0d12bcf38a66e1" prot="protected" virt="non-virtual"><scope>amrex::CArena</scope><name>arena_info</name></member>
       <member refid="classamrex_1_1CArena_1a43a76cc08d37a6c6174a05989d0bc60e" prot="public" virt="non-virtual"><scope>amrex::CArena</scope><name>CArena</name></member>
@@ -289,7 +289,7 @@
       <member refid="classamrex_1_1Arena_1a9267a7d1f5ca6f3d24154c06329bdbe7" prot="protected" virt="non-virtual"><scope>amrex::CArena</scope><name>deallocate_system</name></member>
       <member refid="classamrex_1_1CArena_1a10adc62608b67926d034077109597b14a73f4c71472036baf157528f4435be5d2" prot="public" virt="non-virtual"><scope>amrex::CArena</scope><name>DefaultHunkSize</name></member>
       <member refid="classamrex_1_1Arena_1a06dd6197d2081d7dd4c1bed308edd387" prot="public" virt="non-virtual"><scope>amrex::CArena</scope><name>Finalize</name></member>
-      <member refid="classamrex_1_1CArena_1a3abe546ac10da68bd47ddbcf7e8f4d5f" prot="public" virt="virtual"><scope>amrex::CArena</scope><name>free</name></member>
+      <member refid="classamrex_1_1CArena_1a6920342ae3cc9420d8e59915130e138e" prot="public" virt="virtual"><scope>amrex::CArena</scope><name>free</name></member>
       <member refid="classamrex_1_1CArena_1a5f5de3e5518c0f5bcc71a6a2b4076a3f" prot="public" virt="non-virtual"><scope>amrex::CArena</scope><name>heap_space_used</name></member>
       <member refid="classamrex_1_1Arena_1a9f40990a545f4d280e905117fc6a0786" prot="public" virt="non-virtual"><scope>amrex::CArena</scope><name>Initialize</name></member>
       <member refid="classamrex_1_1CArena_1ae4df71ed6e581bb88793c7c009cb4660" prot="protected" virt="non-virtual"><scope>amrex::CArena</scope><name>m_alloc</name></member>

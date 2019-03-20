@@ -157,6 +157,8 @@ var searchData=
   ['amrex_5fdv_5f3d1_2ef',['AMReX_DV_3D1.F',['../AMReX__DV__3D1_8F.html',1,'']]],
   ['amrex_5fdv_5f3d2_2ef',['AMReX_DV_3D2.F',['../AMReX__DV__3D2_8F.html',1,'']]],
   ['amrex_5fdv_5f3d3_2ef',['AMReX_DV_3D3.F',['../AMReX__DV__3D3_8F.html',1,'']]],
+  ['amrex_5fearena_2ecpp',['AMReX_EArena.cpp',['../AMReX__EArena_8cpp.html',1,'']]],
+  ['amrex_5fearena_2eh',['AMReX_EArena.H',['../AMReX__EArena_8H.html',1,'']]],
   ['amrex_5feb2_2ecpp',['AMReX_EB2.cpp',['../AMReX__EB2_8cpp.html',1,'']]],
   ['amrex_5feb2_2eh',['AMReX_EB2.H',['../AMReX__EB2_8H.html',1,'']]],
   ['amrex_5feb2_5f2d_2ef90',['AMReX_eb2_2d.F90',['../AMReX__eb2__2d_8F90.html',1,'']]],

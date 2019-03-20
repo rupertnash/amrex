@@ -2008,8 +2008,8 @@
     <member refid="classamrex_1_1CArena_1a1dc0400df161a7395380b6156678918a" kind="function"><name>CArena</name></member>
     <member refid="classamrex_1_1CArena_1ae491fc24a9163b864bc798acc7518852" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1CArena_1abca549bb11a9efb8b05dca10c32aab81" kind="function"><name>~CArena</name></member>
-    <member refid="classamrex_1_1CArena_1ae680f4f04d598438083ac596e4117c1f" kind="function"><name>alloc</name></member>
-    <member refid="classamrex_1_1CArena_1a3abe546ac10da68bd47ddbcf7e8f4d5f" kind="function"><name>free</name></member>
+    <member refid="classamrex_1_1CArena_1aeafab1fb8b884a0fc6ac916ae7d10321" kind="function"><name>alloc</name></member>
+    <member refid="classamrex_1_1CArena_1a6920342ae3cc9420d8e59915130e138e" kind="function"><name>free</name></member>
     <member refid="classamrex_1_1CArena_1a5f5de3e5518c0f5bcc71a6a2b4076a3f" kind="function"><name>heap_space_used</name></member>
   </compound>
   <compound refid="structamrex_1_1EB2_1_1Cell" kind="struct"><name>amrex::EB2::Cell</name>
@@ -2241,6 +2241,12 @@
     <member refid="classCommProfStats_1ab5b0c11f3980a18ad4d42d9de9c4af6a" kind="function"><name>ReadCommStats</name></member>
     <member refid="classCommProfStats_1aab858210acf47eebbfa8549123cb2836" kind="function"><name>ClearCommStats</name></member>
     <member refid="classCommProfStats_1a2df08e98c81c9d8bc1fd71defa327d4d" kind="friend"><name>yyparse</name></member>
+  </compound>
+  <compound refid="structamrex_1_1EArena_1_1Node_1_1CompareAddr" kind="struct"><name>amrex::EArena::Node::CompareAddr</name>
+    <member refid="structamrex_1_1EArena_1_1Node_1_1CompareAddr_1a93e8a155b5f40c4f48c5830378f692d8" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structamrex_1_1EArena_1_1Node_1_1CompareSize" kind="struct"><name>amrex::EArena::Node::CompareSize</name>
+    <member refid="structamrex_1_1EArena_1_1Node_1_1CompareSize_1a1e9e9b66227e5c39f4cbd553d856582e" kind="function"><name>operator()</name></member>
   </compound>
   <compound refid="classamrex_1_1EB2_1_1ComplementIF" kind="class"><name>amrex::EB2::ComplementIF</name>
     <member refid="classamrex_1_1EB2_1_1ComplementIF_1a0258d3b856f873ca8b5d4e6452d49605" kind="variable"><name>m_f</name></member>
@@ -2903,6 +2909,29 @@
     <member refid="classamrex_1_1DivVis_1a0b8064193c46253a33872d740486e771" kind="function"><name>DivVis</name></member>
     <member refid="classamrex_1_1DivVis_1a741ac21fd94c6e538b6511387e46cb81" kind="function"><name>operator=</name></member>
   </compound>
+  <compound refid="classamrex_1_1EArena" kind="class"><name>amrex::EArena</name>
+    <member refid="classamrex_1_1EArena_1a1b22e6b83f6b933e0b46d6866bd457d0" kind="enum"><name>@1</name></member>
+    <member refid="classamrex_1_1EArena_1a1b22e6b83f6b933e0b46d6866bd457d0afe2474a51d981bd38fcc0bab1928f23e" kind="enumvalue"><name>DefaultHunkSize</name></member>
+    <member refid="classamrex_1_1EArena_1a62a6459912f2dee99fb7dc6dfe60d851" kind="typedef"><name>FreeList</name></member>
+    <member refid="classamrex_1_1EArena_1a4b262f8a364b67bc38f2db23df5dcc75" kind="typedef"><name>MergeList</name></member>
+    <member refid="classamrex_1_1EArena_1a05797269791825a6ff9f39ec670c5e1c" kind="typedef"><name>BusyList</name></member>
+    <member refid="classamrex_1_1EArena_1a55324b0f7c48fd81f54222a9b7d25cf4" kind="variable"><name>m_alloc</name></member>
+    <member refid="classamrex_1_1EArena_1a643d1d395c74559a883cea436b148679" kind="variable"><name>m_freelist</name></member>
+    <member refid="classamrex_1_1EArena_1a68dd7c13d4db50eeaa1b7b075a140960" kind="variable"><name>m_mergelist</name></member>
+    <member refid="classamrex_1_1EArena_1a9cc0a06009f6f282f7bc260c283d970f" kind="variable"><name>m_busylist</name></member>
+    <member refid="classamrex_1_1EArena_1af16871ff173840b654ff8a3748099fa1" kind="variable"><name>m_hunk</name></member>
+    <member refid="classamrex_1_1EArena_1a9286ee7b29d7014dcdb72b9302bc4f50" kind="variable"><name>m_used_size</name></member>
+    <member refid="classamrex_1_1EArena_1a35e2bae13b9e7e85a420c8e11a5f6c73" kind="variable"><name>m_free_size</name></member>
+    <member refid="classamrex_1_1EArena_1a0418b867a5d3fb99a7035977c14fd89c" kind="variable"><name>earena_mutex</name></member>
+    <member refid="classamrex_1_1EArena_1a7daa56ae6423cd9a6cfb476bfea3b3c6" kind="function"><name>EArena</name></member>
+    <member refid="classamrex_1_1EArena_1a64189202293cd90c54bedf35510db843" kind="function"><name>EArena</name></member>
+    <member refid="classamrex_1_1EArena_1a11977fb44e25805691551018979867f3" kind="function"><name>operator=</name></member>
+    <member refid="classamrex_1_1EArena_1aa7ffefaf198e2f27d6e28d6e92228a4a" kind="function"><name>~EArena</name></member>
+    <member refid="classamrex_1_1EArena_1a9f316f7f2bf3ffa4528045191ebdc2b5" kind="function"><name>alloc</name></member>
+    <member refid="classamrex_1_1EArena_1a3c0b58cac2bd02c2ca5d94c31d6b1d8c" kind="function"><name>free</name></member>
+    <member refid="classamrex_1_1EArena_1a55f86980147fa57369f877931c2c4d86" kind="function"><name>heap_space_used</name></member>
+    <member refid="classamrex_1_1EArena_1a795022c226b14833fce78db68a3b570f" kind="function"><name>free_space_available</name></member>
+  </compound>
   <compound refid="classamrex_1_1EBCellConservativeLinear" kind="class"><name>amrex::EBCellConservativeLinear</name>
     <member refid="classamrex_1_1EBCellConservativeLinear_1ab5650d05e33391801cca870ab398040b" kind="function"><name>EBCellConservativeLinear</name></member>
     <member refid="classamrex_1_1EBCellConservativeLinear_1a35b416bd79f57d83c7de458463e76c59" kind="function"><name>~EBCellConservativeLinear</name></member>
@@ -3071,6 +3100,9 @@
     <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1ae531ef07a63120771391b6848c1a5061" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1aef4b94ae5b1d9654c2d54eda5e269476" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1aaee1490634421aebf00625405892e7dc" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structamrex_1_1EArena_1_1Node_1_1equal" kind="struct"><name>amrex::EArena::Node::equal</name>
+    <member refid="structamrex_1_1EArena_1_1Node_1_1equal_1ab3d1eb44cebd3e6a76907c66f5c9af39" kind="function"><name>operator()</name></member>
   </compound>
   <compound refid="classhacc_1_1Error" kind="class"><name>hacc::Error</name>
     <member refid="classhacc_1_1Error_1ae3184e7fc000b566c6058b4a56d44968" kind="variable"><name>SS</name></member>
@@ -3986,11 +4018,11 @@
   <compound refid="interfacecvode__interface_1_1FCVDiagGetNumRhsEvals" kind="interface"><name>cvode_interface::FCVDiagGetNumRhsEvals</name>
     <member refid="interfacecvode__interface_1_1FCVDiagGetNumRhsEvals_1ab1cd555c31f183d69a1a09867ae60463" kind="function"><name>fcvdiaggetnumrhsevals</name></member>
   </compound>
-  <compound refid="interfacecvode__interface_1_1FCVDiagGetWorkSpace" kind="interface"><name>cvode_interface::FCVDiagGetWorkSpace</name>
-    <member refid="interfacecvode__interface_1_1FCVDiagGetWorkSpace_1ad6d82d649495e6f3a7ee3a00e4d5cb4f" kind="function"><name>fcvdiaggetworkspace</name></member>
-  </compound>
   <compound refid="interfacefcvode__mod_1_1FCVDiagGetWorkSpace" kind="interface"><name>fcvode_mod::FCVDiagGetWorkSpace</name>
     <member refid="interfacefcvode__mod_1_1FCVDiagGetWorkSpace_1a12d05933c5f71db16895ade8445cf9af" kind="function"><name>fcvdiaggetworkspace</name></member>
+  </compound>
+  <compound refid="interfacecvode__interface_1_1FCVDiagGetWorkSpace" kind="interface"><name>cvode_interface::FCVDiagGetWorkSpace</name>
+    <member refid="interfacecvode__interface_1_1FCVDiagGetWorkSpace_1ad6d82d649495e6f3a7ee3a00e4d5cb4f" kind="function"><name>fcvdiaggetworkspace</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVDlsGetLastFlag" kind="interface"><name>fcvode_mod::FCVDlsGetLastFlag</name>
     <member refid="interfacefcvode__mod_1_1FCVDlsGetLastFlag_1a89d365c7c94689b63333b684e0345a14" kind="function"><name>fcvdlsgetlastflag</name></member>
@@ -4121,11 +4153,11 @@
   <compound refid="interfacecvode__interface_1_1FCVodeGetLastStep" kind="interface"><name>cvode_interface::FCVodeGetLastStep</name>
     <member refid="interfacecvode__interface_1_1FCVodeGetLastStep_1a6db261e7174c666865cbb81b5a582040" kind="function"><name>fcvodegetlaststep</name></member>
   </compound>
-  <compound refid="interfacefcvode__mod_1_1FCVodeGetNonlinSolvStats" kind="interface"><name>fcvode_mod::FCVodeGetNonlinSolvStats</name>
-    <member refid="interfacefcvode__mod_1_1FCVodeGetNonlinSolvStats_1aab2a6ed5856dd66ae9e3c06411327df9" kind="function"><name>fcvodegetnonlinsolvstats</name></member>
-  </compound>
   <compound refid="interfacecvode__interface_1_1FCVodeGetNonlinSolvStats" kind="interface"><name>cvode_interface::FCVodeGetNonlinSolvStats</name>
     <member refid="interfacecvode__interface_1_1FCVodeGetNonlinSolvStats_1a78e4ddf4b9850ce14dafbc3254b72bcb" kind="function"><name>fcvodegetnonlinsolvstats</name></member>
+  </compound>
+  <compound refid="interfacefcvode__mod_1_1FCVodeGetNonlinSolvStats" kind="interface"><name>fcvode_mod::FCVodeGetNonlinSolvStats</name>
+    <member refid="interfacefcvode__mod_1_1FCVodeGetNonlinSolvStats_1aab2a6ed5856dd66ae9e3c06411327df9" kind="function"><name>fcvodegetnonlinsolvstats</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeGetNumErrTestFails" kind="interface"><name>fcvode_mod::FCVodeGetNumErrTestFails</name>
     <member refid="interfacefcvode__mod_1_1FCVodeGetNumErrTestFails_1a7082bd6e89dcd37f912ae5ec462700c1" kind="function"><name>fcvodegetnumerrtestfails</name></member>
@@ -4181,11 +4213,11 @@
   <compound refid="interfacecvode__interface_1_1FCVodeGetRootInfo" kind="interface"><name>cvode_interface::FCVodeGetRootInfo</name>
     <member refid="interfacecvode__interface_1_1FCVodeGetRootInfo_1af4905f292375f570117b2ee2b12f6d25" kind="function"><name>fcvodegetrootinfo</name></member>
   </compound>
-  <compound refid="interfacecvode__interface_1_1FCVodeGetTolScaleFactor" kind="interface"><name>cvode_interface::FCVodeGetTolScaleFactor</name>
-    <member refid="interfacecvode__interface_1_1FCVodeGetTolScaleFactor_1a591d67a64187be2537ec5a679cc2a252" kind="function"><name>fcvodegettolscalefactor</name></member>
-  </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeGetTolScaleFactor" kind="interface"><name>fcvode_mod::FCVodeGetTolScaleFactor</name>
     <member refid="interfacefcvode__mod_1_1FCVodeGetTolScaleFactor_1a2f1707d944c6c102cb662ccc30a09b31" kind="function"><name>fcvodegettolscalefactor</name></member>
+  </compound>
+  <compound refid="interfacecvode__interface_1_1FCVodeGetTolScaleFactor" kind="interface"><name>cvode_interface::FCVodeGetTolScaleFactor</name>
+    <member refid="interfacecvode__interface_1_1FCVodeGetTolScaleFactor_1a591d67a64187be2537ec5a679cc2a252" kind="function"><name>fcvodegettolscalefactor</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeGetWorkSpace" kind="interface"><name>fcvode_mod::FCVodeGetWorkSpace</name>
     <member refid="interfacefcvode__mod_1_1FCVodeGetWorkSpace_1add21cf432ad98c247a00eef34163201e" kind="function"><name>fcvodegetworkspace</name></member>
@@ -4247,11 +4279,11 @@
   <compound refid="interfacecvode__interface_1_1FCVodeSetMaxHnilWarns" kind="interface"><name>cvode_interface::FCVodeSetMaxHnilWarns</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetMaxHnilWarns_1a9ddf585e3841bea96030a871bba399a0" kind="function"><name>fcvodesetmaxhnilwarns</name></member>
   </compound>
-  <compound refid="interfacefcvode__mod_1_1FCVodeSetMaxNonlinIters" kind="interface"><name>fcvode_mod::FCVodeSetMaxNonlinIters</name>
-    <member refid="interfacefcvode__mod_1_1FCVodeSetMaxNonlinIters_1a7a23328e99d55a427cf41e97df50d906" kind="function"><name>fcvodesetmaxnonliniters</name></member>
-  </compound>
   <compound refid="interfacecvode__interface_1_1FCVodeSetMaxNonlinIters" kind="interface"><name>cvode_interface::FCVodeSetMaxNonlinIters</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetMaxNonlinIters_1ad6b0a8f20c3a2dfa195fc4cfd7453b96" kind="function"><name>fcvodesetmaxnonliniters</name></member>
+  </compound>
+  <compound refid="interfacefcvode__mod_1_1FCVodeSetMaxNonlinIters" kind="interface"><name>fcvode_mod::FCVodeSetMaxNonlinIters</name>
+    <member refid="interfacefcvode__mod_1_1FCVodeSetMaxNonlinIters_1a7a23328e99d55a427cf41e97df50d906" kind="function"><name>fcvodesetmaxnonliniters</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetMaxNumSteps" kind="interface"><name>fcvode_mod::FCVodeSetMaxNumSteps</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetMaxNumSteps_1a8f870bf216fe2a8e6bc71e9450858b82" kind="function"><name>fcvodesetmaxnumsteps</name></member>
@@ -4301,11 +4333,11 @@
   <compound refid="interfacecvode__interface_1_1FCVodeSetStabLimDet" kind="interface"><name>cvode_interface::FCVodeSetStabLimDet</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetStabLimDet_1a831c12456a22d60917e941c938052a35" kind="function"><name>fcvodesetstablimdet</name></member>
   </compound>
-  <compound refid="interfacecvode__interface_1_1FCVodeSetStopTime" kind="interface"><name>cvode_interface::FCVodeSetStopTime</name>
-    <member refid="interfacecvode__interface_1_1FCVodeSetStopTime_1a55787e177a657d2544e98d90d8e2ef4d" kind="function"><name>fcvodesetstoptime</name></member>
-  </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetStopTime" kind="interface"><name>fcvode_mod::FCVodeSetStopTime</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetStopTime_1ab89ba6a3a6bb5d9ff5c1279721d95b4a" kind="function"><name>fcvodesetstoptime</name></member>
+  </compound>
+  <compound refid="interfacecvode__interface_1_1FCVodeSetStopTime" kind="interface"><name>cvode_interface::FCVodeSetStopTime</name>
+    <member refid="interfacecvode__interface_1_1FCVodeSetStopTime_1a55787e177a657d2544e98d90d8e2ef4d" kind="function"><name>fcvodesetstoptime</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetUserData" kind="interface"><name>fcvode_mod::FCVodeSetUserData</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetUserData_1a9a68ac4eba83cd04d71984b626b0adab" kind="function"><name>fcvodesetuserdata</name></member>
@@ -4385,11 +4417,11 @@
   <compound refid="interfacecvode__interface_1_1FCVSpilsGetNumPrecSolves" kind="interface"><name>cvode_interface::FCVSpilsGetNumPrecSolves</name>
     <member refid="interfacecvode__interface_1_1FCVSpilsGetNumPrecSolves_1adcba69ed70c4333f97d4670b6db83c3e" kind="function"><name>fcvspilsgetnumprecsolves</name></member>
   </compound>
-  <compound refid="interfacefcvode__mod_1_1FCVSpilsGetNumRhsEvals" kind="interface"><name>fcvode_mod::FCVSpilsGetNumRhsEvals</name>
-    <member refid="interfacefcvode__mod_1_1FCVSpilsGetNumRhsEvals_1a2dcbf618f92df9fb6e5cb1907db6c729" kind="function"><name>fcvspilsgetnumrhsevals</name></member>
-  </compound>
   <compound refid="interfacecvode__interface_1_1FCVSpilsGetNumRhsEvals" kind="interface"><name>cvode_interface::FCVSpilsGetNumRhsEvals</name>
     <member refid="interfacecvode__interface_1_1FCVSpilsGetNumRhsEvals_1aeeeaa4f409cac6d12d330490acea97ce" kind="function"><name>fcvspilsgetnumrhsevals</name></member>
+  </compound>
+  <compound refid="interfacefcvode__mod_1_1FCVSpilsGetNumRhsEvals" kind="interface"><name>fcvode_mod::FCVSpilsGetNumRhsEvals</name>
+    <member refid="interfacefcvode__mod_1_1FCVSpilsGetNumRhsEvals_1a2dcbf618f92df9fb6e5cb1907db6c729" kind="function"><name>fcvspilsgetnumrhsevals</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVSpilsGetWorkSpace" kind="interface"><name>fcvode_mod::FCVSpilsGetWorkSpace</name>
     <member refid="interfacefcvode__mod_1_1FCVSpilsGetWorkSpace_1a9be6d5b84407f1874c9aa3d1a22185b8" kind="function"><name>fcvspilsgetworkspace</name></member>
@@ -4962,6 +4994,9 @@
   <compound refid="structamrex_1_1CArena_1_1Node_1_1hash" kind="struct"><name>amrex::CArena::Node::hash</name>
     <member refid="structamrex_1_1CArena_1_1Node_1_1hash_1a8259627d5c6e1faa50ef4c9134875684" kind="function"><name>operator()</name></member>
   </compound>
+  <compound refid="structamrex_1_1EArena_1_1Node_1_1hash" kind="struct"><name>amrex::EArena::Node::hash</name>
+    <member refid="structamrex_1_1EArena_1_1Node_1_1hash_1a41f1bd5ef8cd90aebfd2fe0689303466" kind="function"><name>operator()</name></member>
+  </compound>
   <compound refid="structamrex_1_1VisMF_1_1Header" kind="struct"><name>amrex::VisMF::Header</name>
     <member refid="structamrex_1_1VisMF_1_1Header_1aa4469030a55d4e3be552189f7d06b54d" kind="enum"><name>Version</name></member>
     <member refid="structamrex_1_1VisMF_1_1Header_1aa4469030a55d4e3be552189f7d06b54da3394365084045ae347fad00a360767d8" kind="enumvalue"><name>Undefined_v1</name></member>
@@ -5075,7 +5110,7 @@
   <compound refid="unionamrex_1_1Particle_1_1im__t" kind="union"><name>amrex::Particle::im_t</name>
     <member refid="unionamrex_1_1Particle_1_1im__t_1a90be7512d9a3064b2b5237abb496b68b" kind="variable"><name>id</name></member>
     <member refid="unionamrex_1_1Particle_1_1im__t_1a4ee19e3bb9c3213f096957fddf869ec6" kind="variable"><name>cpu</name></member>
-    <member refid="unionamrex_1_1Particle_1_1im__t_1abed6b94d97828e72713e9e53a7b1ba2f" kind="variable"><name>@6</name></member>
+    <member refid="unionamrex_1_1Particle_1_1im__t_1a3071c48ed04f4d1bb406d8d4e56e9de4" kind="variable"><name>@7</name></member>
     <member refid="unionamrex_1_1Particle_1_1im__t_1a47b1a9872976454b995eb5134f4d2ace" kind="variable"><name>arr</name></member>
   </compound>
   <compound refid="classamrex_1_1iMultiFab" kind="class"><name>amrex::iMultiFab</name>
@@ -5821,10 +5856,10 @@
     <member refid="classamrex_1_1Mask_1ae8ef1e1e84d4d8e51b1b765e0f057de7" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps" kind="struct"><name>amrex::NeighborParticleContainer::MaskComps</name>
-    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1a0d39b8739364a45d6439a3ca55653809" kind="enum"><name>@4</name></member>
-    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1a0d39b8739364a45d6439a3ca55653809adaf17b37e09243ab39ac18d2058d0882" kind="enumvalue"><name>grid</name></member>
-    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1a0d39b8739364a45d6439a3ca55653809ac39eae977589c0de9440085218b2c5bf" kind="enumvalue"><name>tile</name></member>
-    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1a0d39b8739364a45d6439a3ca55653809a74792b79aa9fd495822adc98c5d8a953" kind="enumvalue"><name>level</name></member>
+    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1ab5d5285dfb6f9c5b20319fc49de0507e" kind="enum"><name>@5</name></member>
+    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1ab5d5285dfb6f9c5b20319fc49de0507eadaf17b37e09243ab39ac18d2058d0882" kind="enumvalue"><name>grid</name></member>
+    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1ab5d5285dfb6f9c5b20319fc49de0507eac39eae977589c0de9440085218b2c5bf" kind="enumvalue"><name>tile</name></member>
+    <member refid="structamrex_1_1NeighborParticleContainer_1_1MaskComps_1ab5d5285dfb6f9c5b20319fc49de0507ea74792b79aa9fd495822adc98c5d8a953" kind="enumvalue"><name>level</name></member>
   </compound>
   <compound refid="classamrex_1_1MCCGSolver" kind="class"><name>amrex::MCCGSolver</name>
     <member refid="classamrex_1_1MCCGSolver_1aeee5195f76b84b035425eedc100bcf19" kind="variable"><name>mg_precond</name></member>
@@ -7298,6 +7333,13 @@
     <member refid="classamrex_1_1CArena_1_1Node_1abef15ce1cbccdaa8dc7aa6a6bb4a0609" kind="function"><name>owner</name></member>
     <member refid="classamrex_1_1CArena_1_1Node_1a9d48386ac6a4c17d1e2b4eb8ad13e221" kind="function"><name>coalescable</name></member>
   </compound>
+  <compound refid="structamrex_1_1EArena_1_1Node" kind="struct"><name>amrex::EArena::Node</name>
+    <member refid="structamrex_1_1EArena_1_1Node_1af098a20a26f8c6450ac2751d8f02a263" kind="variable"><name>m_block</name></member>
+    <member refid="structamrex_1_1EArena_1_1Node_1a8f0286fae08719933cb4848f028ac40a" kind="variable"><name>m_owner</name></member>
+    <member refid="structamrex_1_1EArena_1_1Node_1a89529f45bfc11373bc41d2da43c3a12f" kind="variable"><name>m_size</name></member>
+    <member refid="structamrex_1_1EArena_1_1Node_1a288b2fef1ea5646d959ae154b8790ecb" kind="function"><name>Node</name></member>
+    <member refid="structamrex_1_1EArena_1_1Node_1ab2e370518b6574a337ddd9fc4cefe3bf" kind="function"><name>Node</name></member>
+  </compound>
   <compound refid="classamrex_1_1NodeBilinear" kind="class"><name>amrex::NodeBilinear</name>
     <member refid="classamrex_1_1NodeBilinear_1a6420242043deed007eccffb7f763f226" kind="function"><name>~NodeBilinear</name></member>
     <member refid="classamrex_1_1NodeBilinear_1a12700b2249901dc280e6ab13e7c560f2" kind="function"><name>CoarseBox</name></member>
@@ -7462,10 +7504,10 @@
     <member refid="classamrex_1_1ParIterBase_1a1fe48395194d81c991298f89c0e9d22c" kind="function"><name>GetPosition</name></member>
   </compound>
   <compound refid="classamrex_1_1ParmParse" kind="class"><name>amrex::ParmParse</name>
-    <member refid="classamrex_1_1ParmParse_1aaae35c2971df49893f4edb84e8b7da0c" kind="enum"><name>@1</name></member>
-    <member refid="classamrex_1_1ParmParse_1aaae35c2971df49893f4edb84e8b7da0ca42c200ba823b0b1a3c16c437a264ce9e" kind="enumvalue"><name>LAST</name></member>
-    <member refid="classamrex_1_1ParmParse_1aaae35c2971df49893f4edb84e8b7da0ca0f0d0333ed203bc31cd4c28900c2d77c" kind="enumvalue"><name>FIRST</name></member>
-    <member refid="classamrex_1_1ParmParse_1aaae35c2971df49893f4edb84e8b7da0caa7f34dde2e3de7cf5daa245b61e9b329" kind="enumvalue"><name>ALL</name></member>
+    <member refid="classamrex_1_1ParmParse_1af264556e7f32f43af09421204a6e63c1" kind="enum"><name>@2</name></member>
+    <member refid="classamrex_1_1ParmParse_1af264556e7f32f43af09421204a6e63c1a42c200ba823b0b1a3c16c437a264ce9e" kind="enumvalue"><name>LAST</name></member>
+    <member refid="classamrex_1_1ParmParse_1af264556e7f32f43af09421204a6e63c1a0f0d0333ed203bc31cd4c28900c2d77c" kind="enumvalue"><name>FIRST</name></member>
+    <member refid="classamrex_1_1ParmParse_1af264556e7f32f43af09421204a6e63c1aa7f34dde2e3de7cf5daa245b61e9b329" kind="enumvalue"><name>ALL</name></member>
     <member refid="classamrex_1_1ParmParse_1a328b966e328a476f04a86c758c9bc6c1" kind="typedef"><name>Table</name></member>
     <member refid="classamrex_1_1ParmParse_1aee3a66b0ddf3b769f015c89b610db0c7" kind="friend"><name>Frame</name></member>
     <member refid="classamrex_1_1ParmParse_1a697483987cfb91e205b5be2a8f6752c7" kind="friend"><name>Record</name></member>
@@ -8799,8 +8841,8 @@
     <member refid="structamrex_1_1EB2_1_1Vertex_1ac91b64f531bb3c5cf456af74b4000dd8" kind="variable"><name>m_edges</name></member>
   </compound>
   <compound refid="classamrex_1_1VisMF" kind="class"><name>amrex::VisMF</name>
-    <member refid="classamrex_1_1VisMF_1aabda29e4a41d9175464745a74072d819" kind="enum"><name>@2</name></member>
-    <member refid="classamrex_1_1VisMF_1aabda29e4a41d9175464745a74072d819ac67ac04832d2bbe370aa12c6ca513e85" kind="enumvalue"><name>IO_Buffer_Size</name></member>
+    <member refid="classamrex_1_1VisMF_1a257a59151037552c3e665c3ea3a5786f" kind="enum"><name>@3</name></member>
+    <member refid="classamrex_1_1VisMF_1a257a59151037552c3e665c3ea3a5786fac67ac04832d2bbe370aa12c6ca513e85" kind="enumvalue"><name>IO_Buffer_Size</name></member>
     <member refid="classamrex_1_1VisMF_1aa50a3ce471ac0bdf8f78134f0004e156" kind="enum"><name>How</name></member>
     <member refid="classamrex_1_1VisMF_1aa50a3ce471ac0bdf8f78134f0004e156a93fcd009ee92168a4e419161fc19635b" kind="enumvalue"><name>OneFilePerCPU</name></member>
     <member refid="classamrex_1_1VisMF_1aa50a3ce471ac0bdf8f78134f0004e156a167fa24b841257fa58af35b658f5d6c1" kind="enumvalue"><name>NFiles</name></member>
@@ -9006,21 +9048,21 @@
   </compound>
   <compound refid="namespace_0D113" kind="namespace"><name>@113</name>
   </compound>
-  <compound refid="namespace_0D136" kind="namespace"><name>@136</name>
+  <compound refid="namespace_0D138" kind="namespace"><name>@138</name>
   </compound>
-  <compound refid="namespace_0D162" kind="namespace"><name>@162</name>
+  <compound refid="namespace_0D164" kind="namespace"><name>@164</name>
   </compound>
-  <compound refid="namespace_0D165" kind="namespace"><name>@165</name>
+  <compound refid="namespace_0D167" kind="namespace"><name>@167</name>
   </compound>
-  <compound refid="namespace_0D175" kind="namespace"><name>@175</name>
+  <compound refid="namespace_0D177" kind="namespace"><name>@177</name>
   </compound>
-  <compound refid="namespace_0D218" kind="namespace"><name>@218</name>
+  <compound refid="namespace_0D220" kind="namespace"><name>@220</name>
   </compound>
-  <compound refid="namespace_0D251" kind="namespace"><name>@251</name>
+  <compound refid="namespace_0D253" kind="namespace"><name>@253</name>
   </compound>
-  <compound refid="namespace_0D344" kind="namespace"><name>@344</name>
+  <compound refid="namespace_0D346" kind="namespace"><name>@346</name>
   </compound>
-  <compound refid="namespace_0D351" kind="namespace"><name>@351</name>
+  <compound refid="namespace_0D353" kind="namespace"><name>@353</name>
   </compound>
   <compound refid="namespace_0D47" kind="namespace"><name>@47</name>
   </compound>
@@ -9708,64 +9750,64 @@
   </compound>
   <compound refid="namespaceamrex_1_1_0D113" kind="namespace"><name>amrex::@113</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D121" kind="namespace"><name>amrex::@121</name>
+  <compound refid="namespaceamrex_1_1_0D123" kind="namespace"><name>amrex::@123</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D140" kind="namespace"><name>amrex::@140</name>
-  </compound>
-  <compound refid="namespaceamrex_1_1_0D148" kind="namespace"><name>amrex::@148</name>
+  <compound refid="namespaceamrex_1_1_0D142" kind="namespace"><name>amrex::@142</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D150" kind="namespace"><name>amrex::@150</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D173" kind="namespace"><name>amrex::@173</name>
+  <compound refid="namespaceamrex_1_1_0D152" kind="namespace"><name>amrex::@152</name>
+  </compound>
+  <compound refid="namespaceamrex_1_1_0D175" kind="namespace"><name>amrex::@175</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D18" kind="namespace"><name>amrex::@18</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D193" kind="namespace"><name>amrex::@193</name>
-    <member refid="AMReX__ParmParse_8cpp_1af20d4808a4ac1f724a54728521670c7d" kind="enum"><name>PType</name></member>
-    <member refid="AMReX__ParmParse_8cpp_1a5e82e5f9fa3afa43f852d52993ae7eeb" kind="enum"><name>lexState</name></member>
+  <compound refid="namespaceamrex_1_1_0D195" kind="namespace"><name>amrex::@195</name>
+    <member refid="AMReX__ParmParse_8cpp_1a7298b692ff1c80bc90de5407ba424dac" kind="enum"><name>PType</name></member>
+    <member refid="AMReX__ParmParse_8cpp_1a185c11f165489bce62af969b2c71242c" kind="enum"><name>lexState</name></member>
   </compound>
   <compound refid="namespaceamrex_1_1_0D20" kind="namespace"><name>amrex::@20</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D202" kind="namespace"><name>amrex::@202</name>
+  <compound refid="namespaceamrex_1_1_0D204" kind="namespace"><name>amrex::@204</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D214" kind="namespace"><name>amrex::@214</name>
+  <compound refid="namespaceamrex_1_1_0D216" kind="namespace"><name>amrex::@216</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D223" kind="namespace"><name>amrex::@223</name>
+  <compound refid="namespaceamrex_1_1_0D225" kind="namespace"><name>amrex::@225</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D227" kind="namespace"><name>amrex::@227</name>
+  <compound refid="namespaceamrex_1_1_0D229" kind="namespace"><name>amrex::@229</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D24" kind="namespace"><name>amrex::@24</name>
     <member refid="AMReX__Cluster_8cpp_1ab097eab7e3fccc8b0d3b24d44adcb0a2" kind="enum"><name>CutStatus</name></member>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D319" kind="namespace"><name>amrex::@319</name>
+  <compound refid="namespaceamrex_1_1_0D321" kind="namespace"><name>amrex::@321</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D38" kind="namespace"><name>amrex::@38</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D380" kind="namespace"><name>amrex::@380</name>
+  <compound refid="namespaceamrex_1_1_0D382" kind="namespace"><name>amrex::@382</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D384" kind="namespace"><name>amrex::@384</name>
-  </compound>
-  <compound refid="namespaceamrex_1_1_0D389" kind="namespace"><name>amrex::@389</name>
+  <compound refid="namespaceamrex_1_1_0D386" kind="namespace"><name>amrex::@386</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D39" kind="namespace"><name>amrex::@39</name>
   </compound>
+  <compound refid="namespaceamrex_1_1_0D391" kind="namespace"><name>amrex::@391</name>
+  </compound>
   <compound refid="namespaceamrex_1_1_0D40" kind="namespace"><name>amrex::@40</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D400" kind="namespace"><name>amrex::@400</name>
+  <compound refid="namespaceamrex_1_1_0D402" kind="namespace"><name>amrex::@402</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D405" kind="namespace"><name>amrex::@405</name>
+  <compound refid="namespaceamrex_1_1_0D407" kind="namespace"><name>amrex::@407</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D408" kind="namespace"><name>amrex::@408</name>
+  <compound refid="namespaceamrex_1_1_0D410" kind="namespace"><name>amrex::@410</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D432" kind="namespace"><name>amrex::@432</name>
+  <compound refid="namespaceamrex_1_1_0D434" kind="namespace"><name>amrex::@434</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D437" kind="namespace"><name>amrex::@437</name>
+  <compound refid="namespaceamrex_1_1_0D439" kind="namespace"><name>amrex::@439</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D441" kind="namespace"><name>amrex::@441</name>
+  <compound refid="namespaceamrex_1_1_0D443" kind="namespace"><name>amrex::@443</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D451" kind="namespace"><name>amrex::@451</name>
+  <compound refid="namespaceamrex_1_1_0D453" kind="namespace"><name>amrex::@453</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D473" kind="namespace"><name>amrex::@473</name>
+  <compound refid="namespaceamrex_1_1_0D475" kind="namespace"><name>amrex::@475</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D49" kind="namespace"><name>amrex::@49</name>
   </compound>
@@ -9912,9 +9954,9 @@
     <member refid="namespaceamrex_1_1EB2_1a1d98d3722935491fe83fe526ec9d5760" kind="function"><name>translate</name></member>
     <member refid="namespaceamrex_1_1EB2_1ae1c1ff0fbaf7ff938aae5f3daf43d607" kind="function"><name>makeUnion</name></member>
   </compound>
-  <compound refid="namespaceamrex_1_1EB2_1_1_0D254" kind="namespace"><name>amrex::EB2::@254</name>
+  <compound refid="namespaceamrex_1_1EB2_1_1_0D256" kind="namespace"><name>amrex::EB2::@256</name>
   </compound>
-  <compound refid="namespaceamrex_1_1EB2_1_1_0D279" kind="namespace"><name>amrex::EB2::@279</name>
+  <compound refid="namespaceamrex_1_1EB2_1_1_0D281" kind="namespace"><name>amrex::EB2::@281</name>
   </compound>
   <compound refid="namespaceamrex_1_1EB2_1_1IIF__detail" kind="namespace"><name>amrex::EB2::IIF_detail</name>
     <member refid="namespaceamrex_1_1EB2_1_1IIF__detail_1a2ce5793d3df3d72296027edeed0945fc" kind="function"><name>do_min</name></member>
@@ -11581,6 +11623,10 @@
   </compound>
   <compound refid="AMReX__DistributionMapping_8H" kind="file"><name>AMReX_DistributionMapping.H</name>
   </compound>
+  <compound refid="AMReX__EArena_8cpp" kind="file"><name>AMReX_EArena.cpp</name>
+  </compound>
+  <compound refid="AMReX__EArena_8H" kind="file"><name>AMReX_EArena.H</name>
+  </compound>
   <compound refid="AMReX__error__fi_8cpp" kind="file"><name>AMReX_error_fi.cpp</name>
     <member refid="AMReX__error__fi_8cpp_1a2af202aacb485ea97d8c32194c265436" kind="function"><name>amrex_fi_error</name></member>
     <member refid="AMReX__error__fi_8cpp_1a9d3857c8f5b52583630237702397ab28" kind="function"><name>amrex_fi_abort</name></member>
@@ -12508,11 +12554,11 @@
   <compound refid="distribution_8c" kind="file"><name>distribution.c</name>
     <member refid="distribution_8c_1acf625a919ad096563f5d50a5f2b0cf8b" kind="define"><name>USE_SLAB_WORKAROUND</name></member>
     <member refid="distribution_8c_1a4b0f3914f3a5d4e3126ae2331c245c69" kind="define"><name>DEBUG_CONDITION</name></member>
-    <member refid="distribution_8c_1abc6126af1d45847bc59afa0aa3216b04" kind="enum"><name>@3</name></member>
-    <member refid="distribution_8c_1abc6126af1d45847bc59afa0aa3216b04adb2db6e983734128c679d2d6f9660d0a" kind="enumvalue"><name>REDISTRIBUTE_1_TO_3</name></member>
-    <member refid="distribution_8c_1abc6126af1d45847bc59afa0aa3216b04a5f1e479eb94259389275a715271d0e26" kind="enumvalue"><name>REDISTRIBUTE_3_TO_1</name></member>
-    <member refid="distribution_8c_1abc6126af1d45847bc59afa0aa3216b04a93d616dcfe604bebc3850ec51b2f5d15" kind="enumvalue"><name>REDISTRIBUTE_2_TO_3</name></member>
-    <member refid="distribution_8c_1abc6126af1d45847bc59afa0aa3216b04abbf46de6625103b22139e067e3d181fb" kind="enumvalue"><name>REDISTRIBUTE_3_TO_2</name></member>
+    <member refid="distribution_8c_1adc29c2ff13d900c2f185ee95427fb06c" kind="enum"><name>@4</name></member>
+    <member refid="distribution_8c_1adc29c2ff13d900c2f185ee95427fb06cadb2db6e983734128c679d2d6f9660d0a" kind="enumvalue"><name>REDISTRIBUTE_1_TO_3</name></member>
+    <member refid="distribution_8c_1adc29c2ff13d900c2f185ee95427fb06ca5f1e479eb94259389275a715271d0e26" kind="enumvalue"><name>REDISTRIBUTE_3_TO_1</name></member>
+    <member refid="distribution_8c_1adc29c2ff13d900c2f185ee95427fb06ca93d616dcfe604bebc3850ec51b2f5d15" kind="enumvalue"><name>REDISTRIBUTE_2_TO_3</name></member>
+    <member refid="distribution_8c_1adc29c2ff13d900c2f185ee95427fb06cabbf46de6625103b22139e067e3d181fb" kind="enumvalue"><name>REDISTRIBUTE_3_TO_2</name></member>
     <member refid="distribution_8c_1aaed7bb4d93b34151fd86f295349cea4e" kind="function"><name>separator</name></member>
     <member refid="distribution_8c_1ae4c86ea9f91153635f20d44b9de912aa" kind="function"><name>Coord_cube</name></member>
     <member refid="distribution_8c_1ad1ea5389446cfca9012818d81599d81d" kind="function"><name>Rank_cube</name></member>

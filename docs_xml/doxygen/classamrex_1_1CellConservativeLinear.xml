@@ -201,32 +201,32 @@
     <detaileddescription>
 <para>Linear conservative interpolation on cell centered data I.e, conservative interpolation with a limiting scheme that preserves the value of any linear combination of the fab components; //!&lt; e.g.,</para><para>if sum_ivar a(ic,jc,ivar)*fab(ic,jc,ivar) = 0, then sum_ivar a(ic,jc,ivar)*fab(if,jf,ivar) = 0 is satisfied in all fine cells if,jf covering coarse cell ic,jc. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="844">
-        <label>amrex::Interpolater</label>
-        <link refid="classamrex_1_1Interpolater"/>
-      </node>
       <node id="845">
-        <label>amrex::EBCellConservativeLinear</label>
-        <link refid="classamrex_1_1EBCellConservativeLinear"/>
-        <childnode refid="843" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="843">
-        <label>amrex::CellConservativeLinear</label>
-        <link refid="classamrex_1_1CellConservativeLinear"/>
-        <childnode refid="844" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="847">
         <label>amrex::Interpolater</label>
         <link refid="classamrex_1_1Interpolater"/>
       </node>
       <node id="846">
+        <label>amrex::EBCellConservativeLinear</label>
+        <link refid="classamrex_1_1EBCellConservativeLinear"/>
+        <childnode refid="844" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="844">
         <label>amrex::CellConservativeLinear</label>
         <link refid="classamrex_1_1CellConservativeLinear"/>
-        <childnode refid="847" relation="public-inheritance">
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="848">
+        <label>amrex::Interpolater</label>
+        <link refid="classamrex_1_1Interpolater"/>
+      </node>
+      <node id="847">
+        <label>amrex::CellConservativeLinear</label>
+        <link refid="classamrex_1_1CellConservativeLinear"/>
+        <childnode refid="848" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

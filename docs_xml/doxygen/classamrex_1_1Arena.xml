@@ -5,6 +5,7 @@
     <derivedcompoundref refid="classamrex_1_1BArena" prot="public" virt="non-virtual">amrex::BArena</derivedcompoundref>
     <derivedcompoundref refid="classamrex_1_1CArena" prot="public" virt="non-virtual">amrex::CArena</derivedcompoundref>
     <derivedcompoundref refid="classamrex_1_1DArena" prot="public" virt="non-virtual">amrex::DArena</derivedcompoundref>
+    <derivedcompoundref refid="classamrex_1_1EArena" prot="public" virt="non-virtual">amrex::EArena</derivedcompoundref>
     <includes refid="AMReX__Arena_8H" local="no">AMReX_Arena.H</includes>
       <sectiondef kind="protected-static-attrib">
       <memberdef kind="variable" id="classamrex_1_1Arena_1a52dd4bf03bb4d31899bca6ca3440760a" prot="protected" static="yes" mutable="no">
@@ -49,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="56" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="30" bodyend="30"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="56" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="31" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Arena_1a46ce2cd5cfc039cec64548b031fbde2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void *</type>
@@ -58,7 +59,8 @@
         <name>alloc</name>
         <reimplementedby refid="classamrex_1_1BArena_1a3f5a8cc7a0cb8013fe3bc8ba6270c510">alloc</reimplementedby>
         <reimplementedby refid="classamrex_1_1DArena_1ae231217fe1f9796f26a006b122146940">alloc</reimplementedby>
-        <reimplementedby refid="classamrex_1_1CArena_1ae680f4f04d598438083ac596e4117c1f">alloc</reimplementedby>
+        <reimplementedby refid="classamrex_1_1EArena_1a9f316f7f2bf3ffa4528045191ebdc2b5">alloc</reimplementedby>
+        <reimplementedby refid="classamrex_1_1CArena_1aeafab1fb8b884a0fc6ac916ae7d10321">alloc</reimplementedby>
         <param>
           <type>std::size_t</type>
           <declname>sz</declname>
@@ -87,7 +89,8 @@
         <name>free</name>
         <reimplementedby refid="classamrex_1_1BArena_1a64267cbe47ae467eedfd819c6fc50cd2">free</reimplementedby>
         <reimplementedby refid="classamrex_1_1DArena_1a334bde7e4a70a4fd2a7b09c216dfc504">free</reimplementedby>
-        <reimplementedby refid="classamrex_1_1CArena_1a3abe546ac10da68bd47ddbcf7e8f4d5f">free</reimplementedby>
+        <reimplementedby refid="classamrex_1_1EArena_1a3c0b58cac2bd02c2ca5d94c31d6b1d8c">free</reimplementedby>
+        <reimplementedby refid="classamrex_1_1CArena_1a6920342ae3cc9420d8e59915130e138e">free</reimplementedby>
         <param>
           <type>void *</type>
           <declname>pt</declname>
@@ -117,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="71" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="33" bodyend="38"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="71" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="34" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Arena_1a9f40990a545f4d280e905117fc6a0786" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -130,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="73" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="91" bodyend="161"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="73" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="92" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Arena_1a506a68384da30629323d0839f13812c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -143,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="164" bodyend="253"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="74" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="165" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Arena_1a06dd6197d2081d7dd4c1bed308edd387" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="75" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="256" bodyend="275"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="75" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="257" bodyend="276"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -175,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="41" bodyend="71"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="42" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1Arena_1a9267a7d1f5ca6f3d24154c06329bdbe7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -192,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="95" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="74" bodyend="88"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.H" line="95" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Arena.cpp" bodystart="75" bodyend="89"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -200,6 +203,12 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="560">
+        <label>amrex::EArena</label>
+        <link refid="classamrex_1_1EArena"/>
+        <childnode refid="556" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="556">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
@@ -224,14 +233,14 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="561">
+      <node id="562">
         <label>amrex::ArenaInfo</label>
         <link refid="structamrex_1_1ArenaInfo"/>
       </node>
-      <node id="560">
+      <node id="561">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
-        <childnode refid="561" relation="usage">
+        <childnode refid="562" relation="usage">
           <edgelabel>arena_info</edgelabel>
         </childnode>
       </node>
