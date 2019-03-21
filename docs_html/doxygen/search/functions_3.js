@@ -62,6 +62,7 @@ var searchData=
   ['checkpointpost',['checkPointPost',['../classamrex_1_1AmrLevel.html#a91b3bc1707aa307c5eeb73d9e2bfdd80',1,'amrex::AmrLevel::checkPointPost()'],['../classamrex_1_1ParticleContainer.html#a58b92af437a359f18810fb9f18b6683c',1,'amrex::ParticleContainer::CheckpointPost()']]],
   ['checkpointpre',['checkPointPre',['../classamrex_1_1AmrLevel.html#aa8953b789fe7af91082c2fefcced1a16',1,'amrex::AmrLevel::checkPointPre()'],['../classamrex_1_1ParticleContainer.html#a04202c0398fb9dde3867ffaa49f9c724',1,'amrex::ParticleContainer::CheckpointPre()']]],
   ['checkregionsdata',['CheckRegionsData',['../classRegionsProfStats.html#af2a2ac125d7c17979147665a1e1ee685',1,'RegionsProfStats']]],
+  ['checkseedarraysizeandresize',['CheckSeedArraySizeAndResize',['../namespaceamrex.html#a27218ac967d5f2b670c49d3d55e9738d',1,'amrex']]],
   ['chop',['chop',['../classamrex_1_1Cluster.html#ada7fc0e6b932ef954e034d0da871f10d',1,'amrex::Cluster::chop()'],['../classamrex_1_1ClusterList.html#ae1763edf735b27fc9399dc6e09a4c983',1,'amrex::ClusterList::chop()'],['../classamrex_1_1Box.html#af3a6ade5162dd1ba7ef55798d03a335c',1,'amrex::Box::chop()']]],
   ['chopgrids',['ChopGrids',['../classamrex_1_1AmrMesh.html#a29bca4cd9fb61c896130db020528e56f',1,'amrex::AmrMesh']]],
   ['cic_5fcells',['CIC_Cells',['../structamrex_1_1Particle.html#aa60b356e158e411342c612691f687692',1,'amrex::Particle']]],

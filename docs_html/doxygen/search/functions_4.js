@@ -16,6 +16,7 @@ var searchData=
   ['deallocate',['deallocate',['../classhacc_1_1AlignedAllocator.html#ad5df7bcf7989386441a7b8fc73a81cc4',1,'hacc::AlignedAllocator']]],
   ['deallocate_5forder',['deallocate_order',['../classamrex_1_1DArena.html#aff39d5f7aae00008761d13e8cd4f429c',1,'amrex::DArena']]],
   ['deallocate_5fsystem',['deallocate_system',['../classamrex_1_1Arena.html#a9267a7d1f5ca6f3d24154c06329bdbe7',1,'amrex::Arena']]],
+  ['deallocaterandomseeddevarray',['DeallocateRandomSeedDevArray',['../namespaceamrex.html#abce0125a244f443854b1c4a2709c5990',1,'amrex']]],
   ['dec',['Dec',['../namespaceamrex_1_1Cuda_1_1Atomic.html#a8bc6467a2953a103172f7dcca414ba15',1,'amrex::Cuda::Atomic']]],
   ['decrementnumberofusers',['DecrementNumberOfUsers',['../classamrex_1_1DataServices.html#a85a4eb7cb438f3c75d8de3ecd71a70f7',1,'amrex::DataServices']]],
   ['defbaselevel',['defBaseLevel',['../classamrex_1_1Amr.html#ae05b2fdc32475c82226b591968dae641',1,'amrex::Amr']]],

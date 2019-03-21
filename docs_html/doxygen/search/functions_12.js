@@ -1,7 +1,7 @@
 var searchData=
 [
   ['radsquared',['radSquared',['../classamrex_1_1RealVect.html#a4e7731342a5fe8b7d09af2db5c128a87',1,'amrex::RealVect']]],
-  ['random',['Random',['../namespaceamrex.html#a2dbda9b9aada55aae2f6c7379fff09f2',1,'amrex']]],
+  ['random',['Random',['../namespaceamrex.html#af7e3ca9c2455e95a21d765123c8d287e',1,'amrex']]],
   ['random_5fint',['Random_int',['../namespaceamrex.html#a7916c1f3adf571c67baaf478cf139bff',1,'amrex']]],
   ['randomnormal',['RandomNormal',['../namespaceamrex.html#a782cbf4ddd90250b3483f95844dea114',1,'amrex']]],
   ['range',['Range',['../namespaceamrex_1_1Cuda.html#af2d03fabad9378084ccfc0a1779ca3eb',1,'amrex::Cuda']]],
@@ -138,6 +138,7 @@ var searchData=
   ['resize',['resize',['../classamrex_1_1BaseFab.html#a48099208f15f741c739316388f61737a',1,'amrex::BaseFab::resize()'],['../classamrex_1_1BoxArray.html#aa405ddc0841be0f5b1bac1d1d1abf7ed',1,'amrex::BoxArray::resize()'],['../classamrex_1_1FArrayBox.html#ae5a4b9b9a64a4c1cfd534bb6eefc6b30',1,'amrex::FArrayBox::resize()'],['../classamrex_1_1IArrayBox.html#ab4da50b98000eb197a2b1050a5e2fd51',1,'amrex::IArrayBox::resize()'],['../classamrex_1_1ArrayOfStructs.html#a74abec66d89584e1409d0efbb8a79bfa',1,'amrex::ArrayOfStructs::resize()'],['../structamrex_1_1ParticleTile.html#a01c6271c92fabf63be8ceef8e8bf3ebc',1,'amrex::ParticleTile::resize()'],['../structamrex_1_1StructOfArrays.html#adb315c6b4e14918ddef7a86fb893ee2a',1,'amrex::StructOfArrays::resize()']]],
   ['resizecontainers',['resizeContainers',['../classamrex_1_1NeighborParticleContainer.html#af03a2d960e9c4975823cee72793a6410',1,'amrex::NeighborParticleContainer']]],
   ['resizedata',['resizeData',['../classamrex_1_1ParticleContainer.html#a73a9685a51644f83bd92af8691ca0230',1,'amrex::ParticleContainer']]],
+  ['resizerandomseed',['ResizeRandomSeed',['../namespaceamrex.html#a404b0ad92acc3684ad1e12ef7746d0bc',1,'amrex']]],
   ['resnorminf',['ResNormInf',['../classamrex_1_1MLMG.html#a3ee68a8bba6178a55d1ca183be3f6fb3',1,'amrex::MLMG']]],
   ['restart',['restart',['../classamrex_1_1Amr.html#a3070a179ad3daed519f8d41a2f2d6b3b',1,'amrex::Amr::restart()'],['../classamrex_1_1AmrLevel.html#a05899e47b34be116fa7a9a40ecaa74ca',1,'amrex::AmrLevel::restart()'],['../classamrex_1_1StateData.html#aa1a00caa21e6aadb0d1916138824a3f5',1,'amrex::StateData::restart(std::istream &amp;is, const Box &amp;p_domain, const BoxArray &amp;grds, const DistributionMapping &amp;dm, const FabFactory&lt; FArrayBox &gt; &amp;factroy, const StateDescriptor &amp;d, const std::string &amp;restart_file)'],['../classamrex_1_1StateData.html#aa6591b111a02fd2bc24bf77c7d2e41e2',1,'amrex::StateData::restart(const StateDescriptor &amp;d, const StateData &amp;rhs)'],['../classamrex_1_1ParticleContainer.html#ac9860d8333c8b88dfd3df60cec2351df',1,'amrex::ParticleContainer::Restart()']]],
   ['restartdoit',['restartDoit',['../classamrex_1_1StateData.html#a36bd8af570145a2fad26927f2986e996',1,'amrex::StateData']]],

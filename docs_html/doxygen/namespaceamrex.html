@@ -1659,9 +1659,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a782cbf4ddd90250b3483f95844dea114"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a782cbf4ddd90250b3483f95844dea114">RandomNormal</a> (double mean, double stddev)</td></tr>
 <tr class="memdesc:a782cbf4ddd90250b3483f95844dea114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a psuedo-random double using C++11's mt19937.  <a href="#a782cbf4ddd90250b3483f95844dea114">More...</a><br /></td></tr>
 <tr class="separator:a782cbf4ddd90250b3483f95844dea114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dbda9b9aada55aae2f6c7379fff09f2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a2dbda9b9aada55aae2f6c7379fff09f2">Random</a> ()</td></tr>
-<tr class="memdesc:a2dbda9b9aada55aae2f6c7379fff09f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a psuedo-random double using C++11's mt19937.  <a href="#a2dbda9b9aada55aae2f6c7379fff09f2">More...</a><br /></td></tr>
-<tr class="separator:a2dbda9b9aada55aae2f6c7379fff09f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e3ca9c2455e95a21d765123c8d287e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#af7e3ca9c2455e95a21d765123c8d287e">Random</a> ()</td></tr>
+<tr class="memdesc:af7e3ca9c2455e95a21d765123c8d287e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a psuedo-random double using C++11's mt19937.  <a href="#af7e3ca9c2455e95a21d765123c8d287e">More...</a><br /></td></tr>
+<tr class="separator:af7e3ca9c2455e95a21d765123c8d287e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7916c1f3adf571c67baaf478cf139bff"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a7916c1f3adf571c67baaf478cf139bff">Random_int</a> (unsigned long n)</td></tr>
 <tr class="memdesc:a7916c1f3adf571c67baaf478cf139bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a psuedo-random int using C++11's mt19937.  <a href="#a7916c1f3adf571c67baaf478cf139bff">More...</a><br /></td></tr>
 <tr class="separator:a7916c1f3adf571c67baaf478cf139bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1683,6 +1683,16 @@ Functions</h2></td></tr>
 <tr class="separator:aaf97cdbc0db387b57d9641d57cce591e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ea4e09dbb2ff1919ec42ea7702d5aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a15ea4e09dbb2ff1919ec42ea7702d5aa">CRRBetweenLevels</a> (int fromlevel, int tolevel, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt; &amp;refratios)</td></tr>
 <tr class="separator:a15ea4e09dbb2ff1919ec42ea7702d5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4125d429c379e2c09dd742aa6acc1e0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a4125d429c379e2c09dd742aa6acc1e0e">InitRandSeedOnDevice</a> (int N)</td></tr>
+<tr class="memdesc:a4125d429c379e2c09dd742aa6acc1e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the seeds of the random number generator for each CUDA thread . An in-built CUDA library, curand_init is used here. The pseusorandom sequence currently implemented is obtained from the XORWOW and MRG32k3a generator.  <a href="#a4125d429c379e2c09dd742aa6acc1e0e">More...</a><br /></td></tr>
+<tr class="separator:a4125d429c379e2c09dd742aa6acc1e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404b0ad92acc3684ad1e12ef7746d0bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a404b0ad92acc3684ad1e12ef7746d0bc">ResizeRandomSeed</a> (int N)</td></tr>
+<tr class="memdesc:a404b0ad92acc3684ad1e12ef7746d0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize seed array and copy address to global symbol.  <a href="#a404b0ad92acc3684ad1e12ef7746d0bc">More...</a><br /></td></tr>
+<tr class="separator:a404b0ad92acc3684ad1e12ef7746d0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27218ac967d5f2b670c49d3d55e9738d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a27218ac967d5f2b670c49d3d55e9738d">CheckSeedArraySizeAndResize</a> (int N)</td></tr>
+<tr class="separator:a27218ac967d5f2b670c49d3d55e9738d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce0125a244f443854b1c4a2709c5990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#abce0125a244f443854b1c4a2709c5990">DeallocateRandomSeedDevArray</a> ()</td></tr>
+<tr class="separator:abce0125a244f443854b1c4a2709c5990"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff6b4420435f9951710a37eda411db8f"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#aff6b4420435f9951710a37eda411db8f">operator&gt;&gt;</a> (std::istream &amp;, const <a class="el" href="classamrex_1_1expect.html">expect</a> &amp;exp)</td></tr>
 <tr class="separator:aff6b4420435f9951710a37eda411db8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac55f6d6246ea70d74588e5f06fd92e99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ac55f6d6246ea70d74588e5f06fd92e99">SerializeStringArray</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; std::string &gt; &amp;stringArray)</td></tr>
@@ -7754,6 +7764,22 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a27218ac967d5f2b670c49d3d55e9738d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::CheckSeedArraySizeAndResize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aa7fdcd82c18fdf6c33f4194da8e7da46"></a>
 <div class="memitem">
 <div class="memproto">
@@ -8644,6 +8670,21 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abce0125a244f443854b1c4a2709c5990"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::DeallocateRandomSeedDevArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -11908,6 +11949,24 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a4125d429c379e2c09dd742aa6acc1e0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::InitRandSeedOnDevice </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the seeds of the random number generator for each CUDA thread . An in-built CUDA library, curand_init is used here. The pseusorandom sequence currently implemented is obtained from the XORWOW and MRG32k3a generator. </p>
+
+</div>
+</div>
 <a class="anchor" id="a4b0d01afec5218e25096773af48821bb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -14260,6 +14319,76 @@ template&lt;class T , class... Ts&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a405e3e1ee214448cb3f78a4547b921b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="AMReX__Extension_8H.html#aeb09e10bb31cfaa6b8928520c9041df9">AMREX_INLINE</a> void amrex::mlabeclap_adotx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>bX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceamrex.html#a317082290117984ef29e149750e2c7a8">GpuArray</a>&lt; Real, AMREX_SPACEDIM &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>dxinv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>beta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af3e6e104796601e29684950d27463e27"></a>
 <div class="memitem">
 <div class="memproto">
@@ -14302,76 +14431,6 @@ template&lt;class T , class... Ts&gt; </div>
           <td></td>
           <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
           <td class="paramname"><em>bY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceamrex.html#a317082290117984ef29e149750e2c7a8">GpuArray</a>&lt; Real, AMREX_SPACEDIM &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>dxinv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>alpha</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>beta</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a405e3e1ee214448cb3f78a4547b921b6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="AMReX__Extension_8H.html#aeb09e10bb31cfaa6b8928520c9041df9">AMREX_INLINE</a> void amrex::mlabeclap_adotx </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;&#160;</td>
-          <td class="paramname"><em>box</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>bX</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -19679,6 +19738,34 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1637e435aecce22da819f6df77982d2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; amrex::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;&#160;</td>
+          <td class="paramname"><em>hd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a <a class="el" href="structamrex_1_1VisMF_1_1Header.html" title="An on-disk FabArray&lt;FArrayBox&gt; contains this info in a header file. ">VisMF::Header</a> to an ostream in ASCII. </p>
+
+</div>
+</div>
 <a class="anchor" id="a85a195c43f85ba86fc9f4e450117678a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -19710,34 +19797,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1637e435aecce22da819f6df77982d2f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; amrex::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;&#160;</td>
-          <td class="paramname"><em>hd</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write a <a class="el" href="structamrex_1_1VisMF_1_1Header.html" title="An on-disk FabArray&lt;FArrayBox&gt; contains this info in a header file. ">VisMF::Header</a> to an ostream in ASCII. </p>
 
 </div>
 </div>
@@ -20435,32 +20494,6 @@ template&lt;int NReal, int NInt&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aff6b4420435f9951710a37eda411db8f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::istream &amp; amrex::operator&gt;&gt; </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>is</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classamrex_1_1expect.html">expect</a> &amp;&#160;</td>
-          <td class="paramname"><em>exp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a89d1ab126c05c2eac37ba679a7415a9b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -20476,6 +20509,32 @@ template&lt;int NReal, int NInt&gt; </div>
           <td></td>
           <td class="paramtype"><a class="el" href="classamrex_1_1RealVect.html">RealVect</a> &amp;&#160;</td>
           <td class="paramname"><em>iv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff6b4420435f9951710a37eda411db8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream &amp; amrex::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1expect.html">expect</a> &amp;&#160;</td>
+          <td class="paramname"><em>exp</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -20594,23 +20653,6 @@ template&lt;int NReal, int NInt&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="afe890be0bd82650235456eabcf50e309"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void amrex::OutOfMemory </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Aborts after printing message indicating out-of-memory; i.e. operator new has failed. This is the "supported" set_new_handler() function for AMReX applications. </p>
-
-</div>
-</div>
 <a class="anchor" id="a60941081c34a5d500140c8577e11625a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -20637,6 +20679,23 @@ template&lt;int NReal, int NInt&gt; </div>
 
 <p>Prints out an out-of-memory message and aborts. It is called by various routines when a call to new fails. </p>
 <p>Called as <a class="el" href="namespaceamrex.html#a60941081c34a5d500140c8577e11625a" title="Prints out an out-of-memory message and aborts. It is called by various routines when a call to new f...">amrex::OutOfMemory</a>(<b>FILE</b>, <b>LINE</b>); </p>
+
+</div>
+</div>
+<a class="anchor" id="afe890be0bd82650235456eabcf50e309"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::OutOfMemory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aborts after printing message indicating out-of-memory; i.e. operator new has failed. This is the "supported" set_new_handler() function for AMReX applications. </p>
 
 </div>
 </div>
@@ -21458,12 +21517,12 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
 
 </div>
 </div>
-<a class="anchor" id="a2dbda9b9aada55aae2f6c7379fff09f2"></a>
+<a class="anchor" id="af7e3ca9c2455e95a21d765123c8d287e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double amrex::Random </td>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> double amrex::Random </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -22573,6 +22632,24 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a404b0ad92acc3684ad1e12ef7746d0bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::ResizeRandomSeed </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize seed array and copy address to global symbol. </p>
 
 </div>
 </div>

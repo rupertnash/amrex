@@ -108,6 +108,7 @@ var searchData=
   ['checkpointpost',['checkPointPost',['../classamrex_1_1AmrLevel.html#a91b3bc1707aa307c5eeb73d9e2bfdd80',1,'amrex::AmrLevel::checkPointPost()'],['../classamrex_1_1ParticleContainer.html#a58b92af437a359f18810fb9f18b6683c',1,'amrex::ParticleContainer::CheckpointPost()']]],
   ['checkpointpre',['checkPointPre',['../classamrex_1_1AmrLevel.html#aa8953b789fe7af91082c2fefcced1a16',1,'amrex::AmrLevel::checkPointPre()'],['../classamrex_1_1ParticleContainer.html#a04202c0398fb9dde3867ffaa49f9c724',1,'amrex::ParticleContainer::CheckpointPre()']]],
   ['checkregionsdata',['CheckRegionsData',['../classRegionsProfStats.html#af2a2ac125d7c17979147665a1e1ee685',1,'RegionsProfStats']]],
+  ['checkseedarraysizeandresize',['CheckSeedArraySizeAndResize',['../namespaceamrex.html#a27218ac967d5f2b670c49d3d55e9738d',1,'amrex']]],
   ['chk_5ffile',['chk_file',['../classamrex_1_1LSCoreBase.html#aff9d9cdf797536dec02c65a05e76ad7e',1,'amrex::LSCoreBase']]],
   ['chk_5fint',['chk_int',['../classamrex_1_1LSCoreBase.html#a9ff86ee64b8ce1f3e7e783bfb3ef26b3',1,'amrex::LSCoreBase']]],
   ['chop',['chop',['../classamrex_1_1Cluster.html#ada7fc0e6b932ef954e034d0da871f10d',1,'amrex::Cluster::chop()'],['../classamrex_1_1ClusterList.html#ae1763edf735b27fc9399dc6e09a4c983',1,'amrex::ClusterList::chop()'],['../classamrex_1_1Box.html#af3a6ade5162dd1ba7ef55798d03a335c',1,'amrex::Box::chop()']]],
@@ -424,7 +425,7 @@ var searchData=
   ['cvspils_5fsunls_5fnull',['cvspils_sunls_null',['../namespacefcvode__mod.html#aea7da74c42b41c1ce3bdedc3b0c6ad0e',1,'fcvode_mod']]],
   ['cx',['CX',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#a0b4c12a5dc8490a3cff8385334db2d13',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
   ['cy',['CY',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#ac5bc792e372b15e7a1d3efe6daac9aec',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
-  ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html',1,'amrex::EB2']]],
   ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html#a7f70d143e2569bc9112f4c5f1efcd83d',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#a65cc987a90a62e4c8e29302895bab48c',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, Real a_height, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#ac95d0145e3b32c4416b51918700ebe7b',1,'amrex::EB2::CylinderIF::CylinderIF(const CylinderIF &amp;rhs) noexcept=default'],['../classamrex_1_1EB2_1_1CylinderIF.html#a2c89f29c0c46c2871e4a619b859e8882',1,'amrex::EB2::CylinderIF::CylinderIF(CylinderIF &amp;&amp;rhs) noexcept=default']]],
+  ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html',1,'amrex::EB2']]],
   ['cz',['CZ',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#addbd2f751d6f06eaa9eac7526839a4c9',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]]
 ];

@@ -36,6 +36,7 @@ var searchData=
   ['deallocate',['deallocate',['../classhacc_1_1AlignedAllocator.html#ad5df7bcf7989386441a7b8fc73a81cc4',1,'hacc::AlignedAllocator']]],
   ['deallocate_5forder',['deallocate_order',['../classamrex_1_1DArena.html#aff39d5f7aae00008761d13e8cd4f429c',1,'amrex::DArena']]],
   ['deallocate_5fsystem',['deallocate_system',['../classamrex_1_1Arena.html#a9267a7d1f5ca6f3d24154c06329bdbe7',1,'amrex::Arena']]],
+  ['deallocaterandomseeddevarray',['DeallocateRandomSeedDevArray',['../namespaceamrex.html#abce0125a244f443854b1c4a2709c5990',1,'amrex']]],
   ['debug',['debug',['../structdistribution__t.html#a8bdbbba2982ae871ad4c0f389ca78959',1,'distribution_t::debug()'],['../namespaceamrex_1_1system.html#aeb34e12844e5d37ee8582e569d702c95',1,'amrex::system::Debug()']]],
   ['debug_5fcondition',['DEBUG_CONDITION',['../distribution_8c.html#a4b0f3914f3a5d4e3126ae2331c245c69',1,'distribution.c']]],
   ['dec',['Dec',['../namespaceamrex_1_1Cuda_1_1Atomic.html#a8bc6467a2953a103172f7dcca414ba15',1,'amrex::Cuda::Atomic']]],
