@@ -20,7 +20,7 @@ var searchData=
   ['_7easyncarray',['~AsyncArray',['../classamrex_1_1Cuda_1_1AsyncArray.html#a675ebf69ec03d7b340785c3be8d8f18b',1,'amrex::Cuda::AsyncArray']]],
   ['_7easyncfab',['~AsyncFab',['../classamrex_1_1Cuda_1_1AsyncFab.html#a33522be42ebac0c474d74fe4264160bb',1,'amrex::Cuda::AsyncFab']]],
   ['_7easyncfabimpl',['~AsyncFabImpl',['../classamrex_1_1Cuda_1_1AsyncFabImpl.html#a1d6f0f69d10492cd715cbe21b8f5cab2',1,'amrex::Cuda::AsyncFabImpl']]],
-  ['_7ebasefab',['~BaseFab',['../classamrex_1_1BaseFab.html#a442cc6eaf0d47323491f0922e2266a6a',1,'amrex::BaseFab']]],
+  ['_7ebasefab',['~BaseFab',['../classamrex_1_1BaseFab.html#a9bb203c6121237ab7e1c979a2107d852',1,'amrex::BaseFab']]],
   ['_7ebaseumap',['~BaseUmap',['../classamrex_1_1BaseUmap.html#a66dce96b470d563ad6f46b9054733106',1,'amrex::BaseUmap']]],
   ['_7eblprofstats',['~BLProfStats',['../classBLProfStats.html#a78a439d9e62c00492ada16e9466c068d',1,'BLProfStats']]],
   ['_7ebndrydata',['~BndryData',['../classamrex_1_1BndryData.html#ad6ebc5a788a82c41a8b1bffc8e589440',1,'amrex::BndryData']]],

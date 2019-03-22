@@ -13,5 +13,6 @@ var searchData=
   ['copycomtagscontainer',['CopyComTagsContainer',['../structamrex_1_1FabArrayBase_1_1CopyComTag.html#aad1bcd5a45514f9dffbeaa327d3aa880',1,'amrex::FabArrayBase::CopyComTag::CopyComTagsContainer()'],['../classamrex_1_1FabArrayBase.html#a1bb6a09ada00b5b7a900d8fecbf92e3c',1,'amrex::FabArrayBase::CopyComTagsContainer()'],['../classamrex_1_1MultiFab.html#a0945ab26050100412261a7e5e51e65bc',1,'amrex::MultiFab::CopyComTagsContainer()']]],
   ['cpcache',['CPCache',['../classamrex_1_1FabArrayBase.html#a68151f78c47e353f18a8077ce54afc30',1,'amrex::FabArrayBase']]],
   ['cpcacheiter',['CPCacheIter',['../classamrex_1_1FabArrayBase.html#ae1a0d2f95995d26b5afe7c866f760bd6',1,'amrex::FabArrayBase']]],
+  ['cpudataallocator',['CpuDataAllocator',['../namespaceamrex.html#a570488a6e742b83a7acb0e5d7074dd05',1,'amrex']]],
   ['cudamanagedallocator',['CudaManagedAllocator',['../namespaceamrex.html#abd282e9563d85643f4469e82aaea4d5c',1,'amrex']]]
 ];

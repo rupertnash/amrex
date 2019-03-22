@@ -1,8 +1,9 @@
 var searchData=
 [
   ['darena',['DArena',['../classamrex_1_1DArena.html',1,'amrex']]],
-  ['datablock',['DataBlock',['../structCommProfStats_1_1DataBlock.html',1,'CommProfStats']]],
+  ['dataallocator',['DataAllocator',['../structamrex_1_1DataAllocator.html',1,'amrex']]],
   ['datablock',['DataBlock',['../structRegionsProfStats_1_1DataBlock.html',1,'RegionsProfStats']]],
+  ['datablock',['DataBlock',['../structCommProfStats_1_1DataBlock.html',1,'CommProfStats']]],
   ['dataservices',['DataServices',['../classamrex_1_1DataServices.html',1,'amrex']]],
   ['defaultfabfactory',['DefaultFabFactory',['../classamrex_1_1DefaultFabFactory.html',1,'amrex']]],
   ['derivelist',['DeriveList',['../classamrex_1_1DeriveList.html',1,'amrex']]],
