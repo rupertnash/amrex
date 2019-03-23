@@ -229,6 +229,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa41bd2470b1e771f82e07d2b84fc2d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a246e77e874045b7f61bb9e4e61706f33"><td class="memItemLeft" align="right" valign="top">FAB const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#a246e77e874045b7f61bb9e4e61706f33">fabDevicePtr</a> (int K) const noexcept</td></tr>
 <tr class="separator:a246e77e874045b7f61bb9e4e61706f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee66e28c88873476c448f717cc091ff2"><td class="memTemplParams" colspan="2">template&lt;class  = typename std::enable_if&lt;IsBaseFab&lt;FAB&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:aee66e28c88873476c448f717cc091ff2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#aee66e28c88873476c448f717cc091ff2">prefetchToHost</a> (const <a class="el" href="classamrex_1_1MFIter.html">MFIter</a> &amp;mfi) const noexcept</td></tr>
+<tr class="separator:aee66e28c88873476c448f717cc091ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849857a2c15009d1122bf101d53572f8"><td class="memTemplParams" colspan="2">template&lt;class  = typename std::enable_if&lt;IsBaseFab&lt;FAB&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a849857a2c15009d1122bf101d53572f8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#a849857a2c15009d1122bf101d53572f8">prefetchToDevice</a> (const <a class="el" href="classamrex_1_1MFIter.html">MFIter</a> &amp;mfi) const noexcept</td></tr>
+<tr class="separator:a849857a2c15009d1122bf101d53572f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42f486c44935ecae3e27856f61a1a201"><td class="memTemplParams" colspan="2">template&lt;class T , typename std::enable_if&lt;!IsBaseFab&lt; T &gt;::value, int &gt;::type  = 0&gt; </td></tr>
 <tr class="memitem:a42f486c44935ecae3e27856f61a1a201"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArray.html#a42f486c44935ecae3e27856f61a1a201">checkDataPtrConsistence</a> (T const *d, T const *h) const noexcept</td></tr>
 <tr class="separator:a42f486c44935ecae3e27856f61a1a201"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3933,6 +3939,62 @@ template&lt;class FOO &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a849857a2c15009d1122bf101d53572f8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class FAB &gt; </div>
+<div class="memtemplate">
+template&lt;class &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classamrex_1_1FabArray.html">amrex::FabArray</a>&lt; FAB &gt;::prefetchToDevice </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1MFIter.html">MFIter</a> &amp;&#160;</td>
+          <td class="paramname"><em>mfi</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aee66e28c88873476c448f717cc091ff2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class FAB &gt; </div>
+<div class="memtemplate">
+template&lt;class &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classamrex_1_1FabArray.html">amrex::FabArray</a>&lt; FAB &gt;::prefetchToHost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1MFIter.html">MFIter</a> &amp;&#160;</td>
+          <td class="paramname"><em>mfi</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
