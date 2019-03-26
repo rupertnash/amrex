@@ -209,8 +209,10 @@ var searchData=
   ['comprhs',['compRHS',['../classamrex_1_1MLNodeLaplacian.html#a59c04abe13cccca82379bbcac19a5467',1,'amrex::MLNodeLaplacian']]],
   ['compsyncresidualcoarse',['compSyncResidualCoarse',['../classamrex_1_1MLNodeLaplacian.html#afc701712c658d0f67bef6a07bbf323b9',1,'amrex::MLNodeLaplacian']]],
   ['compsyncresidualfine',['compSyncResidualFine',['../classamrex_1_1MLNodeLaplacian.html#a44e85cef12a5b759e5a52e64cc9f2c3d',1,'amrex::MLNodeLaplacian']]],
-  ['compute_5fdphidn_5f2d',['compute_dphidn_2d',['../namespaceamrex__mlebabeclap__2d__module.html#ae0014a08fa6008a948c6498f12ee6611',1,'amrex_mlebabeclap_2d_module']]],
-  ['compute_5fdphidn_5f3d',['compute_dphidn_3d',['../namespaceamrex__mlebabeclap__3d__module.html#a3fc5f78a9db70a050a7c8d94dbb6941b',1,'amrex_mlebabeclap_3d_module']]],
+  ['compute_5fdphidn_5f2d',['compute_dphidn_2d',['../namespaceamrex__mlebabeclap__2d__module.html#a40abe7520309ceaf4ef8bc1097b12fbb',1,'amrex_mlebabeclap_2d_module']]],
+  ['compute_5fdphidn_5f2d_5fho',['compute_dphidn_2d_ho',['../namespaceamrex__mlebabeclap__2d__module.html#adb84fa909d3ee31b9bd20fe480d8f663',1,'amrex_mlebabeclap_2d_module']]],
+  ['compute_5fdphidn_5f3d',['compute_dphidn_3d',['../namespaceamrex__mlebabeclap__3d__module.html#ac4aee32eefcdf56e21cb67321785ff91',1,'amrex_mlebabeclap_3d_module']]],
+  ['compute_5fdphidn_5f3d_5fho',['compute_dphidn_3d_ho',['../namespaceamrex__mlebabeclap__3d__module.html#a4fcf69ea49af8de6a654c150c285572c',1,'amrex_mlebabeclap_3d_module']]],
   ['compute_5fintegrals',['compute_integrals',['../namespaceamrex.html#a917f25f6d844509145da05bf23c5dc29',1,'amrex']]],
   ['compute_5fnew_5fdt_5fon_5fregrid',['compute_new_dt_on_regrid',['../namespaceamrex.html#a3effddc12a2d9eb3c02491feacfd59c4',1,'amrex']]],
   ['computecost',['computeCost',['../namespaceamrex_1_1loadBalanceKD.html#ad33644c42ce9b13ed99874a358d40bd4',1,'amrex::loadBalanceKD']]],
@@ -426,7 +428,7 @@ var searchData=
   ['cvspils_5fsunls_5fnull',['cvspils_sunls_null',['../namespacefcvode__mod.html#aea7da74c42b41c1ce3bdedc3b0c6ad0e',1,'fcvode_mod']]],
   ['cx',['CX',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#a0b4c12a5dc8490a3cff8385334db2d13',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
   ['cy',['CY',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#ac5bc792e372b15e7a1d3efe6daac9aec',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
-  ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html#a7f70d143e2569bc9112f4c5f1efcd83d',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#a65cc987a90a62e4c8e29302895bab48c',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, Real a_height, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#ac95d0145e3b32c4416b51918700ebe7b',1,'amrex::EB2::CylinderIF::CylinderIF(const CylinderIF &amp;rhs) noexcept=default'],['../classamrex_1_1EB2_1_1CylinderIF.html#a2c89f29c0c46c2871e4a619b859e8882',1,'amrex::EB2::CylinderIF::CylinderIF(CylinderIF &amp;&amp;rhs) noexcept=default']]],
   ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html',1,'amrex::EB2']]],
+  ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html#a7f70d143e2569bc9112f4c5f1efcd83d',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#a65cc987a90a62e4c8e29302895bab48c',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, Real a_height, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#ac95d0145e3b32c4416b51918700ebe7b',1,'amrex::EB2::CylinderIF::CylinderIF(const CylinderIF &amp;rhs) noexcept=default'],['../classamrex_1_1EB2_1_1CylinderIF.html#a2c89f29c0c46c2871e4a619b859e8882',1,'amrex::EB2::CylinderIF::CylinderIF(CylinderIF &amp;&amp;rhs) noexcept=default']]],
   ['cz',['CZ',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#addbd2f751d6f06eaa9eac7526839a4c9',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]]
 ];
