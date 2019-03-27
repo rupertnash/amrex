@@ -3213,9 +3213,31 @@
 <codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="908"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="909"><highlight class="normal"></highlight></codeline>
-<codeline lineno="910"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="911"><highlight class="normal"></highlight></codeline>
-<codeline lineno="912"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="910"><highlight class="normal">template<sp/>&lt;class<sp/>FAB,<sp/>class<sp/>bar<sp/>=<sp/>amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::value&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="911"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="912" refid="namespaceamrex_1a55880b94ecb4d6fd4b03e5e86b5e9f0b" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1a55880b94ecb4d6fd4b03e5e86b5e9f0b" kindref="member">prefetchToHost</ref><sp/>(<ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>fa)</highlight></codeline>
+<codeline lineno="913"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="914"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="915"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref><sp/>mfi(fa);<sp/>mfi.<ref refid="classamrex_1_1MFIter_1a61b9a1d5eda39765d1db9b9b936558c7" kindref="member">isValid</ref>();<sp/>++mfi)<sp/>{</highlight></codeline>
+<codeline lineno="916"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fa.<ref refid="classamrex_1_1FabArray_1ae803504d641d86a8ba9e4b58e81f136b" kindref="member">prefetchToHost</ref>(mfi);</highlight></codeline>
+<codeline lineno="917"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="918"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="919"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="920"><highlight class="normal"></highlight></codeline>
+<codeline lineno="921"><highlight class="normal">template<sp/>&lt;class<sp/>FAB,<sp/>class<sp/>bar<sp/>=<sp/>amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::value&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="922"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="923" refid="namespaceamrex_1aa1c100eb72748be95f6d77f40fe0b985" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1aa1c100eb72748be95f6d77f40fe0b985" kindref="member">prefetchToDevice</ref><sp/>(<ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>fa)</highlight></codeline>
+<codeline lineno="924"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="925"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref><sp/>mfi(fa);<sp/>mfi.<ref refid="classamrex_1_1MFIter_1a61b9a1d5eda39765d1db9b9b936558c7" kindref="member">isValid</ref>();<sp/>++mfi)<sp/>{</highlight></codeline>
+<codeline lineno="927"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fa.<ref refid="classamrex_1_1FabArray_1a1ad78902f6ce66d7f4d0557de26ee971" kindref="member">prefetchToDevice</ref>(mfi);</highlight></codeline>
+<codeline lineno="928"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="929"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="930"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="931"><highlight class="normal"></highlight></codeline>
+<codeline lineno="932"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="933"><highlight class="normal"></highlight></codeline>
+<codeline lineno="934"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H"/>
   </compounddef>
