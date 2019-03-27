@@ -923,100 +923,100 @@
     <detaileddescription>
 <para>Fortran Array <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&apos;s (generally called FAB&apos;s) are objects constructed to emulate the FORTRAN array. Useful operations can be performed upon FAB&apos;s in C++, and they provide a convenient interface to FORTRAN when it is necessary to retreat into that language.</para><para><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> is derived from <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab&lt;Real&gt;</ref>. <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> adds additional useful capabilities which make sense for Real types, such as I/O and L**p norms.</para><para><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref>&apos;s may be output in various formats (see <ref refid="classamrex_1_1FABio" kindref="compound">FABio</ref> above).</para><para>The format and precision may be set in a file read by the <ref refid="classamrex_1_1ParmParse" kindref="compound">ParmParse</ref> class by the &quot;fab.format&quot; variable. Allowed values are: ASCII 8BIT NATIVE NATIVE_32 IEEE32</para><para>FABs written using operator&lt;&lt; are always written in ASCII. FABS written using writOn use the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> specified with setFormat or the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> specified in the <ref refid="classamrex_1_1ParmParse" kindref="compound">ParmParse</ref> file read by init. If the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> is not set explicitly by either of these two methods, then it defaults to NATIVE.</para><para>The C pre-processor macro AMREX_SPACEDIM must be defined to use this class. The internal precision of FARRAYBOX objects is set by defining either BL_USE_FLOAT or BL_USE_DOUBLE</para><para>This class does NOT provide a copy constructor or assignment operator, but it has a move constructor. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1712">
+      <node id="1717">
         <label>amrex::BaseFab&lt; Real &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="1713" relation="public-inheritance">
+        <childnode refid="1718" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1713">
+      <node id="1718">
         <label>amrex::BaseFabData&lt; Real &gt;</label>
         <link refid="structamrex_1_1BaseFabData"/>
-        <childnode refid="1714" relation="public-inheritance">
+        <childnode refid="1719" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1716">
+      <node id="1721">
         <label>amrex::EBFArrayBox</label>
         <link refid="classamrex_1_1EBFArrayBox"/>
-        <childnode refid="1711" relation="public-inheritance">
+        <childnode refid="1716" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1715">
+      <node id="1720">
         <label>amrex::CutFab</label>
         <link refid="classamrex_1_1CutFab"/>
-        <childnode refid="1711" relation="public-inheritance">
+        <childnode refid="1716" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1714">
+      <node id="1719">
         <label>amrex::FabAllocator</label>
         <link refid="structamrex_1_1FabAllocator"/>
       </node>
-      <node id="1711">
+      <node id="1716">
         <label>amrex::FArrayBox</label>
         <link refid="classamrex_1_1FArrayBox"/>
-        <childnode refid="1712" relation="public-inheritance">
+        <childnode refid="1717" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1718">
+      <node id="1723">
         <label>amrex::BaseFab&lt; Real &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="1719" relation="public-inheritance">
+        <childnode refid="1724" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1719">
+      <node id="1724">
         <label>amrex::BaseFabData&lt; Real &gt;</label>
         <link refid="structamrex_1_1BaseFabData"/>
-        <childnode refid="1720" relation="public-inheritance">
+        <childnode refid="1725" relation="public-inheritance">
         </childnode>
-        <childnode refid="1721" relation="usage">
+        <childnode refid="1726" relation="usage">
           <edgelabel>domain</edgelabel>
         </childnode>
       </node>
-      <node id="1722">
+      <node id="1727">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
-        <childnode refid="1722" relation="usage">
+        <childnode refid="1727" relation="usage">
           <edgelabel>Unit</edgelabel>
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="1725">
+      <node id="1730">
         <label>Real</label>
       </node>
-      <node id="1721">
+      <node id="1726">
         <label>amrex::Box</label>
         <link refid="classamrex_1_1Box"/>
-        <childnode refid="1722" relation="usage">
+        <childnode refid="1727" relation="usage">
           <edgelabel>bigend</edgelabel>
           <edgelabel>smallend</edgelabel>
         </childnode>
-        <childnode refid="1723" relation="usage">
+        <childnode refid="1728" relation="usage">
           <edgelabel>btype</edgelabel>
         </childnode>
       </node>
-      <node id="1723">
+      <node id="1728">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
-      <node id="1724">
+      <node id="1729">
         <label>amrex::FABio</label>
         <link refid="classamrex_1_1FABio"/>
       </node>
-      <node id="1720">
+      <node id="1725">
         <label>amrex::FabAllocator</label>
         <link refid="structamrex_1_1FabAllocator"/>
       </node>
-      <node id="1717">
+      <node id="1722">
         <label>amrex::FArrayBox</label>
         <link refid="classamrex_1_1FArrayBox"/>
-        <childnode refid="1718" relation="public-inheritance">
+        <childnode refid="1723" relation="public-inheritance">
         </childnode>
-        <childnode refid="1724" relation="usage">
+        <childnode refid="1729" relation="usage">
           <edgelabel>fabio</edgelabel>
         </childnode>
-        <childnode refid="1725" relation="usage">
+        <childnode refid="1730" relation="usage">
           <edgelabel>initval</edgelabel>
         </childnode>
       </node>
@@ -1086,7 +1086,7 @@
       <member refid="classamrex_1_1BaseFab_1a90dd16d89e470e76956a736bc68cf126" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>dotmask</name></member>
       <member refid="classamrex_1_1BaseFab_1a30f2a84047ffcb444f79011157cb76fc" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>dotmask</name></member>
       <member refid="structamrex_1_1BaseFabData_1a18c921a6524bd14b6d5304528a4b5448" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>dptr</name></member>
-      <member refid="classamrex_1_1BaseFab_1af715e0b0dbb5215bfb2da0455deddc12" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>elixir</name></member>
+      <member refid="classamrex_1_1BaseFab_1aab46cc0b6aa45e05c39592b0384cc2f2" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>elixir</name></member>
       <member refid="classamrex_1_1FArrayBox_1a7b3c6612330474e7db6e4f6ff9d4f380" prot="protected" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>fabio</name></member>
       <member refid="classamrex_1_1FArrayBox_1a1d09202fafedb82d79c005250c3cef2c" prot="private" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>FABio</name></member>
       <member refid="classamrex_1_1FArrayBox_1afc781bb81903fd65b313bcfb46d4aa14" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>FArrayBox</name></member>

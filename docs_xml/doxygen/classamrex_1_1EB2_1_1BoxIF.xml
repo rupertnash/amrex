@@ -2,11 +2,12 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="classamrex_1_1EB2_1_1BoxIF" kind="class" language="C++" prot="public">
     <compoundname>amrex::EB2::BoxIF</compoundname>
+    <basecompoundref refid="structamrex_1_1GPUable" prot="private" virt="non-virtual">amrex::GPUable</basecompoundref>
     <includes refid="AMReX__EB2__IF__Box_8H" local="no">AMReX_EB2_IF_Box.H</includes>
       <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1BoxIF_1aeef568fa755eeebbf370f76bfbc2c779" prot="protected" static="no" mutable="no">
-        <type><ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref></type>
-        <definition>RealArray amrex::EB2::BoxIF::m_lo</definition>
+      <memberdef kind="variable" id="classamrex_1_1EB2_1_1BoxIF_1a22bbb9f61e5ec1f1e7086880b73e2c39" prot="protected" static="no" mutable="no">
+        <type><ref refid="structamrex_1_1XDim3" kindref="compound">XDim3</ref></type>
+        <definition>XDim3 amrex::EB2::BoxIF::m_lo</definition>
         <argsstring></argsstring>
         <name>m_lo</name>
         <briefdescription>
@@ -15,11 +16,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="43" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="43" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="57" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="57" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1BoxIF_1a4bc24be9e48685bb5996dd86757a1c5b" prot="protected" static="no" mutable="no">
-        <type><ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref></type>
-        <definition>RealArray amrex::EB2::BoxIF::m_hi</definition>
+      <memberdef kind="variable" id="classamrex_1_1EB2_1_1BoxIF_1a13836ae745cdf1ef18c14cc11e386afd" prot="protected" static="no" mutable="no">
+        <type><ref refid="structamrex_1_1XDim3" kindref="compound">XDim3</ref></type>
+        <definition>XDim3 amrex::EB2::BoxIF::m_hi</definition>
         <argsstring></argsstring>
         <name>m_hi</name>
         <briefdescription>
@@ -28,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="44" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="44" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="58" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1EB2_1_1BoxIF_1a2ef40fa188a01dbd4ef39e7b857a69bc" prot="protected" static="no" mutable="no">
         <type>bool</type>
@@ -41,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="45" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="45" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="59" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1EB2_1_1BoxIF_1a84095f8c7b235812724ab2d33c8d9130" prot="protected" static="no" mutable="no">
         <type>Real</type>
@@ -54,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="47" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="47" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="61" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="61" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -81,25 +82,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="18" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="18" bodyend="21"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="20" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="20" bodyend="25"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1ae939e0cad7226aae545a57994c445f6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>amrex::EB2::BoxIF::~BoxIF</definition>
-        <argsstring>()</argsstring>
-        <name>~BoxIF</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="23" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="23" bodyend="23"/>
-      </memberdef>
-      <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1a6c14c8dcc7891cad84090d91bf781158" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>amrex::EB2::BoxIF::BoxIF</definition>
-        <argsstring>(const BoxIF &amp;rhs) noexcept=default</argsstring>
+      <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1a1fcbc08f0cb5ffe20377786f7e8f72af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></type>
+        <definition>AMREX_GPU_HOST_DEVICE amrex::EB2::BoxIF::BoxIF</definition>
+        <argsstring>(const BoxIF &amp;rhs) noexcept</argsstring>
         <name>BoxIF</name>
         <param>
           <type>const <ref refid="classamrex_1_1EB2_1_1BoxIF" kindref="compound">BoxIF</ref> &amp;</type>
@@ -111,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="25" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="28" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1adc7e20755a1c325a0250db7aa687742d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -128,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="26" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="32" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1a18e83b3403884afdd28e389235427917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1EB2_1_1BoxIF" kindref="compound">BoxIF</ref> &amp;</type>
@@ -145,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="27" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="33" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1a1b6692cc97dd6bccc694ddcb3ab8830d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1EB2_1_1BoxIF" kindref="compound">BoxIF</ref> &amp;</type>
@@ -162,12 +150,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="28" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="34" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1acfbbaa67455392d237355cfd733e4f58" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1ac9a51d8b51c8b2d730b289ea6f3600b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> Real</type>
+        <definition>AMREX_GPU_HOST_DEVICE Real amrex::EB2::BoxIF::operator()</definition>
+        <argsstring>(AMREX_D_DECL(Real x, Real y, Real z)) const noexcept</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>AMREX_D_DECL(Real x, Real y, Real z)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="37" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="37" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EB2_1_1BoxIF_1a3b02a8674dd81501122d702f0048cfe1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
         <definition>Real amrex::EB2::BoxIF::operator()</definition>
-        <argsstring>(const RealArray &amp;p) const </argsstring>
+        <argsstring>(const RealArray &amp;p) const noexcept</argsstring>
         <name>operator()</name>
         <param>
           <type>const <ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref> &amp;</type>
@@ -179,38 +183,69 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="30" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="30" bodyend="38"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="50" bodyend="53"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
+    <inheritancegraph>
       <node id="813">
-        <label>Real</label>
-      </node>
-      <node id="812">
         <label>amrex::EB2::BoxIF</label>
         <link refid="classamrex_1_1EB2_1_1BoxIF"/>
-        <childnode refid="813" relation="usage">
+        <childnode refid="814" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="814">
+        <label>amrex::GPUable</label>
+        <link refid="structamrex_1_1GPUable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="818">
+        <label>Real</label>
+      </node>
+      <node id="817">
+        <label>amrex::XDim3</label>
+        <link refid="structamrex_1_1XDim3"/>
+        <childnode refid="818" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="815">
+        <label>amrex::EB2::BoxIF</label>
+        <link refid="classamrex_1_1EB2_1_1BoxIF"/>
+        <childnode refid="816" relation="private-inheritance">
+        </childnode>
+        <childnode refid="817" relation="usage">
+          <edgelabel>m_hi</edgelabel>
+          <edgelabel>m_lo</edgelabel>
+        </childnode>
+        <childnode refid="818" relation="usage">
           <edgelabel>m_sign</edgelabel>
         </childnode>
       </node>
+      <node id="816">
+        <label>amrex::GPUable</label>
+        <link refid="structamrex_1_1GPUable"/>
+      </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="14" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="13" bodyend="48"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" line="16" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Box.H" bodystart="14" bodyend="62"/>
     <listofallmembers>
       <member refid="classamrex_1_1EB2_1_1BoxIF_1aa0f2ca11875600cbda14790fff29af9f" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>BoxIF</name></member>
-      <member refid="classamrex_1_1EB2_1_1BoxIF_1a6c14c8dcc7891cad84090d91bf781158" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>BoxIF</name></member>
+      <member refid="classamrex_1_1EB2_1_1BoxIF_1a1fcbc08f0cb5ffe20377786f7e8f72af" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>BoxIF</name></member>
       <member refid="classamrex_1_1EB2_1_1BoxIF_1adc7e20755a1c325a0250db7aa687742d" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>BoxIF</name></member>
-      <member refid="classamrex_1_1EB2_1_1BoxIF_1a4bc24be9e48685bb5996dd86757a1c5b" prot="protected" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>m_hi</name></member>
+      <member refid="classamrex_1_1EB2_1_1BoxIF_1a13836ae745cdf1ef18c14cc11e386afd" prot="protected" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>m_hi</name></member>
       <member refid="classamrex_1_1EB2_1_1BoxIF_1a2ef40fa188a01dbd4ef39e7b857a69bc" prot="protected" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>m_inside</name></member>
-      <member refid="classamrex_1_1EB2_1_1BoxIF_1aeef568fa755eeebbf370f76bfbc2c779" prot="protected" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>m_lo</name></member>
+      <member refid="classamrex_1_1EB2_1_1BoxIF_1a22bbb9f61e5ec1f1e7086880b73e2c39" prot="protected" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>m_lo</name></member>
       <member refid="classamrex_1_1EB2_1_1BoxIF_1a84095f8c7b235812724ab2d33c8d9130" prot="protected" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>m_sign</name></member>
-      <member refid="classamrex_1_1EB2_1_1BoxIF_1acfbbaa67455392d237355cfd733e4f58" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1EB2_1_1BoxIF_1ac9a51d8b51c8b2d730b289ea6f3600b7" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1EB2_1_1BoxIF_1a3b02a8674dd81501122d702f0048cfe1" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>operator()</name></member>
       <member refid="classamrex_1_1EB2_1_1BoxIF_1a18e83b3403884afdd28e389235427917" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>operator=</name></member>
       <member refid="classamrex_1_1EB2_1_1BoxIF_1a1b6692cc97dd6bccc694ddcb3ab8830d" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>operator=</name></member>
-      <member refid="classamrex_1_1EB2_1_1BoxIF_1ae939e0cad7226aae545a57994c445f6a" prot="public" virt="non-virtual"><scope>amrex::EB2::BoxIF</scope><name>~BoxIF</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

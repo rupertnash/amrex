@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['y',['y',['../structamrex_1_1Dim3.html#a5b607ff8424cba649fe2c3c19f34714b',1,'amrex::Dim3']]],
+  ['y',['y',['../structamrex_1_1Dim3.html#a5b607ff8424cba649fe2c3c19f34714b',1,'amrex::Dim3::y()'],['../structamrex_1_1XDim3.html#af3bfd0ccbd1587f808089bee50e4a203',1,'amrex::XDim3::y()']]],
   ['yafluxreg_5fcrseadd',['yafluxreg_crseadd',['../namespaceamrex.html#a4e041c2448236fe0f5a528880bf48788',1,'amrex::yafluxreg_crseadd(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, Real dtdx, int nc) noexcept'],['../namespaceamrex.html#a3704fd7d63697dac97272aa6dce48167',1,'amrex::yafluxreg_crseadd(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, FArrayBox const &amp;fyfab, Real dtdx, Real dtdy, int nc) noexcept'],['../namespaceamrex.html#a16eb808f5f9a89e84f6a8e86149ddd50',1,'amrex::yafluxreg_crseadd(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, FArrayBox const &amp;fyfab, FArrayBox const &amp;fzfab, Real dtdx, Real dtdy, Real dtdz, int nc) noexcept']]],
   ['yafluxreg_5ffineadd',['yafluxreg_fineadd',['../namespaceamrex.html#a45a5aa24415a210a57511c29af42e249',1,'amrex']]],
   ['yafluxregister',['YAFluxRegister',['../classamrex_1_1YAFluxRegister.html',1,'amrex']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['z',['z',['../structamrex_1_1Dim3.html#a301b8be615c36e302d8510be17c63e90',1,'amrex::Dim3']]],
+  ['z',['z',['../structamrex_1_1Dim3.html#a301b8be615c36e302d8510be17c63e90',1,'amrex::Dim3::z()'],['../structamrex_1_1XDim3.html#ab7d76c217833bd5f7ac309ae9b32b2ed',1,'amrex::XDim3::z()']]],
   ['zdir',['ZDIR',['../namespaceamrex_1_1Amrvis.html#a345f2c2cc5c709a02e40f34b83d914fb',1,'amrex::Amrvis']]],
   ['zero',['Zero',['../classamrex_1_1IntVect.html#a5b50f516a319513a10154ef402c2717b',1,'amrex::IntVect::Zero()'],['../classamrex_1_1RealVect.html#ab64ddfe8e473503acf9a5f7103467b13',1,'amrex::RealVect::Zero()'],['../namespaceamrex__constants__module.html#a1f4791a841a93287a5d1a9f841bdecd1',1,'amrex_constants_module::zero()']]],
   ['zero_5flower_5fmask',['zero_lower_mask',['../classamrex_1_1EBCellFlag.html#a202cad7d2c40d09b3c3efbdfdf94115d',1,'amrex::EBCellFlag']]],

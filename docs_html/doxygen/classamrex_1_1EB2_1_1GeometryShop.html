@@ -127,8 +127,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6a31b5f5abb577a44f07659b13b885db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e4f4a6084c791ad6aa95e9b838a8c34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html#a3e4f4a6084c791ad6aa95e9b838a8c34">getBoxType</a> (const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;bx, const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;geom) const </td></tr>
 <tr class="separator:a3e4f4a6084c791ad6aa95e9b838a8c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0b14008670ee8917f389ad555c90089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html#ac0b14008670ee8917f389ad555c90089">fillFab</a> (<a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>&lt; Real &gt; &amp;levelset, const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;geom) const </td></tr>
-<tr class="separator:ac0b14008670ee8917f389ad555c90089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438ec1759079b1f1198d9483d0515922"><td class="memTemplParams" colspan="2">template&lt;class U  = F, typename std::enable_if&lt; IsGPUable&lt; U &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
+<tr class="memitem:a438ec1759079b1f1198d9483d0515922"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html#a438ec1759079b1f1198d9483d0515922">fillFab</a> (<a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>&lt; Real &gt; &amp;levelset, const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;geom) const noexcept</td></tr>
+<tr class="separator:a438ec1759079b1f1198d9483d0515922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438ec1759079b1f1198d9483d0515922"><td class="memTemplParams" colspan="2">template&lt;class U  = F, typename std::enable_if&lt;!IsGPUable&lt; U &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
+<tr class="memitem:a438ec1759079b1f1198d9483d0515922"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html#a438ec1759079b1f1198d9483d0515922">fillFab</a> (<a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>&lt; Real &gt; &amp;levelset, const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;geom) const noexcept</td></tr>
+<tr class="separator:a438ec1759079b1f1198d9483d0515922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a942286ce574a2afb97d84c835660fad9"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html#a942286ce574a2afb97d84c835660fad9">getIntercept</a> (int edgedir, const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;iv, const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;geom) const </td></tr>
 <tr class="separator:a942286ce574a2afb97d84c835660fad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abab0ec9c00d309b7251ce037ede7a2e0"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html#abab0ec9c00d309b7251ce037ede7a2e0">BrentRootFinder</a> (const <a class="el" href="namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f">RealArray</a> &amp;lo, const <a class="el" href="namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f">RealArray</a> &amp;hi, int rangedir) const </td></tr>
@@ -334,11 +338,16 @@ template&lt;class F &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac0b14008670ee8917f389ad555c90089"></a>
+<a class="anchor" id="a438ec1759079b1f1198d9483d0515922"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class F &gt; </div>
+template&lt;class F&gt; </div>
+<div class="memtemplate">
+template&lt;class U  = F, typename std::enable_if&lt; IsGPUable&lt; U &gt;::value &gt;::type *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html">amrex::EB2::GeometryShop</a>&lt; F &gt;::fillFab </td>
@@ -358,6 +367,49 @@ template&lt;class F &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a438ec1759079b1f1198d9483d0515922"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F&gt; </div>
+<div class="memtemplate">
+template&lt;class U  = F, typename std::enable_if&lt;!IsGPUable&lt; U &gt;::value &gt;::type *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classamrex_1_1EB2_1_1GeometryShop.html">amrex::EB2::GeometryShop</a>&lt; F &gt;::fillFab </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>&lt; Real &gt; &amp;&#160;</td>
+          <td class="paramname"><em>levelset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &amp;&#160;</td>
+          <td class="paramname"><em>geom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
