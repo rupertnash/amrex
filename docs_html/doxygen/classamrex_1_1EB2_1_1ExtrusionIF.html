@@ -104,8 +104,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa230623413b7fc4ff5e42479ca962a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde14763bb9fd21e0e03cbcaa27ae053"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html#afde14763bb9fd21e0e03cbcaa27ae053">ExtrusionIF</a> (F const &amp;a_f, int direction)</td></tr>
 <tr class="separator:afde14763bb9fd21e0e03cbcaa27ae053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a785fa41212cd20327d167fcaab70fdbd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html#a785fa41212cd20327d167fcaab70fdbd">~ExtrusionIF</a> ()</td></tr>
-<tr class="separator:a785fa41212cd20327d167fcaab70fdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a652bae528078d2236e2644f54630974a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html#a652bae528078d2236e2644f54630974a">ExtrusionIF</a> (const <a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html">ExtrusionIF</a> &amp;rhs)=default</td></tr>
 <tr class="separator:a652bae528078d2236e2644f54630974a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49964e862f3d060b0558c400898ff6d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html#a49964e862f3d060b0558c400898ff6d8">ExtrusionIF</a> (<a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html">ExtrusionIF</a> &amp;&amp;rhs)=default</td></tr>
@@ -116,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf16d236003b96546fb354e9d07f2941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eadfb8ad7c8983891a41839243a6f0f"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html#a5eadfb8ad7c8983891a41839243a6f0f">operator()</a> (const <a class="el" href="namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f">RealArray</a> &amp;p) const </td></tr>
 <tr class="separator:a5eadfb8ad7c8983891a41839243a6f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1741255351846bea7ccc07037280d668"><td class="memTemplParams" colspan="2">template&lt;class U  = F, class  = typename std::enable_if&lt;IsGPUable&lt;U&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:a1741255351846bea7ccc07037280d668"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html#a1741255351846bea7ccc07037280d668">operator()</a> (AMREX_D_DECL(Real x, Real y, Real z)) const noexcept</td></tr>
+<tr class="separator:a1741255351846bea7ccc07037280d668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -186,31 +187,6 @@ template&lt;class F &gt; </div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a785fa41212cd20327d167fcaab70fdbd"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class F &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html">amrex::EB2::ExtrusionIF</a>&lt; F &gt;::~<a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html">ExtrusionIF</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
         </tr>
       </table>
   </td>
@@ -295,6 +271,34 @@ template&lt;class F &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1741255351846bea7ccc07037280d668"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<div class="memtemplate">
+template&lt;class U  = F, class  = typename std::enable_if&lt;IsGPUable&lt;U&gt;::value&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> Real <a class="el" href="classamrex_1_1EB2_1_1ExtrusionIF.html">amrex::EB2::ExtrusionIF</a>&lt; F &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">AMREX_D_DECL(Real x, Real y, Real z)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

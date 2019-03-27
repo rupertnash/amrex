@@ -2,11 +2,12 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="classamrex_1_1EB2_1_1EllipsoidIF" kind="class" language="C++" prot="public">
     <compoundname>amrex::EB2::EllipsoidIF</compoundname>
+    <basecompoundref refid="structamrex_1_1GPUable" prot="public" virt="non-virtual">amrex::GPUable</basecompoundref>
     <includes refid="AMReX__EB2__IF__Ellipsoid_8H" local="no">AMReX_EB2_IF_Ellipsoid.H</includes>
       <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1EllipsoidIF_1a68f85bb488114af8f46f0a39b3468a10" prot="protected" static="no" mutable="no">
-        <type><ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref></type>
-        <definition>RealArray amrex::EB2::EllipsoidIF::m_radii</definition>
+      <memberdef kind="variable" id="classamrex_1_1EB2_1_1EllipsoidIF_1a1ba71f374b287b623a388dd3c3080135" prot="protected" static="no" mutable="no">
+        <type><ref refid="structamrex_1_1XDim3" kindref="compound">XDim3</ref></type>
+        <definition>XDim3 amrex::EB2::EllipsoidIF::m_radii</definition>
         <argsstring></argsstring>
         <name>m_radii</name>
         <briefdescription>
@@ -15,41 +16,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="40" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="40" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="43" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="43" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1EllipsoidIF_1aeaae5a131b76fbe0d024b5b02b054d16" prot="protected" static="no" mutable="no">
-        <type><ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref></type>
-        <definition>RealArray amrex::EB2::EllipsoidIF::m_center</definition>
+      <memberdef kind="variable" id="classamrex_1_1EB2_1_1EllipsoidIF_1a5778e3c639570e5f9e9f3ab7c1c1a417" prot="protected" static="no" mutable="no">
+        <type><ref refid="structamrex_1_1XDim3" kindref="compound">XDim3</ref></type>
+        <definition>XDim3 amrex::EB2::EllipsoidIF::m_center</definition>
         <argsstring></argsstring>
         <name>m_center</name>
         <briefdescription>
         </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="41" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1EllipsoidIF_1a5a47f1f59c42f2f2f983b154b38d91b7" prot="protected" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool amrex::EB2::EllipsoidIF::m_inside</definition>
-        <argsstring></argsstring>
-        <name>m_inside</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="42" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1EllipsoidIF_1a15abff162ace52af7ad96080adac41df" prot="protected" static="no" mutable="no">
-        <type><ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref></type>
-        <definition>RealArray amrex::EB2::EllipsoidIF::m_radii2_inv</definition>
-        <argsstring></argsstring>
-        <name>m_radii2_inv</name>
-        <briefdescription>
-<para>precomputed radii squared </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -67,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="45" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="45" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="46" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="46" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -94,20 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="16" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="16" bodyend="22"/>
-      </memberdef>
-      <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1a864a7d1e95d35e2e886ec6ecdfcb8ade" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>amrex::EB2::EllipsoidIF::~EllipsoidIF</definition>
-        <argsstring>()</argsstring>
-        <name>~EllipsoidIF</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="24" bodyend="24"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="17" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="17" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1a9c2615676b866d2415bf91282cd38860" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -124,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="26" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="23" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1a1e29d57e8cccd9f222f1f92102992453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -141,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="27" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="24" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1ae531ef07a63120771391b6848c1a5061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1EB2_1_1EllipsoidIF" kindref="compound">EllipsoidIF</ref> &amp;</type>
@@ -158,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="28" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="25" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1aef4b94ae5b1d9654c2d54eda5e269476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1EB2_1_1EllipsoidIF" kindref="compound">EllipsoidIF</ref> &amp;</type>
@@ -175,12 +137,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="29" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="26" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1aaee1490634421aebf00625405892e7dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1a873e22e55b07270d2825c521584bc5b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> Real</type>
+        <definition>AMREX_GPU_HOST_DEVICE Real amrex::EB2::EllipsoidIF::operator()</definition>
+        <argsstring>(AMREX_D_DECL(Real x, Real y, Real z)) const noexcept</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>AMREX_D_DECL(Real x, Real y, Real z)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="30" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EB2_1_1EllipsoidIF_1a473ae4749d679793645566fc4f345bd0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
         <definition>Real amrex::EB2::EllipsoidIF::operator()</definition>
-        <argsstring>(const RealArray &amp;p) const </argsstring>
+        <argsstring>(const RealArray &amp;p) const noexcept</argsstring>
         <name>operator()</name>
         <param>
           <type>const <ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref> &amp;</type>
@@ -192,39 +170,68 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="31" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="31" bodyend="36"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="37" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="37" bodyend="39"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
-      <node id="1364">
-        <label>Real</label>
-      </node>
+    <inheritancegraph>
       <node id="1363">
+        <label>amrex::GPUable</label>
+        <link refid="structamrex_1_1GPUable"/>
+      </node>
+      <node id="1362">
         <label>amrex::EB2::EllipsoidIF</label>
         <link refid="classamrex_1_1EB2_1_1EllipsoidIF"/>
-        <childnode refid="1364" relation="usage">
+        <childnode refid="1363" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1367">
+        <label>Real</label>
+      </node>
+      <node id="1366">
+        <label>amrex::XDim3</label>
+        <link refid="structamrex_1_1XDim3"/>
+        <childnode refid="1367" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="1365">
+        <label>amrex::GPUable</label>
+        <link refid="structamrex_1_1GPUable"/>
+      </node>
+      <node id="1364">
+        <label>amrex::EB2::EllipsoidIF</label>
+        <link refid="classamrex_1_1EB2_1_1EllipsoidIF"/>
+        <childnode refid="1365" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1366" relation="usage">
+          <edgelabel>m_center</edgelabel>
+          <edgelabel>m_radii</edgelabel>
+        </childnode>
+        <childnode refid="1367" relation="usage">
           <edgelabel>m_sign</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="11" bodyend="46"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" line="13" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H" bodystart="11" bodyend="47"/>
     <listofallmembers>
       <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a12391461b3aaeda3b88f48f56bd7a38c" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>EllipsoidIF</name></member>
       <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a9c2615676b866d2415bf91282cd38860" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>EllipsoidIF</name></member>
       <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a1e29d57e8cccd9f222f1f92102992453" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>EllipsoidIF</name></member>
-      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1aeaae5a131b76fbe0d024b5b02b054d16" prot="protected" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>m_center</name></member>
-      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a5a47f1f59c42f2f2f983b154b38d91b7" prot="protected" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>m_inside</name></member>
-      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a68f85bb488114af8f46f0a39b3468a10" prot="protected" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>m_radii</name></member>
-      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a15abff162ace52af7ad96080adac41df" prot="protected" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>m_radii2_inv</name></member>
+      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a5778e3c639570e5f9e9f3ab7c1c1a417" prot="protected" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>m_center</name></member>
+      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a1ba71f374b287b623a388dd3c3080135" prot="protected" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>m_radii</name></member>
       <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a3b6e4a2ba4e86b1b2857488b3453e37d" prot="protected" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>m_sign</name></member>
-      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1aaee1490634421aebf00625405892e7dc" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a873e22e55b07270d2825c521584bc5b0" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a473ae4749d679793645566fc4f345bd0" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>operator()</name></member>
       <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1ae531ef07a63120771391b6848c1a5061" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>operator=</name></member>
       <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1aef4b94ae5b1d9654c2d54eda5e269476" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>operator=</name></member>
-      <member refid="classamrex_1_1EB2_1_1EllipsoidIF_1a864a7d1e95d35e2e886ec6ecdfcb8ade" prot="public" virt="non-virtual"><scope>amrex::EB2::EllipsoidIF</scope><name>~EllipsoidIF</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

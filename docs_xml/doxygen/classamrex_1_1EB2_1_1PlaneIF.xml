@@ -2,11 +2,12 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="classamrex_1_1EB2_1_1PlaneIF" kind="class" language="C++" prot="public">
     <compoundname>amrex::EB2::PlaneIF</compoundname>
+    <basecompoundref refid="structamrex_1_1GPUable" prot="private" virt="non-virtual">amrex::GPUable</basecompoundref>
     <includes refid="AMReX__EB2__IF__Plane_8H" local="no">AMReX_EB2_IF_Plane.H</includes>
       <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1PlaneIF_1a4e25b96365309d3c2e42bfbfbbbed24a" prot="protected" static="no" mutable="no">
-        <type><ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref></type>
-        <definition>RealArray amrex::EB2::PlaneIF::m_point</definition>
+      <memberdef kind="variable" id="classamrex_1_1EB2_1_1PlaneIF_1acd2eb5b291fa7b4f4be7cad13c797274" prot="protected" static="no" mutable="no">
+        <type><ref refid="structamrex_1_1XDim3" kindref="compound">XDim3</ref></type>
+        <definition>XDim3 amrex::EB2::PlaneIF::m_point</definition>
         <argsstring></argsstring>
         <name>m_point</name>
         <briefdescription>
@@ -15,11 +16,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="36" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="36" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="42" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="42" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1PlaneIF_1a1c3a71134724b338942647cd5c9dd935" prot="protected" static="no" mutable="no">
-        <type><ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref></type>
-        <definition>RealArray amrex::EB2::PlaneIF::m_normal</definition>
+      <memberdef kind="variable" id="classamrex_1_1EB2_1_1PlaneIF_1acfd09edde6beeedfbac972b29a0bfa65" prot="protected" static="no" mutable="no">
+        <type><ref refid="structamrex_1_1XDim3" kindref="compound">XDim3</ref></type>
+        <definition>XDim3 amrex::EB2::PlaneIF::m_normal</definition>
         <argsstring></argsstring>
         <name>m_normal</name>
         <briefdescription>
@@ -28,20 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="37" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="37" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classamrex_1_1EB2_1_1PlaneIF_1a4a34c722cbbdb0868f93f45bc060d8ef" prot="protected" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool amrex::EB2::PlaneIF::m_inside</definition>
-        <argsstring></argsstring>
-        <name>m_inside</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="39" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="39" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="43" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1EB2_1_1PlaneIF_1a13d4b5d3d37df39a577f5238cf23394e" prot="protected" static="no" mutable="no">
         <type>Real</type>
@@ -54,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="40" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="40" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="45" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="45" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -82,20 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="15" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="15" bodyend="18"/>
-      </memberdef>
-      <memberdef kind="function" id="classamrex_1_1EB2_1_1PlaneIF_1a5eed1ff54bd47ee6ba0e8f07b22c2f5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>amrex::EB2::PlaneIF::~PlaneIF</definition>
-        <argsstring>()</argsstring>
-        <name>~PlaneIF</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="20" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="20" bodyend="20"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="16" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="16" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1EB2_1_1PlaneIF_1ae26e8d74379f167d515bb7af573941f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -165,10 +140,26 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="25" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1EB2_1_1PlaneIF_1a6f279815b6e49b77c93ad26d132e5e03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1EB2_1_1PlaneIF_1af0b5e7421a5c1919ada54ae7d323aa0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> Real</type>
+        <definition>AMREX_GPU_HOST_DEVICE Real amrex::EB2::PlaneIF::operator()</definition>
+        <argsstring>(AMREX_D_DECL(Real x, Real y, Real z)) const noexcept</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>AMREX_D_DECL(Real x, Real y, Real z)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classamrex_1_1EB2_1_1PlaneIF_1a59d3e8ae75b3d5d083da3255eab14693" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
         <definition>Real amrex::EB2::PlaneIF::operator()</definition>
-        <argsstring>(const RealArray &amp;p) const </argsstring>
+        <argsstring>(const RealArray &amp;p) const noexcept</argsstring>
         <name>operator()</name>
         <param>
           <type>const <ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref> &amp;</type>
@@ -180,38 +171,68 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="27" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="27" bodyend="32"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="35" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="35" bodyend="38"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
-      <node id="4848">
+    <inheritancegraph>
+      <node id="4870">
         <label>amrex::EB2::PlaneIF</label>
         <link refid="classamrex_1_1EB2_1_1PlaneIF"/>
-        <childnode refid="4849" relation="usage">
+        <childnode refid="4871" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="4871">
+        <label>amrex::GPUable</label>
+        <link refid="structamrex_1_1GPUable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4872">
+        <label>amrex::EB2::PlaneIF</label>
+        <link refid="classamrex_1_1EB2_1_1PlaneIF"/>
+        <childnode refid="4873" relation="private-inheritance">
+        </childnode>
+        <childnode refid="4874" relation="usage">
+          <edgelabel>m_point</edgelabel>
+          <edgelabel>m_normal</edgelabel>
+        </childnode>
+        <childnode refid="4875" relation="usage">
           <edgelabel>m_sign</edgelabel>
         </childnode>
       </node>
-      <node id="4849">
+      <node id="4875">
         <label>Real</label>
       </node>
+      <node id="4874">
+        <label>amrex::XDim3</label>
+        <link refid="structamrex_1_1XDim3"/>
+        <childnode refid="4875" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="4873">
+        <label>amrex::GPUable</label>
+        <link refid="structamrex_1_1GPUable"/>
+      </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="11" bodyend="42"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" line="13" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Plane.H" bodystart="11" bodyend="47"/>
     <listofallmembers>
-      <member refid="classamrex_1_1EB2_1_1PlaneIF_1a4a34c722cbbdb0868f93f45bc060d8ef" prot="protected" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>m_inside</name></member>
-      <member refid="classamrex_1_1EB2_1_1PlaneIF_1a1c3a71134724b338942647cd5c9dd935" prot="protected" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>m_normal</name></member>
-      <member refid="classamrex_1_1EB2_1_1PlaneIF_1a4e25b96365309d3c2e42bfbfbbbed24a" prot="protected" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>m_point</name></member>
+      <member refid="classamrex_1_1EB2_1_1PlaneIF_1acfd09edde6beeedfbac972b29a0bfa65" prot="protected" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>m_normal</name></member>
+      <member refid="classamrex_1_1EB2_1_1PlaneIF_1acd2eb5b291fa7b4f4be7cad13c797274" prot="protected" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>m_point</name></member>
       <member refid="classamrex_1_1EB2_1_1PlaneIF_1a13d4b5d3d37df39a577f5238cf23394e" prot="protected" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>m_sign</name></member>
-      <member refid="classamrex_1_1EB2_1_1PlaneIF_1a6f279815b6e49b77c93ad26d132e5e03" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1EB2_1_1PlaneIF_1af0b5e7421a5c1919ada54ae7d323aa0f" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>operator()</name></member>
+      <member refid="classamrex_1_1EB2_1_1PlaneIF_1a59d3e8ae75b3d5d083da3255eab14693" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>operator()</name></member>
       <member refid="classamrex_1_1EB2_1_1PlaneIF_1a30f2114b7eed08bec633a777c33b33a6" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>operator=</name></member>
       <member refid="classamrex_1_1EB2_1_1PlaneIF_1a641b8b7863dfc1f3c6ee1af75ae1ccd9" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>operator=</name></member>
       <member refid="classamrex_1_1EB2_1_1PlaneIF_1acd11423cba9d7c283e96167dedd124d5" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>PlaneIF</name></member>
       <member refid="classamrex_1_1EB2_1_1PlaneIF_1ae26e8d74379f167d515bb7af573941f0" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>PlaneIF</name></member>
       <member refid="classamrex_1_1EB2_1_1PlaneIF_1a1714128d8d5122b4346d5d38128c523f" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>PlaneIF</name></member>
-      <member refid="classamrex_1_1EB2_1_1PlaneIF_1a5eed1ff54bd47ee6ba0e8f07b22c2f5d" prot="public" virt="non-virtual"><scope>amrex::EB2::PlaneIF</scope><name>~PlaneIF</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

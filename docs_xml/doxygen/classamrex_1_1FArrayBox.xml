@@ -923,100 +923,100 @@
     <detaileddescription>
 <para>Fortran Array <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&apos;s (generally called FAB&apos;s) are objects constructed to emulate the FORTRAN array. Useful operations can be performed upon FAB&apos;s in C++, and they provide a convenient interface to FORTRAN when it is necessary to retreat into that language.</para><para><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> is derived from <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab&lt;Real&gt;</ref>. <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> adds additional useful capabilities which make sense for Real types, such as I/O and L**p norms.</para><para><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref>&apos;s may be output in various formats (see <ref refid="classamrex_1_1FABio" kindref="compound">FABio</ref> above).</para><para>The format and precision may be set in a file read by the <ref refid="classamrex_1_1ParmParse" kindref="compound">ParmParse</ref> class by the &quot;fab.format&quot; variable. Allowed values are: ASCII 8BIT NATIVE NATIVE_32 IEEE32</para><para>FABs written using operator&lt;&lt; are always written in ASCII. FABS written using writOn use the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> specified with setFormat or the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> specified in the <ref refid="classamrex_1_1ParmParse" kindref="compound">ParmParse</ref> file read by init. If the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> is not set explicitly by either of these two methods, then it defaults to NATIVE.</para><para>The C pre-processor macro AMREX_SPACEDIM must be defined to use this class. The internal precision of FARRAYBOX objects is set by defining either BL_USE_FLOAT or BL_USE_DOUBLE</para><para>This class does NOT provide a copy constructor or assignment operator, but it has a move constructor. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1720">
+      <node id="1723">
         <label>amrex::BaseFab&lt; Real &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="1721" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1721">
-        <label>amrex::BaseFabData&lt; Real &gt;</label>
-        <link refid="structamrex_1_1BaseFabData"/>
-        <childnode refid="1722" relation="public-inheritance">
+        <childnode refid="1724" relation="public-inheritance">
         </childnode>
       </node>
       <node id="1724">
+        <label>amrex::BaseFabData&lt; Real &gt;</label>
+        <link refid="structamrex_1_1BaseFabData"/>
+        <childnode refid="1725" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1727">
         <label>amrex::EBFArrayBox</label>
         <link refid="classamrex_1_1EBFArrayBox"/>
-        <childnode refid="1719" relation="public-inheritance">
+        <childnode refid="1722" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1723">
+      <node id="1726">
         <label>amrex::CutFab</label>
         <link refid="classamrex_1_1CutFab"/>
-        <childnode refid="1719" relation="public-inheritance">
+        <childnode refid="1722" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1722">
+      <node id="1725">
         <label>amrex::FabAllocator</label>
         <link refid="structamrex_1_1FabAllocator"/>
       </node>
-      <node id="1719">
+      <node id="1722">
         <label>amrex::FArrayBox</label>
         <link refid="classamrex_1_1FArrayBox"/>
-        <childnode refid="1720" relation="public-inheritance">
+        <childnode refid="1723" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1726">
+      <node id="1729">
         <label>amrex::BaseFab&lt; Real &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="1727" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1727">
-        <label>amrex::BaseFabData&lt; Real &gt;</label>
-        <link refid="structamrex_1_1BaseFabData"/>
-        <childnode refid="1728" relation="public-inheritance">
-        </childnode>
-        <childnode refid="1729" relation="usage">
-          <edgelabel>domain</edgelabel>
+        <childnode refid="1730" relation="public-inheritance">
         </childnode>
       </node>
       <node id="1730">
+        <label>amrex::BaseFabData&lt; Real &gt;</label>
+        <link refid="structamrex_1_1BaseFabData"/>
+        <childnode refid="1731" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1732" relation="usage">
+          <edgelabel>domain</edgelabel>
+        </childnode>
+      </node>
+      <node id="1733">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
-        <childnode refid="1730" relation="usage">
+        <childnode refid="1733" relation="usage">
           <edgelabel>Unit</edgelabel>
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="1733">
+      <node id="1736">
         <label>Real</label>
       </node>
-      <node id="1729">
+      <node id="1732">
         <label>amrex::Box</label>
         <link refid="classamrex_1_1Box"/>
-        <childnode refid="1730" relation="usage">
+        <childnode refid="1733" relation="usage">
           <edgelabel>bigend</edgelabel>
           <edgelabel>smallend</edgelabel>
         </childnode>
-        <childnode refid="1731" relation="usage">
+        <childnode refid="1734" relation="usage">
           <edgelabel>btype</edgelabel>
         </childnode>
       </node>
-      <node id="1731">
+      <node id="1734">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
-      <node id="1732">
+      <node id="1735">
         <label>amrex::FABio</label>
         <link refid="classamrex_1_1FABio"/>
       </node>
-      <node id="1728">
+      <node id="1731">
         <label>amrex::FabAllocator</label>
         <link refid="structamrex_1_1FabAllocator"/>
       </node>
-      <node id="1725">
+      <node id="1728">
         <label>amrex::FArrayBox</label>
         <link refid="classamrex_1_1FArrayBox"/>
-        <childnode refid="1726" relation="public-inheritance">
+        <childnode refid="1729" relation="public-inheritance">
         </childnode>
-        <childnode refid="1732" relation="usage">
+        <childnode refid="1735" relation="usage">
           <edgelabel>fabio</edgelabel>
         </childnode>
-        <childnode refid="1733" relation="usage">
+        <childnode refid="1736" relation="usage">
           <edgelabel>initval</edgelabel>
         </childnode>
       </node>

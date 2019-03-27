@@ -114,15 +114,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a06a80b138ed9e9228d5fa3c5103dc6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad320c9067043d441a19d5eb3197884ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html">ScaleIF</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html#ad320c9067043d441a19d5eb3197884ef">operator=</a> (<a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html">ScaleIF</a> &amp;&amp;rhs)=delete</td></tr>
 <tr class="separator:ad320c9067043d441a19d5eb3197884ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c2fea3687b301db3b16a6d6137eddee"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html#a9c2fea3687b301db3b16a6d6137eddee">operator()</a> (const <a class="el" href="namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f">RealArray</a> &amp;p) const </td></tr>
-<tr class="separator:a9c2fea3687b301db3b16a6d6137eddee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7921ac823d8efefb9c4f3dc9d9451965"><td class="memTemplParams" colspan="2">template&lt;class U  = F, class  = typename std::enable_if&lt;IsGPUable&lt;U&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:a7921ac823d8efefb9c4f3dc9d9451965"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html#a7921ac823d8efefb9c4f3dc9d9451965">operator()</a> (AMREX_D_DECL(Real x, Real y, Real z)) const noexcept</td></tr>
+<tr class="separator:a7921ac823d8efefb9c4f3dc9d9451965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e22c870d98d7461aae4c027815fb35"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html#a89e22c870d98d7461aae4c027815fb35">operator()</a> (const <a class="el" href="namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f">RealArray</a> &amp;p) const noexcept</td></tr>
+<tr class="separator:a89e22c870d98d7461aae4c027815fb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a092e125d17bca6eaf36ce5f6a1228ab9"><td class="memItemLeft" align="right" valign="top">F&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html#a092e125d17bca6eaf36ce5f6a1228ab9">m_f</a></td></tr>
 <tr class="separator:a092e125d17bca6eaf36ce5f6a1228ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a027399cd9431951f71dbfa1ba1dcba18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f">RealArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html#a027399cd9431951f71dbfa1ba1dcba18">m_sfinv</a></td></tr>
-<tr class="separator:a027399cd9431951f71dbfa1ba1dcba18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932ebe41c20dbea7dbe43d208f1dc71d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structamrex_1_1XDim3.html">XDim3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html#a932ebe41c20dbea7dbe43d208f1dc71d">m_sfinv</a></td></tr>
+<tr class="separator:a932ebe41c20dbea7dbe43d208f1dc71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a62762bd802e07b5d8aa07fc8bb7d831a"></a>
@@ -275,7 +278,35 @@ template&lt;class F &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a9c2fea3687b301db3b16a6d6137eddee"></a>
+<a class="anchor" id="a7921ac823d8efefb9c4f3dc9d9451965"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<div class="memtemplate">
+template&lt;class U  = F, class  = typename std::enable_if&lt;IsGPUable&lt;U&gt;::value&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> Real <a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html">amrex::EB2::ScaleIF</a>&lt; F &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">AMREX_D_DECL(Real x, Real y, Real z)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a89e22c870d98d7461aae4c027815fb35"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -294,7 +325,7 @@ template&lt;class F &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -376,7 +407,7 @@ template&lt;class F &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a027399cd9431951f71dbfa1ba1dcba18"></a>
+<a class="anchor" id="a932ebe41c20dbea7dbe43d208f1dc71d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -386,7 +417,7 @@ template&lt;class F &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceamrex.html#a9de48c04056551924746c42f9eda3c8f">RealArray</a> <a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html">amrex::EB2::ScaleIF</a>&lt; F &gt;::m_sfinv</td>
+          <td class="memname"><a class="el" href="structamrex_1_1XDim3.html">XDim3</a> <a class="el" href="classamrex_1_1EB2_1_1ScaleIF.html">amrex::EB2::ScaleIF</a>&lt; F &gt;::m_sfinv</td>
         </tr>
       </table>
   </td>

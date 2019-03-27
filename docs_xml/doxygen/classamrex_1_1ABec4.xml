@@ -1665,21 +1665,21 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="67">
+      <node id="69">
         <label>std::vector&lt; amrex::Vector&lt; amrex::MultiMask &gt;, std::allocator&lt; amrex::Vector&lt; amrex::MultiMask &gt; &gt; &gt;</label>
       </node>
       <node id="63">
         <label>amrex::LinOp</label>
         <link refid="classamrex_1_1LinOp"/>
         <childnode refid="64" relation="usage">
-          <edgelabel>undrrelxr</edgelabel>
+          <edgelabel>h</edgelabel>
         </childnode>
         <childnode refid="66" relation="usage">
-          <edgelabel>maskvals</edgelabel>
-          <edgelabel>lmaskvals</edgelabel>
+          <edgelabel>undrrelxr</edgelabel>
         </childnode>
         <childnode refid="68" relation="usage">
-          <edgelabel>h</edgelabel>
+          <edgelabel>maskvals</edgelabel>
+          <edgelabel>lmaskvals</edgelabel>
         </childnode>
         <childnode refid="70" relation="usage">
           <edgelabel>gbox</edgelabel>
@@ -1708,9 +1708,6 @@
         <label>amrex::FabArrayBase::FabArrayStats</label>
         <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
       </node>
-      <node id="119">
-        <label>std::vector&lt; Tuple&lt; amrex::MultiFab *, BL_SPACEDIM &gt;, std::allocator&lt; Tuple&lt; amrex::MultiFab *, BL_SPACEDIM &gt; &gt; &gt;</label>
-      </node>
       <node id="83">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
@@ -1719,10 +1716,10 @@
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="64">
+      <node id="66">
         <label>amrex::Vector&lt; amrex::BndryRegister &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="67" relation="public-inheritance">
         </childnode>
       </node>
       <node id="111">
@@ -1732,12 +1729,6 @@
         </childnode>
         <childnode refid="112" relation="usage">
           <edgelabel>m_data</edgelabel>
-        </childnode>
-      </node>
-      <node id="68">
-        <label>amrex::Vector&lt; Tuple&lt; Real, BL_SPACEDIM &gt; &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
-        <childnode refid="69" relation="public-inheritance">
         </childnode>
       </node>
       <node id="103">
@@ -1857,7 +1848,7 @@
       <node id="86">
         <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
       </node>
-      <node id="65">
+      <node id="67">
         <label>std::vector&lt; amrex::BndryRegister, std::allocator&lt; amrex::BndryRegister &gt; &gt;</label>
       </node>
       <node id="91">
@@ -1919,6 +1910,9 @@
           <edgelabel>offset</edgelabel>
           <edgelabel>dx</edgelabel>
         </childnode>
+      </node>
+      <node id="119">
+        <label>std::vector&lt; Array&lt; amrex::MultiFab *, BL_SPACEDIM &gt;, std::allocator&lt; Array&lt; amrex::MultiFab *, BL_SPACEDIM &gt; &gt; &gt;</label>
       </node>
       <node id="92">
         <label>amrex::IndexType</label>
@@ -2043,12 +2037,12 @@
         <childnode refid="116" relation="usage">
           <edgelabel>acoefs</edgelabel>
         </childnode>
+        <childnode refid="118" relation="usage">
+          <edgelabel>bcoefs</edgelabel>
+        </childnode>
         <childnode refid="85" relation="usage">
           <edgelabel>a_valid</edgelabel>
           <edgelabel>b_valid</edgelabel>
-        </childnode>
-        <childnode refid="118" relation="usage">
-          <edgelabel>bcoefs</edgelabel>
         </childnode>
         <childnode refid="103" relation="usage">
           <edgelabel>a_def</edgelabel>
@@ -2063,8 +2057,11 @@
         <label>amrex::BoxArray::RefID</label>
         <link refid="structamrex_1_1BoxArray_1_1RefID"/>
       </node>
-      <node id="69">
-        <label>std::vector&lt; Tuple&lt; Real, BL_SPACEDIM &gt;, std::allocator&lt; Tuple&lt; Real, BL_SPACEDIM &gt; &gt; &gt;</label>
+      <node id="118">
+        <label>amrex::Vector&lt; Array&lt; amrex::MultiFab *, BL_SPACEDIM &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="116">
         <label>amrex::Vector&lt; amrex::MultiFab * &gt;</label>
@@ -2104,16 +2101,19 @@
           <edgelabel>boxarray</edgelabel>
         </childnode>
       </node>
-      <node id="66">
+      <node id="65">
+        <label>std::vector&lt; Array&lt; Real, BL_SPACEDIM &gt;, std::allocator&lt; Array&lt; Real, BL_SPACEDIM &gt; &gt; &gt;</label>
+      </node>
+      <node id="68">
         <label>amrex::Vector&lt; amrex::Vector&lt; amrex::MultiMask &gt; &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="67" relation="public-inheritance">
+        <childnode refid="69" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="118">
-        <label>amrex::Vector&lt; Tuple&lt; amrex::MultiFab *, BL_SPACEDIM &gt; &gt;</label>
+      <node id="64">
+        <label>amrex::Vector&lt; Array&lt; Real, BL_SPACEDIM &gt; &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="119" relation="public-inheritance">
+        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
@@ -2165,7 +2165,7 @@
       <member refid="classamrex_1_1ABec4_1aa3cb2ce5caf5ce37d3d16868e9108f8b" prot="public" virt="virtual"><scope>amrex::ABec4</scope><name>get_beta</name></member>
       <member refid="classamrex_1_1LinOp_1a61745f14570d6a595ab67ec1bf283c18" prot="public" virt="non-virtual"><scope>amrex::ABec4</scope><name>getDx</name></member>
       <member refid="classamrex_1_1LinOp_1a399736dcc956ff8f1fffaa2757028874" prot="public" virt="non-virtual"><scope>amrex::ABec4</scope><name>getGeom</name></member>
-      <member refid="classamrex_1_1LinOp_1a7e08e1c0b0875dd14badfd0af0a3e3e8" prot="protected" virt="non-virtual"><scope>amrex::ABec4</scope><name>h</name></member>
+      <member refid="classamrex_1_1LinOp_1aa9588834363609399b2953a1285311fc" prot="protected" virt="non-virtual"><scope>amrex::ABec4</scope><name>h</name></member>
       <member refid="classamrex_1_1LinOp_1a6b431b3abaa1031a23c3d7972d7dab93" prot="protected" virt="non-virtual"><scope>amrex::ABec4</scope><name>harmavg</name></member>
       <member refid="classamrex_1_1LinOp_1ad5f2fc8009714c47dc63ff6a7a73a5deae1724332b6960ec73ce5040947963f78" prot="public" virt="non-virtual"><scope>amrex::ABec4</scope><name>Homogeneous_BC</name></member>
       <member refid="classamrex_1_1LinOp_1ad5f2fc8009714c47dc63ff6a7a73a5dea2789f303c136a93263ed4b63ce83d29a" prot="public" virt="non-virtual"><scope>amrex::ABec4</scope><name>Inhomogeneous_BC</name></member>
