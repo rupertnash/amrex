@@ -56,6 +56,7 @@ var searchData=
   ['device_5fid',['device_id',['../classamrex_1_1Cuda_1_1Device.html#a33d416e52bae75c6ba07b702011704e1',1,'amrex::Cuda::Device']]],
   ['device_5fset_5fpreferred',['device_set_preferred',['../structamrex_1_1ArenaInfo.html#a0ab972913e7e764d7f0c88097ce1c619',1,'amrex::ArenaInfo']]],
   ['device_5fset_5freadonly',['device_set_readonly',['../structamrex_1_1ArenaInfo.html#a106f4ef6d447922447c63d296583e917',1,'amrex::ArenaInfo']]],
+  ['device_5fsync',['device_sync',['../structamrex_1_1MFItInfo.html#ab11997c86f3b753d6e0219696f17c2f7',1,'amrex::MFItInfo::device_sync()'],['../classamrex_1_1MFIter.html#a8cc2207634fdad4304d0a46c1e0ea433',1,'amrex::MFIter::device_sync()']]],
   ['device_5fuse_5fhostalloc',['device_use_hostalloc',['../structamrex_1_1ArenaInfo.html#a18ad35d706eda3be6347c90f86d68e81',1,'amrex::ArenaInfo']]],
   ['device_5fuse_5fmanaged_5fmemory',['device_use_managed_memory',['../structamrex_1_1ArenaInfo.html#a961c961eb343a2fa091082a6f1717b16',1,'amrex::ArenaInfo']]],
   ['diaginv',['diaginv',['../classamrex_1_1Hypre.html#a6eb22e62b62ea0d2bcfef92f18df5304',1,'amrex::Hypre::diaginv()'],['../classamrex_1_1PETScABecLap.html#a2a350b0e24a97da1c350b8116d0341ec',1,'amrex::PETScABecLap::diaginv()']]],
