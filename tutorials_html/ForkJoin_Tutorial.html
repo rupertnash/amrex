@@ -196,7 +196,7 @@ After all of the forked child tasks complete, they synchronize
 <a class="reference internal image-reference" href="_images/fork_join_tasks.png"><img alt="Fork-Join Tasks" src="_images/fork_join_tasks.png" style="width: 420.8px; height: 469.6px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Example of a fork-join operation where the parent task’s MPI processes (ranks) are
 split into two independent child tasks that execute in parallel and
-then join to resume execution of the parent task.</span></p>
+then join to resume execution of the parent task.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The fork-join operation can also be invoked in a nested fashion,
 creating a hierarchy of fork-join operations, where each fork further
@@ -207,16 +207,16 @@ large communication overheads.</p>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/nested_fork_join_tasks.png"><img alt="Nested Fork-Join Tasks" src="_images/nested_fork_join_tasks.png" style="width: 436.8px; height: 589.6px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Example of nested fork-join operations where a child task is further
-split into more subtasks.</span></p>
+split into more subtasks.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The fork-join operation is accomplished by:</p>
 <blockquote>
 <div><ol class="loweralpha simple">
-<li>redistributing MultiFab data so that <strong>all</strong> of the data in each
-registered MultiFab is visible to ranks within a subtask, and</li>
-<li>dividing the root MPI communicator into sub-communicators so that
+<li><p>redistributing MultiFab data so that <strong>all</strong> of the data in each
+registered MultiFab is visible to ranks within a subtask, and</p></li>
+<li><p>dividing the root MPI communicator into sub-communicators so that
 each subgroup of ranks in a tasks will only synchronize with each
-other during subtask collectives (e.g. for <code class="docutils literal notranslate"><span class="pre">MPI_Allreduce</span></code>).</li>
+other during subtask collectives (e.g. for <code class="docutils literal notranslate"><span class="pre">MPI_Allreduce</span></code>).</p></li>
 </ol>
 </div></blockquote>
 <p>When the program starts, all of the ranks in the MPI communicator are
@@ -254,7 +254,7 @@ of the subtask from the calling task.</p>
 <div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/mf_remap_hires.png"><img alt="Examples of how to register MultiFabs" src="_images/mf_remap_hires.png" style="width: 840.0000000000001px; height: 350.07000000000005px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Examples of how a MultiFab can be registered for a fork-join operation
-with varying Strategy and Intent.</span></p>
+with varying Strategy and Intent.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>During registration, the number of ghost cells in each dimension is
 also specified, along with the ID of the owner task in the case that
@@ -274,17 +274,17 @@ The tutorial’s <code class="docutils literal notranslate"><span class="pre">my
 <h2><strong>ForkJoin/MLMG</strong><a class="headerlink" href="#forkjoin-mlmg" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial demonstrates some more advanced fork-join usage:</p>
 <ol class="arabic simple">
-<li>Nested fork-join: <code class="docutils literal notranslate"><span class="pre">top_fork()</span></code> invokes the first level fork-join,
+<li><p>Nested fork-join: <code class="docutils literal notranslate"><span class="pre">top_fork()</span></code> invokes the first level fork-join,
 which assigns one rank to the task 0 and the rest of the ranks to task 1
 via the constructor: <code class="docutils literal notranslate"><span class="pre">ForkJoin</span> <span class="pre">fj(Vector&lt;int&gt;</span> <span class="pre">{1,</span> <span class="pre">proc_n</span> <span class="pre">-</span> <span class="pre">1});</span></code>.
 Task 1 then calls <code class="docutils literal notranslate"><span class="pre">fork_solve()</span></code>, which further forks the task
-into sub-tasks.</li>
-<li>Passing a lambda function to <code class="docutils literal notranslate"><span class="pre">fork_join()</span></code> and heterogeneous tasking:
+into sub-tasks.</p></li>
+<li><p>Passing a lambda function to <code class="docutils literal notranslate"><span class="pre">fork_join()</span></code> and heterogeneous tasking:
 In <code class="docutils literal notranslate"><span class="pre">top_fork()</span></code>, we pass a lambda that takes the ForkJoin object
 reference as an argument.
 The ForkJoin object can be queried for the task ID, which is used to
-dispatch to different tasks for heterogeneous task execution.</li>
-<li>Custom component splitting: if a MultiFab is registered with
+dispatch to different tasks for heterogeneous task execution.</p></li>
+<li><p>Custom component splitting: if a MultiFab is registered with
 <code class="docutils literal notranslate"><span class="pre">Strategy</span> <span class="pre">==</span> <span class="pre">split</span></code>, then all the components of the MultiFab are
 split as evenly as possible across the tasks.
 In some cases, it may be desirable to either omit some components
@@ -296,14 +296,14 @@ The <code class="docutils literal notranslate"><span class="pre">modify_split</s
 objects, each specifying the custom range of components to be passed
 to the task.
 In this example, we omit the first component from being passed to the
-child subtasks.</li>
-<li>Reusing ForkJoin objects: if several successive fork-join operations
+child subtasks.</p></li>
+<li><p>Reusing ForkJoin objects: if several successive fork-join operations
 are required with the same subranks and MultiFab access pattern,
 we can reuse the ForkJoin object across multiple invocations.
 Reusing the ForkJoin object avoids unnecessary overhead of recreating
 the forked data structures and metadata associated with the operation.
 The <code class="docutils literal notranslate"><span class="pre">fork_solve()</span></code> function demonstrates this capability by invoking
-<code class="docutils literal notranslate"><span class="pre">fork_join()</span></code> for two iterations.</li>
+<code class="docutils literal notranslate"><span class="pre">fork_join()</span></code> for two iterations.</p></li>
 </ol>
 </div>
 </div>

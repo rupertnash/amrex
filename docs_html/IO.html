@@ -178,10 +178,10 @@
             
   <div class="section" id="plotfile">
 <span id="sec-io"></span><h1>Plotfile<a class="headerlink" href="#plotfile" title="Permalink to this headline">¶</a></h1>
-<p>AMReX&nbsp;has its own native plotfile format. Many visualization tools are
-available for AMReX&nbsp;plotfiles (see the chapter on&nbsp;<a class="reference internal" href="Visualization_Chapter.html#chap-visualization"><span class="std std-ref">Visualization</span></a>).
-AMReX&nbsp;provides the following two functions for writing a generic AMReX&nbsp;plotfile.
-Many AMReX&nbsp;application codes may have their own plotfile routines that store
+<p>AMReX has its own native plotfile format. Many visualization tools are
+available for AMReX plotfiles (see the chapter on <a class="reference internal" href="Visualization_Chapter.html#chap-visualization"><span class="std std-ref">Visualization</span></a>).
+AMReX provides the following two functions for writing a generic AMReX plotfile.
+Many AMReX application codes may have their own plotfile routines that store
 additional information such as compiler options, git hashes of the
 source codes and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> runtime parameters.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">WriteSingleLevelPlotfile</span> <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">plotfilename</span><span class="p">,</span>
@@ -204,7 +204,7 @@ source codes and <code class="code cpp c++ docutils literal notranslate"><span c
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">WriteSingleLevelPlotfile</span></span></code> is for single level runs and
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">WriteMultiLevelPlotfile</span></span></code> is for multiple levels. The name of the
 plotfile is specified by the plotfilename argument. This is the
-top level directory name for the plotfile. In AMReX&nbsp;convention, the
+top level directory name for the plotfile. In AMReX convention, the
 plotfile name consist of letters followed by numbers (e.g.,
 plt00258). <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Concatenate</span></span></code> is a useful helper function for
 making such strings.</p>
@@ -229,7 +229,7 @@ that level. This involves local data copy in memory and is not
 expected to significantly increase the total wall time for writing
 plotfiles. For the multi-level version, the function expects
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="keyword"><span class="pre">const</span></span> <span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">*&gt;</span></span></code>, whereas the multi-level data are often
-stored as <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">std</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">unique_ptr</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">&gt;&gt;</span></span></code>. AMReX&nbsp;has a
+stored as <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">std</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">unique_ptr</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">&gt;&gt;</span></span></code>. AMReX has a
 helper function for this and one can use it as follows,</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">WriteMultiLevelPlotfile</span><span class="p">(......,</span> <span class="n">amrex</span><span class="o">::</span><span class="n">GetVecOfConstPtrs</span><span class="p">(</span><span class="n">mf</span><span class="p">),</span> <span class="p">......);</span>
 </pre></div>
@@ -243,7 +243,7 @@ data. The argument <code class="code cpp c++ docutils literal notranslate"><span
 associated with the data. For multi-level plotfiles, the argument
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">nlevels</span></span></code> is the total number of levels, and we also need to provide
 the refinement ratio via an <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Vector</span></span></code> of size nlevels-1.</p>
-<p>We note that AMReX&nbsp;does not overwrite old plotfiles if the new
+<p>We note that AMReX does not overwrite old plotfiles if the new
 plotfile has the same name. The old plotfiles will be renamed to
 new directories named like plt00350.old.46576787980.</p>
 </div>
@@ -270,9 +270,8 @@ of the <code class="code cpp c++ docutils literal notranslate"><span class="name
 <p>When starting a simulation from a checkpoint file, a typical sequence in the code
 could be:</p>
 <ul>
-<li><p class="first">Read in the <code class="docutils literal notranslate"><span class="pre">Header</span></code> file data (except for the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> data).</p>
-</li>
-<li><p class="first">For each level of refinement, do the following in order:</p>
+<li><p>Read in the <code class="docutils literal notranslate"><span class="pre">Header</span></code> file data (except for the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> data).</p></li>
+<li><p>For each level of refinement, do the following in order:</p>
 <p>– Read in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code></p>
 <p>– Build a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code></p>
 <p>– Define any <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code>, <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FluxRegister</span></span></code>, etc. objects that are built upon the

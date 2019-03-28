@@ -183,23 +183,23 @@ tutorials to help applications convert to GPUs.</p>
 AMReX GPU program.  This guide will use <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/Launch</span></code>,
 and instructions will focus on ORNL’s systems:</p>
 <ol class="arabic simple">
-<li>Before compiling, the <code class="docutils literal notranslate"><span class="pre">pgi</span></code> and <code class="docutils literal notranslate"><span class="pre">cuda</span></code> software must be available.
-On ORNL systems, the modules can be loaded directly by typing:</li>
+<li><p>Before compiling, the <code class="docutils literal notranslate"><span class="pre">pgi</span></code> and <code class="docutils literal notranslate"><span class="pre">cuda</span></code> software must be available.
+On ORNL systems, the modules can be loaded directly by typing:</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">module load pgi cuda</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li>Go to <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/Launch</span></code> to compile the executable.  Compile with
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU/Launch</span></code> to compile the executable.  Compile with
 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">USE_CUDA=TRUE</span> <span class="pre">COMP=pgi</span> <span class="pre">USE_MPI=TRUE</span> <span class="pre">USE_OMP=FALSE</span></code>, or edit the
 <code class="docutils literal notranslate"><span class="pre">GNUmakefile</span></code> to match this configuration and run <code class="docutils literal notranslate"><span class="pre">make</span></code>. This
-should result in an executable: <code class="docutils literal notranslate"><span class="pre">main3d.pgi.MPI.CUDA.ex</span></code>.</li>
-<li>On Summit systems, this executable can be submitted by using one of the run
+should result in an executable: <code class="docutils literal notranslate"><span class="pre">main3d.pgi.MPI.CUDA.ex</span></code>.</p></li>
+<li><p>On Summit systems, this executable can be submitted by using one of the run
 scripts found in <code class="docutils literal notranslate"><span class="pre">Tutorials/GPU</span></code>.  <code class="docutils literal notranslate"><span class="pre">run.script</span></code> can be used to run on
 Summitdev, and <code class="docutils literal notranslate"><span class="pre">run.summit</span></code> can be used for Summit.  To change the number
 of ranks and GPUs used in the simulation, change the number of resource sets,
 <code class="docutils literal notranslate"><span class="pre">n</span></code> in the <code class="docutils literal notranslate"><span class="pre">jsrun</span></code> line.  For the first <code class="docutils literal notranslate"><span class="pre">Launch</span></code> tutorial, use <code class="docutils literal notranslate"><span class="pre">n=1</span></code>
-and set <code class="docutils literal notranslate"><span class="pre">INPUTS=&quot;&quot;</span></code> because no input file is used in this example.</li>
+and set <code class="docutils literal notranslate"><span class="pre">INPUTS=&quot;&quot;</span></code> because no input file is used in this example.</p></li>
 </ol>
 <p>When ready, submit the job script (on Summit: <code class="docutils literal notranslate"><span class="pre">bsub</span> <span class="pre">run.script</span></code>).
 Congratulations! You’ve accelerated AMReX using GPUs!</p>

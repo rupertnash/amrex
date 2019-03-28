@@ -209,7 +209,7 @@
   <div class="section" id="dimensionality">
 <span id="sec-basics-dim"></span><h1>Dimensionality<a class="headerlink" href="#dimensionality" title="Permalink to this headline">¶</a></h1>
 <p>As we have mentioned in <a class="reference internal" href="BuildingAMReX_Chapter.html#chap-buildingamrex"><span class="std std-ref">Building AMReX</span></a>, the dimensionality of
-AMReX&nbsp;must be set at compile time. A macro, <code class="docutils literal notranslate"><span class="pre">AMREX_SPACEDIM</span></code>, is defined to
+AMReX must be set at compile time. A macro, <code class="docutils literal notranslate"><span class="pre">AMREX_SPACEDIM</span></code>, is defined to
 be the number of spatial dimensions. C++ codes can also use the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">SpaceDim</span></span></code> variable. Fortran codes can use either the macro and
 preprocessing or do</p>
@@ -228,7 +228,7 @@ main difference between <code class="code cpp c++ docutils literal notranslate">
 </div>
 <div class="section" id="real">
 <h1>Real<a class="headerlink" href="#real" title="Permalink to this headline">¶</a></h1>
-<p>AMReX&nbsp;can be compiled to use either double precision (which is the default) or
+<p>AMReX can be compiled to use either double precision (which is the default) or
 single precision. <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Real</span></span></code> is typedef’d to either <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">double</span></span></code> or
 <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">float</span></span></code>. C codes can use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex_real</span></span></code>. They are defined in
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AMReX_REAL</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">H</span></span></code>. The data type is accessible in Fortran codes via</p>
@@ -238,9 +238,9 @@ single precision. <code class="code cpp c++ docutils literal notranslate"><span 
 </div>
 <div class="section" id="paralleldescriptor">
 <span id="sec-basics-paralleldescriptor"></span><h1>ParallelDescriptor<a class="headerlink" href="#paralleldescriptor" title="Permalink to this headline">¶</a></h1>
-<p>AMReX&nbsp;users do not need to use MPI directly. Parallel communication is often
+<p>AMReX users do not need to use MPI directly. Parallel communication is often
 handled by the data abstraction classes (e.g.,MultiFab; section on
-<a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a>). In addition, AMReX&nbsp;has provided namespace
+<a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a>). In addition, AMReX has provided namespace
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParallelDescriptor</span></span></code> in <code class="docutils literal notranslate"><span class="pre">AMReX_ParallelDescriptor.H.</span></code> The frequently
 used functions are</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">myproc</span> <span class="o">=</span> <span class="n">ParallelDescriptor</span><span class="o">::</span><span class="n">MyProc</span><span class="p">();</span>  <span class="c1">// Return the rank</span>
@@ -320,8 +320,8 @@ a full listing of the available functions.</p>
 </div>
 <div class="section" id="print">
 <span id="sec-basics-print"></span><h1>Print<a class="headerlink" href="#print" title="Permalink to this headline">¶</a></h1>
-<p>AMReX&nbsp;provides classes in <code class="docutils literal notranslate"><span class="pre">AMReX_Print.H</span></code> for printing messages to standard
-output or any C++&nbsp;<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ostream</span></span></code>. The main reason one should use them instead
+<p>AMReX provides classes in <code class="docutils literal notranslate"><span class="pre">AMReX_Print.H</span></code> for printing messages to standard
+output or any C++ <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ostream</span></span></code>. The main reason one should use them instead
 of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">std</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">cout</span></span></code> is that messages from multiple processes or threads do not
 get mixed up. Below are some examples.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">()</span> <span class="o">&lt;&lt;</span>  <span class="s">&quot;x = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span> <span class="c1">// Print on I/O processor</span>
@@ -451,7 +451,7 @@ resources are properly freed.</p>
 <p>In block-structured AMR, there is a hierarchy of logically rectangular grids.
 The computational domain on each AMR level is decomposed into a union of
 rectangular domains. <a class="reference internal" href="#fig-basics-amrgrids"><span class="std std-numref">Fig. 1</span></a> below shows an example of
-AMR with three total levels.  In the AMReX&nbsp;numbering convention, the coarsest
+AMR with three total levels.  In the AMReX numbering convention, the coarsest
 level is level 0. The coarsest grid (<em>black</em>) covers the domain with
 <span class="math notranslate nohighlight">\(16^2\)</span> cells. Bold lines represent grid boundaries. There are two
 intermediate resolution grids (<em>blue</em>) at level 1 and the cells are a factor of
@@ -459,10 +459,10 @@ two finer than those at level 0. The two finest grids (<em>red</em>) are at leve
 and the cells are a factor of two finer than the level 1 cells. There are 1, 2
 and 2 Boxes on levels 0, 1, and 2, respectively. Note that there is no direct
 parent-child connection. In this chapter, we will focus on single levels.</p>
-<div class="figure" id="id1">
+<div class="figure align-center" id="id1">
 <span id="fig-basics-amrgrids"></span><a class="reference internal image-reference" href="_images/amrgrids.png"><img alt="_images/amrgrids.png" src="_images/amrgrids.png" style="width: 3in;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Example of AMR grids. There are three levels in total.
-There are 1, 2 and 2 Boxes on levels 0, 1, and 2, respectively.</span></p>
+There are 1, 2 and 2 Boxes on levels 0, 1, and 2, respectively.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="box-intvect-and-indextype">
@@ -582,16 +582,16 @@ output, three integer tuples for each box are the lower corner indices, upper
 corner indices, and the index types. Note that 0 and 1 denote cell and node,
 respectively. For each tuple like <code class="code cpp c++ docutils literal notranslate"><span class="punctuation"><span class="pre">(</span></span><span class="literal number integer"><span class="pre">64</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">64</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">64</span></span><span class="punctuation"><span class="pre">)</span></span></code>, the 3 numbers are for 3
 directions. The two Boxes in the code above represent different indexing views
-of the same domain of <span class="math notranslate nohighlight">\(64^3\)</span> cells. Note that in AMReX&nbsp;convention, the
+of the same domain of <span class="math notranslate nohighlight">\(64^3\)</span> cells. Note that in AMReX convention, the
 lower side of a cell has the same integer value as the cell centered index.
 That is if we consider a cell based index represent <span class="math notranslate nohighlight">\(i\)</span>, the nodal index
 with the same integer value represents <span class="math notranslate nohighlight">\(i-1/2\)</span>.
 <a class="reference internal" href="#fig-basics-indextypes"><span class="std std-numref">Fig. 2</span></a> shows some of the different index types for 2D.</p>
-<div class="figure" id="id2">
+<div class="figure align-center" id="id2">
 <span id="fig-basics-indextypes"></span><a class="reference internal image-reference" href="_images/indextypes.png"><img alt="_images/indextypes.png" src="_images/indextypes.png" style="width: 5in;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Some of the different index types in two dimensions: (a) cell-centered, (b) <span class="math notranslate nohighlight">\(x\)</span>-face-centered
 (i.e., nodal in <span class="math notranslate nohighlight">\(x\)</span>-direction only), and (c) corner/nodal,
-i.e., nodal in all dimensions.</span></p>
+i.e., nodal in all dimensions.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>There are a number of ways of converting a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> from one type to another.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Box</span> <span class="nf">b0</span> <span class="p">({</span><span class="mi">64</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">64</span><span class="p">},</span> <span class="p">{</span><span class="mi">127</span><span class="p">,</span><span class="mi">127</span><span class="p">,</span><span class="mi">127</span><span class="p">});</span> <span class="c1">// Index type: (cell, cell, cell)</span>
@@ -704,12 +704,12 @@ be constructed with</p>
 space domain, an optional argument of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">RealBox</span></span></code> pointer specifying the
 physical domain, an optional <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span></code> specifying coordinate system type, and
 an optional <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> specifying periodicity. If a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">RealBox</span></span></code> is not
-given, AMReX&nbsp;will construct one based on <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> parameters,
+given, AMReX will construct one based on <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> parameters,
 <code class="docutils literal notranslate"><span class="pre">geometry.prob_lo</span></code> and <code class="docutils literal notranslate"><span class="pre">geometry.prob_hi</span></code>, where each of the parameter is
 an array of <code class="docutils literal notranslate"><span class="pre">AMREX_SPACEDIM</span></code> real numbers. It’s a runtime error if this
 fails. The optional argument for coordinate system is an integer type with
 valid values being 0 (Cartesian), or 1 (cylindrical), or 2 (spherical). If it
-is invalid as in the case of the default argument value, AMReX&nbsp;will query the
+is invalid as in the case of the default argument value, AMReX will query the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> database for <code class="docutils literal notranslate"><span class="pre">geometry.coord_sys</span></code> and use it if one is
 found. If it cannot find the parameter, the coordinate system is set to 0
 (i.e., Cartesian coordinates). The <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Geometry</span></span></code> class has the concept of
@@ -778,9 +778,9 @@ Boxes on a single AMR level. One can make a <code class="code cpp c++ docutils l
 a collection, even though a single process in a parallel run only owns some of
 the Boxes via domain decomposition. In the example above, a 4-process run may
 divide the work and each process owns say 2 Boxes (see section
-on&nbsp;<a class="reference internal" href="#sec-basics-dm"><span class="std std-ref">DistributionMapping</span></a>). Each process can then allocate memory for the
+on <a class="reference internal" href="#sec-basics-dm"><span class="std std-ref">DistributionMapping</span></a>). Each process can then allocate memory for the
 floating point data on the Boxes it owns (see sections
-on&nbsp;<a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a> &amp; <a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox and IArrayBox</span></a>).</p>
+on <a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a> &amp; <a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox and IArrayBox</span></a>).</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> has an indexing type, just like <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code>. Each Box in a
 BoxArray has the same type as the BoxArray itself. In the following example, we
 show how one can convert BoxArray to a different type.</p>
@@ -831,7 +831,7 @@ of them as completely independent of each other.</p>
 <span class="c1">// The original copy is unmodified even though they share internal data.</span>
 </pre></div>
 </div>
-<p>For advanced users, AMReX&nbsp;provides functions performing the intersection of a
+<p>For advanced users, AMReX provides functions performing the intersection of a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> and a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code>. These functions are much faster than a naive
 implementation of performing intersection of the Box with each Box in the
 BoxArray. If one needs to perform those intersections, functions
@@ -872,7 +872,7 @@ mapping of grids to processes.</p>
 </div>
 <div class="section" id="basefab-farraybox-and-iarraybox">
 <span id="sec-basics-fab"></span><h1>BaseFab, FArrayBox and IArrayBox<a class="headerlink" href="#basefab-farraybox-and-iarraybox" title="Permalink to this headline">¶</a></h1>
-<p>AMReX&nbsp;is a block-structured AMR framework. Although AMR introduces irregularity
+<p>AMReX is a block-structured AMR framework. Although AMR introduces irregularity
 to the data and algorithms, there is regularity at the block/Box level because
 each is still logically rectangular, and the data structure at the Box level is
 conceptually simple. <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> is a class template for multi-dimensional
@@ -886,7 +886,7 @@ contiguous block of memory because of the ordering. For example, a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">Real</span></span><span class="operator"><span class="pre">&gt;</span></span></code> with 4 components defined on a three-dimensional
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">IntVect</span></span><span class="punctuation"><span class="pre">{</span></span><span class="operator"><span class="pre">-</span></span><span class="literal number integer"><span class="pre">4</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">8</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">32</span></span><span class="punctuation"><span class="pre">},</span></span><span class="name"><span class="pre">IntVect</span></span><span class="punctuation"><span class="pre">{</span></span><span class="literal number integer"><span class="pre">32</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">64</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">48</span></span><span class="punctuation"><span class="pre">})</span></span></code> is like a Fortran array of
 <code class="code fortran docutils literal notranslate"><span class="keyword type"><span class="pre">real</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">amrex_real</span></span><span class="punctuation"><span class="pre">),</span></span> <span class="keyword"><span class="pre">dimension</span></span><span class="punctuation"><span class="pre">(</span></span><span class="operator"><span class="pre">-</span></span><span class="literal number integer"><span class="pre">4</span></span><span class="punctuation"><span class="pre">:</span></span><span class="literal number integer"><span class="pre">32</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">8</span></span><span class="punctuation"><span class="pre">:</span></span><span class="literal number integer"><span class="pre">64</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">32</span></span><span class="punctuation"><span class="pre">:</span></span><span class="literal number integer"><span class="pre">48</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">0</span></span><span class="punctuation"><span class="pre">:</span></span><span class="literal number integer"><span class="pre">3</span></span><span class="punctuation"><span class="pre">)</span></span></code>.  Note that the
-convention in C++&nbsp;part of AMReX&nbsp;is the component index is zero based. The code
+convention in C++ part of AMReX is the component index is zero based. The code
 for constructing such an object is as follows,</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Box</span> <span class="nf">bx</span><span class="p">(</span><span class="n">IntVect</span><span class="p">{</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">32</span><span class="p">},</span> <span class="n">IntVect</span><span class="p">{</span><span class="mi">32</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">48</span><span class="p">});</span>
 <span class="kt">int</span> <span class="n">numcomps</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
@@ -915,7 +915,7 @@ call</p>
 </pre></div>
 </div>
 <p>The typical usage of the returned pointer is then to pass it to a Fortran or C
-function that works on the array data (see the section&nbsp;on
+function that works on the array data (see the section on
 <a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran, C and C++ Kernels</span></a>).  <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> has several functions that set the
 array data to a constant value. Two examples are as follows.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setVal</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">);</span>        <span class="c1">// Set all data to x</span>
@@ -959,7 +959,7 @@ FArrayBox.</p>
 </pre></div>
 </div>
 <p>For more complicated expressions that are not supported, one can write Fortran or C
-functions for those (see the section on&nbsp;<a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran, C and C++ Kernels</span></a>).  Note that
+functions for those (see the section on <a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran, C and C++ Kernels</span></a>).  Note that
 BaseFab does provide operators for accessing the data directly in C++. For
 example, the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">saxpy</span></span></code> example above can be done with</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Iterate over all components</span>
@@ -975,7 +975,7 @@ example, the <code class="code cpp c++ docutils literal notranslate"><span class
 <p>But this approach is generally not recommended for performance reasons.
 However, it can be handy for debugging.</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> and its derived classes are containers for data on <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code>.
-Recall that <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> has various types (see the section on&nbsp;<a class="reference internal" href="#sec-basics-box"><span class="std std-ref">Box, IntVect and IndexType</span></a>).
+Recall that <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> has various types (see the section on <a class="reference internal" href="#sec-basics-box"><span class="std std-ref">Box, IntVect and IndexType</span></a>).
 The examples in this section so far use the default cell based type.  However,
 some functions will result in a runtime error if the types mismatch.  For
 example.</p>
@@ -1011,7 +1011,7 @@ be emphasized that the alias will contain a dangling pointer after the original
 <span id="sec-basics-multifab"></span><h1>FabArray, MultiFab and iMultiFab<a class="headerlink" href="#fabarray-multifab-and-imultifab" title="Permalink to this headline">¶</a></h1>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FabArray</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">FAB</span></span><span class="operator"><span class="pre">&gt;</span></span></code> is a class template in AMReX_FabArray.H for a collection
 of FABs on the same AMR level associated with a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> (see the
-section on&nbsp;<a class="reference internal" href="#sec-basics-ba"><span class="std std-ref">BoxArray</span></a>). The template parameter <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FAB</span></span></code> is usually
+section on <a class="reference internal" href="#sec-basics-ba"><span class="std std-ref">BoxArray</span></a>). The template parameter <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FAB</span></span></code> is usually
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">T</span></span><span class="operator"><span class="pre">&gt;</span></span></code> or its derived classes (e.g., <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code>). However, FabArray
 can also be used to hold other data structures. To construct a FabArray, a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> must be provided because the FabArray is intended to hold <em>grid</em> data
@@ -1023,7 +1023,7 @@ distributed among parallel processes. For each process, a FabArray contains
 only the FAB objects owned by that process, and the process operates only on
 its local data. For operations that require data owned by other processes,
 remote communications are involved. Thus, the construction of a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FabArray</span></span></code>
-requires a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code> (see the section on&nbsp;<a class="reference internal" href="#sec-basics-dm"><span class="std std-ref">DistributionMapping</span></a>)
+requires a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code> (see the section on <a class="reference internal" href="#sec-basics-dm"><span class="std std-ref">DistributionMapping</span></a>)
 that specifies which process owns which Box. For level 2 (<em>red</em>) in
 <a class="reference internal" href="#fig-basics-amrgrids"><span class="std std-numref">Fig. 1</span></a>, there are two Boxes. Suppose there are two
 parallel processes, and we use a DistributionMapping that assigns one Box to
@@ -1045,7 +1045,7 @@ ways to define a MultiFab. For example,</p>
 </div>
 <p>Here we define a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> with 4 components and 1 ghost cell. A MultiFab
 contains a number of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code>es (see the section
-on&nbsp;<a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox and IArrayBox</span></a>) defined on Boxes grown by the number of ghost cells
+on <a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox and IArrayBox</span></a>) defined on Boxes grown by the number of ghost cells
 (1 in this example). That is the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> is not
 exactly the same as in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code>.  If the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> has a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span><span class="punctuation"><span class="pre">{(</span></span><span class="literal number integer"><span class="pre">7</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">7</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">7</span></span><span class="punctuation"><span class="pre">)</span></span> <span class="punctuation"><span class="pre">(</span></span><span class="literal number integer"><span class="pre">15</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">15</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">15</span></span><span class="punctuation"><span class="pre">)}</span></span></code>, the one used for constructing <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code>
@@ -1214,10 +1214,10 @@ Then we will introduce the concept of logical tiling.  Finally we will show how
 logical tiling can be launched via <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code>.</p>
 <div class="section" id="mfiter-without-tiling">
 <span id="sec-basics-mfiter-notiling"></span><h2>MFIter without Tiling<a class="headerlink" href="#mfiter-without-tiling" title="Permalink to this headline">¶</a></h2>
-<p>In the section on&nbsp;<a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a>, we have shown some of the
+<p>In the section on <a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a>, we have shown some of the
 arithmetic functionalities of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code>, such as adding two MultiFabs
 together. In this section, we will show how you can operate on the
-<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> data with your own functions. AMReX&nbsp; provides an iterator,
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> data with your own functions. AMReX  provides an iterator,
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> for looping over the FArrayBoxes in MultiFabs. For example,</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">mf</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span> <span class="c1">// Loop over grids</span>
 <span class="p">{</span>
@@ -1263,10 +1263,10 @@ interface like below,</p>
 <span class="k">end subroutine </span><span class="n">f1</span>
 </pre></div>
 </div>
-<p>Here <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_fort_module</span></span></code> is a Fortran module in AMReX&nbsp;and
+<p>Here <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_fort_module</span></span></code> is a Fortran module in AMReX and
 <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_real</span></span></code> is a Fortran kind parameter that matches
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Real</span></span></code> in C++. In this example, we assumed the spatial dimension is
-3. In 2D, the function interface is different. In the section&nbsp;on
+3. In 2D, the function interface is different. In the section on
 <a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran, C and C++ Kernels</span></a>, we will present a dimension-agnostic approach
 using macros provided by AMReX.</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> only loops over grids owned by this process. For example, suppose
@@ -1367,16 +1367,16 @@ look like</p>
 </pre></div>
 </div>
 <p>As we can see, to manually tile individual loops is very labor-intensive and
-error-prone for large applications. AMReX&nbsp;has incorporated the tiling construct
+error-prone for large applications. AMReX has incorporated the tiling construct
 into <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> so that the application codes can get the benefit of tiling
 easily. An <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loop with tiling is almost the same as the non-tiling
 version. The first example in (see the previous section on
 <a class="reference internal" href="#sec-basics-mfiter-notiling"><span class="std std-ref">MFIter without Tiling</span></a>) requires only two minor changes:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>passing <code class="code cpp c++ docutils literal notranslate"><span class="name builtin"><span class="pre">true</span></span></code> when defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> to indicate tiling;</li>
-<li>calling <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">tilebox</span></span></code> instead of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">validbox</span></span></code> to obtain the work region
-for the loop iteration.</li>
+<li><p>passing <code class="code cpp c++ docutils literal notranslate"><span class="name builtin"><span class="pre">true</span></span></code> when defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> to indicate tiling;</p></li>
+<li><p>calling <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">tilebox</span></span></code> instead of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">validbox</span></span></code> to obtain the work region
+for the loop iteration.</p></li>
 </ol>
 </div></blockquote>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">//               * true *  turns on tiling</span>
@@ -1393,7 +1393,7 @@ for the loop iteration.</li>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The second example in the previous section on&nbsp;<a class="reference internal" href="#sec-basics-mfiter-notiling"><span class="std std-ref">MFIter without Tiling</span></a>
+<p>The second example in the previous section on <a class="reference internal" href="#sec-basics-mfiter-notiling"><span class="std std-ref">MFIter without Tiling</span></a>
 also requires only two minor changes.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">//              * true *  turns on tiling</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span> <span class="c1">// Loop over tiles</span>
@@ -1418,23 +1418,23 @@ also requires only two minor changes.</p>
 </div>
 <p>The kernels functions like <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f1</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f2</span></span></code> in the two examples here
 usually require very little changes.</p>
-<span id="fig-basics-cc-comparison"></span><table border="1" class="docutils align-center" id="id3">
+<span id="fig-basics-cc-comparison"></span><table class="docutils align-center" id="id3">
 <caption><span class="caption-number">Table 3 </span><span class="caption-text">Comparison of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> with (right) and without (left) tiling.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="_images/cc_validbox.png"><img alt="a" src="_images/cc_validbox.png" style="width: 90%;" /></a></td>
-<td><a class="reference internal" href="_images/cc_tilebox.png"><img alt="b" src="_images/cc_tilebox.png" style="width: 90%;" /></a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/cc_validbox.png"><img alt="a" src="_images/cc_validbox.png" style="width: 90%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/cc_tilebox.png"><img alt="b" src="_images/cc_tilebox.png" style="width: 90%;" /></a></p></td>
 </tr>
-<tr class="row-even"><td><div class="first last line-block">
+<tr class="row-even"><td><div class="line-block">
 <div class="line">Example of cell-centered valid boxes.</div>
 <div class="line">There are two valid boxes in this example.</div>
 <div class="line">Each has <span class="math notranslate nohighlight">\(8^2\)</span> cells.</div>
 </div>
 </td>
-<td><div class="first last line-block">
+<td><div class="line-block">
 <div class="line">Example of cell-centered tile boxes. Each grid</div>
 <div class="line">is <em>logically</em> broken into 4 tiles, and each tile</div>
 <div class="line">as <span class="math notranslate nohighlight">\(4^2\)</span> cells. There are 8 tiles in total.</div>
@@ -1470,21 +1470,21 @@ if the box is used to define a work region inside of the loop. For example:</p>
 </div>
 <p>An <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">IntVect</span></span></code> is used to specify the tile size for every dimension.  A tile
 size larger than the grid size simply means tiling is disabled in that
-direction. AMReX&nbsp;has a default tile size <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">IntVect</span></span><span class="punctuation"><span class="pre">{</span></span><span class="literal number integer"><span class="pre">1024000</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">8</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">8</span></span><span class="punctuation"><span class="pre">}</span></span></code> in 3D and
+direction. AMReX has a default tile size <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">IntVect</span></span><span class="punctuation"><span class="pre">{</span></span><span class="literal number integer"><span class="pre">1024000</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">8</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">8</span></span><span class="punctuation"><span class="pre">}</span></span></code> in 3D and
 no tiling in 2D. This is used when tile size is not explicitly set but the
 tiling flag is on. One can change the default size using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code>
 (section <a class="reference internal" href="#sec-basics-parmparse"><span class="std std-ref">ParmParse</span></a>) parameter <code class="docutils literal notranslate"><span class="pre">fabarray.mfiter_tile_size.</span></code></p>
-<span id="fig-basics-ec-comparison"></span><table border="1" class="docutils align-center" id="id4">
+<span id="fig-basics-ec-comparison"></span><table class="docutils align-center" id="id4">
 <caption><span class="caption-number">Table 4 </span><span class="caption-text">Comparison of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> with (right) and without (left) tiling, for face-centered nodal indexing.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="_images/ec_validbox.png"><img alt="c" src="_images/ec_validbox.png" style="width: 90%;" /></a></td>
-<td><a class="reference internal" href="_images/ec_tilebox.png"><img alt="d" src="_images/ec_tilebox.png" style="width: 90%;" /></a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/ec_validbox.png"><img alt="c" src="_images/ec_validbox.png" style="width: 90%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/ec_tilebox.png"><img alt="d" src="_images/ec_tilebox.png" style="width: 90%;" /></a></p></td>
 </tr>
-<tr class="row-even"><td><div class="first last line-block">
+<tr class="row-even"><td><div class="line-block">
 <div class="line">Example of face valid boxes. There are two</div>
 <div class="line">valid boxes in this example. Each has</div>
 <div class="line"><span class="math notranslate nohighlight">\(9\times 8\)</span> points. Note that points in one</div>
@@ -1495,7 +1495,7 @@ tiling flag is on. One can change the default size using <code class="code cpp c
 <div class="line">FArrayBoxes.</div>
 </div>
 </td>
-<td><div class="first last line-block">
+<td><div class="line-block">
 <div class="line">Example of face tile boxes. Each grid is</div>
 <div class="line"><em>logically</em> broken into 4 tiles as indicated by</div>
 <div class="line">the symbols. There are 8 tiles in total. Some</div>
@@ -1568,17 +1568,17 @@ same grid do not overlap. This is the basic design principle of these various
 tiling functions. Tiling is a way of domain decomposition for work sharing.
 Overlapping tiles is undesirable because work would be wasted and for
 multi-threaded codes race conditions could occur.</p>
-<span id="fig-basics-growbox-comparison"></span><table border="1" class="docutils align-center" id="id5">
+<span id="fig-basics-growbox-comparison"></span><table class="docutils align-center" id="id5">
 <caption><span class="caption-number">Table 5 </span><span class="caption-text">Comparing growing cell-type and face-type tile boxes.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="_images/cc_growbox.png"><img alt="e" src="_images/cc_growbox.png" style="width: 90%;" /></a></td>
-<td><a class="reference internal" href="_images/ec_growbox.png"><img alt="f" src="_images/ec_growbox.png" style="width: 90%;" /></a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/cc_growbox.png"><img alt="e" src="_images/cc_growbox.png" style="width: 90%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/ec_growbox.png"><img alt="f" src="_images/ec_growbox.png" style="width: 90%;" /></a></p></td>
 </tr>
-<tr class="row-even"><td><div class="first last line-block">
+<tr class="row-even"><td><div class="line-block">
 <div class="line">Example of cell-centered grown tile boxes. As</div>
 <div class="line">indicated by symbols, there are 8 tiles and four</div>
 <div class="line">in each grid in this example. Tiles from the</div>
@@ -1586,7 +1586,7 @@ multi-threaded codes race conditions could occur.</p>
 <div class="line">different grids may overlap.</div>
 </div>
 </td>
-<td><div class="first last line-block">
+<td><div class="line-block">
 <div class="line">Example of face type grown tile boxes. As</div>
 <div class="line">indicated by symbols, there are 8 tiles and four</div>
 <div class="line">in each grid in this example. Tiles from the</div>
@@ -1645,15 +1645,15 @@ Examples of these function declarations are as follows.</p>
 <p>One can write the functions in C and should include the header containing the
 function declarations in the C source code to ensure type safety. However, we
 typically write these kernel functions in Fortran because of the native
-multi-dimensional array support by Fortran. As we have seen in the section&nbsp;on
+multi-dimensional array support by Fortran. As we have seen in the section on
 <a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>, these Fortran functions take C pointers and view them
 as multi-dimensional arrays of the shape specified by the additional integer
 arguments.  Note that Fortran takes arguments by reference unless the
 <code class="code fortran docutils literal notranslate"><span class="keyword"><span class="pre">value</span></span></code> keyword is used. So an integer argument on the Fortran side
-matches an integer pointer on the C++&nbsp;side. Thanks to Fortran 2003, function
+matches an integer pointer on the C++ side. Thanks to Fortran 2003, function
 name mangling is easily achieved by declaring the Fortran function as
 <code class="code fortran docutils literal notranslate"><span class="keyword"><span class="pre">bind</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">c</span></span><span class="punctuation"><span class="pre">)</span></span></code>.</p>
-<p>AMReX&nbsp;provides many macros for passing an FArrayBox’s data into Fortran/C. For
+<p>AMReX provides many macros for passing an FArrayBox’s data into Fortran/C. For
 example</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1670,7 +1670,7 @@ it into <code class="code cpp c++ docutils literal notranslate"><span class="nam
 that matches real array argument in Fortran, the first <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> (which
 matches an integer argument in Fortran) specifies the lower bounds, and the
 second <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> the upper bounds of the spatial dimensions of the array.
-Similar to what we have seen in the section on&nbsp;<a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>, a
+Similar to what we have seen in the section on <a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>, a
 matching Fortran function is shown below,</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">f</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">ulo</span><span class="p">,</span> <span class="n">uhi</span><span class="p">)</span> <span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
   <span class="k">use </span><span class="n">amrex_fort_module</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">amrex_real</span>
@@ -1695,8 +1695,8 @@ one can use</p>
 <span class="k">end subroutine </span><span class="n">f2d</span>
 </pre></div>
 </div>
-<p>Note that this does not require any changes in the C++&nbsp;part, because when
-C++&nbsp;passes an integer pointer pointing to an array of three integers Fortran
+<p>Note that this does not require any changes in the C++ part, because when
+C++ passes an integer pointer pointing to an array of three integers Fortran
 can treat it as a 2-element integer array.</p>
 <p>Another commonly used macro is <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BL_TO_FORTRAN</span></span></code>. This macro takes an
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> and provides a real pointer for the floating point data array
@@ -1722,7 +1722,7 @@ For example,</p>
 <p>Usually <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code>s  have multiple components. Thus we often also need to
 pass the number of component into Fortran functions. We can obtain the number
 by calling the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">nComp</span></span><span class="punctuation"><span class="pre">()</span></span></code> function, and pass it to Fortran as we
-have seen in the section&nbsp;on <a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>.  We can also use the
+have seen in the section on <a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>.  We can also use the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BL_TO_FORTRAN_FAB</span></span></code> macro that is similar to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BL_TO_FORTRAN_ANYD</span></span></code>
 except that it provides an additional <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> for the number of
 components. The Fortran function matching <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BL_TO_FORTRAN_FAB</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">fab</span></span><span class="punctuation"><span class="pre">)</span></span></code> is then
@@ -1857,9 +1857,9 @@ the Box’s valid region. This allows us to, e.g., perform stencil-type operatio
 regular arrays. There are three basic types of boundaries:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>interior boundary</li>
-<li>coarse/fine boundary</li>
-<li>physical boundary</li>
+<li><p>interior boundary</p></li>
+<li><p>coarse/fine boundary</p></li>
+<li><p>physical boundary</p></li>
 </ol>
 </div></blockquote>
 <p>Interior boundary is the border among the grid Boxes themselves.  For example,
@@ -1879,7 +1879,7 @@ coarse/fine boundary.</p>
 <p>The third type of boundary is the physical boundary at the physical domain.
 Note that both coarse and fine AMR levels could have grids touching the
 physical boundary. It is up to the application codes to properly fill the ghost
-cells at the physical boundary. However, AMReX&nbsp;does provide support for some
+cells at the physical boundary. However, AMReX does provide support for some
 common operations.  See the section on <a class="reference internal" href="#sec-basics-boundary"><span class="std std-ref">Boundary Conditions</span></a> for a
 discussion on domain boundary conditions in general, including how to implement
 physical (non-periodic) boundary conditions.</p>
@@ -1894,7 +1894,7 @@ be characterized as inflow, outflow, slip/no-slip walls, etc., and are
 ultimately linked to mathematical Dirichlet or Neumann conditions.</p>
 <p>The basic idea behind physical boundary conditions is as follows:</p>
 <ul>
-<li><p class="first">Create a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BCRec</span></span></code> object, which is essentially a multidimensional
+<li><p>Create a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BCRec</span></span></code> object, which is essentially a multidimensional
 integer array of <code class="code cpp c++ docutils literal notranslate"><span class="literal number integer"><span class="pre">2</span></span><span class="operator"><span class="pre">*</span></span><span class="name"><span class="pre">DIM</span></span></code> components. Each component defines a boundary
 condition type for the lo/hi side of the domain, for each direction.  See
 <code class="docutils literal notranslate"><span class="pre">amrex/Src/Base/AMReX_BC_TYPES.H</span></code> for common physical and mathematical
@@ -1925,40 +1925,34 @@ of setting up <code class="code cpp c++ docutils literal notranslate"><span clas
 </div>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BCType</span></span></code> has the following types,</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>int_dir</dt>
-<dd><p class="first last">Interior, including periodic boundary</p>
+<div><dl class="simple">
+<dt>int_dir</dt><dd><p>Interior, including periodic boundary</p>
 </dd>
-<dt>ext_dir</dt>
-<dd><p class="first last">“External Dirichlet”. It is the user’s responsibility to write a routine
+<dt>ext_dir</dt><dd><p>“External Dirichlet”. It is the user’s responsibility to write a routine
 to fill ghost cells (more details below).</p>
 </dd>
-<dt>foextrap</dt>
-<dd><p class="first last">“First Order Extrapolation”
+<dt>foextrap</dt><dd><p>“First Order Extrapolation”
 First order extrapolation from last cell in interior.</p>
 </dd>
-<dt>reflect_even</dt>
-<dd><p class="first last">Reflection from interior cells with sign
+<dt>reflect_even</dt><dd><p>Reflection from interior cells with sign
 unchanged, <span class="math notranslate nohighlight">\(q(-i) = q(i)\)</span>.</p>
 </dd>
-<dt>reflect_odd</dt>
-<dd><p class="first last">Reflection from interior cells with sign
+<dt>reflect_odd</dt><dd><p>Reflection from interior cells with sign
 changed, <span class="math notranslate nohighlight">\(q(-i) = -q(i)\)</span>.</p>
 </dd>
 </dl>
 </div></blockquote>
 </li>
-<li><p class="first">We have interfaces to a fortran routine that fills ghost cells at domain
+<li><p>We have interfaces to a fortran routine that fills ghost cells at domain
 boundaries based on the boundary condition type defined in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BCRec</span></span></code>
 object.  It is the user’s responsibility to have a consisent definition of
-what the ghost cells represent. A common option used in AMReX&nbsp;codes is to
+what the ghost cells represent. A common option used in AMReX codes is to
 fill the domain ghost cells with the value that lies on the boundary (as
 opposed to another common option where the value in the ghost cell represents
 an extrapolated value based on the boundary condition type). Then in our
 stencil based “work” codes, we also pass in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BCRec</span></span></code> object and use
 modified stencils near the domain boundary that know the value in the first
-ghost cell represents the value on the boundary.</p>
-</li>
+ghost cell represents the value on the boundary.</p></li>
 </ul>
 <p>Depending on the level of complexity of your code, there are various options
 for filling domain boundary ghost cells.</p>
@@ -2007,9 +2001,9 @@ use it as a template and insert their own function for
 </div>
 <div class="section" id="memory-allocation">
 <h1>Memory Allocation<a class="headerlink" href="#memory-allocation" title="Permalink to this headline">¶</a></h1>
-<p>AMReX&nbsp;has a Fortran module, <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_mempool_module</span></span></code> that can be used to
+<p>AMReX has a Fortran module, <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_mempool_module</span></span></code> that can be used to
 allocate memory for Fortran pointers. The reason that such a module exists in
-AMReX,&nbsp;is that memory allocation is often very slow in multi-threaded OpenMP
+AMReX, is that memory allocation is often very slow in multi-threaded OpenMP
 parallel regions. AMReX <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex_mempool_module</span></span></code> provides a much faster
 alternative approach, in which each thread has its own memory pool. Here are
 examples of using the module.</p>
@@ -2106,34 +2100,33 @@ code tree for the heat equation example is simple, as shown in
 <a class="reference internal" href="#fig-basics-heat-flowchart"><span class="std std-numref">Fig. 3</span></a>. We recommend you study
 <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> and <code class="docutils literal notranslate"><span class="pre">advance.cpp</span></code> to see some of the classes described
 below in action.</p>
-<div class="figure" id="id6">
+<div class="figure align-center" id="id6">
 <span id="fig-basics-heat-flowchart"></span><a class="reference internal image-reference" href="_images/flowchart2.png"><img alt="_images/flowchart2.png" src="_images/flowchart2.png" style="width: 4in;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Diagram of the source code structure for the HeatEquation_EX1_C example.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Diagram of the source code structure for the HeatEquation_EX1_C example.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>Source code tree for the HeatEquation_EX1_C example</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>amrex/Src/Base</dt>
-<dd>Contains source code for single-level simulations.  Note that in
+<div><dl class="simple">
+<dt>amrex/Src/Base</dt><dd><p>Contains source code for single-level simulations.  Note that in
 <code class="docutils literal notranslate"><span class="pre">amrex/Src</span></code> there are many sub-directories, e.g., <code class="docutils literal notranslate"><span class="pre">Base</span></code>, <code class="docutils literal notranslate"><span class="pre">Amr</span></code>,
 <code class="docutils literal notranslate"><span class="pre">AmrCore</span></code>, <code class="docutils literal notranslate"><span class="pre">LinearSolvers</span></code>, etc.  In this tutorial the only source
-code directory we need is <code class="docutils literal notranslate"><span class="pre">Base</span></code>.</dd>
-<dt>amrex/Tutorials/HeatEquation_EX1_C/Source</dt>
-<dd><p class="first">Contains the following source code specific to this tutorial:</p>
-<ol class="last arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">Make.package</span></code>: lists the source code files</li>
-<li><code class="docutils literal notranslate"><span class="pre">main.cpp</span></code>: contains the C++ <code class="docutils literal notranslate"><span class="pre">main</span></code> function</li>
-<li><code class="docutils literal notranslate"><span class="pre">advance.cpp</span></code>: advance the solution by a time step</li>
-<li><code class="docutils literal notranslate"><span class="pre">init_phi_Xd.f90,</span> <span class="pre">advance_Xd.f90</span></code>: fortran work functions used to
-initialize and advance the solution</li>
-<li><code class="docutils literal notranslate"><span class="pre">myfunc.H</span></code>: header file for C++ functions</li>
-<li><code class="docutils literal notranslate"><span class="pre">myfunc_F.H</span></code>: header file for fortran90 functions that are called
-in .cpp files</li>
+code directory we need is <code class="docutils literal notranslate"><span class="pre">Base</span></code>.</p>
+</dd>
+<dt>amrex/Tutorials/HeatEquation_EX1_C/Source</dt><dd><p>Contains the following source code specific to this tutorial:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Make.package</span></code>: lists the source code files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main.cpp</span></code>: contains the C++ <code class="docutils literal notranslate"><span class="pre">main</span></code> function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advance.cpp</span></code>: advance the solution by a time step</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">init_phi_Xd.f90,</span> <span class="pre">advance_Xd.f90</span></code>: fortran work functions used to
+initialize and advance the solution</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myfunc.H</span></code>: header file for C++ functions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myfunc_F.H</span></code>: header file for fortran90 functions that are called
+in .cpp files</p></li>
 </ol>
 </dd>
-<dt>amrex/Tutorials/HeatEquation_EX1_C/Exec</dt>
-<dd>This is where you build the code with make.  There is a GNUmakefile
-and inputs files, inputs_2d and inputs_3d.</dd>
+<dt>amrex/Tutorials/HeatEquation_EX1_C/Exec</dt><dd><p>This is where you build the code with make.  There is a GNUmakefile
+and inputs files, inputs_2d and inputs_3d.</p>
+</dd>
 </dl>
 </div></blockquote>
 <p>Now we highlight a few key sections of the code.  In <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> we

@@ -236,33 +236,33 @@ portability, readability and performance for their applications.</p>
 Additional information that is required for creating GPU applications is
 detailed throughout the rest of this chapter:</p>
 <ul class="simple">
-<li>Each MPI rank offloads its work to a single GPU. <code class="docutils literal notranslate"><span class="pre">(MPI</span> <span class="pre">ranks</span> <span class="pre">==</span> <span class="pre">Number</span> <span class="pre">of</span> <span class="pre">GPUs)</span></code></li>
-<li>Calculations that can be offloaded efficiently to GPUs use CUDA threads
+<li><p>Each MPI rank offloads its work to a single GPU. <code class="docutils literal notranslate"><span class="pre">(MPI</span> <span class="pre">ranks</span> <span class="pre">==</span> <span class="pre">Number</span> <span class="pre">of</span> <span class="pre">GPUs)</span></code></p></li>
+<li><p>Calculations that can be offloaded efficiently to GPUs use CUDA threads
 to parallelize over a valid box at a time.  This is done by using a lot
 of CUDA threads that only work on a few cells each. This work
 distribution is illustrated in <a class="reference internal" href="#fig-gpu-threads"><span class="std std-numref">Table 9</span></a>.
 (Note: OpenMP is currently incompatible with AMReX builds using CUDA.
 This feature is under development, although most applications will
-have no need for this feature when initially converting to GPUs.)</li>
+have no need for this feature when initially converting to GPUs.)</p></li>
 </ul>
-<span id="fig-gpu-threads"></span><table border="1" class="docutils" id="id1">
+<span id="fig-gpu-threads"></span><table class="docutils align-center" id="id1">
 <caption><span class="caption-number">Table 9 </span><span class="caption-text">Comparison of OpenMP and CUDA work distribution. Pictures provided by Mike Zingale and the CASTRO team.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="_images/gpu_2.png"><img alt="a" src="_images/gpu_2.png" style="width: 100%;" /></a></td>
-<td><a class="reference internal" href="_images/gpu_3.png"><img alt="b" src="_images/gpu_3.png" style="width: 100%;" /></a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/gpu_2.png"><img alt="a" src="_images/gpu_2.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/gpu_3.png"><img alt="b" src="_images/gpu_3.png" style="width: 100%;" /></a></p></td>
 </tr>
-<tr class="row-even"><td><div class="first last line-block">
+<tr class="row-even"><td><div class="line-block">
 <div class="line">OpenMP tiled box.</div>
 <div class="line">OpenMP threads break down the valid box
 into two large boxes (blue and orange).
 The lo and hi of one tiled box are marked.</div>
 </div>
 </td>
-<td><div class="first last line-block">
+<td><div class="line-block">
 <div class="line">CUDA threaded box.</div>
 <div class="line">Each CUDA thread works on a few cells of the
 valid box. This example uses one cell per
@@ -273,31 +273,27 @@ thread, each thread using a box with lo = hi.</div>
 </tbody>
 </table>
 <ul>
-<li><p class="first">C++ macros and CUDA extended lambdas are used to provide performance
+<li><p>C++ macros and CUDA extended lambdas are used to provide performance
 portability while making the code as understandable as possible to
-science-focused code teams.</p>
-</li>
-<li><p class="first">AMReX utilizes CUDA managed memory to automatically handle memory
+science-focused code teams.</p></li>
+<li><p>AMReX utilizes CUDA managed memory to automatically handle memory
 movement for mesh and particle data.  Simple data structures, such
 as <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">IntVect</span></span></code>s can be passed by value and temporaries, such as
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code>es, have specialized AMReX classes to handle the
 data movement for the user.  Tests have shown CUDA managed memory
 to be efficient and reliable, especially when applications remove
-any unnecessary data accesses.</p>
-</li>
-<li><p class="first">Application teams should strive to keep mesh and particle data structures
+any unnecessary data accesses.</p></li>
+<li><p>Application teams should strive to keep mesh and particle data structures
 on the GPU for as long as possible, minimizing movement back to the CPU.
 This strategy lends itself to AMReX applications readily; the mesh and
 particle data can stay on the GPU for most subroutines with the exception
-of redistribution and I/O operations.</p>
-</li>
-<li><p class="first">AMReX’s GPU strategy is focused on launching GPU kernels inside
+of redistribution and I/O operations.</p></li>
+<li><p>AMReX’s GPU strategy is focused on launching GPU kernels inside
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loops.  By performing GPU work within <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code>
 loops, GPU work is isolated to independent data sets on simple AMReX data
 objects, providing consistency and safety that matches AMReX’s coding
-methodology.</p>
-</li>
-<li><p class="first">AMReX further parallelizes GPU applications by utilizing CUDA streams.
+methodology.</p></li>
+<li><p>AMReX further parallelizes GPU applications by utilizing CUDA streams.
 CUDA guarantees execution order of kernels within the same stream, while
 allowing different streams to run simultaneously. AMReX places each iteration
 of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loops on separate streams, allowing each independent
@@ -313,11 +309,11 @@ CPU reaches a synchronize in the MFIter’s destructor and waits for all GPU lau
 to complete before continuing.</p>
 </li>
 </ul>
-<div class="figure" id="id2">
+<div class="figure align-center" id="id2">
 <span id="fig-gpu-streams"></span><img alt="_images/Streams.png" src="_images/Streams.png" />
 <p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Timeline illustration of GPU streams. Illustrates the case of an
 MFIter loop of five iterations with three GPU kernels each being
-ran with three GPU streams.</span></p>
+ran with three GPU streams.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="building-gpu-support">
@@ -406,29 +402,29 @@ AMReX provides a number of memory pools.  When compiled without
 CUDA, all <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Arena</span></span></code>s use standard <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">new</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">delete</span></span></code>
 operators. With CUDA, the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Arena</span></span></code>s each allocate with a
 specific type of GPU memory:</p>
-<span id="tab-gpu-arena"></span><table border="1" class="docutils" id="id3">
+<span id="tab-gpu-arena"></span><table class="docutils align-center" id="id3">
 <caption><span class="caption-number">Table 10 </span><span class="caption-text">Memory Arenas</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="54%" />
-<col width="46%" />
+<col style="width: 54%" />
+<col style="width: 46%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Arena</th>
-<th class="head">Memory Type</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Arena</p></th>
+<th class="head"><p>Memory Type</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>The_Arena()</td>
-<td>unified memory</td>
+<tbody>
+<tr class="row-even"><td><p>The_Arena()</p></td>
+<td><p>unified memory</p></td>
 </tr>
-<tr class="row-odd"><td>The_Device_Arena()</td>
-<td>device memory</td>
+<tr class="row-odd"><td><p>The_Device_Arena()</p></td>
+<td><p>device memory</p></td>
 </tr>
-<tr class="row-even"><td>The_Managed_Arena()</td>
-<td>unified memory</td>
+<tr class="row-even"><td><p>The_Managed_Arena()</p></td>
+<td><p>unified memory</p></td>
 </tr>
-<tr class="row-odd"><td>The_Pinned_Arena()</td>
-<td>pinned memory</td>
+<tr class="row-odd"><td><p>The_Pinned_Arena()</p></td>
+<td><p>pinned memory</p></td>
 </tr>
 </tbody>
 </table>
@@ -1038,24 +1034,22 @@ about OpenACC programming, consult the OpenACC user’s guide.</p>
 <p>The OpenMP implementation of this loop is similar, only requiring
 changing the pragmas utilized to obtain the proper offloading. The
 OpenMP labelled version of this loop is:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><p class="first">!dat = pointer to fab’s managed data</p>
+<dl>
+<dt>::</dt><dd><p>!dat = pointer to fab’s managed data</p>
 <p>!$omp target teams distribute parallel do collapse(3) schedule(static,1) is_device_ptr(dat)
 do       k = lo(3), hi(3)</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>do    j = lo(2), hi(2)</dt>
-<dd><dl class="first docutils">
-<dt>do i = lo(1), hi(1)</dt>
-<dd>dat(i,j,k) = dat(i,j,k) + 1.0_amrex_real</dd>
+<div><dl>
+<dt>do    j = lo(2), hi(2)</dt><dd><dl class="simple">
+<dt>do i = lo(1), hi(1)</dt><dd><p>dat(i,j,k) = dat(i,j,k) + 1.0_amrex_real</p>
+</dd>
 </dl>
-<p class="last">end do</p>
+<p>end do</p>
 </dd>
 </dl>
 <p>end do</p>
 </div></blockquote>
-<p class="last">end do</p>
+<p>end do</p>
 </dd>
 </dl>
 <p>In this case, <code class="docutils literal notranslate"><span class="pre">is_device_ptr</span></code> is used to indicate that <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">dat</span></span></code>
@@ -1409,13 +1403,12 @@ If you require further profiling detail, use <code class="docutils literal notra
 <p id="sec-gpu-performance">Here are some helpful performance tips to keep in mind when working with
 AMReX for GPUs:</p>
 <ul>
-<li><p class="first">It is important to use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">fabPtr</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">operator</span></span><span class="punctuation"><span class="pre">[]</span></span></code> in the
+<li><p>It is important to use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">fabPtr</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">operator</span></span><span class="punctuation"><span class="pre">[]</span></span></code> in the
 appropriate places to minimize unnecessary data movement.
 If a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> functions are called from a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span><span class="operator"><span class="pre">*</span></span></code>
 created by on the device, the associated meta-data will be transferred
-back to the CPU, causing substantial slow-downs.</p>
-</li>
-<li><p class="first">To obtain the best performance when using CUDA kernel launches, all
+back to the CPU, causing substantial slow-downs.</p></li>
+<li><p>To obtain the best performance when using CUDA kernel launches, all
 device functions called within the launch region should be inlined.
 Inlined functions use substantially fewer registers, freeing up GPU
 resources to perform other tasks. This increases parallel performance
@@ -1451,16 +1444,16 @@ be found in <code class="docutils literal notranslate"><span class="pre">Tutoria
 <p id="sec-gpu-limits">GPU support in AMReX is still under development.  There are some known
 limitations:</p>
 <ul class="simple">
-<li>By default, AMReX assumes the MPI library used is GPU aware.  The
+<li><p>By default, AMReX assumes the MPI library used is GPU aware.  The
 communication buffers given to MPI functions are allocated in device
-memory.</li>
-<li>OpenMP is currently not compatible with building AMReX with CUDA.
-<code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code> and <code class="docutils literal notranslate"><span class="pre">USE_OMP=TRUE</span></code> will fail to compile.</li>
-<li>CMake is not yet supported for building AMReX GPU support.</li>
-<li>Many multi-level functions in AMReX have not been ported to GPUs.</li>
-<li>Linear solvers have not been ported to GPUs.</li>
-<li>Embedded boundary capability has not been ported to GPUs.</li>
-<li>The Fortran interface of AMReX does not currently have GPU support.</li>
+memory.</p></li>
+<li><p>OpenMP is currently not compatible with building AMReX with CUDA.
+<code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code> and <code class="docutils literal notranslate"><span class="pre">USE_OMP=TRUE</span></code> will fail to compile.</p></li>
+<li><p>CMake is not yet supported for building AMReX GPU support.</p></li>
+<li><p>Many multi-level functions in AMReX have not been ported to GPUs.</p></li>
+<li><p>Linear solvers have not been ported to GPUs.</p></li>
+<li><p>Embedded boundary capability has not been ported to GPUs.</p></li>
+<li><p>The Fortran interface of AMReX does not currently have GPU support.</p></li>
 </ul>
 </div>
 

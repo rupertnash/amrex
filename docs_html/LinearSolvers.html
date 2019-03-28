@@ -189,11 +189,11 @@ classes, <code class="code cpp c++ docutils literal notranslate"><span class="na
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLNodeLaplacian</span></span></code>, etc.  We choose the type of linear operator
 class according to the type the linear system to solve.</p>
 <ul class="simple">
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLABecLaplacian</span></span></code> for cell-centered canonical form (equation <a class="reference internal" href="LinearSolvers_Chapter.html#equation-eqn-abeclap">(1)</a>).</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLPoisson</span></span></code> for cell-centered constant coefficient Poisson’s
-equation <span class="math notranslate nohighlight">\(\nabla^2 \phi = f\)</span>.</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLNodeLaplacian</span></span></code> for nodal variable coefficient Poisson’s
-equation <span class="math notranslate nohighlight">\(\nabla \cdot (\sigma \nabla \phi) = f\)</span>.</li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLABecLaplacian</span></span></code> for cell-centered canonical form (equation <a class="reference internal" href="LinearSolvers_Chapter.html#equation-eqn-abeclap">(1)</a>).</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLPoisson</span></span></code> for cell-centered constant coefficient Poisson’s
+equation <span class="math notranslate nohighlight">\(\nabla^2 \phi = f\)</span>.</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLNodeLaplacian</span></span></code> for nodal variable coefficient Poisson’s
+equation <span class="math notranslate nohighlight">\(\nabla \cdot (\sigma \nabla \phi) = f\)</span>.</p></li>
 </ul>
 <p>The constructors of these linear operator classes are in the form like
 below</p>
@@ -244,9 +244,9 @@ operator is ready for an MLMG object like below.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">MLMG</span> <span class="nf">mlmg</span><span class="p">(</span><span class="n">mlabeclaplacian</span><span class="p">);</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>Optional parameters can be set (see section <a class="reference internal" href="#sec-linearsolver-pars"><span class="std std-ref">Parameters</span></a>),</dt>
-<dd>and then we can use the <code class="docutils literal notranslate"><span class="pre">MLMG</span></code> member function</dd>
+<dl class="simple">
+<dt>Optional parameters can be set (see section <a class="reference internal" href="#sec-linearsolver-pars"><span class="std std-ref">Parameters</span></a>),</dt><dd><p>and then we can use the <code class="docutils literal notranslate"><span class="pre">MLMG</span></code> member function</p>
+</dd>
 </dl>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">Real</span> <span class="nf">solve</span> <span class="p">(</span><span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">MultiFab</span><span class="o">*&gt;&amp;</span> <span class="n">a_sol</span><span class="p">,</span>
             <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">MultiFab</span> <span class="k">const</span><span class="o">*&gt;&amp;</span> <span class="n">a_rhs</span><span class="p">,</span>
@@ -291,10 +291,10 @@ function</p>
 <p>The supported BC types at
 the physical domain boundaries are</p>
 <ul class="simple">
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Periodic</span></span></code> for periodic boundary.</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Dirichlet</span></span></code> for Dirichlet boundary condition.</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Neumann</span></span></code> for homogeneous Neumann boundary condition.</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">reflect_odd</span></span></code> for reflection with sign changed.</li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Periodic</span></span></code> for periodic boundary.</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Dirichlet</span></span></code> for Dirichlet boundary condition.</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Neumann</span></span></code> for homogeneous Neumann boundary condition.</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">LinOpBCType</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">reflect_odd</span></span></code> for reflection with sign changed.</p></li>
 </ul>
 <p>The second step is to set up coarse/fine Dirichlet boundary
 conditions.  This step is not always needed.  But when it is, it
@@ -361,12 +361,12 @@ stabilized method as the bottom solver.  <code class="code cpp c++ docutils lite
 </div>
 <p>can be used to change the bottom solver.  Available choices are</p>
 <ul class="simple">
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">smoother</span></span></code>: Smoother such as Gauss-Seidel.</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">bicgstab</span></span></code>: The default.</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">cg</span></span></code>: The conjugate gradient method.  The
-matrix must be symmetric.</li>
-<li><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Hypre</span></span></code>: BoomerAMG in HYPRE.  Currently for
-cell-centered only.</li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">smoother</span></span></code>: Smoother such as Gauss-Seidel.</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">bicgstab</span></span></code>: The default.</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">cg</span></span></code>: The conjugate gradient method.  The
+matrix must be symmetric.</p></li>
+<li><p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MLMG</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">BottomSolver</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Hypre</span></span></code>: BoomerAMG in HYPRE.  Currently for
+cell-centered only.</p></li>
 </ul>
 </div>
 <div class="section" id="curvilinear-coordinates">

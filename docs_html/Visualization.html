@@ -110,9 +110,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#visit">VisIt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#paraview">ParaView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#yt">yt</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#using-on-a-local-workstation">Using &nbsp;on a local workstation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-yt-at-nersc-under-development">Using yt&nbsp;at NERSC (<em>under development</em>)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interactive-yt-with-jupyter-notebooks">Interactive yt&nbsp;with Jupyter notebooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-on-a-local-workstation">Using  on a local workstation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-yt-at-nersc-under-development">Using yt at NERSC (<em>under development</em>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interactive-yt-with-jupyter-notebooks">Interactive yt with Jupyter notebooks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parallel">Parallel</a></li>
 </ul>
 </li>
@@ -215,7 +215,7 @@ not, what palette you use, etc. Below are some instructions and tips for using
 Amrvis; you can find additional information in Amrvis/Docs/Amrvis.tex (which
 you can build into a pdf using pdflatex).</p>
 <ol class="arabic">
-<li><p class="first">Download and build :</p>
+<li><p>Download and build :</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/AMReX-Codes/Amrvis</span>
 </pre></div>
 </div>
@@ -229,10 +229,10 @@ in an executable that looks like amrvis2d…ex.</p>
 </pre></div>
 </div>
 <p>Then cd into volpack/ and type <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
-<p>Note: Amrvis&nbsp;requires the OSF/Motif libraries and headers. If you don’t have
+<p>Note: Amrvis requires the OSF/Motif libraries and headers. If you don’t have
 these you will need to install the development version of motif through your
 package manager.  <code class="docutils literal notranslate"><span class="pre">lesstif</span></code> gives some functionality and will allow you to
-build the amrvis executable, but Amrvis&nbsp;may exhibit subtle anomalies.</p>
+build the amrvis executable, but Amrvis may exhibit subtle anomalies.</p>
 <p>On most Linux distributions, the motif library is provided by the
 <code class="docutils literal notranslate"><span class="pre">openmotif</span></code> package, and its header files (like Xm.h) are provided by
 <code class="docutils literal notranslate"><span class="pre">openmotif-devel</span></code>. If those packages are not installed, then use the
@@ -242,14 +242,13 @@ OS-specific package management tool to install them.</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Run the command <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">Amrvis/amrvis.defaults</span> <span class="pre">~/.amrvis.defaults</span></code>.  Then, in
+<li><p>Run the command <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">Amrvis/amrvis.defaults</span> <span class="pre">~/.amrvis.defaults</span></code>.  Then, in
 your copy, edit the line containing “palette” line to point to, e.g.,
 “palette /home/username/Amrvis/Palette”. The other lines control options
 such as the initial field to display, the number format, widow size, etc.
 If there are multiple instances of the same option, the last option takes
-precedence.</p>
-</li>
-<li><p class="first">Generally the plotfiles have the form pltXXXXX (the plt prefix can be
+precedence.</p></li>
+<li><p>Generally the plotfiles have the form pltXXXXX (the plt prefix can be
 changed), where XXXXX is a number corresponding to the timestep the file was
 output. <code class="docutils literal notranslate"><span class="pre">amrvis2d</span> <span class="pre">&lt;filename&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">amrvis3d</span> <span class="pre">&lt;filename&gt;</span></code> to see a single
 plotfile, or for 2D data sets, <code class="docutils literal notranslate"><span class="pre">amrvis2d</span> <span class="pre">-a</span> <span class="pre">plt*</span></code>, which will animate the
@@ -265,22 +264,22 @@ pictures in several different formats under “File/Export”.  In 2D you can
 right and center click to get line-out plots.  In 3D you can right and
 center click to change the planes, and the hold shift+(right or center)
 click to get line-out plots.</p>
-<p>We have created a number of routines to convert AMReX&nbsp;plotfile data other
+<p>We have created a number of routines to convert AMReX plotfile data other
 formats (such as matlab), but in order to properly interpret the
 hierarchical AMR data, each tends to have its own idiosyncrasies. If you
 would like to display the data in another format, please contact Marc Day
 (<a class="reference external" href="mailto:MSDay&#37;&#52;&#48;lbl&#46;gov">MSDay<span>&#64;</span>lbl<span>&#46;</span>gov</a>) and we will point you to whatever we have that can help.</p>
 </li>
 </ol>
-<span id="fig-amrvis"></span><table border="1" class="docutils align-center" id="id3">
+<span id="fig-amrvis"></span><table class="docutils align-center" id="id3">
 <caption><span class="caption-number">Table 11 </span><span class="caption-text">2D and 3D images generated using Amrvis</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="_images/Amrvis_2d.png"><img alt="a" src="_images/Amrvis_2d.png" style="width: 100%;" /></a></td>
-<td><a class="reference internal" href="_images/Amrvis_3d.png"><img alt="b" src="_images/Amrvis_3d.png" style="width: 100%;" /></a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/Amrvis_2d.png"><img alt="a" src="_images/Amrvis_2d.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/Amrvis_3d.png"><img alt="b" src="_images/Amrvis_3d.png" style="width: 100%;" /></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -291,8 +290,8 @@ recommended to build using the <a class="reference external" href="https://brew.
 install gcc. Furthermore, you will also need x11 and openmotif. These can be
 installed using homebrew also:</p>
 <ol class="arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">cask</span> <span class="pre">install</span> <span class="pre">xquartz</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">openmotif</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">cask</span> <span class="pre">install</span> <span class="pre">xquartz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">openmotif</span></code></p></li>
 </ol>
 <p>Note that when the <code class="docutils literal notranslate"><span class="pre">GNUmakefile</span></code> detects a macOS install, it assumes that
 dependencies are installed in the locations that Homebrew uses. Namely the
@@ -301,7 +300,7 @@ dependencies are installed in the locations that Homebrew uses. Namely the
 </div>
 <div class="section" id="visit">
 <span id="sec-visit"></span><h1>VisIt<a class="headerlink" href="#visit" title="Permalink to this headline">¶</a></h1>
-<p>AMReX&nbsp;data can also be visualized by VisIt, an open source visualization and
+<p>AMReX data can also be visualized by VisIt, an open source visualization and
 analysis software. To follow along with this example, first build and run the
 first heat equation tutorial code (see the section on <a class="reference internal" href="GettingStarted.html#sec-heat-equation"><span class="std std-ref">Example: Heat Equation Solver</span></a>).</p>
 <p>Next, download and install VisIt from
@@ -311,26 +310,26 @@ then select the Header file associated the the plotfile of interest (e.g.,
 plt00000/Header).  Assuming you ran the simulation in 2D, here are instructions
 for making a simple plot:</p>
 <ul class="simple">
-<li>To view the data, select “Add” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Pseudocolor”
-<span class="math notranslate nohighlight">\(\rightarrow\)</span> “phi”, and then select “Draw”.</li>
-<li>To view the grid structure (not particularly interesting yet, but when we
+<li><p>To view the data, select “Add” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Pseudocolor”
+<span class="math notranslate nohighlight">\(\rightarrow\)</span> “phi”, and then select “Draw”.</p></li>
+<li><p>To view the grid structure (not particularly interesting yet, but when we
 add AMR it will be), select “ <span class="math notranslate nohighlight">\(\rightarrow\)</span> “subset”
 <span class="math notranslate nohighlight">\(\rightarrow\)</span> “levels”. Then double-click the text “Subset - levels”,
 enable the “Wireframe” option, select “Apply”, select “Dismiss”, and then
-select “Draw”.</li>
-<li>To save the image, select “File” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Set save options”,
-then customize the image format to your liking, then click “Save”.</li>
+select “Draw”.</p></li>
+<li><p>To save the image, select “File” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Set save options”,
+then customize the image format to your liking, then click “Save”.</p></li>
 </ul>
 <p>Your image should look similar to the left side of <a class="reference internal" href="#fig-visit"><span class="std std-numref">Table 12</span></a>.</p>
-<span id="fig-visit"></span><table border="1" class="docutils align-center" id="id4">
+<span id="fig-visit"></span><table class="docutils align-center" id="id4">
 <caption><span class="caption-number">Table 12 </span><span class="caption-text">: 2D (left) and 3D (right) images generated using VisIt.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="_images/VisIt_2D.png"><img alt="c" src="_images/VisIt_2D.png" style="width: 100%;" /></a></td>
-<td><a class="reference internal" href="_images/VisIt_3D.png"><img alt="d" src="_images/VisIt_3D.png" style="width: 100%;" /></a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/VisIt_2D.png"><img alt="c" src="_images/VisIt_2D.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/VisIt_3D.png"><img alt="d" src="_images/VisIt_3D.png" style="width: 100%;" /></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -364,71 +363,71 @@ on-screen instructions.</p>
 </div>
 <div class="section" id="paraview">
 <span id="section-1"></span><h1>ParaView<a class="headerlink" href="#paraview" title="Permalink to this headline">¶</a></h1>
-<p>The open source visualization package ParaView&nbsp;v5.5 can be used to view 3D
+<p>The open source visualization package ParaView v5.5 can be used to view 3D
 plotfiles, and particle data. Download the package at
 <a class="reference external" href="https://www.paraview.org/">https://www.paraview.org/</a>.</p>
 <p>To open a single plotfile (for example, you could run the
 <code class="docutils literal notranslate"><span class="pre">HeatEquation_EX1_C</span></code> in 3D):</p>
 <ol class="arabic simple">
-<li>Run ParaView&nbsp;v5.5, then select “File” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Open”.</li>
-<li>Navigate <strong>into</strong> the plotfile directory, and <strong>manually</strong> type in “Header”.
-ParaView will ask you about the file type – choose “Boxlib 3D Files”</li>
-<li>Under the “Cell Arrays” field, select a variable (e.g., “phi”) and click
-“Apply”.</li>
-<li>Under “Representation” select “Surface”.</li>
-<li>Under “Coloring” select the variable you chose above.</li>
-<li>To add planes, near the top left you will see a cube icon with a green plane
+<li><p>Run ParaView v5.5, then select “File” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Open”.</p></li>
+<li><p>Navigate <strong>into</strong> the plotfile directory, and <strong>manually</strong> type in “Header”.
+ParaView will ask you about the file type – choose “Boxlib 3D Files”</p></li>
+<li><p>Under the “Cell Arrays” field, select a variable (e.g., “phi”) and click
+“Apply”.</p></li>
+<li><p>Under “Representation” select “Surface”.</p></li>
+<li><p>Under “Coloring” select the variable you chose above.</p></li>
+<li><p>To add planes, near the top left you will see a cube icon with a green plane
 slicing through it. If you hover your mouse over it, it will say “Slice”.
-Click that button.</li>
-<li>You can play with the Plane Parameters to define a plane of data to view, as
-shown in <a class="reference internal" href="#fig-paraview"><span class="std std-numref">Fig. 16</span></a>.</li>
+Click that button.</p></li>
+<li><p>You can play with the Plane Parameters to define a plane of data to view, as
+shown in <a class="reference internal" href="#fig-paraview"><span class="std std-numref">Fig. 16</span></a>.</p></li>
 </ol>
-<div class="figure" id="id5">
+<div class="figure align-center" id="id5">
 <span id="fig-paraview"></span><a class="reference internal image-reference" href="_images/ParaView.png"><img alt="_images/ParaView.png" src="_images/ParaView.png" style="width: 3.1in;" /></a>
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">: Plotfile image generated with ParaView</span></p>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">: Plotfile image generated with ParaView</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <p>To visualize particle data within plofile directories (for example, you could
 run the <code class="docutils literal notranslate"><span class="pre">ShortRangeParticles</span></code> example):</p>
 <ol class="arabic simple">
-<li>Run ParaView v5.5, and select  then  “File” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Open”. You
+<li><p>Run ParaView v5.5, and select  then  “File” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “Open”. You
 will see a combined “plt..” group. Click on “+” to expand the group, if you
 want inspect the files in the group. You can select an individual plotfile
 directory or select a group of directories to read them a time series, as
-shown in <a class="reference internal" href="#fig-paraview-filegroup"><span class="std std-numref">Fig. 17</span></a>, and click OK.</li>
+shown in <a class="reference internal" href="#fig-paraview-filegroup"><span class="std std-numref">Fig. 17</span></a>, and click OK.</p></li>
 </ol>
-<div class="figure" id="id6">
+<div class="figure align-center" id="id6">
 <span id="fig-paraview-filegroup"></span><a class="reference internal image-reference" href="_images/ParaView_filegroup.png"><img alt="_images/ParaView_filegroup.png" src="_images/ParaView_filegroup.png" style="width: 3.1in;" /></a>
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">: File dialog in ParaView showing a group of plotfile directories selected</span></p>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">: File dialog in ParaView showing a group of plotfile directories selected</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="arabic simple">
-<li>The “Properties” panel in ParaView allows you to specify the “Particle
+<li><p>The “Properties” panel in ParaView allows you to specify the “Particle
 Type”, which defaults to “particles”. Using the “Properties” panel, you can
-also choose which point arrays to read.</li>
-<li>Click “Apply” and under “Representation” select “Point Gaussian”.</li>
-<li>Change the Gaussian Radius if you like. You can scroll through the frames
+also choose which point arrays to read.</p></li>
+<li><p>Click “Apply” and under “Representation” select “Point Gaussian”.</p></li>
+<li><p>Change the Gaussian Radius if you like. You can scroll through the frames
 with the VCR-like controls at the top, as shown in
-<a class="reference internal" href="#fig-paraview-particles"><span class="std std-numref">Fig. 18</span></a>.</li>
+<a class="reference internal" href="#fig-paraview-particles"><span class="std std-numref">Fig. 18</span></a>.</p></li>
 </ol>
-<div class="figure" id="id7">
+<div class="figure align-center" id="id7">
 <span id="fig-paraview-particles"></span><a class="reference internal image-reference" href="_images/ParaView_particles.png"><img alt="_images/ParaView_particles.png" src="_images/ParaView_particles.png" style="width: 3.1in;" /></a>
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">: Particle image generated with ParaView</span></p>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">: Particle image generated with ParaView</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="yt">
 <span id="section-2"></span><h1>yt<a class="headerlink" href="#yt" title="Permalink to this headline">¶</a></h1>
 <p>yt, an open source Python package available at <a class="reference external" href="http://yt-project.org/">http://yt-project.org/</a>, can be
 used for analyzing and visualizing mesh and particle data generated by
-AMReX&nbsp;codes. Some of the AMReX&nbsp;developers are also yt&nbsp;project members.  Below
-we describe how to use &nbsp;on both a local workstation, as well as at the NERSC
+AMReX codes. Some of the AMReX developers are also yt project members.  Below
+we describe how to use  on both a local workstation, as well as at the NERSC
 HPC facility for high-throughput visualization of large data sets.</p>
 <p>Note - AMReX datasets require yt version 3.4 or greater.</p>
 <div class="section" id="using-on-a-local-workstation">
-<h2>Using &nbsp;on a local workstation<a class="headerlink" href="#using-on-a-local-workstation" title="Permalink to this headline">¶</a></h2>
-<p>Running yt&nbsp;on a local system generally provides good interactivity, but limited
+<h2>Using  on a local workstation<a class="headerlink" href="#using-on-a-local-workstation" title="Permalink to this headline">¶</a></h2>
+<p>Running yt on a local system generally provides good interactivity, but limited
 performance. Consequently, this configuration is best when doing exploratory
 visualization (e.g., experimenting with camera angles, lighting, and color
 schemes) of small data sets.</p>
-<p>To use yt&nbsp;on an AMReX&nbsp;plot file, first start a Jupyter notebook or an IPython
+<p>To use yt on an AMReX plot file, first start a Jupyter notebook or an IPython
 kernel, and import the <code class="docutils literal notranslate"><span class="pre">yt</span></code> module:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">yt</span>
 
@@ -481,9 +480,9 @@ the slice plot feature is shown below:</p>
 </div>
 <p>The resulting image is <a class="reference internal" href="#fig-yt-nyx-slice-plot"><span class="std std-numref">Fig. 19</span></a>. One can also make
 volume renderings with ; an example is show below:</p>
-<div class="figure" id="id8">
+<div class="figure align-center" id="id8">
 <span id="fig-yt-nyx-slice-plot"></span><img alt="_images/yt_Nyx_density_slice.png" src="_images/yt_Nyx_density_slice.png" />
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">: Slice plot of <span class="math notranslate nohighlight">\(128^3\)</span> Nyx simulation using yt.</span></p>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">: Slice plot of <span class="math notranslate nohighlight">\(128^3\)</span> Nyx simulation using yt.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">yt</span><span class="o">.</span><span class="n">create_scene</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="s2">&quot;density&quot;</span><span class="p">,</span> <span class="n">lens_type</span><span class="o">=</span><span class="s2">&quot;perspective&quot;</span><span class="p">)</span>
 
@@ -521,37 +520,37 @@ volume renderings with ; an example is show below:</p>
 </pre></div>
 </div>
 <p>The output of this is <a class="reference internal" href="#fig-yt-nyx-vol-rend"><span class="std std-numref">Fig. 20</span></a>.</p>
-<div class="figure" id="id9">
+<div class="figure align-center" id="id9">
 <span id="fig-yt-nyx-vol-rend"></span><img alt="_images/yt_Nyx_density_vol_rend.png" src="_images/yt_Nyx_density_vol_rend.png" />
 <p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Volume rendering of <span class="math notranslate nohighlight">\(128^3\)</span> Nyx simulation using yt. This corresponds
 to the same plot file used to generate the slice plot in
-<a class="reference internal" href="#fig-yt-nyx-slice-plot"><span class="std std-numref">Fig. 19</span></a>.</span></p>
+<a class="reference internal" href="#fig-yt-nyx-slice-plot"><span class="std std-numref">Fig. 19</span></a>.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="using-yt-at-nersc-under-development">
-<h2>Using yt&nbsp;at NERSC (<em>under development</em>)<a class="headerlink" href="#using-yt-at-nersc-under-development" title="Permalink to this headline">¶</a></h2>
-<p>Because yt&nbsp;is Python-based, it is portable and can be used in many software
+<h2>Using yt at NERSC (<em>under development</em>)<a class="headerlink" href="#using-yt-at-nersc-under-development" title="Permalink to this headline">¶</a></h2>
+<p>Because yt is Python-based, it is portable and can be used in many software
 environments. Here we focus on yt’s capabilities at NERSC, which provides
 resources for performing both interactive and batch queue-based visualization
-and analysis of AMReX&nbsp;data. Coupled with yt’s MPI and OpenMP parallelization
+and analysis of AMReX data. Coupled with yt’s MPI and OpenMP parallelization
 capabilities, this can enable high-throughput visualization and analysis
 workflows.</p>
 <div class="section" id="interactive-yt-with-jupyter-notebooks">
-<h3>Interactive yt&nbsp;with Jupyter notebooks<a class="headerlink" href="#interactive-yt-with-jupyter-notebooks" title="Permalink to this headline">¶</a></h3>
-<p>Unlike VisIt&nbsp;(see the section on <a class="reference internal" href="#sec-visit"><span class="std std-ref">VisIt</span></a>), yt&nbsp;has no client-server
+<h3>Interactive yt with Jupyter notebooks<a class="headerlink" href="#interactive-yt-with-jupyter-notebooks" title="Permalink to this headline">¶</a></h3>
+<p>Unlike VisIt (see the section on <a class="reference internal" href="#sec-visit"><span class="std std-ref">VisIt</span></a>), yt has no client-server
 interface. Such an interface is often crucial when one has large data sets
 generated on a remote system, but wishes to visualize the data on a local
 workstation. Both copying the data between the two systems, as well as
 visualizing the data itself on a workstation, can be prohibitively slow.</p>
 <p>Fortunately, NERSC has implemented several resources which allow one to
-interact with yt&nbsp;remotely, emulating a client-server model. In particular,
+interact with yt remotely, emulating a client-server model. In particular,
 NERSC now hosts Jupyter notebooks which run IPython kernels on the Cori system;
 this provides users access to the <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, <code class="docutils literal notranslate"><span class="pre">/project</span></code>, and <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code>
 file systems from a web browser-based Jupyter notebook.  <strong>*Please note that
 Jupyter hosting at NERSC is still under development, and the environment may
 change without notice.*</strong></p>
 <p>NERSC also provides Anaconda Python, which allows users to create their own
-customizable Python environments. It is recommended to install yt&nbsp;in such an
+customizable Python environments. It is recommended to install yt in such an
 environment. One can do so with the following example:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">user@cori10:~&gt; module load python/3.5-anaconda</span>
 <span class="go">user@cori10:~&gt; conda create -p $HOME/yt-conda numpy</span>
@@ -571,54 +570,52 @@ instructions at this URL under the “Custom Kernels” heading:
 <a class="reference external" href="http://www.nersc.gov/users/data-analytics/data-analytics/web-applications-for-data-analytics">http://www.nersc.gov/users/data-analytics/data-analytics/web-applications-for-data-analytics</a>.
 After writing the appropriate <code class="docutils literal notranslate"><span class="pre">kernel.json</span></code> file, the custom kernel will
 appear as an available Jupyter notebook. Then one can interactively visualize
-AMReX&nbsp;plot files in the web browser. <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
+AMReX plot files in the web browser. <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
 </div>
 <div class="section" id="parallel">
 <h3>Parallel<a class="headerlink" href="#parallel" title="Permalink to this headline">¶</a></h3>
 <p>Besides the benefit of no longer needing to move data back and forth between
 NERSC and one’s local workstation to do visualization and analysis, an
-additional feature of yt&nbsp;which takes advantage of the computational resources
-at NERSC is its parallelization capabilities. yt&nbsp;supports both MPI- and
+additional feature of yt which takes advantage of the computational resources
+at NERSC is its parallelization capabilities. yt supports both MPI- and
 OpenMP-based parallelization of various tasks, which are discussed here:
 <a class="reference external" href="http://yt-project.org/doc/analyzing/parallel_computation.html">http://yt-project.org/doc/analyzing/parallel_computation.html</a>.</p>
-<p>Configuring yt&nbsp;for MPI parallelization at NERSC is a more complex task than
-discussed in the official yt&nbsp;documentation; the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">mpi4py</span></code>
+<p>Configuring yt for MPI parallelization at NERSC is a more complex task than
+discussed in the official yt documentation; the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">mpi4py</span></code>
 is not sufficient. Rather, one must compile <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code> from source using the
 Cray compiler wrappers <code class="docutils literal notranslate"><span class="pre">cc</span></code>, <code class="docutils literal notranslate"><span class="pre">CC</span></code>, and <code class="docutils literal notranslate"><span class="pre">ftn</span></code> on Cori. Instructions for
 compiling <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code> at NERSC are provided here:
 <a class="reference external" href="http://www.nersc.gov/users/data-analytics/data-analytics/python/anaconda-python/#toc-anchor-3">http://www.nersc.gov/users/data-analytics/data-analytics/python/anaconda-python/#toc-anchor-3</a>.
 After <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code> has been compiled, one can use the regular Python interpreter
-in the Anaconda environment as normal; when executing yt&nbsp;operations which
+in the Anaconda environment as normal; when executing yt operations which
 support MPI parallelization, the multiple MPI processes will spawn
 automatically.</p>
 <p>Although several components of yt support MPI parallelization, a few are
 particularly useful:</p>
 <ul>
-<li><p class="first"><strong>Time series analysis.</strong> Often one runs a simulation for many time steps
+<li><p><strong>Time series analysis.</strong> Often one runs a simulation for many time steps
 and periodically writes plot files to disk for visualization and
-post-processing. yt&nbsp;supports parallelization over time series data via the
-<code class="docutils literal notranslate"><span class="pre">DatasetSeries</span></code> object. yt&nbsp;can iterate over a <code class="docutils literal notranslate"><span class="pre">DatasetSeries</span></code> in
+post-processing. yt supports parallelization over time series data via the
+<code class="docutils literal notranslate"><span class="pre">DatasetSeries</span></code> object. yt can iterate over a <code class="docutils literal notranslate"><span class="pre">DatasetSeries</span></code> in
 parallel, with different MPI processes operating on different elements of the
 series. This page provides more documentation:
-<a class="reference external" href="http://yt-project.org/doc/analyzing/time_series_analysis.html#time-series-analysis">http://yt-project.org/doc/analyzing/time_series_analysis.html#time-series-analysis</a>.</p>
-</li>
-<li><p class="first"><strong>Volume rendering</strong>. yt&nbsp;implements spatial decomposition among MPI
+<a class="reference external" href="http://yt-project.org/doc/analyzing/time_series_analysis.html#time-series-analysis">http://yt-project.org/doc/analyzing/time_series_analysis.html#time-series-analysis</a>.</p></li>
+<li><p><strong>Volume rendering</strong>. yt implements spatial decomposition among MPI
 processes for volume rendering procedures, which can be computationally
-expensive. Note that yt&nbsp;also implements OpenMP parallelization in volume
+expensive. Note that yt also implements OpenMP parallelization in volume
 rendering, and so one can execute volume rendering with a hybrid MPI+OpenMP
 approach. See this URL for more detail:
-<a class="reference external" href="http://yt-project.org/doc/visualizing/volume_rendering.html?highlight=openmp#openmp-parallelization">http://yt-project.org/doc/visualizing/volume_rendering.html?highlight=openmp#openmp-parallelization</a>.</p>
-</li>
-<li><p class="first"><strong>Generic parallelization over multiple objects.</strong> Sometimes one wishes to
+<a class="reference external" href="http://yt-project.org/doc/visualizing/volume_rendering.html?highlight=openmp#openmp-parallelization">http://yt-project.org/doc/visualizing/volume_rendering.html?highlight=openmp#openmp-parallelization</a>.</p></li>
+<li><p><strong>Generic parallelization over multiple objects.</strong> Sometimes one wishes to
 loop over a series which is not a <code class="docutils literal notranslate"><span class="pre">DatasetSeries</span></code>, e.g., performing
 translational or rotational operations on a camera to make a volume rendering
 in which the field of view moves through the simulation. In this case, one is
 applying a set of operations on a single object (a single plot file), rather
-than over a time series of data. For this workflow, yt&nbsp;provides the
+than over a time series of data. For this workflow, yt provides the
 <code class="docutils literal notranslate"><span class="pre">parallel_objects()</span></code> function. See this URL for more details:
 <a class="reference external" href="http://yt-project.org/doc/analyzing/parallel_computation.html#parallelizing-over-multiple-objects">http://yt-project.org/doc/analyzing/parallel_computation.html#parallelizing-over-multiple-objects</a>.</p>
 <blockquote>
-<div><p>An example of MPI parallelization in yt&nbsp;is shown below, where one animates a
+<div><p>An example of MPI parallelization in yt is shown below, where one animates a
 time series of plot files from an IAMR simulation while revolving the camera
 such that it completes two full revolutions over the span of the animation:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yt</span>
@@ -700,15 +697,14 @@ large time series of data.</p>
 </div></blockquote>
 </li>
 </ul>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>It is convenient to use the
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>It is convenient to use the
 magic command <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> in order to render matplotlib
 figures in the same browser window as the notebook, as opposed to displaying it
-as a new window.</td></tr>
-</tbody>
-</table>
+as a new window.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -720,10 +716,10 @@ of visualization and analysis back ends including VisIt Libsim, ParaView
 Catalyst, VTK-m, Ascent, ADIOS, Yt, and Python.</p>
 <div class="section" id="system-architecture">
 <h2>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this headline">¶</a></h2>
-<div class="figure" id="id10">
+<div class="figure align-center" id="id10">
 <span id="sensei-arch"></span><img alt="_images/sensei_amrex_arch_sm_824.png" src="_images/sensei_amrex_arch_sm_824.png" />
 <p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">SENSEI’s in situ architecture enables use of a diverse of back ends which
-can be selected at run time via an XML configuration file</span></p>
+can be selected at run time via an XML configuration file</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <p>The three major architectural components in SENSEI are <em>data adaptors</em> which
 present simulation data in SENSEI’s data model, <em>analysis adaptors</em> which
@@ -819,10 +815,10 @@ VisIt Libsim.</p>
 runtime configuration. The session file is generated using VisIt GUI on a
 representative dataset. Usually this data set is generated in a low resolution
 run of the desired simulation.</p>
-<div class="figure" id="id11">
+<div class="figure align-center" id="id11">
 <span id="rt-visit"></span><img alt="_images/rt_2048_visit_000500.png" src="_images/rt_2048_visit_000500.png" />
 <p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">SENSEI-Libsim in situ visualization of a Raleigh-Taylor instability computed
-by IAMR on NERSC Cori using 2048 cores.</span></p>
+by IAMR on NERSC Cori using 2048 cores.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <p>The same run and visualization was repeated using ParaView Catalyst, shown in
 figure <a class="reference internal" href="#rt-pv"><span class="std std-numref">Fig. 23</span></a>, by providing the following XML configuration.</p>
@@ -835,10 +831,10 @@ figure <a class="reference internal" href="#rt-pv"><span class="std std-numref">
 <p>Here the <em>filename</em> attribute is used to pass Catalyst a Catalyst specific
 configuration that was generated using the ParaView GUI on a representative
 dataset.</p>
-<div class="figure" id="id12">
+<div class="figure align-center" id="id12">
 <span id="rt-pv"></span><img alt="_images/rt_2048_paraview_000500.png" src="_images/rt_2048_paraview_000500.png" />
 <p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">SENSEI-Catalyst in situ visualization of a Raleigh-Taylor instability
-computed by IAMR on NERSC Cori using 2048 cores.</span></p>
+computed by IAMR on NERSC Cori using 2048 cores.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="obtaining-sensei">

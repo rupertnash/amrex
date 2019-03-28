@@ -200,43 +200,43 @@ named  <code class="docutils literal notranslate"><span class="pre">tmp_build_di
 <p>An example of building with GNU Make can be found in
 <code class="docutils literal notranslate"><span class="pre">amrex/Tutorials/Basic/HelloWorld_C</span></code>.  <a class="reference internal" href="#tab-makevars"><span class="std std-numref">Table 1</span></a> below shows a
 list of important variables.</p>
-<span id="tab-makevars"></span><table border="1" class="docutils" id="id1">
+<span id="tab-makevars"></span><table class="docutils align-center" id="id1">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Important make variables</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="19%" />
-<col width="60%" />
-<col width="21%" />
+<col style="width: 19%" />
+<col style="width: 60%" />
+<col style="width: 21%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Variable</th>
-<th class="head">Value</th>
-<th class="head">Default</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Default</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>AMREX_HOME</td>
-<td>Path to amrex</td>
-<td>environment</td>
+<tbody>
+<tr class="row-even"><td><p>AMREX_HOME</p></td>
+<td><p>Path to amrex</p></td>
+<td><p>environment</p></td>
 </tr>
-<tr class="row-odd"><td>COMP</td>
-<td>gnu, cray, ibm, intel, llvm, or pgi</td>
-<td>none</td>
+<tr class="row-odd"><td><p>COMP</p></td>
+<td><p>gnu, cray, ibm, intel, llvm, or pgi</p></td>
+<td><p>none</p></td>
 </tr>
-<tr class="row-even"><td>DEBUG</td>
-<td>TRUE or FALSE</td>
-<td>TRUE</td>
+<tr class="row-even"><td><p>DEBUG</p></td>
+<td><p>TRUE or FALSE</p></td>
+<td><p>TRUE</p></td>
 </tr>
-<tr class="row-odd"><td>DIM</td>
-<td>1 or 2 or 3</td>
-<td>none</td>
+<tr class="row-odd"><td><p>DIM</p></td>
+<td><p>1 or 2 or 3</p></td>
+<td><p>none</p></td>
 </tr>
-<tr class="row-even"><td>USE_MPI</td>
-<td>TRUE or FALSE</td>
-<td>FALSE</td>
+<tr class="row-even"><td><p>USE_MPI</p></td>
+<td><p>TRUE or FALSE</p></td>
+<td><p>FALSE</p></td>
 </tr>
-<tr class="row-odd"><td>USE_OMP</td>
-<td>TRUE or FALSE</td>
-<td>FALSE</td>
+<tr class="row-odd"><td><p>USE_OMP</p></td>
+<td><p>TRUE or FALSE</p></td>
+<td><p>FALSE</p></td>
 </tr>
 </tbody>
 </table>
@@ -262,7 +262,7 @@ of the problem.</p>
 <p>Variables <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>, <code class="docutils literal notranslate"><span class="pre">USE_MPI</span></code> and <code class="docutils literal notranslate"><span class="pre">USE_OMP</span></code> are optional with default set
 to TRUE, FALSE and FALSE, respectively.  The meaning of these variables should
 be obvious.  When <code class="docutils literal notranslate"><span class="pre">DEBUG</span> <span class="pre">=</span> <span class="pre">TRUE</span></code>, aggressive compiler optimization flags are
-turned off and assertions in &nbsp;source code are turned on. For production runs,
+turned off and assertions in  source code are turned on. For production runs,
 <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> should be set to FALSE.</p>
 <p>After defining these make variables, a number of files, <code class="docutils literal notranslate"><span class="pre">Make.defs,</span>
 <span class="pre">Make.package</span></code> and <code class="docutils literal notranslate"><span class="pre">Make.rules</span></code>, are included in the GNUmakefile. AMReX-based
@@ -274,21 +274,21 @@ its own Make.package file (e.g., <code class="docutils literal notranslate"><spa
 source files to the build system using operator <code class="docutils literal notranslate"><span class="pre">+=</span></code>. Variables for various
 source files are shown below.</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>CEXE_sources</dt>
-<dd>C++ source files. Note that C++ source files are assumed to have a .cpp
-extension.</dd>
-<dt>CEXE_headers</dt>
-<dd>C++ headers with .h or .H extension.</dd>
-<dt>cEXE_sources</dt>
-<dd>C source files with .c extension.</dd>
-<dt>cEXE_headers</dt>
-<dd>C headers with .h extension.</dd>
-<dt>f90EXE_sources</dt>
-<dd>Free format Fortran source with .f90 extension.</dd>
-<dt>F90EXE_sources</dt>
-<dd>Free format Fortran source with .F90 extension.  Note that these
-Fortran files will go through preprocessing.</dd>
+<div><dl class="simple">
+<dt>CEXE_sources</dt><dd><p>C++ source files. Note that C++ source files are assumed to have a .cpp
+extension.</p>
+</dd>
+<dt>CEXE_headers</dt><dd><p>C++ headers with .h or .H extension.</p>
+</dd>
+<dt>cEXE_sources</dt><dd><p>C source files with .c extension.</p>
+</dd>
+<dt>cEXE_headers</dt><dd><p>C headers with .h extension.</p>
+</dd>
+<dt>f90EXE_sources</dt><dd><p>Free format Fortran source with .f90 extension.</p>
+</dd>
+<dt>F90EXE_sources</dt><dd><p>Free format Fortran source with .F90 extension.  Note that these
+Fortran files will go through preprocessing.</p>
+</dd>
 </dl>
 </div></blockquote>
 <p>In this simple example, the extra source file, <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> is in the current
@@ -309,18 +309,18 @@ source and header files, respectively.</p>
 a brief overview.</p>
 <p>Besides building executable, other common make commands include:</p>
 <blockquote>
-<div><dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code></dt>
-<dd>This removes the executable, .o files, and the temporarily generated
+<div><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code></dt><dd><p>This removes the executable, .o files, and the temporarily generated
 files. Note that one can add additional targets to this rule using the
-double colon (::)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">realclean</span></code></dt>
-<dd>This removes all files generated by make.</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code></dt>
-<dd>This shows the rules for compilation.</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">print-xxx</span></code></dt>
-<dd>This shows the value of variable xxx. This is very useful for debugging
-and tweaking the make system.</dd>
+double colon (::)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">realclean</span></code></dt><dd><p>This removes all files generated by make.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code></dt><dd><p>This shows the rules for compilation.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">print-xxx</span></code></dt><dd><p>This shows the value of variable xxx. This is very useful for debugging
+and tweaking the make system.</p>
+</dd>
 </dl>
 </div></blockquote>
 <p>Compiler flags are set in <code class="docutils literal notranslate"><span class="pre">amrex/Tools/GNUMake/comps/</span></code>. Note that variables
@@ -395,14 +395,14 @@ runs <code class="docutils literal notranslate"><span class="pre">./configure</s
 Other make options include <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">uninstall</span></code>.  In the top
 AMReX directory, one can run <code class="docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">-h</span></code> to show the various options for
 the configure script. This approach is built on the AMReX GNU Make system. Thus
-the section on&nbsp;<a class="reference internal" href="#sec-build-make"><span class="std std-ref">Building with GNU Make</span></a> is recommended if any fine tuning is
+the section on <a class="reference internal" href="#sec-build-make"><span class="std std-ref">Building with GNU Make</span></a> is recommended if any fine tuning is
 needed.  The result of <code class="docutils literal notranslate"><span class="pre">./configure</span></code> is <code class="docutils literal notranslate"><span class="pre">GNUmakefile</span></code> in the AMReX
 top directory.  One can modify the make file for fine tuning.</p>
 </div>
 <div class="section" id="building-with-cmake">
 <span id="sec-build-cmake"></span><h1>Building with CMake<a class="headerlink" href="#building-with-cmake" title="Permalink to this headline">¶</a></h1>
-<p>An alternative to the approach described in the section&nbsp;on <a class="reference internal" href="#sec-build-lib"><span class="std std-ref">Building libamrex</span></a>
-is to install AMReX&nbsp;as an external library by using the CMake build system.  A
+<p>An alternative to the approach described in the section on <a class="reference internal" href="#sec-build-lib"><span class="std std-ref">Building libamrex</span></a>
+is to install AMReX as an external library by using the CMake build system.  A
 CMake build is a two-step process. First <code class="docutils literal notranslate"><span class="pre">cmake</span></code> is invoked to create
 configuration files and makefiles in a chosen directory (<code class="docutils literal notranslate"><span class="pre">builddir</span></code>).  This
 is roughly equivalent to running <code class="docutils literal notranslate"><span class="pre">./configure</span></code> (see the section on
@@ -418,9 +418,9 @@ The CMake build process is summarized as follows:</p>
 </pre></div>
 </div>
 <p>In the above snippet, <code class="docutils literal notranslate"><span class="pre">[options]</span></code> indicates one or more options for the
-customization of the build, as described in the subsection&nbsp;on
+customization of the build, as described in the subsection on
 <a class="reference internal" href="#sec-build-cmake-options"><span class="std std-ref">Customization options</span></a>. If the option <code class="docutils literal notranslate"><span class="pre">CMAKE_BUILD_TYPE</span></code> is omitted,
-<code class="docutils literal notranslate"><span class="pre">CMAKE_BUILD_TYPE=Release</span></code> is assumed. Although the AMReX&nbsp;source could be used as
+<code class="docutils literal notranslate"><span class="pre">CMAKE_BUILD_TYPE=Release</span></code> is assumed. Although the AMReX source could be used as
 build directory, we advise against doing so.  After the installation is
 complete, builddir can be removed.</p>
 <div class="section" id="cmake-and-macos">
@@ -436,153 +436,153 @@ we recommend telling cmake to use gcc for c/c++ also.</p>
 </div>
 <div class="section" id="customization-options">
 <span id="sec-build-cmake-options"></span><h2>Customization options<a class="headerlink" href="#customization-options" title="Permalink to this headline">¶</a></h2>
-<p>AMReX&nbsp;configuration settings may be specified on the command line with the
+<p>AMReX configuration settings may be specified on the command line with the
 <code class="docutils literal notranslate"><span class="pre">-D</span></code> option.  For example, one can enable OpenMP support as follows:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cmake -DENABLE_OMP=1 -DCMAKE_INSTALL_PREFIX=/path/to/installdir  /path/to/amrex</span>
 </pre></div>
 </div>
-<p>The list of available option is reported in the table on&nbsp;<a class="reference internal" href="#tab-cmakevar"><span class="std std-ref">AMReX build options</span></a>
+<p>The list of available option is reported in the table on <a class="reference internal" href="#tab-cmakevar"><span class="std std-ref">AMReX build options</span></a>
 below.</p>
-<span id="tab-cmakevar"></span><table border="1" class="docutils" id="id2">
+<span id="tab-cmakevar"></span><table class="docutils align-center" id="id2">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">AMReX build options</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="28%" />
-<col width="45%" />
-<col width="12%" />
-<col width="16%" />
+<col style="width: 28%" />
+<col style="width: 45%" />
+<col style="width: 12%" />
+<col style="width: 16%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Option Name</th>
-<th class="head">Description</th>
-<th class="head">Default</th>
-<th class="head">Possible values</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Option Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Possible values</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>DIM</td>
-<td>Dimension of AMReX build</td>
-<td>3</td>
-<td>2, 3</td>
+<tbody>
+<tr class="row-even"><td><p>DIM</p></td>
+<td><p>Dimension of AMReX build</p></td>
+<td><p>3</p></td>
+<td><p>2, 3</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_DP</td>
-<td>Build with double-precision reals</td>
-<td>ON</td>
-<td>ON, OFF</td>
+<tr class="row-odd"><td><p>ENABLE_DP</p></td>
+<td><p>Build with double-precision reals</p></td>
+<td><p>ON</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_PIC</td>
-<td>Build Position Independent Code</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_PIC</p></td>
+<td><p>Build Position Independent Code</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_MPI</td>
-<td>Build with MPI support</td>
-<td>ON</td>
-<td>ON OFF</td>
+<tr class="row-odd"><td><p>ENABLE_MPI</p></td>
+<td><p>Build with MPI support</p></td>
+<td><p>ON</p></td>
+<td><p>ON OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_OMP</td>
-<td>Build with OpenMP support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_OMP</p></td>
+<td><p>Build with OpenMP support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_FORTRAN_INTERFACES</td>
-<td>Build Fortran API</td>
-<td>ON</td>
-<td>ON, OFF</td>
+<tr class="row-odd"><td><p>ENABLE_FORTRAN_INTERFACES</p></td>
+<td><p>Build Fortran API</p></td>
+<td><p>ON</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_LINEAR_SOLVERS</td>
-<td>Build AMReX linear solvers</td>
-<td>ON</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_LINEAR_SOLVERS</p></td>
+<td><p>Build AMReX linear solvers</p></td>
+<td><p>ON</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_AMRDATA</td>
-<td>Build data services</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-odd"><td><p>ENABLE_AMRDATA</p></td>
+<td><p>Build data services</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_PARTICLES</td>
-<td>Build particle classes</td>
-<td>OFF</td>
-<td>ON OFF</td>
+<tr class="row-even"><td><p>ENABLE_PARTICLES</p></td>
+<td><p>Build particle classes</p></td>
+<td><p>OFF</p></td>
+<td><p>ON OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_DP_PARTICLES</td>
-<td>Use double-precision reals in particle classes</td>
-<td>ON</td>
-<td>ON, OFF</td>
+<tr class="row-odd"><td><p>ENABLE_DP_PARTICLES</p></td>
+<td><p>Use double-precision reals in particle classes</p></td>
+<td><p>ON</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_BASE_PROFILE</td>
-<td>Build with basic profiling support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_BASE_PROFILE</p></td>
+<td><p>Build with basic profiling support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_TINY_PROFILE</td>
-<td>Build with tiny profiling support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-odd"><td><p>ENABLE_TINY_PROFILE</p></td>
+<td><p>Build with tiny profiling support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_TRACE_PROFILE</td>
-<td>Build with trace-profiling support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_TRACE_PROFILE</p></td>
+<td><p>Build with trace-profiling support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_COMM_PROFILE</td>
-<td>Build with comm-profiling support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-odd"><td><p>ENABLE_COMM_PROFILE</p></td>
+<td><p>Build with comm-profiling support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_MEM_PROFILE</td>
-<td>Build with memory-profiling support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_MEM_PROFILE</p></td>
+<td><p>Build with memory-profiling support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_PROFPARSER</td>
-<td>Build with profile parser support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-odd"><td><p>ENABLE_PROFPARSER</p></td>
+<td><p>Build with profile parser support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_BACKTRACE</td>
-<td>Build with backtrace support</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_BACKTRACE</p></td>
+<td><p>Build with backtrace support</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_FPE</td>
-<td>Build with Floating Point Exceptions checks</td>
-<td>OFF</td>
-<td>ON,OFF</td>
+<tr class="row-odd"><td><p>ENABLE_FPE</p></td>
+<td><p>Build with Floating Point Exceptions checks</p></td>
+<td><p>OFF</p></td>
+<td><p>ON,OFF</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_ASSERTIONS</td>
-<td>Build with assertions turned on</td>
-<td>OFF</td>
-<td>ON,OFF</td>
+<tr class="row-even"><td><p>ENABLE_ASSERTIONS</p></td>
+<td><p>Build with assertions turned on</p></td>
+<td><p>OFF</p></td>
+<td><p>ON,OFF</p></td>
 </tr>
-<tr class="row-odd"><td>CMAKE_Fortran_FLAGS</td>
-<td>User-defined Fortran flags</td>
-<td>&#160;</td>
-<td>user-defined</td>
+<tr class="row-odd"><td><p>CMAKE_Fortran_FLAGS</p></td>
+<td><p>User-defined Fortran flags</p></td>
+<td></td>
+<td><p>user-defined</p></td>
 </tr>
-<tr class="row-even"><td>CMAKE_CXX_FLAGS</td>
-<td>User-defined C++ flags</td>
-<td>&#160;</td>
-<td>user-defined</td>
+<tr class="row-even"><td><p>CMAKE_CXX_FLAGS</p></td>
+<td><p>User-defined C++ flags</p></td>
+<td></td>
+<td><p>user-defined</p></td>
 </tr>
-<tr class="row-odd"><td>ENABLE_3D_NODAL_MGML</td>
-<td>Enable 3D nodal projection</td>
-<td>OFF</td>
-<td>ON,OFF</td>
+<tr class="row-odd"><td><p>ENABLE_3D_NODAL_MGML</p></td>
+<td><p>Enable 3D nodal projection</p></td>
+<td><p>OFF</p></td>
+<td><p>ON,OFF</p></td>
 </tr>
-<tr class="row-even"><td>ALGOIM_INSTALL_DIR</td>
-<td>Path to Algoim installation directory</td>
-<td>&#160;</td>
-<td>user-defined</td>
+<tr class="row-even"><td><p>ALGOIM_INSTALL_DIR</p></td>
+<td><p>Path to Algoim installation directory</p></td>
+<td></td>
+<td><p>user-defined</p></td>
 </tr>
-<tr class="row-odd"><td>BLITZ_INSTALL_DIR</td>
-<td>Path to Blitz installation directory</td>
-<td>&#160;</td>
-<td>user-defined</td>
+<tr class="row-odd"><td><p>BLITZ_INSTALL_DIR</p></td>
+<td><p>Path to Blitz installation directory</p></td>
+<td></td>
+<td><p>user-defined</p></td>
 </tr>
-<tr class="row-even"><td>ENABLE_SUNDIALS</td>
-<td>Enable SUNDIALS3 interfaces</td>
-<td>OFF</td>
-<td>ON, OFF</td>
+<tr class="row-even"><td><p>ENABLE_SUNDIALS</p></td>
+<td><p>Enable SUNDIALS3 interfaces</p></td>
+<td><p>OFF</p></td>
+<td><p>ON, OFF</p></td>
 </tr>
 </tbody>
 </table>
