@@ -333,6 +333,19 @@ name in the make system and can be found via <code class="docutils literal notra
 also have an <code class="docutils literal notranslate"><span class="pre">amrex/Tools/GNUMake/Make.local</span></code> file to override various
 variables. See <code class="docutils literal notranslate"><span class="pre">amrex/Tools/GNUMake/Make.local.template</span></code> for more examples of
 how to customize the build process.</p>
+<p>If you need to pass macro definitions to the preprocessor, you can add
+them to your make file as follows,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">DEFINES</span> <span class="o">+=</span> -Dmyname1 -Dmyname2<span class="o">=</span>mydefinition
+</pre></div>
+</div>
+<p>To link to an additional library say <code class="docutils literal notranslate"><span class="pre">foo</span></code> with headers located at
+<code class="docutils literal notranslate"><span class="pre">foopath/include</span></code> and library at <code class="docutils literal notranslate"><span class="pre">foopath/lib</span></code>, you can add the
+following to your make file,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">INCLUDE_LOCATIONS</span> <span class="o">+=</span> foopath/include
+<span class="nv">LIBRARY_LOCATIONS</span> <span class="o">+=</span> foopath/lib
+<span class="nv">LIBRARIES</span> <span class="o">+=</span> -lfoo
+</pre></div>
+</div>
 </div>
 <div class="section" id="specifying-your-own-compiler">
 <span id="sec-build-local"></span><h2>Specifying your own compiler<a class="headerlink" href="#specifying-your-own-compiler" title="Permalink to this headline">¶</a></h2>
