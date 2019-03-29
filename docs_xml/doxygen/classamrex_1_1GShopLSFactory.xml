@@ -186,85 +186,85 @@
     <detaileddescription>
 <para>Template class that handles filling implicit functions from GeometryShop. The implicit function is filled into a <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> with the same CellSize, <ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref>, <ref refid="classamrex_1_1DistributionMapping" kindref="compound">DistributionMapping</ref>, and number of ghost cells as the <ref refid="classamrex_1_1LSFactory" kindref="compound">LSFactory</ref>. </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="2486">
+      <node id="3007">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
-        <childnode refid="2486" relation="usage">
+        <childnode refid="3007" relation="usage">
           <edgelabel>Unit</edgelabel>
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="2483">
+      <node id="3004">
         <label>Real</label>
       </node>
-      <node id="2489">
+      <node id="3010">
         <label>amrex::BoxArray</label>
         <link refid="classamrex_1_1BoxArray"/>
-        <childnode refid="2486" relation="usage">
+        <childnode refid="3007" relation="usage">
           <edgelabel>m_crse_ratio</edgelabel>
         </childnode>
-        <childnode refid="2487" relation="usage">
+        <childnode refid="3008" relation="usage">
           <edgelabel>m_typ</edgelabel>
         </childnode>
       </node>
-      <node id="2484">
+      <node id="3005">
         <label>amrex::RealBox</label>
         <link refid="classamrex_1_1RealBox"/>
-        <childnode refid="2483" relation="usage">
+        <childnode refid="3004" relation="usage">
           <edgelabel>xhi</edgelabel>
           <edgelabel>xlo</edgelabel>
         </childnode>
       </node>
-      <node id="2485">
+      <node id="3006">
         <label>amrex::Box</label>
         <link refid="classamrex_1_1Box"/>
-        <childnode refid="2486" relation="usage">
+        <childnode refid="3007" relation="usage">
           <edgelabel>bigend</edgelabel>
           <edgelabel>smallend</edgelabel>
         </childnode>
-        <childnode refid="2487" relation="usage">
+        <childnode refid="3008" relation="usage">
           <edgelabel>btype</edgelabel>
         </childnode>
       </node>
-      <node id="2482">
+      <node id="3003">
         <label>amrex::CoordSys</label>
         <link refid="classamrex_1_1CoordSys"/>
-        <childnode refid="2483" relation="usage">
+        <childnode refid="3004" relation="usage">
           <edgelabel>inv_dx</edgelabel>
           <edgelabel>offset</edgelabel>
           <edgelabel>dx</edgelabel>
         </childnode>
       </node>
-      <node id="2487">
+      <node id="3008">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
-      <node id="2488">
+      <node id="3009">
         <label>amrex::DistributionMapping</label>
         <link refid="classamrex_1_1DistributionMapping"/>
       </node>
-      <node id="2481">
+      <node id="3002">
         <label>amrex::Geometry</label>
         <link refid="classamrex_1_1Geometry"/>
-        <childnode refid="2482" relation="public-inheritance">
+        <childnode refid="3003" relation="public-inheritance">
         </childnode>
-        <childnode refid="2484" relation="usage">
+        <childnode refid="3005" relation="usage">
           <edgelabel>prob_domain</edgelabel>
         </childnode>
-        <childnode refid="2485" relation="usage">
+        <childnode refid="3006" relation="usage">
           <edgelabel>domain</edgelabel>
         </childnode>
       </node>
-      <node id="2480">
+      <node id="3001">
         <label>amrex::GShopLSFactory&lt; F &gt;</label>
         <link refid="classamrex_1_1GShopLSFactory"/>
-        <childnode refid="2481" relation="usage">
+        <childnode refid="3002" relation="usage">
           <edgelabel>m_geom</edgelabel>
         </childnode>
-        <childnode refid="2488" relation="usage">
+        <childnode refid="3009" relation="usage">
           <edgelabel>m_ls_dm</edgelabel>
         </childnode>
-        <childnode refid="2489" relation="usage">
+        <childnode refid="3010" relation="usage">
           <edgelabel>m_ls_ba</edgelabel>
         </childnode>
       </node>

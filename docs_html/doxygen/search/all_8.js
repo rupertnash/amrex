@@ -24,6 +24,7 @@ var searchData=
   ['header',['Header',['../structamrex_1_1VisMF_1_1Header.html#ac047b91f6a9bf22efc30801bfc4b4452',1,'amrex::VisMF::Header::Header()'],['../structamrex_1_1VisMF_1_1Header.html#ac76e5b2205b65e5b8005cf727afdb78a',1,'amrex::VisMF::Header::Header(const FabArray&lt; FArrayBox &gt; &amp;fafab, VisMF::How how, Version version=Version_v1, bool calcMinMax=true)']]],
   ['header',['Header',['../structamrex_1_1VisMF_1_1Header.html',1,'amrex::VisMF']]],
   ['heap_5fspace_5fused',['heap_space_used',['../classamrex_1_1CArena.html#a5f5de3e5518c0f5bcc71a6a2b4076a3f',1,'amrex::CArena::heap_space_used()'],['../classamrex_1_1EArena.html#a55f86980147fa57369f877931c2c4d86',1,'amrex::EArena::heap_space_used()']]],
+  ['heun_5feuler_5f2_5f1_5f2',['heun_euler_2_1_2',['../namespacefarkode__mod.html#aa3dcfc88ac95abf37f3cc5582a24f33e',1,'farkode_mod']]],
   ['hgrid',['hgrid',['../classamrex_1_1HypreABecLap2.html#a0da4bed57db562ff033f2250ddca0a65',1,'amrex::HypreABecLap2']]],
   ['hi',['hi',['../structamrex_1_1ForkJoin_1_1ComponentSet.html#aa6ebc6ce0f58172561258c343c9b0921',1,'amrex::ForkJoin::ComponentSet::hi()'],['../classamrex_1_1BCRec.html#ae7d564dc30e25e9515e0744727ba5b5d',1,'amrex::BCRec::hi() const &amp;noexcept'],['../classamrex_1_1BCRec.html#a4a81a70cc95930ecdf555b8d887ca114',1,'amrex::BCRec::hi()&amp;&amp;=delete'],['../classamrex_1_1BCRec.html#a62257159b4c32981360a14f787868384',1,'amrex::BCRec::hi(int dir) const noexcept'],['../classamrex_1_1RealBox.html#a819f29403d4806d7b13baffe25b5ceb8',1,'amrex::RealBox::hi() const &amp;noexcept'],['../classamrex_1_1RealBox.html#a1524f482556a5a51c24672e857afe4a4',1,'amrex::RealBox::hi()&amp;&amp;=delete'],['../classamrex_1_1RealBox.html#a853070bf06ced25f07f7c02a5cd9293f',1,'amrex::RealBox::hi(int dir) const noexcept']]],
   ['hiddencell',['HIDDENCELL',['../namespaceamrex_1_1InSituUtils.html#a7c36b2f21774c997bbc295eb09a36530a09da97af948ccd39faf2c0b3ed78185f',1,'amrex::InSituUtils']]],
@@ -49,13 +50,13 @@ var searchData=
   ['htod_5fmemcpy_5fasync',['htod_memcpy_async',['../classamrex_1_1Cuda_1_1Device.html#a43700da05e86a1d8fa4111882b1ecc39',1,'amrex::Cuda::Device']]],
   ['hwm_5fbuilds',['hwm_builds',['../structamrex_1_1MemProfiler_1_1NBuildsInfo.html#ac85d7c7f2a90d5d1025386987ad4aaa5',1,'amrex::MemProfiler::NBuildsInfo']]],
   ['hwm_5fbytes',['hwm_bytes',['../structamrex_1_1MemProfiler_1_1MemInfo.html#a0986f22c847ee689a532d882351b7ee0',1,'amrex::MemProfiler::MemInfo']]],
-  ['hypre',['Hypre',['../classamrex_1_1Hypre.html',1,'amrex']]],
   ['hypre',['hypre',['../classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b',1,'amrex::MLMG::hypre()'],['../classamrex_1_1Hypre.html#afd2d6c32022a99d96f73485d03272ec9',1,'amrex::Hypre::Hypre()']]],
+  ['hypre',['Hypre',['../classamrex_1_1Hypre.html',1,'amrex']]],
   ['hypre_5fint',['hypre_int',['../namespaceamrex__hypre__fort__module.html#a37cff87c6ce6d7a323cb5165758c7623',1,'amrex_hypre_fort_module']]],
   ['hypreabeclap',['HypreABecLap',['../classamrex_1_1HypreABecLap.html#ad89a45864775721cb3101273d111965f',1,'amrex::HypreABecLap']]],
   ['hypreabeclap',['HypreABecLap',['../classamrex_1_1HypreABecLap.html',1,'amrex']]],
   ['hypreabeclap2',['HypreABecLap2',['../classamrex_1_1HypreABecLap2.html#aa79f49e5c3aa20259c177558228f79e4',1,'amrex::HypreABecLap2']]],
   ['hypreabeclap2',['HypreABecLap2',['../classamrex_1_1HypreABecLap2.html',1,'amrex']]],
-  ['hypreabeclap3',['HypreABecLap3',['../classamrex_1_1HypreABecLap3.html#ad31441f42c87ea482414f4980f3df626',1,'amrex::HypreABecLap3']]],
-  ['hypreabeclap3',['HypreABecLap3',['../classamrex_1_1HypreABecLap3.html',1,'amrex']]]
+  ['hypreabeclap3',['HypreABecLap3',['../classamrex_1_1HypreABecLap3.html',1,'amrex']]],
+  ['hypreabeclap3',['HypreABecLap3',['../classamrex_1_1HypreABecLap3.html#ad31441f42c87ea482414f4980f3df626',1,'amrex::HypreABecLap3']]]
 ];

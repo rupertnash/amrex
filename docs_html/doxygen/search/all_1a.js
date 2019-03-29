@@ -15,5 +15,6 @@ var searchData=
   ['zeroacoefficients',['ZeroACoefficients',['../classamrex_1_1ABecLaplacian.html#addaa48eb431ffae86789d0fab6346379',1,'amrex::ABecLaplacian::ZeroACoefficients()'],['../classamrex_1_1ABec4.html#a0c9f833c150951d8a88fd711f57a5dfd',1,'amrex::ABec4::ZeroACoefficients()'],['../classamrex_1_1DivVis.html#a5879034a967c02fe15f42b921464c095',1,'amrex::DivVis::ZeroACoefficients()']]],
   ['zhi_5fdir',['zhi_dir',['../namespaceamrex__mlebabeclap__nd__module.html#a967c91d75824d72634290b65566f67e6',1,'amrex_mlebabeclap_nd_module::zhi_dir()'],['../namespaceamrex__mllinop__nd__module.html#a2db4a18b206ec1c24ba128ae22ab279c',1,'amrex_mllinop_nd_module::zhi_dir()']]],
   ['zlo_5fdir',['zlo_dir',['../namespaceamrex__mlebabeclap__nd__module.html#a7579f37174ccdf01a5d91c97c2c482d4',1,'amrex_mlebabeclap_nd_module::zlo_dir()'],['../namespaceamrex__mllinop__nd__module.html#a5690dc95a320456e2f6709f67cca7d17',1,'amrex_mllinop_nd_module::zlo_dir()']]],
+  ['zonneveld_5f5_5f3_5f4',['zonneveld_5_3_4',['../namespacefarkode__mod.html#a560ee99920e7d59dbcacef19240339db',1,'farkode_mod']]],
   ['zplane',['ZPLANE',['../namespaceamrex_1_1Amrvis.html#a188af44ab507bf2058f81828afccc6a6',1,'amrex::Amrvis']]]
 ];

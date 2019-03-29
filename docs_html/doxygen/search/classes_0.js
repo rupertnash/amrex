@@ -67,6 +67,7 @@ var searchData=
   ['amrtracerparticlecontainer',['AmrTracerParticleContainer',['../classamrex_1_1AmrTracerParticleContainer.html',1,'amrex']]],
   ['arena',['Arena',['../classamrex_1_1Arena.html',1,'amrex']]],
   ['arenainfo',['ArenaInfo',['../structamrex_1_1ArenaInfo.html',1,'amrex']]],
+  ['arkodebutchertablemem',['arkodebutchertablemem',['../structfarkode__mod_1_1arkodebutchertablemem.html',1,'farkode_mod']]],
   ['array4',['Array4',['../structamrex_1_1Array4.html',1,'amrex']]],
   ['arrayofstructs',['ArrayOfStructs',['../classamrex_1_1ArrayOfStructs.html',1,'amrex']]],
   ['arrayofstructs_3c_20nstructreal_2c_20nstructint_20_3e',['ArrayOfStructs&lt; NStructReal, NStructInt &gt;',['../classamrex_1_1ArrayOfStructs.html',1,'amrex']]],
