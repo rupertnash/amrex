@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dimensionality &mdash; amrex 19.04-dev documentation</title>
+  <title>Dimensionality &mdash; amrex 19.05-dev documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                19.04-dev
+                19.05-dev
               </div>
             
           
@@ -264,6 +264,9 @@ used functions are</p>
 <span class="n">ParallelDescriptor</span><span class="o">::</span><span class="n">ReduceRealSum</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
 </pre></div>
 </div>
+<p>Additionally, <code class="docutils literal notranslate"><span class="pre">amrex_paralleldescriptor_module</span></code> in
+<code class="docutils literal notranslate"><span class="pre">Src/Base/AMReX_ParallelDescriptor_F.F90</span></code> provides a number of
+functions for Fortran.</p>
 </div>
 <div class="section" id="parallelcontext">
 <h1>ParallelContext<a class="headerlink" href="#parallelcontext" title="Permalink to this headline">¶</a></h1>
@@ -275,7 +278,9 @@ stack of <code class="code cpp c++ docutils literal notranslate"><span class="na
 additional subcommunicators can be handled by adding comms with
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">push</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">MPI_Comm</span></span><span class="punctuation"><span class="pre">)</span></span></code> and removed using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">pop</span></span><span class="punctuation"><span class="pre">()</span></span></code>.  This creates a
 hierarchy of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MPI_Comm</span></span></code> objects that can be used to split work as
-the user sees fit.</p>
+the user sees fit.   Note that <code class="docutils literal notranslate"><span class="pre">ParallelDescriptor</span></code> by default uses
+AMReX’s base comm, independent of the status of the
+<code class="docutils literal notranslate"><span class="pre">ParallelContext</span></code> stack.</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParallelContext</span></span></code> also tracks and returns information about the
 local (most recently added) and global <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MPI_Comm</span></span></code>.  The most common
 access functions are given below.  See <code class="docutils literal notranslate"><span class="pre">AMReX_ParallelContext.H.</span></code> for
@@ -343,6 +348,10 @@ get mixed up. Below are some examples.</p>
 <span class="n">AllPrintToFile</span><span class="p">(</span><span class="s">&quot;file.&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Each process appends to its own file (e.g., file.3)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
+<p>It should be emphasized that <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Print</span></span><span class="punctuation"><span class="pre">()</span></span></code> without any argument only
+prints on the I/O process.  A common mistake in using it for debug
+printing is one forgets that for non-I/O processes to print we should
+use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AllPrint</span></span><span class="punctuation"><span class="pre">()</span></span></code> or <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Print</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">rank</span></span><span class="punctuation"><span class="pre">)</span></span></code>.</p>
 </div>
 <div class="section" id="parmparse">
 <span id="sec-basics-parmparse"></span><h1>ParmParse<a class="headerlink" href="#parmparse" title="Permalink to this headline">¶</a></h1>
@@ -399,7 +408,7 @@ text after # are comments. Here is an example inputs file.</p>
 by default returns the last one. The difference between <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">query</span></span></code> and
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">get</span></span></code> should also be noted. It is a runtime error if <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">get</span></span></code> fails to
 get the value, whereas <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">query</span></span></code> returns an error code without generating a
-runtime error that will abort the run.  If it is sometimes convenient to
+runtime error that will abort the run.  It is sometimes convenient to
 override parameters with command-line arguments without modifying the inputs
 file. The command-line arguments after the inputs file are added later than the
 file to the database and are therefore used by default. For example, one can
