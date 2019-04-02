@@ -7406,6 +7406,7 @@
     <member refid="classamrex_1_1MLLinOp_1ad163e1fa25935bce528783de5adb6b1a" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1MLLinOp_1aec2118e27e9938788a89f5dda28709f7" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1MLLinOp_1a139c75b19d7740ff6b78b390ab7996d0" kind="function"><name>define</name></member>
+    <member refid="classamrex_1_1MLLinOp_1a9f6145ef119707fa7ce4fd43542d1c24" kind="function"><name>name</name></member>
     <member refid="classamrex_1_1MLLinOp_1aa034da35bd05e1fb93b8d876a9840ce3" kind="function"><name>setDomainBC</name></member>
     <member refid="classamrex_1_1MLLinOp_1a0c150481b635dccaf83cfff3d38b11c7" kind="function"><name>needsCoarseDataForBC</name></member>
     <member refid="classamrex_1_1MLLinOp_1ac161f1d53e925b82ba5defeb9b0efe70" kind="function"><name>setCoarseFineBC</name></member>
@@ -7459,6 +7460,7 @@
     <member refid="classamrex_1_1MLLinOp_1a9288d1d0123d4e3d8097fd568a706a15" kind="function"><name>defineBC</name></member>
     <member refid="classamrex_1_1MLLinOp_1a0aa88871d9875a2436ed23ff882516e4" kind="function"><name>makeSubCommunicator</name></member>
     <member refid="classamrex_1_1MLLinOp_1a62f7495893309fa4f4805bbea9b59b3b" kind="function"><name>remapNeighborhoods</name></member>
+    <member refid="classamrex_1_1MLLinOp_1a19f8f18b021a5b9caf959de14247bd92" kind="function"><name>checkPoint</name></member>
     <member refid="classamrex_1_1MLLinOp_1a8aebe104ce2f4892f32350c742d0ba36" kind="function"><name>makeAgglomeratedDMap</name></member>
     <member refid="classamrex_1_1MLLinOp_1aafd84fa947e45627503861e5707201dd" kind="function"><name>makeConsolidatedDMap</name></member>
   </compound>
@@ -7515,7 +7517,7 @@
     <member refid="classamrex_1_1MLMG_1a60c47161b03df19f998710df25c494fd" kind="variable"><name>timer</name></member>
     <member refid="classamrex_1_1MLMG_1a4d80ba0f675a1b751f35d66d04253dd6" kind="function"><name>MLMG</name></member>
     <member refid="classamrex_1_1MLMG_1a12c3c0793a39356963dd1824588b7593" kind="function"><name>~MLMG</name></member>
-    <member refid="classamrex_1_1MLMG_1aac3bf11b184d411fb030c53a6a3604eb" kind="function"><name>solve</name></member>
+    <member refid="classamrex_1_1MLMG_1a6060de4980b23d73b67610a39565af75" kind="function"><name>solve</name></member>
     <member refid="classamrex_1_1MLMG_1a6fcfa52ef82ffa84f1e4358c6b3fd3c6" kind="function"><name>getGradSolution</name></member>
     <member refid="classamrex_1_1MLMG_1a5b6cd8f9dd955924d2f84832cfd5fba8" kind="function"><name>getFluxes</name></member>
     <member refid="classamrex_1_1MLMG_1a0e86186d43f71b7b14d416eea7c9df08" kind="function"><name>getFluxes</name></member>
@@ -7571,6 +7573,7 @@
     <member refid="classamrex_1_1MLMG_1ad037f6167a4370eef5d2e1b3361cc238" kind="function"><name>getNodalSum</name></member>
     <member refid="classamrex_1_1MLMG_1aaf664a17642380d701b1b7b08e10fa63" kind="function"><name>bottomSolveWithHypre</name></member>
     <member refid="classamrex_1_1MLMG_1a1d9aa957bda2ed06061254fb7e187c3f" kind="function"><name>bottomSolveWithPETSc</name></member>
+    <member refid="classamrex_1_1MLMG_1a52cbdeb167834e42f778f74b3047938d" kind="function"><name>checkPoint</name></member>
   </compound>
   <compound refid="classamrex_1_1MLMGBndry" kind="class"><name>amrex::MLMGBndry</name>
     <member refid="classamrex_1_1MLMGBndry_1a7987ee87e2e57e021adc5ead071808e4" kind="typedef"><name>BCTuple</name></member>
@@ -7584,9 +7587,9 @@
     <member refid="classamrex_1_1MLMGBndry_1a073ddf59071d13b75e388c4d9992b7ec" kind="function"><name>setBoxBC</name></member>
   </compound>
   <compound refid="classamrex_1_1MLNodeLaplacian" kind="class"><name>amrex::MLNodeLaplacian</name>
-    <member refid="classamrex_1_1MLNodeLaplacian_1aa8aff31d8787b58f9569bf036389b471" kind="enum"><name>CoarseningStrategy</name></member>
-    <member refid="classamrex_1_1MLNodeLaplacian_1aa8aff31d8787b58f9569bf036389b471a827faff1bdcfe446237c4d6289abce66" kind="enumvalue"><name>Sigma</name></member>
-    <member refid="classamrex_1_1MLNodeLaplacian_1aa8aff31d8787b58f9569bf036389b471abb0014f2e34a1a63c199eb717fe3accf" kind="enumvalue"><name>RAP</name></member>
+    <member refid="classamrex_1_1MLNodeLaplacian_1a491bef687384c010d33dc15cff1b11b8" kind="enum"><name>CoarseningStrategy</name></member>
+    <member refid="classamrex_1_1MLNodeLaplacian_1a491bef687384c010d33dc15cff1b11b8a827faff1bdcfe446237c4d6289abce66" kind="enumvalue"><name>Sigma</name></member>
+    <member refid="classamrex_1_1MLNodeLaplacian_1a491bef687384c010d33dc15cff1b11b8abb0014f2e34a1a63c199eb717fe3accf" kind="enumvalue"><name>RAP</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a6e9813d42ab7f38861a4b0a0d88f6080" kind="variable"><name>m_is_rz</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1abbef9ba92dcca97cee703cc63f71b3fb" kind="variable"><name>m_coarsening_strategy</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a8a183b518f95b79420fa95a4400b3a4f" kind="variable"><name>m_sigma</name></member>
@@ -7603,6 +7606,7 @@
     <member refid="classamrex_1_1MLNodeLaplacian_1af5fc5382f4bff5cbeec42c320d033b77" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a2f0797012b11f58024e0789f7acc26dc" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a44df7f1f221968bec24958304cf947f6" kind="function"><name>define</name></member>
+    <member refid="classamrex_1_1MLNodeLaplacian_1aec78f58fa749e98da726f5a64e91874a" kind="function"><name>name</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1ad6fc7d27c22cd096b77b9bb7d2b4f66d" kind="function"><name>setRZCorrection</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a4cbcb13e082363d597268b6523f72470" kind="function"><name>setSigma</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1adb3e623e86459b1e9a9c14492961d759" kind="function"><name>compDivergence</name></member>
@@ -7633,6 +7637,7 @@
     <member refid="classamrex_1_1MLNodeLaplacian_1a22d0dde0a531705c3148cd4669f21ed3" kind="function"><name>FillBoundaryCoeff</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a3e4e47a49b8cf3c77996e16c7d46f308" kind="function"><name>buildMasks</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a52ede5504eb690639637884661c1676a" kind="function"><name>buildStencil</name></member>
+    <member refid="classamrex_1_1MLNodeLaplacian_1ad798a370022ba9766ddc8423c8c3cdf6" kind="function"><name>checkPoint</name></member>
   </compound>
   <compound refid="classamrex_1_1MLNodeLinOp" kind="class"><name>amrex::MLNodeLinOp</name>
     <member refid="classamrex_1_1MLNodeLinOp_1a1b4821805159b0595b6b7b1e0135b54f" kind="friend"><name>MLMG</name></member>
@@ -11052,6 +11057,8 @@
     <member refid="namespaceamrex_1_1ParallelContext_1ab3843bd69bcb263dfdebb3d668dea1ba" kind="function"><name>IOProcessorNumberSub</name></member>
     <member refid="namespaceamrex_1_1ParallelContext_1af766eba670e3bba30b2b8db7f20e8885" kind="function"><name>IOProcessorSub</name></member>
     <member refid="namespaceamrex_1_1ParallelContext_1aab852af3b175c95e5bdd8e0de563e9d7" kind="function"><name>OFSPtrSub</name></member>
+    <member refid="namespaceamrex_1_1ParallelContext_1a1ceab6de8572b3cfd10ddba48f266863" kind="function"><name>BarrierSub</name></member>
+    <member refid="namespaceamrex_1_1ParallelContext_1aaeeaf782f50e27058a857cd86febcdd3" kind="function"><name>BarrierAll</name></member>
     <member refid="namespaceamrex_1_1ParallelContext_1a48543c30b34e4a2696efc8b2788abadd" kind="function"><name>get_inc_mpi_tag</name></member>
     <member refid="namespaceamrex_1_1ParallelContext_1a766c71905985383fd282cace905237d4" kind="function"><name>local_to_global_rank</name></member>
     <member refid="namespaceamrex_1_1ParallelContext_1a1bd2485b1543e7238ec40aac8c331fa5" kind="function"><name>local_to_global_rank</name></member>

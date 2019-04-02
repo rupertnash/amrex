@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classamrex_1_1MLMG-members.html">List of all members</a>  </div>
@@ -124,8 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4d80ba0f675a1b751f35d66d04253dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12c3c0793a39356963dd1824588b7593"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a12c3c0793a39356963dd1824588b7593">~MLMG</a> ()</td></tr>
 <tr class="separator:a12c3c0793a39356963dd1824588b7593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac3bf11b184d411fb030c53a6a3604eb"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#aac3bf11b184d411fb030c53a6a3604eb">solve</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;a_sol, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> const * &gt; &amp;a_rhs, Real a_tol_rel, Real a_tol_abs)</td></tr>
-<tr class="separator:aac3bf11b184d411fb030c53a6a3604eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6060de4980b23d73b67610a39565af75"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a6060de4980b23d73b67610a39565af75">solve</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;a_sol, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> const * &gt; &amp;a_rhs, Real a_tol_rel, Real a_tol_abs, const char *checkpoint_file=nullptr)</td></tr>
+<tr class="separator:a6060de4980b23d73b67610a39565af75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fcfa52ef82ffa84f1e4358c6b3fd3c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a6fcfa52ef82ffa84f1e4358c6b3fd3c6">getGradSolution</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *, AMREX_SPACEDIM &gt; &gt; &amp;a_grad_sol, <a class="el" href="classamrex_1_1MLLinOp.html#a07cd0a7c45d6542e33a5d97aefe5bab3">Location</a> a_loc=<a class="el" href="classamrex_1_1MLLinOp.html#a07cd0a7c45d6542e33a5d97aefe5bab3ad1a130e88790663b2124d7dbd3e9f81e">Location::FaceCenter</a>)</td></tr>
 <tr class="separator:a6fcfa52ef82ffa84f1e4358c6b3fd3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b6cd8f9dd955924d2f84832cfd5fba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a5b6cd8f9dd955924d2f84832cfd5fba8">getFluxes</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *, AMREX_SPACEDIM &gt; &gt; &amp;a_flux, <a class="el" href="classamrex_1_1MLLinOp.html#a07cd0a7c45d6542e33a5d97aefe5bab3">Location</a> a_loc=<a class="el" href="classamrex_1_1MLLinOp.html#a07cd0a7c45d6542e33a5d97aefe5bab3ad1a130e88790663b2124d7dbd3e9f81e">Location::FaceCenter</a>)</td></tr>
@@ -247,6 +248,11 @@ Private Types</h2></td></tr>
 <a class="el" href="classamrex_1_1MLMG.html#ac0602b6cac3018c66c89819127043001ae447a282e35218ac782b215c4a1fccfc">ntimers</a>
  }</td></tr>
 <tr class="separator:ac0602b6cac3018c66c89819127043001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a52cbdeb167834e42f778f74b3047938d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a52cbdeb167834e42f778f74b3047938d">checkPoint</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;a_sol, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> const * &gt; &amp;a_rhs, Real a_tol_rel, Real a_tol_abs, const char *a_file_name) const </td></tr>
+<tr class="separator:a52cbdeb167834e42f778f74b3047938d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -629,6 +635,58 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a52cbdeb167834e42f778f74b3047938d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MLMG::checkPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a_sol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> const * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a_rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>a_tol_rel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>a_tol_abs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>a_file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1745,7 +1803,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aac3bf11b184d411fb030c53a6a3604eb"></a>
+<a class="anchor" id="a6060de4980b23d73b67610a39565af75"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1771,7 +1829,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>a_tol_abs</em>&#160;</td>
+          <td class="paramname"><em>a_tol_abs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>checkpoint_file</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

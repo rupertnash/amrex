@@ -22,7 +22,7 @@ var searchData=
   ['rankinleadcomm',['RankInLeadComm',['../namespaceamrex_1_1ParallelDescriptor.html#a0719939ecc6b26843399e2af4d660f14',1,'amrex::ParallelDescriptor']]],
   ['rankmap',['rankmap',['../structdistribution__t.html#a65f303dfbdd0d1dbe148507bb0a48386',1,'distribution_t']]],
   ['ranktoread',['rankToRead',['../structamrex_1_1VisMF_1_1FabReadLink.html#a6064cc4034c3d95989892cac82c68fea',1,'amrex::VisMF::FabReadLink']]],
-  ['rap',['RAP',['../classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471abb0014f2e34a1a63c199eb717fe3accf',1,'amrex::MLNodeLaplacian']]],
+  ['rap',['RAP',['../classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8abb0014f2e34a1a63c199eb717fe3accf',1,'amrex::MLNodeLaplacian']]],
   ['rastercontours',['RASTERCONTOURS',['../namespaceamrex_1_1Amrvis.html#adff45b199da741c907d4b88ed38b323ba0a6705b8c6cedf020a3122f7b169ed43',1,'amrex::Amrvis']]],
   ['rasteronly',['RASTERONLY',['../namespaceamrex_1_1Amrvis.html#adff45b199da741c907d4b88ed38b323ba22d64df7ed492afd73a91e643e515681',1,'amrex::Amrvis']]],
   ['ratio',['ratio',['../classamrex_1_1FluxRegister.html#a8d33188a1ba19154997256c66083b10e',1,'amrex::FluxRegister::ratio()'],['../classamrex_1_1InterpolaterBoxCoarsener.html#a38dd7e762f41ec784b5dfd70109bb3a8',1,'amrex::InterpolaterBoxCoarsener::ratio()']]],

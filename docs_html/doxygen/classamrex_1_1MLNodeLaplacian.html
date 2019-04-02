@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classamrex_1_1MLNodeLaplacian-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -111,10 +112,10 @@ Inheritance diagram for amrex::MLNodeLaplacian:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa8aff31d8787b58f9569bf036389b471"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471">CoarseningStrategy</a> { <a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471a827faff1bdcfe446237c4d6289abce66">CoarseningStrategy::Sigma</a>, 
-<a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471abb0014f2e34a1a63c199eb717fe3accf">CoarseningStrategy::RAP</a>
+<tr class="memitem:a491bef687384c010d33dc15cff1b11b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8">CoarseningStrategy</a> : int { <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8a827faff1bdcfe446237c4d6289abce66">CoarseningStrategy::Sigma</a>, 
+<a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8abb0014f2e34a1a63c199eb717fe3accf">CoarseningStrategy::RAP</a>
  }</td></tr>
-<tr class="separator:aa8aff31d8787b58f9569bf036389b471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a491bef687384c010d33dc15cff1b11b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classamrex_1_1MLLinOp"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classamrex_1_1MLLinOp')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classamrex_1_1MLLinOp.html">amrex::MLLinOp</a></td></tr>
 <tr class="memitem:a5aa01a1ef6b0b3a471f02f65ae4b4884 inherit pub_types_classamrex_1_1MLLinOp"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884">BCMode</a> { <a class="el" href="classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884a548465e8241b26162c8e0a7b0cdfc5e7">BCMode::Homogeneous</a>, 
 <a class="el" href="classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884ae9990b3a39151b6f2175caa7621e0c4b">BCMode::Inhomogeneous</a>
@@ -151,6 +152,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f0797012b11f58024e0789f7acc26dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44df7f1f221968bec24958304cf947f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a44df7f1f221968bec24958304cf947f6">define</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &gt; &amp;a_geom, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &gt; &amp;a_grids, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &gt; &amp;a_dmap, const <a class="el" href="structamrex_1_1LPInfo.html">LPInfo</a> &amp;a_info=<a class="el" href="structamrex_1_1LPInfo.html">LPInfo</a>(), const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; const * &gt; &amp;a_factory={})</td></tr>
 <tr class="separator:a44df7f1f221968bec24958304cf947f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec78f58fa749e98da726f5a64e91874a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#aec78f58fa749e98da726f5a64e91874a">name</a> () const override</td></tr>
+<tr class="separator:aec78f58fa749e98da726f5a64e91874a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6fc7d27c22cd096b77b9bb7d2b4f66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#ad6fc7d27c22cd096b77b9bb7d2b4f66d">setRZCorrection</a> (bool rz) noexcept</td></tr>
 <tr class="separator:ad6fc7d27c22cd096b77b9bb7d2b4f66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbcb13e082363d597268b6523f72470"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a4cbcb13e082363d597268b6523f72470">setSigma</a> (int amrlev, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;a_sigma)</td></tr>
@@ -169,7 +172,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa74c5ed1094317d719bffbe89f016c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7beea7bc93f71c8970977613d2ff08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a2d7beea7bc93f71c8970977613d2ff08">setHarmonicAverage</a> (bool flag) noexcept</td></tr>
 <tr class="separator:a2d7beea7bc93f71c8970977613d2ff08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af44fe2628228f69789874df4dbcab755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#af44fe2628228f69789874df4dbcab755">setCoarseningStrategy</a> (<a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471">CoarseningStrategy</a> cs) noexcept</td></tr>
+<tr class="memitem:af44fe2628228f69789874df4dbcab755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#af44fe2628228f69789874df4dbcab755">setCoarseningStrategy</a> (<a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8">CoarseningStrategy</a> cs) noexcept</td></tr>
 <tr class="separator:af44fe2628228f69789874df4dbcab755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049861a9a5c04611f13be0978ebb6232"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a049861a9a5c04611f13be0978ebb6232">restriction</a> (int amrlev, int cmglev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;crse, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;fine) const finaloverride</td></tr>
 <tr class="separator:a049861a9a5c04611f13be0978ebb6232"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,11 +295,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6a653e83929e0f2c41482551c10b4e8 inherit pub_methods_classamrex_1_1MLLinOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ae6a653e83929e0f2c41482551c10b4e8">getFluxes</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *, AMREX_SPACEDIM &gt; &gt; &amp;a_flux, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;a_sol, <a class="el" href="classamrex_1_1MLLinOp.html#a07cd0a7c45d6542e33a5d97aefe5bab3">Location</a> a_loc) const </td></tr>
 <tr class="separator:ae6a653e83929e0f2c41482551c10b4e8 inherit pub_methods_classamrex_1_1MLLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad798a370022ba9766ddc8423c8c3cdf6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#ad798a370022ba9766ddc8423c8c3cdf6">checkPoint</a> (std::string const &amp;file_name) const final</td></tr>
+<tr class="separator:ad798a370022ba9766ddc8423c8c3cdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a6e9813d42ab7f38861a4b0a0d88f6080"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a6e9813d42ab7f38861a4b0a0d88f6080">m_is_rz</a> = 0</td></tr>
 <tr class="separator:a6e9813d42ab7f38861a4b0a0d88f6080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbef9ba92dcca97cee703cc63f71b3fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471">CoarseningStrategy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#abbef9ba92dcca97cee703cc63f71b3fb">m_coarsening_strategy</a> = <a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471a827faff1bdcfe446237c4d6289abce66">CoarseningStrategy::Sigma</a></td></tr>
+<tr class="memitem:abbef9ba92dcca97cee703cc63f71b3fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8">CoarseningStrategy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#abbef9ba92dcca97cee703cc63f71b3fb">m_coarsening_strategy</a> = <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8a827faff1bdcfe446237c4d6289abce66">CoarseningStrategy::Sigma</a></td></tr>
 <tr class="separator:abbef9ba92dcca97cee703cc63f71b3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a183b518f95b79420fa95a4400b3a4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; std::unique_ptr&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt;, AMREX_SPACEDIM &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a8a183b518f95b79420fa95a4400b3a4f">m_sigma</a></td></tr>
 <tr class="separator:a8a183b518f95b79420fa95a4400b3a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,7 +433,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ae871a991ef83c33044a22db383c76dcd inherit pro_static_attribs_classamrex_1_1MLLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="aa8aff31d8787b58f9569bf036389b471"></a>
+<a class="anchor" id="a491bef687384c010d33dc15cff1b11b8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -433,7 +441,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471">amrex::MLNodeLaplacian::CoarseningStrategy</a></td>
+          <td class="memname">enum <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8">amrex::MLNodeLaplacian::CoarseningStrategy</a> : int</td>
         </tr>
       </table>
   </td>
@@ -443,9 +451,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa8aff31d8787b58f9569bf036389b471a827faff1bdcfe446237c4d6289abce66"></a>Sigma&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a491bef687384c010d33dc15cff1b11b8a827faff1bdcfe446237c4d6289abce66"></a>Sigma&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="aa8aff31d8787b58f9569bf036389b471abb0014f2e34a1a63c199eb717fe3accf"></a>RAP&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a491bef687384c010d33dc15cff1b11b8abb0014f2e34a1a63c199eb717fe3accf"></a>RAP&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -779,6 +787,32 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad798a370022ba9766ddc8423c8c3cdf6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MLNodeLaplacian::checkPoint </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classamrex_1_1MLLinOp.html#a19f8f18b021a5b9caf959de14247bd92">amrex::MLLinOp</a>.</p>
 
 </div>
 </div>
@@ -1271,6 +1305,31 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aec78f58fa749e98da726f5a64e91874a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string amrex::MLNodeLaplacian::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classamrex_1_1MLLinOp.html#a9f6145ef119707fa7ce4fd43542d1c24">amrex::MLLinOp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aae5e2a5876ca539035a6cee8fa025c29"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1542,7 +1601,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void amrex::MLNodeLaplacian::setCoarseningStrategy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471">CoarseningStrategy</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8">CoarseningStrategy</a>&#160;</td>
           <td class="paramname"><em>cs</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1689,7 +1748,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471">CoarseningStrategy</a> amrex::MLNodeLaplacian::m_coarsening_strategy = <a class="el" href="classamrex_1_1MLNodeLaplacian.html#aa8aff31d8787b58f9569bf036389b471a827faff1bdcfe446237c4d6289abce66">CoarseningStrategy::Sigma</a></td>
+          <td class="memname"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8">CoarseningStrategy</a> amrex::MLNodeLaplacian::m_coarsening_strategy = <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a491bef687384c010d33dc15cff1b11b8a827faff1bdcfe446237c4d6289abce66">CoarseningStrategy::Sigma</a></td>
         </tr>
       </table>
   </td>
