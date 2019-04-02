@@ -359,6 +359,7 @@ var searchData=
   ['m_5fvalid_5findex',['m_valid_index',['../classamrex_1_1ParIterBase.html#aa1142b78c93b74d5773d8633f240735b',1,'amrex::ParIterBase']]],
   ['m_5fvalidbox',['m_validbox',['../classamrex_1_1EB2_1_1GFab.html#ae472b90af10b7b39bc9b15f9b3ae9563',1,'amrex::EB2::GFab']]],
   ['m_5fvals',['m_vals',['../structamrex_1_1ParmParse_1_1PP__entry.html#a80de7e1a9dcbb00abab4cd08fbb5d395',1,'amrex::ParmParse::PP_entry']]],
+  ['m_5fvalue',['m_value',['../structamrex_1_1detail_1_1gpu__tuple__element.html#a33dfcf0ade1a0d7f43ce7a1249a48c54',1,'amrex::detail::gpu_tuple_element']]],
   ['m_5fvar_5fnames',['m_var_names',['../classamrex_1_1PlotFileDataImpl.html#a97218ed0288178e38d8c1f1e5aa5eb22',1,'amrex::PlotFileDataImpl']]],
   ['m_5fverbose',['m_verbose',['../classamrex_1_1MacProjector.html#ac21ccd4081f20e018bd02689b363a35e',1,'amrex::MacProjector::m_verbose()'],['../classamrex_1_1ParticleContainer.html#a68c842aac5e81aa1c36c35d5ce1799be',1,'amrex::ParticleContainer::m_verbose()']]],
   ['m_5fvers',['m_vers',['../structamrex_1_1VisMF_1_1Header.html#aacee1781de8865ef3c3eb1d282bc6f9b',1,'amrex::VisMF::Header']]],

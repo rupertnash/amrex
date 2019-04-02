@@ -2,6 +2,12 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="namespaceamrex_1_1detail" kind="namespace" language="C++">
     <compoundname>amrex::detail</compoundname>
+    <innerclass refid="structamrex_1_1detail_1_1gpu__tuple__element" prot="public">amrex::detail::gpu_tuple_element</innerclass>
+    <innerclass refid="structamrex_1_1detail_1_1gpu__tuple__impl" prot="public">amrex::detail::gpu_tuple_impl</innerclass>
+    <innerclass refid="structamrex_1_1detail_1_1gpu__tuple__impl_3_01I_00_01Head_01_4" prot="public">amrex::detail::gpu_tuple_impl&lt; I, Head &gt;</innerclass>
+    <innerclass refid="structamrex_1_1detail_1_1gpu__tuple__impl_3_01I_00_01Head_00_01Tail_8_8_8_01_4" prot="public">amrex::detail::gpu_tuple_impl&lt; I, Head, Tail... &gt;</innerclass>
+    <innerclass refid="structamrex_1_1detail_1_1unwrap" prot="public">amrex::detail::unwrap</innerclass>
+    <innerclass refid="structamrex_1_1detail_1_1unwrap_3_01std_1_1reference__wrapper_3_01T_01_4_01_4" prot="public">amrex::detail::unwrap&lt; std::reference_wrapper&lt; T &gt; &gt;</innerclass>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="namespaceamrex_1_1detail_1a05ef6e98eba987410d73df1617fa569d" prot="public" static="no">
         <name>ReduceOp</name>
@@ -48,6 +54,21 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_ParallelReduce.H" line="14" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_ParallelReduce.H" bodystart="14" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceamrex_1_1detail_1a4dabd168440a362478e0d2887dfdfe23" prot="public" static="no">
+        <type>typename <ref refid="structamrex_1_1detail_1_1unwrap" kindref="compound">unwrap</ref>&lt; typename std::decay&lt; T &gt;::type &gt;::type</type>
+        <definition>using amrex::detail::tuple_decay_t = typedef typename unwrap&lt;typename std::decay&lt;T&gt;::type&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>tuple_decay_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Tuple.H" line="164" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Tuple.H" bodystart="164" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -228,6 +249,64 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_ParallelReduce.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_ParallelReduce.H" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1detail_1a62a2b2ccd165d829b36206f3cffb70f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>I</declname>
+            <defname>I</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> constexpr <ref refid="structamrex_1_1GpuTupleElement" kindref="compound">GpuTupleElement</ref>&lt; I, <ref refid="classamrex_1_1GpuTuple" kindref="compound">GpuTuple</ref>&lt; Ts... &gt; &gt;::type &amp;</type>
+        <definition>AMREX_GPU_HOST_DEVICE constexpr GpuTupleElement&lt;I, GpuTuple&lt;Ts...&gt; &gt;::type&amp; amrex::detail::get_impl</definition>
+        <argsstring>(detail::gpu_tuple_element&lt; I, typename GpuTupleElement&lt; I, GpuTuple&lt; Ts... &gt; &gt;::type &gt; &amp;te) noexcept</argsstring>
+        <name>get_impl</name>
+        <param>
+          <type><ref refid="structamrex_1_1detail_1_1gpu__tuple__element" kindref="compound">detail::gpu_tuple_element</ref>&lt; I, typename <ref refid="structamrex_1_1GpuTupleElement" kindref="compound">GpuTupleElement</ref>&lt; I, <ref refid="classamrex_1_1GpuTuple" kindref="compound">GpuTuple</ref>&lt; Ts... &gt; &gt;::type &gt; &amp;</type>
+          <declname>te</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Tuple.H" line="122" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Tuple.H" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1detail_1a80728f757289cb823fe33703fe6f867c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>I</declname>
+            <defname>I</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> constexpr <ref refid="structamrex_1_1GpuTupleElement" kindref="compound">GpuTupleElement</ref>&lt; I, <ref refid="classamrex_1_1GpuTuple" kindref="compound">GpuTuple</ref>&lt; Ts... &gt; &gt;::type const &amp;</type>
+        <definition>AMREX_GPU_HOST_DEVICE constexpr GpuTupleElement&lt;I, GpuTuple&lt;Ts...&gt; &gt;::type const&amp; amrex::detail::get_impl</definition>
+        <argsstring>(detail::gpu_tuple_element&lt; I, typename GpuTupleElement&lt; I, GpuTuple&lt; Ts... &gt; &gt;::type &gt; const &amp;te) noexcept</argsstring>
+        <name>get_impl</name>
+        <param>
+          <type><ref refid="structamrex_1_1detail_1_1gpu__tuple__element" kindref="compound">detail::gpu_tuple_element</ref>&lt; I, typename <ref refid="structamrex_1_1GpuTupleElement" kindref="compound">GpuTupleElement</ref>&lt; I, <ref refid="classamrex_1_1GpuTuple" kindref="compound">GpuTuple</ref>&lt; Ts... &gt; &gt;::type &gt; const &amp;</type>
+          <declname>te</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Tuple.H" line="132" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Tuple.H" bodystart="132" bodyend="136"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

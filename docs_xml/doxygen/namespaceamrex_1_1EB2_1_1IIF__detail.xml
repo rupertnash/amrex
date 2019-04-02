@@ -3,7 +3,7 @@
   <compounddef id="namespaceamrex_1_1EB2_1_1IIF__detail" kind="namespace" language="C++">
     <compoundname>amrex::EB2::IIF_detail</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1a2ce5793d3df3d72296027edeed0945fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1ab29fda705d6e62fff3c0966fc83c76ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename F</type>
@@ -11,7 +11,7 @@
         </templateparamlist>
         <type>Real</type>
         <definition>Real amrex::EB2::IIF_detail::do_min</definition>
-        <argsstring>(const RealArray &amp;p, F &amp;&amp;f)</argsstring>
+        <argsstring>(const RealArray &amp;p, F &amp;&amp;f) noexcept</argsstring>
         <name>do_min</name>
         <param>
           <type>const <ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref> &amp;</type>
@@ -27,9 +27,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="21" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" bodystart="21" bodyend="24"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="20" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" bodystart="20" bodyend="23"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1a860d4bef7c7740284ed51c6b6a2f0225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1abde50a1561f2c20d70f2ee047e9cd68e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename F</type>
@@ -42,7 +42,7 @@
         </templateparamlist>
         <type>Real</type>
         <definition>Real amrex::EB2::IIF_detail::do_min</definition>
-        <argsstring>(const RealArray &amp;p, F &amp;&amp;f, Fs &amp;...fs)</argsstring>
+        <argsstring>(const RealArray &amp;p, F &amp;&amp;f, Fs &amp;...fs) noexcept</argsstring>
         <name>do_min</name>
         <param>
           <type>const <ref refid="namespaceamrex_1a9de48c04056551924746c42f9eda3c8f" kindref="member">RealArray</ref> &amp;</type>
@@ -62,17 +62,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="27" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" bodystart="27" bodyend="30"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="26" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" bodystart="26" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1a4859905bbfaf2ae73d1a71d80f7f812b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1a1225d3d0c40e87671ca59b99ab2a1ad9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename F</type>
           </param>
         </templateparamlist>
-        <type>Real</type>
-        <definition>Real amrex::EB2::IIF_detail::do_min</definition>
-        <argsstring>(AMREX_D_DECL(Real x, Real y, Real z), F &amp;&amp;f)</argsstring>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> Real</type>
+        <definition>AMREX_GPU_HOST_DEVICE Real amrex::EB2::IIF_detail::do_min</definition>
+        <argsstring>(AMREX_D_DECL(Real x, Real y, Real z), F &amp;&amp;f) noexcept</argsstring>
         <name>do_min</name>
         <param>
           <type>AMREX_D_DECL(Real x, Real y, Real z)</type>
@@ -89,7 +89,7 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="33" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" bodystart="33" bodyend="36"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1a724c3d89cb23f7517f42931f4dab4aec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1_1EB2_1_1IIF__detail_1a11865b6f40919c1f1de1a4ab0889638a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename F</type>
@@ -100,8 +100,8 @@
             <defname>Fs</defname>
           </param>
         </templateparamlist>
-        <type>Real</type>
-        <definition>Real amrex::EB2::IIF_detail::do_min</definition>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> Real</type>
+        <definition>AMREX_GPU_HOST_DEVICE Real amrex::EB2::IIF_detail::do_min</definition>
         <argsstring>(AMREX_D_DECL(Real x, Real y, Real z), F &amp;&amp;f, Fs &amp;...fs)</argsstring>
         <name>do_min</name>
         <param>
@@ -121,13 +121,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="39" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" bodystart="39" bodyend="42"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="40" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" bodystart="40" bodyend="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="19" column="1"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Intersection.H" line="18" column="1"/>
   </compounddef>
 </doxygen>
