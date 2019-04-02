@@ -133,12 +133,12 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="462" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="357" bodyend="363"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1CellQuadratic_1abb37b25ffccc2b84646d02e61f5db0a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classamrex_1_1CellQuadratic_1ab80131e742feedf641c7c5c8ebec3210" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void amrex::CellQuadratic::interp</definition>
-        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; &amp;bcr, int actual_comp, int actual_state) override</argsstring>
+        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; const &amp;bcr, int actual_comp, int actual_state) override</argsstring>
         <name>interp</name>
-        <reimplements refid="classamrex_1_1Interpolater_1a73304b6574b758886cb2c14b24f86604">interp</reimplements>
+        <reimplements refid="classamrex_1_1Interpolater_1abcdada680ce52c4ec1968c13be38b604">interp</reimplements>
         <param>
           <type>const <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
           <declname>crse</declname>
@@ -176,7 +176,7 @@
           <declname>fine_geom</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1BCRec" kindref="compound">BCRec</ref> &gt; &amp;</type>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1BCRec" kindref="compound">BCRec</ref> &gt; const &amp;</type>
           <declname>bcr</declname>
         </param>
         <param>
@@ -317,7 +317,7 @@
       <member refid="classamrex_1_1CellQuadratic_1a29356c571502616f35a19405ce0ab31d" prot="public" virt="virtual"><scope>amrex::CellQuadratic</scope><name>CoarseBox</name></member>
       <member refid="classamrex_1_1CellQuadratic_1ab63f2d5d208fee7b85d2d3eab0675a77" prot="private" virt="non-virtual"><scope>amrex::CellQuadratic</scope><name>do_limited_slope</name></member>
       <member refid="classamrex_1_1Interpolater_1aa2f8d685993329ef439ea2925bee9cc7" prot="public" virt="non-virtual"><scope>amrex::CellQuadratic</scope><name>GetBCArray</name></member>
-      <member refid="classamrex_1_1CellQuadratic_1abb37b25ffccc2b84646d02e61f5db0a1" prot="public" virt="virtual"><scope>amrex::CellQuadratic</scope><name>interp</name></member>
+      <member refid="classamrex_1_1CellQuadratic_1ab80131e742feedf641c7c5c8ebec3210" prot="public" virt="virtual"><scope>amrex::CellQuadratic</scope><name>interp</name></member>
       <member refid="classamrex_1_1Interpolater_1aeaaef0ff2178ce688d0c48d6e1d89049" prot="public" virt="virtual"><scope>amrex::CellQuadratic</scope><name>protect</name></member>
       <member refid="classamrex_1_1CellQuadratic_1af55d6d25ca0615b8ce54143452749b9a" prot="public" virt="virtual"><scope>amrex::CellQuadratic</scope><name>~CellQuadratic</name></member>
       <member refid="classamrex_1_1Interpolater_1ad53e63eaa9b2b9b140c98f73969f2164" prot="public" virt="virtual"><scope>amrex::CellQuadratic</scope><name>~Interpolater</name></member>
