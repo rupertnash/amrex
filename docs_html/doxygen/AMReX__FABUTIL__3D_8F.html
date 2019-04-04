@@ -110,12 +110,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:a11065fb416b9ca2fd3755ca2aea4583d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__FABUTIL__3D_8F.html#a11065fb416b9ca2fd3755ca2aea4583d">fort_cartgridminmax</a> (data, dlo1, dlo2, dlo3, dhi1, dhi2</td></tr>
-<tr class="separator:a11065fb416b9ca2fd3755ca2aea4583d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d5fbeba51d3043476343dafc4dc900"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__FABUTIL__3D_8F.html#a76d5fbeba51d3043476343dafc4dc900">fort_cartgridminmax</a> (data, dlo1, dlo2, dlo3, dhi1, dhi2, dhi3, vfracdata, vfeps, dmin, dmax)</td></tr>
+<tr class="separator:a76d5fbeba51d3043476343dafc4dc900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a143a5d85012c46b62b992bca77b8b3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__FABUTIL__3D_8F.html#a0a143a5d85012c46b62b992bca77b8b3">fort_cinterp</a> (fine, floi1, floi2, floi3, fhii1, fhii2, fhii3, fblo, fbhi, nvar, lratio, crse, clo, chi, cblo, cbhi, fslo, fshi, cslope, clen, fslope, fdat, flen, voff)</td></tr>
 <tr class="separator:a0a143a5d85012c46b62b992bca77b8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08ddd1f88bd5d89b37867faafa45eeda"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__FABUTIL__3D_8F.html#a08ddd1f88bd5d89b37867faafa45eeda">fort_pcinterp</a> (fine, floi1, floi2, floi3, fhii1, fhii2, fhii3</td></tr>
-<tr class="separator:a08ddd1f88bd5d89b37867faafa45eeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9903f1157216f3c57117fc01bc71fe"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__FABUTIL__3D_8F.html#a1a9903f1157216f3c57117fc01bc71fe">fort_pcinterp</a> (fine, floi1, floi2, floi3, fhii1, fhii2, fhii3, fblo, fbhi, lrat, nvar, crse, cloi1, cloi2, cloi3, chii1, chii2, chii3, cblo, cbhi, temp, tloi, thii)</td></tr>
+<tr class="separator:a1a9903f1157216f3c57117fc01bc71fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef6a56e256cc03471acd5024e5098e3b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__FABUTIL__3D_8F.html#aef6a56e256cc03471acd5024e5098e3b">fort_vcinterp</a> (fine, floi1, floi2, floi3, fhii1, fhii2, fhii3, fbloi1, fbloi2, fbloi3, fbhii1, fbhii2, fbhii3, nvar, lratio, crse, clo, chi, cblo, cbhi, fslo, fshi, cvloi1, cvloi2, cvloi3, cvhii1, cvhii2, cvhii3, cslope, clen, fslope, fdat, flen, voff, cvc1, fvc1, cvc2, fvc2, cvc3, fvc3)</td></tr>
 <tr class="separator:aef6a56e256cc03471acd5024e5098e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -195,7 +195,7 @@ Functions/Subroutines</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a class="anchor" id="a11065fb416b9ca2fd3755ca2aea4583d"></a>
+<a class="anchor" id="a76d5fbeba51d3043476343dafc4dc900"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -233,7 +233,37 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer&#160;</td>
-          <td class="paramname"><em>dhi2</em>&#160;</td>
+          <td class="paramname"><em>dhi2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>dhi3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>vfracdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>vfeps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dmin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dmax</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -403,7 +433,7 @@ Functions/Subroutines</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a08ddd1f88bd5d89b37867faafa45eeda"></a>
+<a class="anchor" id="a1a9903f1157216f3c57117fc01bc71fe"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -447,7 +477,103 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer&#160;</td>
-          <td class="paramname"><em>fhii3</em>&#160;</td>
+          <td class="paramname"><em>fhii3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, dimension(3)&#160;</td>
+          <td class="paramname"><em>fblo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, dimension(3)&#160;</td>
+          <td class="paramname"><em>fbhi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>lrat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>nvar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>crse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>cloi1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>cloi2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>cloi3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>chii1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>chii2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>chii3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, dimension(3)&#160;</td>
+          <td class="paramname"><em>cblo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, dimension(3)&#160;</td>
+          <td class="paramname"><em>cbhi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>tloi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname"><em>thii</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
