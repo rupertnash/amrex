@@ -82,6 +82,7 @@ var searchData=
   ['_7ehypreabeclap',['~HypreABecLap',['../classamrex_1_1HypreABecLap.html#a0e273f01ae93c34aece89b8e8f904359',1,'amrex::HypreABecLap']]],
   ['_7ehypreabeclap2',['~HypreABecLap2',['../classamrex_1_1HypreABecLap2.html#a5be77cc8393b0445e2f7341cd4311f61',1,'amrex::HypreABecLap2']]],
   ['_7ehypreabeclap3',['~HypreABecLap3',['../classamrex_1_1HypreABecLap3.html#ac934d916d663753b28efb875e133d7cd',1,'amrex::HypreABecLap3']]],
+  ['_7ehyprenodelap',['~HypreNodeLap',['../classamrex_1_1HypreNodeLap.html#ac4fd7635fb3f2ef04617ec9a1e17f0ac',1,'amrex::HypreNodeLap']]],
   ['_7eiarraybox',['~IArrayBox',['../classamrex_1_1IArrayBox.html#ac05e603b189bd8c2ecbe4bdafb4272a2',1,'amrex::IArrayBox']]],
   ['_7eimultifab',['~iMultiFab',['../classamrex_1_1iMultiFab.html#a0e2f3634debf8979c75292292af94e67',1,'amrex::iMultiFab']]],
   ['_7eindexspace',['~IndexSpace',['../classamrex_1_1EB2_1_1IndexSpace.html#ac4076fe625fa22e660fed58771f6b2d5',1,'amrex::EB2::IndexSpace']]],

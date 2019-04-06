@@ -317,6 +317,8 @@ var searchData=
   ['amrex_5fhypreabeclap2_2eh',['AMReX_HypreABecLap2.H',['../AMReX__HypreABecLap2_8H.html',1,'']]],
   ['amrex_5fhypreabeclap3_2ecpp',['AMReX_HypreABecLap3.cpp',['../AMReX__HypreABecLap3_8cpp.html',1,'']]],
   ['amrex_5fhypreabeclap3_2eh',['AMReX_HypreABecLap3.H',['../AMReX__HypreABecLap3_8H.html',1,'']]],
+  ['amrex_5fhyprenodelap_2ecpp',['AMReX_HypreNodeLap.cpp',['../AMReX__HypreNodeLap_8cpp.html',1,'']]],
+  ['amrex_5fhyprenodelap_2eh',['AMReX_HypreNodeLap.H',['../AMReX__HypreNodeLap_8H.html',1,'']]],
   ['amrex_5fiarraybox_2ecpp',['AMReX_IArrayBox.cpp',['../AMReX__IArrayBox_8cpp.html',1,'']]],
   ['amrex_5fiarraybox_2eh',['AMReX_IArrayBox.H',['../AMReX__IArrayBox_8H.html',1,'']]],
   ['amrex_5fimultifab_2ecpp',['AMReX_iMultiFab.cpp',['../AMReX__iMultiFab_8cpp.html',1,'']]],

@@ -113,6 +113,7 @@
     <innerclass refid="classamrex_1_1HypreABecLap" prot="public">amrex::HypreABecLap</innerclass>
     <innerclass refid="classamrex_1_1HypreABecLap2" prot="public">amrex::HypreABecLap2</innerclass>
     <innerclass refid="classamrex_1_1HypreABecLap3" prot="public">amrex::HypreABecLap3</innerclass>
+    <innerclass refid="classamrex_1_1HypreNodeLap" prot="public">amrex::HypreNodeLap</innerclass>
     <innerclass refid="classamrex_1_1IArrayBox" prot="public">amrex::IArrayBox</innerclass>
     <innerclass refid="classamrex_1_1iMultiFab" prot="public">amrex::iMultiFab</innerclass>
     <innerclass refid="structamrex_1_1IndexSequence" prot="public">amrex::IndexSequence</innerclass>
@@ -7785,6 +7786,43 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" line="923" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" bodystart="923" bodyend="930"/>
       </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a5821b989454c54f92dd1f2312e95b5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class FAB</type>
+          </param>
+          <param>
+            <type>class IFAB</type>
+          </param>
+          <param>
+            <type>class bar</type>
+            <defval><ref refid="namespaceamrex_1a8690d4c6386d001b328b07257fe628a0" kindref="member">amrex::EnableIf_t</ref>&lt;IsBaseFab&lt;FAB&gt;::value                                                               &amp;&amp; IsBaseFab&lt;IFAB&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void amrex::OverrideSync</definition>
+        <argsstring>(FabArray&lt; FAB &gt; &amp;fa, FabArray&lt; IFAB &gt; const &amp;msk, const Periodicity &amp;period)</argsstring>
+        <name>OverrideSync</name>
+        <param>
+          <type><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; FAB &gt; &amp;</type>
+          <declname>fa</declname>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray</ref>&lt; IFAB &gt; const &amp;</type>
+          <declname>msk</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Periodicity" kindref="compound">Periodicity</ref> &amp;</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" line="935" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H" bodystart="935" bodyend="962"/>
+      </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ac185c39750011cc24fb8c1a0b872a34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
         <definition>std::ostream &amp; amrex::operator&lt;&lt;</definition>
@@ -8475,6 +8513,27 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="296" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="296" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a7999d4ed2bf68aba97d9772d888667d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classamrex_1_1iMultiFab" kindref="compound">iMultiFab</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; iMultiFab &gt; amrex::OwnerMask</definition>
+        <argsstring>(FabArrayBase const &amp;mf, const Periodicity &amp;period)</argsstring>
+        <name>OwnerMask</name>
+        <param>
+          <type><ref refid="classamrex_1_1FabArrayBase" kindref="compound">FabArrayBase</ref> const &amp;</type>
+          <declname>mf</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Periodicity" kindref="compound">Periodicity</ref> &amp;</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_iMultiFab.cpp" line="615" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_iMultiFab.cpp" bodystart="615" bodyend="659"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a73fb53c873d555a7a3cc7b33e88a5f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -9243,7 +9302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFab.cpp" line="1397" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFab.cpp" bodystart="1397" bodyend="1405"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFab.cpp" line="1333" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFab.cpp" bodystart="1333" bodyend="1341"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ad60aac176908ba51373d63ca49bef063" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

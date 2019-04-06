@@ -15,6 +15,7 @@ var searchData=
   ['fabio',['fabio',['../classamrex_1_1FArrayBox.html#a7b3c6612330474e7db6e4f6ff9d4f380',1,'amrex::FArrayBox']]],
   ['face',['face',['../structamrex_1_1FabArrayBase_1_1FabComTag.html#a736f4b09115efedb46eb2ddcb802417f',1,'amrex::FabArrayBase::FabComTag::face()'],['../classamrex_1_1OrientationIter.html#a4a1d69b82d46e482d19ca15a5bb8a711',1,'amrex::OrientationIter::face()']]],
   ['fact_5fcrse_5fpatch',['fact_crse_patch',['../structamrex_1_1FabArrayBase_1_1FPinfo.html#a09b8fcc80fd25192f68c5ee368097317',1,'amrex::FabArrayBase::FPinfo']]],
+  ['factory',['factory',['../classamrex_1_1HypreNodeLap.html#a380f7d1b289a6802248ece2786b86565',1,'amrex::HypreNodeLap']]],
   ['faheadermap',['faHeaderMap',['../classamrex_1_1StateData.html#a60cd1a78a793b7a4ce54e70da0f0dd55',1,'amrex::StateData']]],
   ['faindex',['faIndex',['../structamrex_1_1VisMF_1_1FabReadLink.html#afdb4b80e717d79ddc293c138b190fb51',1,'amrex::VisMF::FabReadLink']]],
   ['fb_5fcross',['fb_cross',['../classamrex_1_1FabArray.html#a1de730376dd381a0e0aaf26cee0565b4',1,'amrex::FabArray']]],

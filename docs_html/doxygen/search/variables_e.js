@@ -24,6 +24,7 @@ var searchData=
   ['oserr',['oserr',['../namespaceamrex_1_1system.html#a7ad609f085f43ffe0ff1bce4d12efb8f',1,'amrex::system']]],
   ['osout',['osout',['../namespaceamrex_1_1system.html#a1a68bc2cdaf82ef2e9fa229a3ca8c978',1,'amrex::system']]],
   ['owner',['owner',['../structamrex__parmparse__module_1_1amrex__parmparse.html#ab9c4e4255bdd7cbfe4e9decb095d1bcc',1,'amrex_parmparse_module::amrex_parmparse']]],
+  ['owner_5fmask',['owner_mask',['../classamrex_1_1HypreNodeLap.html#ac8924539f89bd4ae28eb0df416235f4e',1,'amrex::HypreNodeLap']]],
   ['owner_5ftask',['owner_task',['../structamrex_1_1ForkJoin_1_1MFFork.html#aab173e1a49428a72e1099f8925dfeb56',1,'amrex::ForkJoin::MFFork']]],
   ['ownership',['ownership',['../classamrex_1_1FabArrayBase.html#ab4d5df57a6eaa1d785d131b059b43e18',1,'amrex::FabArrayBase']]]
 ];

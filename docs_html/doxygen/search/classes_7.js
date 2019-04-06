@@ -6,5 +6,6 @@ var searchData=
   ['hypre',['Hypre',['../classamrex_1_1Hypre.html',1,'amrex']]],
   ['hypreabeclap',['HypreABecLap',['../classamrex_1_1HypreABecLap.html',1,'amrex']]],
   ['hypreabeclap2',['HypreABecLap2',['../classamrex_1_1HypreABecLap2.html',1,'amrex']]],
-  ['hypreabeclap3',['HypreABecLap3',['../classamrex_1_1HypreABecLap3.html',1,'amrex']]]
+  ['hypreabeclap3',['HypreABecLap3',['../classamrex_1_1HypreABecLap3.html',1,'amrex']]],
+  ['hyprenodelap',['HypreNodeLap',['../classamrex_1_1HypreNodeLap.html',1,'amrex']]]
 ];

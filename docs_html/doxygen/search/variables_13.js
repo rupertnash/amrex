@@ -34,6 +34,7 @@ var searchData=
   ['timemin',['timeMin',['../structCommProfStats_1_1DataBlock.html#a0e6da7295f52dca99d4abf096c1bed81',1,'CommProfStats::DataBlock::timeMin()'],['../structRegionsProfStats_1_1DataBlock.html#acbca0639ad8b69e1f647d223eefc11da',1,'RegionsProfStats::DataBlock::timeMin()']]],
   ['timer',['timer',['../classamrex_1_1MLMG.html#a60c47161b03df19f998710df25c494fd',1,'amrex::MLMG']]],
   ['timertime',['timerTime',['../structCommProfStats_1_1DataBlock.html#a3e1dfbc9a0536493de4e0668b3955d15',1,'CommProfStats::DataBlock']]],
+  ['tmpsoln',['tmpsoln',['../classamrex_1_1HypreNodeLap.html#a0ff36d67bd4b146e140a63de29c435e7',1,'amrex::HypreNodeLap']]],
   ['topobox',['topoBox',['../AMReX__CommProfStats_8cpp.html#af68414f680b0fb5446013e51c08bc58b',1,'AMReX_CommProfStats.cpp']]],
   ['topomap',['TopoMap',['../classCommProfStats.html#abfb633bdb2ee1411565556f31c867a32',1,'CommProfStats']]],
   ['toproc',['toProc',['../structamrex_1_1FabArrayBase_1_1FabComTag.html#a198cef4a2b826e76ca0cb0f01b926193',1,'amrex::FabArrayBase::FabComTag::toProc()'],['../structCommProfStats_1_1SendRecvPair.html#a979ac419ef56bad0832b4118e99eda12',1,'CommProfStats::SendRecvPair::toProc()']]],
