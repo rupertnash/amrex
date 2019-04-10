@@ -47,6 +47,7 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
 //        if (true)
         if (Gpu::inLaunchRegion() || !is_thread_safe)
         {
+            BL_PROFILE_VAR("1Rank-CopyTags", onecopytags);
             LayoutData<Vector<FabCopyTag<FAB> > > loc_copy_tags(boxArray(),DistributionMap());
             for (int i = 0; i < N_loc; ++i)
             {
@@ -58,6 +59,8 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
                 loc_copy_tags[tag.dstIndex].push_back
                     ({this->fabHostPtr(tag.srcIndex), tag.dbox, tag.sbox.smallEnd()-tag.dbox.smallEnd()});
             }
+            BL_PROFILE_VAR_STOP(onecopytags);
+            BL_PROFILE_VAR("1Rank-GPUCopy",onegpucopy);
 #ifdef _OPENMP
 #pragma omp parallel if (Gpu::notInLaunchRegion())
 #endif
@@ -65,7 +68,6 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
             {
                 const auto& tags = loc_copy_tags[mfi];
                 auto dfab = this->array(mfi);
-                BL_PROFILE("FillBoundary-1MPIloop");
                 for (auto const & tag : tags)
                 {
                     auto const sfab = tag.sfab->array();
@@ -76,13 +78,14 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
                     });
                 }
             }
+            BL_PROFILE_VAR_STOP(onegpucopy);
         }
         else
         {
+            BL_PROFILE_VAR("1Rank-CPUCopy",onecpucopy);
 #ifdef _OPENMP
 #pragma omp parallel for
 #endif
-            BL_PROFILE("FillBoundary-1MPIloop");
             for (int i = 0; i < N_loc; ++i)
             {
                 const CopyComTag& tag = (*TheFB.m_LocTags)[i];
@@ -94,6 +97,7 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
                       FAB* dfab = &(get(tag.dstIndex));
                 dfab->copy(*sfab, tag.sbox, scomp, tag.dbox, scomp, ncomp);
             }
+            BL_PROFILE_VAR_STOP(onecpucopy);
         }
 
         return;
@@ -135,10 +139,10 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
 
     if (N_snds > 0)
     {
-        BL_PROFILE("SetupSends");
-
         fb_send_data.clear();
         fb_send_reqs.clear();
+
+        BL_PROFILE_VAR("ReserveSends", resvsends);
 
 	send_data.reserve(N_snds);
 	send_size.reserve(N_snds);
@@ -147,7 +151,11 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
 	send_cctc.reserve(N_snds);
         indv_send_size.reserve(N_snds);
 
+        BL_PROFILE_VAR_STOP(resvsends);
+
         std::size_t total_volume = 0;
+
+        BL_PROFILE_VAR("PrepSends", prepsends);
         for (auto const& kv : *TheFB.m_SndTags)
         {
             Vector<int> iss;                
@@ -182,7 +190,9 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
             send_cctc.push_back(&cctc);
             indv_send_size.push_back(std::move(iss));
         }
+        BL_PROFILE_VAR_STOP(prepsends);
 
+        BL_PROFILE_VAR("PrepSendPointers", prepptrs);
         if (total_volume > 0)
         {
             the_send_data = static_cast<char*>(amrex::The_FA_Arena()->alloc(total_volume));
@@ -194,12 +204,12 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
                 }
             }
         }
+        BL_PROFILE_VAR_STOP(prepptrs);
     }
 
     if (!FAB::preAllocatable())
     {
-        BL_PROFILE("PreAllocatable");
-
+        BL_PROFILE("SendMetaData");
         pre_reqs.resize(N_snds,MPI_REQUEST_NULL);
         for (int j=0; j<N_snds; ++j)
         {
@@ -217,8 +227,7 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
     fb_the_recv_data = nullptr;
 
     if (N_rcvs > 0) {
-        BL_PROFILE("PostRecv");
-
+        BL_PROFILE("PostRcvs");
         PostRcvs(*TheFB.m_RcvTags, fb_the_recv_data,
                  fb_recv_data, fb_recv_size, fb_recv_from, fb_recv_reqs,
                  scomp, ncomp, SeqNum, preSeqNum);
@@ -230,9 +239,9 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
     //
     if (N_snds > 0)
     {
-        BL_PROFILE("PostSends");
-
         bool is_thread_safe = FAB::isCopyOMPSafe();
+
+        BL_PROFILE_VAR("CopyToBuffer", tobuffer);
 #ifdef _OPENMP
 #pragma omp parallel if (is_thread_safe && Gpu::notInLaunchRegion())
 #endif
@@ -258,6 +267,10 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
             }
         }
 
+        BL_PROFILE_VAR_STOP(tobuffer);
+
+        BL_PROFILE_VAR("PostSends", postsends);
+
         int send_counter = 0;
         while (send_counter < N_snds)
         {
@@ -282,6 +295,9 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
 
             ++send_counter;
 	}
+
+        BL_PROFILE_VAR_STOP(postsends);
+
     }
 
     FillBoundary_test();
@@ -290,11 +306,13 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
     // Do the local work.  Hope for a bit of communication/computation overlap.
     //
     {
-        BL_PROFILE("LocalWork");
+
 
         bool is_thread_safe = FAB::isCopyOMPSafe() && TheFB.m_threadsafe_loc;
         if (Gpu::inLaunchRegion() || !is_thread_safe)
         {
+            BL_PROFILE_VAR("CopyLocalTags", copylocaltags);
+
             LayoutData<Vector<FabCopyTag<FAB> > > loc_copy_tags(boxArray(),DistributionMap());
             for (int i = 0; i < N_locs; ++i)
             {
@@ -310,7 +328,11 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
                 }
             }
 
+            BL_PROFILE_VAR_STOP(copylocaltags);
+
             FillBoundary_test();
+
+            BL_PROFILE_VAR("GPUCopy", gpucopy);
 
 #ifdef _OPENMP
 #pragma omp parallel if (Gpu::notInLaunchRegion())
@@ -334,9 +356,13 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
                     }
                 }
             }
+
+            BL_PROFILE_VAR_STOP(gpucopy);
         }
         else
         {
+            BL_PROFILE_VAR("CPUCopy", cpucopy);
+
 #ifdef _OPENMP
 #pragma omp parallel for
 #endif
@@ -354,6 +380,8 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
                     dfab->copy(*sfab, tag.sbox, scomp, tag.dbox, scomp, ncomp);
                 }
 	    }
+
+            BL_PROFILE_VAR_STOP(cpucopy);
 	}
     }
 
@@ -383,7 +411,8 @@ FabArray<FAB>::FillBoundary_finish ()
     LayoutData<Vector<VoidCopyTag> > recv_copy_tags;
     if (N_rcvs > 0)
     {
-    BL_PROFILE("Recv_Tags");
+        BL_PROFILE_VAR("CopyRecvTags", copyrecvtags);
+
 	for (int k = 0; k < N_rcvs; k++) 
 	{
             if (fb_recv_size[k] > 0)
@@ -411,9 +440,13 @@ FabArray<FAB>::FillBoundary_finish ()
                 }
             }
         }
+
+        BL_PROFILE_VAR_STOP(copyrecvtags);
     }
 
     int actual_n_rcvs = N_rcvs - std::count(fb_recv_data.begin(), fb_recv_data.end(), nullptr);
+
+    BL_PROFILE_VAR("WaitForMPI",waitformpi);
 
     if (actual_n_rcvs > 0) {
         ParallelDescriptor::Waitall(fb_recv_reqs, fb_recv_stat);
@@ -425,12 +458,14 @@ FabArray<FAB>::FillBoundary_finish ()
 #endif
     }
 
+    BL_PROFILE_VAR_STOP(waitformpi);
+
     if (N_rcvs > 0)
     {
-        BL_PROFILE("PostCopyFromMem");
-
         if (!recv_copy_tags.empty())
         {
+            BL_PROFILE_VAR("CopyFromBufferGPU", frombuffergpu);
+
 #ifdef _OPENMP
 #pragma omp parallel if (Gpu::notInLaunchRegion())
 #endif
@@ -449,9 +484,13 @@ FabArray<FAB>::FillBoundary_finish ()
                     });
                 }
             }
+
+            BL_PROFILE_VAR_STOP(frombuffergpu);
         }
         else
         {
+            BL_PROFILE_VAR("CopyFromBufferCPU", frombuffercpu);
+
 #ifdef _OPENMP
 #pragma omp parallel for
 #endif
@@ -473,21 +512,29 @@ FabArray<FAB>::FillBoundary_finish ()
                     BL_ASSERT(dptr == fb_recv_data[k] + fb_recv_size[k]);
                 }
             }
+
+            BL_PROFILE_VAR_STOP(frombuffercpu);
         }
 
         if (fb_the_recv_data)
         {
+            BL_PROFILE_VAR("CleanRecv", cleanrecv);
 	    amrex::The_FA_Arena()->free(fb_the_recv_data);
             fb_the_recv_data = nullptr;
+            BL_PROFILE_VAR_STOP(cleanrecv);
 	}
+
     }
 
     if (N_snds > 0) {
-        BL_PROFILE("FinalWaitForSends");
+        BL_PROFILE_VAR("CleanSend", cleansend);
+
         Vector<MPI_Status> stats;
         FabArrayBase::WaitForAsyncSends(N_snds,fb_send_reqs,fb_send_data,stats);
         amrex::The_FA_Arena()->free(fb_the_send_data);
         fb_the_send_data = nullptr;
+
+        BL_PROFILE_VAR_STOP(cleansend);
     }
 
 #endif // MPI
