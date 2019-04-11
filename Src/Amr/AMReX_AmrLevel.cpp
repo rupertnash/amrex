@@ -320,12 +320,16 @@ AmrLevel::writePlotFile (const std::string& dir,
 	}
     }
 
+    amrex::prefetchToHost(plotMF);
+
     //
     // Use the Full pathname when naming the MultiFab.
     //
     std::string TheFullPath = FullPath;
     TheFullPath += BaseName;
     VisMF::Write(plotMF,TheFullPath,how,true);
+
+    amrex::prefetchToDevice(plotMF);
 
     levelDirectoryCreated = false;  // ---- now that the plotfile is finished
 }
@@ -666,7 +670,7 @@ FillPatchIterator::FillPatchIterator (AmrLevel& amrlevel,
 
     Initialize(boxGrow,time,idx,scomp,ncomp);
 
-#if BL_USE_TEAM
+#ifdef BL_USE_TEAM
     ParallelDescriptor::MyTeam().MemoryBarrier();
 #endif
 }
@@ -1687,7 +1691,7 @@ AmrLevel::derive (const std::string& name, Real time, int ngrow)
 				 AMREX_BCREC_3D(bcr),
 				 &level,&grid_no);
 	    } else {
-		amrex::Error("AmeLevel::derive: no function available");
+		amrex::Error("AmrLevel::derive: no function available");
 	    }
         }
 #else
@@ -1725,7 +1729,7 @@ AmrLevel::derive (const std::string& name, Real time, int ngrow)
 				 AMREX_BCREC_3D(bcr),
 				 &level,&grid_no);
 	    } else {
-		amrex::Error("AmeLevel::derive: no function available");
+		amrex::Error("AmrLevel::derive: no function available");
 	    }
         }
 #endif
@@ -1836,7 +1840,7 @@ AmrLevel::derive (const std::string& name, Real time, MultiFab& mf, int dcomp)
 				 AMREX_BCREC_3D(bcr),
 				 &level,&idx);
 	    } else {
-		amrex::Error("AmeLevel::derive: no function available");
+		amrex::Error("AmrLevel::derive: no function available");
 	    }
         }
 #else
@@ -1874,7 +1878,7 @@ AmrLevel::derive (const std::string& name, Real time, MultiFab& mf, int dcomp)
 				 AMREX_BCREC_3D(bcr),
 				 &level,&idx);
 	    } else {
-		amrex::Error("AmeLevel::derive: no function available");
+		amrex::Error("AmrLevel::derive: no function available");
 	    }
         }
 #endif
@@ -3311,7 +3315,7 @@ FillPatchIterator::FillPatchIterator (AmrLevel& amrlevel,
 
     //InitializePush(boxGrow,time,index,scomp,ncomp,f,tid);
 
-#if BL_USE_TEAM
+#ifdef BL_USE_TEAM
     ParallelDescriptor::MyTeam().MemoryBarrier();
 #endif
 

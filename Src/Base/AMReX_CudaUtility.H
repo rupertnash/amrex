@@ -10,6 +10,7 @@
 #include <cmath>
 #ifdef AMREX_USE_CUDA
 #include <cuda.h>
+#include <curand_kernel.h>
 #endif
 
 namespace amrex {
@@ -344,7 +345,7 @@ namespace Cuda {
 
 } // namespace Cuda
 
-#if AMREX_USE_CUDA
+#ifdef AMREX_USE_CUDA
 std::ostream& operator<< (std::ostream& os, const dim3& d);
 #endif
 

@@ -61,6 +61,17 @@ Device::Initialize ()
     pp.query("v", verbose);
     pp.query("verbose", verbose);
 
+    if (amrex::Verbose()) {
+        amrex::Print() << "Initializing CUDA...\n";
+    }
+
+    // XL CUDA Fortran support needs to be initialized
+    // before any CUDA API calls.
+
+#if (defined(__ibmxl__) && !defined(BL_NO_FORT))
+    __xlcuf_init();
+#endif
+
     // Count the number of CUDA visible devices.
 
     int cuda_device_count;
@@ -464,7 +475,7 @@ Device::grid_stride_threads_and_blocks (dim3& numBlocks, dim3& numThreads) noexc
 
 #if (AMREX_SPACEDIM == 1)
 
-    numThreads.x = std::min(static_cast<unsigned>(device_prop.maxThreadsDim[0]), AMREX_CUDA_MAX_THREADS);
+    numThreads.x = std::min(device_prop.maxThreadsDim[0], AMREX_CUDA_MAX_THREADS);
     numThreads.x = std::max(numThreads.x, numThreadsMin.x);
     numThreads.y = 1;
     numThreads.z = 1;
