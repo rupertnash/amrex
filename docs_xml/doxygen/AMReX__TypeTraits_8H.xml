@@ -3437,7 +3437,7 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>workaround<sp/>missing<sp/>&quot;is_trivially_copyable&quot;<sp/>in<sp/>g++<sp/>&lt;<sp/>5.0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__GNUG__<sp/>&amp;&amp;<sp/>__GNUC__<sp/>&lt;<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUG__)<sp/>&amp;&amp;<sp/>__GNUC__<sp/>&lt;<sp/>5</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_IS_TRIVIALLY_COPYABLE(T)<sp/>__has_trivial_copy(T)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="AMReX__TypeTraits_8H_1adc50ea9983407ec975c6c594c92bae5d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_IS_TRIVIALLY_COPYABLE(T)<sp/>std::is_trivially_copyable&lt;T&gt;::value</highlight><highlight class="normal"></highlight></codeline>

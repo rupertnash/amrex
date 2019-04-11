@@ -1516,7 +1516,7 @@
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classamrex_1_1MLNodeLaplacian_1afcfc5edcfcf4a2f0010991498a99f72d" kindref="member">m_masks_built</ref>)<sp/><ref refid="classamrex_1_1MLNodeLaplacian_1a3e4e47a49b8cf3c77996e16c7d46f308" kindref="member">buildMasks</ref>();</highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!m_integral_built)<sp/>buildIntegral();</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight></codeline>
@@ -1737,7 +1737,7 @@
 <codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="365"><highlight class="normal"></highlight></codeline>
-<codeline lineno="366"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>to<sp/>zero<sp/>out<sp/>the<sp/>RHS<sp/>on<sp/>any<sp/>nodes<sp/>completely<sp/>surrounded<sp/>by<sp/>covered<sp/>cells</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a3baedaa2c05dc91fb1b9b36dc61e128d" kindref="member">amrex::EB_set_covered</ref>((*rhs[ilev]),0.0);</highlight></codeline>
 <codeline lineno="369"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
@@ -1754,7 +1754,7 @@
 <codeline lineno="380"><highlight class="normal"></highlight></codeline>
 <codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classamrex_1_1MLNodeLaplacian_1afcfc5edcfcf4a2f0010991498a99f72d" kindref="member">m_masks_built</ref>)<sp/><ref refid="classamrex_1_1MLNodeLaplacian_1a3e4e47a49b8cf3c77996e16c7d46f308" kindref="member">buildMasks</ref>();</highlight></codeline>
 <codeline lineno="382"><highlight class="normal"></highlight></codeline>
-<codeline lineno="383"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!m_integral_built)<sp/>buildIntegral();</highlight></codeline>
 <codeline lineno="385"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="386"><highlight class="normal"></highlight></codeline>
@@ -3623,7 +3623,7 @@
 <codeline lineno="2249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1MLLinOp_1a43d529fe1b438af26fbc4a2e9c935549" kindref="member">m_lobc</ref>.data(),<sp/><ref refid="classamrex_1_1MLLinOp_1ab46e1fbe510eaa6df03a326e2b156eca" kindref="member">m_hibc</ref>.data());</highlight></codeline>
 <codeline lineno="2250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="2251"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="2252"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2252"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_EB</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>to<sp/>zero<sp/>out<sp/>the<sp/>residual<sp/>on<sp/>any<sp/>nodes<sp/>completely<sp/>surrounded<sp/>by<sp/>covered<sp/>cells</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a3baedaa2c05dc91fb1b9b36dc61e128d" kindref="member">amrex::EB_set_covered</ref>(res,0.0);</highlight></codeline>
 <codeline lineno="2255"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>

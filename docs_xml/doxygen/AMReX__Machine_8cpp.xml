@@ -651,7 +651,7 @@
 <codeline lineno="58"><highlight class="normal">std::string<sp/>get_mpi_processor_name<sp/>()</highlight></codeline>
 <codeline lineno="59"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>result;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BL_USE_MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BL_USE_MPI</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="AMReX__ccse-mpi_8H_1aa84c3a13b72956835f87a63eb208fc14" kindref="member">MPI_MAX_PROCESSOR_NAME</ref>];</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Get_processor_name(name,<sp/>&amp;len);</highlight></codeline>
@@ -969,7 +969,7 @@
 <codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(flag_verbose)<sp/>{</highlight></codeline>
 <codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Got<sp/>node<sp/>ID<sp/>from<sp/>SLURM_TOPOLOGY_ADDR:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>result<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BL_USE_MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BL_USE_MPI</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mpi_proc_name<sp/>=<sp/>get_mpi_processor_name();</highlight></codeline>
 <codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;MPI_Get_processor_name:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>mpi_proc_name<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
