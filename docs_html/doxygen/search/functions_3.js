@@ -138,7 +138,7 @@ var searchData=
   ['compsyncresidualfine',['compSyncResidualFine',['../classamrex_1_1MLNodeLaplacian.html#a44e85cef12a5b759e5a52e64cc9f2c3d',1,'amrex::MLNodeLaplacian']]],
   ['compute_5fdphidn_5f2d',['compute_dphidn_2d',['../namespaceamrex__mlebabeclap__2d__module.html#a15e6506d38f15bc7acef5a5fc87b8764',1,'amrex_mlebabeclap_2d_module']]],
   ['compute_5fdphidn_5f2d_5fho',['compute_dphidn_2d_ho',['../namespaceamrex__mlebabeclap__2d__module.html#a521339dd303a03b44f9e729188d70bd0',1,'amrex_mlebabeclap_2d_module']]],
-  ['compute_5fdphidn_5f3d',['compute_dphidn_3d',['../namespaceamrex__mlebabeclap__3d__module.html#ac4aee32eefcdf56e21cb67321785ff91',1,'amrex_mlebabeclap_3d_module']]],
+  ['compute_5fdphidn_5f3d',['compute_dphidn_3d',['../namespaceamrex__mlebabeclap__3d__module.html#a135a039920b71271ff6f3f2e71a1ae0b',1,'amrex_mlebabeclap_3d_module']]],
   ['compute_5fdphidn_5f3d_5fho',['compute_dphidn_3d_ho',['../namespaceamrex__mlebabeclap__3d__module.html#a0ee32bacdfdcba1c9b2e41fba6057c54',1,'amrex_mlebabeclap_3d_module']]],
   ['compute_5fintegrals',['compute_integrals',['../namespaceamrex.html#a917f25f6d844509145da05bf23c5dc29',1,'amrex']]],
   ['computecost',['computeCost',['../namespaceamrex_1_1loadBalanceKD.html#ad33644c42ce9b13ed99874a358d40bd4',1,'amrex::loadBalanceKD']]],
