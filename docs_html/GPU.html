@@ -359,7 +359,20 @@ can run it and that will generate results like:</p>
 </div>
 <div class="section" id="building-with-cmake">
 <h2>Building with CMake<a class="headerlink" href="#building-with-cmake" title="Permalink to this headline">¶</a></h2>
-<p>CMake is currently unavailable when building with GPUs.</p>
+<p>To build AMReX with GPU support in CMake, add <code class="docutils literal notranslate"><span class="pre">ENABLE_CUDA=YES</span></code> to the
+<code class="docutils literal notranslate"><span class="pre">cmake</span></code> invocation. By default, CMake will try to determine which GPU
+architecture is supported by the system. If more than one is found, CMake
+will build for all of them. This will generally results in a larger library.
+If autodetection fails, a set of “common” architectures is assumed.
+You can specify the target architecture to build for via the configuration option
+<code class="docutils literal notranslate"><span class="pre">-DCUDA_ARCH=&lt;target-achitecture&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;target-architecture&gt;</span></code> can be either
+the name of the NVIDIA GPU, i.e. <code class="docutils literal notranslate"><span class="pre">Turing</span></code>, <code class="docutils literal notranslate"><span class="pre">Volta</span></code>, <code class="docutils literal notranslate"><span class="pre">Pascal</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> , or its
+version number, i.e. <code class="docutils literal notranslate"><span class="pre">10.0</span></code>, <code class="docutils literal notranslate"><span class="pre">9.0</span></code>, <code class="docutils literal notranslate"><span class="pre">8.0</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> .
+For example, on Cori GPUs you can specify the architecture as follows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cmake [options] -DENABLE_CUDA=yes -DCUDA_ARCH=Volta /path/to/amrex/source</span>
+</pre></div>
+</div>
+<p>Note that AMReX only supports GPU architectures with version number <code class="docutils literal notranslate"><span class="pre">6.0</span></code> or higher.</p>
 </div>
 </div>
 <div class="section" id="gpu-namespace-and-macros">
