@@ -850,6 +850,9 @@ private:
     int num_real_comm_comps, num_int_comm_comps;
     Vector<ParticleLevel> m_particles;
     Vector<std::unique_ptr<MultiFab> > m_dummy_mf;
+
+    std::map<std::string, Vector<std::map<std::pair<int, int>, Vector<Real> > > > m_runtime_rdata;
+    std::map<std::string, Vector<std::map<std::pair<int, int>, Vector<int > > > > m_runtime_idata;    
 };
 
 
