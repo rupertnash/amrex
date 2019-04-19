@@ -245,7 +245,7 @@
 <codeline lineno="235"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructInt&gt;</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="237"><highlight class="normal">NeighborParticleContainer&lt;NStructReal,<sp/>NStructInt&gt;::</highlight></codeline>
-<codeline lineno="238"><highlight class="normal">fillNeighborsGPU()</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">fillNeighborsGPU<sp/>()</highlight></codeline>
 <codeline lineno="239"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLProfiler_8H_1a548fbd9b2cd72a927f463003f4adb0b1" kindref="member">BL_PROFILE</ref>(</highlight><highlight class="stringliteral">&quot;NeighborParticleContainer&lt;NStructReal,<sp/>NStructInt&gt;::fillNeighbors&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="241"><highlight class="normal"></highlight></codeline>
@@ -259,11 +259,11 @@
 <codeline lineno="249"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructInt&gt;</highlight></codeline>
 <codeline lineno="250"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="251"><highlight class="normal">NeighborParticleContainer&lt;NStructReal,<sp/>NStructInt&gt;::</highlight></codeline>
-<codeline lineno="252"><highlight class="normal">updateNeighborsGPU()</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">updateNeighborsGPU<sp/>()</highlight></codeline>
 <codeline lineno="253"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLProfiler_8H_1a548fbd9b2cd72a927f463003f4adb0b1" kindref="member">BL_PROFILE</ref>(</highlight><highlight class="stringliteral">&quot;NeighborParticleContainer&lt;NStructReal,<sp/>NStructInt&gt;::updateNeighborsGPU&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="255"><highlight class="normal"></highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1abd471ebf6086189835e778f06c053833" kindref="member">AMREX_ALWAYS_ASSERT</ref>(this-&gt;numLevels()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(this-&gt;numLevels()<sp/>==<sp/>1);</highlight></codeline>
 <codeline lineno="257"><highlight class="normal"></highlight></codeline>
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>clearNeighbors();</highlight></codeline>
 <codeline lineno="259"><highlight class="normal"></highlight></codeline>
