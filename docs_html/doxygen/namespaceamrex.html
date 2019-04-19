@@ -722,9 +722,9 @@ Typedefs</h2></td></tr>
 <tr class="separator:ab0cdf132a72bb586fa96bbdc53a19149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1be4bb2ad60b6e47ba5cc3b7d001e79"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ad1be4bb2ad60b6e47ba5cc3b7d001e79">UserFillBox</a>) (<a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;bx, <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &amp;dest, const int dcomp, const int numcomp, <a class="el" href="structamrex_1_1GeometryData.html">GeometryData</a> const &amp;geom, const Real time, const <a class="el" href="classamrex_1_1BCRec.html">BCRec</a> *bcr, const int bcomp, const int orig_comp)</td></tr>
 <tr class="separator:ad1be4bb2ad60b6e47ba5cc3b7d001e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62563da3fe4e55c8bba5b5e1aadf2495"><td class="memTemplParams" colspan="2">template&lt;class T , std::size_t N&gt; </td></tr>
-<tr class="memitem:a62563da3fe4e55c8bba5b5e1aadf2495"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a62563da3fe4e55c8bba5b5e1aadf2495">Tuple</a> = std::array&lt; T, N &gt;</td></tr>
-<tr class="separator:a62563da3fe4e55c8bba5b5e1aadf2495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00604a127d1bcc6545bea88e8aa906c8"><td class="memTemplParams" colspan="2">template&lt;class... Ts&gt; </td></tr>
+<tr class="memitem:a00604a127d1bcc6545bea88e8aa906c8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a00604a127d1bcc6545bea88e8aa906c8">Tuple</a> = std::tuple&lt; Ts... &gt;</td></tr>
+<tr class="separator:a00604a127d1bcc6545bea88e8aa906c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8690d4c6386d001b328b07257fe628a0"><td class="memTemplParams" colspan="2">template&lt;bool B, class T  = void&gt; </td></tr>
 <tr class="memitem:a8690d4c6386d001b328b07257fe628a0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a8690d4c6386d001b328b07257fe628a0">EnableIf_t</a> = typename std::enable_if&lt; B, T &gt;::type</td></tr>
 <tr class="separator:a8690d4c6386d001b328b07257fe628a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2685,14 +2685,14 @@ template&lt;std::size_t N&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a62563da3fe4e55c8bba5b5e1aadf2495"></a>
+<a class="anchor" id="a00604a127d1bcc6545bea88e8aa906c8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , std::size_t N&gt; </div>
+template&lt;class... Ts&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespaceamrex.html#a62563da3fe4e55c8bba5b5e1aadf2495">amrex::Tuple</a> = typedef std::array&lt;T,N&gt;</td>
+          <td class="memname">using <a class="el" href="namespaceamrex.html#a00604a127d1bcc6545bea88e8aa906c8">amrex::Tuple</a> = typedef std::tuple&lt;Ts...&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
