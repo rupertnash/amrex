@@ -4904,7 +4904,7 @@
 <codeline lineno="3272"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3273"><highlight class="normal">Amr::ErrorEst<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lev,<sp/><ref refid="classamrex_1_1TagBoxArray" kindref="compound">TagBoxArray</ref>&amp;<sp/>tags,<sp/>Real<sp/>time,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngrow)</highlight></codeline>
 <codeline lineno="3274"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="3275"><highlight class="normal"><sp/><sp/><sp/><sp/>amr_level[lev]-&gt;errorEst(tags,TagBox::CLEAR,TagBox::SET,time,<sp/>n_error_buf[lev],ngrow);</highlight></codeline>
+<codeline lineno="3275"><highlight class="normal"><sp/><sp/><sp/><sp/>amr_level[lev]-&gt;errorEst(tags,TagBox::CLEAR,TagBox::SET,time,<sp/>n_error_buf[lev][0],<sp/>ngrow);</highlight></codeline>
 <codeline lineno="3276"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="3277"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3278"><highlight class="normal"><ref refid="classamrex_1_1BoxArray" kindref="compound">BoxArray</ref></highlight></codeline>

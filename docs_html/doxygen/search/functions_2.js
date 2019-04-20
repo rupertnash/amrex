@@ -109,7 +109,7 @@ var searchData=
   ['broadcaststringarray',['BroadcastStringArray',['../namespaceamrex.html#a1bfd620fc96f18d04313d70ccca85bfb',1,'amrex']]],
   ['bskewtimesdone',['bSkewTimesDone',['../AMReX__CommProfStats_8cpp.html#ad6e9a97e80532d3b7686c5096087c06e',1,'AMReX_CommProfStats.cpp']]],
   ['btopofabinited',['bTopoFabInited',['../AMReX__CommProfStats_8cpp.html#ae404b1aaff5433c3067ba025a8cffc52',1,'AMReX_CommProfStats.cpp']]],
-  ['buffer',['buffer',['../classamrex_1_1TagBox.html#a68b0639c00d7ed3f04cfebd6642a668e',1,'amrex::TagBox::buffer()'],['../classamrex_1_1TagBoxArray.html#a86171fa502b627476702d33a0e7adb3c',1,'amrex::TagBoxArray::buffer()']]],
+  ['buffer',['buffer',['../classamrex_1_1TagBox.html#aa6324edaf14ada2c319e1a5c92062331',1,'amrex::TagBox::buffer()'],['../classamrex_1_1TagBoxArray.html#abb7286cc2647bb4359101e4fafae159d',1,'amrex::TagBoxArray::buffer()']]],
   ['build',['build',['../classamrex_1_1NeighborList.html#a8c98d65d5c18bd490918e241d4f73ed7',1,'amrex::NeighborList::build()'],['../namespaceamrex_1_1EB2.html#a6d2f867ae0ec004f8b26fb0346086b1f',1,'amrex::EB2::Build(const Geometry &amp;geom, int required_coarsening_level, int max_coarsening_level, int ngrow)'],['../namespaceamrex_1_1EB2.html#a8530ce06d34d311dcf665910e91189bb',1,'amrex::EB2::Build(const G &amp;gshop, const Geometry &amp;geom, int required_coarsening_level, int max_coarsening_level, int ngrow=4)']]],
   ['buildbc',['buildBC',['../classamrex_1_1DeriveRec.html#a3b07b7cec32b864ae58f09942234421e',1,'amrex::DeriveRec']]],
   ['buildcellflag',['buildCellFlag',['../classamrex_1_1EB2_1_1Level.html#adbbdc98f272b71363491d9a348e1f92a',1,'amrex::EB2::Level']]],
