@@ -392,111 +392,124 @@
     <detaileddescription>
 <para>Because it does not own any floating point data, <ref refid="classamrex_1_1AmrCore" kindref="compound">AmrCore</ref> used virtual functions to allocate, initialize and delete data. It also requires the derived class to tag cells for refinement. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="228">
+      <node id="234">
         <label>amrex::LSCoreBase</label>
         <link refid="classamrex_1_1LSCoreBase"/>
-        <childnode refid="225" relation="public-inheritance">
+        <childnode refid="231" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="225">
+      <node id="231">
         <label>amrex::AmrCore</label>
         <link refid="classamrex_1_1AmrCore"/>
-        <childnode refid="226" relation="public-inheritance">
+        <childnode refid="232" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="227">
+      <node id="233">
         <label>amrex::Amr</label>
         <link refid="classamrex_1_1Amr"/>
-        <childnode refid="225" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="226">
-        <label>amrex::AmrMesh</label>
-        <link refid="classamrex_1_1AmrMesh"/>
-      </node>
-      <node id="229">
-        <label>amrex::LSCore&lt; F &gt;</label>
-        <link refid="classamrex_1_1LSCore"/>
-        <childnode refid="228" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="237">
-        <label>std::vector&lt; amrex::BoxArray, std::allocator&lt; amrex::BoxArray &gt; &gt;</label>
-      </node>
-      <node id="242">
-        <label>Real</label>
-      </node>
-      <node id="241">
-        <label>std::vector&lt; amrex::Geometry, std::allocator&lt; amrex::Geometry &gt; &gt;</label>
-      </node>
-      <node id="230">
-        <label>amrex::AmrCore</label>
-        <link refid="classamrex_1_1AmrCore"/>
         <childnode refid="231" relation="public-inheritance">
         </childnode>
       </node>
       <node id="232">
-        <label>amrex::Vector&lt; amrex::DistributionMapping &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
-        <childnode refid="233" relation="public-inheritance">
+        <label>amrex::AmrMesh</label>
+        <link refid="classamrex_1_1AmrMesh"/>
+      </node>
+      <node id="235">
+        <label>amrex::LSCore&lt; F &gt;</label>
+        <link refid="classamrex_1_1LSCore"/>
+        <childnode refid="234" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="234">
-        <label>amrex::Vector&lt; int &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
-        <childnode refid="235" relation="public-inheritance">
-        </childnode>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="243">
+        <label>std::vector&lt; amrex::BoxArray, std::allocator&lt; amrex::BoxArray &gt; &gt;</label>
+      </node>
+      <node id="249">
+        <label>Real</label>
+      </node>
+      <node id="248">
+        <label>std::vector&lt; amrex::Geometry, std::allocator&lt; amrex::Geometry &gt; &gt;</label>
       </node>
       <node id="236">
-        <label>amrex::Vector&lt; amrex::BoxArray &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
+        <label>amrex::AmrCore</label>
+        <link refid="classamrex_1_1AmrCore"/>
         <childnode refid="237" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="233">
-        <label>std::vector&lt; amrex::DistributionMapping, std::allocator&lt; amrex::DistributionMapping &gt; &gt;</label>
+        <childnode refid="246" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
       </node>
       <node id="238">
-        <label>amrex::Vector&lt; amrex::IntVect &gt;</label>
+        <label>amrex::Vector&lt; amrex::DistributionMapping &gt;</label>
         <link refid="classamrex_1_1Vector"/>
         <childnode refid="239" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="235">
-        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
-      </node>
-      <node id="239">
-        <label>std::vector&lt; amrex::IntVect, std::allocator&lt; amrex::IntVect &gt; &gt;</label>
-      </node>
       <node id="240">
-        <label>amrex::Vector&lt; amrex::Geometry &gt;</label>
+        <label>amrex::Vector&lt; int &gt;</label>
         <link refid="classamrex_1_1Vector"/>
         <childnode refid="241" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="231">
+      <node id="242">
+        <label>amrex::Vector&lt; amrex::BoxArray &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="243" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>std::vector&lt; amrex::DistributionMapping, std::allocator&lt; amrex::DistributionMapping &gt; &gt;</label>
+      </node>
+      <node id="246">
+        <label>int</label>
+      </node>
+      <node id="244">
+        <label>amrex::Vector&lt; amrex::IntVect &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
+      </node>
+      <node id="245">
+        <label>std::vector&lt; amrex::IntVect, std::allocator&lt; amrex::IntVect &gt; &gt;</label>
+      </node>
+      <node id="247">
+        <label>amrex::Vector&lt; amrex::Geometry &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="237">
         <label>amrex::AmrMesh</label>
         <link refid="classamrex_1_1AmrMesh"/>
-        <childnode refid="232" relation="usage">
+        <childnode refid="238" relation="usage">
           <edgelabel>dmap</edgelabel>
         </childnode>
-        <childnode refid="234" relation="usage">
+        <childnode refid="240" relation="usage">
           <edgelabel>n_error_buf</edgelabel>
         </childnode>
-        <childnode refid="236" relation="usage">
+        <childnode refid="242" relation="usage">
           <edgelabel>grids</edgelabel>
         </childnode>
-        <childnode refid="238" relation="usage">
+        <childnode refid="244" relation="usage">
           <edgelabel>blocking_factor</edgelabel>
           <edgelabel>max_grid_size</edgelabel>
           <edgelabel>ref_ratio</edgelabel>
         </childnode>
-        <childnode refid="240" relation="usage">
+        <childnode refid="246" relation="usage">
+          <edgelabel>max_level</edgelabel>
+          <edgelabel>use_fixed_upto_level</edgelabel>
+          <edgelabel>verbose</edgelabel>
+          <edgelabel>n_proper</edgelabel>
+          <edgelabel>finest_level</edgelabel>
+        </childnode>
+        <childnode refid="247" relation="usage">
           <edgelabel>geom</edgelabel>
         </childnode>
-        <childnode refid="242" relation="usage">
+        <childnode refid="249" relation="usage">
           <edgelabel>grid_eff</edgelabel>
         </childnode>
       </node>

@@ -510,23 +510,33 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="5431">
+      <node id="5624">
         <label>amrex::ArrayOfStructs&lt; NStructReal, NStructInt &gt;</label>
         <link refid="classamrex_1_1ArrayOfStructs"/>
+        <childnode refid="5625" relation="usage">
+          <edgelabel>m_num_neighbor_particles</edgelabel>
+          <edgelabel>SizeInReal</edgelabel>
+        </childnode>
       </node>
-      <node id="5430">
+      <node id="5623">
         <label>amrex::ParticleTile&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;</label>
         <link refid="structamrex_1_1ParticleTile"/>
-        <childnode refid="5431" relation="usage">
+        <childnode refid="5624" relation="usage">
           <edgelabel>m_aos_tile</edgelabel>
         </childnode>
-        <childnode refid="5432" relation="usage">
+        <childnode refid="5626" relation="usage">
           <edgelabel>m_soa_tile</edgelabel>
         </childnode>
       </node>
-      <node id="5432">
+      <node id="5626">
         <label>amrex::StructOfArrays&lt; NArrayReal, NArrayInt &gt;</label>
         <link refid="structamrex_1_1StructOfArrays"/>
+        <childnode refid="5625" relation="usage">
+          <edgelabel>m_num_neighbor_particles</edgelabel>
+        </childnode>
+      </node>
+      <node id="5625">
+        <label>int</label>
       </node>
     </collaborationgraph>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" line="24" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleTile.H" bodystart="23" bodyend="172"/>

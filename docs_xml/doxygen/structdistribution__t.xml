@@ -166,20 +166,36 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="1141">
+      <node id="1209">
         <label>process_topology_t</label>
         <link refid="structprocess__topology__t"/>
+        <childnode refid="1210" relation="usage">
+          <edgelabel>cart</edgelabel>
+          <edgelabel>period</edgelabel>
+          <edgelabel>n</edgelabel>
+          <edgelabel>self</edgelabel>
+          <edgelabel>nproc</edgelabel>
+        </childnode>
       </node>
-      <node id="1140">
+      <node id="1208">
         <label>distribution_t</label>
         <link refid="structdistribution__t"/>
-        <childnode refid="1141" relation="usage">
+        <childnode refid="1209" relation="usage">
           <edgelabel>process_topology_2_x</edgelabel>
           <edgelabel>process_topology_2_y</edgelabel>
           <edgelabel>process_topology_2_z</edgelabel>
           <edgelabel>process_topology_1</edgelabel>
           <edgelabel>process_topology_3</edgelabel>
         </childnode>
+        <childnode refid="1210" relation="usage">
+          <edgelabel>rankmap</edgelabel>
+          <edgelabel>n</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>gridmap</edgelabel>
+        </childnode>
+      </node>
+      <node id="1210">
+        <label>int</label>
       </node>
     </collaborationgraph>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Extern/SWFFT/distribution_c.h" line="93" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Extern/SWFFT/distribution_c.h" bodystart="93" bodyend="106"/>

@@ -52,6 +52,7 @@ var searchData=
   ['amrex_5fparalleldescriptor_5fmodule',['amrex_paralleldescriptor_module',['../namespaceamrex__paralleldescriptor__module.html',1,'']]],
   ['amrex_5fparmparse_5fmodule',['amrex_parmparse_module',['../namespaceamrex__parmparse__module.html',1,'']]],
   ['amrex_5fparticle_5fmodule',['amrex_particle_module',['../namespaceamrex__particle__module.html',1,'']]],
+  ['amrex_5fpetsc_5ffort_5fmodule',['amrex_petsc_fort_module',['../namespaceamrex__petsc__fort__module.html',1,'']]],
   ['amrex_5fstring_5fmodule',['amrex_string_module',['../namespaceamrex__string__module.html',1,'']]],
   ['amrvis',['Amrvis',['../namespaceamrex_1_1Amrvis.html',1,'amrex']]],
   ['arkode_5finterface',['arkode_interface',['../namespacearkode__interface.html',1,'']]],

@@ -246,33 +246,42 @@
     <detaileddescription>
 <para>Base class for coupling to in situ. implements initialze and finalize derived classes implement an update method. see <ref refid="classamrex_1_1AmrInSituBridge" kindref="compound">AmrInSituBridge</ref> and <ref refid="classamrex_1_1AmrMeshInSituBridge" kindref="compound">AmrMeshInSituBridge</ref>. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="3382">
+      <node id="3506">
         <label>amrex::InSituBridge</label>
         <link refid="classamrex_1_1InSituBridge"/>
       </node>
-      <node id="3384">
+      <node id="3508">
         <label>amrex::AmrMeshInSituBridge</label>
         <link refid="classamrex_1_1AmrMeshInSituBridge"/>
-        <childnode refid="3382" relation="public-inheritance">
+        <childnode refid="3506" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3383">
+      <node id="3507">
         <label>amrex::AmrInSituBridge</label>
         <link refid="classamrex_1_1AmrInSituBridge"/>
-        <childnode refid="3382" relation="public-inheritance">
+        <childnode refid="3506" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="3386">
+      <node id="3510">
         <label>string</label>
       </node>
-      <node id="3385">
+      <node id="3509">
         <label>amrex::InSituBridge</label>
         <link refid="classamrex_1_1InSituBridge"/>
-        <childnode refid="3386" relation="usage">
+        <childnode refid="3510" relation="usage">
           <edgelabel>config</edgelabel>
         </childnode>
+        <childnode refid="3511" relation="usage">
+          <edgelabel>frequency</edgelabel>
+          <edgelabel>pinMesh</edgelabel>
+          <edgelabel>counter</edgelabel>
+          <edgelabel>enabled</edgelabel>
+        </childnode>
+      </node>
+      <node id="3511">
+        <label>int</label>
       </node>
     </collaborationgraph>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Extern/SENSEI/AMReX_InSituBridge.H" line="21" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Extern/SENSEI/AMReX_InSituBridge.H" bodystart="20" bodyend="71"/>
