@@ -806,14 +806,19 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="97" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.cpp" bodystart="400" bodyend="403"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a2f4de3f769da1999c8f53d544766c0ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1ad5199bceb8775542859c6b51d0a2100c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int amrex::AmrMesh::nErrorBuf</definition>
-        <argsstring>(int lev) const noexcept</argsstring>
+        <argsstring>(int lev, int direction=0) const noexcept</argsstring>
         <name>nErrorBuf</name>
         <param>
           <type>int</type>
           <declname>lev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+          <defval>0</defval>
         </param>
         <briefdescription>
 <para>Return the number of buffer cells (as a single integer) in error estimator. </para>        </briefdescription>
@@ -823,15 +828,32 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="100" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="100" bodyend="100"/>
       </memberdef>
+      <memberdef kind="function" id="classamrex_1_1AmrMesh_1a071011d3702ecfc14ebc0f61a30a50ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &amp;</type>
+        <definition>const IntVect&amp; amrex::AmrMesh::nErrorBufVect</definition>
+        <argsstring>(int lev) const noexcept</argsstring>
+        <name>nErrorBufVect</name>
+        <param>
+          <type>int</type>
+          <declname>lev</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of buffer cells (as an <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>) in error estimator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="103" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="103" bodyend="103"/>
+      </memberdef>
       <memberdef kind="function" id="classamrex_1_1AmrMesh_1a7bc5798a6ef2a0c27b0141112104e087" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Real</type>
         <definition>Real amrex::AmrMesh::gridEff</definition>
         <argsstring>() const noexcept</argsstring>
         <name>gridEff</name>
         <briefdescription>
-<para>Return the number of buffer cells (as an <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>) in error estimator. </para>        </briefdescription>
+<para>Return the minimum allowable grid efficiency. </para>        </briefdescription>
         <detaileddescription>
-<para>Return the minimum allowable grid efficiency. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" line="106" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrMesh.H" bodystart="106" bodyend="106"/>
@@ -1402,7 +1424,8 @@
       <member refid="classamrex_1_1AmrMesh_1a8d91fffbf09ac3c696d1f7cffee76b2c" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>MaxRefRatio</name></member>
       <member refid="classamrex_1_1AmrMesh_1acf34e7acc22898675cec3f3b8aa2346c" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>n_error_buf</name></member>
       <member refid="classamrex_1_1AmrMesh_1afe23a9a66345fa657da022fc5a3cb349" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>n_proper</name></member>
-      <member refid="classamrex_1_1AmrMesh_1a2f4de3f769da1999c8f53d544766c0ce" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>nErrorBuf</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ad5199bceb8775542859c6b51d0a2100c" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>nErrorBuf</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a071011d3702ecfc14ebc0f61a30a50ed" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>nErrorBufVect</name></member>
       <member refid="classamrex_1_1AmrMesh_1aa1e59b567c58d9ba22c9e56f8138a22a" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>nProper</name></member>
       <member refid="classamrex_1_1AmrMesh_1a51e0432968299f0c83f90d9b79376a6c" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>operator=</name></member>
       <member refid="classamrex_1_1AmrMesh_1a680927b289fb21b7308ab643168d8c79" prot="private" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>ProjPeriodic</name></member>
@@ -1430,8 +1453,8 @@
       <member refid="classamrex_1_1AmrMesh_1abaf8432668e3b350306a62e8662f4f96" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>use_new_chop</name></member>
       <member refid="classamrex_1_1AmrMesh_1aee758e772b5c854d121923686d1d3949" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>useFixedCoarseGrids</name></member>
       <member refid="classamrex_1_1AmrMesh_1a6ff4a09f169c29d17327aa37b49d3e5a" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>useFixedUpToLevel</name></member>
-      <member refid="classamrex_1_1AmrMesh_1a6d04a0b73b03b5a0008edc4effaeeb44" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>verbose</name></member>
       <member refid="classamrex_1_1AmrMesh_1a9b78b807755b822ba0c46ec0e3150089" prot="public" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>Verbose</name></member>
+      <member refid="classamrex_1_1AmrMesh_1a6d04a0b73b03b5a0008edc4effaeeb44" prot="protected" virt="non-virtual"><scope>amrex::AmrMesh</scope><name>verbose</name></member>
       <member refid="classamrex_1_1AmrMesh_1a10865e07f3aae297cdea041881e7b9ab" prot="public" virt="virtual"><scope>amrex::AmrMesh</scope><name>~AmrMesh</name></member>
     </listofallmembers>
   </compounddef>

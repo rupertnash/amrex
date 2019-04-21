@@ -190,11 +190,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af5ec08eb03bebbb7a0f37f2af4bbda5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc5fde984a1cdd6fcfddb6ff26fb92f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrMesh.html#afc5fde984a1cdd6fcfddb6ff26fb92f6">ClearBoxArray</a> (int lev) noexcept</td></tr>
 <tr class="separator:afc5fde984a1cdd6fcfddb6ff26fb92f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f4de3f769da1999c8f53d544766c0ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrMesh.html#a2f4de3f769da1999c8f53d544766c0ce">nErrorBuf</a> (int lev) const noexcept</td></tr>
-<tr class="memdesc:a2f4de3f769da1999c8f53d544766c0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of buffer cells (as a single integer) in error estimator.  <a href="#a2f4de3f769da1999c8f53d544766c0ce">More...</a><br /></td></tr>
-<tr class="separator:a2f4de3f769da1999c8f53d544766c0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5199bceb8775542859c6b51d0a2100c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrMesh.html#ad5199bceb8775542859c6b51d0a2100c">nErrorBuf</a> (int lev, int direction=0) const noexcept</td></tr>
+<tr class="memdesc:ad5199bceb8775542859c6b51d0a2100c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of buffer cells (as a single integer) in error estimator.  <a href="#ad5199bceb8775542859c6b51d0a2100c">More...</a><br /></td></tr>
+<tr class="separator:ad5199bceb8775542859c6b51d0a2100c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071011d3702ecfc14ebc0f61a30a50ed"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrMesh.html#a071011d3702ecfc14ebc0f61a30a50ed">nErrorBufVect</a> (int lev) const noexcept</td></tr>
+<tr class="memdesc:a071011d3702ecfc14ebc0f61a30a50ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of buffer cells (as an <a class="el" href="classamrex_1_1IntVect.html">IntVect</a>) in error estimator.  <a href="#a071011d3702ecfc14ebc0f61a30a50ed">More...</a><br /></td></tr>
+<tr class="separator:a071011d3702ecfc14ebc0f61a30a50ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc5798a6ef2a0c27b0141112104e087"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrMesh.html#a7bc5798a6ef2a0c27b0141112104e087">gridEff</a> () const noexcept</td></tr>
-<tr class="memdesc:a7bc5798a6ef2a0c27b0141112104e087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of buffer cells (as an <a class="el" href="classamrex_1_1IntVect.html">IntVect</a>) in error estimator.  <a href="#a7bc5798a6ef2a0c27b0141112104e087">More...</a><br /></td></tr>
+<tr class="memdesc:a7bc5798a6ef2a0c27b0141112104e087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the minimum allowable grid efficiency.  <a href="#a7bc5798a6ef2a0c27b0141112104e087">More...</a><br /></td></tr>
 <tr class="separator:a7bc5798a6ef2a0c27b0141112104e087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1e59b567c58d9ba22c9e56f8138a22a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1AmrMesh.html#aa1e59b567c58d9ba22c9e56f8138a22a">nProper</a> () const noexcept</td></tr>
 <tr class="memdesc:aa1e59b567c58d9ba22c9e56f8138a22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of cells to define proper nesting.  <a href="#aa1e59b567c58d9ba22c9e56f8138a22a">More...</a><br /></td></tr>
@@ -909,7 +912,6 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the number of buffer cells (as an <a class="el" href="classamrex_1_1IntVect.html">IntVect</a>) in error estimator. </p>
 <p>Return the minimum allowable grid efficiency. </p>
 
 </div>
@@ -1246,7 +1248,7 @@ Static Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2f4de3f769da1999c8f53d544766c0ce"></a>
+<a class="anchor" id="ad5199bceb8775542859c6b51d0a2100c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1255,6 +1257,42 @@ Static Private Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int amrex::AmrMesh::nErrorBuf </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the number of buffer cells (as a single integer) in error estimator. </p>
+
+</div>
+</div>
+<a class="anchor" id="a071011d3702ecfc14ebc0f61a30a50ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a>&amp; amrex::AmrMesh::nErrorBufVect </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>lev</em></td><td>)</td>
@@ -1268,7 +1306,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the number of buffer cells (as a single integer) in error estimator. </p>
+<p>Return the number of buffer cells (as an <a class="el" href="classamrex_1_1IntVect.html">IntVect</a>) in error estimator. </p>
 
 </div>
 </div>
