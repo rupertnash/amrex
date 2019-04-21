@@ -82,7 +82,7 @@ var searchData=
   ['bndryregister',['BndryRegister',['../classamrex_1_1BndryRegister.html#aa4688ce12aed07218f4eb52082c290c2',1,'amrex::BndryRegister::BndryRegister() noexcept'],['../classamrex_1_1BndryRegister.html#aecf2bfb5d33fc73dc7fff1da73df6cb3',1,'amrex::BndryRegister::BndryRegister(const BoxArray &amp;grids_, const DistributionMapping &amp;dmap, int in_rad, int out_rad, int extent_rad, int ncomp)'],['../classamrex_1_1BndryRegister.html#ada2a8c68444266b0a43501e0bbbfb187',1,'amrex::BndryRegister::BndryRegister(const BndryRegister &amp;src)'],['../classamrex_1_1BndryRegister.html#ae816eecbaf5ba41568607d00441d3420',1,'amrex::BndryRegister::BndryRegister(BndryRegister &amp;&amp;rhs) noexcept=default']]],
   ['bndryvalues',['bndryValues',['../classamrex_1_1BndryData.html#a3ce6d337a83e14d713a998d6b09a27e0',1,'amrex::BndryData']]],
   ['bndryvaluesdoit',['BndryValuesDoIt',['../classamrex_1_1InterpBndryData.html#a2dd6a9486577bf514eb29818eee5cb21',1,'amrex::InterpBndryData']]],
-  ['bordersize',['borderSize',['../classamrex_1_1TagBoxArray.html#add395b16c3dadb116c97b2e3b470d3e1',1,'amrex::TagBoxArray']]],
+  ['bordersize',['borderSize',['../classamrex_1_1TagBoxArray.html#ab868f2c94dcf0dd6ab61286c65835233',1,'amrex::TagBoxArray']]],
   ['bottomcommunicator',['BottomCommunicator',['../classamrex_1_1MLLinOp.html#a77b33530b316399f5fb5314a846d9b7e',1,'amrex::MLLinOp']]],
   ['bottomsolve',['bottomSolve',['../classamrex_1_1MLMG.html#a105413ba8fce8beab99c2b7f11f0f028',1,'amrex::MLMG']]],
   ['bottomsolvewithhypre',['bottomSolveWithHypre',['../classamrex_1_1MLMG.html#aaf664a17642380d701b1b7b08e10fa63',1,'amrex::MLMG']]],

@@ -230,7 +230,7 @@ var searchData=
   ['bnumberofminmax',['BNUMBEROFMINMAX',['../namespaceamrex_1_1Amrvis.html#a980486554a98baf8ebf8e560734f2bf9ae30e7b84e8b143de05b852dde1174bb3',1,'amrex::Amrvis']]],
   ['bogacki_5fshampine_5f4_5f2_5f3',['bogacki_shampine_4_2_3',['../namespacefarkode__mod.html#a6dda3ca4fb0dc861ee20eaac6b1c44c9',1,'farkode_mod']]],
   ['bogus_5fbc',['BOGUS_BC',['../AMReX__BC__TYPES_8H.html#ab783b95b6d96f08d8ec4680ae5c47879',1,'AMReX_BC_TYPES.H']]],
-  ['bordersize',['borderSize',['../classamrex_1_1TagBoxArray.html#add395b16c3dadb116c97b2e3b470d3e1',1,'amrex::TagBoxArray']]],
+  ['bordersize',['borderSize',['../classamrex_1_1TagBoxArray.html#ab868f2c94dcf0dd6ab61286c65835233',1,'amrex::TagBoxArray']]],
   ['bottom_5fmaxiter',['bottom_maxiter',['../classamrex_1_1MLMG.html#a37be121e8fe2e8e8341198486fc07d0e',1,'amrex::MLMG']]],
   ['bottom_5freltol',['bottom_reltol',['../classamrex_1_1MLMG.html#a20ed3ce546f3fa0f009d66fd9bd1f2bc',1,'amrex::MLMG']]],
   ['bottom_5fsolver',['bottom_solver',['../classamrex_1_1MLMG.html#a1a607f195669be23b48131ae81e35b25',1,'amrex::MLMG']]],
