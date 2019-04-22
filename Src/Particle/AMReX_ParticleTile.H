@@ -169,6 +169,9 @@ private:
 
     AoS m_aos_tile;
     SoA m_soa_tile;
+
+    Vector<Vector<Real> > m_runtime_rdata;
+    Vector<Vector<int > > m_runtime_idata;
 };
 
 } // namespace amrex;

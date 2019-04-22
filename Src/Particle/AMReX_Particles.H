@@ -729,6 +729,22 @@ public:
     void EnforcePeriodicGPU ();
 #endif
 
+    /**
+     * \brief Adds a new Real particle component to the container at runtime. 
+     *
+     * \param comp_name: name of the particle component
+     * \param communicate_comp: whether the data needs to be communicated on Redistribute
+     */
+    void addRuntimeRealComponent (std::string comp_name, bool communicate_comp=true);
+
+    /**
+     * \brief Adds a new Int particle component to the container at runtime. 
+     *
+     * \param comp_name: name of the particle component
+     * \param communicate_comp: whether the data needs to be communicated on Redistribute
+     */
+    void addRuntimeIntComponent (std::string comp_name, bool communicate_comp=true);
+
 protected:
 
     /**
@@ -851,8 +867,8 @@ private:
     Vector<ParticleLevel> m_particles;
     Vector<std::unique_ptr<MultiFab> > m_dummy_mf;
 
-    std::map<std::string, Vector<std::map<std::pair<int, int>, Vector<Real> > > > m_runtime_rdata;
-    std::map<std::string, Vector<std::map<std::pair<int, int>, Vector<int > > > > m_runtime_idata;    
+    std::map<std::string, int> m_runtime_rcomps;
+    std::map<std::string, int> m_runtime_icomps;    
 };
 
 

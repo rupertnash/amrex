@@ -15,18 +15,78 @@ ParticleContainer<NStructReal, NStructInt, NArrayReal, NArrayInt>::
 SetParticleSize ()
 {
     num_real_comm_comps = 0;
-    for (int i = 0; i < NArrayReal; ++i) {
+    for (int i = 0; i < NArrayReal + m_runtime_rdata.size(); ++i) {
         if (communicate_real_comp[i]) ++num_real_comm_comps;
     }
     
     num_int_comm_comps = 0;
-    for (int i = 0; i < NArrayInt; ++i) {
+    for (int i = 0; i < NArrayInt + m_runtime_idata.size(); ++i) {
         if (communicate_int_comp[i]) ++num_int_comm_comps;
     }
     
     particle_size = sizeof(ParticleType);
     superparticle_size = particle_size + 
         num_real_comm_comps*sizeof(Real) + num_int_comm_comps*sizeof(int);    
+}
+
+template <int NStructReal, int NStructInt, int NArrayReal, int NArrayInt>
+void
+ParticleContainer<NStructReal, NStructInt, NArrayReal, NArrayInt>::
+addRuntimeRealComponent (std::string comp_name, bool communicate_comp)
+{
+    // Add name to map
+    int new_comp_number = m_runtime_rcomps.size();
+    m_runtime_rcomps[comp_name] = new_comp_number;
+    
+    // resize communicate_comp array
+    int old_size = communicate_real_comp.size();
+    int new_size = old_size + 1;
+    communicate_real_comp.resize(new_size);
+    communicate_real_comp[old_size] = communicate_comp;
+    
+    // set initial values to zero
+    if (lev >= 0 && lev < int(m_particles.size()))
+    {
+        for (const auto& kv : GetParticles(lev))
+        {
+            const auto& ptile = kv.second;	
+            AMREX_ASSERT(new_comp_number == ptile.numRuntimeRealComponents());
+            ptile.addRuntimeRealComponent(comp_name);
+            auto& data = ptile.getRuntimeRealComponent(new_comp_number);
+            data.resize(ptile.numParticles(), 0.0);
+        }
+    }
+    
+}
+
+template <int NStructReal, int NStructInt, int NArrayReal, int NArrayInt>
+void
+ParticleContainer<NStructReal, NStructInt, NArrayReal, NArrayInt>::
+addRuntimeIntComponent (std::string comp_name, bool communicate_comp)
+{
+    // Add name to map
+    int new_comp_number = m_runtime_icomps.size();
+    m_runtime_icomps[comp_name] = new_comp_number;
+    
+    // resize communicate_comp array
+    int old_size = communicate_int_comp.size();
+    int new_size = old_size + 1;
+    communicate_int_comp.resize(new_size);
+    communicate_int_comp[old_size] = communicate_comp;
+    
+    // set initial values to zero
+    if (lev >= 0 && lev < int(m_particles.size()))
+    {
+        for (const auto& kv : GetParticles(lev))
+        {
+            const auto& ptile = kv.second;	
+            AMREX_ASSERT(new_comp_number == ptile.numRuntimeIntComponents());
+            ptile.addRuntimeIntComponent(comp_name);
+            auto& data = ptile.getRuntimeIntComponent(new_comp_number);
+            data.resize(ptile.numParticles(), 0.0);
+        }
+    }
+    
 }
 
 template <int NStructReal, int NStructInt, int NArrayReal, int NArrayInt>
@@ -456,7 +516,9 @@ ByteSpread () const
     long mn = cnt, mx = mn;
 
     const int IOProc = ParallelDescriptor::IOProcessorNumber();
-    const std::size_t sz = sizeof(ParticleType) + NArrayReal*sizeof(Real) + NArrayInt*sizeof(int);
+    const std::size_t sz = sizeof(ParticleType)
+        + ( NArrayReal + m_runtime_rdata.size() )*sizeof(Real)
+        + ( NArrayInt  + m_runtime_idata.size() )*sizeof(int);
 
 #ifdef BL_LAZY
     Lazy::QueueReduction( [=] () mutable {
@@ -904,6 +966,7 @@ addParticles (const ParticleContainerType& other, bool local)
                     plevel[index].push_back_int(j, int_attrib);
                 }
             }
+            
         }
     }
     
