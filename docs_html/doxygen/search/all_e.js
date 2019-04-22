@@ -234,7 +234,7 @@ var searchData=
   ['nsr',['nsr',['../classamrex_1_1DeriveRec.html#a5dd47ecd89eca47c1a2da2a3cee0675f',1,'amrex::DeriveRec']]],
   ['nstep',['nStep',['../classamrex_1_1AmrLevel.html#ac66753a2ff2df956a5df08dd6cb9f81a',1,'amrex::AmrLevel']]],
   ['nstreamerrors',['NStreamErrors',['../classamrex_1_1StreamRetry.html#ae894808026adb5099b7b36f193f39f7c',1,'amrex::StreamRetry::NStreamErrors()'],['../classamrex_1_1StreamRetry.html#a56fbf590918f701816c5567f4869c6de',1,'amrex::StreamRetry::nStreamErrors()']]],
-  ['nstride',['nstride',['../structamrex_1_1Array4.html#ac119008e55133b0231fe715d52f0813d',1,'amrex::Array4::nstride()'],['../structamrex_1_1FabView.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView::nstride()']]],
+  ['nstride',['nstride',['../structamrex_1_1Array4.html#a028dbc3fe4060224f23e6f5f95382215',1,'amrex::Array4::nstride()'],['../structamrex_1_1FabView.html#a475f60b030e6fa7b472ce9408440e5f3',1,'amrex::FabView::nstride()']]],
   ['nsweeps',['Nsweeps',['../classSDCstruct.html#a973e673b7bb450a404fb23411259c6ab',1,'SDCstruct']]],
   ['ntanghalfwidth',['NTangHalfWidth',['../classamrex_1_1BndryData.html#ad69d8769b561cfe76e6dd1cac73d7517',1,'amrex::BndryData']]],
   ['ntasks',['NTasks',['../classamrex_1_1ForkJoin.html#a4eaae5bd6eb7e83442d5db4529cf1443',1,'amrex::ForkJoin']]],

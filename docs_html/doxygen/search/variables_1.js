@@ -27,7 +27,7 @@ var searchData=
   ['bdfunc',['bdfunc',['../namespaceamrex.html#acacfdf13ce24ba1836231106e03f7e26',1,'amrex']]],
   ['bdfunc_5fset',['bdfunc_set',['../namespaceamrex.html#abd4de68ffb451b4f72483202f1d0b905',1,'amrex']]],
   ['bdider',['bdider',['../namespaceamrex.html#ab9ef0c17cdb5fd8ee696dae85c2d4b3d',1,'amrex']]],
-  ['begin',['begin',['../structamrex_1_1Array4.html#af4d3efc1f36487726112e492c507e1e8',1,'amrex::Array4']]],
+  ['begin',['begin',['../structamrex_1_1Array4.html#a866f2c12eb3e3d6a26399866f355e088',1,'amrex::Array4']]],
   ['beginindex',['beginIndex',['../classamrex_1_1MFIter.html#a65b335b52bc54d9eaf7030a4fce20cf8',1,'amrex::MFIter']]],
   ['beta',['beta',['../classamrex_1_1ABecLaplacian.html#a45e2369805bbed52e38340917cabb02e',1,'amrex::ABecLaplacian::beta()'],['../classamrex_1_1ABec4.html#a406ab3a9c784755032693bda2f051103',1,'amrex::ABec4::beta()'],['../classamrex_1_1DivVis.html#a5eda3ced4c66caa08c7d18a51c470b81',1,'amrex::DivVis::beta()']]],
   ['beta_5fdef',['beta_def',['../classamrex_1_1ABecLaplacian.html#a260cbaa3af6bc2aa931bb16c60116ee9',1,'amrex::ABecLaplacian::beta_def()'],['../classamrex_1_1ABec4.html#a07edccb3418583122a104acb07b8cd9b',1,'amrex::ABec4::beta_def()'],['../classamrex_1_1DivVis.html#a471bd09f88c8bafab928781b25b93ece',1,'amrex::DivVis::beta_def()']]],
