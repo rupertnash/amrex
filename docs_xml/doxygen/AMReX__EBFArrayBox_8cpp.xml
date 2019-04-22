@@ -469,6 +469,8 @@
         </childnode>
         <childnode refid="40982" relation="include">
         </childnode>
+        <childnode refid="40963" relation="include">
+        </childnode>
       </node>
       <node id="40962">
         <label>AMReX_BLassert.H</label>
@@ -883,29 +885,27 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>m_type<sp/>=<sp/>ebflag.getType(sect);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_GPU</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><ref refid="classamrex_1_1EBFArrayBox_1aa9eec6391ebe9040da491ae57b41407b" kindref="member">EBFArrayBox::EBFArrayBox</ref><sp/>(EBFArrayBox<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>rhs,<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6" kindref="member">MakeType</ref><sp/>make_type)</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>FArrayBox(rhs,<sp/>make_type)</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>m_type<sp/>=<sp/>rhs.m_type;<sp/></highlight><highlight class="comment">//<sp/>xxxxx<sp/>TODO<sp/>gpu</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>m_ebcellflag<sp/>=<sp/>rhs.m_ebcellflag;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><ref refid="classamrex_1_1EBFArrayBox_1a4f50980c0b4e0c9445ff2497cb2fc573" kindref="member">EBFArrayBox::~EBFArrayBox</ref><sp/>()</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="classamrex_1_1EBFArrayBox_1aa9eec6391ebe9040da491ae57b41407b" kindref="member">EBFArrayBox::EBFArrayBox</ref><sp/>(EBFArrayBox<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>rhs,<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6" kindref="member">MakeType</ref><sp/>make_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scomp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncomp)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>FArrayBox(rhs,<sp/>make_type,<sp/>scomp,<sp/>ncomp)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>m_type<sp/>=<sp/>rhs.m_type;<sp/></highlight><highlight class="comment">//<sp/>xxxxx<sp/>TODO<sp/>gpu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>m_ebcellflag<sp/>=<sp/>rhs.m_ebcellflag;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="classamrex_1_1EBFArrayBox_1a4f50980c0b4e0c9445ff2497cb2fc573" kindref="member">EBFArrayBox::~EBFArrayBox</ref><sp/>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EBCellFlagFab&amp;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><ref refid="namespaceamrex_1aa4a3bfe1c0cd2c7c8632d1f0ee21b2ec" kindref="member">getEBCellFlagFab</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FArrayBox&amp;<sp/>fab)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EBFArrayBox*<sp/>ebfab<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">EBFArrayBox<sp/>const*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;fab);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(ebfab);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ebfab-&gt;getEBCellFlagFab();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EBCellFlagFab&amp;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="namespaceamrex_1aa4a3bfe1c0cd2c7c8632d1f0ee21b2ec" kindref="member">getEBCellFlagFab</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FArrayBox&amp;<sp/>fab)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EBFArrayBox*<sp/>ebfab<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">EBFArrayBox<sp/>const*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;fab);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(ebfab);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ebfab-&gt;getEBCellFlagFab();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBFArrayBox.cpp"/>
   </compounddef>

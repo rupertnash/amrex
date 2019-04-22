@@ -727,6 +727,8 @@
         </childnode>
         <childnode refid="40760" relation="include">
         </childnode>
+        <childnode refid="40738" relation="include">
+        </childnode>
       </node>
       <node id="40737">
         <label>AMReX_BLassert.H</label>
@@ -1384,12 +1386,12 @@
 <codeline lineno="28"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1EBDataCollection_1a9d7fc23809662b01ce10290962d272e8" kindref="member">m_support</ref><sp/>==<sp/><ref refid="namespaceamrex_1a7de82761ed632e5ee0b9f912c856aebca334c4a4c42fdb79d7ebc3e73b517e6f8" kindref="member">EBSupport::none</ref>)</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>FArrayBox(box,<sp/>ncomps,<sp/>info.alloc,<sp/>info.shared);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::new<sp/>FArrayBox(box,<sp/>ncomps,<sp/>info.alloc,<sp/>info.shared);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EBCellFlagFab&amp;<sp/>ebcellflag<sp/>=<sp/>m_ebdc-&gt;getMultiEBCellFlagFab()[box_index];</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>EBFArrayBox(ebcellflag,<sp/>box,<sp/>ncomps);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::new<sp/>EBFArrayBox(ebcellflag,<sp/>box,<sp/>ncomps);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
@@ -1398,40 +1400,40 @@
 <codeline lineno="42"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1EBDataCollection_1a9d7fc23809662b01ce10290962d272e8" kindref="member">m_support</ref><sp/>==<sp/><ref refid="namespaceamrex_1a7de82761ed632e5ee0b9f912c856aebca334c4a4c42fdb79d7ebc3e73b517e6f8" kindref="member">EBSupport::none</ref>)</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fab;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::delete<sp/>fab;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBFArrayBox*<sp/>p<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">EBFArrayBox*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(fab);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::delete<sp/>p;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_GPU</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal">FArrayBox*</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">EBFArrayBoxFactory::createHostAlias<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FArrayBox&amp;<sp/>src)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">EBFArrayBoxFactory::createDeviceAlias<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FArrayBox&amp;<sp/>src)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="57"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1EBDataCollection_1a9d7fc23809662b01ce10290962d272e8" kindref="member">m_support</ref><sp/>==<sp/><ref refid="namespaceamrex_1a7de82761ed632e5ee0b9f912c856aebca334c4a4c42fdb79d7ebc3e73b517e6f8" kindref="member">EBSupport::none</ref>)</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::new<sp/>FArrayBox(src,<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6a1477998364b5f02d6ce68e3da29be1ba" kindref="member">amrex::make_alias</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>FArrayBox(src,<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6a1477998364b5f02d6ce68e3da29be1ba" kindref="member">amrex::make_alias</ref>,<sp/>0,<sp/>src.nComp());</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>::new<sp/>EBFArrayBox(static_cast&lt;EBFArrayBox<sp/>const&amp;&gt;(src),<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6a1477998364b5f02d6ce68e3da29be1ba" kindref="member">amrex::make_alias</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>EBFArrayBox(static_cast&lt;EBFArrayBox<sp/>const&amp;&gt;(src),<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6a1477998364b5f02d6ce68e3da29be1ba" kindref="member">amrex::make_alias</ref>,<sp/>0,<sp/>src.nComp());</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="66"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal">EBFArrayBoxFactory::destroyHostAlias<sp/>(FArrayBox*<sp/>fab)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">EBFArrayBoxFactory::destroyDeviceAlias<sp/>(FArrayBox*<sp/>fab)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="70"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1EBDataCollection_1a9d7fc23809662b01ce10290962d272e8" kindref="member">m_support</ref><sp/>==<sp/><ref refid="namespaceamrex_1a7de82761ed632e5ee0b9f912c856aebca334c4a4c42fdb79d7ebc3e73b517e6f8" kindref="member">EBSupport::none</ref>)</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::delete<sp/>fab;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fab;</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBFArrayBox*<sp/>p<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">EBFArrayBox*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(fab);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::delete<sp/>p;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>

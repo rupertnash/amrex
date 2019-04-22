@@ -69,6 +69,7 @@ var searchData=
   ['desc',['desc',['../classamrex_1_1StateData.html#a5201a1b8230055d506cef5f265a8b8e2',1,'amrex::StateData::desc()'],['../classamrex_1_1DescriptorList.html#adf6d6dc0b7328fa6527754931874f685',1,'amrex::DescriptorList::desc()']]],
   ['desc_5flst',['desc_lst',['../classamrex_1_1AmrLevel.html#acb5f9e8c8d903d3a700d2cc11be500e5',1,'amrex::AmrLevel']]],
   ['destcomp',['destComp',['../structamrex_1_1FabArrayBase_1_1FabComTag.html#a727cd5fc638afd570a51cec1ba21db89',1,'amrex::FabArrayBase::FabComTag::destComp()'],['../structamrex_1_1FabCopyDescriptor.html#a164510f57c480c98b19458a1516ba6dd',1,'amrex::FabCopyDescriptor::destComp()']]],
+  ['device_5ffab',['device_fab',['../structamrex_1_1MFInfo.html#accf9ae9a6749c1a4ac0e4b42dbbafad3',1,'amrex::MFInfo']]],
   ['device_5fid',['device_id',['../classamrex_1_1Cuda_1_1Device.html#a33d416e52bae75c6ba07b702011704e1',1,'amrex::Cuda::Device']]],
   ['device_5fset_5fpreferred',['device_set_preferred',['../structamrex_1_1ArenaInfo.html#a0ab972913e7e764d7f0c88097ce1c619',1,'amrex::ArenaInfo']]],
   ['device_5fset_5freadonly',['device_set_readonly',['../structamrex_1_1ArenaInfo.html#a106f4ef6d447922447c63d296583e917',1,'amrex::ArenaInfo']]],
