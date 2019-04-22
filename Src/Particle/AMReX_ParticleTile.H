@@ -165,11 +165,74 @@ struct ParticleTile
         m_soa_tile.GetIntData(comp).resize(new_size, v);
     }
 
+    int NumRuntimeRealComponents () const { return m_runtime_rcomps.size(); }
+    
+    void AddRuntimeRealComponent (const std::string& comp_name)
+    {
+        int new_comp_number = m_runtime_rcomps.size();
+        m_runtime_rcomps[comp_name] = new_comp_number;
+    }
+
+    RealVector& GetRuntimeRealData (const std::string& comp_name)
+    {
+        int comp_number = m_runtime_rcomps[comp_name];
+        return m_runtime_rdata[comp_number];
+    }
+
+    const RealVector& GetRuntimeRealData (const std::string& comp_name) const
+    {
+        int comp_number = m_runtime_rcomps.at(comp_name);
+        return m_runtime_rdata[comp_number];
+    }
+
+    RealVector& GetRuntimeRealData (int comp_number)
+    {
+        return m_runtime_rdata[comp_number];
+    }
+
+    const RealVector& GetRuntimeRealData (int comp_number) const
+    {
+        return m_runtime_rdata[comp_number];
+    }
+
+    int NumRuntimeIntComponents () const { return m_runtime_icomps.size(); }
+    
+    void AddRuntimeIntComponent (const std::string& comp_name)
+    {
+        int new_comp_number = m_runtime_icomps.size();
+        m_runtime_icomps[comp_name] = new_comp_number;
+    }
+
+    IntVector& GetRuntimeIntData (const std::string& comp_name)
+    {
+        int comp_number = m_runtime_icomps[comp_name];
+        return m_runtime_rdata[comp_number];
+    }
+
+    const IntVector& GetRuntimeIntData (const std::string& comp_name) const
+    {
+        int comp_number = m_runtime_icomps.at(comp_name);
+        return m_runtime_rdata[comp_number];
+    }
+
+    IntVector& GetRuntimeIntData (int comp_number)
+    {
+        return m_runtime_idata[comp_number];
+    }
+
+    const IntVector& GetRuntimeIntData (int comp_number) const
+    {
+        return m_runtime_idata[comp_number];
+    }
+
 private:
 
     AoS m_aos_tile;
     SoA m_soa_tile;
 
+    std::map<std::string, int> m_runtime_rcomps;
+    std::map<std::string, int> m_runtime_icomps;
+    
     Vector<Vector<Real> > m_runtime_rdata;
     Vector<Vector<int > > m_runtime_idata;
 };
