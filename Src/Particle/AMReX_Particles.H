@@ -735,7 +735,7 @@ public:
      * \param comp_name: name of the particle component
      * \param communicate_comp: whether the data needs to be communicated on Redistribute
      */
-    void addRuntimeRealComponent (std::string comp_name, bool communicate_comp=true);
+    void AddRuntimeRealComponent (std::string comp_name, bool communicate_comp=true);
 
     /**
      * \brief Adds a new Int particle component to the container at runtime. 
@@ -743,7 +743,7 @@ public:
      * \param comp_name: name of the particle component
      * \param communicate_comp: whether the data needs to be communicated on Redistribute
      */
-    void addRuntimeIntComponent (std::string comp_name, bool communicate_comp=true);
+    void AddRuntimeIntComponent (std::string comp_name, bool communicate_comp=true);
 
 protected:
 
