@@ -102,6 +102,14 @@ struct ParticleTile
     }
 
     ///
+    /// Add a Real value to the runtime-defined struct-of-arrays at index comp.
+    /// This sets the data for one particle.
+    ///
+    void push_back_runtime_real (int comp, Real v) { 
+        GetRuntimeRealData(comp).push_back(v);
+    }
+
+    ///
     /// Add Real values to the struct-of-arrays, for all comps at once.
     /// This sets the data for one particle.
     ///
@@ -135,6 +143,14 @@ struct ParticleTile
     ///
     void push_back_int (int comp, int v) { 
         m_soa_tile.GetIntData(comp).push_back(v);
+    }
+
+    ///
+    /// Add an int value to the runtime-defined struct-of-arrays at index comp.
+    /// This sets the data for one particle.
+    ///
+    void push_back_runtime_int (int comp, int v) { 
+        GetRuntimeIntData(comp).push_back(v);
     }
     
     ///
