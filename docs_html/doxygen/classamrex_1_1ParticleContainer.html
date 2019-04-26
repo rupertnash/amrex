@@ -325,6 +325,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd785eb9f6acd5c201473cf9e9c246a3"><td class="memTemplParams" colspan="2">template&lt;class Iterator &gt; </td></tr>
 <tr class="memitem:acd785eb9f6acd5c201473cf9e9c246a3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1ParticleContainer.html#a9c8d796e15d37e7dad6efb3e9fdb4fca">ParticleTileType</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#acd785eb9f6acd5c201473cf9e9c246a3">ParticlesAt</a> (int lev, const Iterator &amp;iter)</td></tr>
 <tr class="separator:acd785eb9f6acd5c201473cf9e9c246a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbef5bef2e7bd9b1c3bea993ce4514d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1ParticleContainer.html#a9c8d796e15d37e7dad6efb3e9fdb4fca">ParticleTileType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#acbef5bef2e7bd9b1c3bea993ce4514d2">DefineAndReturnParticleTile</a> (int lev, int grid, int tile)</td></tr>
+<tr class="separator:acbef5bef2e7bd9b1c3bea993ce4514d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8c4881ee78ae85368b508e5387e52d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#ad8c4881ee78ae85368b508e5387e52d8">AssignDensity</a> (int rho_index, <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; std::unique_ptr&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt; &gt; &amp;mf_to_be_filled, int lev_min, int ncomp, int finest_level, int ngrow=2) const </td></tr>
 <tr class="memdesc:ad8c4881ee78ae85368b508e5387e52d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions depending the layout of the data. Use with caution.  <a href="#ad8c4881ee78ae85368b508e5387e52d8">More...</a><br /></td></tr>
 <tr class="separator:ad8c4881ee78ae85368b508e5387e52d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,6 +370,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a69e98c5ae9055383e3b290b25b58dbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ee48f306fd7ba69527b310f9d69aca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a79ee48f306fd7ba69527b310f9d69aca">OKGPU</a> (int lev_min=0, int lev_max=-1, int nGrow=0) const </td></tr>
 <tr class="separator:a79ee48f306fd7ba69527b310f9d69aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bae62e744cf08d186b5d66499a6f6f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a8bae62e744cf08d186b5d66499a6f6f5">AddRealComp</a> (bool communicate=true)</td></tr>
+<tr class="separator:a8bae62e744cf08d186b5d66499a6f6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cfacb44170a246f2b02c9292c5e31d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a6cfacb44170a246f2b02c9292c5e31d4">AddIntComp</a> (bool communicate=true)</td></tr>
+<tr class="separator:a6cfacb44170a246f2b02c9292c5e31d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225de1db7fe017ffc776d93c61e64efa"><td class="memTemplParams" colspan="2">template&lt;class RTYPE &gt; </td></tr>
 <tr class="memitem:a225de1db7fe017ffc776d93c61e64efa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a225de1db7fe017ffc776d93c61e64efa">ReadParticles</a> (int cnt, int grd, int lev, std::ifstream &amp;ifs, int finest_level_in_file)</td></tr>
 <tr class="separator:a225de1db7fe017ffc776d93c61e64efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -409,6 +415,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aa68b9885de02d650cf3626441b0c11a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a488b5a0ac231cfdea811c579cfe7a439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a488b5a0ac231cfdea811c579cfe7a439">BuildRedistributeMask</a> (int lev, int nghost=1) const </td></tr>
 <tr class="separator:a488b5a0ac231cfdea811c579cfe7a439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bccb747039f092dc962598d04d44dd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a5bccb747039f092dc962598d04d44dd1">NumRuntimeRealComps</a> () const </td></tr>
+<tr class="separator:a5bccb747039f092dc962598d04d44dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f8a4b1f9577723ba6ff469cb512b5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a33f8a4b1f9577723ba6ff469cb512b5b">NumRuntimeIntComps</a> () const </td></tr>
+<tr class="separator:a33f8a4b1f9577723ba6ff469cb512b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c4060d41d8f287cf4ced5d46c7bd57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a95c4060d41d8f287cf4ced5d46c7bd57">NumRealComps</a> () const </td></tr>
+<tr class="separator:a95c4060d41d8f287cf4ced5d46c7bd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae708158aa3c6c8bbb333a60cf06887d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#ae708158aa3c6c8bbb333a60cf06887d5">NumIntComps</a> () const </td></tr>
+<tr class="separator:ae708158aa3c6c8bbb333a60cf06887d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -470,6 +484,12 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a2e417921acd00358a3af55e11d2ed0e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a2e417921acd00358a3af55e11d2ed0e5">m_runtime_comps_defined</a></td></tr>
+<tr class="separator:a2e417921acd00358a3af55e11d2ed0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb02eee87d9bbd80a80ff1fbb0fb1d64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#adb02eee87d9bbd80a80ff1fbb0fb1d64">m_num_runtime_real</a></td></tr>
+<tr class="separator:adb02eee87d9bbd80a80ff1fbb0fb1d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0031cc138f125cdaad369157691c4270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a0031cc138f125cdaad369157691c4270">m_num_runtime_int</a></td></tr>
+<tr class="separator:a0031cc138f125cdaad369157691c4270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a243921584a4cf66e26df7f2104ce79b1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a243921584a4cf66e26df7f2104ce79b1">particle_size</a></td></tr>
 <tr class="separator:a243921584a4cf66e26df7f2104ce79b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09a8f0a93ae94e2c92927635258b0ee5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a09a8f0a93ae94e2c92927635258b0ee5">superparticle_size</a></td></tr>
@@ -897,6 +917,32 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6cfacb44170a246f2b02c9292c5e31d4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::AddIntComp </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>communicate</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a5e2e20340bf613d45dffb1ce3177c5e2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -974,6 +1020,32 @@ template&lt;int NStructReal, int NStructInt, int NArrayReal, int NArrayInt&gt; <
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a8bae62e744cf08d186b5d66499a6f6f5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::AddRealComp </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>communicate</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1537,6 +1609,48 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
           <td></td>
           <td class="paramtype">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>rr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acbef5bef2e7bd9b1c3bea993ce4514d2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classamrex_1_1ParticleContainer.html#a9c8d796e15d37e7dad6efb3e9fdb4fca">ParticleTileType</a>&amp; <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::DefineAndReturnParticleTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tile</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2653,6 +2767,31 @@ template&lt;int NStructReal, int NStructInt, int NArrayReal, int NArrayInt&gt; <
 
 </div>
 </div>
+<a class="anchor" id="ae708158aa3c6c8bbb333a60cf06887d5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::NumIntComps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a2edf149588bf5390e8fc14ad2e64d7ba"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2698,6 +2837,81 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a95c4060d41d8f287cf4ced5d46c7bd57"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::NumRealComps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a33f8a4b1f9577723ba6ff469cb512b5b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::NumRuntimeIntComps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5bccb747039f092dc962598d04d44dd1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::NumRuntimeRealComps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -4831,6 +5045,50 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
 
 </div>
 </div>
+<a class="anchor" id="a0031cc138f125cdaad369157691c4270"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::m_num_runtime_int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb02eee87d9bbd80a80ff1fbb0fb1d64"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::m_num_runtime_real</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4fa9365dbc47e60f255cec1ce3f19ecc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4842,6 +5100,28 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt;<a class="el" href="classamrex_1_1ParticleContainer.html#a2c82102263d5f301111f85c31af9bd8a">ParticleLevel</a>&gt; <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::m_particles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e417921acd00358a3af55e11d2ed0e5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::m_runtime_comps_defined</td>
         </tr>
       </table>
   </td>

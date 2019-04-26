@@ -111,6 +111,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9898bce8e0a4611b3714c909196ecfc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#a9898bce8e0a4611b3714c909196ecfc8">StructOfArrays</a> ()</td></tr>
 <tr class="separator:a9898bce8e0a4611b3714c909196ecfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8e40d70a3171352f72054451a1a04c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#af8e40d70a3171352f72054451a1a04c8">define</a> (int a_num_runtime_real, int a_num_runtime_int)</td></tr>
+<tr class="separator:af8e40d70a3171352f72054451a1a04c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedb040a21ebc05bf0a46116e20f8422d"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structamrex_1_1StructOfArrays.html#ac78510b872fa9a2af6ffaaaeb9ecebfb">RealVector</a>, NReal &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#aedb040a21ebc05bf0a46116e20f8422d">GetRealData</a> ()</td></tr>
 <tr class="separator:aedb040a21ebc05bf0a46116e20f8422d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93cbbaf1f932ea050b89d581b54de065"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structamrex_1_1StructOfArrays.html#a1309b958dfc6b3244609e24544a2b37e">IntVector</a>, NInt &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#a93cbbaf1f932ea050b89d581b54de065">GetIntData</a> ()</td></tr>
@@ -164,6 +166,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aafb423c704668ff475358d53fdcd0087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337cfb713660d7f0d6e9f3a789208789"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structamrex_1_1StructOfArrays.html#a1309b958dfc6b3244609e24544a2b37e">IntVector</a>, NInt &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#a337cfb713660d7f0d6e9f3a789208789">m_idata</a></td></tr>
 <tr class="separator:a337cfb713660d7f0d6e9f3a789208789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051a6bf3d0f23d34c06c3b3c6249a8dd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structamrex_1_1StructOfArrays.html#ac78510b872fa9a2af6ffaaaeb9ecebfb">RealVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#a051a6bf3d0f23d34c06c3b3c6249a8dd">m_runtime_rdata</a></td></tr>
+<tr class="separator:a051a6bf3d0f23d34c06c3b3c6249a8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a2fab24f5880fd105ae85982e9a6fd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structamrex_1_1StructOfArrays.html#a1309b958dfc6b3244609e24544a2b37e">IntVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#af5a2fab24f5880fd105ae85982e9a6fd">m_runtime_idata</a></td></tr>
+<tr class="separator:af5a2fab24f5880fd105ae85982e9a6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36118f307cd2842e030a0fb578acd052"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1StructOfArrays.html#a36118f307cd2842e030a0fb578acd052">m_defined</a></td></tr>
+<tr class="separator:a36118f307cd2842e030a0fb578acd052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a1309b958dfc6b3244609e24544a2b37e"></a>
@@ -221,6 +229,42 @@ template&lt;int NReal, int NInt&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af8e40d70a3171352f72054451a1a04c8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NReal, int NInt&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structamrex_1_1StructOfArrays.html">amrex::StructOfArrays</a>&lt; NReal, NInt &gt;::define </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_num_runtime_real</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a_num_runtime_int</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a93cbbaf1f932ea050b89d581b54de065"></a>
 <div class="memitem">
 <div class="memproto">
@@ -688,6 +732,28 @@ template&lt;int NReal, int NInt&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a36118f307cd2842e030a0fb578acd052"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NReal, int NInt&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structamrex_1_1StructOfArrays.html">amrex::StructOfArrays</a>&lt; NReal, NInt &gt;::m_defined</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a337cfb713660d7f0d6e9f3a789208789"></a>
 <div class="memitem">
 <div class="memproto">
@@ -735,6 +801,50 @@ template&lt;int NReal, int NInt&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::array&lt;<a class="el" href="structamrex_1_1StructOfArrays.html#ac78510b872fa9a2af6ffaaaeb9ecebfb">RealVector</a>, NReal&gt; <a class="el" href="structamrex_1_1StructOfArrays.html">amrex::StructOfArrays</a>&lt; NReal, NInt &gt;::m_rdata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af5a2fab24f5880fd105ae85982e9a6fd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NReal, int NInt&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structamrex_1_1StructOfArrays.html#a1309b958dfc6b3244609e24544a2b37e">IntVector</a> &gt; <a class="el" href="structamrex_1_1StructOfArrays.html">amrex::StructOfArrays</a>&lt; NReal, NInt &gt;::m_runtime_idata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a051a6bf3d0f23d34c06c3b3c6249a8dd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NReal, int NInt&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structamrex_1_1StructOfArrays.html#ac78510b872fa9a2af6ffaaaeb9ecebfb">RealVector</a>&gt; <a class="el" href="structamrex_1_1StructOfArrays.html">amrex::StructOfArrays</a>&lt; NReal, NInt &gt;::m_runtime_rdata</td>
         </tr>
       </table>
   </td>
