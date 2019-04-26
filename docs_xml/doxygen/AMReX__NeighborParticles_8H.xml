@@ -1809,29 +1809,57 @@
 <codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fillNeighborsMPIGPU(std::map&lt;int,<sp/>SendBuffer&gt;&amp;<sp/>not_ours);</highlight></codeline>
 <codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>buildNeighborMask<sp/>();</highlight></codeline>
-<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>are<sp/>used<sp/>to<sp/>keep<sp/>track<sp/>of<sp/>which<sp/>particles<sp/>need<sp/>to<sp/>be<sp/>ghosted<sp/>to<sp/>which<sp/>grids</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_neighbor_mask_initialized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;amrex::iMultiFab&gt;<sp/>m_neighbor_mask_ptr;</highlight></codeline>
-<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::vector&lt;std::vector&lt;int&gt;<sp/>&gt;<sp/>&gt;<sp/>m_grid_map;</highlight></codeline>
-<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>amrex::Gpu::HostVector&lt;int&gt;<sp/>&gt;<sp/>m_start;</highlight></codeline>
-<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>amrex::Gpu::HostVector&lt;int&gt;<sp/>&gt;<sp/>m_stop;</highlight></codeline>
-<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::pair&lt;int,<sp/>int&gt;,<sp/><ref refid="classamrex_1_1NeighborList" kindref="compound">amrex::NeighborList&lt;ParticleType&gt;</ref><sp/>&gt;<sp/>m_neighbor_list;</highlight></codeline>
-<codeline lineno="359"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="360"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="362"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AMReX__NeighborParticlesI_8H" kindref="compound">AMReX_NeighborParticlesI.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="364"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="365"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AMReX__NeighborParticlesGPUImpl_8H" kindref="compound">AMReX_NeighborParticlesGPUImpl.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="366"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="367"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AMReX__NeighborParticlesCPUImpl_8H" kindref="compound">AMReX_NeighborParticlesCPUImpl.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="368"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="370"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="371"><highlight class="normal"></highlight></codeline>
-<codeline lineno="372"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_NEIGHBORPARTICLES_H_</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">NeighborCode<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_id;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>periodic_shift;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">NeighborTask<sp/>{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_id;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/>box;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>periodic_shift;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NeighborTask(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_grid_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&amp;<sp/>a_box,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>a_periodic_shift)</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>grid_id(a_grid_id),<sp/>box(a_box),<sp/>periodic_shift(a_periodic_shift)<sp/>{}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&lt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NeighborTask&amp;<sp/>other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grid_id<sp/>!=<sp/>other.grid_id)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>grid_id<sp/>&lt;<sp/>other.grid_id;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(box<sp/><sp/><sp/><sp/><sp/>!=<sp/>other.box<sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>box<sp/>&lt;<sp/>other.box;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AMREX_D_TERM(</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(periodic_shift[0]<sp/>!=<sp/>other.periodic_shift[0])</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>periodic_shift[0]<sp/>&lt;<sp/>other.periodic_shift[0];,</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(periodic_shift[1]<sp/>!=<sp/>other.periodic_shift[1])</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>periodic_shift[1]<sp/>&lt;<sp/>other.periodic_shift[1];,</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(periodic_shift[2]<sp/>!=<sp/>other.periodic_shift[2])</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>periodic_shift[2]<sp/>&lt;<sp/>other.periodic_shift[2];</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>are<sp/>used<sp/>to<sp/>keep<sp/>track<sp/>of<sp/>which<sp/>particles<sp/>need<sp/>to<sp/>be<sp/>ghosted<sp/>to<sp/>which<sp/>grids</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_neighbor_mask_initialized<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;<ref refid="namespaceamrex" kindref="compound">amrex</ref>::<ref refid="classamrex_1_1iMultiFab" kindref="compound">iMultiFab</ref>&gt;<sp/>m_neighbor_mask_ptr;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::vector&lt;NeighborCode&gt;<sp/>&gt;<sp/>&gt;<sp/>m_grid_map;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><ref refid="namespaceamrex" kindref="compound">amrex</ref>::Gpu::<ref refid="namespaceamrex_1_1Cuda_1adcb14c2960a046890c80ce8039d80e59" kindref="member">HostVector</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>&gt;<sp/>m_start;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><ref refid="namespaceamrex" kindref="compound">amrex</ref>::Gpu::<ref refid="namespaceamrex_1_1Cuda_1adcb14c2960a046890c80ce8039d80e59" kindref="member">HostVector</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;<sp/>&gt;<sp/>m_stop;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::pair&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;,<sp/><ref refid="namespaceamrex" kindref="compound">amrex</ref>::<ref refid="classamrex_1_1NeighborList" kindref="compound">NeighborList</ref>&lt;<ref refid="classamrex_1_1NeighborParticleContainer_1aa1d79fe5cc0935cf6d819bbbd00d973b" kindref="member">ParticleType</ref>&gt;<sp/>&gt;<sp/>m_neighbor_list;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AMReX__NeighborParticlesI_8H" kindref="compound">AMReX_NeighborParticlesI.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AMReX__NeighborParticlesGPUImpl_8H" kindref="compound">AMReX_NeighborParticlesGPUImpl.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AMReX__NeighborParticlesCPUImpl_8H" kindref="compound">AMReX_NeighborParticlesCPUImpl.H</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="398"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_NEIGHBORPARTICLES_H_</highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborParticles.H"/>
   </compounddef>
