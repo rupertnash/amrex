@@ -23,7 +23,7 @@ var searchData=
   ['init_5fgeom',['init_geom',['../classamrex_1_1LSFactory.html#ad5592ead970d4cce99cf029a052625be',1,'amrex::LSFactory']]],
   ['initamr',['InitAmr',['../classamrex_1_1Amr.html#a9214cdbdc7fddff0ba8afd7d592ba869',1,'amrex::Amr']]],
   ['initamrcore',['InitAmrCore',['../classamrex_1_1AmrCore.html#af614cfbec1f40953a32b0786d25f5f6f',1,'amrex::AmrCore']]],
-  ['initamrmesh',['InitAmrMesh',['../classamrex_1_1AmrMesh.html#a6e425fd42753a583ee1cd01736a55d22',1,'amrex::AmrMesh']]],
+  ['initamrmesh',['InitAmrMesh',['../classamrex_1_1AmrMesh.html#aaf7c3053311dbccc5bfa383c5b076026',1,'amrex::AmrMesh']]],
   ['initblprofdatablock',['InitBLProfDataBlock',['../classBLProfStats.html#a34dbaa29f765d4ff500930aca6900d45',1,'BLProfStats']]],
   ['initcoefficients',['initCoefficients',['../classamrex_1_1ABecLaplacian.html#a59c0c0c840034d23a0b9c211d9462a83',1,'amrex::ABecLaplacian::initCoefficients()'],['../classamrex_1_1ABec4.html#a43312dba2d68a80e0c96c9f25bc04bdc',1,'amrex::ABec4::initCoefficients()'],['../classamrex_1_1DivVis.html#a1d4742da02a48b2258dccf0d5d44d69d',1,'amrex::DivVis::initCoefficients()']]],
   ['initcommdatablock',['InitCommDataBlock',['../classBLProfStats.html#abb32607310aba38c2f1831111d657c3c',1,'BLProfStats::InitCommDataBlock()'],['../classCommProfStats.html#acfb90e6b7303a7d0bec5cec72b70aed7',1,'CommProfStats::InitCommDataBlock()']]],

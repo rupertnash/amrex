@@ -35,10 +35,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrCore.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrCore.cpp" bodystart="36" bodyend="41"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1AmrCore_1a74e9fe38553721adb969a72f111925b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1AmrCore_1a96465961408a6ee3640c15e64bcac7f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>amrex::AmrCore::AmrCore</definition>
-        <argsstring>(const RealBox *rb, int max_level_in, const Vector&lt; int &gt; &amp;n_cell_in, int coord=-1)</argsstring>
+        <argsstring>(const RealBox *rb, int max_level_in, const Vector&lt; int &gt; &amp;n_cell_in, int coord=-1, Vector&lt; IntVect &gt; ref_ratios=Vector&lt; IntVect &gt;())</argsstring>
         <name>AmrCore</name>
         <param>
           <type>const <ref refid="classamrex_1_1RealBox" kindref="compound">RealBox</ref> *</type>
@@ -56,6 +56,11 @@
           <type>int</type>
           <declname>coord</declname>
           <defval>-1</defval>
+        </param>
+        <param>
+          <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt;</type>
+          <declname>ref_ratios</declname>
+          <defval><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> &gt;()</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -493,10 +498,10 @@
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrCore.H" line="25" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrCore.H" bodystart="23" bodyend="84"/>
     <listofallmembers>
       <member refid="classamrex_1_1AmrCore_1a30f4c446e360d02875146f91f942012c" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrCore</name></member>
-      <member refid="classamrex_1_1AmrCore_1a74e9fe38553721adb969a72f111925b8" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrCore</name></member>
+      <member refid="classamrex_1_1AmrCore_1a96465961408a6ee3640c15e64bcac7f5" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrCore</name></member>
       <member refid="classamrex_1_1AmrCore_1ac0a84aa89a7db1e9543096d9c9f50a65" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrCore</name></member>
       <member refid="classamrex_1_1AmrMesh_1a163e8a28e1f841b2c174d6d34664e2d3" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrMesh</name></member>
-      <member refid="classamrex_1_1AmrMesh_1a13509f5a978e31215ea7e48c5c3803f8" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrMesh</name></member>
+      <member refid="classamrex_1_1AmrMesh_1ac53a8f57f698277e73daed8ba35299fb" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrMesh</name></member>
       <member refid="classamrex_1_1AmrMesh_1aa3d1b57d3957feca7d0f897ec2e62824" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>AmrMesh</name></member>
       <member refid="classamrex_1_1AmrMesh_1acdbddd33ae38b3d038fcaa14ce05e039" prot="protected" virt="non-virtual"><scope>amrex::AmrCore</scope><name>blocking_factor</name></member>
       <member refid="classamrex_1_1AmrMesh_1af4a41ee86449b2afa949b6d68f6faf6f" prot="public" virt="non-virtual"><scope>amrex::AmrCore</scope><name>blockingFactor</name></member>
