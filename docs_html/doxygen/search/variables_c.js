@@ -61,6 +61,7 @@ var searchData=
   ['m_5fcfp_5flocalindex',['m_cfp_localindex',['../classamrex_1_1YAFluxRegister.html#a1de636a21ef7f808042c3ad6ebefd84e',1,'amrex::YAFluxRegister']]],
   ['m_5fcfp_5fmask',['m_cfp_mask',['../classamrex_1_1YAFluxRegister.html#a31991246a5f75c0de9fbdfaf784db4d9',1,'amrex::YAFluxRegister']]],
   ['m_5fcfpatch',['m_cfpatch',['../classamrex_1_1YAFluxRegister.html#a3f868dbecc624c8d0735356953e6911a',1,'amrex::YAFluxRegister']]],
+  ['m_5fcg_5fverbose',['m_cg_verbose',['../classamrex_1_1MacProjector.html#ab96a1c2aef1838197721ffa39692d29d',1,'amrex::MacProjector']]],
   ['m_5fcoarse_5fbc_5floc',['m_coarse_bc_loc',['../classamrex_1_1MLLinOp.html#abc7e6e6252f9ecc63c86dcbd99250e10',1,'amrex::MLLinOp']]],
   ['m_5fcoarse_5fdata_5fcrse_5fratio',['m_coarse_data_crse_ratio',['../classamrex_1_1MLLinOp.html#a1ca01453776c12e634debdc6d09206c3',1,'amrex::MLLinOp']]],
   ['m_5fcoarse_5fdata_5ffor_5fbc',['m_coarse_data_for_bc',['../classamrex_1_1MLLinOp.html#ad1382ee007387f65075acda2f46866f2',1,'amrex::MLLinOp']]],

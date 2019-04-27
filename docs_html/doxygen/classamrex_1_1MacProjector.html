@@ -110,6 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a40be11de707ada075a0353e612afc992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99ff4480a6b0e8c0131bab59a1794d4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a99ff4480a6b0e8c0131bab59a1794d4b">setVerbose</a> (int v) noexcept</td></tr>
 <tr class="separator:a99ff4480a6b0e8c0131bab59a1794d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c3636c49dbe98f8d198928968fbc21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a28c3636c49dbe98f8d198928968fbc21">setCGVerbose</a> (int v) noexcept</td></tr>
+<tr class="separator:a28c3636c49dbe98f8d198928968fbc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b176787b38fb0cdf57928efda53fc8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a0b176787b38fb0cdf57928efda53fc8a">setBottomSolver</a> (<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4df">MLMG::BottomSolver</a> bottom_solver_type_in) noexcept</td></tr>
 <tr class="separator:a0b176787b38fb0cdf57928efda53fc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af840b40728ddf5e917768b8d91c5f80c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MLLinOp.html">MLLinOp</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#af840b40728ddf5e917768b8d91c5f80c">getLinOp</a> () noexcept</td></tr>
@@ -135,6 +137,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a9d2e8fd9d6d26a8cbfb3145a8ebfb746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac21ccd4081f20e018bd02689b363a35e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#ac21ccd4081f20e018bd02689b363a35e">m_verbose</a> = 0</td></tr>
 <tr class="separator:ac21ccd4081f20e018bd02689b363a35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96a1c2aef1838197721ffa39692d29d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#ab96a1c2aef1838197721ffa39692d29d">m_cg_verbose</a> = 0</td></tr>
+<tr class="separator:ab96a1c2aef1838197721ffa39692d29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38aa95061e693248dfcf66b0bc95328f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4df">MLMG::BottomSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a38aa95061e693248dfcf66b0bc95328f">bottom_solver_type</a> = <a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfae123b37d2b5fd373237e049a1e68ca13">MLMG::BottomSolver::bicgstab</a></td></tr>
 <tr class="separator:a38aa95061e693248dfcf66b0bc95328f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -283,6 +287,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a28c3636c49dbe98f8d198928968fbc21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MacProjector::setCGVerbose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9f4cc3fbe43671a4645c523c761b8539"></a>
 <div class="memitem">
 <div class="memproto">
@@ -363,6 +391,26 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::unique_ptr&lt;<a class="el" href="classamrex_1_1MLABecLaplacian.html">MLABecLaplacian</a>&gt; amrex::MacProjector::m_abeclap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab96a1c2aef1838197721ffa39692d29d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amrex::MacProjector::m_cg_verbose = 0</td>
         </tr>
       </table>
   </td>
