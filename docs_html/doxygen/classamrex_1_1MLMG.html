@@ -108,9 +108,11 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfaa24fa9dac0801f55f51de06cd8f9d132">BottomSolver::smoother</a>, 
 <a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfae123b37d2b5fd373237e049a1e68ca13">BottomSolver::bicgstab</a>, 
 <a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa6e9cf3eef65da697796cf33f27eb0f57">BottomSolver::cg</a>, 
-<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b">BottomSolver::hypre</a>, 
+<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa17ae71b06faf01831e130c5f94157064">BottomSolver::bicgcg</a>, 
 <br />
-&#160;&#160;<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa1c626ad40ecbe4497cfe809fbc98f31f">BottomSolver::petsc</a>
+&#160;&#160;<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa8d94447f423b03d332649d28ef49bfdb">BottomSolver::cgbicg</a>, 
+<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b">BottomSolver::hypre</a>, 
+<a class="el" href="classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa1c626ad40ecbe4497cfe809fbc98f31f">BottomSolver::petsc</a>
 <br />
  }</td></tr>
 <tr class="separator:aca2027687047f1254d8a103beee1e4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,6 +241,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf664a17642380d701b1b7b08e10fa63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d9aa957bda2ed06061254fb7e187c3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a1d9aa957bda2ed06061254fb7e187c3f">bottomSolveWithPETSc</a> (<a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;x, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;b)</td></tr>
 <tr class="separator:a1d9aa957bda2ed06061254fb7e187c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7449cb19c1e62e14a47d020cb696f0b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a7449cb19c1e62e14a47d020cb696f0b5">bottomSolveWithCG</a> (<a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;x, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;b, <a class="el" href="classamrex_1_1MLCGSolver.html#ac7b947856c5f3a21769938261be5d521">MLCGSolver::Type</a> type)</td></tr>
+<tr class="separator:a7449cb19c1e62e14a47d020cb696f0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -394,6 +398,10 @@ Friends</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aca2027687047f1254d8a103beee1e4dfae123b37d2b5fd373237e049a1e68ca13"></a>bicgstab&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aca2027687047f1254d8a103beee1e4dfa6e9cf3eef65da697796cf33f27eb0f57"></a>cg&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aca2027687047f1254d8a103beee1e4dfa17ae71b06faf01831e130c5f94157064"></a>bicgcg&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aca2027687047f1254d8a103beee1e4dfa8d94447f423b03d332649d28ef49bfdb"></a>cgbicg&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b"></a>hypre&#160;</td><td class="fielddoc">
 </td></tr>
@@ -566,6 +574,38 @@ Friends</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7449cb19c1e62e14a47d020cb696f0b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amrex::MLMG::bottomSolveWithCG </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1MLCGSolver.html#ac7b947856c5f3a21769938261be5d521">MLCGSolver::Type</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

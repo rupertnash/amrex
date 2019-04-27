@@ -85,6 +85,7 @@ var searchData=
   ['bordersize',['borderSize',['../classamrex_1_1TagBoxArray.html#ab868f2c94dcf0dd6ab61286c65835233',1,'amrex::TagBoxArray']]],
   ['bottomcommunicator',['BottomCommunicator',['../classamrex_1_1MLLinOp.html#a77b33530b316399f5fb5314a846d9b7e',1,'amrex::MLLinOp']]],
   ['bottomsolve',['bottomSolve',['../classamrex_1_1MLMG.html#a105413ba8fce8beab99c2b7f11f0f028',1,'amrex::MLMG']]],
+  ['bottomsolvewithcg',['bottomSolveWithCG',['../classamrex_1_1MLMG.html#a7449cb19c1e62e14a47d020cb696f0b5',1,'amrex::MLMG']]],
   ['bottomsolvewithhypre',['bottomSolveWithHypre',['../classamrex_1_1MLMG.html#aaf664a17642380d701b1b7b08e10fa63',1,'amrex::MLMG']]],
   ['bottomsolvewithpetsc',['bottomSolveWithPETSc',['../classamrex_1_1MLMG.html#a1d9aa957bda2ed06061254fb7e187c3f',1,'amrex::MLMG']]],
   ['boundarywidth',['BoundaryWidth',['../classamrex_1_1AmrData.html#ae370a9476e1e6556480e195fe3ced254',1,'amrex::AmrData']]],

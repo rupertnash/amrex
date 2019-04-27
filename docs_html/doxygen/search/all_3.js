@@ -87,6 +87,7 @@ var searchData=
   ['cfinfocacheiter',['CFinfoCacheIter',['../classamrex_1_1FabArrayBase.html#ae15d8b6b473748103771433c507773ad',1,'amrex::FabArrayBase']]],
   ['cg',['cg',['../classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa6e9cf3eef65da697796cf33f27eb0f57',1,'amrex::MLMG::cg()'],['../classamrex_1_1CGSolver.html#a0c6d6797999b216f26492f170891497ba43998d5e117bedcd91f4c6045307cba7',1,'amrex::CGSolver::CG()'],['../classamrex_1_1MLCGSolver.html#ac7b947856c5f3a21769938261be5d521a5202c6586cac8bee468e86d1ff854231',1,'amrex::MLCGSolver::CG()']]],
   ['cg_5fsolver',['cg_solver',['../classamrex_1_1CGSolver.html#a4af7811a9f5617ba318f3b37cc160718',1,'amrex::CGSolver']]],
+  ['cgbicg',['cgbicg',['../classamrex_1_1MLMG.html#aca2027687047f1254d8a103beee1e4dfa8d94447f423b03d332649d28ef49bfdb',1,'amrex::MLMG']]],
   ['cgsolver',['CGSolver',['../classamrex_1_1CGSolver.html',1,'amrex']]],
   ['cgsolver',['CGSolver',['../classamrex_1_1CGSolver.html#ae8bd9022532e30643d758bdc1cdc134b',1,'amrex::CGSolver::CGSolver(LinOp &amp;_lp, bool _use_mg_precond=false, int _lev=0)'],['../classamrex_1_1CGSolver.html#aca325b5d06e29897bb9e4aec580abbf8',1,'amrex::CGSolver::CGSolver(const CGSolver &amp;)']]],
   ['charvector',['CharVector',['../classamrex_1_1ParticleContainer.html#a3d8a82738e731377cd4c172b7aefac5f',1,'amrex::ParticleContainer']]],
