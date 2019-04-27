@@ -7452,6 +7452,7 @@
     <member refid="classamrex_1_1MLLinOp_1a4d96a0475759eef80d096851fdedd411" kind="function"><name>setVerbose</name></member>
     <member refid="classamrex_1_1MLLinOp_1a45b72169ccf285c17f439c4e990c0f58" kind="function"><name>setMaxOrder</name></member>
     <member refid="classamrex_1_1MLLinOp_1a1189e4016e7757083343a93649f102aa" kind="function"><name>getMaxOrder</name></member>
+    <member refid="classamrex_1_1MLLinOp_1a7c1c62615a265e25a92ce37b3b287933" kind="function"><name>getDefaultBottomSolver</name></member>
     <member refid="classamrex_1_1MLLinOp_1acd287b03ea1a73f47ba1f08bb10a484d" kind="function"><name>getNComp</name></member>
     <member refid="classamrex_1_1MLLinOp_1ab68d7b11273242e632c9f8a422c911d7" kind="function"><name>needsUpdate</name></member>
     <member refid="classamrex_1_1MLLinOp_1ad5afb08b77db92744e5e7f7f02e5c83b" kind="function"><name>update</name></member>
@@ -7503,21 +7504,14 @@
     <member refid="classamrex_1_1MLLinOp_1aafd84fa947e45627503861e5707201dd" kind="function"><name>makeConsolidatedDMap</name></member>
   </compound>
   <compound refid="classamrex_1_1MLMG" kind="class"><name>amrex::MLMG</name>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4df" kind="enum"><name>BottomSolver</name></member>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfaa24fa9dac0801f55f51de06cd8f9d132" kind="enumvalue"><name>smoother</name></member>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfae123b37d2b5fd373237e049a1e68ca13" kind="enumvalue"><name>bicgstab</name></member>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa6e9cf3eef65da697796cf33f27eb0f57" kind="enumvalue"><name>cg</name></member>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa17ae71b06faf01831e130c5f94157064" kind="enumvalue"><name>bicgcg</name></member>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa8d94447f423b03d332649d28ef49bfdb" kind="enumvalue"><name>cgbicg</name></member>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa9d87b5177c778e77c47e29f2b536cd1b" kind="enumvalue"><name>hypre</name></member>
-    <member refid="classamrex_1_1MLMG_1aca2027687047f1254d8a103beee1e4dfa1c626ad40ecbe4497cfe809fbc98f31f" kind="enumvalue"><name>petsc</name></member>
-    <member refid="classamrex_1_1MLMG_1a864ffbd5cc09c630993c949c5d890d0f" kind="typedef"><name>BCMode</name></member>
-    <member refid="classamrex_1_1MLMG_1a93725420770bf42d532f9ee7dea87c2f" kind="typedef"><name>Location</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001" kind="enum"><name>timer_types</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001a9806779ed6ebcc94ecd07dbb3ff6acca" kind="enumvalue"><name>solve_time</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001af8c1043cde20f8e1d9d022abb2c9ffad" kind="enumvalue"><name>iter_time</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001accea4ad3befe3a4c0c996cacbc4b1fb3" kind="enumvalue"><name>bottom_time</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001ae447a282e35218ac782b215c4a1fccfc" kind="enumvalue"><name>ntimers</name></member>
+    <member refid="classamrex_1_1MLMG_1a864ffbd5cc09c630993c949c5d890d0f" kind="typedef"><name>BCMode</name></member>
+    <member refid="classamrex_1_1MLMG_1a93725420770bf42d532f9ee7dea87c2f" kind="typedef"><name>Location</name></member>
+    <member refid="classamrex_1_1MLMG_1a31f80f78e0f4a69ccc3f167e62ae7d51" kind="typedef"><name>BottomSolver</name></member>
     <member refid="classamrex_1_1MLMG_1a7b344595276c27ed17dacb3ea1fb95aa" kind="friend"><name>MLCGSolver</name></member>
     <member refid="classamrex_1_1MLMG_1af81888354825d23d402d7787f0fe4dc9" kind="variable"><name>verbose</name></member>
     <member refid="classamrex_1_1MLMG_1ae4f94ee42b8da24efdafd34b023e2457" kind="variable"><name>max_iters</name></member>
@@ -7658,6 +7652,7 @@
     <member refid="classamrex_1_1MLNodeLaplacian_1aaa74c5ed1094317d719bffbe89f016c9" kind="function"><name>setGaussSeidel</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a2d7beea7bc93f71c8970977613d2ff08" kind="function"><name>setHarmonicAverage</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1af44fe2628228f69789874df4dbcab755" kind="function"><name>setCoarseningStrategy</name></member>
+    <member refid="classamrex_1_1MLNodeLaplacian_1af6d2be33c0d71092e0231e878c6b7cd9" kind="function"><name>getDefaultBottomSolver</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a049861a9a5c04611f13be0978ebb6232" kind="function"><name>restriction</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a44f3d04638b6cde86deb3520faafcac5" kind="function"><name>interpolation</name></member>
     <member refid="classamrex_1_1MLNodeLaplacian_1a1f56925dec0934532aaaf4dd1c6c7c42" kind="function"><name>averageDownSolutionRHS</name></member>
@@ -10154,6 +10149,15 @@
     <member refid="namespaceamrex_1ac6a345f3c5f30b5d97087d43bbf1c7ae" kind="enum"><name>MCBC_Mode</name></member>
     <member refid="namespaceamrex_1ac6a345f3c5f30b5d97087d43bbf1c7aea690909eddef5100a075a6465dc94537f" kind="enumvalue"><name>MCHomogeneous_BC</name></member>
     <member refid="namespaceamrex_1ac6a345f3c5f30b5d97087d43bbf1c7aea372bb314280acee54f7e683ec43bbc19" kind="enumvalue"><name>MCInhomogeneous_BC</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4" kind="enum"><name>BottomSolver</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4a7a1920d61156abc05a60135aefe8bc67" kind="enumvalue"><name>Default</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4aa24fa9dac0801f55f51de06cd8f9d132" kind="enumvalue"><name>smoother</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4ae123b37d2b5fd373237e049a1e68ca13" kind="enumvalue"><name>bicgstab</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4a6e9cf3eef65da697796cf33f27eb0f57" kind="enumvalue"><name>cg</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4a17ae71b06faf01831e130c5f94157064" kind="enumvalue"><name>bicgcg</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4a8d94447f423b03d332649d28ef49bfdb" kind="enumvalue"><name>cgbicg</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4a9d87b5177c778e77c47e29f2b536cd1b" kind="enumvalue"><name>hypre</name></member>
+    <member refid="namespaceamrex_1a9303c93b47b7839de8ce552cb7cb21c4a1c626ad40ecbe4497cfe809fbc98f31f" kind="enumvalue"><name>petsc</name></member>
     <member refid="namespaceamrex_1a046a83e139b61c9ec447bd89eed50967" kind="typedef"><name>DeriveFunc</name></member>
     <member refid="namespaceamrex_1abf838b25d605cefbf6150bc883f4741d" kind="typedef"><name>DeriveFunc3D</name></member>
     <member refid="namespaceamrex_1a83e8cbe20f4d807987849da5431ba2c5" kind="typedef"><name>DeriveFuncFab</name></member>

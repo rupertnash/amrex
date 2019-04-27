@@ -8,6 +8,7 @@ var searchData=
   ['bndryfunc3ddefault',['BndryFunc3DDefault',['../namespaceamrex.html#ab0cdf132a72bb586fa96bbdc53a19149',1,'amrex']]],
   ['bndryfuncdefault',['BndryFuncDefault',['../namespaceamrex.html#a395b6c263aecc344bf7648fe2d8d75cf',1,'amrex']]],
   ['bndryfuncfabdefault',['BndryFuncFabDefault',['../namespaceamrex.html#a1a30e1b65c56dcadc792e4ecdbe258f8',1,'amrex']]],
+  ['bottomsolver',['BottomSolver',['../classamrex_1_1MLMG.html#a31f80f78e0f4a69ccc3f167e62ae7d51',1,'amrex::MLMG']]],
   ['boundarypointlist',['BoundaryPointList',['../classamrex_1_1Amr.html#a8dc323a910cf01ef443a1664ccabdf83',1,'amrex::Amr']]],
   ['busylist',['BusyList',['../classamrex_1_1EArena.html#a05797269791825a6ff9f39ec670c5e1c',1,'amrex::EArena']]]
 ];
