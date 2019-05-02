@@ -174,6 +174,8 @@ target_sources( amrex
    AMReX_GpuControl.cpp
    AMReX_GpuLaunch.H
    AMReX_GpuError.H
+   AMReX_GpuTimer.H
+   AMReX_GpuTimer.cpp
    # CUDA --------------------------------------------------------------------
    AMReX_CudaAllocators.H
    AMReX_CudaAllocators.cpp
