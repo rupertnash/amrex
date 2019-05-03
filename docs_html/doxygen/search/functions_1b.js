@@ -121,6 +121,7 @@ var searchData=
   ['_7emlnodelaplacian',['~MLNodeLaplacian',['../classamrex_1_1MLNodeLaplacian.html#aeba4557ed8cd5a660c5925f4ebc0e271',1,'amrex::MLNodeLaplacian']]],
   ['_7emlnodelinop',['~MLNodeLinOp',['../classamrex_1_1MLNodeLinOp.html#a07faf757bcc476afe8bf3b88997d3039',1,'amrex::MLNodeLinOp']]],
   ['_7emlpoisson',['~MLPoisson',['../classamrex_1_1MLPoisson.html#aa6be26cbc36200cddc21f42d00de1483',1,'amrex::MLPoisson']]],
+  ['_7emltensorop',['~MLTensorOp',['../classamrex_1_1MLTensorOp.html#ab48223f6428f6da2f57b9912d9d9b423',1,'amrex::MLTensorOp']]],
   ['_7emulticutfab',['~MultiCutFab',['../classamrex_1_1MultiCutFab.html#ab4e7bba2a1d004437f5175e6fba94282',1,'amrex::MultiCutFab']]],
   ['_7emultifab',['~MultiFab',['../classamrex_1_1MultiFab.html#a67396a85b1bfeb3a102f3926dd3e1632',1,'amrex::MultiFab']]],
   ['_7emultifabcopydescriptor',['~MultiFabCopyDescriptor',['../classamrex_1_1MultiFabCopyDescriptor.html#acaf606670d19b24658f1ea18f34f4cba',1,'amrex::MultiFabCopyDescriptor']]],

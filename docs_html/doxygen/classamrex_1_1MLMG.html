@@ -314,7 +314,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:abc8a02638fb38ec33c9567569a501317"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#abc8a02638fb38ec33c9567569a501317">rhs</a></td></tr>
 <tr class="separator:abc8a02638fb38ec33c9567569a501317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86dd40d4379f5831102e595cecfad692"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a86dd40d4379f5831102e595cecfad692">res</a></td></tr>
-<tr class="memdesc:a86dd40d4379f5831102e595cecfad692"><td class="mdescLeft">&#160;</td><td class="mdescRight">L(sol) = rhs.  <a href="#a86dd40d4379f5831102e595cecfad692">More...</a><br /></td></tr>
+<tr class="memdesc:a86dd40d4379f5831102e595cecfad692"><td class="mdescLeft">&#160;</td><td class="mdescRight">First <a class="el" href="classamrex_1_1Vector.html" title="This class is a thin wrapper around std::vector. Unlike vector, Vector::operator[] provides bound che...">Vector</a>: <a class="el" href="classamrex_1_1Amr.html" title="Manage hierarchy of levels for time-dependent AMR computations. ">Amr</a> levels. 0 is the coarest level Second <a class="el" href="classamrex_1_1Vector.html" title="This class is a thin wrapper around std::vector. Unlike vector, Vector::operator[] provides bound che...">Vector</a>: MG levels. 0 is the finest level.  <a href="#a86dd40d4379f5831102e595cecfad692">More...</a><br /></td></tr>
 <tr class="separator:a86dd40d4379f5831102e595cecfad692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee464af91d358583757fd104da92b407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; std::unique_ptr&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#aee464af91d358583757fd104da92b407">cor</a></td></tr>
 <tr class="memdesc:aee464af91d358583757fd104da92b407"><td class="mdescLeft">&#160;</td><td class="mdescRight">= rhs - L(sol)  <a href="#aee464af91d358583757fd104da92b407">More...</a><br /></td></tr>
@@ -322,7 +322,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ad74a7a55ad770900e7028fbfea7119ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; std::unique_ptr&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#ad74a7a55ad770900e7028fbfea7119ee">cor_hold</a></td></tr>
 <tr class="separator:ad74a7a55ad770900e7028fbfea7119ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a265ef6b4e1fa8487d48ee612843c3cd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a265ef6b4e1fa8487d48ee612843c3cd4">rescor</a></td></tr>
-<tr class="memdesc:a265ef6b4e1fa8487d48ee612843c3cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">= res - L(cor) Residual of the correction form  <a href="#a265ef6b4e1fa8487d48ee612843c3cd4">More...</a><br /></td></tr>
 <tr class="separator:a265ef6b4e1fa8487d48ee612843c3cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67cedda5ad0584d823d1d4fa12d57274"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; std::unique_ptr&lt; <a class="el" href="classamrex_1_1iMultiFab.html">iMultiFab</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLMG.html#a67cedda5ad0584d823d1d4fa12d57274">fine_mask</a></td></tr>
 <tr class="separator:a67cedda5ad0584d823d1d4fa12d57274"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2426,8 +2425,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>L(sol) = rhs. </p>
-<p>First <a class="el" href="classamrex_1_1Vector.html" title="This class is a thin wrapper around std::vector. Unlike vector, Vector::operator[] provides bound che...">Vector</a>: <a class="el" href="classamrex_1_1Amr.html" title="Manage hierarchy of levels for time-dependent AMR computations. ">Amr</a> levels. 0 is the coarest level Second <a class="el" href="classamrex_1_1Vector.html" title="This class is a thin wrapper around std::vector. Unlike vector, Vector::operator[] provides bound che...">Vector</a>: MG levels. 0 is the finest level </p>
+<p>First <a class="el" href="classamrex_1_1Vector.html" title="This class is a thin wrapper around std::vector. Unlike vector, Vector::operator[] provides bound che...">Vector</a>: <a class="el" href="classamrex_1_1Amr.html" title="Manage hierarchy of levels for time-dependent AMR computations. ">Amr</a> levels. 0 is the coarest level Second <a class="el" href="classamrex_1_1Vector.html" title="This class is a thin wrapper around std::vector. Unlike vector, Vector::operator[] provides bound che...">Vector</a>: MG levels. 0 is the finest level. </p>
 
 </div>
 </div>
@@ -2448,7 +2446,6 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>= res - L(cor) Residual of the correction form </p>
 
 </div>
@@ -2470,7 +2467,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy of original rhs </p>
+<p>Copy of original rhs L(sol) = rhs </p>
 
 </div>
 </div>

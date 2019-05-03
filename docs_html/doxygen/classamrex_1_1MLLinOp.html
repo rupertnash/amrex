@@ -119,6 +119,7 @@ Inheritance diagram for amrex::MLLinOp:</div>
 <area href="classamrex_1_1MLALaplacian.html" alt="amrex::MLALaplacian" shape="rect" coords="166,168,322,192"/>
 <area href="classamrex_1_1MLEBABecLap.html" alt="amrex::MLEBABecLap" shape="rect" coords="332,168,488,192"/>
 <area href="classamrex_1_1MLPoisson.html" alt="amrex::MLPoisson" shape="rect" coords="498,168,654,192"/>
+<area href="classamrex_1_1MLTensorOp.html" alt="amrex::MLTensorOp" shape="rect" coords="0,224,156,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -167,6 +168,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa034da35bd05e1fb93b8d876a9840ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#aa034da35bd05e1fb93b8d876a9840ce3">setDomainBC</a> (const <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &amp;lobc, const <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &amp;hibc) noexcept</td></tr>
 <tr class="memdesc:aa034da35bd05e1fb93b8d876a9840ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boundary of the whole domain. This functions must be called, and must be called before other bc functions.  <a href="#aa034da35bd05e1fb93b8d876a9840ce3">More...</a><br /></td></tr>
 <tr class="separator:aa034da35bd05e1fb93b8d876a9840ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2402e6343df20087a51fb653a147987d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a2402e6343df20087a51fb653a147987d">setDomainBC</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &gt; &amp;lobc, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &gt; &amp;hibc) noexcept</td></tr>
+<tr class="separator:a2402e6343df20087a51fb653a147987d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c150481b635dccaf83cfff3d38b11c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a0c150481b635dccaf83cfff3d38b11c7">needsCoarseDataForBC</a> () const noexcept</td></tr>
 <tr class="memdesc:a0c150481b635dccaf83cfff3d38b11c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needs coarse data for bc? If the lowest level grids does not cover the entire domain, coarse level data are needed for supplying Dirichlet bc at coarse/fine boundary, even when the domain bc is not Dirichlet.  <a href="#a0c150481b635dccaf83cfff3d38b11c7">More...</a><br /></td></tr>
 <tr class="separator:a0c150481b635dccaf83cfff3d38b11c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -317,10 +320,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a06ea1608702e52d38c0eceaa180bad7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2faeb23bc1e93e2b0cd693cb94a18d08"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="structamrex_1_1MLLinOp_1_1CommContainer.html">CommContainer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a2faeb23bc1e93e2b0cd693cb94a18d08">m_raii_comm</a></td></tr>
 <tr class="separator:a2faeb23bc1e93e2b0cd693cb94a18d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43d529fe1b438af26fbc4a2e9c935549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a43d529fe1b438af26fbc4a2e9c935549">m_lobc</a> {{<a class="el" href="namespaceamrex.html#a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd">AMREX_D_DECL</a>(BCType::bogus,BCType::bogus,BCType::bogus)}}</td></tr>
-<tr class="separator:a43d529fe1b438af26fbc4a2e9c935549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab46e1fbe510eaa6df03a326e2b156eca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#ab46e1fbe510eaa6df03a326e2b156eca">m_hibc</a> {{<a class="el" href="namespaceamrex.html#a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd">AMREX_D_DECL</a>(BCType::bogus,BCType::bogus,BCType::bogus)}}</td></tr>
-<tr class="separator:ab46e1fbe510eaa6df03a326e2b156eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac661e9e03991a16c7aca157ca2447b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#aac661e9e03991a16c7aca157ca2447b0">m_lobc</a></td></tr>
+<tr class="separator:aac661e9e03991a16c7aca157ca2447b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619323b7ef2de7c06f7c480c9bcdf3d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a619323b7ef2de7c06f7c480c9bcdf3d2">m_hibc</a></td></tr>
+<tr class="separator:a619323b7ef2de7c06f7c480c9bcdf3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa53a765aea0ed0c4e7410d147380079f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#aa53a765aea0ed0c4e7410d147380079f">m_needs_coarse_data_for_bc</a></td></tr>
 <tr class="separator:aa53a765aea0ed0c4e7410d147380079f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ca01453776c12e634debdc6d09206c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLLinOp.html#a1ca01453776c12e634debdc6d09206c3">m_coarse_data_crse_ratio</a> = -1</td></tr>
@@ -1506,6 +1509,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="classamrex_1_1MLTensorOp.html#ad8e26be957c9fcae944341aeac82ed44">amrex::MLTensorOp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a48b2fe73722eee0a1d50b6e0b9558174"></a>
@@ -1623,7 +1628,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a87e37e53d1a9848d96020c9cb907b6f2">amrex::MLNodeLaplacian</a>, <a class="el" href="classamrex_1_1MLEBABecLap.html#a76f2e335bb21fa21b201176e1625dc7d">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#a5d7523466b78624305980a3693888b47">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLALaplacian.html#a3327d13677ab679ac755d53bf4b62c4d">amrex::MLALaplacian</a>, and <a class="el" href="classamrex_1_1MLPoisson.html#af931d27f11a0689a99f1e6802e03a647">amrex::MLPoisson</a>.</p>
+<p>Implemented in <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a87e37e53d1a9848d96020c9cb907b6f2">amrex::MLNodeLaplacian</a>, <a class="el" href="classamrex_1_1MLEBABecLap.html#a76f2e335bb21fa21b201176e1625dc7d">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLTensorOp.html#aef4a818ac9d4702068c50ef6d8a330f4">amrex::MLTensorOp</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#aa0ead02bedca70191f223b455654b49b">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLALaplacian.html#a3327d13677ab679ac755d53bf4b62c4d">amrex::MLALaplacian</a>, and <a class="el" href="classamrex_1_1MLPoisson.html#af931d27f11a0689a99f1e6802e03a647">amrex::MLPoisson</a>.</p>
 
 </div>
 </div>
@@ -1672,7 +1677,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a38f2c190f07653019e5f5a9a7d378f4b">amrex::MLNodeLaplacian</a>, <a class="el" href="classamrex_1_1MLEBABecLap.html#abc36f2dee17e571ec97028c2445275ae">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#ad36563d1ff9efa31c2423c6893018b44">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLALaplacian.html#affef9d8dccfa1d80753639e5c44c33ae">amrex::MLALaplacian</a>, and <a class="el" href="classamrex_1_1MLPoisson.html#a611416a6df32bc3c09b9adabe569b835">amrex::MLPoisson</a>.</p>
+<p>Implemented in <a class="el" href="classamrex_1_1MLNodeLaplacian.html#a38f2c190f07653019e5f5a9a7d378f4b">amrex::MLNodeLaplacian</a>, <a class="el" href="classamrex_1_1MLEBABecLap.html#abc36f2dee17e571ec97028c2445275ae">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLTensorOp.html#aaccfcd45ed23a3c9dc414d032b91e797">amrex::MLTensorOp</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#a4304750fa837f09df7c0d400b147fe2f">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLALaplacian.html#affef9d8dccfa1d80753639e5c44c33ae">amrex::MLALaplacian</a>, and <a class="el" href="classamrex_1_1MLPoisson.html#a611416a6df32bc3c09b9adabe569b835">amrex::MLPoisson</a>.</p>
 
 </div>
 </div>
@@ -1978,7 +1983,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classamrex_1_1MLEBABecLap.html#a3b6ffec4b2696d5c19b4e9639aae71a7">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#a6988f21dce1aaab716768924ad6c1678">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLCellLinOp.html#a0073d05770099d89c87a60e25ab3cc47">amrex::MLCellLinOp</a>, and <a class="el" href="classamrex_1_1MLCellABecLap.html#adb891ed98442838db52ab71e703ff752">amrex::MLCellABecLap</a>.</p>
+<p>Reimplemented in <a class="el" href="classamrex_1_1MLEBABecLap.html#a3b6ffec4b2696d5c19b4e9639aae71a7">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLTensorOp.html#a07b60f41a959afec82a27d5c356b9f7c">amrex::MLTensorOp</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#acf27ddd13356c7c675ec2527d8e80223">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLCellLinOp.html#a0073d05770099d89c87a60e25ab3cc47">amrex::MLCellLinOp</a>, and <a class="el" href="classamrex_1_1MLCellABecLap.html#adb891ed98442838db52ab71e703ff752">amrex::MLCellABecLap</a>.</p>
 
 </div>
 </div>
@@ -2159,7 +2164,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classamrex_1_1MLCellLinOp.html#a142ae4b8e4c68254e81516b5c8e00f4d">amrex::MLCellLinOp</a>, <a class="el" href="classamrex_1_1MLNodeLaplacian.html#ae2134173a1bd7b925000e8072a87082f">amrex::MLNodeLaplacian</a>, <a class="el" href="classamrex_1_1MLEBABecLap.html#af58c8f4a29d4c5e448038686c010e97a">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLNodeLinOp.html#ac604e9b47938e183cd38f8f9ad400668">amrex::MLNodeLinOp</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#a4ca3678b8e04074638df9039e6755ef2">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLALaplacian.html#ad0614934d429a1dec25baadcebf6b88c">amrex::MLALaplacian</a>, <a class="el" href="classamrex_1_1MLPoisson.html#ae640f7b961f96991b1510f316e512cd5">amrex::MLPoisson</a>, and <a class="el" href="classamrex_1_1MLCellABecLap.html#a7d6d2646e9f6afaf7ed70bf0c86fa762">amrex::MLCellABecLap</a>.</p>
+<p>Implemented in <a class="el" href="classamrex_1_1MLCellLinOp.html#a142ae4b8e4c68254e81516b5c8e00f4d">amrex::MLCellLinOp</a>, <a class="el" href="classamrex_1_1MLNodeLaplacian.html#ae2134173a1bd7b925000e8072a87082f">amrex::MLNodeLaplacian</a>, <a class="el" href="classamrex_1_1MLEBABecLap.html#af58c8f4a29d4c5e448038686c010e97a">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLNodeLinOp.html#ac604e9b47938e183cd38f8f9ad400668">amrex::MLNodeLinOp</a>, <a class="el" href="classamrex_1_1MLTensorOp.html#a6591c6b5827c394fe13e119f33ac3fbc">amrex::MLTensorOp</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#a627779ad059394a0bd2b3bede177e12a">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLALaplacian.html#ad0614934d429a1dec25baadcebf6b88c">amrex::MLALaplacian</a>, <a class="el" href="classamrex_1_1MLPoisson.html#ae640f7b961f96991b1510f316e512cd5">amrex::MLPoisson</a>, and <a class="el" href="classamrex_1_1MLCellABecLap.html#a7d6d2646e9f6afaf7ed70bf0c86fa762">amrex::MLCellABecLap</a>.</p>
 
 </div>
 </div>
@@ -2411,6 +2416,40 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2402e6343df20087a51fb653a147987d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MLLinOp::setDomainBC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lobc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; <a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>hibc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52d97117bad0d48c8e73546e7092e7dc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2608,7 +2647,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classamrex_1_1MLCellLinOp.html#a8275c9c33e604f80558255eb2430650b">amrex::MLCellLinOp</a>, and <a class="el" href="classamrex_1_1MLNodeLinOp.html#a99f514acc7c59a80373051fb4e356267">amrex::MLNodeLinOp</a>.</p>
+<p>Implemented in <a class="el" href="classamrex_1_1MLCellLinOp.html#ab18841d6aec78590a56eeaed61fe4345">amrex::MLCellLinOp</a>, <a class="el" href="classamrex_1_1MLTensorOp.html#a7a9ada337f32da21eaa5233a2b67fd73">amrex::MLTensorOp</a>, and <a class="el" href="classamrex_1_1MLNodeLinOp.html#a99f514acc7c59a80373051fb4e356267">amrex::MLNodeLinOp</a>.</p>
 
 </div>
 </div>
@@ -2675,7 +2714,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classamrex_1_1MLEBABecLap.html#afe421eb4fe906b1c2a4ba6a3a179ec79">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#a17711315b7f036b75dd1cb3dcc9b2e5d">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLCellLinOp.html#a6de98ea7f86803972368acd05180431d">amrex::MLCellLinOp</a>, and <a class="el" href="classamrex_1_1MLCellABecLap.html#aa107a7270bd64cf582e25812c5e5cbab">amrex::MLCellABecLap</a>.</p>
+<p>Reimplemented in <a class="el" href="classamrex_1_1MLEBABecLap.html#afe421eb4fe906b1c2a4ba6a3a179ec79">amrex::MLEBABecLap</a>, <a class="el" href="classamrex_1_1MLTensorOp.html#a869e2f4f990e7cb411847fd27ad0daf4">amrex::MLTensorOp</a>, <a class="el" href="classamrex_1_1MLABecLaplacian.html#a7e612906bd561e6b5db7ce47ea0e7d14">amrex::MLABecLaplacian</a>, <a class="el" href="classamrex_1_1MLCellLinOp.html#a6de98ea7f86803972368acd05180431d">amrex::MLCellLinOp</a>, and <a class="el" href="classamrex_1_1MLCellABecLap.html#aa107a7270bd64cf582e25812c5e5cbab">amrex::MLCellABecLap</a>.</p>
 
 </div>
 </div>
@@ -3097,7 +3136,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab46e1fbe510eaa6df03a326e2b156eca"></a>
+<a class="anchor" id="a619323b7ef2de7c06f7c480c9bcdf3d2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3105,7 +3144,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt;<a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM&gt; amrex::MLLinOp::m_hibc {{<a class="el" href="namespaceamrex.html#a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd">AMREX_D_DECL</a>(BCType::bogus,BCType::bogus,BCType::bogus)}}</td>
+          <td class="memname"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt;<a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt;<a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM&gt; &gt; amrex::MLLinOp::m_hibc</td>
         </tr>
       </table>
   </td>
@@ -3137,7 +3176,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a43d529fe1b438af26fbc4a2e9c935549"></a>
+<a class="anchor" id="aac661e9e03991a16c7aca157ca2447b0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3145,7 +3184,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt;<a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM&gt; amrex::MLLinOp::m_lobc {{<a class="el" href="namespaceamrex.html#a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd">AMREX_D_DECL</a>(BCType::bogus,BCType::bogus,BCType::bogus)}}</td>
+          <td class="memname"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt;<a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt;<a class="el" href="classamrex_1_1MLLinOp.html#ac2e55c34bf6b5c0ed53d0ef6a4625a3f">BCType</a>, AMREX_SPACEDIM&gt; &gt; amrex::MLLinOp::m_lobc</td>
         </tr>
       </table>
   </td>

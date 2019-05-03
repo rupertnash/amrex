@@ -168,6 +168,7 @@
     <innerclass refid="classamrex_1_1MLNodeLaplacian" prot="public">amrex::MLNodeLaplacian</innerclass>
     <innerclass refid="classamrex_1_1MLNodeLinOp" prot="public">amrex::MLNodeLinOp</innerclass>
     <innerclass refid="classamrex_1_1MLPoisson" prot="public">amrex::MLPoisson</innerclass>
+    <innerclass refid="classamrex_1_1MLTensorOp" prot="public">amrex::MLTensorOp</innerclass>
     <innerclass refid="classamrex_1_1MultiCutFab" prot="public">amrex::MultiCutFab</innerclass>
     <innerclass refid="classamrex_1_1MultiFab" prot="public">amrex::MultiFab</innerclass>
     <innerclass refid="classamrex_1_1MultiFabCopyDescriptor" prot="public">amrex::MultiFabCopyDescriptor</innerclass>
@@ -10743,12 +10744,37 @@
           <declname>geom</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Computes divergence of face-data stored in the umac <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para>Computes divergence of face-data stored in the umac <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref>. It is assumed that umac has at least 1 ghost cell and ghost cells have been filled. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.cpp" line="699" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.cpp" bodystart="699" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1add6ef1af4714e90f5d0b5a098725612b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::computeGradient</definition>
+        <argsstring>(MultiFab &amp;grad, const Array&lt; MultiFab const *, AMREX_SPACEDIM &gt; &amp;umac, const Geometry &amp;geom)</argsstring>
+        <name>computeGradient</name>
+        <param>
+          <type><ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> &amp;</type>
+          <declname>grad</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref> const *, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>umac</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>geom</declname>
+        </param>
+        <briefdescription>
+<para>Computes gradient of face-data stored in the umac <ref refid="classamrex_1_1MultiFab" kindref="compound">MultiFab</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.cpp" line="721" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.cpp" bodystart="721" bodyend="742"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a19deaea1de1f8799e4c319910ef2dae4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -10794,7 +10820,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.H" line="158" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.H" bodystart="158" bodyend="176"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.H" line="160" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil.H" bodystart="160" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a9acb6ad005f95acf7cf3a9fe8231806b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -11174,6 +11200,35 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_1D_C.H" line="274" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_1D_C.H" bodystart="274" bodyend="288"/>
       </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a1b541d0199de0ac38907fc7440534b48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
+        <definition>AMREX_GPU_HOST_DEVICE void amrex::amrex_compute_gradient</definition>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;grad, Array4&lt; Real const  &gt; const &amp;u, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv) noexcept</argsstring>
+        <name>amrex_compute_gradient</name>
+        <param>
+          <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
+          <declname>bx</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
+          <declname>grad</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt; const &amp;</type>
+          <declname>dxinv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_1D_C.H" line="292" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_1D_C.H" bodystart="292" bodyend="304"/>
+      </memberdef>
       <memberdef kind="function" id="namespaceamrex_1aec8a08306dcade54414ed3d0296bfe7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE void amrex::amrex_avg_eg_to_cc</definition>
@@ -11309,6 +11364,39 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_2D_C.H" line="302" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_2D_C.H" bodystart="302" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a1b2c8dc25edbc4729948b5dabcd3bdd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
+        <definition>AMREX_GPU_HOST_DEVICE void amrex::amrex_compute_gradient</definition>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;grad, Array4&lt; Real const  &gt; const &amp;u, Array4&lt; Real const  &gt; const &amp;v, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv) noexcept</argsstring>
+        <name>amrex_compute_gradient</name>
+        <param>
+          <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
+          <declname>bx</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
+          <declname>grad</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt; const &amp;</type>
+          <declname>dxinv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_2D_C.H" line="326" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_2D_C.H" bodystart="326" bodyend="343"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1adbfb5123f209970b18969daeedd6be30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -11465,6 +11553,43 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_3D_C.H" line="406" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_3D_C.H" bodystart="406" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a4d7813f40ba8626f031b08f56c2e0827" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
+        <definition>AMREX_GPU_HOST_DEVICE void amrex::amrex_compute_gradient</definition>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;grad, Array4&lt; Real const  &gt; const &amp;u, Array4&lt; Real const  &gt; const &amp;v, Array4&lt; Real const  &gt; const &amp;w, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv) noexcept</argsstring>
+        <name>amrex_compute_gradient</name>
+        <param>
+          <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
+          <declname>bx</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
+          <declname>grad</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt; const &amp;</type>
+          <declname>dxinv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_3D_C.H" line="435" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_3D_C.H" bodystart="435" bodyend="457"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a8c006d94ef0e5cd3fab859690ba472bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -17070,10 +17195,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MG_1D_K.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MG_1D_K.H" bodystart="9" bodyend="17"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a405e3e1ee214448cb3f78a4547b921b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a90b348e743ccd6d636191360b77262ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_adotx</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;y, Array4&lt; Real const  &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;y, Array4&lt; Real const  &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta, int ncomp) noexcept</argsstring>
         <name>mlabeclap_adotx</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17107,18 +17232,22 @@
           <type>Real</type>
           <declname>beta</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="7" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="7" bodyend="25"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="7" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="7" bodyend="27"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a9e0859ed920b3eca08cc307a773bd195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a3349e4773ea82f42ff5c7e5524dc2304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_normalize</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta, int ncomp) noexcept</argsstring>
         <name>mlabeclap_normalize</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17148,18 +17277,22 @@
           <type>Real</type>
           <declname>beta</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="28" bodyend="43"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="30" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="30" bodyend="47"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a319130937563cf19f53b763f9bf11314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1ae314bcd243265d7ede49cdb272349780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_flux_x</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fx, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bx, Real fac) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fx, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bx, Real fac, int ncomp) noexcept</argsstring>
         <name>mlabeclap_flux_x</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17181,18 +17314,22 @@
           <type>Real</type>
           <declname>fac</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="46" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="46" bodyend="56"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="50" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="50" bodyend="62"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a5e5084d1b78c0068706da19e5c969333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1aebf1965b0035ae998089641e18ebcd25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_flux_xface</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fx, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bx, Real fac, int xlen) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fx, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bx, Real fac, int xlen, int ncomp) noexcept</argsstring>
         <name>mlabeclap_flux_xface</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17218,13 +17355,17 @@
           <type>int</type>
           <declname>xlen</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="59" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="59" bodyend="69"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="65" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="65" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1aa3f6311d677e3a229b2d9cc7cf975163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
@@ -17293,12 +17434,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="72" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="72" bodyend="107"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" line="80" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_1D_K.H" bodystart="80" bodyend="115"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1af3e6e104796601e29684950d27463e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1afc55ed991b6c04a9034489682865badf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_adotx</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;y, Array4&lt; Real const  &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;y, Array4&lt; Real const  &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta, int ncomp) noexcept</argsstring>
         <name>mlabeclap_adotx</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17336,18 +17477,22 @@
           <type>Real</type>
           <declname>beta</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="7" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="7" bodyend="31"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="7" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="7" bodyend="33"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1ad704a186fdc4be1e6e46d7414fd18b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a969a14ea9c686172d3ddc1d08ffd02c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_normalize</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta, int ncomp) noexcept</argsstring>
         <name>mlabeclap_normalize</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17381,18 +17526,22 @@
           <type>Real</type>
           <declname>beta</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="34" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="34" bodyend="55"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="36" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="36" bodyend="59"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a3e5a44cdde4b5b3f9ce5609ea8bebe9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1af68d5111d7976bc06e20c44e136fa8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_flux_y</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fy, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;by, Real fac) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fy, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;by, Real fac, int ncomp) noexcept</argsstring>
         <name>mlabeclap_flux_y</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17414,18 +17563,22 @@
           <type>Real</type>
           <declname>fac</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="88" bodyend="100"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="96" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="96" bodyend="110"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a7156adfad732b69df7b0e126507f0eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a9aecddc1f49e2c1091281fc8aa1fd4da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_flux_yface</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fy, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;by, Real fac, int ylen) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fy, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;by, Real fac, int ylen, int ncomp) noexcept</argsstring>
         <name>mlabeclap_flux_yface</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17451,13 +17604,17 @@
           <type>int</type>
           <declname>ylen</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="103" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="103" bodyend="119"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="113" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="113" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a4327fc6123940b6dd6d18d37cdad2411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
@@ -17550,12 +17707,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="122" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="122" bodyend="170"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" line="134" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_2D_K.H" bodystart="134" bodyend="182"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1ac85e52c601e9c147bd37c646fa50990c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a8a3993aba2c0b9815e1df718e93512da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_adotx</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;y, Array4&lt; Real const  &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, Array4&lt; Real const  &gt; const &amp;bZ, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;y, Array4&lt; Real const  &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, Array4&lt; Real const  &gt; const &amp;bZ, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta, int ncomp) noexcept</argsstring>
         <name>mlabeclap_adotx</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17597,18 +17754,22 @@
           <type>Real</type>
           <declname>beta</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="7" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="7" bodyend="37"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="7" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="7" bodyend="39"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1aa2943ff94ca31f773f21665972ae8f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1ae4f64ef64a1f6a8743ca606c9758f575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_normalize</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, Array4&lt; Real const  &gt; const &amp;bZ, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;x, Array4&lt; Real const  &gt; const &amp;a, Array4&lt; Real const  &gt; const &amp;bX, Array4&lt; Real const  &gt; const &amp;bY, Array4&lt; Real const  &gt; const &amp;bZ, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, Real alpha, Real beta, int ncomp) noexcept</argsstring>
         <name>mlabeclap_normalize</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17646,18 +17807,22 @@
           <type>Real</type>
           <declname>beta</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="40" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="40" bodyend="66"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="42" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="42" bodyend="70"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a82264773166bf80e1c85e13638b020bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a389f27f5b67ca8e9274ec73e58227755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_flux_z</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fz, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bz, Real fac) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fz, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bz, Real fac, int ncomp) noexcept</argsstring>
         <name>mlabeclap_flux_z</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17679,18 +17844,22 @@
           <type>Real</type>
           <declname>fac</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="141" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="141" bodyend="155"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="153" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="153" bodyend="169"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a7a97411d751bd647027fe7f0fa720f07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1aeda0a66acbe3dbc19534e9b7085c45b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mlabeclap_flux_zface</definition>
-        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fz, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bz, Real fac, int zlen) noexcept</argsstring>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;fz, Array4&lt; Real const  &gt; const &amp;sol, Array4&lt; Real const  &gt; const &amp;bz, Real fac, int zlen, int ncomp) noexcept</argsstring>
         <name>mlabeclap_flux_zface</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -17716,13 +17885,17 @@
           <type>int</type>
           <declname>zlen</declname>
         </param>
+        <param>
+          <type>int</type>
+          <declname>ncomp</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="158" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="158" bodyend="179"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="172" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="172" bodyend="195"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a1b98e17914be481813aef1fae864171b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
@@ -17839,7 +18012,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="182" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="182" bodyend="246"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" line="198" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLABecLap_3D_K.H" bodystart="198" bodyend="262"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a0b3cc1381885e63c400d67325ae9976c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
@@ -18630,10 +18803,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLALap_3D_K.H" line="169" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLALap_3D_K.H" bodystart="169" bodyend="221"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1ad23f7d951257edfaf33035e249773d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a10ecc2688f3ff3510b4fcc667c2e9ae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_apply_bc_x</definition>
-        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dxinv, int inhomog, int ncomp) noexcept</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dxinv, int inhomog, int icomp) noexcept</argsstring>
         <name>mllinop_apply_bc_x</name>
         <param>
           <type>int</type>
@@ -18681,7 +18854,7 @@
         </param>
         <param>
           <type>int</type>
-          <declname>ncomp</declname>
+          <declname>icomp</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -18689,12 +18862,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="12" bodyend="79"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="12" bodyend="73"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1af2920bac4b938423bf2d976c32d4b580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a2db45ec5dcc526bc47c2bf6bd442a8aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_apply_bc_y</definition>
-        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dyinv, int inhomog, int ncomp) noexcept</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dyinv, int inhomog, int icomp) noexcept</argsstring>
         <name>mllinop_apply_bc_y</name>
         <param>
           <type>int</type>
@@ -18742,7 +18915,7 @@
         </param>
         <param>
           <type>int</type>
-          <declname>ncomp</declname>
+          <declname>icomp</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -18750,12 +18923,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="82" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="82" bodyend="149"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="76" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="76" bodyend="137"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a78d99c51bea205e7b20d5dec5d60d34a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a3dbf3f8004820fdc6875dbd1ba9c8013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_apply_bc_z</definition>
-        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dzinv, int inhomog, int ncomp) noexcept</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;phi, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, Array4&lt; Real const  &gt; const &amp;bcval, int maxorder, Real dzinv, int inhomog, int icomp) noexcept</argsstring>
         <name>mllinop_apply_bc_z</name>
         <param>
           <type>int</type>
@@ -18803,7 +18976,7 @@
         </param>
         <param>
           <type>int</type>
-          <declname>ncomp</declname>
+          <declname>icomp</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -18811,12 +18984,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="152" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="152" bodyend="219"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="140" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="140" bodyend="201"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a3bc0f8dde567e15bc117d451ace5452f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a77e19a73c8176686385b93a0b0c9e7c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_comp_interp_coef0_x</definition>
-        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dxinv, int ncomp) noexcept</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dxinv, int icomp) noexcept</argsstring>
         <name>mllinop_comp_interp_coef0_x</name>
         <param>
           <type>int</type>
@@ -18856,7 +19029,7 @@
         </param>
         <param>
           <type>int</type>
-          <declname>ncomp</declname>
+          <declname>icomp</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -18864,12 +19037,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="222" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="222" bodyend="275"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="204" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="204" bodyend="251"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a89cf500338fa63d69f1a64fdd9e4db7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1aab7c8c624af3eb6ab99e70af462ce777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_comp_interp_coef0_y</definition>
-        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dyinv, int ncomp) noexcept</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dyinv, int icomp) noexcept</argsstring>
         <name>mllinop_comp_interp_coef0_y</name>
         <param>
           <type>int</type>
@@ -18909,7 +19082,7 @@
         </param>
         <param>
           <type>int</type>
-          <declname>ncomp</declname>
+          <declname>icomp</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -18917,12 +19090,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="278" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="278" bodyend="331"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="254" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="254" bodyend="301"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a59060a7be41666134e41b1fb53765e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1aab8ddd98d2bd78406a15dd68cd8a1cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mllinop_comp_interp_coef0_z</definition>
-        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dzinv, int ncomp) noexcept</argsstring>
+        <argsstring>(int side, Box const &amp;box, int blen, Array4&lt; Real &gt; const &amp;f, Array4&lt; int const  &gt; const &amp;mask, BoundCond bct, Real bcl, int maxorder, Real dzinv, int icomp) noexcept</argsstring>
         <name>mllinop_comp_interp_coef0_z</name>
         <param>
           <type>int</type>
@@ -18962,7 +19135,7 @@
         </param>
         <param>
           <type>int</type>
-          <declname>ncomp</declname>
+          <declname>icomp</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -18970,7 +19143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="334" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="334" bodyend="387"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" line="304" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLLinOp_K.H" bodystart="304" bodyend="351"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a1d2a4733875023b4999a78a181fb05c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
@@ -19824,6 +19997,39 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLPoisson_3D_K.H" line="130" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLPoisson_3D_K.H" bodystart="130" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a1ea5a8eed993477ea771372c4eea0d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
+        <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::mltensor_resid_add_extra</definition>
+        <argsstring>(Box const &amp;box, Array4&lt; Real &gt; const &amp;resid, Array4&lt; Real const  &gt; const &amp;vel, Array4&lt; Real const  &gt; const &amp;gradeta, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv)</argsstring>
+        <name>mltensor_resid_add_extra</name>
+        <param>
+          <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
+          <declname>box</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
+          <declname>resid</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>vel</declname>
+        </param>
+        <param>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>gradeta</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; Real, AMREX_SPACEDIM &gt; const &amp;</type>
+          <declname>dxinv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLTensor_1D_K.H" line="7" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLTensor_1D_K.H" bodystart="7" bodyend="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ab612cdff7b506fd2884de82a842e95b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>

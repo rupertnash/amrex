@@ -143,6 +143,7 @@ var searchData=
   ['compute_5fintegrals',['compute_integrals',['../namespaceamrex.html#a76fca21553203d1873bfc11329daf7d5',1,'amrex']]],
   ['computecost',['computeCost',['../namespaceamrex_1_1loadBalanceKD.html#ad33644c42ce9b13ed99874a358d40bd4',1,'amrex::loadBalanceKD']]],
   ['computedivergence',['computeDivergence',['../namespaceamrex.html#a7b179e68f86c4a06d176f587ec95148c',1,'amrex']]],
+  ['computegradient',['computeGradient',['../namespaceamrex.html#add6ef1af4714e90f5d0b5a098725612b',1,'amrex']]],
   ['computeinitialdt',['computeInitialDt',['../classamrex_1_1AmrLevel.html#a252f7123d2f0a98351bc7b39c32b3152',1,'amrex::AmrLevel']]],
   ['computemlresidual',['computeMLResidual',['../classamrex_1_1MLMG.html#a6e3b238696c2c79000390a6a98f7b9e9',1,'amrex::MLMG']]],
   ['computenewdt',['computeNewDt',['../classamrex_1_1AmrLevel.html#a2ca2263f59a50956ec37ce72a4a02767',1,'amrex::AmrLevel']]],
