@@ -410,10 +410,39 @@ use AMReX, an external AMReX library can be created instead. In this approach, o
 runs <code class="docutils literal notranslate"><span class="pre">./configure</span></code>, followed by <code class="docutils literal notranslate"><span class="pre">make</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>.
 Other make options include <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">uninstall</span></code>.  In the top
 AMReX directory, one can run <code class="docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">-h</span></code> to show the various options for
-the configure script. This approach is built on the AMReX GNU Make system. Thus
+the configure script. In particular, one can specify the installation path for the AMReX library using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./configure --prefix<span class="o">=[</span>AMReX library path<span class="o">]</span>
+</pre></div>
+</div>
+<p>This approach is built on the AMReX GNU Make system. Thus
 the section on <a class="reference internal" href="#sec-build-make"><span class="std std-ref">Building with GNU Make</span></a> is recommended if any fine tuning is
 needed.  The result of <code class="docutils literal notranslate"><span class="pre">./configure</span></code> is <code class="docutils literal notranslate"><span class="pre">GNUmakefile</span></code> in the AMReX
 top directory.  One can modify the make file for fine tuning.</p>
+<p>To compile an application code against the external AMReX library, it
+is necessary to set appropriate compiler flags and set the library
+paths for linking. To assist with this, when the AMReX library is
+built, a configuration file is created in <code class="docutils literal notranslate"><span class="pre">[AMReX</span> <span class="pre">library</span> <span class="pre">path]/lib/pkgconfig/amrex.pc</span></code>.
+This file contains the Fortran and
+C++ flags used to compile the AMReX library as well as the appropriate
+library and include entries.</p>
+<p>The following sample GNU Makefile will compile a <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> source
+file against an external AMReX library, using the C++ flags and
+library paths used to build AMReX:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>AMREX_LIBRARY_HOME ?<span class="o">=</span> <span class="o">[</span>AMReX library path<span class="o">]</span>
+
+LIBDIR :<span class="o">=</span> <span class="k">$(</span>AMREX_LIBRARY_HOME<span class="k">)</span>/lib
+INCDIR :<span class="o">=</span> <span class="k">$(</span>AMREX_LIBRARY_HOME<span class="k">)</span>/include
+
+COMPILE_CPP_FLAGS ?<span class="o">=</span> <span class="k">$(</span>shell awk <span class="s1">&#39;/Cflags:/ {$$1=$$2=&quot;&quot;; print $$0}&#39;</span> <span class="k">$(</span>LIBDIR<span class="k">)</span>/pkgconfig/amrex.pc<span class="k">)</span>
+COMPILE_LIB_FLAGS ?<span class="o">=</span> <span class="k">$(</span>shell awk <span class="s1">&#39;/Libs:/ {$$1=$$2=&quot;&quot;; print $$0}&#39;</span> <span class="k">$(</span>LIBDIR<span class="k">)</span>/pkgconfig/amrex.pc<span class="k">)</span>
+
+CFLAGS :<span class="o">=</span> -I<span class="k">$(</span>INCDIR<span class="k">)</span> <span class="k">$(</span>COMPILE_CPP_FLAGS<span class="k">)</span>
+LFLAGS :<span class="o">=</span> -L<span class="k">$(</span>LIBDIR<span class="k">)</span> <span class="k">$(</span>COMPILE_LIB_FLAGS<span class="k">)</span>
+
+all:
+        g++ -o main.exe main.cpp <span class="k">$(</span>CFLAGS<span class="k">)</span> <span class="k">$(</span>LFLAGS<span class="k">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="building-with-cmake">
 <span id="sec-build-cmake"></span><h1>Building with CMake<a class="headerlink" href="#building-with-cmake" title="Permalink to this headline">¶</a></h1>
