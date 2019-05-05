@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Managing the Grid Hierarchy &mdash; amrex 19.06-dev documentation</title>
+  <title>Gridding and Load Balancing &mdash; amrex 19.06-dev documentation</title>
   
 
   
@@ -92,7 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="GettingStarted_Chapter.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BuildingAMReX_Chapter.html">Building AMReX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Basics_Chapter.html">Basics</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Managing the Grid Hierarchy</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gridding and Load Balancing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="GridCreation.html">Grid Creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DualGrid.html">Dual Grid Approach</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LoadBalancing.html">Load Balancing</a></li>
@@ -158,7 +158,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Managing the Grid Hierarchy</li>
+      <li>Gridding and Load Balancing</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -177,21 +177,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="managing-the-grid-hierarchy">
-<h1>Managing the Grid Hierarchy<a class="headerlink" href="#managing-the-grid-hierarchy" title="Permalink to this headline">¶</a></h1>
-<p>Computational load balancing is based on several different steps:</p>
-<ol class="arabic simple">
-<li><p>The first component of load balancing is the creation of individual grids,
-i.e. defining the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> on which <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFabs</span></span></code> will be built at each level</p></li>
-<li><p>The second component is distribution of these grids to MPI processes,
-i.e. defining the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code> with which <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFabs</span></span></code> at that level will be built.
-How we do this depends on what strategy we specify and what work estimate we use</p></li>
-<li><p>When running on multicore machines with OpenMP, we must set the size of grid tiles
-(by defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">fabarray_mfiter</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">tile_size</span></span></code>), and if relevant, of
-particle tiles (by defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">particle</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">tile_size</span></span></code>).  We must also specify
-the strategy for assigning tiles to OpenMP threads.</p></li>
-</ol>
-<p>We note that we can load balance the mesh and particle data separately; see <a class="reference internal" href="DualGrid.html#ss-dual-grid"><span class="std std-ref">Dual Grid Approach</span></a></p>
+  <div class="section" id="gridding-and-load-balancing">
+<h1>Gridding and Load Balancing<a class="headerlink" href="#gridding-and-load-balancing" title="Permalink to this headline">¶</a></h1>
+<p>AMReX provides a great deal of generality when it comes to how to decompose the
+computational domain into individual logically rectangular grids, and how to distribute
+those grids to MPI ranks.  We use the phrase “load balancing” here to refer to the combined process
+of grid creation (and re-creation when regridding) and distribution of grids to MPI ranks.</p>
+<p>See <a class="reference internal" href="GridCreation.html#sec-grid-creation"><span class="std std-ref">Grid Creation</span></a> for grids are created, i.e. how the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> on which
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFabs</span></span></code> will be built is defined at each level.</p>
+<p>See <a class="reference internal" href="LoadBalancing.html#sec-load-balancing"><span class="std std-ref">Load Balancing</span></a> for the strategies AMReX supports for distributing
+grids to MPI ranks, i.e. defining the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code> with which
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFabs</span></span></code> at that level will be built.</p>
+<p>Even for single-level calculations, AMReX provides the flexibility to have different size grids,
+more than one grid per MPI rank, and different strategies for distributing the grids to MPI ranks.</p>
+<p>For multi-level calculations, the same principles for load balancing apply as in single-level calculations,
+but there is additional complexity in how to tag cells for refinement and how to create the
+union of grids at levels &gt; 0 where that union most likely does not cover the computational domain.
+See <a class="reference internal" href="GridCreation.html#sec-grid-creation"><span class="std std-ref">Grid Creation</span></a> for how we create grids at levels &gt; 0.</p>
+<p>We also note that we can create separate grids, and map them in different ways to MPI ranks, for
+different types of data in a single calculation.  We refer to this as the “dual grid approach”
+and the most common usage is to load balance mesh and particle data separately; see <a class="reference internal" href="DualGrid.html#sec-dual-grid"><span class="std std-ref">Dual Grid Approach</span></a>
+for more about this approach.</p>
+<p>When running on multicore machines with OpenMP, we can also control the distribution of
+work by setting the size of grid tiles (by defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">fabarray_mfiter</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">tile_size</span></span></code>), and if relevant, of
+particle tiles (by defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">particle</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">tile_size</span></span></code>).  We can also specify the strategy for assigning
+tiles to OpenMP threads.  See <span class="xref std std-ref">.. _sec:basics:mfiter:tiling:</span> for more about tiling.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="GridCreation.html">Grid Creation</a></li>

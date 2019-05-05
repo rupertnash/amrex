@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Dual Grid Approach" href="DualGrid.html" />
-    <link rel="prev" title="Managing the Grid Hierarchy" href="ManagingGridHierarchy_Chapter.html" /> 
+    <link rel="prev" title="Gridding and Load Balancing" href="ManagingGridHierarchy_Chapter.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,7 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="GettingStarted_Chapter.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BuildingAMReX_Chapter.html">Building AMReX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Basics_Chapter.html">Basics</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="ManagingGridHierarchy_Chapter.html">Managing the Grid Hierarchy</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ManagingGridHierarchy_Chapter.html">Gridding and Load Balancing</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Grid Creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DualGrid.html">Dual Grid Approach</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LoadBalancing.html">Load Balancing</a></li>
@@ -158,7 +158,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="ManagingGridHierarchy_Chapter.html">Managing the Grid Hierarchy</a> &raquo;</li>
+          <li><a href="ManagingGridHierarchy_Chapter.html">Gridding and Load Balancing</a> &raquo;</li>
         
       <li>Grid Creation</li>
     
@@ -180,7 +180,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="grid-creation">
-<span id="ss-grid-creation"></span><h1>Grid Creation<a class="headerlink" href="#grid-creation" title="Permalink to this headline">¶</a></h1>
+<span id="sec-grid-creation"></span><h1>Grid Creation<a class="headerlink" href="#grid-creation" title="Permalink to this headline">¶</a></h1>
 <p>To run an AMReX-based application you must specifiy the domain size by
 specifying <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">n_cell</span></span></code> – this is the number of cells spanning the domain
 in each coordinate direction at level 0.</p>
@@ -235,7 +235,11 @@ at this level, then the grids at this level are further divided until Ngrids &gt
 (unless doing so would violate the:cpp:<cite>blocking_factor</cite> criterion).</p></li>
 <li><p>The creation of grids at higher levels begins by tagging cells at the coarser level and follows
 the Berger-Rigoutsis clustering algorithm with the additional constraint of satisfying
-the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">blocking_factor</span></span></code> criterion.</p></li>
+the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">blocking_factor</span></span></code> criterion.   An additional parameter becomes relevant here: the
+“grid efficiency”, specified as <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amr</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">grid_eff</span></span></code> in the inputs file, which attempts to ensure
+that grids do not contain a large fraction of un-tagged cells.   We note that the grid creation
+process attempts to satisfy the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amr</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">grid_eff</span></span></code> constraint but will not do so if it means
+violating the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">blocking_factor</span></span></code> criterion.</p></li>
 </ol>
 </div>
 
@@ -250,7 +254,7 @@ the <code class="code cpp c++ docutils literal notranslate"><span class="name"><
         <a href="DualGrid.html" class="btn btn-neutral float-right" title="Dual Grid Approach" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ManagingGridHierarchy_Chapter.html" class="btn btn-neutral float-left" title="Managing the Grid Hierarchy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ManagingGridHierarchy_Chapter.html" class="btn btn-neutral float-left" title="Gridding and Load Balancing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

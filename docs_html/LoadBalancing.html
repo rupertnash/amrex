@@ -92,7 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="GettingStarted_Chapter.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BuildingAMReX_Chapter.html">Building AMReX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Basics_Chapter.html">Basics</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="ManagingGridHierarchy_Chapter.html">Managing the Grid Hierarchy</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ManagingGridHierarchy_Chapter.html">Gridding and Load Balancing</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="GridCreation.html">Grid Creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DualGrid.html">Dual Grid Approach</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Load Balancing</a></li>
@@ -158,7 +158,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="ManagingGridHierarchy_Chapter.html">Managing the Grid Hierarchy</a> &raquo;</li>
+          <li><a href="ManagingGridHierarchy_Chapter.html">Gridding and Load Balancing</a> &raquo;</li>
         
       <li>Load Balancing</li>
     
@@ -180,10 +180,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="load-balancing">
-<span id="ss-load-balancing"></span><h1>Load Balancing<a class="headerlink" href="#load-balancing" title="Permalink to this headline">¶</a></h1>
-<p>The process of load balancing is independent of the process of grid creation;
+<span id="sec-load-balancing"></span><h1>Load Balancing<a class="headerlink" href="#load-balancing" title="Permalink to this headline">¶</a></h1>
+<p>The process of load balancing is typically independent of the process of grid creation;
 the inputs to load balancing are a given set of grids with a set of weights
-assigned to each grid.</p>
+assigned to each grid.  (The exception to this is the KD-tree approach in which the
+grid creation process is governed by trying to balance the work in each grid.)</p>
 <p>Single-level load balancing algorithms are sequentially applied to each AMR level independently,
 and the resulting distributions are mapped onto the ranks taking into account the weights
 already assigned to them (assign heaviest set of grids to the least loaded rank)</p>
@@ -195,7 +196,7 @@ to pass in a MultiFab of weights per cell which is used to compute the weight pe
 <li><p>SFC: enumerate grids with a space-filling Z-morton curve, then partition the
 resulting ordering across ranks in a way that balances the load</p></li>
 <li><p>Round-robin: sort grids and assign them to ranks in round-robin fashion – specifically
-FAB <em>i</em> is owned by CPU <em>i%N</em> where N is the total number of MPI ranks.</p></li>
+FAB <em>i</em> is owned by CPU <a href="#id1"><span class="problematic" id="id2">*</span></a>i*%N where N is the total number of MPI ranks.</p></li>
 </ul>
 </div>
 
