@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Grid Creation" href="ManagingGridHierarchy.html" />
+    <link rel="next" title="Grid Creation" href="GridCreation.html" />
     <link rel="prev" title="Dimensionality" href="Basics.html" /> 
 </head>
 
@@ -93,7 +93,8 @@
 <li class="toctree-l1"><a class="reference internal" href="BuildingAMReX_Chapter.html">Building AMReX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Basics_Chapter.html">Basics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Managing the Grid Hierarchy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ManagingGridHierarchy.html">Grid Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GridCreation.html">Grid Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DualGrid.html">Dual Grid Approach</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="AmrCore_Chapter.html">AmrCore Source Code</a></li>
@@ -189,9 +190,11 @@ How we do this depends on what strategy we specify and what work estimate we use
 particle tiles (by defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">particle</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">tile_size</span></span></code>).  We must also specify
 the strategy for assigning tiles to OpenMP threads.</p></li>
 </ol>
+<p>We note that we can load balance the mesh and particle data separately; see <span class="xref std std-ref">dual_grid</span></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ManagingGridHierarchy.html">Grid Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GridCreation.html">Grid Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DualGrid.html">Dual Grid Approach</a></li>
 </ul>
 </div>
 </div>
@@ -204,7 +207,7 @@ the strategy for assigning tiles to OpenMP threads.</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ManagingGridHierarchy.html" class="btn btn-neutral float-right" title="Grid Creation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="GridCreation.html" class="btn btn-neutral float-right" title="Grid Creation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Basics.html" class="btn btn-neutral float-left" title="Dimensionality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
