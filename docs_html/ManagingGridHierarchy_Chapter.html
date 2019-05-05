@@ -176,22 +176,19 @@
            <div itemprop="articleBody">
             
   <div class="section" id="managing-the-grid-hierarchy">
-<span id="chap-managing-the-grid-hierarchy"></span><h1>Managing the Grid Hierarchy<a class="headerlink" href="#managing-the-grid-hierarchy" title="Permalink to this headline">¶</a></h1>
-<p>There are four separate parts of any strategy to balance computational
-work ina  large-scale calculation with hybrid parallelism:</p>
-<p>1) Creation of grids – this includes defining the BoxArray on which
-MultiFabs will be built at each level and defining the work estimates</p>
-<p>2) Distribution of grids to MPI processes – this uses the work estimate
-defined above (or defaults to work estimate = number of cells) to define
-the DistributionMapping with which MultiFabs at that level will be built.</p>
-<p>3) When running on multicore machines with OpenMP: creation of grid tiles
-(by defining fabarray_mfiter.tile_size), and if relevant, creation of
-particle tiles (by defining particle.tile_size)</p>
-<ol class="arabic simple" start="4">
-<li><p>When running on multicore machines with OpenMP: distribution of tiles to threads</p></li>
+<h1>Managing the Grid Hierarchy<a class="headerlink" href="#managing-the-grid-hierarchy" title="Permalink to this headline">¶</a></h1>
+<p>Computational load balancing is based on several different steps:</p>
+<ol class="arabic simple">
+<li><p>The first component of load balancing is the creation of individual grids,
+i.e. defining the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> on which <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFabs</span></span></code> will be built at each level</p></li>
+<li><p>The second component is distribution of these grids to MPI processes,
+i.e. defining the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code> with which <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFabs</span></span></code> at that level will be built.
+How we do this depends on what strategy we specify and what work estimate we use</p></li>
+<li><p>When running on multicore machines with OpenMP, we must set the size of grid tiles
+(by defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">fabarray_mfiter</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">tile_size</span></span></code>), and if relevant, of
+particle tiles (by defining <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">particle</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">tile_size</span></span></code>).  We must also specify
+the strategy for assigning tiles to OpenMP threads.</p></li>
 </ol>
-<p>If the application contains task parallelism, load balancing may require special
-care in task scheduling.  See the section on task parallelism.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ManagingGridHierarchy.html">Grid Creation</a></li>
