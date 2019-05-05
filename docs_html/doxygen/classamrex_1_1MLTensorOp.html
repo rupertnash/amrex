@@ -128,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a20b3da7c94a567c736a703979565eb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aa37d8953aeb1df96051653df3769c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLTensorOp.html#a4aa37d8953aeb1df96051653df3769c6">define</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Geometry.html">Geometry</a> &gt; &amp;a_geom, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> &gt; &amp;a_grids, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1DistributionMapping.html">DistributionMapping</a> &gt; &amp;a_dmap, const <a class="el" href="structamrex_1_1LPInfo.html">LPInfo</a> &amp;a_info=<a class="el" href="structamrex_1_1LPInfo.html">LPInfo</a>(), const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1FabFactory.html">FabFactory</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; const * &gt; &amp;a_factory={})</td></tr>
 <tr class="separator:a4aa37d8953aeb1df96051653df3769c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8fe4a2fd1b802412ea49bf3ab356be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLTensorOp.html#af8fe4a2fd1b802412ea49bf3ab356be8">setScalars</a> (Real a, Real b) noexcept=delete</td></tr>
+<tr class="separator:af8fe4a2fd1b802412ea49bf3ab356be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8e26be957c9fcae944341aeac82ed44"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLTensorOp.html#ad8e26be957c9fcae944341aeac82ed44">getNComp</a> () const finaloverride</td></tr>
 <tr class="separator:ad8e26be957c9fcae944341aeac82ed44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b60f41a959afec82a27d5c356b9f7c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLTensorOp.html#a07b60f41a959afec82a27d5c356b9f7c">needsUpdate</a> () const finaloverride</td></tr>
@@ -140,8 +142,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaccfcd45ed23a3c9dc414d032b91e797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef4a818ac9d4702068c50ef6d8a330f4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLTensorOp.html#aef4a818ac9d4702068c50ef6d8a330f4">isBottomSingular</a> () const finaloverride</td></tr>
 <tr class="separator:aef4a818ac9d4702068c50ef6d8a330f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a9ada337f32da21eaa5233a2b67fd73"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLTensorOp.html#a7a9ada337f32da21eaa5233a2b67fd73">solutionResidual</a> (int amrlev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;resid, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;x, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;b, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *crse_bcdata=nullptr) finaloverride</td></tr>
-<tr class="separator:a7a9ada337f32da21eaa5233a2b67fd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7acec7ef41f148b92b54c9ee1c1faf0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLTensorOp.html#aa7acec7ef41f148b92b54c9ee1c1faf0">apply</a> (int amrlev, int mglev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;out, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;in, <a class="el" href="classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884">BCMode</a> bc_mode, <a class="el" href="classamrex_1_1MLLinOp.html#a1f2821b4a51da49d862dae1e757bb8c3">StateMode</a> s_mode, const <a class="el" href="classamrex_1_1MLMGBndry.html">MLMGBndry</a> *bndry=nullptr) const finaloverride</td></tr>
+<tr class="separator:aa7acec7ef41f148b92b54c9ee1c1faf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classamrex_1_1MLABecLaplacian"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classamrex_1_1MLABecLaplacian')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classamrex_1_1MLABecLaplacian.html">amrex::MLABecLaplacian</a></td></tr>
 <tr class="memitem:abf3b9bd60c5bffecca969aae4b710744 inherit pub_methods_classamrex_1_1MLABecLaplacian"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLABecLaplacian.html#abf3b9bd60c5bffecca969aae4b710744">MLABecLaplacian</a> ()</td></tr>
 <tr class="separator:abf3b9bd60c5bffecca969aae4b710744 inherit pub_methods_classamrex_1_1MLABecLaplacian"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,10 +244,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0044458b3dd79241c2b74483b70cb7e7 inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfefa1b34d6988c4bf97957616b61c8f inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLCellLinOp.html#adfefa1b34d6988c4bf97957616b61c8f">averageDownSolutionRHS</a> (int camrlev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;crse_sol, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;crse_rhs, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;fine_sol, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;fine_rhs) override</td></tr>
 <tr class="separator:adfefa1b34d6988c4bf97957616b61c8f inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62ea55fae7824c00b3237cf57616dd1d inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLCellLinOp.html#a62ea55fae7824c00b3237cf57616dd1d">apply</a> (int amrlev, int mglev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;out, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;in, <a class="el" href="classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884">BCMode</a> bc_mode, <a class="el" href="classamrex_1_1MLLinOp.html#a1f2821b4a51da49d862dae1e757bb8c3">StateMode</a> s_mode, const <a class="el" href="classamrex_1_1MLMGBndry.html">MLMGBndry</a> *bndry=nullptr) const override</td></tr>
-<tr class="separator:a62ea55fae7824c00b3237cf57616dd1d inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a8012e233f7f198d99be52e18a30f1a inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLCellLinOp.html#a5a8012e233f7f198d99be52e18a30f1a">smooth</a> (int amrlev, int mglev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;sol, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;rhs, bool skip_fillboundary=false) const finaloverride</td></tr>
 <tr class="separator:a5a8012e233f7f198d99be52e18a30f1a inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18841d6aec78590a56eeaed61fe4345 inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLCellLinOp.html#ab18841d6aec78590a56eeaed61fe4345">solutionResidual</a> (int amrlev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;resid, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;x, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;b, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *crse_bcdata=nullptr) override</td></tr>
+<tr class="separator:ab18841d6aec78590a56eeaed61fe4345 inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3037ce3c60a5c1a0ccb07dc5ab67197 inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLCellLinOp.html#ac3037ce3c60a5c1a0ccb07dc5ab67197">correctionResidual</a> (int amrlev, int mglev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;resid, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;x, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;b, <a class="el" href="classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884">BCMode</a> bc_mode, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *crse_bcdata=nullptr) finaloverride</td></tr>
 <tr class="separator:ac3037ce3c60a5c1a0ccb07dc5ab67197 inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30135624482a762f12f6e66a5b3b10ce inherit pub_methods_classamrex_1_1MLCellLinOp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLCellLinOp.html#a30135624482a762f12f6e66a5b3b10ce">reflux</a> (int crse_amrlev, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;res, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;crse_sol, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;, <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;fine_sol, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;) const finaloverride</td></tr>
@@ -604,6 +606,72 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa7acec7ef41f148b92b54c9ee1c1faf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MLTensorOp::apply </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amrlev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mglev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1MLLinOp.html#a5aa01a1ef6b0b3a471f02f65ae4b4884">BCMode</a>&#160;</td>
+          <td class="paramname"><em>bc_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1MLLinOp.html#a1f2821b4a51da49d862dae1e757bb8c3">StateMode</a>&#160;</td>
+          <td class="paramname"><em>s_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1MLMGBndry.html">MLMGBndry</a> *&#160;</td>
+          <td class="paramname"><em>bndry</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classamrex_1_1MLCellLinOp.html#a62ea55fae7824c00b3237cf57616dd1d">amrex::MLCellLinOp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4aa37d8953aeb1df96051653df3769c6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -822,7 +890,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7a9ada337f32da21eaa5233a2b67fd73"></a>
+<a class="anchor" id="af8fe4a2fd1b802412ea49bf3ab356be8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -830,34 +898,16 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void amrex::MLTensorOp::solutionResidual </td>
+          <td class="memname">void amrex::MLTensorOp::setScalars </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>amrlev</em>, </td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
-          <td class="paramname"><em>resid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> *&#160;</td>
-          <td class="paramname"><em>crse_bcdata</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -867,12 +917,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classamrex_1_1MLCellLinOp.html#ab18841d6aec78590a56eeaed61fe4345">amrex::MLCellLinOp</a>.</p>
 
 </div>
 </div>
