@@ -189,19 +189,13 @@ and the resulting distributions are mapped onto the ranks taking into account th
 already assigned to them (assign heaviest set of grids to the least loaded rank)</p>
 <p>Options supported by AMReX include:</p>
 <ul class="simple">
-<li><p>Knapsack – the default weight of a grid in the knapsack algorithm is the number of grid cells,
+<li><p>Knapsack: the default weight of a grid in the knapsack algorithm is the number of grid cells,
 but AMReX supports the option to pass an array of weights – one per grid – or alternatively
 to pass in a MultiFab of weights per cell which is used to compute the weight per grid</p></li>
-<li><dl class="simple">
-<dt>SFC - enumerate grids with a space-filling Z-morton curve, then partition the</dt><dd><p>resulting ordering across ranks in a way that balances the load</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Round-robin - sort grids and assign them to ranks in round-robin fashion – specifically</dt><dd><p>FAB <em>i</em> is owned by CPU <em>i%N</em> where N is the total number of MPI ranks.</p>
-</dd>
-</dl>
-</li>
+<li><p>SFC: enumerate grids with a space-filling Z-morton curve, then partition the
+resulting ordering across ranks in a way that balances the load</p></li>
+<li><p>Round-robin: sort grids and assign them to ranks in round-robin fashion – specifically
+FAB <em>i</em> is owned by CPU <em>i%N</em> where N is the total number of MPI ranks.</p></li>
 </ul>
 </div>
 
