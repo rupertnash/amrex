@@ -428,6 +428,7 @@ var searchData=
   ['mfolddata',['MFOLDDATA',['../namespaceamrex.html#a22e5d2b124fbc2a101b2538d589e2899',1,'amrex']]],
   ['mg_5fbox_5fmin_5fwidth',['mg_box_min_width',['../classamrex_1_1MLLinOp.html#ae871a991ef83c33044a22db383c76dcd',1,'amrex::MLLinOp']]],
   ['mg_5fcoarsen_5fratio',['mg_coarsen_ratio',['../classamrex_1_1MLLinOp.html#aaa5616982aef27c68c5ae5544092c7db',1,'amrex::MLLinOp']]],
+  ['mg_5fdomain_5fmin_5fwidth',['mg_domain_min_width',['../classamrex_1_1MLLinOp.html#a3ea5c2611e98234737157e36bae6c343',1,'amrex::MLLinOp']]],
   ['mg_5fprecond',['mg_precond',['../classamrex_1_1CGSolver.html#a655aaf962c0f52e2d4d161281655e16d',1,'amrex::CGSolver::mg_precond()'],['../classamrex_1_1MCCGSolver.html#aeee5195f76b84b035425eedc100bcf19',1,'amrex::MCCGSolver::mg_precond()']]],
   ['mglev',['mglev',['../classamrex_1_1MLCGSolver.html#a2fb5e6802fda1f0b39a181bad7ad2780',1,'amrex::MLCGSolver']]],
   ['mi_5fb',['mi_b',['../structamrex_1_1Cuda_1_1range__detail_1_1range__impl_1_1iterator.html#a97802642b177e6eb9b62c72b98c442a3',1,'amrex::Cuda::range_detail::range_impl::iterator']]],
