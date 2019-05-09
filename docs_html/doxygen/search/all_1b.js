@@ -115,6 +115,7 @@ var searchData=
   ['_7emlcelllinop',['~MLCellLinOp',['../classamrex_1_1MLCellLinOp.html#a4d46c85e7e43e5231e19607a868d3d0f',1,'amrex::MLCellLinOp']]],
   ['_7emlcgsolver',['~MLCGSolver',['../classamrex_1_1MLCGSolver.html#ac0e9733d5de10430137f949ba8438c9d',1,'amrex::MLCGSolver']]],
   ['_7emlebabeclap',['~MLEBABecLap',['../classamrex_1_1MLEBABecLap.html#a1c3ebe277cdfba5a7bdafca9f0a2672f',1,'amrex::MLEBABecLap']]],
+  ['_7emlebtensorop',['~MLEBTensorOp',['../classamrex_1_1MLEBTensorOp.html#a5efda34c10df7a5f5d4c738a60c04e9f',1,'amrex::MLEBTensorOp']]],
   ['_7emllinop',['~MLLinOp',['../classamrex_1_1MLLinOp.html#ac6793724d6b5c98581d42d9233fda1bd',1,'amrex::MLLinOp']]],
   ['_7emlmg',['~MLMG',['../classamrex_1_1MLMG.html#a12c3c0793a39356963dd1824588b7593',1,'amrex::MLMG']]],
   ['_7emlmgbndry',['~MLMGBndry',['../classamrex_1_1MLMGBndry.html#a7a9f443e5f333ab543149f2036880e80',1,'amrex::MLMGBndry']]],

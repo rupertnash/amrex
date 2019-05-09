@@ -92,8 +92,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a62e185c1b971b54a2c1ea7821c82503b"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__ebmultifabutil__module.html#a62e185c1b971b54a2c1ea7821c82503b">amrex_eb_set_covered</a> (lo, hi, d, dlo, dhi, f, flo, fhi, v, nc)</td></tr>
 <tr class="separator:a62e185c1b971b54a2c1ea7821c82503b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad86f355718ee61a80780250f28e13bce"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__ebmultifabutil__module.html#ad86f355718ee61a80780250f28e13bce">amrex_eb_set_covered_faces</a> (lo, hi, d, dlo, dhi, a, alo, ahi)</td></tr>
-<tr class="separator:ad86f355718ee61a80780250f28e13bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5aeae6a9e4005b88355f1e5893596b"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__ebmultifabutil__module.html#adb5aeae6a9e4005b88355f1e5893596b">amrex_eb_set_covered_faces</a> (lo, hi, d, dlo, dhi, a, alo, ahi, nc)</td></tr>
+<tr class="separator:adb5aeae6a9e4005b88355f1e5893596b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a class="anchor" id="a62e185c1b971b54a2c1ea7821c82503b"></a>
@@ -170,7 +170,7 @@ Functions/Subroutines</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad86f355718ee61a80780250f28e13bce"></a>
+<a class="anchor" id="adb5aeae6a9e4005b88355f1e5893596b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -189,7 +189,7 @@ Functions/Subroutines</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="complex-type_8h.html#ab4cafb1ab351d520eb09a05ebd0a1e13">real</a>(<a class="el" href="AMReX__REAL_8H.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(dlo(1):dhi(1),dlo(2):dhi(2),dlo(3):dhi(3)), intent(inout)&#160;</td>
+          <td class="paramtype"><a class="el" href="complex-type_8h.html#ab4cafb1ab351d520eb09a05ebd0a1e13">real</a>(<a class="el" href="AMReX__REAL_8H.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension(dlo(1):dhi(1),dlo(2):dhi(2),dlo(3):dhi(3),nc), intent(inout)&#160;</td>
           <td class="paramname"><em>d</em>, </td>
         </tr>
         <tr>
@@ -220,7 +220,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
-          <td class="paramname"><em>ahi</em>&#160;</td>
+          <td class="paramname"><em>ahi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -29,6 +29,7 @@ var searchData=
   ['mlcelllinop',['MLCellLinOp',['../classamrex_1_1MLCellLinOp.html',1,'amrex']]],
   ['mlcgsolver',['MLCGSolver',['../classamrex_1_1MLCGSolver.html',1,'amrex']]],
   ['mlebabeclap',['MLEBABecLap',['../classamrex_1_1MLEBABecLap.html',1,'amrex']]],
+  ['mlebtensorop',['MLEBTensorOp',['../classamrex_1_1MLEBTensorOp.html',1,'amrex']]],
   ['mllinop',['MLLinOp',['../classamrex_1_1MLLinOp.html',1,'amrex']]],
   ['mlmg',['MLMG',['../classamrex_1_1MLMG.html',1,'amrex']]],
   ['mlmgbndry',['MLMGBndry',['../classamrex_1_1MLMGBndry.html',1,'amrex']]],
