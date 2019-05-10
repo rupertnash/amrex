@@ -2997,6 +2997,7 @@
     <member refid="classamrex_1_1EBCellFlag_1a84a5199f343833e3883e838e3af3cb81" kind="function"><name>isMultiValued</name></member>
     <member refid="classamrex_1_1EBCellFlag_1acaf3495cd0c4577c3f14f214e766c772" kind="function"><name>isCovered</name></member>
     <member refid="classamrex_1_1EBCellFlag_1aa535a6ed4054cc84ce8ea9fb8a4d8cfb" kind="function"><name>isConnected</name></member>
+    <member refid="classamrex_1_1EBCellFlag_1a304d8cc811050c118ffea06e63af6133" kind="function"><name>isConnected</name></member>
     <member refid="classamrex_1_1EBCellFlag_1ad2c62cdc107b5cc550b87bdf561cfeff" kind="function"><name>setDisconnected</name></member>
     <member refid="classamrex_1_1EBCellFlag_1a17704f4e57583b3ebe75b79cc3241d89" kind="function"><name>setDisconnected</name></member>
     <member refid="classamrex_1_1EBCellFlag_1af0fbd96f92cfc1950f80df38b766c6f4" kind="function"><name>setConnected</name></member>
@@ -10872,6 +10873,14 @@
     <member refid="namespaceamrex_1ac40d48248863fcf43083bf7c031d4a96" kind="function"><name>mlalap_flux_z</name></member>
     <member refid="namespaceamrex_1ac32497e22217ecba3b388c435c8f5d86" kind="function"><name>mlalap_flux_zface</name></member>
     <member refid="namespaceamrex_1a89adcba5e8f68212dd58df2e75039da3" kind="function"><name>mlalap_gsrb</name></member>
+    <member refid="namespaceamrex_1af443abc25eb6bd9c25b4cdf8dedd00ed" kind="function"><name>mlebabeclap_apply_bc_x</name></member>
+    <member refid="namespaceamrex_1a56df2a0e8fcd10b5f102037a970bb5a6" kind="function"><name>mlebabeclap_apply_bc_y</name></member>
+    <member refid="namespaceamrex_1ae796e70ca853d4fcf9dce4bcca2a053a" kind="function"><name>mlebabeclap_apply_bc_z</name></member>
+    <member refid="namespaceamrex_1ab2fcb3a622747ad3946e5b658bce0d6f" kind="function"><name>mlebtensor_cross_terms_fx</name></member>
+    <member refid="namespaceamrex_1a90c90afafbdbda7fb9f35ac2046f84bc" kind="function"><name>mlebtensor_cross_terms_fy</name></member>
+    <member refid="namespaceamrex_1a13e4b4e0a98eaa9ed38e7da81e40de6f" kind="function"><name>mlebtensor_cross_terms</name></member>
+    <member refid="namespaceamrex_1a39f9eb46b05665239e3a54a5a2559a41" kind="function"><name>mlebtensor_cross_terms_fz</name></member>
+    <member refid="namespaceamrex_1aa1b545e0dbb10dfa71488da269211e56" kind="function"><name>mlebtensor_cross_terms</name></member>
     <member refid="namespaceamrex_1a10ecc2688f3ff3510b4fcc667c2e9ae9" kind="function"><name>mllinop_apply_bc_x</name></member>
     <member refid="namespaceamrex_1a2db45ec5dcc526bc47c2bf6bd442a8aa" kind="function"><name>mllinop_apply_bc_y</name></member>
     <member refid="namespaceamrex_1a3dbf3f8004820fdc6875dbd1ba9c8013" kind="function"><name>mllinop_apply_bc_z</name></member>
@@ -10968,19 +10977,23 @@
   </compound>
   <compound refid="namespaceamrex_1_1_0D437" kind="namespace"><name>amrex::@437</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D445" kind="namespace"><name>amrex::@445</name>
+  <compound refid="namespaceamrex_1_1_0D443" kind="namespace"><name>amrex::@443</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D447" kind="namespace"><name>amrex::@447</name>
+  <compound refid="namespaceamrex_1_1_0D444" kind="namespace"><name>amrex::@444</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D451" kind="namespace"><name>amrex::@451</name>
+  <compound refid="namespaceamrex_1_1_0D446" kind="namespace"><name>amrex::@446</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D461" kind="namespace"><name>amrex::@461</name>
+  <compound refid="namespaceamrex_1_1_0D448" kind="namespace"><name>amrex::@448</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D475" kind="namespace"><name>amrex::@475</name>
+  <compound refid="namespaceamrex_1_1_0D452" kind="namespace"><name>amrex::@452</name>
   </compound>
-  <compound refid="namespaceamrex_1_1_0D489" kind="namespace"><name>amrex::@489</name>
+  <compound refid="namespaceamrex_1_1_0D462" kind="namespace"><name>amrex::@462</name>
+  </compound>
+  <compound refid="namespaceamrex_1_1_0D476" kind="namespace"><name>amrex::@476</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D49" kind="namespace"><name>amrex::@49</name>
+  </compound>
+  <compound refid="namespaceamrex_1_1_0D490" kind="namespace"><name>amrex::@490</name>
   </compound>
   <compound refid="namespaceamrex_1_1_0D55" kind="namespace"><name>amrex::@55</name>
   </compound>
@@ -11859,17 +11872,6 @@
     <member refid="namespaceamrex__mlebabeclap__3d__module_1a135a039920b71271ff6f3f2e71a1ae0b" kind="function"><name>compute_dphidn_3d</name></member>
     <member refid="namespaceamrex__mlebabeclap__3d__module_1a0ee32bacdfdcba1c9b2e41fba6057c54" kind="function"><name>compute_dphidn_3d_ho</name></member>
     <member refid="namespaceamrex__mlebabeclap__3d__module_1a3c38d45b5cd4704fc6d59fbb813bf179" kind="function"><name>interp2d</name></member>
-  </compound>
-  <compound refid="namespaceamrex__mlebabeclap__nd__module" kind="namespace"><name>amrex_mlebabeclap_nd_module</name>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1a7e5072755666e5320b0d1eeb3dde8045" kind="variable"><name>xlo_dir</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1a21a67a2a19ad3b0597849ed14786e2cf" kind="variable"><name>ylo_dir</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1a7579f37174ccdf01a5d91c97c2c482d4" kind="variable"><name>zlo_dir</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1a23b985486859abec62e76af837373d68" kind="variable"><name>xhi_dir</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1a888453018b5c2110dea19bb65862b7a6" kind="variable"><name>yhi_dir</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1a967c91d75824d72634290b65566f67e6" kind="variable"><name>zhi_dir</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1a3c0e8ee3a5928a32e04bc3bfe7d994d5" kind="function"><name>amrex_mlebabeclap_apply_bc</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1abaf152cffb750993539b1479f14eaed9" kind="function"><name>amrex_eb_copy_dirichlet</name></member>
-    <member refid="namespaceamrex__mlebabeclap__nd__module_1acafec7483bec72887ef160ddfca4b91f" kind="function"><name>amrex_eb_homog_dirichlet</name></member>
   </compound>
   <compound refid="namespaceamrex__mllinop__nd__module" kind="namespace"><name>amrex_mllinop_nd_module</name>
     <member refid="namespaceamrex__mllinop__nd__module_1aa8093488a6a576b9204a41a2c3b14612" kind="variable"><name>xlo_dir</name></member>
@@ -14243,11 +14245,8 @@
     <member refid="AMReX__MLEBABecLap__F_8H_1a98265cbcd23c898dbd732fa91ad86a70" kind="function"><name>amrex_mlebabeclap_grad</name></member>
     <member refid="AMReX__MLEBABecLap__F_8H_1adf4da2f379d1ba2810829d75e73b0748" kind="function"><name>amrex_mlebabeclap_normalize</name></member>
     <member refid="AMReX__MLEBABecLap__F_8H_1a88486b7f73b033a5e72d478c1b570629" kind="function"><name>amrex_eb_mg_interp</name></member>
-    <member refid="AMReX__MLEBABecLap__F_8H_1a1303d8f01a743b9380d71306767d2db4" kind="function"><name>amrex_mlebabeclap_apply_bc</name></member>
-    <member refid="AMReX__MLEBABecLap__F_8H_1a17823291fa2acafe40a9da992ddab5ff" kind="function"><name>amrex_eb_copy_dirichlet</name></member>
-    <member refid="AMReX__MLEBABecLap__F_8H_1a62353a657f2cee679879a7fa7ec3ec17" kind="function"><name>amrex_eb_homog_dirichlet</name></member>
   </compound>
-  <compound refid="AMReX__MLEBABecLap__nd_8F90" kind="file"><name>AMReX_MLEBABecLap_nd.F90</name>
+  <compound refid="AMReX__MLEBABecLap__K_8H" kind="file"><name>AMReX_MLEBABecLap_K.H</name>
   </compound>
   <compound refid="AMReX__MLEBTensor__2D__K_8H" kind="file"><name>AMReX_MLEBTensor_2D_K.H</name>
   </compound>
