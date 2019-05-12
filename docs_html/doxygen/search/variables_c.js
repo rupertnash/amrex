@@ -347,6 +347,7 @@ var searchData=
   ['m_5fsupport',['m_support',['../classamrex_1_1EBDataCollection.html#a9d7fc23809662b01ce10290962d272e8',1,'amrex::EBDataCollection::m_support()'],['../classamrex_1_1EBFArrayBoxFactory.html#a0121434aeeb0ad87903dd1401803c1ba',1,'amrex::EBFArrayBoxFactory::m_support()']]],
   ['m_5ftable',['m_table',['../classamrex_1_1ParmParse.html#a2c878464639af635e4915b22aa627e9f',1,'amrex::ParmParse::m_table()'],['../structamrex_1_1ParmParse_1_1PP__entry.html#a697f0d85384abdd0b6a8bdecd8a3756a',1,'amrex::ParmParse::PP_entry::m_table()']]],
   ['m_5ftac_5fstats',['m_TAC_stats',['../classamrex_1_1FabArrayBase.html#a7ac2d31ebea84512f6379331df5c8d75',1,'amrex::FabArrayBase']]],
+  ['m_5ftauflux',['m_tauflux',['../classamrex_1_1MLEBTensorOp.html#abb70c0cd0ba0b1da3fe27e69bb2fe792',1,'amrex::MLEBTensorOp']]],
   ['m_5fteam',['m_Team',['../namespaceamrex_1_1ParallelDescriptor.html#a9a80b6d86037c06fed7ef5fb0d2a8d28',1,'amrex::ParallelDescriptor']]],
   ['m_5fteam_5fcomm',['m_team_comm',['../structamrex_1_1ParallelDescriptor_1_1ProcessTeam.html#a69bbcf1d147ce2786b6c5c4f166b2b1e',1,'amrex::ParallelDescriptor::ProcessTeam']]],
   ['m_5fthecpcache',['m_TheCPCache',['../classamrex_1_1FabArrayBase.html#aaa3d9b6c8292268b0472cc7c9895f10e',1,'amrex::FabArrayBase']]],
