@@ -322,6 +322,7 @@ var searchData=
   ['m_5fruntime_5fcomps_5fdefined',['m_runtime_comps_defined',['../classamrex_1_1ParticleContainer.html#a2e417921acd00358a3af55e11d2ed0e5',1,'amrex::ParticleContainer']]],
   ['m_5fruntime_5fidata',['m_runtime_idata',['../structamrex_1_1StructOfArrays.html#af5a2fab24f5880fd105ae85982e9a6fd',1,'amrex::StructOfArrays']]],
   ['m_5fruntime_5frdata',['m_runtime_rdata',['../structamrex_1_1StructOfArrays.html#a051a6bf3d0f23d34c06c3b3c6249a8dd',1,'amrex::StructOfArrays']]],
+  ['m_5fs0_5fnorm0',['m_s0_norm0',['../classamrex_1_1MLNodeLaplacian.html#a587789b33e8a1da29ce868daeb003995',1,'amrex::MLNodeLaplacian']]],
   ['m_5fscomp',['m_scomp',['../classamrex_1_1FillPatchIteratorHelper.html#a77d378e6f4445b1b52d50e81d97c85fc',1,'amrex::FillPatchIteratorHelper']]],
   ['m_5fsfinv',['m_sfinv',['../classamrex_1_1EB2_1_1ScaleIF.html#a932ebe41c20dbea7dbe43d208f1dc71d',1,'amrex::EB2::ScaleIF']]],
   ['m_5fsigma',['m_sigma',['../classamrex_1_1MLNodeLaplacian.html#a8a183b518f95b79420fa95a4400b3a4f',1,'amrex::MLNodeLaplacian']]],
