@@ -806,6 +806,7 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
         //
         // There can only be local work to do.
         //
+        int launches = 0;
 	int N_loc = (*thecpc.m_LocTags).size();
         bool is_thread_safe = FAB::isCopyOMPSafe() && thecpc.m_threadsafe_loc;
         if (Gpu::inLaunchRegion() || !is_thread_safe)
@@ -817,40 +818,107 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                 if (this != &src || tag.dstIndex != tag.srcIndex || tag.sbox != tag.dbox) {
                     loc_copy_tags[tag.dstIndex].push_back
                         ({src.fabHostPtr(tag.srcIndex), tag.dbox, tag.sbox.smallEnd()-tag.dbox.smallEnd()});
+                    launches++;
                 }
             }
+
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10))
+
+            if (Gpu::inGraphRegion()) {
+
+                // Create Graph is one doesn't exist.
+                if ( !(thecpc.m_localCopy.ready()) )
+                {
+                    const_cast<CPC&>(thecpc).m_localCopy.resize(launches);
+
+                    int idx = 0;
+                    // Record the graph.
+                    for (MFIter mfi(*this); mfi.isValid(); ++mfi)
+                    {
+                        amrex::Gpu::Device::startGraphRecording( mfi.LocalIndex() == 0 );
+
+                        const auto& tags = loc_copy_tags[mfi];
+                        for (auto const & tag : tags)
+                        {
+                            const auto offset = tag.offset.dim3();
+                            ParallelCopyMemory* pcmem = thecpc.m_localCopy.getDevicePtr(idx++);
+                            AMREX_HOST_DEVICE_FOR_3D(tag.dbox, i, j, k,
+                            {
+                                auto const dst = pcmem->getDst<Real>();
+                                auto const src = pcmem->getSrc<Real>();
+                                if (pcmem->add)
+                                {
+                                    for (int n=0; n < pcmem->ncomp; ++n) {
+                                        dst(i,j,k,(pcmem->dcomp)+n) += src(i+offset.x,j+offset.y, k+offset.z,(pcmem->scomp)+n);
+                                    }
+                                } else {
+                                    for (int n=0; n < pcmem->ncomp; ++n) {
+                                        dst(i,j,k,(pcmem->dcomp)+n) = src(i+offset.x,j+offset.y, k+offset.z,(pcmem->scomp)+n);
+                                    }
+                                }
+                            }
+                        }
+
+                        bool last_iter( mfi.LocalIndex() == (this->local_size()-1) );
+                        const_cast<CPC&>(thecpc).m_localCopy.setGraph( amrex::Gpu::Device::stopGraphRecording(last_iter) );
+                    }
+
+                }
+
+                // Setup Launch Parameters
+                int idx = 0;
+                for (MFIter mfi(*this); mfi.isValid(); ++mfi)
+                {
+                    const auto& tags = loc_copy_tags[mfi];
+                    for (auto const & tag : tags)
+                    {
+                        const_cast<CPC&>(thecpc).m_localCopy.setParms(idx++, makeParallelCopyMemory(tag.sfab->array(),
+                                                                                                    this->array(mfi),
+                                                                                                    scomp, dcomp, ncomp, op));
+                    }
+                }
+
+                // Launch Graph
+                const_cast<CPC&>(thecpc).m_localCopy.executeGraph();
+
+            } else {
+#endif
+
 #ifdef _OPENMP
 #pragma omp parallel if (Gpu::notInLaunchRegion())
 #endif
-            for (MFIter mfi(*this); mfi.isValid(); ++mfi)
-            {
-                const auto& tags = loc_copy_tags[mfi];
-                auto dfab = this->array(mfi);
-                if (op == FabArrayBase::COPY)
+                for (MFIter mfi(*this); mfi.isValid(); ++mfi)
                 {
-                    for (auto const & tag : tags)
+                    const auto& tags = loc_copy_tags[mfi];
+                    auto dfab = this->array(mfi);
+                    if (op == FabArrayBase::COPY)
                     {
-                        auto const sfab = tag.sfab->array();
-                        Dim3 offset = tag.offset.dim3();
-                        AMREX_HOST_DEVICE_FOR_4D ( tag.dbox, ncomp, i, j, k, n,
+                        for (auto const & tag : tags)
                         {
-                            dfab(i,j,k,dcomp+n) = sfab(i+offset.x,j+offset.y,k+offset.z,scomp+n);
-                        });
+                            auto const sfab = tag.sfab->array();
+                            Dim3 offset = tag.offset.dim3();
+                            AMREX_HOST_DEVICE_FOR_4D ( tag.dbox, ncomp, i, j, k, n,
+                            {
+                                dfab(i,j,k,dcomp+n) = sfab(i+offset.x,j+offset.y,k+offset.z,scomp+n);
+                            });
+                        }
+                    }
+                    else
+                    {
+                        for (auto const & tag : tags)
+                        {
+                            auto const sfab = tag.sfab->array();
+                            Dim3 offset = tag.offset.dim3();
+                            AMREX_HOST_DEVICE_FOR_4D ( tag.dbox, ncomp, i, j, k, n,
+                            {
+                                dfab(i,j,k,dcomp+n) += sfab(i+offset.x,j+offset.y,k+offset.z,scomp+n);
+                            });
+                        }
                     }
                 }
-                else
-                {
-                    for (auto const & tag : tags)
-                    {
-                        auto const sfab = tag.sfab->array();
-                        Dim3 offset = tag.offset.dim3();
-                        AMREX_HOST_DEVICE_FOR_4D ( tag.dbox, ncomp, i, j, k, n,
-                        {
-                            dfab(i,j,k,dcomp+n) += sfab(i+offset.x,j+offset.y,k+offset.z,scomp+n);
-                        });
-                    }
-                }
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10))
             }
+#endif
         }
         else
         {
