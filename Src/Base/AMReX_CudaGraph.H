@@ -9,6 +9,7 @@
 
 namespace amrex {
 
+
 struct CopyMemory
 {
     void* src = nullptr;
@@ -36,6 +37,38 @@ makeCopyMemory (Array4<T> const& src, Array4<U> const& dst, int scomp, int ncomp
     return { (void*)(src.p), (void*)(dst.p), src.begin, src.end, dst.begin, dst.end, scomp, ncomp };
 }
 
+// ------------------------------------------------------------------
+
+struct ParallelCopyMemory
+{
+    void* src = nullptr;
+    void* dst = nullptr;
+    Dim3 src_begin = {0,0,0};
+    Dim3 src_end = {0,0,0};
+    Dim3 dst_begin = {0,0,0};
+    Dim3 dst_end = {0,0,0};
+    int scomp = 0;
+    int dcomp = 0;
+    int ncomp = 0;
+    bool add = false; // Turn into a FabArrayBase::CpOp object later for consistency. 
+
+    template <class T>
+    AMREX_GPU_HOST_DEVICE
+    Array4<T const> getSrc () { return Array4<T const>(static_cast<T const*>(src), src_begin, src_end); }
+
+    template <class T>
+    AMREX_GPU_HOST_DEVICE
+    Array4<T> getDst () { return Array4<T>(static_cast<T*>(dst), dst_begin, dst_end); }
+};
+
+template <typename T, typename U>
+ParallelCopyMemory
+makeParallelCopyMemory (Array4<T> const& src, Array4<U> const& dst, int scomp, int dcomp, int ncomp, bool add)
+{
+    return { (void*)(src.p), (void*)(dst.p), src.begin, src.end, dst.begin, dst.end, scomp, dcomp, ncomp, add };
+}
+
+// ------------------------------------------------------------------
 template <typename T>
 struct CudaGraph
 {
