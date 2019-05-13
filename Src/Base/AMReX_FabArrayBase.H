@@ -516,6 +516,12 @@ public:
 	//
         int         m_nuse;
 
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10) )
+        CudaGraph<ParallelCopyMemory> m_localCopy;
+        CudaGraph<ParallelCopyMemory> m_copyToBuffer;
+        CudaGraph<ParallelCopyMemory> m_copyFromBuffer;
+#endif
+
     private:
 	void define (const BoxArray& ba_dst, const DistributionMapping& dm_dst,
 		     const Vector<int>& imap_dst,
