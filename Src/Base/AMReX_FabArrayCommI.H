@@ -872,11 +872,12 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                 int idx = 0;
                 for (MFIter mfi(*this); mfi.isValid(); ++mfi)
                 {
+                    auto dst_array = this->array(mfi);
                     const auto& tags = loc_copy_tags[mfi];
                     for (auto const & tag : tags)
                     {
                         const_cast<CPC&>(thecpc).m_localCopy.setParams(idx++, makeParallelCopyMemory(tag.sfab->array(),
-                                                                                                     this->array(mfi),
+                                                                                                     dst_array,
                                                                                                      scomp, dcomp, ncomp, op));
                     }
                 }
@@ -1286,11 +1287,12 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                 int idx = 0;
                 for (MFIter mfi(*this); mfi.isValid(); ++mfi)
                 {
+                    auto dst_array = this->array(mfi);
                     const auto& fab_copy_tags = copy_tags[mfi];
                     for (auto const & fab_tag : fab_copy_tags)
                     {
                         const_cast<CPC&>(thecpc).m_localCopy.setParams(idx++, makeParallelCopyMemory(fab_tag.sfab->array(),
-                                                                                                     this->array(mfi),
+                                                                                                     dst_array, 
                                                                                                      SC, DC, NC, op));
                     }
                 }
@@ -1453,11 +1455,12 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                     int idx = 0;
                     for (MFIter mfi(*this); mfi.isValid(); ++mfi) 
                     {
+                        auto dst_array = this->array(mfi);
                         const auto& void_copy_tags = recv_copy_tags[mfi];
                         for (auto const & void_tag : void_copy_tags) {
                             const_cast<CPC&>(thecpc).m_copyFromBuffer.setParams(idx++,
                                                                            makeParallelCopyMemory(amrex::makeArray4((value_type*)(void_tag.p), void_tag.dbox),
-                                                                                                  this->array(mfi),
+                                                                                                  dst_array,
                                                                                                   SC, DC, NC, op));
                         }
                     }
