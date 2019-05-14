@@ -806,9 +806,9 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
         //
         // There can only be local work to do.
         //
-        int launches = 0;
 	int N_loc = (*thecpc.m_LocTags).size();
         bool is_thread_safe = FAB::isCopyOMPSafe() && thecpc.m_threadsafe_loc;
+        int launches = 0;
         if (Gpu::inLaunchRegion() || !is_thread_safe)
         {
             LayoutData<Vector<FabCopyTag<FAB> > > loc_copy_tags(boxArray(),DistributionMap());
@@ -856,7 +856,7 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                                         dst(i,j,k,(pcmem->dcomp)+n) = src(i+offset.x,j+offset.y, k+offset.z,(pcmem->scomp)+n);
                                     }
                                 }
-                            }
+                            });
                         }
 
                         bool last_iter( mfi.LocalIndex() == (this->local_size()-1) );
@@ -872,9 +872,9 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                     const auto& tags = loc_copy_tags[mfi];
                     for (auto const & tag : tags)
                     {
-                        const_cast<CPC&>(thecpc).m_localCopy.setParms(idx++, makeParallelCopyMemory(tag.sfab->array(),
-                                                                                                    this->array(mfi),
-                                                                                                    scomp, dcomp, ncomp, op));
+                        const_cast<CPC&>(thecpc).m_localCopy.setParams(idx++, makeParallelCopyMemory(tag.sfab->array(),
+                                                                                                     this->array(mfi),
+                                                                                                     scomp, dcomp, ncomp, op));
                     }
                 }
 
@@ -1084,31 +1084,110 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
 	if (N_snds > 0)
 	{
             bool is_thread_safe = FAB::isCopyOMPSafe();
-#ifdef _OPENMP
-#pragma omp parallel if (is_thread_safe && Gpu::notInLaunchRegion())
-#endif
-            for (Gpu::StreamIter sit(N_snds,is_thread_safe); sit.isValid(); ++sit)
-	    {
-                const int j = sit();
-		char* dptr = send_data[j];
+
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10))
+        if (Gpu::inGraphRegion()) {
+
+            if ( !(thecpc.m_copyToBuffer.ready()) )
+            {
+                // Set size of CudaGraph buffer.
+                // Is the conditional ever expected false?
+                int launches = 0;
+                for (int send = 0; send < N_snds; ++send) {
+                    if (send_data[send] != nullptr) {
+                        launches += send_cctc[send]->size();
+                    }
+                }
+                const_cast<CPC&>(thecpc).m_copyToBuffer.resize(launches);
+
+                // Record the graph.
+                int idx = 0;
+                for (Gpu::StreamIter sit(N_snds,is_thread_safe); sit.isValid(); ++sit)
+                {
+                    amrex::Gpu::Device::startGraphRecording( sit() == 0 );
+
+                    const int j = sit();
+                    char* dptr = send_data[j];
+                    if (dptr != nullptr)
+                    {
+                        auto const& cctc = *send_cctc[j];
+                        for (auto const& tag : cctc)
+                        {
+                            const Box& bx = tag.sbox;
+                            CopyMemory* cmem = thecpc.m_copyToBuffer.getDevicePtr(idx++);
+                            AMREX_HOST_DEVICE_FOR_3D (bx, ii, jj, kk,
+                            {
+                                auto const pfab = cmem->getDst<Real>();
+                                auto const sfab = cmem->getSrc<Real>();
+                                for (int n = 0; n < cmem->ncomp; ++n)
+                                {
+                                    pfab(ii,jj,kk,n) = sfab(ii,jj,kk,n+(cmem->scomp));
+                                }
+                            });
+                        }
+                    }
+
+                    bool last_iter( sit() == (N_snds-1) );
+                    const_cast<CPC&>(thecpc).m_copyToBuffer.setGraph( amrex::Gpu::Device::stopGraphRecording(last_iter) );
+                }
+            }
+
+            // Setup Launch Parameters
+            int idx = 0;
+            for (int send = 0; send < N_snds; ++send)
+            {
+                const int j = send;
+                char* dptr = send_data[j];
                 if (dptr != nullptr)
                 {
                     auto const& cctc = *send_cctc[j];
                     for (auto const& tag : cctc)
                     {
-                        const Box& bx = tag.sbox;
-                        auto const sfab = src.array(tag.srcIndex);
-                        auto pfab = amrex::makeArray4((value_type*)(dptr),bx);
-                        AMREX_HOST_DEVICE_FOR_4D ( bx, NC, ii, jj, kk, n,
-                        {
-                            pfab(ii,jj,kk,n) = sfab(ii,jj,kk,SC+n);
-                        });
+                        const_cast<CPC&>(thecpc).m_copyToBuffer.setParams(idx++, makeCopyMemory(src.array(tag.srcIndex),
+                                                                                   amrex::makeArray4((value_type*)(dptr), tag.sbox),
+                                                                                   SC, NC));
 
-                        dptr += (bx.numPts() * NC * sizeof(value_type));
+                        dptr += (tag.sbox.numPts() * NC * sizeof(value_type));
                     }
                     BL_ASSERT(dptr == send_data[j] + send_size[j]);
-		}
-	    }
+                }
+            }
+
+            // Launch Graph
+            const_cast<CPC&>(thecpc).m_copyToBuffer.executeGraph();
+
+        } else {
+
+#endif
+
+#ifdef _OPENMP
+#pragma omp parallel if (is_thread_safe && Gpu::notInLaunchRegion())
+#endif
+                for (Gpu::StreamIter sit(N_snds,is_thread_safe); sit.isValid(); ++sit)
+                {
+                    const int j = sit();
+                    char* dptr = send_data[j];
+                    if (dptr != nullptr)
+                    {
+                        auto const& cctc = *send_cctc[j];
+                        for (auto const& tag : cctc)
+                        {
+                            const Box& bx = tag.sbox;
+                            auto const sfab = src.array(tag.srcIndex);
+                            auto pfab = amrex::makeArray4((value_type*)(dptr),bx);
+                            AMREX_HOST_DEVICE_FOR_4D ( bx, NC, ii, jj, kk, n,
+                            {
+                                pfab(ii,jj,kk,n) = sfab(ii,jj,kk,SC+n);
+                            });
+
+                            dptr += (bx.numPts() * NC * sizeof(value_type));
+                        }
+                        BL_ASSERT(dptr == send_data[j] + send_size[j]);
+                    }
+                }
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10) )
+        }
+#endif
 
             int send_counter = 0;
             while (send_counter < N_snds)
@@ -1143,6 +1222,7 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
         //
 	{
             bool is_thread_safe = FAB::isCopyOMPSafe() && thecpc.m_threadsafe_loc;
+            int launches = 0;
             if (Gpu::inLaunchRegion() || !is_thread_safe)
             {
                 // gpu version or omp over dest fabs
@@ -1154,34 +1234,99 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                         copy_tags[tag.dstIndex].push_back
                             ({src.fabHostPtr(tag.srcIndex), tag.dbox, tag.sbox.smallEnd()-tag.dbox.smallEnd()});
                     }
+                    launches++;
                 }
+
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10) )
+                if (Gpu::inGraphRegion()) {
+
+                    // Create graph if one doesn't exist.
+                    if ( !(thecpc.m_localCopy.ready()) )
+                    {
+
+                        const_cast<CPC&>(thecpc).m_localCopy.resize(launches);
+
+                        int idx = 0;
+                        // Record the graph.
+                        for (MFIter mfi(*this); mfi.isValid(); ++mfi)
+                        {
+                            amrex::Gpu::Device::startGraphRecording( mfi.LocalIndex() == 0 );
+
+                            const auto& fab_copy_tags = copy_tags[mfi];
+                            for (auto const & fab_tag : fab_copy_tags)
+                            {
+                                Dim3 offset = fab_tag.offset.dim3();
+                                ParallelCopyMemory* pcmem = thecpc.m_localCopy.getDevicePtr(idx++);
+                                AMREX_HOST_DEVICE_FOR_3D(fab_tag.dbox, i, j, k,
+                                {
+                                    auto const dst = pcmem->getDst<Real>();
+                                    auto const src = pcmem->getSrc<Real>();
+                                    if (pcmem->add)
+                                    {
+                                        for (int n=0; n < pcmem->ncomp; ++n) {
+                                            dst(i,j,k,(pcmem->dcomp)+n) += src(i+offset.x,j+offset.y,k+offset.z,(pcmem->scomp)+n);
+                                        }
+                                    } else {
+                                        for (int n=0; n < pcmem->ncomp; ++n) {
+                                            dst(i,j,k,(pcmem->dcomp)+n) = src(i+offset.x,j+offset.y,k+offset.z,(pcmem->scomp)+n);
+                                        }
+                                    }
+                                });
+                            }
+
+                            bool last_iter( mfi.LocalIndex() == (this->local_size()-1) );
+                            const_cast<CPC&>(thecpc).m_localCopy.setGraph( amrex::Gpu::Device::stopGraphRecording(last_iter) );
+                        }
+                    }
+
+                // Launch graph.
+                int idx = 0;
+                for (MFIter mfi(*this); mfi.isValid(); ++mfi)
+                {
+                    const auto& fab_copy_tags = copy_tags[mfi];
+                    for (auto const & fab_tag : fab_copy_tags)
+                    {
+                        const_cast<CPC&>(thecpc).m_localCopy.setParams(idx++, makeParallelCopyMemory(fab_tag.sfab->array(),
+                                                                                                     this->array(mfi),
+                                                                                                     SC, DC, NC, op));
+                    }
+                }
+
+                // Launch graph.
+                const_cast<CPC&>(thecpc).m_localCopy.executeGraph();
+                    
+                } else {
+#endif
 
 #ifdef _OPENMP
 #pragma omp parallel if (Gpu::notInLaunchRegion())
 #endif
-                for (MFIter mfi(*this); mfi.isValid(); ++mfi) {
-                    auto dfab = this->array(mfi);
-                    const auto& fab_copy_tags = copy_tags[mfi];
-                    if (op == FabArrayBase::COPY) {
-                        for (auto const& fab_tag : fab_copy_tags) {
-                            Dim3 offset = fab_tag.offset.dim3();
-                            auto const sfab = fab_tag.sfab->array();
-                            AMREX_HOST_DEVICE_FOR_4D ( fab_tag.dbox, NC, i, j, k, n,
-                            {
-                                dfab(i,j,k,DC+n) = sfab(i+offset.x,j+offset.y,k+offset.z,SC+n);
-                            });
-                        }
-                    } else {
-                        for (auto const& fab_tag : fab_copy_tags) {
-                            Dim3 offset = fab_tag.offset.dim3();
-                            auto const sfab = fab_tag.sfab->array();
-                            AMREX_HOST_DEVICE_FOR_4D ( fab_tag.dbox, NC, i, j, k, n,
-                            {
-                                dfab(i,j,k,DC+n) += sfab(i+offset.x,j+offset.y,k+offset.z,SC+n);
-                            });
+                    for (MFIter mfi(*this); mfi.isValid(); ++mfi) {
+                        auto dfab = this->array(mfi);
+                        const auto& fab_copy_tags = copy_tags[mfi];
+                        if (op == FabArrayBase::COPY) {
+                            for (auto const& fab_tag : fab_copy_tags) {
+                                Dim3 offset = fab_tag.offset.dim3();
+                                auto const sfab = fab_tag.sfab->array();
+                                AMREX_HOST_DEVICE_FOR_4D ( fab_tag.dbox, NC, i, j, k, n,
+                                {
+                                    dfab(i,j,k,DC+n) = sfab(i+offset.x,j+offset.y,k+offset.z,SC+n);
+                                });
+                            }
+                        } else {
+                            for (auto const& fab_tag : fab_copy_tags) {
+                                Dim3 offset = fab_tag.offset.dim3();
+                                auto const sfab = fab_tag.sfab->array();
+                                AMREX_HOST_DEVICE_FOR_4D ( fab_tag.dbox, NC, i, j, k, n,
+                                {
+                                    dfab(i,j,k,DC+n) += sfab(i+offset.x,j+offset.y,k+offset.z,SC+n);
+                                });
+                            }
                         }
                     }
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10) )
                 }
+#endif
             }
             else
             {
@@ -1257,32 +1402,98 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
 	{
             if (!recv_copy_tags.empty())
             {
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10))
+                if (Gpu::inGraphRegion()) {
+
+                    if ( !(thecpc.m_copyFromBuffer.ready()) )
+                    {
+                        // Set size of copyFromBuffer
+                        int launches = 0;
+                        for (MFIter mfi(*this); mfi.isValid(); ++mfi)
+                        {
+                            launches += recv_copy_tags[mfi].size();
+                        }
+                        const_cast<CPC&>(thecpc).m_copyFromBuffer.resize(launches);
+
+                        int idx = 0;
+                        for (MFIter mfi(*this); mfi.isValid(); ++mfi)
+                        {
+                            amrex::Gpu::Device::startGraphRecording( mfi.LocalIndex() == 0 );
+
+                            const auto& void_copy_tags = recv_copy_tags[mfi];
+                            for (auto const & void_tag : void_copy_tags) {
+                                ParallelCopyMemory* pcmem = thecpc.m_copyFromBuffer.getDevicePtr(idx++);
+                                AMREX_HOST_DEVICE_FOR_3D(void_tag.dbox, i, j, k,
+                                {
+                                    auto const dst = pcmem->getDst<Real>();
+                                    auto const src = pcmem->getSrc<Real>();
+                                    if (pcmem->add)
+                                    {
+                                        for (int n=0; n < pcmem->ncomp; ++n) {
+                                            dst(i,j,k,(pcmem->dcomp)+n) += src(i,j,k,n); 
+                                        }
+                                    } else {
+                                        for (int n=0; n < pcmem->ncomp; ++n) {
+                                            dst(i,j,k,(pcmem->dcomp)+n) = src(i,j,k,n); 
+                                        }
+                                    }
+                    
+                                });
+                            }
+                            
+                            bool last_iter( mfi.LocalIndex() == (this->local_size()-1) );
+                            const_cast<CPC&>(thecpc).m_copyFromBuffer.setGraph( amrex::Gpu::Device::stopGraphRecording(last_iter) );
+                        }
+                    }
+
+                    // Setup Launch Parameters
+                    int idx = 0;
+                    for (MFIter mfi(*this); mfi.isValid(); ++mfi) 
+                    {
+                        const auto& void_copy_tags = recv_copy_tags[mfi];
+                        for (auto const & void_tag : void_copy_tags) {
+                            const_cast<CPC&>(thecpc).m_copyFromBuffer.setParams(idx++,
+                                                                           makeParallelCopyMemory(amrex::makeArray4((value_type*)(void_tag.p), void_tag.dbox),
+                                                                                                  this->array(mfi),
+                                                                                                  SC, DC, NC, op));
+                        }
+                    }
+
+                    // Launch graph.
+                    const_cast<CPC&>(thecpc).m_copyFromBuffer.executeGraph();
+
+            } else {
+#endif
+
                 // gpu version or omp over dest fabs
 #ifdef _OPENMP
 #pragma omp parallel if (Gpu::notInLaunchRegion())
 #endif
-                for (MFIter mfi(*this); mfi.isValid(); ++mfi) {
-                    auto dfab = this->array(mfi);
-                    const auto& void_copy_tags = recv_copy_tags[mfi];
-                    if (op == FabArrayBase::COPY)
-                    {
-                        for (auto const& void_tag : void_copy_tags) {
-                            auto pfab = amrex::makeArray4((value_type*)(void_tag.p), void_tag.dbox);
-                            AMREX_HOST_DEVICE_FOR_4D ( void_tag.dbox, NC, i, j, k, n,
-                            {
-                                dfab(i,j,k,DC+n) = pfab(i,j,k,n);
-                            });
-                        }
-                    } else {
-                        for (auto const& void_tag : void_copy_tags) {
-                            auto pfab = amrex::makeArray4((value_type*)(void_tag.p), void_tag.dbox);
-                            AMREX_HOST_DEVICE_FOR_4D ( void_tag.dbox, NC, i, j, k, n,
-                            {
-                                dfab(i,j,k,DC+n) += pfab(i,j,k,n);
-                            });
+                    for (MFIter mfi(*this); mfi.isValid(); ++mfi) {
+                        auto dfab = this->array(mfi);
+                        const auto& void_copy_tags = recv_copy_tags[mfi];
+                        if (op == FabArrayBase::COPY)
+                        {
+                            for (auto const& void_tag : void_copy_tags) {
+                                auto pfab = amrex::makeArray4((value_type*)(void_tag.p), void_tag.dbox);
+                                AMREX_HOST_DEVICE_FOR_4D ( void_tag.dbox, NC, i, j, k, n,
+                                {
+                                    dfab(i,j,k,DC+n) = pfab(i,j,k,n);
+                                });
+                            }
+                        } else {
+                            for (auto const& void_tag : void_copy_tags) {
+                                auto pfab = amrex::makeArray4((value_type*)(void_tag.p), void_tag.dbox);
+                                AMREX_HOST_DEVICE_FOR_4D ( void_tag.dbox, NC, i, j, k, n,
+                                {
+                                    dfab(i,j,k,DC+n) += pfab(i,j,k,n);
+                                });
+                            }
                         }
                     }
+#if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10))
                 }
+#endif
             }
             else
             {
