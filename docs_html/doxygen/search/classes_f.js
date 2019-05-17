@@ -8,8 +8,8 @@ var searchData=
   ['record',['Record',['../classamrex_1_1ParmParse_1_1Record.html',1,'amrex::ParmParse']]],
   ['reductionentry',['ReductionEntry',['../structCommProfStats_1_1ReductionEntry.html',1,'CommProfStats']]],
   ['ref',['Ref',['../structamrex_1_1DistributionMapping_1_1Ref.html',1,'amrex::DistributionMapping']]],
-  ['refid',['RefID',['../structamrex_1_1DistributionMapping_1_1RefID.html',1,'amrex::DistributionMapping']]],
   ['refid',['RefID',['../structamrex_1_1BoxArray_1_1RefID.html',1,'amrex::BoxArray']]],
+  ['refid',['RefID',['../structamrex_1_1DistributionMapping_1_1RefID.html',1,'amrex::DistributionMapping']]],
   ['regionsprofstats',['RegionsProfStats',['../classRegionsProfStats.html',1,'']]],
   ['rm_5ft',['rm_t',['../unionamrex_1_1Particle_1_1rm__t.html',1,'amrex::Particle']]],
   ['rotationif',['RotationIF',['../classamrex_1_1EB2_1_1RotationIF.html',1,'amrex::EB2']]]
