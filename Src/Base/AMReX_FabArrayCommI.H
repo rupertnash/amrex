@@ -443,7 +443,7 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
 
 #if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10) )
 
-            if (Gpu::inGraphRegion()) {
+            if (Gpu::inGraphRegion() && (launches > 0)) {
 
                 if ( !(TheFB.m_localCopy.ready()) )
                 {
@@ -1242,7 +1242,7 @@ FabArray<FAB>::ParallelCopy (const FabArray<FAB>& src,
                 }
 
 #if ( defined(__CUDACC__) && (__CUDACC_VER_MAJOR__ >= 10) )
-                if (Gpu::inGraphRegion()) {
+                if (Gpu::inGraphRegion() && (launches > 0)) {
 
                     // Create graph if one doesn't exist.
                     if ( !(thecpc.m_localCopy.ready()) )
