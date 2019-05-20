@@ -319,6 +319,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2dd587e7c34bdc540c57e2fed659c3e2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Geometry.html#a2dd587e7c34bdc540c57e2fed659c3e2">Setup</a> (const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> *rb=nullptr, int coord=-1, int const *is_per=nullptr)</td></tr>
 <tr class="memdesc:a2dd587e7c34bdc540c57e2fed659c3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read static values from <a class="el" href="classamrex_1_1ParmParse.html" title="Parse Parameters From Command Line and Input Files. ">ParmParse</a> database.  <a href="#a2dd587e7c34bdc540c57e2fed659c3e2">More...</a><br /></td></tr>
 <tr class="separator:a2dd587e7c34bdc540c57e2fed659c3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff9b0e69dda4b6999deddada2b4d186"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Geometry.html#a3ff9b0e69dda4b6999deddada2b4d186">ResetDefaultProbDomain</a> (const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;rb) noexcept</td></tr>
+<tr class="separator:a3ff9b0e69dda4b6999deddada2b4d186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c53d5b10b1541a615d2def7430b1d3"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Geometry.html#a24c53d5b10b1541a615d2def7430b1d3">ProbDomain</a> () noexcept</td></tr>
 <tr class="memdesc:a24c53d5b10b1541a615d2def7430b1d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the problem domain.  <a href="#a24c53d5b10b1541a615d2def7430b1d3">More...</a><br /></td></tr>
 <tr class="separator:a24c53d5b10b1541a615d2def7430b1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,6 +358,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a74e5185837937c300f7dc10fb9272d06"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Geometry.html#a74e5185837937c300f7dc10fb9272d06">isAllPeriodic</a> () noexcept</td></tr>
 <tr class="memdesc:a74e5185837937c300f7dc10fb9272d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is domain periodic in all directions?  <a href="#a74e5185837937c300f7dc10fb9272d06">More...</a><br /></td></tr>
 <tr class="separator:a74e5185837937c300f7dc10fb9272d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c65ba0dd67e496e17da73050c13335e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt; int, AMREX_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Geometry.html#a8c65ba0dd67e496e17da73050c13335e">isPeriodic</a> () noexcept</td></tr>
+<tr class="separator:a8c65ba0dd67e496e17da73050c13335e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fbce4fdfa6d3952408c9017d482acbf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceamrex.html#a317082290117984ef29e149750e2c7a8">GpuArray</a>&lt; int, AMREX_SPACEDIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Geometry.html#a3fbce4fdfa6d3952408c9017d482acbf">isPeriodicArray</a> () noexcept</td></tr>
 <tr class="separator:a3fbce4fdfa6d3952408c9017d482acbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac171b26efe9e7c4635e567ebf0ff980d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Geometry.html#ac171b26efe9e7c4635e567ebf0ff980d">periodicity</a> (const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;b) noexcept</td></tr>
@@ -1179,6 +1183,29 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8c65ba0dd67e496e17da73050c13335e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceamrex.html#afe930d74045516fece8591f173e57007">Array</a>&lt;int,AMREX_SPACEDIM&gt; amrex::Geometry::isPeriodic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3fbce4fdfa6d3952408c9017d482acbf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1658,6 +1685,30 @@ Additional Inherited Members</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3ff9b0e69dda4b6999deddada2b4d186"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void amrex::Geometry::ResetDefaultProbDomain </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;&#160;</td>
+          <td class="paramname"><em>rb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
