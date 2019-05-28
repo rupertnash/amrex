@@ -35,5 +35,6 @@ var searchData=
   ['printtofile',['PrintToFile',['../classamrex_1_1PrintToFile.html',1,'amrex']]],
   ['process_5ftopology_5ft',['process_topology_t',['../structprocess__topology__t.html',1,'']]],
   ['processteam',['ProcessTeam',['../structamrex_1_1ParallelDescriptor_1_1ProcessTeam.html',1,'amrex::ParallelDescriptor']]],
-  ['procstats',['ProcStats',['../structamrex_1_1TinyProfiler_1_1ProcStats.html',1,'amrex::TinyProfiler']]]
+  ['procstats',['ProcStats',['../structamrex_1_1TinyProfiler_1_1ProcStats.html',1,'amrex::TinyProfiler']]],
+  ['psicode',['PsiCode',['../structamrex_1_1algoim_1_1PsiCode.html',1,'amrex::algoim']]]
 ];

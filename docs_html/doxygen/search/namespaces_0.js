@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['algoim',['algoim',['../namespaceamrex_1_1algoim.html',1,'amrex']]],
   ['amrex',['amrex',['../namespaceamrex.html',1,'']]],
   ['amrex_5fabec2_5fmodule',['amrex_abec2_module',['../namespaceamrex__abec2__module.html',1,'']]],
   ['amrex_5fabec4_5fmodule',['amrex_abec4_module',['../namespaceamrex__abec4__module.html',1,'']]],
@@ -58,6 +59,7 @@ var searchData=
   ['atomic',['Atomic',['../namespaceamrex_1_1Cuda_1_1Atomic.html',1,'amrex::Cuda']]],
   ['cuda',['Cuda',['../namespaceamrex_1_1Cuda.html',1,'amrex']]],
   ['detail',['detail',['../namespaceamrex_1_1detail.html',1,'amrex']]],
+  ['detail',['detail',['../namespaceamrex_1_1algoim_1_1detail.html',1,'amrex::algoim']]],
   ['eb2',['EB2',['../namespaceamrex_1_1EB2.html',1,'amrex']]],
   ['extrapolater',['Extrapolater',['../namespaceamrex_1_1Extrapolater.html',1,'amrex']]],
   ['iif_5fdetail',['IIF_detail',['../namespaceamrex_1_1EB2_1_1IIF__detail.html',1,'amrex::EB2']]],

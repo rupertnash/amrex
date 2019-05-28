@@ -23,6 +23,7 @@ var searchData=
   ['bndryfuncarray',['BndryFuncArray',['../classamrex_1_1BndryFuncArray.html',1,'amrex']]],
   ['bndryregister',['BndryRegister',['../classamrex_1_1BndryRegister.html',1,'amrex']]],
   ['boundcond',['BoundCond',['../classamrex_1_1BoundCond.html',1,'amrex']]],
+  ['boundingbox',['BoundingBox',['../structamrex_1_1algoim_1_1BoundingBox.html',1,'amrex::algoim']]],
   ['box',['Box',['../classamrex_1_1Box.html',1,'amrex']]],
   ['boxarray',['BoxArray',['../classamrex_1_1BoxArray.html',1,'amrex']]],
   ['boxcommhelper',['BoxCommHelper',['../classamrex_1_1BoxCommHelper.html',1,'amrex']]],

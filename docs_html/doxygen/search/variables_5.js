@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['f',['f',['../classSDCstruct.html#a5a011f47199f9e9fef68cdba47a1f7f7',1,'SDCstruct']]],
+  ['f',['f',['../structamrex_1_1algoim_1_1ImplicitIntegral.html#a8e63fff308a2667a803639c70fce0b3b',1,'amrex::algoim::ImplicitIntegral::f()'],['../classSDCstruct.html#a5a011f47199f9e9fef68cdba47a1f7f7',1,'SDCstruct::f()']]],
   ['f_5fuser',['f_user',['../classamrex_1_1CpuBndryFuncFab.html#a44a9eb954199def1d1965689f79c0801',1,'amrex::CpuBndryFuncFab']]],
   ['fabarray',['fabArray',['../classamrex_1_1MFIter.html#a198baf9d7f4a208f217569a0c6f02183',1,'amrex::MFIter']]],
   ['fabarrayheadernames',['fabArrayHeaderNames',['../classamrex_1_1StateData.html#af35f43aa012590a264cbb08405ff5c1f',1,'amrex::StateData']]],
@@ -95,6 +95,7 @@ var searchData=
   ['fourth',['fourth',['../namespaceamrex__constants__module.html#a04f6986662b60baad0ef6dfc00b3d3f0',1,'amrex_constants_module']]],
   ['fr',['fr',['../classamrex_1_1RealDescriptor.html#a072f8a9c15c2edfa40feacdf5e206ab2',1,'amrex::RealDescriptor']]],
   ['frames',['frames',['../namespaceamrex_1_1ParallelContext.html#a9bffb84c7ffc09c79a7a48e953322be2',1,'amrex::ParallelContext']]],
+  ['free',['free',['../structamrex_1_1algoim_1_1ImplicitIntegral.html#aff95bdf7c30770f6021900c9eedaad6b',1,'amrex::algoim::ImplicitIntegral']]],
   ['frequency',['frequency',['../classamrex_1_1InSituBridge.html#a1f8a76f22bde94cbfc3c495aa50877e7',1,'amrex::InSituBridge']]],
   ['fromproc',['fromProc',['../structamrex_1_1FabArrayBase_1_1FabComTag.html#a202904aa6d60c2cd616182957d41fe66',1,'amrex::FabArrayBase::FabComTag::fromProc()'],['../structCommProfStats_1_1SendRecvPair.html#a532ce884eade8499d8db3c56c3ec66a7',1,'CommProfStats::SendRecvPair::fromProc()']]],
   ['fullfilename',['fullFileName',['../classamrex_1_1NFilesIter.html#a153902641555fc709b3befb6a4c6e881',1,'amrex::NFilesIter']]],

@@ -36,6 +36,7 @@ var searchData=
   ['bigend',['bigend',['../classamrex_1_1Box.html#af0f4c5e74fbdddc5f71ceade8ccc05b7',1,'amrex::Box']]],
   ['billington_5f3_5f3_5f2',['billington_3_3_2',['../namespacefarkode__mod.html#aa1b59a9469c85234fc71570d48e93755',1,'farkode_mod']]],
   ['binitdatablocks',['bInitDataBlocks',['../classBLProfStats.html#a71e8f90f882541f319f641623c1d760f',1,'BLProfStats::bInitDataBlocks()'],['../classCommProfStats.html#a923e282e808775e9fb1578d7f41c1829',1,'CommProfStats::bInitDataBlocks()'],['../classRegionsProfStats.html#aa495084e5ea8770e445d0055974e79f5',1,'RegionsProfStats::bInitDataBlocks()']]],
+  ['bits',['bits',['../structamrex_1_1algoim_1_1PsiCode.html#a80ddd826639ec72c71ba72a3c6dfc09a',1,'amrex::algoim::PsiCode']]],
   ['bitsmax',['BitsMax',['../namespaceamrex.html#abd60428797a6f8b12bc87f94351665c2',1,'amrex']]],
   ['bl_5fspacedim',['bl_spacedim',['../namespaceamrex__fort__module.html#a75dc0439ac63ce7bbde93929ee9c173c',1,'amrex_fort_module']]],
   ['blocking_5ffactor',['blocking_factor',['../classamrex_1_1AmrMesh.html#acdbddd33ae38b3d038fcaa14ce05e039',1,'amrex::AmrMesh']]],

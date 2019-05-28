@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['w',['w',['../structamrex_1_1algoim_1_1QuadratureRule_1_1Node.html#a34f5a91f16a2303f0ed25ae611894455',1,'amrex::algoim::QuadratureRule::Node']]],
   ['w_5flower_5fmask',['w_lower_mask',['../classamrex_1_1EBCellFlag.html#a9978159e62e9a5f1a9ba4a55019dc7dc',1,'amrex::EBCellFlag']]],
   ['w_5fnumvofs',['w_numvofs',['../classamrex_1_1EBCellFlag.html#a0a1397794bc5591a597619e3632ad878',1,'amrex::EBCellFlag::w_numvofs()'],['../namespaceamrex__ebcellflag__module.html#a2610316e2634c6510e9511a17e425c39',1,'amrex_ebcellflag_module::w_numvofs()']]],
   ['w_5ftype',['w_type',['../classamrex_1_1EBCellFlag.html#a68904d39b391c9345ebbb57ca42df263',1,'amrex::EBCellFlag::w_type()'],['../namespaceamrex__ebcellflag__module.html#a796a0d50302dc72114c9cf2999849084',1,'amrex_ebcellflag_module::w_type()']]],

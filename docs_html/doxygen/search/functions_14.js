@@ -12,6 +12,7 @@ var searchData=
   ['team_5frange',['team_range',['../namespaceamrex_1_1ParallelDescriptor.html#ae7e03fbd86dab31d19593df2ad5adde6',1,'amrex::ParallelDescriptor']]],
   ['teamlead',['TeamLead',['../namespaceamrex_1_1ParallelDescriptor.html#a834c805f44e9aa2724debb07602d999e',1,'amrex::ParallelDescriptor']]],
   ['teamsize',['TeamSize',['../namespaceamrex_1_1ParallelDescriptor.html#a9854dea7eb2ee59093ed0bd80af9063e',1,'amrex::ParallelDescriptor']]],
+  ['tensorproductintegral',['tensorProductIntegral',['../structamrex_1_1algoim_1_1ImplicitIntegral.html#a4c3a229f570e434e2c56fdf8bee3425d',1,'amrex::algoim::ImplicitIntegral']]],
   ['terrain',['Terrain',['../classamrex_1_1AmrData.html#a9876c6584cedf4237b5e06683b0baa28',1,'amrex::AmrData']]],
   ['test',['test',['../classamrex_1_1IndexType.html#a767e18ebec047e1126f775e95928a5e5',1,'amrex::IndexType::test()'],['../classamrex_1_1ParallelDescriptor_1_1Message.html#a42d6517959dbf89018b970cb1c0cf66e',1,'amrex::ParallelDescriptor::Message::test()'],['../namespaceamrex_1_1ParallelDescriptor.html#affba679357b6ad488b02adc81a353697',1,'amrex::ParallelDescriptor::Test()']]],
   ['the_5farena',['The_Arena',['../namespaceamrex.html#ae3d1414946b992f39ca41f135f12a0d1',1,'amrex']]],
@@ -78,7 +79,7 @@ var searchData=
   ['tridiag',['tridiag',['../namespaceamrex__abec__util__module.html#a3aacc4e2819e03912881e3108b7744dc',1,'amrex_abec_util_module']]],
   ['tryfileoutput',['TryFileOutput',['../classamrex_1_1StreamRetry.html#a16a4e702e1fd890046aa8d80a2fe2a82',1,'amrex::StreamRetry']]],
   ['tryoutput',['TryOutput',['../classamrex_1_1StreamRetry.html#ae3b5909bdd9d104025eb427395c84356',1,'amrex::StreamRetry']]],
-  ['tuple',['Tuple',['../structamrex_1_1BaseUmap_1_1Tuple.html#a24b9dfd7343906d76a057152f75d69d7',1,'amrex::BaseUmap::Tuple::Tuple()'],['../structamrex_1_1BaseUmap_1_1Tuple.html#a33282cdffef6a6423bb300934d9178ea',1,'amrex::BaseUmap::Tuple::Tuple(const IntVect &amp;a_pos, int a_ncomp, int a_l)'],['../structamrex_1_1BaseUmap_1_1const__iterator.html#a1a083a1dba74f10b43d23a4c98abebbc',1,'amrex::BaseUmap::const_iterator::tuple()']]],
+  ['tuple',['tuple',['../structamrex_1_1BaseUmap_1_1const__iterator.html#a1a083a1dba74f10b43d23a4c98abebbc',1,'amrex::BaseUmap::const_iterator::tuple()'],['../structamrex_1_1BaseUmap_1_1Tuple.html#a24b9dfd7343906d76a057152f75d69d7',1,'amrex::BaseUmap::Tuple::Tuple()'],['../structamrex_1_1BaseUmap_1_1Tuple.html#a33282cdffef6a6423bb300934d9178ea',1,'amrex::BaseUmap::Tuple::Tuple(const IntVect &amp;a_pos, int a_ncomp, int a_l)']]],
   ['type',['type',['../classamrex_1_1Box.html#a5bdfff3b6976d487ffe2212a92ffb229',1,'amrex::Box::type() const noexcept'],['../classamrex_1_1Box.html#acb525bf88ecde35d0f9060c40ee6e363',1,'amrex::Box::type(int dir) const noexcept'],['../structamrex_1_1ParallelDescriptor_1_1Mpi__typemap.html#a178254a5520c3ee1ea23f47987392468',1,'amrex::ParallelDescriptor::Mpi_typemap::type()'],['../classamrex_1_1ParallelDescriptor_1_1Message.html#ab694b4b33f64d982a1ea27f649bfce4f',1,'amrex::ParallelDescriptor::Message::type()']]],
   ['type_5fupdate',['type_update',['../classamrex_1_1BoxArray.html#a9f2c23e3d3ccd73f1045f2bca61f7a11',1,'amrex::BoxArray']]]
 ];
