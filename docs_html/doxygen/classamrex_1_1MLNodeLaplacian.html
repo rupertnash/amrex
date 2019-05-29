@@ -156,6 +156,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aec78f58fa749e98da726f5a64e91874a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6fc7d27c22cd096b77b9bb7d2b4f66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#ad6fc7d27c22cd096b77b9bb7d2b4f66d">setRZCorrection</a> (bool rz) noexcept</td></tr>
 <tr class="separator:ad6fc7d27c22cd096b77b9bb7d2b4f66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5184c0395e2b615863f958c9a057f6d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a5184c0395e2b615863f958c9a057f6d2">setNormalizationThreshold</a> (Real t) noexcept</td></tr>
+<tr class="separator:a5184c0395e2b615863f958c9a057f6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbcb13e082363d597268b6523f72470"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a4cbcb13e082363d597268b6523f72470">setSigma</a> (int amrlev, const <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> &amp;a_sigma)</td></tr>
 <tr class="separator:a4cbcb13e082363d597268b6523f72470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb3e623e86459b1e9a9c14492961d759"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#adb3e623e86459b1e9a9c14492961d759">compDivergence</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;rhs, const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1MultiFab.html">MultiFab</a> * &gt; &amp;vel)</td></tr>
@@ -316,6 +318,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae971fa5b7d9a948b3b8b778bb9540064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a587789b33e8a1da29ce868daeb003995"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; Real &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a587789b33e8a1da29ce868daeb003995">m_s0_norm0</a></td></tr>
 <tr class="separator:a587789b33e8a1da29ce868daeb003995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0797df73e7c6a1283fd31748aa6f12e5"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a0797df73e7c6a1283fd31748aa6f12e5">m_normalization_threshold</a> = 1.e-10</td></tr>
+<tr class="separator:a0797df73e7c6a1283fd31748aa6f12e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dd0f2250ddf96f66c4163f0f99e1f1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#a1dd0f2250ddf96f66c4163f0f99e1f1d">m_use_gauss_seidel</a> = true</td></tr>
 <tr class="separator:a1dd0f2250ddf96f66c4163f0f99e1f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b3d5d3a2cde86e476ffb95f17b0fef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MLNodeLaplacian.html#ac1b3d5d3a2cde86e476ffb95f17b0fef">m_use_harmonic_average</a> = false</td></tr>
@@ -1696,6 +1700,30 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5184c0395e2b615863f958c9a057f6d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MLNodeLaplacian::setNormalizationThreshold </td>
+          <td>(</td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad6fc7d27c22cd096b77b9bb7d2b4f66d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1842,6 +1870,26 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool amrex::MLNodeLaplacian::m_masks_built = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0797df73e7c6a1283fd31748aa6f12e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Real amrex::MLNodeLaplacian::m_normalization_threshold = 1.e-10</td>
         </tr>
       </table>
   </td>
