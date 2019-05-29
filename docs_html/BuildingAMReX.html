@@ -646,42 +646,27 @@ below.</p>
 <td><p>NO</p></td>
 <td><p>YES,NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>ENABLE_3D_NODAL_MGML</p></td>
-<td><p>Enable 3D nodal projection</p></td>
-<td><p>NO</p></td>
-<td><p>YES,NO</p></td>
-</tr>
-<tr class="row-even"><td><p>ALGOIM_INSTALL_DIR</p></td>
-<td><p>Path to Algoim installation directory</p></td>
-<td></td>
-<td><p>user-defined</p></td>
-</tr>
-<tr class="row-odd"><td><p>BLITZ_INSTALL_DIR</p></td>
-<td><p>Path to Blitz installation directory</p></td>
-<td></td>
-<td><p>user-defined</p></td>
-</tr>
-<tr class="row-even"><td><p>ENABLE_SUNDIALS</p></td>
+<tr class="row-odd"><td><p>ENABLE_SUNDIALS</p></td>
 <td><p>Enable SUNDIALS 4 interfaces</p></td>
 <td><p>NO</p></td>
 <td><p>YES, NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>ENABLE_SENSEI_IN_SITU</p></td>
+<tr class="row-even"><td><p>ENABLE_SENSEI_IN_SITU</p></td>
 <td><p>Enable SENSEI_IN_SITU infrastucture</p></td>
 <td><p>NO</p></td>
 <td><p>YES, NO</p></td>
 </tr>
-<tr class="row-even"><td><p>ENABLE_CONDUIT</p></td>
+<tr class="row-odd"><td><p>ENABLE_CONDUIT</p></td>
 <td><p>Enable Conduit support</p></td>
 <td><p>NO</p></td>
 <td><p>YES, NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>ENABLE_ASCENT</p></td>
+<tr class="row-even"><td><p>ENABLE_ASCENT</p></td>
 <td><p>Enable Ascent support</p></td>
 <td><p>NO</p></td>
 <td><p>YES, NO</p></td>
 </tr>
-<tr class="row-even"><td><p>ENABLE_HYPRE</p></td>
+<tr class="row-odd"><td><p>ENABLE_HYPRE</p></td>
 <td><p>Enable HYPRE interfaces</p></td>
 <td><p>NO</p></td>
 <td><p>YES, NO</p></td>
@@ -697,11 +682,6 @@ If <code class="docutils literal notranslate"><span class="pre">CMAKE_Fortran_FL
 they will be initialized with the value of the environmental variables <code class="docutils literal notranslate"><span class="pre">FFLAGS</span></code>/
 <code class="docutils literal notranslate"><span class="pre">CXXFLAGS</span></code>. If neither <code class="docutils literal notranslate"><span class="pre">FFLAGS</span></code>/ <code class="docutils literal notranslate"><span class="pre">CXXFLAGS</span></code> nor <code class="docutils literal notranslate"><span class="pre">CMAKE_Fortran_FLAGS</span></code>/ <code class="docutils literal notranslate"><span class="pre">CMAKE_CXX_FLAGS</span></code>
 are defined, AMReX default flags are used.</p>
-<p>The option <code class="docutils literal notranslate"><span class="pre">ENABLE_3D_NODAL_MGML</span></code> enables AMReX 3D nodal projection. This option requires
-two external libraries: Blitz and Algoim. The user can provide the location of
-both libraries via <code class="docutils literal notranslate"><span class="pre">BLITZ_INSTALL_DIR</span></code> and <code class="docutils literal notranslate"><span class="pre">ALGOIM_INSTALL_DIR</span></code>. However, if one or both of these
-options is not provided, AMReX will download and build Blitz and/or Algoim automatically.
-It should be noted that AMReX 2D nodal projection does not require the use of external libraries.</p>
 <p>For a detailed explanation of CUDA support in CMake, refer to section <a class="reference internal" href="GPU.html#sec-gpu-build"><span class="std std-ref">Building GPU Support</span></a>.</p>
 </div>
 <div class="section" id="importing-amrex-into-your-cmake-project">

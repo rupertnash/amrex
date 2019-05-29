@@ -140,7 +140,7 @@ var searchData=
   ['compute_5fdphidn_5f2d_5fho',['compute_dphidn_2d_ho',['../namespaceamrex__mlebabeclap__2d__module.html#a521339dd303a03b44f9e729188d70bd0',1,'amrex_mlebabeclap_2d_module']]],
   ['compute_5fdphidn_5f3d',['compute_dphidn_3d',['../namespaceamrex__mlebabeclap__3d__module.html#a135a039920b71271ff6f3f2e71a1ae0b',1,'amrex_mlebabeclap_3d_module']]],
   ['compute_5fdphidn_5f3d_5fho',['compute_dphidn_3d_ho',['../namespaceamrex__mlebabeclap__3d__module.html#a0ee32bacdfdcba1c9b2e41fba6057c54',1,'amrex_mlebabeclap_3d_module']]],
-  ['compute_5fintegrals',['compute_integrals',['../namespaceamrex_1_1algoim.html#a6784c63be461e49a81c5c587605674e4',1,'amrex::algoim::compute_integrals(MultiFab &amp;intg, int nghost)'],['../namespaceamrex_1_1algoim.html#a3ccdff6c18c04f2fb7aa460f885333ba',1,'amrex::algoim::compute_integrals(MultiFab &amp;intgmf, IntVect nghost)'],['../namespaceamrex.html#a76fca21553203d1873bfc11329daf7d5',1,'amrex::compute_integrals()']]],
+  ['compute_5fintegrals',['compute_integrals',['../namespaceamrex_1_1algoim.html#a6784c63be461e49a81c5c587605674e4',1,'amrex::algoim::compute_integrals(MultiFab &amp;intg, int nghost)'],['../namespaceamrex_1_1algoim.html#a3ccdff6c18c04f2fb7aa460f885333ba',1,'amrex::algoim::compute_integrals(MultiFab &amp;intgmf, IntVect nghost)']]],
   ['computecost',['computeCost',['../namespaceamrex_1_1loadBalanceKD.html#ad33644c42ce9b13ed99874a358d40bd4',1,'amrex::loadBalanceKD']]],
   ['computedivergence',['computeDivergence',['../namespaceamrex.html#a7b179e68f86c4a06d176f587ec95148c',1,'amrex']]],
   ['computegradient',['computeGradient',['../namespaceamrex.html#add6ef1af4714e90f5d0b5a098725612b',1,'amrex']]],
