@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="337" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="515" bodyend="515"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="343" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="523" bodyend="523"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1CellConservativeProtected_1a87a2026365c83b9f2014bd5df9f4b96d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="342" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="517" bodyend="517"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="348" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="525" bodyend="525"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1CellConservativeProtected_1a4f7eb5ba7fb671882f36ee30f4550fc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
@@ -66,7 +66,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="350" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="529" bodyend="535"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="356" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="537" bodyend="543"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1CellConservativeProtected_1aeff3c15e21d4b54bc1e4e514178e7e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
@@ -103,14 +103,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="359" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="520" bodyend="526"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="365" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="528" bodyend="534"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1CellConservativeProtected_1ae9f9f11a55b6953719b28c814aff762e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classamrex_1_1CellConservativeProtected_1a563e6340c8ed5b150a5e8be428e894c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void amrex::CellConservativeProtected::interp</definition>
-        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; const &amp;bcr, int actual_comp, int actual_state) override</argsstring>
+        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; const &amp;bcr, int actual_comp, int actual_state, RunOn gpu_or_cpu) override</argsstring>
         <name>interp</name>
-        <reimplements refid="classamrex_1_1Interpolater_1abcdada680ce52c4ec1968c13be38b604">interp</reimplements>
+        <reimplements refid="classamrex_1_1Interpolater_1ab7e7a9cccec912ca707efd4fe1653da1">interp</reimplements>
         <param>
           <type>const <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
           <declname>crse</declname>
@@ -158,6 +158,10 @@
         <param>
           <type>int</type>
           <declname>actual_state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2" kindref="member">RunOn</ref></type>
+          <declname>gpu_or_cpu</declname>
         </param>
         <briefdescription>
 <para>Coarse to fine interpolation in space. </para>        </briefdescription>
@@ -250,14 +254,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="378" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="538" bodyend="594"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="384" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="546" bodyend="604"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1CellConservativeProtected_1a97baed6c28ee55a6dcf544c9d63efc38" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classamrex_1_1CellConservativeProtected_1a5e016fbb584d8be19d11e1963fe361ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void amrex::CellConservativeProtected::protect</definition>
-        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, FArrayBox &amp;fine_state, int state_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; &amp;bcr) override</argsstring>
+        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, FArrayBox &amp;fine_state, int state_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; &amp;bcr, RunOn gpu_or_cpu) override</argsstring>
         <name>protect</name>
-        <reimplements refid="classamrex_1_1Interpolater_1aeaaef0ff2178ce688d0c48d6e1d89049">protect</reimplements>
+        <reimplements refid="classamrex_1_1Interpolater_1af4eea0c724fb28ebf6cf6caacd0e70df">protect</reimplements>
         <param>
           <type>const <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
           <declname>crse</declname>
@@ -305,6 +309,10 @@
         <param>
           <type><ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1BCRec" kindref="compound">BCRec</ref> &gt; &amp;</type>
           <declname>bcr</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2" kindref="member">RunOn</ref></type>
+          <declname>gpu_or_cpu</declname>
         </param>
         <briefdescription>
 <para>Re-visit the interpolation to protect against under- or overshoots. </para>        </briefdescription>
@@ -397,7 +405,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="408" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="597" bodyend="691"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="415" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="607" bodyend="702"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -405,38 +413,38 @@
     <detaileddescription>
 <para>Linear conservative interpolation on cell centered data but with protection against undershoots or overshoots. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="851">
+      <node id="860">
         <label>amrex::CellConservativeProtected</label>
         <link refid="classamrex_1_1CellConservativeProtected"/>
-        <childnode refid="852" relation="public-inheritance">
+        <childnode refid="861" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="852">
+      <node id="861">
         <label>amrex::Interpolater</label>
         <link refid="classamrex_1_1Interpolater"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="853">
+      <node id="862">
         <label>amrex::CellConservativeProtected</label>
         <link refid="classamrex_1_1CellConservativeProtected"/>
-        <childnode refid="854" relation="public-inheritance">
+        <childnode refid="863" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="854">
+      <node id="863">
         <label>amrex::Interpolater</label>
         <link refid="classamrex_1_1Interpolater"/>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="331" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" bodystart="328" bodyend="420"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="337" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" bodystart="334" bodyend="428"/>
     <listofallmembers>
       <member refid="classamrex_1_1Interpolater_1a076d83ba84b125ee187a18aa8d60ee3e" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>BoxCoarsener</name></member>
       <member refid="classamrex_1_1CellConservativeProtected_1aced526a1e706c7fce0c1b715639f2270" prot="public" virt="non-virtual"><scope>amrex::CellConservativeProtected</scope><name>CellConservativeProtected</name></member>
       <member refid="classamrex_1_1CellConservativeProtected_1a4f7eb5ba7fb671882f36ee30f4550fc8" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>CoarseBox</name></member>
       <member refid="classamrex_1_1CellConservativeProtected_1aeff3c15e21d4b54bc1e4e514178e7e3e" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>CoarseBox</name></member>
       <member refid="classamrex_1_1Interpolater_1aa2f8d685993329ef439ea2925bee9cc7" prot="public" virt="non-virtual"><scope>amrex::CellConservativeProtected</scope><name>GetBCArray</name></member>
-      <member refid="classamrex_1_1CellConservativeProtected_1ae9f9f11a55b6953719b28c814aff762e" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>interp</name></member>
-      <member refid="classamrex_1_1CellConservativeProtected_1a97baed6c28ee55a6dcf544c9d63efc38" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>protect</name></member>
+      <member refid="classamrex_1_1CellConservativeProtected_1a563e6340c8ed5b150a5e8be428e894c1" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>interp</name></member>
+      <member refid="classamrex_1_1CellConservativeProtected_1a5e016fbb584d8be19d11e1963fe361ea" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>protect</name></member>
       <member refid="classamrex_1_1CellConservativeProtected_1a87a2026365c83b9f2014bd5df9f4b96d" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>~CellConservativeProtected</name></member>
       <member refid="classamrex_1_1Interpolater_1ad53e63eaa9b2b9b140c98f73969f2164" prot="public" virt="virtual"><scope>amrex::CellConservativeProtected</scope><name>~Interpolater</name></member>
     </listofallmembers>

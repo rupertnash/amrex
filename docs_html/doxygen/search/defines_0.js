@@ -6,6 +6,7 @@ var searchData=
   ['amrex_5farlim_5fp',['AMREX_ARLIM_P',['../AMReX__ArrayLim_8H.html#af53c6334de4f960ca760f7ea802e1e98',1,'AMReX_ArrayLim.H']]],
   ['amrex_5fassert',['AMREX_ASSERT',['../AMReX__BLassert_8H.html#aad6450907585a147153aef621fdc6007',1,'AMReX_BLassert.H']]],
   ['amrex_5fassert_5fwith_5fmessage',['AMREX_ASSERT_WITH_MESSAGE',['../AMReX__BLassert_8H.html#a8013eb3b1fc596632383f1bb7c40e92c',1,'AMReX_BLassert.H']]],
+  ['amrex_5fattribute_5fweak',['AMREX_ATTRIBUTE_WEAK',['../AMReX__Extension_8H.html#aca0e371f8327722548a19e84acabea8e',1,'AMReX_Extension.H']]],
   ['amrex_5fbaseumap_5fkidx',['AMREX_BASEUMAP_KIDX',['../AMReX__BaseUmap_8H.html#a2d01493888e9ce6d1c5311c76cc01dc5',1,'AMReX_BaseUmap.H']]],
   ['amrex_5fcuda_5fdevice_5ffor_5f1d',['AMREX_CUDA_DEVICE_FOR_1D',['../AMReX__CudaLaunch_8H.html#ac8d2e4329c038e608b2903492f14c86e',1,'AMReX_CudaLaunch.H']]],
   ['amrex_5fcuda_5fdevice_5ffor_5f3d',['AMREX_CUDA_DEVICE_FOR_3D',['../AMReX__CudaLaunch_8H.html#a9efa305d3ba9959b3457321fa653bbd2',1,'AMReX_CudaLaunch.H']]],

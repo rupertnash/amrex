@@ -212,7 +212,7 @@ conceptually cuts through this mesh. Each cell in the mesh becomes labeled as
 regular, cut or covered, and the finite-volume based discretization methods
 traditionally used in AMReX applications can be modified to incorporate these
 cell shapes. See <a class="reference internal" href="#fig-ebexample"><span class="std std-numref">Fig. 12</span></a> for an illustration.</p>
-<div class="figure align-center" id="id1">
+<div class="figure align-default" id="id1">
 <span id="fig-ebexample"></span><a class="reference internal image-reference" href="_images/EB_example.png"><img alt="_images/EB_example.png" src="_images/EB_example.png" style="width: 50.0%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">: In the embedded boundary approach to discretizing PDEs, the (uniform)
 rectangular mesh is cut by the irregular shape of the computational domain.
@@ -346,7 +346,7 @@ redistribution, <span class="math notranslate nohighlight">\(W\)</span>,</p>
 <p>Typically, the redistribution neighborhood for each cell is one that can be
 reached via a monotonic path in each coordinate direction of unit length (see,
 e.g., <a class="reference internal" href="#fig-redistribution"><span class="std std-numref">Fig. 13</span></a>)</p>
-<div class="figure align-center" id="id3">
+<div class="figure align-default" id="id3">
 <span id="fig-redistribution"></span><a class="reference internal image-reference" href="_images/redist.png"><img alt="_images/redist.png" src="_images/redist.png" style="width: 50.0%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">: Redistribution illustration. Excess mass due to using a hybrid divergence
 <span class="math notranslate nohighlight">\(D^H\)</span> instead of the conservative divergence <span class="math notranslate nohighlight">\(D^C\)</span> is
@@ -702,7 +702,7 @@ is <em>at least</em> <span class="math notranslate nohighlight">\((n_\mathrm{pad
 <span class="math notranslate nohighlight">\(\pm(n_\mathrm{pad}+1)h\)</span>. Hence it is recommended to think of this kind of
 level-set function as the point being “at least” <span class="math notranslate nohighlight">\(\phi(\mathbf{r})\)</span> from
 the EB surface.</p>
-<div class="figure align-center" id="id4">
+<div class="figure align-default" id="id4">
 <span id="fig-local-levelset"></span><a class="reference internal image-reference" href="_images/loc_ls_ex.png"><img alt="_images/loc_ls_ex.png" src="_images/loc_ls_ex.png" style="width: 50.0%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">: Example of a “local” level-set representing a cylinder. The level-set
 function is a (linear) signed distance function near the EB-surface, and it

@@ -587,7 +587,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This class is meant to hold all information needed to completely describe the &quot;Real&quot; floating-point type on a machine. By &quot;Real&quot; here we mean either the &quot;float&quot; or &quot;double&quot; type that this version of AMReX was built with, which corresponds to whether BL_USE_FLOAT or BL_USE_DOUBLE was used to build the version of the library. </para>    </briefdescription>
+<para>This class is meant to hold all information needed to completely describe the &quot;Real&quot; floating-point type on a machine. By &quot;Real&quot; here we mean either the &quot;float&quot; or &quot;double&quot; type that this version of <ref refid="classamrex_1_1AMReX" kindref="compound">AMReX</ref> was built with, which corresponds to whether BL_USE_FLOAT or BL_USE_DOUBLE was used to build the version of the library. </para>    </briefdescription>
     <detaileddescription>
 <para>To describe a &quot;Real&quot; type two arrays are needed: one detailing the ordering of the bytes in the Real, relative to the canonical ordering 1 .. sizeof(Real) and the other detailing the format of the floating-point number.</para><para>The array detailing the format of a floating-point number is an eight-element array of longs containing the following information: <verbatim>    format[0] = number of bits per number
     format[1] = number of bits in exponent
@@ -599,32 +599,32 @@
     format[7] = bias of exponent
 </verbatim></para><para>This allows us to write out &quot;Real&quot;s in the native format on a machine, and then by also saving the <ref refid="classamrex_1_1IntDescriptor" kindref="compound">IntDescriptor</ref>, we can read them back in on another machine and have enough information to construct the exact same &quot;Real&quot; values, provided the Reals have the same size on the two machines. </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="5772">
+      <node id="5781">
         <label>amrex::Vector&lt; int &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="5773" relation="public-inheritance">
+        <childnode refid="5782" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5770">
+      <node id="5779">
         <label>amrex::Vector&lt; long &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="5771" relation="public-inheritance">
+        <childnode refid="5780" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5773">
+      <node id="5782">
         <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
       </node>
-      <node id="5769">
+      <node id="5778">
         <label>amrex::RealDescriptor</label>
         <link refid="classamrex_1_1RealDescriptor"/>
-        <childnode refid="5770" relation="usage">
+        <childnode refid="5779" relation="usage">
           <edgelabel>fr</edgelabel>
         </childnode>
-        <childnode refid="5772" relation="usage">
+        <childnode refid="5781" relation="usage">
           <edgelabel>ord</edgelabel>
         </childnode>
       </node>
-      <node id="5771">
+      <node id="5780">
         <label>std::vector&lt; long, std::allocator&lt; long &gt; &gt;</label>
       </node>
     </collaborationgraph>

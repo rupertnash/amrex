@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['offset',['offset',['../classamrex_1_1CoordSys.html#ac98571898c246591a5ae1dfd30d72829',1,'amrex::CoordSys::offset()'],['../structFabCopyTag.html#a30af4dfb43cdc8e01b8bc8b19a2dd695',1,'FabCopyTag::offset()']]],
+  ['offset',['offset',['../classamrex_1_1CoordSys.html#a87497b1adb83ce034ea0ab943fffc08f',1,'amrex::CoordSys::offset()'],['../structFabCopyTag.html#a30af4dfb43cdc8e01b8bc8b19a2dd695',1,'FabCopyTag::offset()']]],
   ['offsetx',['offsetX',['../classamrex_1_1XYPlotDataList.html#ad248848b7d8478ae8053b03fcbf8d962',1,'amrex::XYPlotDataList']]],
   ['ofs',['ofs',['../classamrex_1_1PrintToFile.html#a12f18b00f5a8136b2e884ab933249b63',1,'amrex::PrintToFile']]],
   ['ok',['ok',['../classamrex_1_1CoordSys.html#abee8e858b3ca22a33388275e0a2cfcbf',1,'amrex::CoordSys']]],

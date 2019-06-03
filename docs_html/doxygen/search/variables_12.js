@@ -65,7 +65,6 @@ var searchData=
   ['solver',['solver',['../classamrex_1_1HypreABecLap.html#a41e38522e51d31b8db271795fb039304',1,'amrex::HypreABecLap::solver()'],['../classamrex_1_1HypreABecLap2.html#a3205603faeee158a49f3ab4b8732d57b',1,'amrex::HypreABecLap2::solver()'],['../classamrex_1_1HypreABecLap3.html#a3360bc8fed204d85f2545c8e74eb51fe',1,'amrex::HypreABecLap3::solver()'],['../classamrex_1_1HypreNodeLap.html#a122058882cb0a6fddbc4a9bae3da1b89',1,'amrex::HypreNodeLap::solver()'],['../classamrex_1_1PETScABecLap.html#a3a455ed1779e0a8091cf375d59d3d66e',1,'amrex::PETScABecLap::solver()']]],
   ['solver_5ftype',['solver_type',['../classamrex_1_1MLCGSolver.html#a4ca8e6c5517dedd10c97e3dae250427f',1,'amrex::MLCGSolver']]],
   ['sparsewritingranks',['sparseWritingRanks',['../classamrex_1_1NFilesIter.html#a7ea5dbf41c762d6e8e90def0b878ea8d',1,'amrex::NFilesIter']]],
-  ['spherical_5forigin_5ffix',['spherical_origin_fix',['../classamrex_1_1Geometry.html#a71b0e9a24e6f2b8833a0dfe6d9fbd5ac',1,'amrex::Geometry']]],
   ['split_5fbounds',['split_bounds',['../classamrex_1_1ForkJoin.html#a696ffed713794753cb3d42f63eaad6ab',1,'amrex::ForkJoin']]],
   ['spos',['spos',['../classamrex_1_1StreamRetry.html#a0a9ed9969064cb80a76c99f89d3bf4f2',1,'amrex::StreamRetry']]],
   ['src_5fcomp',['src_comp',['../classamrex_1_1StateDataPhysBCFunct.html#a9bdf3dc879b2ee93a3dd1b84ffdf294b',1,'amrex::StateDataPhysBCFunct']]],

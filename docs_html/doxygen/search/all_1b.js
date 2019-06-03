@@ -8,6 +8,7 @@ var searchData=
   ['_7eamrcore',['~AmrCore',['../classamrex_1_1AmrCore.html#aa826ec39007a18c0002a14d9a53863af',1,'amrex::AmrCore']]],
   ['_7eamrdata',['~AmrData',['../classamrex_1_1AmrData.html#aa48f45d99e5cc5131854e6c700003f28',1,'amrex::AmrData']]],
   ['_7eamrdataadaptor',['~AmrDataAdaptor',['../classamrex_1_1AmrDataAdaptor.html#a9ae9a8df3d126eb7dd38d1288c85e25b',1,'amrex::AmrDataAdaptor']]],
+  ['_7eamrex',['~AMReX',['../classamrex_1_1AMReX.html#aadaaabd7881bbce62f2b282789482259',1,'amrex::AMReX']]],
   ['_7eamrinsitubridge',['~AmrInSituBridge',['../classamrex_1_1AmrInSituBridge.html#ad7bb8a6372011546798d84587f770eca',1,'amrex::AmrInSituBridge']]],
   ['_7eamrlevel',['~AmrLevel',['../classamrex_1_1AmrLevel.html#af651bb170ec4a1a93a4eed118dead881',1,'amrex::AmrLevel']]],
   ['_7eamrmesh',['~AmrMesh',['../classamrex_1_1AmrMesh.html#a10865e07f3aae297cdea041881e7b9ab',1,'amrex::AmrMesh']]],

@@ -11,6 +11,7 @@
     <innerclass refid="classamrex_1_1AmrCore" prot="public">amrex::AmrCore</innerclass>
     <innerclass refid="classamrex_1_1AmrData" prot="public">amrex::AmrData</innerclass>
     <innerclass refid="classamrex_1_1AmrDataAdaptor" prot="public">amrex::AmrDataAdaptor</innerclass>
+    <innerclass refid="classamrex_1_1AMReX" prot="public">amrex::AMReX</innerclass>
     <innerclass refid="classamrex_1_1AmrInSituBridge" prot="public">amrex::AmrInSituBridge</innerclass>
     <innerclass refid="classamrex_1_1AmrLevel" prot="public">amrex::AmrLevel</innerclass>
     <innerclass refid="classamrex_1_1AmrMesh" prot="public">amrex::AmrMesh</innerclass>
@@ -355,6 +356,46 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FACopyDescriptor.H" line="15" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FACopyDescriptor.H" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2" prot="public" static="no">
+        <name>RunOn</name>
+        <enumvalue id="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2a3432ca64f06615abf07ab44c10cada38" prot="public">
+          <name>Gpu</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2a54c82ef76ecbbd4c2293e09bae01b54e" prot="public">
+          <name>Cpu</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2ae0ac20adce6ffee48c7151b070aa5737" prot="public">
+          <name>Device</name>
+          <initializer>=Gpu</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2ac2ca16d048ec66e04bca283eab048ec2" prot="public">
+          <name>Host</name>
+          <initializer>=Cpu</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="9" bodyend="9"/>
       </memberdef>
       <memberdef kind="enum" id="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6" prot="public" static="no">
         <name>MakeType</name>
@@ -1161,7 +1202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="27" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" bodystart="27" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="30" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceamrex_1aa944154cc363fe5103f6638e3726d2ca" prot="public" static="no">
         <type>void(*</type>
@@ -1174,7 +1215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="28" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" bodystart="28" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="31" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceamrex_1afe930d74045516fece8591f173e57007" prot="public" static="no">
         <type>std::array&lt; T, N &gt;</type>
@@ -1726,7 +1767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" line="32" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" bodystart="638" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" line="32" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" bodystart="649" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceamrex_1aec5e350e7334dcbe6776eb60a1b77160" prot="public" static="no" mutable="no">
         <type><ref refid="classamrex_1_1CellConservativeProtected" kindref="compound">CellConservativeProtected</ref></type>
@@ -2092,7 +2133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.cpp" line="11" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.H" bodystart="32" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.cpp" line="11" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EBInterpolater.H" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceamrex_1a9b7bd9bff131fc5a847e7465aeba15aa" prot="public" static="yes" mutable="no">
         <type>const int</type>
@@ -2657,26 +2698,26 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FillPatchUtil.cpp" line="372" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FillPatchUtil.cpp" bodystart="372" bodyend="484"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1acc3d8e97e1e5d2c8306b5b3cf7f2e056" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a004a956bb3ca7d6cd8bf1778304e6f6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE void amrex::fluxreg_fineadd</definition>
-        <argsstring>(Box const &amp;bx, FArrayBox &amp;regfab, const int rcomp, FArrayBox const &amp;flxfab, const int fcomp, const int ncomp, const int, IntVect const &amp;ratio, const Real mult) noexcept</argsstring>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;reg, const int rcomp, Array4&lt; Real const  &gt; const &amp;flx, const int fcomp, const int ncomp, const int, Dim3 const &amp;ratio, const Real mult) noexcept</argsstring>
         <name>fluxreg_fineadd</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>bx</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
-          <declname>regfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
+          <declname>reg</declname>
         </param>
         <param>
           <type>const int</type>
           <declname>rcomp</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>flxfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>flx</declname>
         </param>
         <param>
           <type>const int</type>
@@ -2691,7 +2732,7 @@
           <defname>dir</defname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> const &amp;</type>
+          <type><ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref> const &amp;</type>
           <declname>ratio</declname>
         </param>
         <param>
@@ -2710,7 +2751,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>regfab</parametername>
+<parametername>reg</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -2724,7 +2765,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>flxfab</parametername>
+<parametername>flx</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -2766,7 +2807,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>regfab</parametername>
+<parametername>reg</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -2780,7 +2821,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>flxfab</parametername>
+<parametername>flx</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -2824,32 +2865,32 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" line="25" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" bodystart="25" bodyend="41"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" line="25" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" bodystart="25" bodyend="35"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a2478a3c2166dc36a0e9d9d3964f4c424" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a4defc609336143c898501c98cfb40e41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE void amrex::fluxreg_fineareaadd</definition>
-        <argsstring>(Box const &amp;bx, FArrayBox &amp;regfab, const int rcomp, FArrayBox const &amp;areafab, FArrayBox const &amp;flxfab, const int fcomp, const int ncomp, const int, IntVect const &amp;ratio, const Real mult) noexcept</argsstring>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;reg, const int rcomp, Array4&lt; Real const  &gt; const &amp;area, Array4&lt; Real const  &gt; const &amp;flx, const int fcomp, const int ncomp, const int, Dim3 const &amp;ratio, const Real mult) noexcept</argsstring>
         <name>fluxreg_fineareaadd</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>bx</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
-          <declname>regfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
+          <declname>reg</declname>
         </param>
         <param>
           <type>const int</type>
           <declname>rcomp</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>areafab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>area</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>flxfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>flx</declname>
         </param>
         <param>
           <type>const int</type>
@@ -2864,7 +2905,7 @@
           <defname>dir</defname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> const &amp;</type>
+          <type><ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref> const &amp;</type>
           <declname>ratio</declname>
         </param>
         <param>
@@ -2883,7 +2924,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>regfab</parametername>
+<parametername>reg</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -2897,14 +2938,14 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>areafab</parametername>
+<parametername>area</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>flxfab</parametername>
+<parametername>flx</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -2946,7 +2987,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>regfab</parametername>
+<parametername>reg</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -2960,14 +3001,14 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>areafab</parametername>
+<parametername>area</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>flxfab</parametername>
+<parametername>flx</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
@@ -3011,32 +3052,32 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" line="61" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" bodystart="61" bodyend="79"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" line="55" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" bodystart="55" bodyend="66"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1aad5960774d04969c92990e2e23723f44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a99ac19e0a27c29361999fec11b4a11b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE void amrex::fluxreg_reflux</definition>
-        <argsstring>(Box const &amp;bx, FArrayBox &amp;sfab, const int scomp, FArrayBox const &amp;ffab, FArrayBox const &amp;vfab, const int ncomp, const Real mult, const Orientation face) noexcept</argsstring>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;s, const int scomp, Array4&lt; Real const  &gt; const &amp;f, Array4&lt; Real const  &gt; const &amp;v, const int ncomp, const Real mult, const Orientation face) noexcept</argsstring>
         <name>fluxreg_reflux</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
           <declname>bx</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
-          <declname>sfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real &gt; const &amp;</type>
+          <declname>s</declname>
         </param>
         <param>
           <type>const int</type>
           <declname>scomp</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>ffab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>f</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>vfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>v</declname>
         </param>
         <param>
           <type>const int</type>
@@ -3056,7 +3097,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" line="82" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" bodystart="82" bodyend="105"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" line="69" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxReg_1D_C.H" bodystart="69" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a370603c76b9575c74c3663cb77943166" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1af7feff7858c7b1d3557509d883c46674" kindref="member">AMREX_GPU_HOST</ref> <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; Real &gt;</type>
@@ -3414,11 +3455,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="56" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="86" bodyend="93"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="59" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="92" bodyend="99"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1ae6af1524fbe3cd8da106c62a0707deb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void amrex::Initialize</definition>
+      <memberdef kind="function" id="namespaceamrex_1a187cdb4f4273fdf9bcad01ac8e3fcc4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1AMReX" kindref="compound">AMReX</ref> *</type>
+        <definition>amrex::AMReX * amrex::Initialize</definition>
         <argsstring>(MPI_Comm mpi_comm, std::ostream &amp;a_osout=std::cout, std::ostream &amp;a_oserr=std::cerr, ErrorHandler a_errhandler=nullptr)</argsstring>
         <name>Initialize</name>
         <param>
@@ -3446,11 +3487,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="58" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="290" bodyend="297"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="62" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="296" bodyend="303"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1abcb9523b634d8e0d552e198bc4c9c746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void amrex::Initialize</definition>
+      <memberdef kind="function" id="namespaceamrex_1aad973f86fbf0a5ecec671bb067f11499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classamrex_1_1AMReX" kindref="compound">AMReX</ref> *</type>
+        <definition>amrex::AMReX * amrex::Initialize</definition>
         <argsstring>(int &amp;argc, char **&amp;argv, bool build_parm_parse=true, MPI_Comm mpi_comm=MPI_COMM_WORLD, const std::function&lt; void()&gt; &amp;func_parm_parse={}, std::ostream &amp;a_osout=std::cout, std::ostream &amp;a_oserr=std::cerr, ErrorHandler a_errorhandler=nullptr)</argsstring>
         <name>Initialize</name>
         <param>
@@ -3497,17 +3538,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="63" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="300" bodyend="511"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="68" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="306" bodyend="520"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a98433bd642d901d057750276875f85f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a8117ae9942e01445ea7fe62d2f190c64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::Finalize</definition>
-        <argsstring>(bool finalize_parallel=true)</argsstring>
+        <argsstring>(AMReX *pamrex)</argsstring>
         <name>Finalize</name>
         <param>
-          <type>bool</type>
-          <declname>finalize_parallel</declname>
-          <defval>true</defval>
+          <type><ref refid="classamrex_1_1AMReX" kindref="compound">AMReX</ref> *</type>
+          <declname>pamrex</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -3515,7 +3555,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="70" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="514" bodyend="621"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="75" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="529" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1a95032768c19f94a64196f85fefeee239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void amrex::ParallelDescriptor::Finalize</definition>
+        <argsstring>()</argsstring>
+        <name>Finalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="76" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="523" bodyend="526"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1aec8ceac1148bd8331f3a51572068f8a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3527,12 +3580,12 @@
           <defname>fp</defname>
         </param>
         <briefdescription>
-<para>We maintain a stack of functions that need to be called in <ref refid="namespaceamrex_1a98433bd642d901d057750276875f85f6" kindref="member">Finalize()</ref>. The functions are called in LIFO order. The idea here is to allow classes to clean up any &quot;global&quot; state that they maintain when we&apos;re exiting from AMReX. </para>        </briefdescription>
+<para>We maintain a stack of functions that need to be called in <ref refid="namespaceamrex_1a8117ae9942e01445ea7fe62d2f190c64" kindref="member">Finalize()</ref>. The functions are called in LIFO order. The idea here is to allow classes to clean up any &quot;global&quot; state that they maintain when we&apos;re exiting from <ref refid="classamrex_1_1AMReX" kindref="compound">AMReX</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="77" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="278" bodyend="281"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="83" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="284" bodyend="287"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a6911748ceb0d88bf5b6bf7f3f0402e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3549,7 +3602,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="78" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="284" bodyend="287"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="84" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="290" bodyend="293"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ac0e2e23df625040ded95611ceae98352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -3567,7 +3620,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="82" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="144" bodyend="161"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="150" bodyend="167"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1aaa5d048f7bf7386b6976b10001a5f8b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3584,7 +3637,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="83" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="164" bodyend="167"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="89" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="170" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a505a9fcb1c91b13f22f94404e0a5a820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -3601,7 +3654,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="87" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="200" bodyend="212"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="93" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="206" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ad1cc69bc2c0172148e82713abb30d2dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3618,7 +3671,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="88" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="215" bodyend="218"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="94" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="221" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1aea69993eec3c9ca497cd0e47522b2ec6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -3636,7 +3689,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="92" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="170" bodyend="191"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="98" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="176" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ad26f2328bf66aa9678347a6055a25431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3653,7 +3706,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="93" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="194" bodyend="197"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="99" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="200" bodyend="203"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ab6a2e5010fd3fcf597991b9d1a251c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -3683,7 +3736,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="101" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="221" bodyend="269"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="107" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="227" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a60941081c34a5d500140c8577e11625a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3704,7 +3757,7 @@
 <para>Called as <ref refid="namespaceamrex_1a60941081c34a5d500140c8577e11625a" kindref="member">amrex::OutOfMemory</ref>(<bold>FILE</bold>, <bold>LINE</bold>); </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="111" column="1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="117" column="1"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a0c0dc9355722e150b88c6fc71422288e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3721,7 +3774,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="119" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="110" bodyend="127"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="125" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="116" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ae82a731c021b58a742101a3d5f803438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3739,7 +3792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="121" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="99" bodyend="101"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="127" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="105" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1add2f0f36ce80f2f3934e3a8ec2a966df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -3752,7 +3805,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="123" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="624" bodyend="627"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="129" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="639" bodyend="642"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a1e213ab52cdac41e691ab49370b30a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -3765,7 +3818,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="124" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="630" bodyend="633"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="130" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="645" bodyend="648"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1acafd26c0f64d958aed9ee56043c4f10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3778,7 +3831,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="126" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="95" bodyend="95"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="132" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="101" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a125dcbb8afa7e676566242972a5b7757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3795,7 +3848,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="127" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="97" bodyend="97"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="133" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="103" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a0b2451baea738a8717530466c13f37fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -3808,7 +3861,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="130" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="636" bodyend="639"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="136" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="651" bodyend="654"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a0f3d8f755663a93f3953f7cda5590cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3821,7 +3874,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="133" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="642" bodyend="645"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="139" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="657" bodyend="660"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a566544464dedd2d70fe9969fc79658cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -3838,7 +3891,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="140" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="648" bodyend="655"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="146" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.cpp" bodystart="663" bodyend="670"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a9d0fa7afb6bbeb5e81b5570445599fbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3851,7 +3904,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="142" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" bodystart="142" bodyend="154"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" line="148" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX.H" bodystart="148" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ae3d1414946b992f39ca41f135f12a0d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classamrex_1_1Arena" kindref="compound">Arena</ref> *</type>
@@ -5999,7 +6052,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" line="441" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="442" bodyend="454"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" line="410" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="411" bodyend="423"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a4058fe437a44e4e9367221fbd9fa9e3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::istream &amp;</type>
@@ -6020,7 +6073,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" line="462" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="462" bodyend="483"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" line="431" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CoordSys.cpp" bodystart="431" bodyend="456"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a5be48241dfac16941f5f4c66fdd7d584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> void</type>
@@ -6754,7 +6807,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayBase.cpp" line="1684" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayBase.cpp" bodystart="1685" bodyend="1689"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayBase.cpp" line="1685" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayBase.cpp" bodystart="1686" bodyend="1690"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ad44c272ba71e86300dd3ac8bd9f56e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -8933,7 +8986,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" line="29" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="30" bodyend="35"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" line="18" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="19" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a5086c850dfa16df677225c8c1139e466" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::istream &amp;</type>
@@ -8954,7 +9007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" line="38" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="38" bodyend="50"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" line="27" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.cpp" bodystart="27" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1adbc2cc619f36c517e2d0c6cbc5a40068" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref></type>
@@ -8998,14 +9051,14 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="290" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="290" bodyend="290"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a9a2065b817dff1c1a463ebab1b63b8ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1ad0f0f651612f7b14e3c2768e69aaeb92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref></type>
         <definition>Geometry amrex::refine</definition>
-        <argsstring>(Geometry const &amp;fine, IntVect const &amp;rr)</argsstring>
+        <argsstring>(Geometry const &amp;crse, IntVect const &amp;rr)</argsstring>
         <name>refine</name>
         <param>
           <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> const &amp;</type>
-          <declname>fine</declname>
+          <declname>crse</declname>
         </param>
         <param>
           <type><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref> const &amp;</type>
@@ -9019,14 +9072,14 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="294" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="294" bodyend="298"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1af645fcb77be8b1176514acb26614698d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a54d77694c8efe15e13ae6e08ba5e9fae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref></type>
         <definition>Geometry amrex::refine</definition>
-        <argsstring>(Geometry const &amp;fine, int rr)</argsstring>
+        <argsstring>(Geometry const &amp;crse, int rr)</argsstring>
         <name>refine</name>
         <param>
           <type><ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> const &amp;</type>
-          <declname>fine</declname>
+          <declname>crse</declname>
         </param>
         <param>
           <type>int</type>
@@ -9051,7 +9104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="306" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="306" bodyend="309"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" line="306" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Geometry.H" bodystart="306" bodyend="308"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a7999d4ed2bf68aba97d9772d888667d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::unique_ptr&lt; <ref refid="classamrex_1_1iMultiFab" kindref="compound">iMultiFab</ref> &gt;</type>
@@ -9353,7 +9406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="609" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="609" bodyend="612"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="615" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="615" bodyend="618"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a08f614a183836ee3c4ec2188ae159043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9374,7 +9427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="617" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="617" bodyend="620"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="623" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="623" bodyend="626"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1aaa7864cf20bb058617bbe125ef2363f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9395,7 +9448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="624" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="624" bodyend="627"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="630" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="630" bodyend="633"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1ab27dd70c2054cfd670e045047f0f3d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9416,7 +9469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="636" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="636" bodyend="641"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="642" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="642" bodyend="647"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a52f2f2a0f432f41bcc6baa90b8af234a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9437,7 +9490,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="650" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="650" bodyend="655"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="656" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="656" bodyend="661"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a24d80fefc95c9ab14152cd4580fa86f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9454,7 +9507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="665" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="665" bodyend="671"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="671" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="671" bodyend="677"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a6e2c0afe2138644796810aa4a289f790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9475,7 +9528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="680" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="680" bodyend="683"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="686" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="686" bodyend="689"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a47c6093b6f2b5acd9cec7ecece85c8b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9500,7 +9553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="693" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="693" bodyend="699"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="699" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="699" bodyend="705"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1abec71d5463dd96f105a040ff5a09272e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9521,7 +9574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="708" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="708" bodyend="711"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="714" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="714" bodyend="717"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a1fbb2a383ff7fbc2b9c998b92892a67c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9542,7 +9595,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="720" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="720" bodyend="726"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="726" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="726" bodyend="732"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a0caece32f82cf2d2a95c8f7f64c59968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></type>
@@ -9563,7 +9616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="735" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="735" bodyend="740"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="741" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="741" bodyend="746"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a848647b9c5548142aaefd433d39add90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref></type>
@@ -9584,7 +9637,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="743" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="743" bodyend="752"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="749" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="749" bodyend="758"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1aa86645e2e212f704798d51d75eafa950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> int</type>
@@ -9605,7 +9658,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="755" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="755" bodyend="758"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="761" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="761" bodyend="764"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a3d82ec5f82ec132d2e9a5756b42b6dda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> <ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref></type>
@@ -9626,7 +9679,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="761" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="761" bodyend="772"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" line="767" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H" bodystart="767" bodyend="778"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1a92b62b2e393693e759cc2c4fec860c06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -13173,7 +13226,7 @@
         <argsstring>()</argsstring>
         <name>OutOfMemory</name>
         <briefdescription>
-<para>Aborts after printing message indicating out-of-memory; i.e. operator new has failed. This is the &quot;supported&quot; set_new_handler() function for AMReX applications. </para>        </briefdescription>
+<para>Aborts after printing message indicating out-of-memory; i.e. operator new has failed. This is the &quot;supported&quot; set_new_handler() function for <ref refid="classamrex_1_1AMReX" kindref="compound">AMReX</ref> applications. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
@@ -15029,10 +15082,10 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_Mask.cpp" line="53" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_Mask.cpp" bodystart="53" bodyend="75"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a4e041c2448236fe0f5a528880bf48788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a564b2c2510894b344f61231c3fe72b6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::yafluxreg_crseadd</definition>
-        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, Real dtdx, int nc) noexcept</argsstring>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, Array4&lt; Real const  &gt; const &amp;fx, Real dtdx, int nc) noexcept</argsstring>
         <name>yafluxreg_crseadd</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -15047,8 +15100,8 @@
           <declname>flag</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>fxfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>fx</declname>
         </param>
         <param>
           <type>Real</type>
@@ -15064,12 +15117,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" bodystart="9" bodyend="31"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" bodystart="9" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a45a5aa24415a210a57511c29af42e249" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a2fcaa69e696c704ccb0cc7c9c89339d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::yafluxreg_fineadd</definition>
-        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, FArrayBox const &amp;ffab, Real dtdx, int nc, int dirside, Dim3 const &amp;rr) noexcept</argsstring>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; Real const  &gt; const &amp;f, Real dtdx, int nc, int dirside, Dim3 const &amp;rr) noexcept</argsstring>
         <name>yafluxreg_fineadd</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -15080,8 +15133,8 @@
           <declname>d</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>ffab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>f</declname>
         </param>
         <param>
           <type>Real</type>
@@ -15105,12 +15158,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" line="34" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" bodystart="34" bodyend="70"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" line="32" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_1D_K.H" bodystart="32" bodyend="67"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a3704fd7d63697dac97272aa6dce48167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a2bbac53a83acefe6f86a25676cadebb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::yafluxreg_crseadd</definition>
-        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, FArrayBox const &amp;fyfab, Real dtdx, Real dtdy, int nc) noexcept</argsstring>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, Array4&lt; Real const  &gt; const &amp;fx, Array4&lt; Real const  &gt; const &amp;fy, Real dtdx, Real dtdy, int nc) noexcept</argsstring>
         <name>yafluxreg_crseadd</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -15125,12 +15178,12 @@
           <declname>flag</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>fxfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>fx</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>fyfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>fy</declname>
         </param>
         <param>
           <type>Real</type>
@@ -15150,12 +15203,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_2D_K.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_2D_K.H" bodystart="9" bodyend="44"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_2D_K.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_2D_K.H" bodystart="9" bodyend="41"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a16eb808f5f9a89e84f6a8e86149ddd50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a94f6fb8418c037a1acab7200591caf06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref> void</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_INLINE void amrex::yafluxreg_crseadd</definition>
-        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, FArrayBox const &amp;fxfab, FArrayBox const &amp;fyfab, FArrayBox const &amp;fzfab, Real dtdx, Real dtdy, Real dtdz, int nc) noexcept</argsstring>
+        <argsstring>(Box const &amp;bx, Array4&lt; Real &gt; const &amp;d, Array4&lt; int const  &gt; const &amp;flag, Array4&lt; Real const  &gt; const &amp;fx, Array4&lt; Real const  &gt; const &amp;fy, Array4&lt; Real const  &gt; const &amp;fz, Real dtdx, Real dtdy, Real dtdz, int nc) noexcept</argsstring>
         <name>yafluxreg_crseadd</name>
         <param>
           <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref> const &amp;</type>
@@ -15170,16 +15223,16 @@
           <declname>flag</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>fxfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>fx</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>fyfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>fy</declname>
         </param>
         <param>
-          <type><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> const &amp;</type>
-          <declname>fzfab</declname>
+          <type><ref refid="structamrex_1_1Array4" kindref="compound">Array4</ref>&lt; Real const  &gt; const &amp;</type>
+          <declname>fz</declname>
         </param>
         <param>
           <type>Real</type>
@@ -15203,7 +15256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_3D_K.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_3D_K.H" bodystart="9" bodyend="56"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_3D_K.H" line="9" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_YAFluxRegister_3D_K.H" bodystart="9" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1af3d0b55f537815a445e708f01eede78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="512" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="472" bodyend="472"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="521" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="478" bodyend="478"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1PCInterp_1a4ab880728106de4887bc3f6fdedf03d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="520" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="475" bodyend="479"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="529" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="481" bodyend="485"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1PCInterp_1acd50581dbe4a2e6a14d5351e6ffac7e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classamrex_1_1Box" kindref="compound">Box</ref></type>
@@ -90,14 +90,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="529" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="482" bodyend="486"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="538" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="488" bodyend="492"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1PCInterp_1a548bcbd0fa3899b52beba39e5e51937c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classamrex_1_1PCInterp_1a94693f07a604fc9f7dba82c5802db3ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void amrex::PCInterp::interp</definition>
-        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; const &amp;bcr, int actual_comp, int actual_state) override</argsstring>
+        <argsstring>(const FArrayBox &amp;crse, int crse_comp, FArrayBox &amp;fine, int fine_comp, int ncomp, const Box &amp;fine_region, const IntVect &amp;ratio, const Geometry &amp;crse_geom, const Geometry &amp;fine_geom, Vector&lt; BCRec &gt; const &amp;bcr, int actual_comp, int actual_state, RunOn gpu_or_cpu) override</argsstring>
         <name>interp</name>
-        <reimplements refid="classamrex_1_1Interpolater_1abcdada680ce52c4ec1968c13be38b604">interp</reimplements>
+        <reimplements refid="classamrex_1_1Interpolater_1ab7e7a9cccec912ca707efd4fe1653da1">interp</reimplements>
         <param>
           <type>const <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
           <declname>crse</declname>
@@ -145,6 +145,10 @@
         <param>
           <type>int</type>
           <declname>actual_state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2" kindref="member">RunOn</ref></type>
+          <declname>gpu_or_cpu</declname>
         </param>
         <briefdescription>
 <para>Coarse to fine interpolation in space. </para>        </briefdescription>
@@ -237,7 +241,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="548" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="489" bodyend="513"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="557" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp" bodystart="495" bodyend="521"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -245,37 +249,37 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5616">
+      <node id="5625">
         <label>amrex::Interpolater</label>
         <link refid="classamrex_1_1Interpolater"/>
       </node>
-      <node id="5615">
+      <node id="5624">
         <label>amrex::PCInterp</label>
         <link refid="classamrex_1_1PCInterp"/>
-        <childnode refid="5616" relation="public-inheritance">
+        <childnode refid="5625" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5618">
+      <node id="5627">
         <label>amrex::Interpolater</label>
         <link refid="classamrex_1_1Interpolater"/>
       </node>
-      <node id="5617">
+      <node id="5626">
         <label>amrex::PCInterp</label>
         <link refid="classamrex_1_1PCInterp"/>
-        <childnode refid="5618" relation="public-inheritance">
+        <childnode refid="5627" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="506" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" bodystart="503" bodyend="560"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" line="515" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.H" bodystart="512" bodyend="570"/>
     <listofallmembers>
       <member refid="classamrex_1_1Interpolater_1a076d83ba84b125ee187a18aa8d60ee3e" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>BoxCoarsener</name></member>
       <member refid="classamrex_1_1PCInterp_1a4ab880728106de4887bc3f6fdedf03d8" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>CoarseBox</name></member>
       <member refid="classamrex_1_1PCInterp_1acd50581dbe4a2e6a14d5351e6ffac7e8" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>CoarseBox</name></member>
       <member refid="classamrex_1_1Interpolater_1aa2f8d685993329ef439ea2925bee9cc7" prot="public" virt="non-virtual"><scope>amrex::PCInterp</scope><name>GetBCArray</name></member>
-      <member refid="classamrex_1_1PCInterp_1a548bcbd0fa3899b52beba39e5e51937c" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>interp</name></member>
-      <member refid="classamrex_1_1Interpolater_1aeaaef0ff2178ce688d0c48d6e1d89049" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>protect</name></member>
+      <member refid="classamrex_1_1PCInterp_1a94693f07a604fc9f7dba82c5802db3ff" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>interp</name></member>
+      <member refid="classamrex_1_1Interpolater_1af4eea0c724fb28ebf6cf6caacd0e70df" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>protect</name></member>
       <member refid="classamrex_1_1Interpolater_1ad53e63eaa9b2b9b140c98f73969f2164" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>~Interpolater</name></member>
       <member refid="classamrex_1_1PCInterp_1ae84c5b0bfdc2b34d55e504df9a5ee03f" prot="public" virt="virtual"><scope>amrex::PCInterp</scope><name>~PCInterp</name></member>
     </listofallmembers>

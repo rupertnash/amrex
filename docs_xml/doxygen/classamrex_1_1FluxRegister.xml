@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="376" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="376" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="379" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="379" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1FluxRegister_1a43c7c6ca83e0c49296f131ecf5eb8b0e" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="379" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="379" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="382" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="382" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1FluxRegister_1a311b5caaf3b58835f84598f46315953d" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="382" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="382" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="385" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="385" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -877,7 +877,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="203" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="287" bodyend="303"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="203" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="287" bodyend="302"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1a95d4c8d650762923da71c09c414b2258" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -968,12 +968,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="221" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="306" bodyend="324"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="221" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="305" bodyend="321"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1FluxRegister_1a6be8eddac84c19a784a84d14e338395b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1FluxRegister_1a1582def7c899c525632403f386978bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::FluxRegister::FineAdd</definition>
-        <argsstring>(const FArrayBox &amp;flux, int dir, int boxno, int srccomp, int destcomp, int numcomp, Real mult) noexcept</argsstring>
+        <argsstring>(const FArrayBox &amp;flux, int dir, int boxno, int srccomp, int destcomp, int numcomp, Real mult, RunOn gpu_or_cpu) noexcept</argsstring>
         <name>FineAdd</name>
         <param>
           <type>const <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
@@ -1002,6 +1002,10 @@
         <param>
           <type>Real</type>
           <declname>mult</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2" kindref="member">RunOn</ref></type>
+          <declname>gpu_or_cpu</declname>
         </param>
         <briefdescription>
 <para>Increment flux correction with fine data. </para>        </briefdescription>
@@ -1059,12 +1063,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="242" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="327" bodyend="368"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="242" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="324" bodyend="360"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1FluxRegister_1a394c72452e615c973ff1b4e3d3303981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1FluxRegister_1af8d3fecfe518f17fa6d3c97676a558a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::FluxRegister::FineAdd</definition>
-        <argsstring>(const FArrayBox &amp;flux, const FArrayBox &amp;area, int dir, int boxno, int srccomp, int destcomp, int numcomp, Real mult) noexcept</argsstring>
+        <argsstring>(const FArrayBox &amp;flux, const FArrayBox &amp;area, int dir, int boxno, int srccomp, int destcomp, int numcomp, Real mult, RunOn gpu_or_cpu) noexcept</argsstring>
         <name>FineAdd</name>
         <param>
           <type>const <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> &amp;</type>
@@ -1097,6 +1101,10 @@
         <param>
           <type>Real</type>
           <declname>mult</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2" kindref="member">RunOn</ref></type>
+          <declname>gpu_or_cpu</declname>
         </param>
         <briefdescription>
 <para>Increment flux correction with fine data. </para>        </briefdescription>
@@ -1161,12 +1169,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="262" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="371" bodyend="416"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="263" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="363" bodyend="403"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1FluxRegister_1a972098a85ea57417172418d5fc12f927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1FluxRegister_1a99889f53192e4ffabcfeb4362c1f6ab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::FluxRegister::FineSetVal</definition>
-        <argsstring>(int dir, int boxno, int destcomp, int numcomp, Real val) noexcept</argsstring>
+        <argsstring>(int dir, int boxno, int destcomp, int numcomp, Real val, RunOn gpu_or_cpu) noexcept</argsstring>
         <name>FineSetVal</name>
         <param>
           <type>int</type>
@@ -1187,6 +1195,10 @@
         <param>
           <type>Real</type>
           <declname>val</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceamrex_1a33bef6ea796972dbf046ba79277795d2" kindref="member">RunOn</ref></type>
+          <declname>gpu_or_cpu</declname>
         </param>
         <briefdescription>
 <para>Set flux correction data for a fine box (given by boxno) to a given value. This routine used by FLASH does NOT run on gpu for safety. </para>        </briefdescription>
@@ -1230,7 +1242,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="281" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="419" bodyend="436"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="283" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="406" bodyend="426"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1a3b7dcde1bef78b1384644323ddc8e4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1321,7 +1333,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="298" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="439" bodyend="452"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="301" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="429" bodyend="442"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1a028780603be1fd71e5e7d7069b48c007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1366,7 +1378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="306" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="455" bodyend="470"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="309" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="445" bodyend="460"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1a93f3ce536f756195336c930ef6c5c22b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1446,7 +1458,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="325" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="473" bodyend="488"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="328" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="463" bodyend="478"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1ad9d645f04a0b8c09399c691540fa74d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1487,7 +1499,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="332" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="491" bodyend="507"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="335" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="481" bodyend="497"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1a4230b5a0ec42a59e2f6e48e51ca77f83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1524,7 +1536,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="340" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="601" bodyend="673"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="343" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="591" bodyend="663"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1ab1a936eb5769156da6cb7d2dac23b4d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1549,7 +1561,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="350" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="540" bodyend="598"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="353" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="530" bodyend="588"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1afada94cc61cbbc59902444d8646fc08a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1585,7 +1597,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="358" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="676" bodyend="688"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="361" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="666" bodyend="678"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1a13861fcb5290d2ce4fe7e6510d3fee34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1621,7 +1633,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="366" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="692" bodyend="713"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="369" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="682" bodyend="703"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1FluxRegister_1a6bc89bc8c2613160d25e7fd2bd0afb97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1666,7 +1678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="370" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="510" bodyend="537"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="373" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp" bodystart="500" bodyend="527"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1674,230 +1686,230 @@
     <detaileddescription>
 <para>Stores and manipulates fluxes at coarse-fine interfaces. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="2539">
+      <node id="2548">
         <label>amrex::BndryRegister</label>
         <link refid="classamrex_1_1BndryRegister"/>
       </node>
-      <node id="2538">
+      <node id="2547">
         <label>amrex::FluxRegister</label>
         <link refid="classamrex_1_1FluxRegister"/>
-        <childnode refid="2539" relation="public-inheritance">
+        <childnode refid="2548" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="2563">
+      <node id="2572">
         <label>std::vector&lt; MPI_Status, std::allocator&lt; MPI_Status &gt; &gt;</label>
       </node>
-      <node id="2546">
+      <node id="2555">
         <label>amrex::FabArrayBase::CacheStats</label>
         <link refid="structamrex_1_1FabArrayBase_1_1CacheStats"/>
-        <childnode refid="2547" relation="usage">
+        <childnode refid="2556" relation="usage">
           <edgelabel>name</edgelabel>
         </childnode>
       </node>
-      <node id="2550">
+      <node id="2559">
         <label>amrex::FabArrayBase::FabArrayStats</label>
         <link refid="structamrex_1_1FabArrayBase_1_1FabArrayStats"/>
       </node>
-      <node id="2549">
+      <node id="2558">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
-        <childnode refid="2549" relation="usage">
+        <childnode refid="2558" relation="usage">
           <edgelabel>Unit</edgelabel>
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="2564">
+      <node id="2573">
         <label>amrex::Vector&lt; MPI_Request &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="2565" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2551">
-        <label>amrex::Vector&lt; int &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
-        <childnode refid="2552" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2547">
-        <label>string</label>
-      </node>
-      <node id="2566">
-        <label>amrex::Periodicity</label>
-        <link refid="classamrex_1_1Periodicity"/>
-        <childnode refid="2549" relation="usage">
-          <edgelabel>period</edgelabel>
+        <childnode refid="2574" relation="public-inheritance">
         </childnode>
       </node>
       <node id="2560">
-        <label>std::vector&lt; char *, std::allocator&lt; char * &gt; &gt;</label>
-      </node>
-      <node id="2559">
-        <label>amrex::Vector&lt; char * &gt;</label>
+        <label>amrex::Vector&lt; int &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="2560" relation="public-inheritance">
+        <childnode refid="2561" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2561">
+      <node id="2556">
+        <label>string</label>
+      </node>
+      <node id="2575">
+        <label>amrex::Periodicity</label>
+        <link refid="classamrex_1_1Periodicity"/>
+        <childnode refid="2558" relation="usage">
+          <edgelabel>period</edgelabel>
+        </childnode>
+      </node>
+      <node id="2569">
+        <label>std::vector&lt; char *, std::allocator&lt; char * &gt; &gt;</label>
+      </node>
+      <node id="2568">
+        <label>amrex::Vector&lt; char * &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="2569" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2570">
         <label>amrex::FabArray&lt; FAB &gt;::ShMem</label>
         <link refid="structamrex_1_1FabArray_1_1ShMem"/>
       </node>
-      <node id="2565">
+      <node id="2574">
         <label>std::vector&lt; MPI_Request, std::allocator&lt; MPI_Request &gt; &gt;</label>
       </node>
-      <node id="2552">
+      <node id="2561">
         <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
       </node>
-      <node id="2557">
+      <node id="2566">
         <label>amrex::BoxArray</label>
         <link refid="classamrex_1_1BoxArray"/>
-        <childnode refid="2549" relation="usage">
+        <childnode refid="2558" relation="usage">
           <edgelabel>m_crse_ratio</edgelabel>
         </childnode>
-        <childnode refid="2558" relation="usage">
+        <childnode refid="2567" relation="usage">
           <edgelabel>m_typ</edgelabel>
         </childnode>
       </node>
-      <node id="2555">
+      <node id="2564">
         <label>amrex::DistributionMapping::RefID</label>
         <link refid="structamrex_1_1DistributionMapping_1_1RefID"/>
-        <childnode refid="2556" relation="usage">
+        <childnode refid="2565" relation="usage">
           <edgelabel>data</edgelabel>
         </childnode>
       </node>
-      <node id="2562">
+      <node id="2571">
         <label>amrex::Vector&lt; MPI_Status &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="2563" relation="public-inheritance">
+        <childnode refid="2572" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2558">
+      <node id="2567">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
-      <node id="2556">
+      <node id="2565">
         <label>amrex::DistributionMapping::Ref</label>
         <link refid="structamrex_1_1DistributionMapping_1_1Ref"/>
-        <childnode refid="2551" relation="usage">
+        <childnode refid="2560" relation="usage">
           <edgelabel>m_index_array</edgelabel>
           <edgelabel>m_pmap</edgelabel>
         </childnode>
       </node>
-      <node id="2542">
+      <node id="2551">
         <label>amrex::FabSet</label>
         <link refid="classamrex_1_1FabSet"/>
-        <childnode refid="2543" relation="usage">
+        <childnode refid="2552" relation="usage">
           <edgelabel>m_mf</edgelabel>
         </childnode>
       </node>
-      <node id="2548">
+      <node id="2557">
         <label>amrex::DistributionMapping</label>
         <link refid="classamrex_1_1DistributionMapping"/>
       </node>
-      <node id="2553">
+      <node id="2562">
         <label>amrex::FabArrayBase::BDKey</label>
         <link refid="structamrex_1_1FabArrayBase_1_1BDKey"/>
-        <childnode refid="2554" relation="usage">
+        <childnode refid="2563" relation="usage">
           <edgelabel>m_ba_id</edgelabel>
         </childnode>
-        <childnode refid="2555" relation="usage">
+        <childnode refid="2564" relation="usage">
           <edgelabel>m_dm_id</edgelabel>
         </childnode>
       </node>
-      <node id="2543">
+      <node id="2552">
         <label>amrex::MultiFab</label>
         <link refid="classamrex_1_1MultiFab"/>
-        <childnode refid="2544" relation="public-inheritance">
+        <childnode refid="2553" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2541">
+      <node id="2550">
         <label>amrex::BndryRegister</label>
         <link refid="classamrex_1_1BndryRegister"/>
-        <childnode refid="2542" relation="usage">
+        <childnode refid="2551" relation="usage">
           <edgelabel>bndry</edgelabel>
         </childnode>
-        <childnode refid="2557" relation="usage">
+        <childnode refid="2566" relation="usage">
           <edgelabel>grids</edgelabel>
         </childnode>
       </node>
-      <node id="2540">
+      <node id="2549">
         <label>amrex::FluxRegister</label>
         <link refid="classamrex_1_1FluxRegister"/>
-        <childnode refid="2541" relation="public-inheritance">
+        <childnode refid="2550" relation="public-inheritance">
         </childnode>
-        <childnode refid="2549" relation="usage">
+        <childnode refid="2558" relation="usage">
           <edgelabel>ratio</edgelabel>
         </childnode>
       </node>
-      <node id="2544">
+      <node id="2553">
         <label>amrex::FabArray&lt; FArrayBox &gt;</label>
         <link refid="classamrex_1_1FabArray"/>
-        <childnode refid="2545" relation="public-inheritance">
+        <childnode refid="2554" relation="public-inheritance">
         </childnode>
-        <childnode refid="2549" relation="usage">
+        <childnode refid="2558" relation="usage">
           <edgelabel>fb_nghost</edgelabel>
         </childnode>
-        <childnode refid="2551" relation="usage">
+        <childnode refid="2560" relation="usage">
           <edgelabel>fb_recv_size</edgelabel>
           <edgelabel>fb_recv_from</edgelabel>
         </childnode>
-        <childnode refid="2559" relation="usage">
+        <childnode refid="2568" relation="usage">
           <edgelabel>fb_recv_data</edgelabel>
           <edgelabel>fb_send_data</edgelabel>
         </childnode>
-        <childnode refid="2561" relation="usage">
+        <childnode refid="2570" relation="usage">
           <edgelabel>shmem</edgelabel>
         </childnode>
-        <childnode refid="2562" relation="usage">
+        <childnode refid="2571" relation="usage">
           <edgelabel>fb_recv_stat</edgelabel>
         </childnode>
-        <childnode refid="2564" relation="usage">
+        <childnode refid="2573" relation="usage">
           <edgelabel>fb_send_reqs</edgelabel>
           <edgelabel>fb_recv_reqs</edgelabel>
         </childnode>
-        <childnode refid="2566" relation="usage">
+        <childnode refid="2575" relation="usage">
           <edgelabel>fb_period</edgelabel>
         </childnode>
       </node>
-      <node id="2554">
+      <node id="2563">
         <label>amrex::BoxArray::RefID</label>
         <link refid="structamrex_1_1BoxArray_1_1RefID"/>
       </node>
-      <node id="2545">
+      <node id="2554">
         <label>amrex::FabArrayBase</label>
         <link refid="classamrex_1_1FabArrayBase"/>
-        <childnode refid="2546" relation="usage">
+        <childnode refid="2555" relation="usage">
           <edgelabel>m_FBC_stats</edgelabel>
           <edgelabel>m_FPinfo_stats</edgelabel>
           <edgelabel>m_CFinfo_stats</edgelabel>
           <edgelabel>m_TAC_stats</edgelabel>
           <edgelabel>m_CPC_stats</edgelabel>
         </childnode>
-        <childnode refid="2548" relation="usage">
+        <childnode refid="2557" relation="usage">
           <edgelabel>distributionMap</edgelabel>
         </childnode>
-        <childnode refid="2549" relation="usage">
+        <childnode refid="2558" relation="usage">
           <edgelabel>n_grow</edgelabel>
           <edgelabel>comm_tile_size</edgelabel>
           <edgelabel>mfiter_tile_size</edgelabel>
           <edgelabel>mfghostiter_tile_size</edgelabel>
         </childnode>
-        <childnode refid="2550" relation="usage">
+        <childnode refid="2559" relation="usage">
           <edgelabel>m_FA_stats</edgelabel>
         </childnode>
-        <childnode refid="2551" relation="usage">
+        <childnode refid="2560" relation="usage">
           <edgelabel>indexArray</edgelabel>
         </childnode>
-        <childnode refid="2553" relation="usage">
+        <childnode refid="2562" relation="usage">
           <edgelabel>m_bdkey</edgelabel>
         </childnode>
-        <childnode refid="2557" relation="usage">
+        <childnode refid="2566" relation="usage">
           <edgelabel>boxarray</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="20" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="17" bodyend="383"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" line="20" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.H" bodystart="17" bodyend="386"/>
     <listofallmembers>
       <member refid="classamrex_1_1FluxRegister_1a0886ce290105f66be4dc23059aa69cc7a6ddca7001a16a7ff26dc0c2c3910ae3a" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>ADD</name></member>
       <member refid="classamrex_1_1BndryRegister_1adb20e61942a04f1783a0e82598583bc9" prot="protected" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>bndry</name></member>
@@ -1924,10 +1936,10 @@
       <member refid="classamrex_1_1FluxRegister_1a43c7c6ca83e0c49296f131ecf5eb8b0e" prot="private" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>fine_level</name></member>
       <member refid="classamrex_1_1FluxRegister_1ab43d78762f0ea9fe8a2146dab58b9cf3" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineAdd</name></member>
       <member refid="classamrex_1_1FluxRegister_1a95d4c8d650762923da71c09c414b2258" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineAdd</name></member>
-      <member refid="classamrex_1_1FluxRegister_1a6be8eddac84c19a784a84d14e338395b" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineAdd</name></member>
-      <member refid="classamrex_1_1FluxRegister_1a394c72452e615c973ff1b4e3d3303981" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineAdd</name></member>
+      <member refid="classamrex_1_1FluxRegister_1a1582def7c899c525632403f386978bfd" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineAdd</name></member>
+      <member refid="classamrex_1_1FluxRegister_1af8d3fecfe518f17fa6d3c97676a558a7" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineAdd</name></member>
       <member refid="classamrex_1_1FluxRegister_1a7aa00b34c175fadfdb6bae33c68bf5d1" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>fineLevel</name></member>
-      <member refid="classamrex_1_1FluxRegister_1a972098a85ea57417172418d5fc12f927" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineSetVal</name></member>
+      <member refid="classamrex_1_1FluxRegister_1a99889f53192e4ffabcfeb4362c1f6ab0" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FineSetVal</name></member>
       <member refid="classamrex_1_1FluxRegister_1a935b4c43c77115935fcf76b3e4a6e009" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FluxRegister</name></member>
       <member refid="classamrex_1_1FluxRegister_1aea5e30aea810dbb261555f307106d406" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FluxRegister</name></member>
       <member refid="classamrex_1_1FluxRegister_1a443996c9a22893bae492440a1f716096" prot="public" virt="non-virtual"><scope>amrex::FluxRegister</scope><name>FluxRegister</name></member>
