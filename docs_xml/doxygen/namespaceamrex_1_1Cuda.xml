@@ -9,6 +9,7 @@
     <innerclass refid="classamrex_1_1Cuda_1_1Device" prot="public">amrex::Cuda::Device</innerclass>
     <innerclass refid="structamrex_1_1Cuda_1_1DeviceScalar" prot="public">amrex::Cuda::DeviceScalar</innerclass>
     <innerclass refid="classamrex_1_1Cuda_1_1Elixir" prot="public">amrex::Cuda::Elixir</innerclass>
+    <innerclass refid="structamrex_1_1Cuda_1_1GraphSafeGuard" prot="public">amrex::Cuda::GraphSafeGuard</innerclass>
     <innerclass refid="structamrex_1_1Cuda_1_1GridSize" prot="public">amrex::Cuda::GridSize</innerclass>
     <innerclass refid="structamrex_1_1Cuda_1_1LaunchSafeGuard" prot="public">amrex::Cuda::LaunchSafeGuard</innerclass>
     <innerclass refid="structamrex_1_1Cuda_1_1Managed" prot="public">amrex::Cuda::Managed</innerclass>
@@ -398,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="39" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="39" bodyend="39"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="58" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="58" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a0ede47532d20f65dcdd0e43d112a75f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>constexpr bool</type>
@@ -411,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="40" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="40" bodyend="40"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="59" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="59" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ae11904029c754d4740018e77948d9445" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>constexpr bool</type>
@@ -427,7 +428,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="41" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="41" bodyend="41"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="60" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1af1358634315dfd5d0aa024a970be26d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool amrex::Cuda::inGraphRegion</definition>
+        <argsstring>()</argsstring>
+        <name>inGraphRegion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="62" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1a1b6637b349e428481400b6c1cfcfdccf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool amrex::Cuda::notInGraphRegion</definition>
+        <argsstring>()</argsstring>
+        <name>notInGraphRegion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="63" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceamrex_1_1Cuda_1ae7d3328c8b210ab072993343cb2badef" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool amrex::Cuda::setGraphRegion</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setGraphRegion</name>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" line="64" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuControl.H" bodystart="64" bodyend="64"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

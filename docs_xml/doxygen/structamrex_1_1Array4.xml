@@ -143,9 +143,19 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="51" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="51" bodyend="58"/>
       </memberdef>
-      <memberdef kind="function" id="structamrex_1_1Array4_1acc0b62cfe7d5a2a6d176dff7b78458fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> T &amp;</type>
-        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE T&amp; amrex::Array4&lt; T &gt;::operator()</definition>
+      <memberdef kind="function" id="structamrex_1_1Array4_1ae42098cbe246650094884bee0aa75c84" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+            <defval>T</defval>
+          </param>
+          <param>
+            <type>class</type>
+            <defval>typename std::enable_if&lt;!std::is_void&lt;U&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> U &amp;</type>
+        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE U&amp; amrex::Array4&lt; T &gt;::operator()</definition>
         <argsstring>(int i, int j, int k) const noexcept</argsstring>
         <name>operator()</name>
         <param>
@@ -166,11 +176,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="61" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="61" bodyend="66"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="62" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="62" bodyend="67"/>
       </memberdef>
-      <memberdef kind="function" id="structamrex_1_1Array4_1ae0ad6e08e571297198ea92ea248310a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> T &amp;</type>
-        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE T&amp; amrex::Array4&lt; T &gt;::operator()</definition>
+      <memberdef kind="function" id="structamrex_1_1Array4_1a3ced076d0c7749962476bc53b35209ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+            <defval>T</defval>
+          </param>
+          <param>
+            <type>class</type>
+            <defval>typename std::enable_if&lt;!std::is_void&lt;U&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> U &amp;</type>
+        <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE U&amp; amrex::Array4&lt; T &gt;::operator()</definition>
         <argsstring>(int i, int j, int k, int n) const noexcept</argsstring>
         <name>operator()</name>
         <param>
@@ -195,9 +215,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="69" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="69" bodyend="74"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="71" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="71" bodyend="76"/>
       </memberdef>
-      <memberdef kind="function" id="structamrex_1_1Array4_1ace3674cc3e82125aac52db99e99603a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structamrex_1_1Array4_1a0951dd1a1e6d5b4f5a41c4cae335f6f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+            <defval>T</defval>
+          </param>
+          <param>
+            <type>class</type>
+            <defval>typename std::enable_if&lt;!std::is_void&lt;U&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
         <type><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref> <ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref> T *</type>
         <definition>AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE T* amrex::Array4&lt; T &gt;::ptr</definition>
         <argsstring>(int i, int j, int k) const noexcept</argsstring>
@@ -220,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="77" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="77" bodyend="82"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="80" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="80" bodyend="85"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -241,7 +271,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="31" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="30" bodyend="104"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" line="31" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Array.H" bodystart="30" bodyend="107"/>
     <listofallmembers>
       <member refid="structamrex_1_1Array4_1aaa08e35fd7ccb15fed1ccccef040043c" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>Array4</name></member>
       <member refid="structamrex_1_1Array4_1ae4cc8f1b7d78a66c0614d5b299365832" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>Array4</name></member>
@@ -250,10 +280,10 @@
       <member refid="structamrex_1_1Array4_1a158521972068c0c4346305005e44fdb4" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>jstride</name></member>
       <member refid="structamrex_1_1Array4_1a4adbc6fbedab06dc579764520c4ec9e6" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>kstride</name></member>
       <member refid="structamrex_1_1Array4_1a028dbc3fe4060224f23e6f5f95382215" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>nstride</name></member>
-      <member refid="structamrex_1_1Array4_1acc0b62cfe7d5a2a6d176dff7b78458fe" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>operator()</name></member>
-      <member refid="structamrex_1_1Array4_1ae0ad6e08e571297198ea92ea248310a0" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>operator()</name></member>
+      <member refid="structamrex_1_1Array4_1ae42098cbe246650094884bee0aa75c84" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>operator()</name></member>
+      <member refid="structamrex_1_1Array4_1a3ced076d0c7749962476bc53b35209ef" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>operator()</name></member>
       <member refid="structamrex_1_1Array4_1afc65a955f06b484f0ff95fa6ca5579e8" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>p</name></member>
-      <member refid="structamrex_1_1Array4_1ace3674cc3e82125aac52db99e99603a2" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>ptr</name></member>
+      <member refid="structamrex_1_1Array4_1a0951dd1a1e6d5b4f5a41c4cae335f6f1" prot="public" virt="non-virtual"><scope>amrex::Array4</scope><name>ptr</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
