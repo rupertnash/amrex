@@ -2,7 +2,7 @@ var searchData=
 [
   ['laplacian',['Laplacian',['../classamrex_1_1Laplacian.html',1,'amrex']]],
   ['latheif',['LatheIF',['../classamrex_1_1EB2_1_1LatheIF.html',1,'amrex::EB2']]],
-  ['launchsafeguard',['LaunchSafeGuard',['../structamrex_1_1Cuda_1_1LaunchSafeGuard.html',1,'amrex::Cuda']]],
+  ['launchsafeguard',['LaunchSafeGuard',['../structamrex_1_1Gpu_1_1LaunchSafeGuard.html',1,'amrex::Gpu']]],
   ['layoutdata',['LayoutData',['../classamrex_1_1LayoutData.html',1,'amrex']]],
   ['layoutdata_3c_20amrex_3a_3avector_3c_20amrex_3a_3avector_3c_20amrex_3a_3aboundcond_20_3e_20_3e_20_3e',['LayoutData&lt; amrex::Vector&lt; amrex::Vector&lt; amrex::BoundCond &gt; &gt; &gt;',['../classamrex_1_1LayoutData.html',1,'amrex']]],
   ['layoutdata_3c_20amrex_3a_3avector_3c_20bctuple_20_3e_20_3e',['LayoutData&lt; amrex::Vector&lt; BCTuple &gt; &gt;',['../classamrex_1_1LayoutData.html',1,'amrex']]],

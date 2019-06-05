@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;<a class="el" href="AMReX__GpuControl_8H_source.html">AMReX_GpuControl.H</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="AMReX__GpuError_8H_source.html">AMReX_GpuError.H</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="AMReX__CudaRange_8H_source.html">AMReX_CudaRange.H</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="AMReX__CudaDevice_8H_source.html">AMReX_CudaDevice.H</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="AMReX__GpuDevice_8H_source.html">AMReX_GpuDevice.H</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="AMReX__Box_8H_source.html">AMReX_Box.H</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="AMReX__Extension_8H_source.html">AMReX_Extension.H</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="AMReX__BLassert_8H_source.html">AMReX_BLassert.H</a>&gt;</code><br />
@@ -129,8 +129,6 @@ Namespaces</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a50d3c1b5aefe758658ea98bb16b433c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__CudaLaunch_8H.html#a50d3c1b5aefe758658ea98bb16b433c8">AMREX_CUDA_NCELLS_PER_THREAD</a>&#160;&#160;&#160;3</td></tr>
 <tr class="separator:a50d3c1b5aefe758658ea98bb16b433c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9b9b6a3b6253b425fb57bafb812dff3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__CudaLaunch_8H.html#af9b9b6a3b6253b425fb57bafb812dff3">AMREX_CUDA_WARP_SIZE</a>&#160;&#160;&#160;32</td></tr>
-<tr class="separator:af9b9b6a3b6253b425fb57bafb812dff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45a9c9b334efe017556083fcfff10dc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__CudaLaunch_8H.html#a45a9c9b334efe017556083fcfff10dc9">AMREX_CUDA_Y_STRIDE</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a45a9c9b334efe017556083fcfff10dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b268a171ec376f8713532502b934b46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AMReX__CudaLaunch_8H.html#a4b268a171ec376f8713532502b934b46">AMREX_CUDA_Z_STRIDE</a>&#160;&#160;&#160;1</td></tr>
@@ -1160,18 +1158,6 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">        const <span class="keyword">auto</span> amrex_i_lo = <a class="code" href="namespaceamrex.html#a38527c39e1b07777c6b7390f77db95e3">amrex::lbound</a>(box); \</div><div class="line">        const <span class="keyword">auto</span> amrex_i_hi = <a class="code" href="namespaceamrex.html#aee1c8ddea8a977a982dbe39c4a9884a9">amrex::ubound</a>(box); \</div><div class="line">        for (<span class="keywordtype">int</span> n = 0; n &lt; ncomp; ++n) { \</div><div class="line">        for (<span class="keywordtype">int</span> k = amrex_i_lo.z; k &lt;= amrex_i_hi.z; ++k) { \</div><div class="line">        for (<span class="keywordtype">int</span> j = amrex_i_lo.y; j &lt;= amrex_i_hi.y; ++j) { \</div><div class="line">        AMREX_PRAGMA_SIMD \</div><div class="line">        for (<span class="keywordtype">int</span> i = amrex_i_lo.x; i &lt;= amrex_i_hi.x; ++i) { \</div><div class="line">            block \</div><div class="line">        }}}} \</div><div class="line">    }</div><div class="ttc" id="namespaceamrex_html_a38527c39e1b07777c6b7390f77db95e3"><div class="ttname"><a href="namespaceamrex.html#a38527c39e1b07777c6b7390f77db95e3">amrex::lbound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE Dim3 lbound(Box const &amp;box) noexcept</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1452</div></div>
 <div class="ttc" id="namespaceamrex_html_aee1c8ddea8a977a982dbe39c4a9884a9"><div class="ttname"><a href="namespaceamrex.html#aee1c8ddea8a977a982dbe39c4a9884a9">amrex::ubound</a></div><div class="ttdeci">AMREX_GPU_HOST_DEVICE AMREX_FORCE_INLINE Dim3 ubound(Box const &amp;box) noexcept</div><div class="ttdef"><b>Definition:</b> AMReX_Box.H:1465</div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="af9b9b6a3b6253b425fb57bafb812dff3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AMREX_CUDA_WARP_SIZE&#160;&#160;&#160;32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 </div>
 </div>
 <a class="anchor" id="a45a9c9b334efe017556083fcfff10dc9"></a>

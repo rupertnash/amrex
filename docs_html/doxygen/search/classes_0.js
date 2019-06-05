@@ -74,7 +74,7 @@ var searchData=
   ['arrayofstructs_3c_20nstructreal_2c_20nstructint_20_3e',['ArrayOfStructs&lt; NStructReal, NStructInt &gt;',['../classamrex_1_1ArrayOfStructs.html',1,'amrex']]],
   ['assignop',['assignOp',['../structamrex_1_1InSituUtils_1_1assignOp.html',1,'amrex::InSituUtils']]],
   ['asymmetricghost',['AsymmetricGhost',['../structamrex_1_1MFUtil_1_1AsymmetricGhost.html',1,'amrex::MFUtil']]],
-  ['asyncarray',['AsyncArray',['../classamrex_1_1Cuda_1_1AsyncArray.html',1,'amrex::Cuda']]],
-  ['asyncfab',['AsyncFab',['../classamrex_1_1Cuda_1_1AsyncFab.html',1,'amrex::Cuda']]],
-  ['asyncfabimpl',['AsyncFabImpl',['../classamrex_1_1Cuda_1_1AsyncFabImpl.html',1,'amrex::Cuda']]]
+  ['asyncarray',['AsyncArray',['../classamrex_1_1Gpu_1_1AsyncArray.html',1,'amrex::Gpu']]],
+  ['asyncfab',['AsyncFab',['../classamrex_1_1Gpu_1_1AsyncFab.html',1,'amrex::Gpu']]],
+  ['asyncfabimpl',['AsyncFabImpl',['../classamrex_1_1Gpu_1_1AsyncFabImpl.html',1,'amrex::Gpu']]]
 ];

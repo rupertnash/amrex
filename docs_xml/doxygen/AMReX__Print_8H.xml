@@ -21,7 +21,6 @@
     <includedby refid="AMReX__BoxDomain_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BoxDomain.cpp</includedby>
     <includedby refid="AMReX__BoxList_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BoxList.cpp</includedby>
     <includedby refid="AMReX__CudaAllocators_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaAllocators.H</includedby>
-    <includedby refid="AMReX__CudaDevice_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaDevice.cpp</includedby>
     <includedby refid="AMReX__DArena_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DArena.cpp</includedby>
     <includedby refid="AMReX__FabAllocator_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabAllocator.cpp</includedby>
     <includedby refid="AMReX__FabArray_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArray.H</includedby>
@@ -29,6 +28,7 @@
     <includedby refid="AMReX__FabArrayUtility_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H</includedby>
     <includedby refid="AMReX__FabFactory_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabFactory.H</includedby>
     <includedby refid="AMReX__ForkJoin_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_ForkJoin.cpp</includedby>
+    <includedby refid="AMReX__GpuDevice_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuDevice.cpp</includedby>
     <includedby refid="AMReX__Machine_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Machine.cpp</includedby>
     <includedby refid="AMReX__ParallelDescriptor_8cpp" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_ParallelDescriptor.cpp</includedby>
     <includedby refid="AMReX__ParallelReduce_8H" local="no">/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_ParallelReduce.H</includedby>
@@ -463,7 +463,7 @@
         <label>/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_FluxRegister.cpp</label>
         <link refid="AMReX__FluxRegister_8cpp"/>
       </node>
-      <node id="31728">
+      <node id="31725">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayBase.cpp</label>
         <link refid="AMReX__FabArrayBase_8cpp"/>
       </node>
@@ -522,10 +522,6 @@
       <node id="31582">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp</label>
         <link refid="AMReX__MLCellABecLap_8cpp"/>
-      </node>
-      <node id="31727">
-        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaAsyncFabImpl.cpp</label>
-        <link refid="AMReX__CudaAsyncFabImpl_8cpp"/>
       </node>
       <node id="31601">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Amr/AMReX_StateData.cpp</label>
@@ -667,7 +663,7 @@
         <childnode refid="31662" relation="include">
         </childnode>
       </node>
-      <node id="31732">
+      <node id="31729">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FilCC_2D_C.H</label>
         <link refid="AMReX__FilCC__2D__C_8H"/>
       </node>
@@ -678,7 +674,7 @@
         </childnode>
         <childnode refid="31564" relation="include">
         </childnode>
-        <childnode refid="31728" relation="include">
+        <childnode refid="31725" relation="include">
         </childnode>
         <childnode refid="31736" relation="include">
         </childnode>
@@ -859,6 +855,10 @@
         <childnode refid="31778" relation="include">
         </childnode>
       </node>
+      <node id="31734">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuAsyncFabImpl.cpp</label>
+        <link refid="AMReX__GpuAsyncFabImpl_8cpp"/>
+      </node>
       <node id="31744">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_MultiFabUtil_nd_C.H</label>
         <link refid="AMReX__MultiFabUtil__nd__C_8H"/>
@@ -956,11 +956,9 @@
         </childnode>
         <childnode refid="31511" relation="include">
         </childnode>
-        <childnode refid="31814" relation="include">
-        </childnode>
         <childnode refid="31788" relation="include">
         </childnode>
-        <childnode refid="31815" relation="include">
+        <childnode refid="31814" relation="include">
         </childnode>
         <childnode refid="31564" relation="include">
         </childnode>
@@ -968,9 +966,11 @@
         </childnode>
         <childnode refid="31565" relation="include">
         </childnode>
-        <childnode refid="31816" relation="include">
+        <childnode refid="31815" relation="include">
         </childnode>
         <childnode refid="31608" relation="include">
+        </childnode>
+        <childnode refid="31816" relation="include">
         </childnode>
         <childnode refid="31817" relation="include">
         </childnode>
@@ -1058,10 +1058,6 @@
         </childnode>
         <childnode refid="31810" relation="include">
         </childnode>
-      </node>
-      <node id="31814">
-        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaDevice.cpp</label>
-        <link refid="AMReX__CudaDevice_8cpp"/>
       </node>
       <node id="31698">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Extern/ProfParser/AMReX_RegionsProfStats.H</label>
@@ -1465,10 +1461,6 @@
         <childnode refid="31628" relation="include">
         </childnode>
       </node>
-      <node id="31726">
-        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaAsyncFab.cpp</label>
-        <link refid="AMReX__CudaAsyncFab_8cpp"/>
-      </node>
       <node id="31798">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_Ellipsoid.H</label>
         <link refid="AMReX__EB2__IF__Ellipsoid_8H"/>
@@ -1481,7 +1473,7 @@
         <label>/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLPoisson.cpp</label>
         <link refid="AMReX__MLPoisson_8cpp"/>
       </node>
-      <node id="31731">
+      <node id="31728">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FilCC_1D_C.H</label>
         <link refid="AMReX__FilCC__1D__C_8H"/>
       </node>
@@ -1611,7 +1603,7 @@
         <childnode refid="31677" relation="include">
         </childnode>
       </node>
-      <node id="31730">
+      <node id="31727">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FArrayBox.cpp</label>
         <link refid="AMReX__FArrayBox_8cpp"/>
       </node>
@@ -1881,6 +1873,10 @@
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BArena.cpp</label>
         <link refid="AMReX__BArena_8cpp"/>
       </node>
+      <node id="31816">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuDevice.cpp</label>
+        <link refid="AMReX__GpuDevice_8cpp"/>
+      </node>
       <node id="31793">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/EB/AMReX_EB2_IF_AllRegular.H</label>
         <link refid="AMReX__EB2__IF__AllRegular_8H"/>
@@ -1987,15 +1983,7 @@
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Extern/HYPRE/AMReX_HypreABecLap3.cpp</label>
         <link refid="AMReX__HypreABecLap3_8cpp"/>
       </node>
-      <node id="31725">
-        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_CudaAsyncFabImpl.H</label>
-        <link refid="AMReX__CudaAsyncFabImpl_8H"/>
-        <childnode refid="31726" relation="include">
-        </childnode>
-        <childnode refid="31727" relation="include">
-        </childnode>
-      </node>
-      <node id="31816">
+      <node id="31815">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabFactory.H</label>
         <link refid="AMReX__FabFactory_8H"/>
         <childnode refid="31564" relation="include">
@@ -2140,9 +2128,13 @@
         </childnode>
         <childnode refid="31723" relation="include">
         </childnode>
+        <childnode refid="31606" relation="include">
+        </childnode>
         <childnode refid="31725" relation="include">
         </childnode>
-        <childnode refid="31606" relation="include">
+        <childnode refid="31726" relation="include">
+        </childnode>
+        <childnode refid="31727" relation="include">
         </childnode>
         <childnode refid="31728" relation="include">
         </childnode>
@@ -2150,11 +2142,7 @@
         </childnode>
         <childnode refid="31730" relation="include">
         </childnode>
-        <childnode refid="31731" relation="include">
-        </childnode>
         <childnode refid="31732" relation="include">
-        </childnode>
-        <childnode refid="31733" relation="include">
         </childnode>
         <childnode refid="31703" relation="include">
         </childnode>
@@ -2321,6 +2309,14 @@
         <label>/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/C_CellMG4/AMReX_ABec2.cpp</label>
         <link refid="AMReX__ABec2_8cpp"/>
       </node>
+      <node id="31732">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuAsyncFabImpl.H</label>
+        <link refid="AMReX__GpuAsyncFabImpl_8H"/>
+        <childnode refid="31733" relation="include">
+        </childnode>
+        <childnode refid="31734" relation="include">
+        </childnode>
+      </node>
       <node id="31662">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/C_TensorMG/AMReX_MCMultiGrid.cpp</label>
         <link refid="AMReX__MCMultiGrid_8cpp"/>
@@ -2409,7 +2405,7 @@
         <childnode refid="31616" relation="include">
         </childnode>
       </node>
-      <node id="31734">
+      <node id="31731">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FilCC_C.H</label>
         <link refid="AMReX__FilCC__C_8H"/>
         <childnode refid="31613" relation="include">
@@ -2797,6 +2793,10 @@
         <childnode refid="31792" relation="include">
         </childnode>
       </node>
+      <node id="31733">
+        <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_GpuAsyncFab.cpp</label>
+        <link refid="AMReX__GpuAsyncFab_8cpp"/>
+      </node>
       <node id="31749">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Boundary/AMReX_Mask.H</label>
         <link refid="AMReX__Mask_8H"/>
@@ -2827,7 +2827,7 @@
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_DArena.cpp</label>
         <link refid="AMReX__DArena_8cpp"/>
       </node>
-      <node id="31815">
+      <node id="31814">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabAllocator.cpp</label>
         <link refid="AMReX__FabAllocator_8cpp"/>
       </node>
@@ -2867,10 +2867,10 @@
         <childnode refid="31581" relation="include">
         </childnode>
       </node>
-      <node id="31733">
+      <node id="31730">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FilCC_3D_C.H</label>
         <link refid="AMReX__FilCC__3D__C_8H"/>
-        <childnode refid="31734" relation="include">
+        <childnode refid="31731" relation="include">
         </childnode>
       </node>
       <node id="31762">
@@ -3049,7 +3049,7 @@
         <label>/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_Interpolater.cpp</label>
         <link refid="AMReX__Interpolater_8cpp"/>
       </node>
-      <node id="31729">
+      <node id="31726">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabConv.cpp</label>
         <link refid="AMReX__FabConv_8cpp"/>
       </node>

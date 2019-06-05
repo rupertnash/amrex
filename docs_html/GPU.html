@@ -1082,7 +1082,7 @@ the destructor of <code class="code cpp c++ docutils literal notranslate"><span 
 inside of an <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loop will complete before code outside of
 the loop is executed. Any CUDA kernel launches made outside of an
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> loop must ensure appropriate device synchronization
-occurs. This can be done by calling <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Device</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">synchronize</span></span><span class="punctuation"><span class="pre">()</span></span></code>.</p>
+occurs. This can be done by calling <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">synchronize</span></span><span class="punctuation"><span class="pre">()</span></span></code>.</p>
 <p>CUDA supports multiple streams and kernels. Kernels launched in the
 same stream are executed sequentially, but different streams of kernel
 launches may be run in parallel.  For each iteration of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code>,
@@ -1270,8 +1270,8 @@ before continuing work.</p>
 can be difficult.  Even if GPU kernels launched earlier in the code
 result in a CUDA error, the error may not be output at a nearby call to
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">AMREX_GPU_ERROR_CHECK</span></span><span class="punctuation"><span class="pre">()</span></span></code> by the CPU.  When tracking down a CUDA
-launch error, <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Device</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">synchronize</span></span><span class="punctuation"><span class="pre">()</span></span></code> and
-<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Device</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">streamSynchronize</span></span><span class="punctuation"><span class="pre">()</span></span></code> can be used to synchronize
+launch error, <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">synchronize</span></span><span class="punctuation"><span class="pre">()</span></span></code> and
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Gpu</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">streamSynchronize</span></span><span class="punctuation"><span class="pre">()</span></span></code> can be used to synchronize
 the device or the CUDA stream, respectively, and track down the specific
 launch that causes the error.</p>
 </div>

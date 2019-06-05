@@ -255,7 +255,7 @@ var searchData=
   ['gpubndryfuncfab',['GpuBndryFuncFab',['../classamrex_1_1GpuBndryFuncFab.html#a62075f3a31adb0b72fa9c09d17ee7e5a',1,'amrex::GpuBndryFuncFab::GpuBndryFuncFab()=default'],['../classamrex_1_1GpuBndryFuncFab.html#aea0999bc3f58f248b8ebab6da8148478',1,'amrex::GpuBndryFuncFab::GpuBndryFuncFab(F a_f)']]],
   ['gputuple',['GpuTuple',['../classamrex_1_1GpuTuple.html#a9b4a022c99f88d3df5c4c68ab494b9ab',1,'amrex::GpuTuple::GpuTuple()=default'],['../classamrex_1_1GpuTuple.html#a6dd107089d642373514ca69d47ff50b3',1,'amrex::GpuTuple::GpuTuple(Ts const &amp;...args)'],['../classamrex_1_1GpuTuple.html#ae2e08d02791a478fd8a9bf55b95a2c6a',1,'amrex::GpuTuple::GpuTuple(Ts &amp;&amp;...args)']]],
   ['grad',['grad',['../structamrex_1_1algoim_1_1EBPlane.html#a98064e63beeeb7f356b0617e10b7c243',1,'amrex::algoim::EBPlane']]],
-  ['graphsafeguard',['GraphSafeGuard',['../structamrex_1_1Cuda_1_1GraphSafeGuard.html#a0e29ea1f1b13c974c8f748c76555fab6',1,'amrex::Cuda::GraphSafeGuard']]],
+  ['graphsafeguard',['GraphSafeGuard',['../structamrex_1_1Gpu_1_1GraphSafeGuard.html#ab9bf93c1ffeeed6834244a8c08ae06a9',1,'amrex::Gpu::GraphSafeGuard']]],
   ['graphtoppct',['GraphTopPct',['../namespaceamrex.html#a171596246077e8bb3d38d0e3a513c481',1,'amrex']]],
   ['grid_5fplaces',['grid_places',['../classamrex_1_1Amr.html#a90155667257e3c51890f716ade65c5e7',1,'amrex::Amr']]],
   ['grideff',['gridEff',['../classamrex_1_1AmrMesh.html#a7bc5798a6ef2a0c27b0141112104e087',1,'amrex::AmrMesh']]],

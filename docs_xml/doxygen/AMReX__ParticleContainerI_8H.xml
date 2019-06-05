@@ -975,7 +975,7 @@
 <codeline lineno="901" refid="classamrex_1_1ParticleContainer_1a8d0a48a32a6e15966ca61144fdaf661a" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1ParticleContainer" kindref="compound">::Redistribute</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lev_min,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lev_max,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nGrow,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>local)</highlight></codeline>
 <codeline lineno="902"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="903"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(local<sp/>and<sp/>(lev_min<sp/>==<sp/>0)<sp/>and<sp/>(lev_max<sp/>==<sp/>0)<sp/>and<sp/>(nGrow<sp/>==<sp/>0)<sp/>and<sp/><ref refid="namespaceamrex_1_1Cuda_1a4eb712380d2714aa1c219d3a8e4c410c" kindref="member">Gpu::inLaunchRegion</ref>())</highlight></codeline>
+<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(local<sp/>and<sp/>(lev_min<sp/>==<sp/>0)<sp/>and<sp/>(lev_max<sp/>==<sp/>0)<sp/>and<sp/>(nGrow<sp/>==<sp/>0)<sp/>and<sp/><ref refid="namespaceamrex_1_1Gpu_1a75701478316a5d131da8097cd795118f" kindref="member">Gpu::inLaunchRegion</ref>())</highlight></codeline>
 <codeline lineno="905"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="906"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RedistributeGPU(lev_min,<sp/>lev_max,<sp/>nGrow,<sp/>local);</highlight></codeline>
 <codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1731,7 +1731,7 @@
 <codeline lineno="1657"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaMemcpyAsync(&amp;pid,<sp/>buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>cudaMemcpyHostToHost);</highlight></codeline>
 <codeline lineno="1658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer<sp/>+=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int);</highlight></codeline>
 <codeline lineno="1659"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1660"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Gpu::Device::streamSynchronize();</highlight></codeline>
+<codeline lineno="1660"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1_1Gpu_1a67a618504ee5fb94bd65a5d393e344b4" kindref="member">Gpu::streamSynchronize</ref>();</highlight></codeline>
 <codeline lineno="1661"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1662"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num_particles<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1663"><highlight class="normal"></highlight></codeline>
@@ -2425,7 +2425,7 @@
 <codeline lineno="2351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="2352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="2353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="2354"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::Device::streamSynchronize();</highlight></codeline>
+<codeline lineno="2354"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1_1Gpu_1a67a618504ee5fb94bd65a5d393e344b4" kindref="member">Gpu::Device::streamSynchronize</ref>();</highlight></codeline>
 <codeline lineno="2355"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2356"><highlight class="normal"></highlight></codeline>
 <codeline lineno="2357"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLProfiler_8H_1a82c334c787872a6bbacabe9a38389224" kindref="member">BL_PROFILE_VAR_STOP</ref>(blp_copy);</highlight></codeline>
@@ -2438,7 +2438,7 @@
 <codeline lineno="2364" refid="classamrex_1_1ParticleContainer_1a62c9b3ef7bf4765aa4cdf6dc4eaa2063" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1ParticleContainer" kindref="compound">ParticleContainer&lt;NStructReal, NStructInt, NArrayReal, NArrayInt&gt;::OK</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lev_min,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lev_max,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nGrow)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="2365"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="2366"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_CUDA</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(finestLevel()<sp/>==<sp/>0)<sp/>and<sp/>(nGrow<sp/>==<sp/>0)<sp/>and<sp/><ref refid="namespaceamrex_1_1Cuda_1a4eb712380d2714aa1c219d3a8e4c410c" kindref="member">Gpu::inLaunchRegion</ref>())</highlight></codeline>
+<codeline lineno="2367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(finestLevel()<sp/>==<sp/>0)<sp/>and<sp/>(nGrow<sp/>==<sp/>0)<sp/>and<sp/><ref refid="namespaceamrex_1_1Gpu_1a75701478316a5d131da8097cd795118f" kindref="member">Gpu::inLaunchRegion</ref>())</highlight></codeline>
 <codeline lineno="2368"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="2369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>OKGPU(lev_min,<sp/>lev_max,<sp/>nGrow);</highlight></codeline>
 <codeline lineno="2370"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -2515,7 +2515,7 @@
 <codeline lineno="2441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grid_indices.end(),</highlight></codeline>
 <codeline lineno="2442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>host_grids.begin());</highlight></codeline>
 <codeline lineno="2443"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Gpu::Device::streamSynchronize();</highlight></codeline>
+<codeline lineno="2444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1_1Gpu_1a67a618504ee5fb94bd65a5d393e344b4" kindref="member">Gpu::streamSynchronize</ref>();</highlight></codeline>
 <codeline lineno="2445"><highlight class="normal"></highlight></codeline>
 <codeline lineno="2446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>np;<sp/>++j)<sp/>{</highlight></codeline>
 <codeline lineno="2447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grid_indices[j]<sp/>!=<sp/>i)<sp/></highlight></codeline>
@@ -3842,7 +3842,7 @@
 <codeline lineno="3768"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="3769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="3770"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="3771"><highlight class="normal"><sp/><sp/><sp/><sp/>Gpu::Device::streamSynchronize();</highlight></codeline>
+<codeline lineno="3771"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1_1Gpu_1a67a618504ee5fb94bd65a5d393e344b4" kindref="member">Gpu::streamSynchronize</ref>();</highlight></codeline>
 <codeline lineno="3772"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="3773"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3774"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NStructInt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NArrayReal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NArrayInt&gt;</highlight></codeline>
