@@ -197,7 +197,7 @@ var searchData=
   ['copytohost',['copyToHost',['../classamrex_1_1Gpu_1_1AsyncArray.html#a5158e423f21bf3e7ad1c75b44f51b3a2',1,'amrex::Gpu::AsyncArray']]],
   ['copytomem',['copyToMem',['../classamrex_1_1BaseFab.html#aaf5b1f4572646d00c00969134ac0ab2d',1,'amrex::BaseFab']]],
   ['correctcellvectors',['correctCellVectors',['../classamrex_1_1ParticleContainer.html#ac0db30253d3211299ca4060b95c2a531',1,'amrex::ParticleContainer']]],
-  ['correctionresidual',['correctionResidual',['../classamrex_1_1MLCellLinOp.html#ac3037ce3c60a5c1a0ccb07dc5ab67197',1,'amrex::MLCellLinOp::correctionResidual()'],['../classamrex_1_1MLLinOp.html#a824432661ed84da479fefccbf118f6fe',1,'amrex::MLLinOp::correctionResidual()'],['../classamrex_1_1MLNodeLinOp.html#a7cc87d9ad0dc1bb52e0ec04f20e7066e',1,'amrex::MLNodeLinOp::correctionResidual()']]],
+  ['correctionresidual',['correctionResidual',['../classamrex_1_1MLCellLinOp.html#ac3037ce3c60a5c1a0ccb07dc5ab67197',1,'amrex::MLCellLinOp::correctionResidual()'],['../classamrex_1_1MLLinOp.html#a824432661ed84da479fefccbf118f6fe',1,'amrex::MLLinOp::correctionResidual()'],['../classamrex_1_1MLNodeLinOp.html#a2018b943fdab7019461dc9580b04177c',1,'amrex::MLNodeLinOp::correctionResidual()']]],
   ['count',['count',['../classamrex_1_1ParallelDescriptor_1_1Message.html#a6da5e4ba9ce3d959467966aafd708091',1,'amrex::ParallelDescriptor::Message']]],
   ['countcells',['countCells',['../classamrex_1_1AmrLevel.html#a8c27e66a313e012cb2189e8cff78217c',1,'amrex::AmrLevel::countCells()'],['../classamrex_1_1AmrMesh.html#ab386f620b52b8c696aeafbfb86a18cc7',1,'amrex::AmrMesh::CountCells()']]],
   ['countname',['countname',['../classamrex_1_1ParmParse.html#a8f87715d95cc1566d9b0188867a40363',1,'amrex::ParmParse']]],

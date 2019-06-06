@@ -19,6 +19,7 @@ var searchData=
   ['cell_5fid',['cell_id',['../classamrex_1_1HypreABecLap3.html#a4e1e2418ad02ffb9cfde30d4a611c5f7',1,'amrex::HypreABecLap3::cell_id()'],['../classamrex_1_1PETScABecLap.html#a0c97a957588e229e248638455172fe75',1,'amrex::PETScABecLap::cell_id()']]],
   ['cell_5fid_5fvec',['cell_id_vec',['../classamrex_1_1HypreABecLap3.html#a232b9b76d75ceded1954d42018d58171',1,'amrex::HypreABecLap3::cell_id_vec()'],['../classamrex_1_1PETScABecLap.html#a9547995b127c83eab055cfb3044c7566',1,'amrex::PETScABecLap::cell_id_vec()']]],
   ['cent',['cent',['../structamrex_1_1algoim_1_1EBPlane.html#a3ae6123f45aee26c756d2105c8c903ab',1,'amrex::algoim::EBPlane']]],
+  ['cf_5fstrategy',['cf_strategy',['../classamrex_1_1MLMG.html#a7a45a77d3387850e584e8375b779b33c',1,'amrex::MLMG']]],
   ['cg_5fsolver',['cg_solver',['../classamrex_1_1CGSolver.html#a4af7811a9f5617ba318f3b37cc160718',1,'amrex::CGSolver']]],
   ['check_5ffile_5froot',['check_file_root',['../classamrex_1_1Amr.html#a006c720b7d8ecf6e603785ab0b82bced',1,'amrex::Amr']]],
   ['check_5finput',['check_input',['../classamrex_1_1AmrMesh.html#a8d2f6e5a9f3f46c76d44215f83455475',1,'amrex::AmrMesh']]],

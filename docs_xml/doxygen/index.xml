@@ -7392,6 +7392,7 @@
     <member refid="classamrex_1_1MLCGSolver_1a2fb5e6802fda1f0b39a181bad7ad2780" kind="variable"><name>mglev</name></member>
     <member refid="classamrex_1_1MLCGSolver_1a2990c25f5d241b21ac50199c5d0e8fa7" kind="variable"><name>verbose</name></member>
     <member refid="classamrex_1_1MLCGSolver_1a7361747702a9b7661832c6bd26534a01" kind="variable"><name>maxiter</name></member>
+    <member refid="classamrex_1_1MLCGSolver_1a34ae0aafa5090a14b99247b75d58878e" kind="variable"><name>nghost</name></member>
     <member refid="classamrex_1_1MLCGSolver_1ab03782948a095d52c81071f4926c0fff" kind="function"><name>MLCGSolver</name></member>
     <member refid="classamrex_1_1MLCGSolver_1ac0e9733d5de10430137f949ba8438c9d" kind="function"><name>~MLCGSolver</name></member>
     <member refid="classamrex_1_1MLCGSolver_1af0e22ed0d89dcba1fbe10f3592166a85" kind="function"><name>MLCGSolver</name></member>
@@ -7402,6 +7403,8 @@
     <member refid="classamrex_1_1MLCGSolver_1a52223b1ab7ff9cc98553e83f14fa1073" kind="function"><name>getVerbose</name></member>
     <member refid="classamrex_1_1MLCGSolver_1a34f8c9907a6c25ecbb3d52a3ad09f6e2" kind="function"><name>setMaxIter</name></member>
     <member refid="classamrex_1_1MLCGSolver_1ac4066fba2fdfeec391c25731b2ac95f1" kind="function"><name>getMaxIter</name></member>
+    <member refid="classamrex_1_1MLCGSolver_1a351c3fd9af99a8b2f2bad292bedb9c67" kind="function"><name>setNGhost</name></member>
+    <member refid="classamrex_1_1MLCGSolver_1af93609cb8e561d2d8417549844fcdf53" kind="function"><name>getNGhost</name></member>
     <member refid="classamrex_1_1MLCGSolver_1ac69d7bd7f9e2c35ce9602d24f93c4e77" kind="function"><name>dotxy</name></member>
     <member refid="classamrex_1_1MLCGSolver_1a6c5043394d5c5290cb302d38c5d08226" kind="function"><name>norm_inf</name></member>
     <member refid="classamrex_1_1MLCGSolver_1aa40411197f3ef314c892e87e6275a351" kind="function"><name>solve_bicgstab</name></member>
@@ -7555,6 +7558,7 @@
     <member refid="classamrex_1_1MLLinOp_1a1189e4016e7757083343a93649f102aa" kind="function"><name>getMaxOrder</name></member>
     <member refid="classamrex_1_1MLLinOp_1a7c1c62615a265e25a92ce37b3b287933" kind="function"><name>getDefaultBottomSolver</name></member>
     <member refid="classamrex_1_1MLLinOp_1acd287b03ea1a73f47ba1f08bb10a484d" kind="function"><name>getNComp</name></member>
+    <member refid="classamrex_1_1MLLinOp_1a10e3ecd56636236ea6c1c219630bf79b" kind="function"><name>getNGrow</name></member>
     <member refid="classamrex_1_1MLLinOp_1ab68d7b11273242e632c9f8a422c911d7" kind="function"><name>needsUpdate</name></member>
     <member refid="classamrex_1_1MLLinOp_1ad5afb08b77db92744e5e7f7f02e5c83b" kind="function"><name>update</name></member>
     <member refid="classamrex_1_1MLLinOp_1a5a1bffd08a85405f9a9fbeed7c20fd97" kind="function"><name>restriction</name></member>
@@ -7605,14 +7609,17 @@
     <member refid="classamrex_1_1MLLinOp_1aafd84fa947e45627503861e5707201dd" kind="function"><name>makeConsolidatedDMap</name></member>
   </compound>
   <compound refid="classamrex_1_1MLMG" kind="class"><name>amrex::MLMG</name>
+    <member refid="classamrex_1_1MLMG_1a318536fe822c58660f772ef85c0ef1dd" kind="enum"><name>CFStrategy</name></member>
+    <member refid="classamrex_1_1MLMG_1a318536fe822c58660f772ef85c0ef1dda334c4a4c42fdb79d7ebc3e73b517e6f8" kind="enumvalue"><name>none</name></member>
+    <member refid="classamrex_1_1MLMG_1a318536fe822c58660f772ef85c0ef1ddabddf1f772a4b8a67379933a3664a17c2" kind="enumvalue"><name>ghostnodes</name></member>
+    <member refid="classamrex_1_1MLMG_1a864ffbd5cc09c630993c949c5d890d0f" kind="typedef"><name>BCMode</name></member>
+    <member refid="classamrex_1_1MLMG_1a93725420770bf42d532f9ee7dea87c2f" kind="typedef"><name>Location</name></member>
+    <member refid="classamrex_1_1MLMG_1a31f80f78e0f4a69ccc3f167e62ae7d51" kind="typedef"><name>BottomSolver</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001" kind="enum"><name>timer_types</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001a9806779ed6ebcc94ecd07dbb3ff6acca" kind="enumvalue"><name>solve_time</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001af8c1043cde20f8e1d9d022abb2c9ffad" kind="enumvalue"><name>iter_time</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001accea4ad3befe3a4c0c996cacbc4b1fb3" kind="enumvalue"><name>bottom_time</name></member>
     <member refid="classamrex_1_1MLMG_1ac0602b6cac3018c66c89819127043001ae447a282e35218ac782b215c4a1fccfc" kind="enumvalue"><name>ntimers</name></member>
-    <member refid="classamrex_1_1MLMG_1a864ffbd5cc09c630993c949c5d890d0f" kind="typedef"><name>BCMode</name></member>
-    <member refid="classamrex_1_1MLMG_1a93725420770bf42d532f9ee7dea87c2f" kind="typedef"><name>Location</name></member>
-    <member refid="classamrex_1_1MLMG_1a31f80f78e0f4a69ccc3f167e62ae7d51" kind="typedef"><name>BottomSolver</name></member>
     <member refid="classamrex_1_1MLMG_1a7b344595276c27ed17dacb3ea1fb95aa" kind="friend"><name>MLCGSolver</name></member>
     <member refid="classamrex_1_1MLMG_1af81888354825d23d402d7787f0fe4dc9" kind="variable"><name>verbose</name></member>
     <member refid="classamrex_1_1MLMG_1ae4f94ee42b8da24efdafd34b023e2457" kind="variable"><name>max_iters</name></member>
@@ -7623,9 +7630,11 @@
     <member refid="classamrex_1_1MLMG_1ae8120b974758c572d1463ee286204e10" kind="variable"><name>nub</name></member>
     <member refid="classamrex_1_1MLMG_1aefc9d57def6cdc2851da4d26e38e092f" kind="variable"><name>max_fmg_iters</name></member>
     <member refid="classamrex_1_1MLMG_1a1a607f195669be23b48131ae81e35b25" kind="variable"><name>bottom_solver</name></member>
+    <member refid="classamrex_1_1MLMG_1a7a45a77d3387850e584e8375b779b33c" kind="variable"><name>cf_strategy</name></member>
     <member refid="classamrex_1_1MLMG_1ae2f4cd61322f224e598377431f47dde5" kind="variable"><name>bottom_verbose</name></member>
     <member refid="classamrex_1_1MLMG_1a37be121e8fe2e8e8341198486fc07d0e" kind="variable"><name>bottom_maxiter</name></member>
     <member refid="classamrex_1_1MLMG_1a20ed3ce546f3fa0f009d66fd9bd1f2bc" kind="variable"><name>bottom_reltol</name></member>
+    <member refid="classamrex_1_1MLMG_1aeb5b459a58233233b7546e3cef9e928f" kind="variable"><name>bottom_abstol</name></member>
     <member refid="classamrex_1_1MLMG_1a383d3320ac67af7ea304a3fad4c53ff6" kind="variable"><name>always_use_bnorm</name></member>
     <member refid="classamrex_1_1MLMG_1ac6ee903a66f419d1ed10533cc13bd4e4" kind="variable"><name>final_fill_bc</name></member>
     <member refid="classamrex_1_1MLMG_1a9bfa9f478ad10977b4c60b176b00250b" kind="variable"><name>linop</name></member>
@@ -7669,9 +7678,12 @@
     <member refid="classamrex_1_1MLMG_1a9e5eab1c9aca3fefa101da8e7a970374" kind="function"><name>setFinalSmooth</name></member>
     <member refid="classamrex_1_1MLMG_1a2487b16d9a3b08fb224a246e00e8e6a3" kind="function"><name>setBottomSmooth</name></member>
     <member refid="classamrex_1_1MLMG_1a8cc0e411d47ee55ab5d23579d5a2ba1d" kind="function"><name>setBottomSolver</name></member>
+    <member refid="classamrex_1_1MLMG_1a5bad11a86d148f166c2d32a91c8667cd" kind="function"><name>setCFStrategy</name></member>
     <member refid="classamrex_1_1MLMG_1a0977ffa971d33d287df1102f8a3e9dec" kind="function"><name>setBottomVerbose</name></member>
     <member refid="classamrex_1_1MLMG_1a7325bf2f240899515dfe449ed8bd5322" kind="function"><name>setBottomMaxIter</name></member>
     <member refid="classamrex_1_1MLMG_1a031ffd7d7be7608b1f3148fefe3ad3ad" kind="function"><name>setBottomTolerance</name></member>
+    <member refid="classamrex_1_1MLMG_1a6c1efa9ed114908cc3fb0de844c5a439" kind="function"><name>setBottomToleranceAbs</name></member>
+    <member refid="classamrex_1_1MLMG_1adfdd4fbc6266509a6c9507244ccbf568" kind="function"><name>getBottomToleranceAbs</name></member>
     <member refid="classamrex_1_1MLMG_1accc57454be8cc5c8a98c29e6b8c35843" kind="function"><name>setCGVerbose</name></member>
     <member refid="classamrex_1_1MLMG_1a5b7f1a56d34cc4ed531b5c2c0de63744" kind="function"><name>setCGMaxIter</name></member>
     <member refid="classamrex_1_1MLMG_1a4442464f507d0722c59a64389cce7f1f" kind="function"><name>setCGTolerance</name></member>
@@ -7799,8 +7811,8 @@
     <member refid="classamrex_1_1MLNodeLinOp_1a15e11c647b57a19a393a2ca6a323a85a" kind="function"><name>setLevelBC</name></member>
     <member refid="classamrex_1_1MLNodeLinOp_1a668c3faa79d094f72e351a8ec1736fc2" kind="function"><name>apply</name></member>
     <member refid="classamrex_1_1MLNodeLinOp_1a049936d38ba7f07adcf9c435849bca64" kind="function"><name>smooth</name></member>
-    <member refid="classamrex_1_1MLNodeLinOp_1a99f514acc7c59a80373051fb4e356267" kind="function"><name>solutionResidual</name></member>
-    <member refid="classamrex_1_1MLNodeLinOp_1a7cc87d9ad0dc1bb52e0ec04f20e7066e" kind="function"><name>correctionResidual</name></member>
+    <member refid="classamrex_1_1MLNodeLinOp_1a9577a87ff76e6c9406e3cbe716d26746" kind="function"><name>solutionResidual</name></member>
+    <member refid="classamrex_1_1MLNodeLinOp_1a2018b943fdab7019461dc9580b04177c" kind="function"><name>correctionResidual</name></member>
     <member refid="classamrex_1_1MLNodeLinOp_1afe48a02e5be6dd3beac70271de7a02da" kind="function"><name>compFlux</name></member>
     <member refid="classamrex_1_1MLNodeLinOp_1a264af834600d85a8773131c87ccfeb1b" kind="function"><name>compGrad</name></member>
     <member refid="classamrex_1_1MLNodeLinOp_1a7e5c287fd5bd6078ccc3afc7e18fd69a" kind="function"><name>applyMetricTerm</name></member>
@@ -12021,8 +12033,10 @@
     <member refid="namespaceamrex__mlmg__interp__module_1aab756a2346d835aacd7be21bb179e670" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1a7bfd78ec9883e6e4c68bdb302ae49c85" kind="function"><name>amrex_mlmg_eb_cc_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1aab756a2346d835aacd7be21bb179e670" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
+    <member refid="namespaceamrex__mlmg__interp__module_1a346ef02fe1939f8f168f214e7915243d" kind="function"><name>amrex_mlmg_lin_nd_interp_ghostnodes</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1a7bfd78ec9883e6e4c68bdb302ae49c85" kind="function"><name>amrex_mlmg_eb_cc_interp</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1aab756a2346d835aacd7be21bb179e670" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
+    <member refid="namespaceamrex__mlmg__interp__module_1ab964f73c4f22874a801e28e3b331ca16" kind="function"><name>amrex_mlmg_lin_nd_interp_ghostnodes</name></member>
     <member refid="namespaceamrex__mlmg__interp__module_1a7bfd78ec9883e6e4c68bdb302ae49c85" kind="function"><name>amrex_mlmg_eb_cc_interp</name></member>
   </compound>
   <compound refid="namespaceamrex__mlnodelap__1d__module" kind="namespace"><name>amrex_mlnodelap_1d_module</name>
@@ -14413,6 +14427,7 @@
   </compound>
   <compound refid="AMReX__MLMG__F_8H" kind="file"><name>AMReX_MLMG_F.H</name>
     <member refid="AMReX__MLMG__F_8H_1af9b6d72e65f357245eaa9c11c1955cbc" kind="function"><name>amrex_mlmg_lin_nd_interp</name></member>
+    <member refid="AMReX__MLMG__F_8H_1ac644c66861ef980061d9b89112af2614" kind="function"><name>amrex_mlmg_lin_nd_interp_ghostnodes</name></member>
   </compound>
   <compound refid="AMReX__MLMG__K_8H" kind="file"><name>AMReX_MLMG_K.H</name>
   </compound>
