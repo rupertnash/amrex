@@ -24,7 +24,7 @@ var searchData=
   ['gputuplesize',['GpuTupleSize',['../structamrex_1_1GpuTupleSize.html',1,'amrex']]],
   ['gputuplesize_3c_20gputuple_3c_20ts_2e_2e_2e_20_3e_20_3e',['GpuTupleSize&lt; GpuTuple&lt; Ts... &gt; &gt;',['../structamrex_1_1GpuTupleSize_3_01GpuTuple_3_01Ts_8_8_8_01_4_01_4.html',1,'amrex']]],
   ['graphsafeguard',['GraphSafeGuard',['../structamrex_1_1Gpu_1_1GraphSafeGuard.html',1,'amrex::Gpu']]],
-  ['gridsize',['GridSize',['../structamrex_1_1Cuda_1_1GridSize.html',1,'amrex::Cuda']]],
+  ['gridsize',['GridSize',['../structamrex_1_1Gpu_1_1GridSize.html',1,'amrex::Gpu']]],
   ['gshoplevel',['GShopLevel',['../classamrex_1_1EB2_1_1GShopLevel.html',1,'amrex::EB2']]],
   ['gshoplsfactory',['GShopLSFactory',['../classamrex_1_1GShopLSFactory.html',1,'amrex']]]
 ];

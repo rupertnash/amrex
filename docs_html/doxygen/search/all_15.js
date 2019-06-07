@@ -40,7 +40,6 @@ var searchData=
   ['updatebdkey',['updateBDKey',['../classamrex_1_1FabArrayBase.html#a3918d10004ca8f4494fd9e6099bdabc3',1,'amrex::FabArrayBase']]],
   ['updatebndryvalues',['updateBndryValues',['../classamrex_1_1InterpBndryData.html#a6801628a380e0cec5714dd9e5fe8621b',1,'amrex::InterpBndryData::updateBndryValues(BndryRegister &amp;crse, int c_start, int bnd_start, int num_comp, const IntVect &amp;ratio, int max_order=IBD_max_order_DEF)'],['../classamrex_1_1InterpBndryData.html#af1f588505ed7575ed35fcfddfaeb5bfc',1,'amrex::InterpBndryData::updateBndryValues(BndryRegister &amp;crse, int c_start, int bnd_start, int num_comp, int ratio, int max_order=IBD_max_order_DEF)']]],
   ['updatecorbc',['updateCorBC',['../classamrex_1_1MLCellLinOp.html#a7a111e0594b82aca829a78f2bb4ccc0c',1,'amrex::MLCellLinOp']]],
-  ['updatedevice',['updateDevice',['../structamrex_1_1Cuda_1_1ManagedData.html#a9d67bc64e67301d06c465e3ec852dc83',1,'amrex::Cuda::ManagedData']]],
   ['updatedistributionmaps',['UpdateDistributionMaps',['../classamrex_1_1AmrLevel.html#a69fdf4e347142373696281d9269c6799',1,'amrex::AmrLevel']]],
   ['updatedq',['updatedQ',['../classamrex_1_1XYPlotDataList.html#a3d289d346e68eb126c040ca8a41a5c37',1,'amrex::XYPlotDataList']]],
   ['updategrids',['UpdateGrids',['../classamrex_1_1LSCoreBase.html#a36c38fc9573fe9bd45675e3a0f9c6649',1,'amrex::LSCoreBase']]],

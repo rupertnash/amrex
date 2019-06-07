@@ -584,7 +584,7 @@
           <declname>ranksToWrite</declname>
         </param>
         <briefdescription>
-<para>call this to use a file per process for a sparse set of writers. <ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">ranksToWrite.size()</ref> will set noutfiles rank ranksToWrite[n] will write to file_rank </para>        </briefdescription>
+<para>call this to use a file per process for a sparse set of writers. <ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">ranksToWrite.size()</ref> will set noutfiles rank ranksToWrite[n] will write to file_rank </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1079,66 +1079,66 @@
     <detaileddescription>
 <para>an example:</para><para>for(<ref refid="classamrex_1_1NFilesIter" kindref="compound">NFilesIter</ref> nfi(nOutFiles, filePrefix); nfi.ReadyToWrite(); ++nfi) { // do your writing here nfi.Stream().write((const char *) data.dataPtr(), nChars); } </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="5455">
+      <node id="5454">
         <label>amrex::Vector&lt; Setbuf_Char_Type &gt;</label>
         <link refid="classamrex_1_1Vector"/>
-        <childnode refid="5456" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5460">
-        <label>amrex::Vector&lt; amrex::Vector&lt; int &gt; &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
-        <childnode refid="5461" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5462">
-        <label>amrex::Vector&lt; std::pair&lt; int, int &gt; &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
-        <childnode refid="5463" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5457">
-        <label>amrex::Vector&lt; int &gt;</label>
-        <link refid="classamrex_1_1Vector"/>
-        <childnode refid="5458" relation="public-inheritance">
+        <childnode refid="5455" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5459">
-        <label>string</label>
+        <label>amrex::Vector&lt; amrex::Vector&lt; int &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="5460" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5461">
+        <label>amrex::Vector&lt; std::pair&lt; int, int &gt; &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="5462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5456">
+        <label>amrex::Vector&lt; int &gt;</label>
+        <link refid="classamrex_1_1Vector"/>
+        <childnode refid="5457" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="5458">
+        <label>string</label>
+      </node>
+      <node id="5457">
         <label>std::vector&lt; int, std::allocator&lt; int &gt; &gt;</label>
       </node>
-      <node id="5463">
+      <node id="5462">
         <label>std::vector&lt; std::pair&lt; int, int &gt;, std::allocator&lt; std::pair&lt; int, int &gt; &gt; &gt;</label>
       </node>
-      <node id="5454">
+      <node id="5453">
         <label>amrex::NFilesIter</label>
         <link refid="classamrex_1_1NFilesIter"/>
-        <childnode refid="5455" relation="usage">
+        <childnode refid="5454" relation="usage">
           <edgelabel>io_buffer</edgelabel>
         </childnode>
-        <childnode refid="5457" relation="usage">
+        <childnode refid="5456" relation="usage">
           <edgelabel>availableDeciders</edgelabel>
           <edgelabel>readRanks</edgelabel>
           <edgelabel>setZeroProcs</edgelabel>
           <edgelabel>sparseWritingRanks</edgelabel>
         </childnode>
-        <childnode refid="5459" relation="usage">
+        <childnode refid="5458" relation="usage">
           <edgelabel>fullFileName</edgelabel>
           <edgelabel>filePrefix</edgelabel>
         </childnode>
-        <childnode refid="5460" relation="usage">
+        <childnode refid="5459" relation="usage">
           <edgelabel>fileNumbersWriteOrder</edgelabel>
         </childnode>
-        <childnode refid="5462" relation="usage">
+        <childnode refid="5461" relation="usage">
           <edgelabel>unreadMessages</edgelabel>
         </childnode>
       </node>
-      <node id="5456">
+      <node id="5455">
         <label>std::vector&lt; Setbuf_Char_Type, std::allocator&lt; Setbuf_Char_Type &gt; &gt;</label>
       </node>
-      <node id="5461">
+      <node id="5460">
         <label>std::vector&lt; amrex::Vector&lt; int &gt;, std::allocator&lt; amrex::Vector&lt; int &gt; &gt; &gt;</label>
       </node>
     </collaborationgraph>

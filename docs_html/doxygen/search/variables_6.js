@@ -9,7 +9,7 @@ var searchData=
   ['geomelements',['geomElements',['../classamrex_1_1EB2_1_1SplineIF.html#aa2fa17ff2ba083371845090960b56abc',1,'amrex::EB2::SplineIF']]],
   ['glmap',['glMap',['../classCommProfStats.html#a4bc1d2909ad88865d5905ea827e62918',1,'CommProfStats']]],
   ['global_5fdepth',['global_depth',['../classamrex_1_1TinyProfiler.html#ae7befef46d2ca9e3de4299f950647451',1,'amrex::TinyProfiler']]],
-  ['globalblockid',['globalBlockId',['../structamrex_1_1Cuda_1_1GridSize.html#af40d27208ced351b08696bbaca3ec3e7',1,'amrex::Cuda::GridSize']]],
+  ['globalblockid',['globalBlockId',['../structamrex_1_1Gpu_1_1GridSize.html#a34ceb81cdda9c8d6009bc86cfbd7581f',1,'amrex::Gpu::GridSize']]],
   ['glsizemap',['glSizeMap',['../classCommProfStats.html#ab58dec894c1338d3e1691e0770507811',1,'CommProfStats']]],
   ['gpercent',['gPercent',['../classBLProfStats.html#aa9cbfb5bc0b3ad413e06060864eed0f8',1,'BLProfStats']]],
   ['graph',['graph',['../classamrex_1_1HypreABecLap2.html#a62db2713a2f38292c423242527ff1e0a',1,'amrex::HypreABecLap2']]],

@@ -23,7 +23,6 @@ var searchData=
   ['hivect3d',['hiVect3d',['../classamrex_1_1Box.html#a969a6f205285e27a5145abdd4d7d0f95',1,'amrex::Box']]],
   ['hoextraptocc',['hoextraptocc',['../AMReX__FILCC__2D_8F90.html#aceaaec1fa1ad1f14d4a3b277da4f4a3c',1,'hoextraptocc(q, q_l1, q_l2, q_h1, q_h2, domlo, domhi, dx, xlo):&#160;AMReX_FILCC_2D.F90'],['../AMReX__FILCC__3D_8F90.html#a02ca9842cbb4347d6ba0a920c636fb7c',1,'hoextraptocc(q, q_l1, q_l2, q_l3, q_h1, q_h2, q_h3, domlo, domhi, dx, xlo):&#160;AMReX_FILCC_3D.F90']]],
   ['hostfab',['hostFab',['../classamrex_1_1Gpu_1_1AsyncFab.html#a3d92324ac156c433725f930a47cee506',1,'amrex::Gpu::AsyncFab::hostFab()'],['../classamrex_1_1Gpu_1_1AsyncFabImpl.html#a7ecccc65583535c9ee93ba41b25489d3',1,'amrex::Gpu::AsyncFabImpl::hostFab()']]],
-  ['hostvalue',['hostValue',['../structamrex_1_1Cuda_1_1ManagedData.html#a0a138bbe2603de6d5624387fc6cf946d',1,'amrex::Cuda::ManagedData']]],
   ['htod_5fmemcpy',['htod_memcpy',['../classamrex_1_1Gpu_1_1Device.html#ab87da2f71c32c3f81860a96d071eee33',1,'amrex::Gpu::Device::htod_memcpy()'],['../namespaceamrex_1_1Gpu.html#aa720ba8e7b622f0897659c64d23d5db4',1,'amrex::Gpu::htod_memcpy()']]],
   ['htod_5fmemcpy_5fasync',['htod_memcpy_async',['../classamrex_1_1Gpu_1_1Device.html#a370526971fecf0ddc8eb4f4cb17483b0',1,'amrex::Gpu::Device::htod_memcpy_async()'],['../namespaceamrex_1_1Gpu.html#aacefe17a39734cb2475a36199ab1370b',1,'amrex::Gpu::htod_memcpy_async()']]],
   ['hypre',['Hypre',['../classamrex_1_1Hypre.html#afd2d6c32022a99d96f73485d03272ec9',1,'amrex::Hypre']]],

@@ -41,7 +41,6 @@ var searchData=
   ['maketuple',['makeTuple',['../namespaceamrex.html#a3a6c361178d55bdba420070c21d703a9',1,'amrex']]],
   ['makeunion',['makeUnion',['../namespaceamrex_1_1EB2.html#ae1c1ff0fbaf7ff938aae5f3daf43d607',1,'amrex::EB2']]],
   ['makexdim3',['makeXDim3',['../namespaceamrex.html#a8338a320488a4b26607928529d25c1a5',1,'amrex']]],
-  ['manageddata',['ManagedData',['../structamrex_1_1Cuda_1_1ManagedData.html#a0927998bf2022a63d075ecf69008358e',1,'amrex::Cuda::ManagedData::ManagedData()'],['../structamrex_1_1Cuda_1_1ManagedData.html#acd3304f327b1347289a935bb7d70b27e',1,'amrex::Cuda::ManagedData::ManagedData(T const &amp;h_d)'],['../structamrex_1_1Cuda_1_1ManagedData.html#a90bdb0072f4c38174e35a9917d4e6ed7',1,'amrex::Cuda::ManagedData::ManagedData(ManagedData const &amp;)=delete'],['../structamrex_1_1Cuda_1_1ManagedData.html#adc6f5fa1f02020f1937d585146d41979',1,'amrex::Cuda::ManagedData::ManagedData(ManagedData &amp;&amp;)=delete']]],
   ['manual_5ftags_5fplacement',['manual_tags_placement',['../classamrex_1_1AmrLevel.html#a2e78f3a4398272855b0a9ac3becaefd7',1,'amrex::AmrLevel']]],
   ['manualtagsplacement',['ManualTagsPlacement',['../classamrex_1_1Amr.html#a9d0e58b8aaa0cac0a8cd432f37198197',1,'amrex::Amr::ManualTagsPlacement()'],['../classamrex_1_1AmrMesh.html#a5830766b42f260b125443b90f40b0a96',1,'amrex::AmrMesh::ManualTagsPlacement()']]],
   ['mapperiodic',['mapPeriodic',['../classamrex_1_1TagBoxArray.html#ad5891083befd1db8e18578f59a575d76',1,'amrex::TagBoxArray']]],

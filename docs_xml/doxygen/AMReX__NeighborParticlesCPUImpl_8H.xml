@@ -4,14 +4,14 @@
     <compoundname>AMReX_NeighborParticlesCPUImpl.H</compoundname>
     <includedby refid="AMReX__NeighborParticles_8H" local="yes">/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborParticles.H</includedby>
     <invincdepgraph>
-      <node id="57784">
+      <node id="57966">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborParticles.H</label>
         <link refid="AMReX__NeighborParticles_8H"/>
       </node>
-      <node id="57783">
+      <node id="57965">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborParticlesCPUImpl.H</label>
         <link refid="AMReX_NeighborParticlesCPUImpl.H"/>
-        <childnode refid="57784" relation="include">
+        <childnode refid="57966" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -270,7 +270,7 @@
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nrcvs;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>rOffset[i];</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer<sp/>=<sp/>&amp;recvdata[offset];</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_tiles,<sp/>lev,<sp/>gid,<sp/>tid,<sp/><ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>,<sp/>np;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_tiles,<sp/>lev,<sp/>gid,<sp/>tid,<sp/><ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>,<sp/>np;</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(&amp;num_tiles,<sp/>buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));<sp/>buffer<sp/>+=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int);</highlight></codeline>
 <codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>num_tiles;<sp/>++j)<sp/>{</highlight></codeline>
 <codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(&amp;lev,<sp/><sp/>buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));<sp/>buffer<sp/>+=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int);</highlight></codeline>
@@ -309,7 +309,7 @@
 <codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst<sp/>=<sp/>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>&amp;neighbors[lev][dst_index][old_size+n])<sp/>+<sp/>pdata_size;</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer<sp/>+=<sp/><ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer<sp/>+=<sp/><ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>;</highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

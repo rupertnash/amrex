@@ -18,7 +18,7 @@ var searchData=
   ['compareaddr',['CompareAddr',['../structamrex_1_1EArena_1_1Node_1_1CompareAddr.html',1,'amrex::EArena::Node']]],
   ['comparesize',['CompareSize',['../structamrex_1_1EArena_1_1Node_1_1CompareSize.html',1,'amrex::EArena::Node']]],
   ['complementif',['ComplementIF',['../classamrex_1_1EB2_1_1ComplementIF.html',1,'amrex::EB2']]],
-  ['componentbox',['ComponentBox',['../structamrex_1_1Cuda_1_1ComponentBox.html',1,'amrex::Cuda']]],
+  ['componentbox',['ComponentBox',['../structamrex_1_1Gpu_1_1ComponentBox.html',1,'amrex::Gpu']]],
   ['componentset',['ComponentSet',['../structamrex_1_1ForkJoin_1_1ComponentSet.html',1,'amrex::ForkJoin']]],
   ['const_5fiterator',['const_iterator',['../structamrex_1_1BaseUmap_1_1const__iterator.html',1,'amrex::BaseUmap']]],
   ['coordsys',['CoordSys',['../classamrex_1_1CoordSys.html',1,'amrex']]],

@@ -4,40 +4,40 @@
     <compoundname>AMReX_BLProfiler.cpp</compoundname>
     <includes refid="AMReX__BLFort_8H" local="no">AMReX_BLFort.H</includes>
     <incdepgraph>
-      <node id="8442">
+      <node id="8394">
         <label>AMReX_BLFort.H</label>
         <link refid="AMReX__BLFort_8H"/>
-        <childnode refid="8443" relation="include">
+        <childnode refid="8395" relation="include">
         </childnode>
-        <childnode refid="8444" relation="include">
+        <childnode refid="8396" relation="include">
         </childnode>
-        <childnode refid="8446" relation="include">
+        <childnode refid="8398" relation="include">
         </childnode>
       </node>
-      <node id="8443">
+      <node id="8395">
         <label>AMReX_ArrayLim.H</label>
         <link refid="AMReX__ArrayLim_8H"/>
-        <childnode refid="8444" relation="include">
+        <childnode refid="8396" relation="include">
         </childnode>
       </node>
-      <node id="8446">
+      <node id="8398">
         <label>AMReX_SPACE.H</label>
         <link refid="AMReX__SPACE_8H"/>
       </node>
-      <node id="8445">
+      <node id="8397">
         <label>AMReX_Extension.H</label>
         <link refid="AMReX__Extension_8H"/>
       </node>
-      <node id="8441">
+      <node id="8393">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BLProfiler.cpp</label>
         <link refid="AMReX_BLProfiler.cpp"/>
-        <childnode refid="8442" relation="include">
+        <childnode refid="8394" relation="include">
         </childnode>
       </node>
-      <node id="8444">
+      <node id="8396">
         <label>AMReX_REAL.H</label>
         <link refid="AMReX__REAL_8H"/>
-        <childnode refid="8445" relation="include">
+        <childnode refid="8397" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -1388,7 +1388,7 @@
 <codeline lineno="1339"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BLProfiler::WriteFortProfErrors()<sp/>{</highlight></codeline>
 <codeline lineno="1340"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>report<sp/>any<sp/>fortran<sp/>errors.<sp/><sp/>should<sp/>really<sp/>check<sp/>with<sp/>all<sp/>procs,<sp/>just<sp/>iop<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1341"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespaceamrex_1_1ParallelDescriptor_1ac7fb3467af4aabf15e61cb9c27e916d9" kindref="member">ParallelDescriptor::IOProcessor</ref>())<sp/>{</highlight></codeline>
-<codeline lineno="1342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfs.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="1342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfs.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="1343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FFFFFFFF<sp/>--------<sp/>FORTRAN<sp/>PROFILING<sp/>UNSTOPPED<sp/>ERRORS&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="1344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(std::map&lt;std::string,<sp/>BLProfiler<sp/>*&gt;::iterator<sp/>it<sp/>=<sp/>BLProfiler::mFortProfs.<ref refid="namespaceamrex_1a43103621a410a27f2e8b9607f4ae6f34" kindref="member">begin</ref>();</highlight></codeline>
 <codeline lineno="1345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>!=<sp/>BLProfiler::mFortProfs.end();<sp/>++it)</highlight></codeline>
@@ -1398,9 +1398,9 @@
 <codeline lineno="1349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FFFFFFFF<sp/>--------<sp/>END<sp/>FORTRAN<sp/>PROFILING<sp/>UNSTOPPED<sp/>ERRORS&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="1351"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="1352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="1352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="1353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FFFFFFFF<sp/>FORTRAN<sp/>PROFILING<sp/>ERRORS&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="1354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>()<sp/>&gt;=<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
+<codeline lineno="1354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>()<sp/>&gt;=<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
 <codeline lineno="1355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Print" kindref="compound">amrex::Print</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FFFFFFFF<sp/>--------<sp/>MAX<sp/>FORTRAN<sp/>ERRORS<sp/>EXCEEDED&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="1356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i(0);<sp/>i<sp/>&lt;<sp/>BLProfiler::mFortProfsErrors.size();<sp/>++i)<sp/>{</highlight></codeline>
@@ -1440,7 +1440,7 @@
 <codeline lineno="1391"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1392"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1393"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1394"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BLProfiler::AddCommStat(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CommFuncType<sp/>cft,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>,</highlight></codeline>
+<codeline lineno="1394"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BLProfiler::AddCommStat(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CommFuncType<sp/>cft,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>,</highlight></codeline>
 <codeline lineno="1395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag)</highlight></codeline>
 <codeline lineno="1396"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="1397"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(OnExcludeList(cft))<sp/>{</highlight></codeline>
@@ -1482,7 +1482,7 @@
 <codeline lineno="1433"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1434"><highlight class="normal"><sp/><sp/>++CommStats::tagWrapNumber;</highlight></codeline>
 <codeline lineno="1435"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag(CommStats::tagWrapNumber);</highlight></codeline>
-<codeline lineno="1436"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index(CommStats::nameTags.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="1436"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index(CommStats::nameTags.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>());</highlight></codeline>
 <codeline lineno="1437"><highlight class="normal"><sp/><sp/>CommStats::tagWraps.push_back(index);</highlight></codeline>
 <codeline lineno="1438"><highlight class="normal"><sp/><sp/>vCommStats.push_back(CommStats(cft,<sp/>index,<sp/><sp/>vCommStats.size(),<sp/>tag,</highlight></codeline>
 <codeline lineno="1439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a6f975f843338c8eada684f0e8e2c0cb7" kindref="member">amrex::second</ref>()));</highlight></codeline>
@@ -1567,7 +1567,7 @@
 <codeline lineno="1518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="1519"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1520"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag(NameTagNameIndex(name));</highlight></codeline>
-<codeline lineno="1521"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index(CommStats::nameTags.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="1521"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index(CommStats::nameTags.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>());</highlight></codeline>
 <codeline lineno="1522"><highlight class="normal"><sp/><sp/>vCommStats.push_back(CommStats(cft,<sp/>index,<sp/><sp/>vCommStats.size(),<sp/>tag,</highlight></codeline>
 <codeline lineno="1523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a6f975f843338c8eada684f0e8e2c0cb7" kindref="member">amrex::second</ref>()));</highlight></codeline>
 <codeline lineno="1524"><highlight class="normal"><sp/><sp/>CommStats::nameTags.push_back(std::make_pair(tag,<sp/>vCommStats.size()<sp/>-<sp/>1));</highlight></codeline>
@@ -1629,7 +1629,7 @@
 <codeline lineno="1580"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>error:<sp/><sp/>fname<sp/>is<sp/>already<sp/>being<sp/>profiled</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1581"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>estring(</highlight><highlight class="stringliteral">&quot;bl_proffortfuncstart<sp/>error:<sp/><sp/>mFortProfs<sp/>function<sp/>already<sp/>being<sp/>profiled:<sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="1582"><highlight class="normal"><sp/><sp/><sp/><sp/>estring<sp/>+=<sp/>fName;</highlight></codeline>
-<codeline lineno="1583"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
+<codeline lineno="1583"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
 <codeline lineno="1584"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>BLProfiler::mFortProfsErrors.push_back(estring);</highlight></codeline>
 <codeline lineno="1585"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1586"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -1643,7 +1643,7 @@
 <codeline lineno="1594"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(it<sp/>==<sp/>BLProfiler::mFortProfs.<ref refid="namespaceamrex_1a199ea36f687fd4271b73c72b56fd3279" kindref="member">end</ref>())<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>error:<sp/><sp/>fname<sp/>not<sp/>found</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1595"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>estring(</highlight><highlight class="stringliteral">&quot;bl_proffortfuncstop<sp/>error:<sp/><sp/>mFortProfs<sp/>function<sp/>not<sp/>started:<sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="1596"><highlight class="normal"><sp/><sp/><sp/><sp/>estring<sp/>+=<sp/>fName;</highlight></codeline>
-<codeline lineno="1597"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
+<codeline lineno="1597"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
 <codeline lineno="1598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>BLProfiler::mFortProfsErrors.push_back(estring);</highlight></codeline>
 <codeline lineno="1599"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1600"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>delete<sp/>the<sp/>pointer<sp/>and<sp/>remove<sp/>fname<sp/>from<sp/>map</highlight><highlight class="normal"></highlight></codeline>
@@ -1662,7 +1662,7 @@
 <codeline lineno="1613"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>error:<sp/><sp/>fname<sp/>is<sp/>already<sp/>being<sp/>profiled</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1614"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>estring(</highlight><highlight class="stringliteral">&quot;bl_proffortfuncstart<sp/>error:<sp/><sp/>mFortProfs<sp/>function<sp/>already<sp/>being<sp/>profiled:<sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="1615"><highlight class="normal"><sp/><sp/><sp/><sp/>estring<sp/>+=<sp/>BLProfiler::mFortProfsIntNames[*i];</highlight></codeline>
-<codeline lineno="1616"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
+<codeline lineno="1616"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
 <codeline lineno="1617"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>BLProfiler::mFortProfsErrors.push_back(estring);</highlight></codeline>
 <codeline lineno="1618"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1619"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -1679,7 +1679,7 @@
 <codeline lineno="1630"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsInt[*i]<sp/>==<sp/>0)<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>error:<sp/><sp/>fname<sp/>not<sp/>found</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1631"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>estring(</highlight><highlight class="stringliteral">&quot;bl_proffortfuncstop<sp/>error:<sp/><sp/>mFortProfs<sp/>function<sp/>not<sp/>started:<sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="1632"><highlight class="normal"><sp/><sp/><sp/><sp/>estring<sp/>+=<sp/>BLProfiler::mFortProfsIntNames[*i];</highlight></codeline>
-<codeline lineno="1633"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Cuda_1_1range__detail_1a79ded87e903a866795953055183e8cef" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
+<codeline lineno="1633"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BLProfiler::mFortProfsErrors.<ref refid="namespaceamrex_1_1Gpu_1_1range__detail_1ac0bbdd3b8f64770191201e431e16c723" kindref="member">size</ref>()<sp/>&lt;<sp/>mFortProfMaxErrors)<sp/>{</highlight></codeline>
 <codeline lineno="1634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>BLProfiler::mFortProfsErrors.push_back(estring);</highlight></codeline>
 <codeline lineno="1635"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1636"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>delete<sp/>the<sp/>pointer<sp/>and<sp/>remove<sp/>fname<sp/>from<sp/>map</highlight><highlight class="normal"></highlight></codeline>

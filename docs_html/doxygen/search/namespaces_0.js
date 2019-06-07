@@ -74,7 +74,7 @@ var searchData=
   ['paralleldescriptor',['ParallelDescriptor',['../namespaceamrex_1_1ParallelDescriptor.html',1,'amrex']]],
   ['parallelgather',['ParallelGather',['../namespaceamrex_1_1ParallelGather.html',1,'amrex']]],
   ['parallelreduce',['ParallelReduce',['../namespaceamrex_1_1ParallelReduce.html',1,'amrex']]],
-  ['range_5fdetail',['range_detail',['../namespaceamrex_1_1Cuda_1_1range__detail.html',1,'amrex::Cuda']]],
+  ['range_5fdetail',['range_detail',['../namespaceamrex_1_1Gpu_1_1range__detail.html',1,'amrex::Gpu']]],
   ['system',['system',['../namespaceamrex_1_1system.html',1,'amrex']]],
   ['type',['Type',['../namespaceamrex_1_1EB2_1_1Type.html',1,'amrex::EB2']]],
   ['uif_5fdetail',['UIF_detail',['../namespaceamrex_1_1EB2_1_1UIF__detail.html',1,'amrex::EB2']]],

@@ -12,7 +12,7 @@ var searchData=
   ['descriptormap',['DescriptorMap',['../classamrex_1_1InSituUtils_1_1DescriptorMap.html',1,'amrex::InSituUtils']]],
   ['destcomp',['DestComp',['../structamrex_1_1DestComp.html',1,'amrex']]],
   ['device',['Device',['../classamrex_1_1Gpu_1_1Device.html',1,'amrex::Gpu']]],
-  ['devicescalar',['DeviceScalar',['../structamrex_1_1Cuda_1_1DeviceScalar.html',1,'amrex::Cuda']]],
+  ['devicescalar',['DeviceScalar',['../structamrex_1_1Gpu_1_1DeviceScalar.html',1,'amrex::Gpu']]],
   ['dfft',['Dfft',['../classhacc_1_1Dfft.html',1,'hacc']]],
   ['differenceif',['DifferenceIF',['../classamrex_1_1EB2_1_1DifferenceIF.html',1,'amrex::EB2']]],
   ['dim3',['Dim3',['../structamrex_1_1Dim3.html',1,'amrex']]],
