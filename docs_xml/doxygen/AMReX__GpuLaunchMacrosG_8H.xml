@@ -111,7 +111,7 @@
         amrex_i_nblocks.y = 2; \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_nblocks, amrex_i_ec1.numThreads, 0, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
-            switch (AMREX_blockIdx_y) { \
+            switch (blockIdx.y) { \
             case 0: for (auto const TI1 : <ref refid="namespaceamrex_1_1Gpu_1a5a7e65f26ef2a8d356ebef518f007aaf" kindref="member">amrex::Gpu::Range</ref>(TN1)) { \
                         block1 \
                     } \
@@ -202,7 +202,7 @@
         amrex_i_nblocks.y = 2; \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_nblocks, amrex_i_ec1.numThreads, 0, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
-            switch (AMREX_blockIdx_y) { \
+            switch (blockIdx.y) { \
             case 0: for (auto const TI1 : <ref refid="namespaceamrex_1_1Gpu_1a5a7e65f26ef2a8d356ebef518f007aaf" kindref="member">amrex::Gpu::Range</ref>(TN1)) { \
                         block1 \
                     } \
@@ -247,7 +247,7 @@
         amrex_i_nblocks.y = 3; \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_nblocks, amrex_i_ec1.numThreads, 0, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
-            switch (AMREX_blockIdx_y) { \
+            switch (blockIdx.y) { \
             case 0: for (auto const TI1 : <ref refid="namespaceamrex_1_1Gpu_1a5a7e65f26ef2a8d356ebef518f007aaf" kindref="member">amrex::Gpu::Range</ref>(TN1)) { \
                         block1 \
                     } \
@@ -284,7 +284,7 @@
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
             long amrex_i_numpts = bbb.numPts(); \
-            long amrex_i_tid = AMREX_blockDim_x*AMREX_blockIdx_x + AMREX_threadIdx_x; \
+            long amrex_i_tid = blockDim.x*blockIdx.x + threadIdx.x; \
             long amrex_i_wid = amrex_i_tid / amrex::Gpu::Device::warp_size; \
             long amrex_i_lid = amrex_i_tid - amrex_i_wid*amrex::Gpu::Device::warp_size; \
             long amrex_i_offset = amrex_i_lid + amrex_i_wid*<ref refid="AMReX__GpuLaunch_8H_1aa17614e5b3183f76e0bbb003a8a5e139" kindref="member">AMREX_GPU_NCELLS_PER_THREAD</ref>*amrex::Gpu::Device::warp_size; \
@@ -320,7 +320,7 @@
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
             long amrex_i_numpts = bbb.numPts(); \
-            long amrex_i_tid = AMREX_blockDim_x*AMREX_blockIdx_x + AMREX_threadIdx_x; \
+            long amrex_i_tid = blockDim.x*blockIdx.x + threadIdx.x; \
             long amrex_i_wid = amrex_i_tid / amrex::Gpu::Device::warp_size; \
             long amrex_i_lid = amrex_i_tid - amrex_i_wid*amrex::Gpu::Device::warp_size; \
             long amrex_i_offset = amrex_i_lid + amrex_i_wid*<ref refid="AMReX__GpuLaunch_8H_1aa17614e5b3183f76e0bbb003a8a5e139" kindref="member">AMREX_GPU_NCELLS_PER_THREAD</ref>*amrex::Gpu::Device::warp_size; \
@@ -357,7 +357,7 @@
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
             long amrex_i_numpts = bbb.numPts(); \
-            long amrex_i_tid = AMREX_blockDim_x*AMREX_blockIdx_x + AMREX_threadIdx_x; \
+            long amrex_i_tid = blockDim.x*blockIdx.x + threadIdx.x; \
             long amrex_i_wid = amrex_i_tid / amrex::Gpu::Device::warp_size; \
             long amrex_i_lid = amrex_i_tid - amrex_i_wid*amrex::Gpu::Device::warp_size; \
             long amrex_i_offset = amrex_i_lid + amrex_i_wid*<ref refid="AMReX__GpuLaunch_8H_1aa17614e5b3183f76e0bbb003a8a5e139" kindref="member">AMREX_GPU_NCELLS_PER_THREAD</ref>*amrex::Gpu::Device::warp_size; \
@@ -411,9 +411,9 @@
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
             const auto amrex_i_lo = bbb.loVect3d(); \
             const auto amrex_i_hi = bbb.hiVect3d(); \
-            for (int amrex_i_k = amrex_i_lo[2] + AMREX_blockIdx_z * AMREX_blockDim_z + AMREX_threadIdx_z; amrex_i_k &lt;= amrex_i_hi[2]; amrex_i_k += AMREX_blockDim_z * AMREX_gridDim_z) { \
-            for (int amrex_i_j = amrex_i_lo[1] + AMREX_blockIdx_y * AMREX_blockDim_y + AMREX_threadIdx_y; amrex_i_j &lt;= amrex_i_hi[1]; amrex_i_j += AMREX_blockDim_y * AMREX_gridDim_y) { \
-            for (int amrex_i_i = amrex_i_lo[0] + AMREX_blockIdx_x * AMREX_blockDim_x + AMREX_threadIdx_x; amrex_i_i &lt;= amrex_i_hi[0]; amrex_i_i += AMREX_blockDim_x * AMREX_gridDim_x) { \
+            for (int amrex_i_k = amrex_i_lo[2] + blockIdx.z * blockDim.z + threadIdx.z; amrex_i_k &lt;= amrex_i_hi[2]; amrex_i_k += blockDim.z * gridDim.z) { \
+            for (int amrex_i_j = amrex_i_lo[1] + blockIdx.y * blockDim.y + threadIdx.y; amrex_i_j &lt;= amrex_i_hi[1]; amrex_i_j += blockDim.y * gridDim.y) { \
+            for (int amrex_i_i = amrex_i_lo[0] + blockIdx.x * blockDim.x + threadIdx.x; amrex_i_i &lt;= amrex_i_hi[0]; amrex_i_i += blockDim.x * gridDim.x) { \
                 <ref refid="classamrex_1_1Box" kindref="compound">amrex::Box</ref> tbb(IntVect(AMREX_D_DECL(amrex_i_i,amrex_i_j,amrex_i_k)), \
                                IntVect(AMREX_D_DECL(amrex_i_i,amrex_i_j,amrex_i_k)), \
                                bbb.type()); \
@@ -510,7 +510,7 @@
         const auto amrex_i_ec = amrex::Gpu::ExecutionConfig(n); \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
-            for (int i = AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x, amrex_i_stride = AMREX_blockDim_x*AMREX_gridDim_x; \
+            for (int i = blockDim.x*blockIdx.x+threadIdx.x, amrex_i_stride = blockDim.x*gridDim.x; \
                      i &lt; n; i += amrex_i_stride) { \
                 block \
             } \
@@ -538,7 +538,7 @@
         const auto amrex_i_ec = amrex::Gpu::ExecutionConfig(n); \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
-            for (int i = AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x, amrex_i_stride = AMREX_blockDim_x*AMREX_gridDim_x; \
+            for (int i = blockDim.x*blockIdx.x+threadIdx.x, amrex_i_stride = blockDim.x*gridDim.x; \
                      i &lt; n; i += amrex_i_stride) { \
                 block \
             } \
@@ -594,7 +594,7 @@
         const auto amrex_i_ec = amrex::Gpu::ExecutionConfig(amrex_i_ncells); \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
-            for (int amrex_i_icell = AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x, amrex_i_stride = AMREX_blockDim_x*AMREX_gridDim_x; \
+            for (int amrex_i_icell = blockDim.x*blockIdx.x+threadIdx.x, amrex_i_stride = blockDim.x*gridDim.x; \
                      amrex_i_icell &lt; amrex_i_ncells; amrex_i_icell += amrex_i_stride) { \
                 int k =  amrex_i_icell /   (amrex_i_len.x*amrex_i_len.y); \
                 int j = (amrex_i_icell - k*(amrex_i_len.x*amrex_i_len.y)) /   amrex_i_len.x; \
@@ -660,7 +660,7 @@
         const auto amrex_i_ec = amrex::Gpu::ExecutionConfig(amrex_i_ncells); \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
-            for (int amrex_i_icell = AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x, amrex_i_stride = AMREX_blockDim_x*AMREX_gridDim_x; \
+            for (int amrex_i_icell = blockDim.x*blockIdx.x+threadIdx.x, amrex_i_stride = blockDim.x*gridDim.x; \
                      amrex_i_icell &lt; amrex_i_ncells; amrex_i_icell += amrex_i_stride) { \
                 int k =  amrex_i_icell /   (amrex_i_len.x*amrex_i_len.y); \
                 int j = (amrex_i_icell - k*(amrex_i_len.x*amrex_i_len.y)) /   amrex_i_len.x; \
@@ -771,7 +771,7 @@
 <codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_nblocks.y<sp/>=<sp/>2;<sp/>\</highlight></codeline>
 <codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_nblocks,<sp/>amrex_i_ec1.numThreads,<sp/>0,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(AMREX_blockIdx_y)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(blockIdx.y)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>0:<sp/>for<sp/>(auto<sp/>const<sp/>TI1<sp/>:<sp/>amrex::Gpu::Range(TN1))<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block1<sp/>\</highlight></codeline>
 <codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
@@ -805,7 +805,7 @@
 <codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_nblocks.y<sp/>=<sp/>3;<sp/>\</highlight></codeline>
 <codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_nblocks,<sp/>amrex_i_ec1.numThreads,<sp/>0,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(AMREX_blockIdx_y)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(blockIdx.y)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>0:<sp/>for<sp/>(auto<sp/>const<sp/>TI1<sp/>:<sp/>amrex::Gpu::Range(TN1))<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block1<sp/>\</highlight></codeline>
 <codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
@@ -860,7 +860,7 @@
 <codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_nblocks.y<sp/>=<sp/>2;<sp/>\</highlight></codeline>
 <codeline lineno="160"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_nblocks,<sp/>amrex_i_ec1.numThreads,<sp/>0,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="161"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="162"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(AMREX_blockIdx_y)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="162"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(blockIdx.y)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>0:<sp/>for<sp/>(auto<sp/>const<sp/>TI1<sp/>:<sp/>amrex::Gpu::Range(TN1))<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="164"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block1<sp/>\</highlight></codeline>
 <codeline lineno="165"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
@@ -889,7 +889,7 @@
 <codeline lineno="188"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_nblocks.y<sp/>=<sp/>3;<sp/>\</highlight></codeline>
 <codeline lineno="189"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_nblocks,<sp/>amrex_i_ec1.numThreads,<sp/>0,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="190"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="191"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(AMREX_blockIdx_y)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="191"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch<sp/>(blockIdx.y)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="192"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>case<sp/>0:<sp/>for<sp/>(auto<sp/>const<sp/>TI1<sp/>:<sp/>amrex::Gpu::Range(TN1))<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="193"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block1<sp/>\</highlight></codeline>
 <codeline lineno="194"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
@@ -915,7 +915,7 @@
 <codeline lineno="214"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="215"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="216"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_numpts<sp/>=<sp/>bbb.numPts();<sp/>\</highlight></codeline>
-<codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x<sp/>+<sp/>AMREX_threadIdx_x;<sp/>\</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>blockDim.x*blockIdx.x<sp/>+<sp/>threadIdx.x;<sp/>\</highlight></codeline>
 <codeline lineno="218"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_wid<sp/>=<sp/>amrex_i_tid<sp/>/<sp/>amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="219"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_lid<sp/>=<sp/>amrex_i_tid<sp/>-<sp/>amrex_i_wid*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="220"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_offset<sp/>=<sp/>amrex_i_lid<sp/>+<sp/>amrex_i_wid*AMREX_GPU_NCELLS_PER_THREAD*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
@@ -939,7 +939,7 @@
 <codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_numpts<sp/>=<sp/>bbb.numPts();<sp/>\</highlight></codeline>
-<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x<sp/>+<sp/>AMREX_threadIdx_x;<sp/>\</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>blockDim.x*blockIdx.x<sp/>+<sp/>threadIdx.x;<sp/>\</highlight></codeline>
 <codeline lineno="242"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_wid<sp/>=<sp/>amrex_i_tid<sp/>/<sp/>amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="243"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_lid<sp/>=<sp/>amrex_i_tid<sp/>-<sp/>amrex_i_wid*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="244"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_offset<sp/>=<sp/>amrex_i_lid<sp/>+<sp/>amrex_i_wid*AMREX_GPU_NCELLS_PER_THREAD*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
@@ -965,7 +965,7 @@
 <codeline lineno="264"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="265"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="266"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_numpts<sp/>=<sp/>bbb.numPts();<sp/>\</highlight></codeline>
-<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x<sp/>+<sp/>AMREX_threadIdx_x;<sp/>\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>blockDim.x*blockIdx.x<sp/>+<sp/>threadIdx.x;<sp/>\</highlight></codeline>
 <codeline lineno="268"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_wid<sp/>=<sp/>amrex_i_tid<sp/>/<sp/>amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="269"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_lid<sp/>=<sp/>amrex_i_tid<sp/>-<sp/>amrex_i_wid*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="270"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_offset<sp/>=<sp/>amrex_i_lid<sp/>+<sp/>amrex_i_wid*AMREX_GPU_NCELLS_PER_THREAD*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
@@ -988,7 +988,7 @@
 <codeline lineno="287"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_ec<sp/>=<sp/>Gpu::ExecutionConfig(max_pts);<sp/>\</highlight></codeline>
 <codeline lineno="288"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="289"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="290"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x<sp/>+<sp/>AMREX_threadIdx_x;<sp/>\</highlight></codeline>
+<codeline lineno="290"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_tid<sp/>=<sp/>blockDim.x*blockIdx.x<sp/>+<sp/>threadIdx.x;<sp/>\</highlight></codeline>
 <codeline lineno="291"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_wid<sp/>=<sp/>amrex_i_tid<sp/>/<sp/>amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="292"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>amrex_i_lid<sp/>=<sp/>amrex_i_tid<sp/>-<sp/>amrex_i_wid*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
 <codeline lineno="293"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>long<sp/>amrex_i_offset<sp/>=<sp/>amrex_i_lid<sp/>+<sp/>amrex_i_wid*AMREX_GPU_NCELLS_PER_THREAD*amrex::Gpu::Device::warp_size;<sp/>\</highlight></codeline>
@@ -1030,9 +1030,9 @@
 <codeline lineno="329"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="330"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_lo<sp/>=<sp/>bbb.loVect3d();<sp/>\</highlight></codeline>
 <codeline lineno="331"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_hi<sp/>=<sp/>bbb.hiVect3d();<sp/>\</highlight></codeline>
-<codeline lineno="332"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_k<sp/>=<sp/>amrex_i_lo[2]<sp/>+<sp/>AMREX_blockIdx_z<sp/>*<sp/>AMREX_blockDim_z<sp/>+<sp/>AMREX_threadIdx_z;<sp/>amrex_i_k<sp/>&lt;=<sp/>amrex_i_hi[2];<sp/>amrex_i_k<sp/>+=<sp/>AMREX_blockDim_z<sp/>*<sp/>AMREX_gridDim_z)<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="333"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_j<sp/>=<sp/>amrex_i_lo[1]<sp/>+<sp/>AMREX_blockIdx_y<sp/>*<sp/>AMREX_blockDim_y<sp/>+<sp/>AMREX_threadIdx_y;<sp/>amrex_i_j<sp/>&lt;=<sp/>amrex_i_hi[1];<sp/>amrex_i_j<sp/>+=<sp/>AMREX_blockDim_y<sp/>*<sp/>AMREX_gridDim_y)<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="334"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_i<sp/>=<sp/>amrex_i_lo[0]<sp/>+<sp/>AMREX_blockIdx_x<sp/>*<sp/>AMREX_blockDim_x<sp/>+<sp/>AMREX_threadIdx_x;<sp/>amrex_i_i<sp/>&lt;=<sp/>amrex_i_hi[0];<sp/>amrex_i_i<sp/>+=<sp/>AMREX_blockDim_x<sp/>*<sp/>AMREX_gridDim_x)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="332"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_k<sp/>=<sp/>amrex_i_lo[2]<sp/>+<sp/>blockIdx.z<sp/>*<sp/>blockDim.z<sp/>+<sp/>threadIdx.z;<sp/>amrex_i_k<sp/>&lt;=<sp/>amrex_i_hi[2];<sp/>amrex_i_k<sp/>+=<sp/>blockDim.z<sp/>*<sp/>gridDim.z)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="333"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_j<sp/>=<sp/>amrex_i_lo[1]<sp/>+<sp/>blockIdx.y<sp/>*<sp/>blockDim.y<sp/>+<sp/>threadIdx.y;<sp/>amrex_i_j<sp/>&lt;=<sp/>amrex_i_hi[1];<sp/>amrex_i_j<sp/>+=<sp/>blockDim.y<sp/>*<sp/>gridDim.y)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="334"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_i<sp/>=<sp/>amrex_i_lo[0]<sp/>+<sp/>blockIdx.x<sp/>*<sp/>blockDim.x<sp/>+<sp/>threadIdx.x;<sp/>amrex_i_i<sp/>&lt;=<sp/>amrex_i_hi[0];<sp/>amrex_i_i<sp/>+=<sp/>blockDim.x<sp/>*<sp/>gridDim.x)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="335"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::Box<sp/>tbb(IntVect(AMREX_D_DECL(amrex_i_i,amrex_i_j,amrex_i_k)),<sp/>\</highlight></codeline>
 <codeline lineno="336"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IntVect(AMREX_D_DECL(amrex_i_i,amrex_i_j,amrex_i_k)),<sp/>\</highlight></codeline>
 <codeline lineno="337"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bbb.type());<sp/>\</highlight></codeline>
@@ -1090,7 +1090,7 @@
 <codeline lineno="389"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_ec<sp/>=<sp/>amrex::Gpu::ExecutionConfig(n);<sp/>\</highlight></codeline>
 <codeline lineno="390"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="391"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="392"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x,<sp/>amrex_i_stride<sp/>=<sp/>AMREX_blockDim_x*AMREX_gridDim_x;<sp/>\</highlight></codeline>
+<codeline lineno="392"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>blockDim.x*blockIdx.x+threadIdx.x,<sp/>amrex_i_stride<sp/>=<sp/>blockDim.x*gridDim.x;<sp/>\</highlight></codeline>
 <codeline lineno="393"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>&lt;<sp/>n;<sp/>i<sp/>+=<sp/>amrex_i_stride)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="394"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block<sp/>\</highlight></codeline>
 <codeline lineno="395"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
@@ -1107,7 +1107,7 @@
 <codeline lineno="406"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_ec<sp/>=<sp/>amrex::Gpu::ExecutionConfig(n);<sp/>\</highlight></codeline>
 <codeline lineno="407"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="408"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="409"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x,<sp/>amrex_i_stride<sp/>=<sp/>AMREX_blockDim_x*AMREX_gridDim_x;<sp/>\</highlight></codeline>
+<codeline lineno="409"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>blockDim.x*blockIdx.x+threadIdx.x,<sp/>amrex_i_stride<sp/>=<sp/>blockDim.x*gridDim.x;<sp/>\</highlight></codeline>
 <codeline lineno="410"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>&lt;<sp/>n;<sp/>i<sp/>+=<sp/>amrex_i_stride)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="411"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block<sp/>\</highlight></codeline>
 <codeline lineno="412"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
@@ -1128,7 +1128,7 @@
 <codeline lineno="427"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_ec<sp/>=<sp/>amrex::Gpu::ExecutionConfig(amrex_i_ncells);<sp/>\</highlight></codeline>
 <codeline lineno="428"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="429"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="430"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x,<sp/>amrex_i_stride<sp/>=<sp/>AMREX_blockDim_x*AMREX_gridDim_x;<sp/>\</highlight></codeline>
+<codeline lineno="430"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>blockDim.x*blockIdx.x+threadIdx.x,<sp/>amrex_i_stride<sp/>=<sp/>blockDim.x*gridDim.x;<sp/>\</highlight></codeline>
 <codeline lineno="431"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_icell<sp/>&lt;<sp/>amrex_i_ncells;<sp/>amrex_i_icell<sp/>+=<sp/>amrex_i_stride)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="432"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>k<sp/>=<sp/><sp/>amrex_i_icell<sp/>/<sp/><sp/><sp/>(amrex_i_len.x*amrex_i_len.y);<sp/>\</highlight></codeline>
 <codeline lineno="433"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>(amrex_i_icell<sp/>-<sp/>k*(amrex_i_len.x*amrex_i_len.y))<sp/>/<sp/><sp/><sp/>amrex_i_len.x;<sp/>\</highlight></codeline>
@@ -1160,7 +1160,7 @@
 <codeline lineno="459"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_ec<sp/>=<sp/>amrex::Gpu::ExecutionConfig(amrex_i_ncells);<sp/>\</highlight></codeline>
 <codeline lineno="460"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="461"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="462"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x,<sp/>amrex_i_stride<sp/>=<sp/>AMREX_blockDim_x*AMREX_gridDim_x;<sp/>\</highlight></codeline>
+<codeline lineno="462"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>blockDim.x*blockIdx.x+threadIdx.x,<sp/>amrex_i_stride<sp/>=<sp/>blockDim.x*gridDim.x;<sp/>\</highlight></codeline>
 <codeline lineno="463"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_icell<sp/>&lt;<sp/>amrex_i_ncells;<sp/>amrex_i_icell<sp/>+=<sp/>amrex_i_stride)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="464"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>k<sp/>=<sp/><sp/>amrex_i_icell<sp/>/<sp/><sp/><sp/>(amrex_i_len.x*amrex_i_len.y);<sp/>\</highlight></codeline>
 <codeline lineno="465"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>(amrex_i_icell<sp/>-<sp/>k*(amrex_i_len.x*amrex_i_len.y))<sp/>/<sp/><sp/><sp/>amrex_i_len.x;<sp/>\</highlight></codeline>
@@ -1187,7 +1187,7 @@
 <codeline lineno="486"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_ec<sp/>=<sp/>amrex::Gpu::ExecutionConfig(amrex_i_ncells);<sp/>\</highlight></codeline>
 <codeline lineno="487"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="488"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="489"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x,<sp/>amrex_i_stride<sp/>=<sp/>AMREX_blockDim_x*AMREX_gridDim_x;<sp/>\</highlight></codeline>
+<codeline lineno="489"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>blockDim.x*blockIdx.x+threadIdx.x,<sp/>amrex_i_stride<sp/>=<sp/>blockDim.x*gridDim.x;<sp/>\</highlight></codeline>
 <codeline lineno="490"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_icell<sp/>&lt;<sp/>amrex_i_ncells;<sp/>amrex_i_icell<sp/>+=<sp/>amrex_i_stride)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="491"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>k<sp/>=<sp/><sp/>amrex_i_icell<sp/>/<sp/><sp/><sp/>(amrex_i_len.x*amrex_i_len.y);<sp/>\</highlight></codeline>
 <codeline lineno="492"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>(amrex_i_icell<sp/>-<sp/>k*(amrex_i_len.x*amrex_i_len.y))<sp/>/<sp/><sp/><sp/>amrex_i_len.x;<sp/>\</highlight></codeline>
@@ -1220,7 +1220,7 @@
 <codeline lineno="519"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>amrex_i_ec<sp/>=<sp/>amrex::Gpu::ExecutionConfig(amrex_i_ncells);<sp/>\</highlight></codeline>
 <codeline lineno="520"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex::launch_global&lt;&lt;&lt;amrex_i_ec.numBlocks,<sp/>amrex_i_ec.numThreads,<sp/>amrex_i_ec.sharedMem,<sp/>amrex::Gpu::gpuStream()&gt;&gt;&gt;(<sp/>\</highlight></codeline>
 <codeline lineno="521"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[=]<sp/>AMREX_GPU_DEVICE<sp/>()<sp/>noexcept<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="522"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>AMREX_blockDim_x*AMREX_blockIdx_x+AMREX_threadIdx_x,<sp/>amrex_i_stride<sp/>=<sp/>AMREX_blockDim_x*AMREX_gridDim_x;<sp/>\</highlight></codeline>
+<codeline lineno="522"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>amrex_i_icell<sp/>=<sp/>blockDim.x*blockIdx.x+threadIdx.x,<sp/>amrex_i_stride<sp/>=<sp/>blockDim.x*gridDim.x;<sp/>\</highlight></codeline>
 <codeline lineno="523"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amrex_i_icell<sp/>&lt;<sp/>amrex_i_ncells;<sp/>amrex_i_icell<sp/>+=<sp/>amrex_i_stride)<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="524"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>k<sp/>=<sp/><sp/>amrex_i_icell<sp/>/<sp/><sp/><sp/>(amrex_i_len.x*amrex_i_len.y);<sp/>\</highlight></codeline>
 <codeline lineno="525"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>(amrex_i_icell<sp/>-<sp/>k*(amrex_i_len.x*amrex_i_len.y))<sp/>/<sp/><sp/><sp/>amrex_i_len.x;<sp/>\</highlight></codeline>
