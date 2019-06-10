@@ -319,7 +319,7 @@ var searchData=
   ['m_5frhs',['m_rhs',['../classamrex_1_1MacProjector.html#a5687d73a10dab418a054993dd8c45ab7',1,'amrex::MacProjector']]],
   ['m_5frmap',['m_rmap',['../classhacc_1_1Distribution.html#a11af510cedfd5ac8bd70be4c1573ff05',1,'hacc::Distribution']]],
   ['m_5frr',['m_rr',['../classamrex_1_1ParGDB.html#ac13e30c176a803952665498b071f6de5',1,'amrex::ParGDB']]],
-  ['m_5frun_5fon_5fgpu',['m_run_on_gpu',['../classamrex_1_1StateDescriptor_1_1BndryFunc.html#a38d234c1f591dc1c13f69afab789fba0',1,'amrex::StateDescriptor::BndryFunc::m_run_on_gpu()'],['../classamrex_1_1BndryFuncArray.html#aa35c4690edce0cf3f917beb9ff30fb28',1,'amrex::BndryFuncArray::m_run_on_gpu()']]],
+  ['m_5frun_5fon_5fgpu',['m_run_on_gpu',['../classamrex_1_1StateDescriptor_1_1BndryFunc.html#a38d234c1f591dc1c13f69afab789fba0',1,'amrex::StateDescriptor::BndryFunc::m_run_on_gpu()'],['../classamrex_1_1BndryFuncArray.html#a631e5f4032aecbfad4c4acf5f35a7490',1,'amrex::BndryFuncArray::m_run_on_gpu()']]],
   ['m_5fruntime_5fcomps_5fdefined',['m_runtime_comps_defined',['../classamrex_1_1ParticleContainer.html#a2e417921acd00358a3af55e11d2ed0e5',1,'amrex::ParticleContainer']]],
   ['m_5fruntime_5fidata',['m_runtime_idata',['../structamrex_1_1StructOfArrays.html#af5a2fab24f5880fd105ae85982e9a6fd',1,'amrex::StructOfArrays']]],
   ['m_5fruntime_5frdata',['m_runtime_rdata',['../structamrex_1_1StructOfArrays.html#a051a6bf3d0f23d34c06c3b3c6249a8dd',1,'amrex::StructOfArrays']]],
