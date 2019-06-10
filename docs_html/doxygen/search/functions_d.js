@@ -8,7 +8,7 @@ var searchData=
   ['make_5feb_5fgeometry',['make_eb_geometry',['../classamrex_1_1LSUtility.html#a7b0810e6f378fd2da9e5502c523ffe3e',1,'amrex::LSUtility']]],
   ['make_5fls_5fgeometry',['make_ls_geometry',['../classamrex_1_1LSUtility.html#abf52a50c13a4213202a1254029359f8c',1,'amrex::LSUtility']]],
   ['makeagglomerateddmap',['makeAgglomeratedDMap',['../classamrex_1_1MLLinOp.html#a8aebe104ce2f4892f32350c742d0ba36',1,'amrex::MLLinOp']]],
-  ['makearray4',['makeArray4',['../namespaceamrex.html#adbe1e5dfd63b40a283598f77dbd49049',1,'amrex']]],
+  ['makearray4',['makeArray4',['../namespaceamrex.html#a23fa77892c9168a73ef0d653ddd550a0',1,'amrex']]],
   ['makebasegrids',['MakeBaseGrids',['../classamrex_1_1AmrMesh.html#a962d1689c8b7444f4b2c8a077d3f4766',1,'amrex::AmrMesh']]],
   ['makecoefficients',['makeCoefficients',['../classamrex_1_1LinOp.html#a48100b02251f55f0394e976eca1e8211',1,'amrex::LinOp::makeCoefficients()'],['../classamrex_1_1MCLinOp.html#ae88baa01c91d892429aa19aabd3b62ee',1,'amrex::MCLinOp::makeCoefficients()']]],
   ['makecomplement',['makeComplement',['../namespaceamrex_1_1EB2.html#a6689939adc9cd129828b1246501c2ddc',1,'amrex::EB2']]],

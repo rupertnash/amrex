@@ -131,9 +131,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac7893496966f89a21224066231874f45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#ac7893496966f89a21224066231874f45">BaseFab</a> (const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;bx, int ncomp, T *p)</td></tr>
 <tr class="memdesc:ac7893496966f89a21224066231874f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an NON-OWNING <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>. Thus <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> is not responsible for memory management. And it's caller's responsibility that p points to a chunk of memory large enough.  <a href="#ac7893496966f89a21224066231874f45">More...</a><br /></td></tr>
 <tr class="separator:ac7893496966f89a21224066231874f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb203c6121237ab7e1c979a2107d852"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a9bb203c6121237ab7e1c979a2107d852">~BaseFab</a> ()</td></tr>
-<tr class="memdesc:a9bb203c6121237ab7e1c979a2107d852"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor deletes the array memory.  <a href="#a9bb203c6121237ab7e1c979a2107d852">More...</a><br /></td></tr>
-<tr class="separator:a9bb203c6121237ab7e1c979a2107d852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed55da8ca9085010983c3b6e98e4ed3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a0ed55da8ca9085010983c3b6e98e4ed3">BaseFab</a> (<a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; T &gt; const &amp;a)</td></tr>
+<tr class="separator:a0ed55da8ca9085010983c3b6e98e4ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff030dace0bb040203dcffc70fce3d32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#aff030dace0bb040203dcffc70fce3d32">BaseFab</a> (<a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; T const  &gt; const &amp;a)</td></tr>
+<tr class="separator:aff030dace0bb040203dcffc70fce3d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35beb45f3c996ac10d384ca2793d2c54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a35beb45f3c996ac10d384ca2793d2c54">~BaseFab</a> ()</td></tr>
+<tr class="memdesc:a35beb45f3c996ac10d384ca2793d2c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor deletes the array memory.  <a href="#a35beb45f3c996ac10d384ca2793d2c54">More...</a><br /></td></tr>
+<tr class="separator:a35beb45f3c996ac10d384ca2793d2c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ca14e812dfcf9b7d8c63786adac012b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a1ca14e812dfcf9b7d8c63786adac012b">BaseFab</a> (const <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>&lt; T, Allocator &gt; &amp;rhs)=delete</td></tr>
 <tr class="separator:a1ca14e812dfcf9b7d8c63786adac012b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a679eaffd38be1e6db15510e43f47f62d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>&lt; T, Allocator &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1BaseFab.html#a679eaffd38be1e6db15510e43f47f62d">operator=</a> (const <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>&lt; T, Allocator &gt; &amp;rhs)=delete</td></tr>
@@ -851,14 +855,66 @@ template&lt;class T, class Allocator = DataAllocator&lt;T&gt;&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a9bb203c6121237ab7e1c979a2107d852"></a>
+<a class="anchor" id="a0ed55da8ca9085010983c3b6e98e4ed3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class Allocator = DataAllocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="classamrex_1_1BaseFab.html">amrex::BaseFab</a>&lt; T, Allocator &gt;::<a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff030dace0bb040203dcffc70fce3d32"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class Allocator = DataAllocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="classamrex_1_1BaseFab.html">amrex::BaseFab</a>&lt; T, Allocator &gt;::<a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; T const  &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a35beb45f3c996ac10d384ca2793d2c54"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T, class Allocator = DataAllocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classamrex_1_1BaseFab.html">amrex::BaseFab</a>&lt; T, Allocator &gt;::~<a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> </td>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="classamrex_1_1BaseFab.html">amrex::BaseFab</a>&lt; T, Allocator &gt;::~<a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

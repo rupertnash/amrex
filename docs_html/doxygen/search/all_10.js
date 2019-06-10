@@ -242,7 +242,7 @@ var searchData=
   ['psicode',['PsiCode',['../structamrex_1_1algoim_1_1PsiCode.html',1,'amrex::algoim']]],
   ['psicount',['psiCount',['../structamrex_1_1algoim_1_1ImplicitIntegral.html#a203aaaa3e85ca58ba28e40f548b2187d',1,'amrex::algoim::ImplicitIntegral']]],
   ['pstr',['pstr',['../structamrex_1_1VisMF_1_1PersistentIFStream.html#ac1215d1effdf6c549d4d06a61004880d',1,'amrex::VisMF::PersistentIFStream']]],
-  ['ptr',['ptr',['../structamrex_1_1Array4.html#a0951dd1a1e6d5b4f5a41c4cae335f6f1',1,'amrex::Array4']]],
+  ['ptr',['ptr',['../structamrex_1_1Array4.html#a0951dd1a1e6d5b4f5a41c4cae335f6f1',1,'amrex::Array4::ptr(int i, int j, int k) const noexcept'],['../structamrex_1_1Array4.html#a4348b8093dd5bd53b0094f2db00bd643',1,'amrex::Array4::ptr(int i, int j, int k, int n) const noexcept']]],
   ['ptr_5fowner',['ptr_owner',['../structamrex_1_1BaseFabData.html#a16e2d3ceee6c7fd51947348985ba86f8',1,'amrex::BaseFabData::ptr_owner()'],['../classamrex_1_1BaseUmap.html#ad27ad46462e94180a16a14b7ff36533a',1,'amrex::BaseUmap::ptr_owner()']]],
   ['ptr_5fto_5fvoid_5ffunc',['PTR_TO_VOID_FUNC',['../namespaceamrex.html#a436b95e95cc4994a7c179e3cebe42ea6',1,'amrex']]],
   ['ptype',['PType',['../AMReX__ParmParse_8cpp.html#a616331d491e3fcde56fe2dd927892162',1,'amrex::@199']]],

@@ -21,7 +21,7 @@ var searchData=
   ['_7easyncarray',['~AsyncArray',['../classamrex_1_1Gpu_1_1AsyncArray.html#a5294524b031f7407ffe97a93ef04c730',1,'amrex::Gpu::AsyncArray']]],
   ['_7easyncfab',['~AsyncFab',['../classamrex_1_1Gpu_1_1AsyncFab.html#a86299d2c9e6654627c7e59b4d408f0f6',1,'amrex::Gpu::AsyncFab']]],
   ['_7easyncfabimpl',['~AsyncFabImpl',['../classamrex_1_1Gpu_1_1AsyncFabImpl.html#a2518373e6edd2e4aba7a167b3f439507',1,'amrex::Gpu::AsyncFabImpl']]],
-  ['_7ebasefab',['~BaseFab',['../classamrex_1_1BaseFab.html#a9bb203c6121237ab7e1c979a2107d852',1,'amrex::BaseFab']]],
+  ['_7ebasefab',['~BaseFab',['../classamrex_1_1BaseFab.html#a35beb45f3c996ac10d384ca2793d2c54',1,'amrex::BaseFab']]],
   ['_7ebaseumap',['~BaseUmap',['../classamrex_1_1BaseUmap.html#a66dce96b470d563ad6f46b9054733106',1,'amrex::BaseUmap']]],
   ['_7eblprofstats',['~BLProfStats',['../classBLProfStats.html#a78a439d9e62c00492ada16e9466c068d',1,'BLProfStats']]],
   ['_7ebndrydata',['~BndryData',['../classamrex_1_1BndryData.html#ad6ebc5a788a82c41a8b1bffc8e589440',1,'amrex::BndryData']]],

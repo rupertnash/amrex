@@ -84,16 +84,6 @@
         <childnode refid="24552" relation="include">
         </childnode>
       </node>
-      <node id="24621">
-        <label>AMReX_CudaReduce.H</label>
-        <link refid="AMReX__CudaReduce_8H"/>
-        <childnode refid="24566" relation="include">
-        </childnode>
-        <childnode refid="24571" relation="include">
-        </childnode>
-        <childnode refid="24594" relation="include">
-        </childnode>
-      </node>
       <node id="24624">
         <label>AMReX_CudaContainers.H</label>
         <link refid="AMReX__CudaContainers_8H"/>
@@ -412,6 +402,16 @@
         <childnode refid="24558" relation="include">
         </childnode>
         <childnode refid="24552" relation="include">
+        </childnode>
+      </node>
+      <node id="24621">
+        <label>AMReX_GpuReduce.H</label>
+        <link refid="AMReX__GpuReduce_8H"/>
+        <childnode refid="24566" relation="include">
+        </childnode>
+        <childnode refid="24571" relation="include">
+        </childnode>
+        <childnode refid="24594" relation="include">
         </childnode>
       </node>
       <node id="24558">
@@ -986,37 +986,41 @@
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1BaseFab_1a8824ae3713fa75a3695c6f1c808d00fa" kindref="member">BaseFab</ref>&lt;int&gt;(b,n,alloc,shared)</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>debugging<sp/>purposes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>alloc<sp/>&amp;&amp;<sp/>do_initval<sp/>)<sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>setVal(<ref refid="namespaceamrex_1_1detail_1a05ef6e98eba987410d73df1617fa569da86cadfc48eb8f9dd4a2e4a3980a6b265" kindref="member">std::numeric_limits&lt;int&gt;::max</ref>());</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><ref refid="classamrex_1_1IArrayBox_1a565d48e5cc50e17ec5cd4af6b8d65e63" kindref="member">IArrayBox::IArrayBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IArrayBox&amp;<sp/>rhs,<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6" kindref="member">MakeType</ref><sp/>make_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scomp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncomp)</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseFab&lt;int&gt;(rhs,make_type,scomp,ncomp)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal">IArrayBox&amp;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><ref refid="classamrex_1_1IArrayBox_1a1f15c661d9fa23250901595a7e7e2179" kindref="member">IArrayBox::operator= </ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)<sp/>noexcept</highlight></codeline>
-<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1BaseFab_1a679eaffd38be1e6db15510e43f47f62d" kindref="member">BaseFab&lt;int&gt;::operator=</ref>(v);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><ref refid="classamrex_1_1IArrayBox_1ab4da50b98000eb197a2b1050a5e2fd51" kindref="member">IArrayBox::resize</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>b,</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>N)</highlight></codeline>
-<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1BaseFab_1ae3aa191059d0d1330b38bf19ff693c8b" kindref="member">BaseFab&lt;int&gt;::resize</ref>(b,N);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>debugging<sp/>purposes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>do_initval<sp/>)<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setVal(<ref refid="namespaceamrex_1_1detail_1a05ef6e98eba987410d73df1617fa569da86cadfc48eb8f9dd4a2e4a3980a6b265" kindref="member">std::numeric_limits&lt;int&gt;::max</ref>());</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AMREX_USE_GPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>debugging<sp/>purposes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>alloc<sp/>&amp;&amp;<sp/>do_initval<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>setVal(<ref refid="namespaceamrex_1_1detail_1a05ef6e98eba987410d73df1617fa569da86cadfc48eb8f9dd4a2e4a3980a6b265" kindref="member">std::numeric_limits&lt;int&gt;::max</ref>());</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="classamrex_1_1IArrayBox_1a565d48e5cc50e17ec5cd4af6b8d65e63" kindref="member">IArrayBox::IArrayBox</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IArrayBox&amp;<sp/>rhs,<sp/><ref refid="namespaceamrex_1a0a36c65d0681a832330b2812f16786a6" kindref="member">MakeType</ref><sp/>make_type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scomp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncomp)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseFab&lt;int&gt;(rhs,make_type,scomp,ncomp)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">IArrayBox&amp;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="classamrex_1_1IArrayBox_1a1f15c661d9fa23250901595a7e7e2179" kindref="member">IArrayBox::operator= </ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)<sp/>noexcept</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1BaseFab_1a679eaffd38be1e6db15510e43f47f62d" kindref="member">BaseFab&lt;int&gt;::operator=</ref>(v);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="classamrex_1_1IArrayBox_1ab4da50b98000eb197a2b1050a5e2fd51" kindref="member">IArrayBox::resize</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>b,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>N)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1BaseFab_1ae3aa191059d0d1330b38bf19ff693c8b" kindref="member">BaseFab&lt;int&gt;::resize</ref>(b,N);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AMREX_USE_GPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>debugging<sp/>purposes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>do_initval<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setVal(<ref refid="namespaceamrex_1_1detail_1a05ef6e98eba987410d73df1617fa569da86cadfc48eb8f9dd4a2e4a3980a6b265" kindref="member">std::numeric_limits&lt;int&gt;::max</ref>());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IArrayBox.cpp"/>
   </compounddef>
