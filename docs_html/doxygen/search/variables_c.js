@@ -455,6 +455,8 @@ var searchData=
   ['mpi_5fdatatype_5fnull',['MPI_DATATYPE_NULL',['../AMReX__ccse-mpi_8H.html#aaeb65c6a10733707cec88e9cd3e3271e',1,'AMReX_ccse-mpi.H']]],
   ['mpi_5fgroup_5fnull',['MPI_GROUP_NULL',['../AMReX__ccse-mpi_8H.html#a9cf3986bb3558f4a3ec7b69ea79871f6',1,'AMReX_ccse-mpi.H']]],
   ['mpi_5fmax_5fprocessor_5fname',['MPI_MAX_PROCESSOR_NAME',['../AMReX__ccse-mpi_8H.html#aa84c3a13b72956835f87a63eb208fc14',1,'AMReX_ccse-mpi.H']]],
+  ['mpi_5fmaxloc',['MPI_MAXLOC',['../AMReX__ccse-mpi_8H.html#a941243d38f736387647b1f3d466cf920',1,'AMReX_ccse-mpi.H']]],
+  ['mpi_5fminloc',['MPI_MINLOC',['../AMReX__ccse-mpi_8H.html#a3c5fbc1ff99e4a5ef1d4e0e01a75a741',1,'AMReX_ccse-mpi.H']]],
   ['mpi_5fproc_5fnull',['MPI_PROC_NULL',['../AMReX__ccse-mpi_8H.html#af7dcaf76f6b9b428d64f80155365e1df',1,'AMReX_ccse-mpi.H']]],
   ['mpi_5frequest_5fnull',['MPI_REQUEST_NULL',['../AMReX__ccse-mpi_8H.html#a1f063a918d9598b982feec3690d69bec',1,'AMReX_ccse-mpi.H']]],
   ['mtimerstotalssorted',['mTimersTotalsSorted',['../classRegionsProfStats.html#ae7b5e31a9fc2540ebcced76270cd6dbb',1,'RegionsProfStats']]],

@@ -158,11 +158,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0cbb33517e1bf2bdb10838ad433cb8bf"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MultiFab.html#a0cbb33517e1bf2bdb10838ad433cb8bf">norm0</a> (int comp=0, int nghost=0, bool local=false) const </td></tr>
 <tr class="memdesc:a0cbb33517e1bf2bdb10838ad433cb8bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum <em>absolute</em> value contained in component comp of the <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a>.  <a href="#a0cbb33517e1bf2bdb10838ad433cb8bf">More...</a><br /></td></tr>
 <tr class="separator:a0cbb33517e1bf2bdb10838ad433cb8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24387c9fa8ce22e6b67d531ba0bdf689"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MultiFab.html#a24387c9fa8ce22e6b67d531ba0bdf689">norminf</a> (int comp=0, int nghost=0, bool local=false) const </td></tr>
+<tr class="separator:a24387c9fa8ce22e6b67d531ba0bdf689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abebf7ab5d92ddce852516f2b12dfdbb3"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MultiFab.html#abebf7ab5d92ddce852516f2b12dfdbb3">norm0</a> (const <a class="el" href="classamrex_1_1iMultiFab.html">iMultiFab</a> &amp;mask, int comp=0, int nghost=0, bool local=false) const </td></tr>
 <tr class="separator:abebf7ab5d92ddce852516f2b12dfdbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf256949949ca02a6696d44695742e06"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MultiFab.html#aaf256949949ca02a6696d44695742e06">norminf</a> (const <a class="el" href="classamrex_1_1iMultiFab.html">iMultiFab</a> &amp;mask, int comp=0, int nghost=0, bool local=false) const </td></tr>
+<tr class="separator:aaf256949949ca02a6696d44695742e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e93906e336670c12b5b136c94fcadd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; Real &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MultiFab.html#a8e93906e336670c12b5b136c94fcadd1">norm0</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt; &amp;comps, int nghost=0, bool local=false) const </td></tr>
 <tr class="memdesc:a8e93906e336670c12b5b136c94fcadd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum <em>absolute</em> values contained in each component of "comps" of the <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a>. No ghost cells are used.  <a href="#a8e93906e336670c12b5b136c94fcadd1">More...</a><br /></td></tr>
 <tr class="separator:a8e93906e336670c12b5b136c94fcadd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96708d416527cc8956daaafe31bcfb8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; Real &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MultiFab.html#a96708d416527cc8956daaafe31bcfb8d">norminf</a> (const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt; &amp;comps, int nghost=0, bool local=false) const </td></tr>
+<tr class="separator:a96708d416527cc8956daaafe31bcfb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacb2961a5bd2b32660ad7f918e596d52"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MultiFab.html#aacb2961a5bd2b32660ad7f918e596d52">norm1</a> (int comp, const <a class="el" href="classamrex_1_1Periodicity.html">Periodicity</a> &amp;period) const </td></tr>
 <tr class="memdesc:aacb2961a5bd2b32660ad7f918e596d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the L1 norm of component "comp" over the <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a>. No ghost cells are used. This version has no double counting for nodal data.  <a href="#aacb2961a5bd2b32660ad7f918e596d52">More...</a><br /></td></tr>
 <tr class="separator:aacb2961a5bd2b32660ad7f918e596d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3358,6 +3364,132 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the L2 norm of each component of "comps" over the <a class="el" href="classamrex_1_1MultiFab.html" title="A collection (stored as an array) of FArrayBox objects. This class is useful for storing floating poi...">MultiFab</a>. No ghost cells are used. </p>
+
+</div>
+</div>
+<a class="anchor" id="a24387c9fa8ce22e6b67d531ba0bdf689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Real amrex::MultiFab::norminf </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>comp</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nghost</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>local</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf256949949ca02a6696d44695742e06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Real amrex::MultiFab::norminf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1iMultiFab.html">iMultiFab</a> &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>comp</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nghost</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>local</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a96708d416527cc8956daaafe31bcfb8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt;Real&gt; amrex::MultiFab::norminf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>comps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nghost</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>local</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
