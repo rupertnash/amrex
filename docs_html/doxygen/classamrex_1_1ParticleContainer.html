@@ -370,10 +370,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a69e98c5ae9055383e3b290b25b58dbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ee48f306fd7ba69527b310f9d69aca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a79ee48f306fd7ba69527b310f9d69aca">OKGPU</a> (int lev_min=0, int lev_max=-1, int nGrow=0) const </td></tr>
 <tr class="separator:a79ee48f306fd7ba69527b310f9d69aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bae62e744cf08d186b5d66499a6f6f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a8bae62e744cf08d186b5d66499a6f6f5">AddRealComp</a> (bool communicate=true)</td></tr>
-<tr class="separator:a8bae62e744cf08d186b5d66499a6f6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cfacb44170a246f2b02c9292c5e31d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a6cfacb44170a246f2b02c9292c5e31d4">AddIntComp</a> (bool communicate=true)</td></tr>
-<tr class="separator:a6cfacb44170a246f2b02c9292c5e31d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93595817875a3846db6d2bcd42bfd48e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Y  = std::enable_if_t&lt;std::is_same&lt;T, bool&gt;{}&gt;&gt; </td></tr>
+<tr class="memitem:a93595817875a3846db6d2bcd42bfd48e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a93595817875a3846db6d2bcd42bfd48e">AddRealComp</a> (T communicate=true)</td></tr>
+<tr class="separator:a93595817875a3846db6d2bcd42bfd48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74de4251bff552fcfe88a007bff4dc96"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Y  = std::enable_if_t&lt;std::is_same&lt;T, bool&gt;{}&gt;&gt; </td></tr>
+<tr class="memitem:a74de4251bff552fcfe88a007bff4dc96"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a74de4251bff552fcfe88a007bff4dc96">AddIntComp</a> (T communicate=true)</td></tr>
+<tr class="separator:a74de4251bff552fcfe88a007bff4dc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225de1db7fe017ffc776d93c61e64efa"><td class="memTemplParams" colspan="2">template&lt;class RTYPE &gt; </td></tr>
 <tr class="memitem:a225de1db7fe017ffc776d93c61e64efa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classamrex_1_1ParticleContainer.html#a225de1db7fe017ffc776d93c61e64efa">ReadParticles</a> (int cnt, int grd, int lev, std::ifstream &amp;ifs, int finest_level_in_file)</td></tr>
 <tr class="separator:a225de1db7fe017ffc776d93c61e64efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -917,11 +919,13 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6cfacb44170a246f2b02c9292c5e31d4"></a>
+<a class="anchor" id="a74de4251bff552fcfe88a007bff4dc96"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<div class="memtemplate">
+template&lt;typename T , typename Y  = std::enable_if_t&lt;std::is_same&lt;T, bool&gt;{}&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -929,7 +933,7 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
         <tr>
           <td class="memname">void <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::AddIntComp </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>communicate</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
@@ -1023,11 +1027,13 @@ template&lt;int NStructReal, int NStructInt, int NArrayReal, int NArrayInt&gt; <
 
 </div>
 </div>
-<a class="anchor" id="a8bae62e744cf08d186b5d66499a6f6f5"></a>
+<a class="anchor" id="a93595817875a3846db6d2bcd42bfd48e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayInt = 0&gt; </div>
+<div class="memtemplate">
+template&lt;typename T , typename Y  = std::enable_if_t&lt;std::is_same&lt;T, bool&gt;{}&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1035,7 +1041,7 @@ template&lt;int NStructReal, int NStructInt = 0, int NArrayReal = 0, int NArrayI
         <tr>
           <td class="memname">void <a class="el" href="classamrex_1_1ParticleContainer.html">amrex::ParticleContainer</a>&lt; NStructReal, NStructInt, NArrayReal, NArrayInt &gt;::AddRealComp </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>communicate</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
