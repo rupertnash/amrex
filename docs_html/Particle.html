@@ -115,6 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#interacting-with-mesh-data">Interacting with Mesh Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#short-range-forces">Short Range Forces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#particle-io">Particle IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inputs-parameters">Inputs parameters</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Fortran_Chapter.html">Fortran Interface</a></li>
@@ -625,6 +626,133 @@ mesh data IO. For example:</p>
 <p>The binary file format is currently readable by <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">yt</span></span></code>. In additional, there is a Python conversion script in
 <code class="docutils literal notranslate"><span class="pre">amrex/Tools/Py_util/amrex_particles_to_vtp</span></code> that can convert both the ASCII and the binary particle files to a
 format readable by Paraview. See the chapter on <a class="reference internal" href="Visualization_Chapter.html#chap-visualization"><span class="std std-ref">Visualization</span></a> for more information on visualizing AMReX datasets, including those with particles.</p>
+</div>
+<div class="section" id="inputs-parameters">
+<h1>Inputs parameters<a class="headerlink" href="#inputs-parameters" title="Permalink to this headline">¶</a></h1>
+<p id="sec-particles-parameters">There are several runtime parameters users can set in their <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">inputs</span></span></code> files that control the
+behavior of the AMReX particle classes. These are summarized below. They should be preceded by
+“particles” in your inputs deck.</p>
+<p>The first set of parameters concerns the tiling capability of the ParticleContainer. If you are seeing poor performance
+with OpenMP, the first thing to look at is whether there are enough tiles available for each thread to work on.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 61%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>do_tiling</p></td>
+<td><p>Whether to use tiling for particles. Should be on when using OpenMP,
+and off when running on GPUs.</p></td>
+<td><p>Bool</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>tile_size</p></td>
+<td><p>If tiling is on, the maximum tile_size to in each direction</p></td>
+<td><p>Ints</p></td>
+<td><p>1024000,8,8</p></td>
+</tr>
+</tbody>
+</table>
+<p>The next set concerns runtime parameters that control the particle IO. Parallel file systems tend not to like it when
+too many MPI tasks touch the disk at once. Additionally, performance can degrade if all MPI tasks try writing to the
+same file, or if too many small files are created. In general, the “correct” values of these parameters will depend on the
+size of your problem (i.e., number of boxes, number of MPI tasks), as well as the system you are using. If you are experiencing
+problems with particle IO, you could try varying some / all of these parameters.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 61%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>particles_nfiles</p></td>
+<td><p>How many files to use when writing particle data to plt directories</p></td>
+<td><p>Int</p></td>
+<td><p>1024</p></td>
+</tr>
+<tr class="row-odd"><td><p>nreaders</p></td>
+<td><p>How many MPI tasks to use as readers when initializing particles
+from binary files.</p></td>
+<td><p>Ints</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>nparts_per_read</p></td>
+<td><p>How many particles each task should read from said files before
+calling Redistribute</p></td>
+<td><p>Ints</p></td>
+<td><p>100000</p></td>
+</tr>
+<tr class="row-odd"><td><p>datadigits_read</p></td>
+<td><p>This for backwards compatibility, don’t use unless you need to read
+and old (pre mid 2017) AMReX dataset.</p></td>
+<td><p>Int</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>use_prepost</p></td>
+<td><p>This is an optimization for large particle datasets that groups MPI
+calls needed during the IO together. Try it seeing poor IO speeds
+on large problems.</p></td>
+<td><p>Bool</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following runtime parameters affect the behavior of virtual particles in Nyx.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 61%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>aggregation_type</p></td>
+<td><dl>
+<dt>How to create virtual particles from finer levels. The options are:</dt><dd><p>“None” - don’t do any aggregation.
+“Cell” - when creating virtuals, combine all particles that are</p>
+<blockquote>
+<div><p>in the same cell.</p>
+</div></blockquote>
+</dd>
+</dl>
+</td>
+<td><p>String</p></td>
+<td><p>“None”</p></td>
+</tr>
+<tr class="row-odd"><td><p>aggregation_buffer</p></td>
+<td><p>If aggregation on, the number of cells around the coarse/fine
+boundary in which no aggregation should be performed.</p></td>
+<td><p>Int</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+<p>Finally, the <cite>amrex.use_gpu_aware_mpi</cite> switch can also affect the behavior of the particle communication routines when
+running on GPU platforms like Summit. We recommend leaving it off.</p>
 <dl class="footnote brackets">
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Particles default to double precision for their real data. To use single precision, compile your code with <code class="docutils literal notranslate"><span class="pre">USE_SINGLE_PRECISION_PARTICLES=TRUE</span></code>.</p>
