@@ -141,6 +141,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Visualization_Chapter.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Inputs_Chapter.html">Run-time Inputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AMReX_Profiling_Tools_Chapter.html">AMReX-based Profiling Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="External_Profiling_Tools_Chapter.html">External Profiling Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="External_Frameworks_Chapter.html">External Frameworks</a></li>
@@ -1490,12 +1491,8 @@ GPU aware MPI.</p></td>
 <p id="sec-gpu-limits">GPU support in AMReX is still under development.  There are some known
 limitations:</p>
 <ul class="simple">
-<li><p>By default, AMReX assumes the MPI library used is GPU aware.  The
-communication buffers given to MPI functions are allocated in device
-memory.</p></li>
 <li><p>OpenMP is currently not compatible with building AMReX with CUDA.
 <code class="docutils literal notranslate"><span class="pre">USE_CUDA=TRUE</span></code> and <code class="docutils literal notranslate"><span class="pre">USE_OMP=TRUE</span></code> will fail to compile.</p></li>
-<li><p>CMake is not yet supported for building AMReX GPU support.</p></li>
 <li><p>Many multi-level functions in AMReX have not been ported to GPUs.</p></li>
 <li><p>Linear solvers have not been ported to GPUs.</p></li>
 <li><p>Embedded boundary capability has not been ported to GPUs.</p></li>
