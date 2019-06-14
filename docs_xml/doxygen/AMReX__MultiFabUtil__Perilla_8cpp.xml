@@ -50,7 +50,7 @@
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>tbx<sp/>=<sp/>*(RG_fine-&gt;fabTiles[f]-&gt;tileBx[t]);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a6d0e61a306a98b8def94779da5cca3e0" kindref="member">amrex_avgdown</ref>(tbx,crse_S_fine[lfi],S_fine[lfi],0,scomp,ncomp,ratio);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1aca2c9cfd2ca7c95d209412f983352224" kindref="member">amrex_avgdown</ref>(tbx,crse_S_fine[lfi].array(),S_fine[lfi].array(),0,scomp,ncomp,ratio);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>RG_fine-&gt;worker[tg]-&gt;l_barr-&gt;sync(perilla::NUM_THREADS_PER_TEAM-perilla::NUM_COMM_THREADS);<sp/></highlight><highlight class="comment">//<sp/>Barrier<sp/>to<sp/>synchronize<sp/>team<sp/>threads</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -125,7 +125,7 @@
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lfi<sp/>=<sp/>crse_S_fine.IndexArray()[f];</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Box&amp;<sp/>tbx<sp/>=<sp/>crse_S_fine[<sp/>lfi<sp/>].box();</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ad84f565cb3d0120b68fe89345ecc5a88" kindref="member">amrex_avgdown_with_vol</ref>(tbx,crse_S_fine[lfi],S_fine[lfi],fvolume[lfi],</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a7aa8ba815d817fa8e642d1461beec20a" kindref="member">amrex_avgdown_with_vol</ref>(tbx,crse_S_fine[lfi].array(),S_fine[lfi].array(),fvolume[lfi].array(),</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,scomp,ncomp,ratio);</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>

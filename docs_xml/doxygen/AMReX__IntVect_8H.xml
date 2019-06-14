@@ -2802,6 +2802,8 @@
         </childnode>
         <childnode refid="25718" relation="include">
         </childnode>
+        <childnode refid="25719" relation="include">
+        </childnode>
         <childnode refid="25746" relation="include">
         </childnode>
         <childnode refid="25786" relation="include">
@@ -4288,110 +4290,130 @@
 <codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
 <codeline lineno="647"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="648"><highlight class="normal"></highlight></codeline>
-<codeline lineno="653"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
-<codeline lineno="654"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="655"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
-<codeline lineno="656" refid="namespaceamrex_1a52f2f2a0f432f41bcc6baa90b8af234a" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1ab3bf9b912e3ba519a4799d2bfd82fffc" kindref="member">max</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p2)<sp/>noexcept</highlight></codeline>
-<codeline lineno="657"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>p(p1);</highlight></codeline>
-<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classamrex_1_1IntVect_1ab3bf9b912e3ba519a4799d2bfd82fffc" kindref="member">max</ref>(p2);</highlight></codeline>
-<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
-<codeline lineno="661"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="662"><highlight class="normal"></highlight></codeline>
-<codeline lineno="668"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
-<codeline lineno="669"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="670"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
-<codeline lineno="671" refid="namespaceamrex_1a24d80fefc95c9ab14152cd4580fa86f4" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1a24d80fefc95c9ab14152cd4580fa86f4" kindref="member">BASISV</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dir)<sp/>noexcept</highlight></codeline>
-<codeline lineno="672"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(dir<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>dir<sp/>&lt;<sp/>AMREX_SPACEDIM);</highlight></codeline>
-<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>tmp;</highlight></codeline>
-<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp[dir]<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
-<codeline lineno="677"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="678"><highlight class="normal"></highlight></codeline>
-<codeline lineno="683"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
-<codeline lineno="684"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="685"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
-<codeline lineno="686" refid="namespaceamrex_1a6e2c0afe2138644796810aa4a289f790" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a87c2e928fd7dcb95b620a81bc6b099ec" kindref="member">scale</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s)<sp/>noexcept</highlight></codeline>
-<codeline lineno="687"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" kindref="member">IntVect</ref>(<ref refid="namespaceamrex_1a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd" kindref="member">AMREX_D_DECL</ref>(s<sp/>*<sp/>p[0],<sp/>s<sp/>*<sp/>p[1],<sp/>s<sp/>*<sp/>p[2]));</highlight></codeline>
-<codeline lineno="689"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="690"><highlight class="normal"></highlight></codeline>
-<codeline lineno="696"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
-<codeline lineno="697"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="698"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
-<codeline lineno="699" refid="namespaceamrex_1a47c6093b6f2b5acd9cec7ecece85c8b2" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a3a49a4cb03e07231b98aff4cf2b546d3" kindref="member">reflect</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ref_ix,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idir)<sp/>noexcept</highlight></codeline>
-<codeline lineno="700"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(idir<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>idir<sp/>&lt;<sp/>AMREX_SPACEDIM);</highlight></codeline>
-<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>b(a);</highlight></codeline>
-<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/>b[idir]<sp/>=<sp/>-b[idir]<sp/>+<sp/>2*ref_ix;</highlight></codeline>
-<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
-<codeline lineno="705"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="706"><highlight class="normal"></highlight></codeline>
-<codeline lineno="711"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
-<codeline lineno="712"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="713"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
-<codeline lineno="714" refid="namespaceamrex_1abec71d5463dd96f105a040ff5a09272e" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a1d8cb7cc5f3c974bbba4bbfc0ebaae5a" kindref="member">diagShift</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s)<sp/>noexcept</highlight></codeline>
-<codeline lineno="715"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" kindref="member">IntVect</ref>(<ref refid="namespaceamrex_1a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd" kindref="member">AMREX_D_DECL</ref>(p[0]<sp/>+<sp/>s,<sp/>p[1]<sp/>+<sp/>s,<sp/>p[2]<sp/>+<sp/>s));</highlight></codeline>
-<codeline lineno="717"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="718"><highlight class="normal"></highlight></codeline>
-<codeline lineno="723"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
-<codeline lineno="724"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="725"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
-<codeline lineno="726" refid="namespaceamrex_1a1fbb2a383ff7fbc2b9c998b92892a67c" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s)<sp/>noexcept</highlight></codeline>
-<codeline lineno="727"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(s<sp/>&gt;<sp/>0);</highlight></codeline>
-<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>v<sp/>=<sp/>p;</highlight></codeline>
-<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/>v.<ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref>(<ref refid="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" kindref="member">IntVect</ref>(<ref refid="namespaceamrex_1a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd" kindref="member">AMREX_D_DECL</ref>(s,s,s)));</highlight></codeline>
-<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
-<codeline lineno="732"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="733"><highlight class="normal"></highlight></codeline>
-<codeline lineno="738"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
-<codeline lineno="739"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="740"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
-<codeline lineno="741" refid="namespaceamrex_1a0caece32f82cf2d2a95c8f7f64c59968" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p2)<sp/>noexcept</highlight></codeline>
-<codeline lineno="742"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>v<sp/>=<sp/>p1;</highlight></codeline>
-<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/>v.<ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref>(p2);</highlight></codeline>
-<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
-<codeline lineno="746"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="747"><highlight class="normal"></highlight></codeline>
-<codeline lineno="748"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="749" refid="namespaceamrex_1a848647b9c5548142aaefd433d39add90" refkind="member"><highlight class="normal"><ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/><ref refid="namespaceamrex_1af278a3be1baed7b0bbce95c10f6aa1d7" kindref="member">refine</ref><sp/>(<ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>coarse,<sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>ratio)<sp/>noexcept</highlight></codeline>
-<codeline lineno="750"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="751"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(AMREX_SPACEDIM<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{coarse.x*ratio[0],<sp/>coarse.y,<sp/>coarse.z};</highlight></codeline>
-<codeline lineno="753"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(AMREX_SPACEDIM<sp/>==<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{coarse.x*ratio[0],<sp/>coarse.y*ratio[1],<sp/>coarse.z};</highlight></codeline>
-<codeline lineno="755"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{coarse.x*ratio[0],<sp/>coarse.y*ratio[1],<sp/>coarse.z*ratio[2]};</highlight></codeline>
-<codeline lineno="757"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="758"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="759"><highlight class="normal"></highlight></codeline>
-<codeline lineno="760"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="761" refid="namespaceamrex_1aa86645e2e212f704798d51d75eafa950" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ratio)<sp/>noexcept</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="652" refid="namespaceamrex_1ae2b6b9a6680100243b071bedb01cf74b" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1ae2b6b9a6680100243b071bedb01cf74b" kindref="member">elemwiseMin</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p2)<sp/>noexcept</highlight></codeline>
+<codeline lineno="653"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>p(p1);</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classamrex_1_1IntVect_1a59b3f72c69e4e64d6b7841cc5bd5119d" kindref="member">min</ref>(p2);</highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="657"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="666" refid="namespaceamrex_1a52f2f2a0f432f41bcc6baa90b8af234a" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1ab3bf9b912e3ba519a4799d2bfd82fffc" kindref="member">max</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p2)<sp/>noexcept</highlight></codeline>
+<codeline lineno="667"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>p(p1);</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classamrex_1_1IntVect_1ab3bf9b912e3ba519a4799d2bfd82fffc" kindref="member">max</ref>(p2);</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="671"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="676" refid="namespaceamrex_1a19d4c18919141e9fef7017eaad4ef178" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1a19d4c18919141e9fef7017eaad4ef178" kindref="member">elemwiseMax</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p2)<sp/>noexcept</highlight></codeline>
+<codeline lineno="677"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>p(p1);</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classamrex_1_1IntVect_1ab3bf9b912e3ba519a4799d2bfd82fffc" kindref="member">max</ref>(p2);</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="681"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="682"><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="691" refid="namespaceamrex_1a24d80fefc95c9ab14152cd4580fa86f4" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1a24d80fefc95c9ab14152cd4580fa86f4" kindref="member">BASISV</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dir)<sp/>noexcept</highlight></codeline>
+<codeline lineno="692"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(dir<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>dir<sp/>&lt;<sp/>AMREX_SPACEDIM);</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>tmp;</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp[dir]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="697"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="706" refid="namespaceamrex_1a6e2c0afe2138644796810aa4a289f790" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a87c2e928fd7dcb95b620a81bc6b099ec" kindref="member">scale</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s)<sp/>noexcept</highlight></codeline>
+<codeline lineno="707"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" kindref="member">IntVect</ref>(<ref refid="namespaceamrex_1a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd" kindref="member">AMREX_D_DECL</ref>(s<sp/>*<sp/>p[0],<sp/>s<sp/>*<sp/>p[1],<sp/>s<sp/>*<sp/>p[2]));</highlight></codeline>
+<codeline lineno="709"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="717"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="719" refid="namespaceamrex_1a47c6093b6f2b5acd9cec7ecece85c8b2" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a3a49a4cb03e07231b98aff4cf2b546d3" kindref="member">reflect</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ref_ix,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idir)<sp/>noexcept</highlight></codeline>
+<codeline lineno="720"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(idir<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>idir<sp/>&lt;<sp/>AMREX_SPACEDIM);</highlight></codeline>
+<codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>b(a);</highlight></codeline>
+<codeline lineno="723"><highlight class="normal"><sp/><sp/><sp/><sp/>b[idir]<sp/>=<sp/>-b[idir]<sp/>+<sp/>2*ref_ix;</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="725"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"></highlight></codeline>
+<codeline lineno="731"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="734" refid="namespaceamrex_1abec71d5463dd96f105a040ff5a09272e" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a1d8cb7cc5f3c974bbba4bbfc0ebaae5a" kindref="member">diagShift</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s)<sp/>noexcept</highlight></codeline>
+<codeline lineno="735"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" kindref="member">IntVect</ref>(<ref refid="namespaceamrex_1a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd" kindref="member">AMREX_D_DECL</ref>(p[0]<sp/>+<sp/>s,<sp/>p[1]<sp/>+<sp/>s,<sp/>p[2]<sp/>+<sp/>s));</highlight></codeline>
+<codeline lineno="737"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="746" refid="namespaceamrex_1a1fbb2a383ff7fbc2b9c998b92892a67c" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s)<sp/>noexcept</highlight></codeline>
+<codeline lineno="747"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1a53ebc8b227de416f458800faa44c619e" kindref="member">BL_ASSERT</ref>(s<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>v<sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/>v.<ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref>(<ref refid="classamrex_1_1IntVect_1a698ae35b64ba3caefb08666249e6edb3" kindref="member">IntVect</ref>(<ref refid="namespaceamrex_1a8de829410ed15dbc56e4dafc9bc6ea69a68b0c60ae4f5670ee8d0ad5dda84d0fd" kindref="member">AMREX_D_DECL</ref>(s,s,s)));</highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="752"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="753"><highlight class="normal"></highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref></highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref></highlight></codeline>
+<codeline lineno="761" refid="namespaceamrex_1a0caece32f82cf2d2a95c8f7f64c59968" refkind="member"><highlight class="normal"><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>&amp;<sp/>p2)<sp/>noexcept</highlight></codeline>
 <codeline lineno="762"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(i&lt;0)<sp/>?<sp/>-<ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">std::abs</ref>(i+1)/ratio-1<sp/>:<sp/>i/ratio;</highlight></codeline>
-<codeline lineno="764"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="765"><highlight class="normal"></highlight></codeline>
-<codeline lineno="766"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
-<codeline lineno="767" refid="namespaceamrex_1a3d82ec5f82ec132d2e9a5756b42b6dda" refkind="member"><highlight class="normal"><ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(<ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>fine,<sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>ratio)<sp/>noexcept</highlight></codeline>
-<codeline lineno="768"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="769"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(AMREX_SPACEDIM<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.x,ratio[0]),<sp/>fine.y,<sp/>fine.z};</highlight></codeline>
-<codeline lineno="771"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(AMREX_SPACEDIM<sp/>==<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.x,ratio[0]),<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.y,<sp/>ratio[1]),<sp/>fine.z};</highlight></codeline>
-<codeline lineno="773"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.x,<sp/>ratio[0]),</highlight></codeline>
-<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.y,<sp/>ratio[1]),</highlight></codeline>
-<codeline lineno="776"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.z,<sp/>ratio[2])};</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/>v<sp/>=<sp/>p1;</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/>v.<ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref>(p2);</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="766"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"></highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="769" refid="namespaceamrex_1a848647b9c5548142aaefd433d39add90" refkind="member"><highlight class="normal"><ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/><ref refid="namespaceamrex_1af278a3be1baed7b0bbce95c10f6aa1d7" kindref="member">refine</ref><sp/>(<ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>coarse,<sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>ratio)<sp/>noexcept</highlight></codeline>
+<codeline lineno="770"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(AMREX_SPACEDIM<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{coarse.x*ratio[0],<sp/>coarse.y,<sp/>coarse.z};</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(AMREX_SPACEDIM<sp/>==<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{coarse.x*ratio[0],<sp/>coarse.y*ratio[1],<sp/>coarse.z};</highlight></codeline>
+<codeline lineno="775"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="776"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{coarse.x*ratio[0],<sp/>coarse.y*ratio[1],<sp/>coarse.z*ratio[2]};</highlight></codeline>
 <codeline lineno="777"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="778"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="779"><highlight class="normal"></highlight></codeline>
-<codeline lineno="780"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="781"><highlight class="normal"></highlight></codeline>
-<codeline lineno="782"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BL_INTVECT_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="781" refid="namespaceamrex_1aa86645e2e212f704798d51d75eafa950" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ratio)<sp/>noexcept</highlight></codeline>
+<codeline lineno="782"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(i&lt;0)<sp/>?<sp/>-<ref refid="complex-type_8h_1a3aa069ac3980707dae1e0530f50d59e4" kindref="member">std::abs</ref>(i+1)/ratio-1<sp/>:<sp/>i/ratio;</highlight></codeline>
+<codeline lineno="784"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="787" refid="namespaceamrex_1a3d82ec5f82ec132d2e9a5756b42b6dda" refkind="member"><highlight class="normal"><ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/><ref refid="classamrex_1_1IntVect_1a12d3e367640c1ed999ae4b05a5611e83" kindref="member">coarsen</ref><sp/>(<ref refid="structamrex_1_1Dim3" kindref="compound">Dim3</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>fine,<sp/><ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>ratio)<sp/>noexcept</highlight></codeline>
+<codeline lineno="788"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="789"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(AMREX_SPACEDIM<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.x,ratio[0]),<sp/>fine.y,<sp/>fine.z};</highlight></codeline>
+<codeline lineno="791"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(AMREX_SPACEDIM<sp/>==<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.x,ratio[0]),<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.y,<sp/>ratio[1]),<sp/>fine.z};</highlight></codeline>
+<codeline lineno="793"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.x,<sp/>ratio[0]),</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.y,<sp/>ratio[1]),</highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.z,<sp/>ratio[2])};</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="798"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="799"><highlight class="normal"></highlight></codeline>
+<codeline lineno="800"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="801"><highlight class="normal"></highlight></codeline>
+<codeline lineno="802"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*BL_INTVECT_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_IntVect.H"/>
   </compounddef>
