@@ -4,65 +4,65 @@
     <compoundname>AMReX_ParticleContainerI.H</compoundname>
     <includedby refid="AMReX__Particles_8H" local="yes">/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particles.H</includedby>
     <invincdepgraph>
-      <node id="58279">
+      <node id="59819">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_LoadBalanceKD.cpp</label>
         <link refid="AMReX__LoadBalanceKD_8cpp"/>
       </node>
-      <node id="58281">
+      <node id="59821">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborParticles.H</label>
         <link refid="AMReX__NeighborParticles_8H"/>
       </node>
-      <node id="58277">
+      <node id="59817">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrParticles.H</label>
         <link refid="AMReX__AmrParticles_8H"/>
       </node>
-      <node id="58280">
+      <node id="59820">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborList.H</label>
         <link refid="AMReX__NeighborList_8H"/>
       </node>
-      <node id="58275">
+      <node id="59815">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleContainerI.H</label>
         <link refid="AMReX_ParticleContainerI.H"/>
-        <childnode refid="58276" relation="include">
+        <childnode refid="59816" relation="include">
         </childnode>
       </node>
-      <node id="58282">
+      <node id="59822">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particle_mod_K.H</label>
         <link refid="AMReX__Particle__mod__K_8H"/>
-        <childnode refid="58276" relation="include">
+        <childnode refid="59816" relation="include">
         </childnode>
       </node>
-      <node id="58283">
+      <node id="59823">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_TracerParticles.H</label>
         <link refid="AMReX__TracerParticles_8H"/>
-        <childnode refid="58277" relation="include">
+        <childnode refid="59817" relation="include">
         </childnode>
-        <childnode refid="58284" relation="include">
+        <childnode refid="59824" relation="include">
         </childnode>
       </node>
-      <node id="58278">
+      <node id="59818">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_LoadBalanceKD.H</label>
         <link refid="AMReX__LoadBalanceKD_8H"/>
-        <childnode refid="58279" relation="include">
+        <childnode refid="59819" relation="include">
         </childnode>
       </node>
-      <node id="58276">
+      <node id="59816">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particles.H</label>
         <link refid="AMReX__Particles_8H"/>
-        <childnode refid="58277" relation="include">
+        <childnode refid="59817" relation="include">
         </childnode>
-        <childnode refid="58278" relation="include">
+        <childnode refid="59818" relation="include">
         </childnode>
-        <childnode refid="58280" relation="include">
+        <childnode refid="59820" relation="include">
         </childnode>
-        <childnode refid="58281" relation="include">
+        <childnode refid="59821" relation="include">
         </childnode>
-        <childnode refid="58282" relation="include">
+        <childnode refid="59822" relation="include">
         </childnode>
-        <childnode refid="58283" relation="include">
+        <childnode refid="59823" relation="include">
         </childnode>
       </node>
-      <node id="58284">
+      <node id="59824">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_TracerParticles.cpp</label>
         <link refid="AMReX__TracerParticles_8cpp"/>
       </node>
@@ -1178,7 +1178,7 @@
 <codeline lineno="1104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>lo_ptr<sp/><sp/><sp/><sp/><sp/>=<sp/>thrust::raw_pointer_cast(m_lo.data());</highlight></codeline>
 <codeline lineno="1105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>hi_ptr<sp/><sp/><sp/><sp/><sp/>=<sp/>thrust::raw_pointer_cast(m_hi.data());</highlight></codeline>
 <codeline lineno="1106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>output_ptr<sp/>=<sp/>thrust::raw_pointer_cast(m_output.data());</highlight></codeline>
-<codeline lineno="1107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab&lt;int&gt;</ref>*<sp/>mask_ptr<sp/>=<sp/>redistribute_mask_ptr-&gt;fabPtr(mfi);</highlight></codeline>
+<codeline lineno="1107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mask_arr<sp/><sp/><sp/>=<sp/>redistribute_mask_ptr-&gt;array(mfi);</highlight></codeline>
 <codeline lineno="1108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1Particle" kindref="compound">ParticleType</ref>*<sp/>p_ptr<sp/>=<sp/>&amp;(aos[0]);</highlight></codeline>
 <codeline lineno="1109"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
@@ -1198,7 +1198,7 @@
 <codeline lineno="1124"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iv<sp/>+=<sp/>domain.<ref refid="classamrex_1_1Box_1a04e076a4688ca383aeaccfcb0bceef60" kindref="member">smallEnd</ref>();</highlight></codeline>
 <codeline lineno="1126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_id<sp/>=<sp/>(*mask_ptr)(iv);</highlight></codeline>
+<codeline lineno="1127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_id<sp/>=<sp/>mask_arr(iv);</highlight></codeline>
 <codeline lineno="1128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grids_ptr[i]<sp/>=<sp/>grid_id;</highlight></codeline>
 <codeline lineno="1130"><highlight class="normal"></highlight></codeline>
@@ -1254,7 +1254,7 @@
 <codeline lineno="1180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thrust::transform(thrust::device,<sp/>aos().<ref refid="namespaceamrex_1a43103621a410a27f2e8b9607f4ae6f34" kindref="member">begin</ref>(),<sp/>aos().<ref refid="namespaceamrex_1a199ea36f687fd4271b73c72b56fd3279" kindref="member">end</ref>(),<sp/>m_grids_tmp.begin(),</highlight></codeline>
 <codeline lineno="1181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>functors::assignParticleGrid(geom.<ref refid="classamrex_1_1Geometry_1abb8b8662f077d9913f0af282f32ed415" kindref="member">data</ref>(),</highlight></codeline>
 <codeline lineno="1182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*redistribute_mask_ptr)[mfi].box(),</highlight></codeline>
-<codeline lineno="1183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>redistribute_mask_ptr-&gt;fabPtr(mfi)));</highlight></codeline>
+<codeline lineno="1183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>redistribute_mask_ptr-&gt;array(mfi)));</highlight></codeline>
 <codeline lineno="1184"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Partition<sp/>the<sp/>particle<sp/>data<sp/>so<sp/>that<sp/>particles<sp/>that<sp/>stay<sp/>come<sp/>first,</highlight><highlight class="normal"></highlight></codeline>
@@ -2494,7 +2494,7 @@
 <codeline lineno="2420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aos().<ref refid="namespaceamrex_1a43103621a410a27f2e8b9607f4ae6f34" kindref="member">begin</ref>(),<sp/>aos().<ref refid="namespaceamrex_1a43103621a410a27f2e8b9607f4ae6f34" kindref="member">begin</ref>()<sp/>+<sp/>np,<sp/>grid_indices.begin(),</highlight></codeline>
 <codeline lineno="2421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>functors::assignParticleGrid(geom.<ref refid="classamrex_1_1Geometry_1abb8b8662f077d9913f0af282f32ed415" kindref="member">data</ref>(),</highlight></codeline>
 <codeline lineno="2422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*redistribute_mask_ptr)[mfi].box(),</highlight></codeline>
-<codeline lineno="2423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>redistribute_mask_ptr-&gt;fabPtr(mfi)));</highlight></codeline>
+<codeline lineno="2423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>redistribute_mask_ptr-&gt;array(mfi)));</highlight></codeline>
 <codeline lineno="2424"><highlight class="normal"></highlight></codeline>
 <codeline lineno="2425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>thrust::count_if(grid_indices.begin(),</highlight></codeline>
 <codeline lineno="2426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grid_indices.end(),</highlight></codeline>

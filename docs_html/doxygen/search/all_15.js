@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ubound',['ubound',['../classamrex_1_1Box.html#a031934b6cad9ff387f032bffd6b0dfbb',1,'amrex::Box::ubound()'],['../namespaceamrex.html#aee1c8ddea8a977a982dbe39c4a9884a9',1,'amrex::ubound()']]],
+  ['ubound',['ubound',['../classamrex_1_1Box.html#a031934b6cad9ff387f032bffd6b0dfbb',1,'amrex::Box::ubound()'],['../namespaceamrex.html#a6ce6b4176121c2c23327903a8139af0c',1,'amrex::ubound(Array4&lt; T &gt; const &amp;a) noexcept'],['../namespaceamrex.html#aee1c8ddea8a977a982dbe39c4a9884a9',1,'amrex::ubound(Box const &amp;box) noexcept']]],
   ['unapplymetricterm',['unapplyMetricTerm',['../classamrex_1_1MLCellLinOp.html#ac54e10e50b8b0a19c1424d5a7c311003',1,'amrex::MLCellLinOp::unapplyMetricTerm()'],['../classamrex_1_1MLLinOp.html#a3493bb63b041a05c4f4f6de28df1b37e',1,'amrex::MLLinOp::unapplyMetricTerm()'],['../classamrex_1_1MLNodeLinOp.html#a700bdd6e43250739cc3f571b94b81688',1,'amrex::MLNodeLinOp::unapplyMetricTerm()']]],
   ['undef',['undef',['../classamrex_1_1CoordSys.html#afb633344fd17c5565ce2fff188806ebaa2debcd8f37986ae0e3c488f583234ccc',1,'amrex::CoordSys']]],
   ['undefined',['UNDEFINED',['../classamrex_1_1DistributionMapping.html#ad8e078b643635f0027eb797c2d54d3b8a6ad808286f21d2e4851a30703a30d063',1,'amrex::DistributionMapping::UNDEFINED()'],['../classBLProfStats.html#ababb4629f7a4f662fdd590b9e857f2f4ab3c2b60395f5d29de06295804afd6e42',1,'BLProfStats::UNDEFINED()'],['../namespaceamrex.html#abd2e3d292645433cefc947725585f87aa5e543256c480ac577d30f76f9120eb74',1,'amrex::undefined()']]],

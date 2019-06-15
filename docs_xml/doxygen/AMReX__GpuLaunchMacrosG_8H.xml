@@ -589,8 +589,8 @@
         <param><defname>block</defname></param>
         <initializer>{ \
         int amrex_i_ncells = box.numPts(); \
-        const auto amrex_i_lo  = <ref refid="namespaceamrex_1a38527c39e1b07777c6b7390f77db95e3" kindref="member">amrex::lbound</ref>(box); \
-        const auto amrex_i_len = <ref refid="namespaceamrex_1a346de71b0a8301172fc1cc6df227037a" kindref="member">amrex::length</ref>(box); \
+        const auto amrex_i_lo  = <ref refid="namespaceamrex_1a71600c8a528e0f1863154e4cf0183cbc" kindref="member">amrex::lbound</ref>(box); \
+        const auto amrex_i_len = <ref refid="namespaceamrex_1ab8f44b56e5ac2f53bcfe742891c1c79c" kindref="member">amrex::length</ref>(box); \
         const auto amrex_i_ec = amrex::Gpu::ExecutionConfig(amrex_i_ncells); \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \
@@ -655,8 +655,8 @@
         <param><defname>block</defname></param>
         <initializer>{ \
         int amrex_i_ncells = box.numPts(); \
-        const auto amrex_i_lo  = <ref refid="namespaceamrex_1a38527c39e1b07777c6b7390f77db95e3" kindref="member">amrex::lbound</ref>(box); \
-        const auto amrex_i_len = <ref refid="namespaceamrex_1a346de71b0a8301172fc1cc6df227037a" kindref="member">amrex::length</ref>(box); \
+        const auto amrex_i_lo  = <ref refid="namespaceamrex_1a71600c8a528e0f1863154e4cf0183cbc" kindref="member">amrex::lbound</ref>(box); \
+        const auto amrex_i_len = <ref refid="namespaceamrex_1ab8f44b56e5ac2f53bcfe742891c1c79c" kindref="member">amrex::length</ref>(box); \
         const auto amrex_i_ec = amrex::Gpu::ExecutionConfig(amrex_i_ncells); \
         <ref refid="namespaceamrex_1a8fd1cb48ab79898f1f480c55c433113a" kindref="member">amrex::launch_global</ref>&lt;&lt;&lt;amrex_i_ec.numBlocks, amrex_i_ec.numThreads, amrex_i_ec.sharedMem, amrex::Gpu::gpuStream()&gt;&gt;&gt;( \
         [=] <ref refid="AMReX__GpuQualifiers_8H_1a4e626ebf06898d71a9e0790877f1694f" kindref="member">AMREX_GPU_DEVICE</ref> () noexcept { \

@@ -103,7 +103,7 @@ var searchData=
   ['_7elscorebase',['~LSCoreBase',['../classamrex_1_1LSCoreBase.html#aba665f12e440d33638b089be84666a06',1,'amrex::LSCoreBase']]],
   ['_7elsfactory',['~LSFactory',['../classamrex_1_1LSFactory.html#ad13a040aa276a564826241c2df6206fe',1,'amrex::LSFactory']]],
   ['_7emacbndry',['~MacBndry',['../classamrex_1_1MacBndry.html#a02591b27ce31d10c67b00ed2c9281684',1,'amrex::MacBndry']]],
-  ['_7emask',['~Mask',['../classamrex_1_1Mask.html#a0b66debd0e296197e4a22a891a575e7d',1,'amrex::Mask']]],
+  ['_7emask',['~Mask',['../classamrex_1_1Mask.html#aeef7181e2e8e18b348ae7318eff3b402',1,'amrex::Mask']]],
   ['_7emccgsolver',['~MCCGSolver',['../classamrex_1_1MCCGSolver.html#a4c096b58139bcee0a597db9fe71d8655',1,'amrex::MCCGSolver']]],
   ['_7emcinterpbndrydata',['~MCInterpBndryData',['../classamrex_1_1MCInterpBndryData.html#aef0c538bd789ad042b3dc2d725f26f0d',1,'amrex::MCInterpBndryData']]],
   ['_7emclinop',['~MCLinOp',['../classamrex_1_1MCLinOp.html#af1ed3024751e3079c432cac6fdb83c81',1,'amrex::MCLinOp']]],
