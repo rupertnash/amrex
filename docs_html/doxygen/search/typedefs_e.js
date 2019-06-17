@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pairindex',['PairIndex',['../classamrex_1_1NeighborParticleContainer.html#ab169827a8824abb993c34e715e250f49',1,'amrex::NeighborParticleContainer']]],
-  ['particlecontainertype',['ParticleContainerType',['../classamrex_1_1ParticleContainer.html#a37ecb4d391a3355e67d6a4341c2a9bc4',1,'amrex::ParticleContainer']]],
+  ['particlecontainertype',['ParticleContainerType',['../classamrex_1_1NeighborParticleContainer.html#af2e8e332b50e495c32925b61b1a4b90d',1,'amrex::NeighborParticleContainer::ParticleContainerType()'],['../classamrex_1_1ParticleContainer.html#a37ecb4d391a3355e67d6a4341c2a9bc4',1,'amrex::ParticleContainer::ParticleContainerType()']]],
   ['particleinitdata',['ParticleInitData',['../classamrex_1_1ParticleContainer.html#a6edead171e873a9e37cfe2491511ba59',1,'amrex::ParticleContainer']]],
   ['particlelevel',['ParticleLevel',['../classamrex_1_1ParticleContainer.html#a2c82102263d5f301111f85c31af9bd8a',1,'amrex::ParticleContainer']]],
   ['particletileptr',['ParticleTilePtr',['../classamrex_1_1ParIterBase.html#ab4bf6c76b36a955439dc6acd771345dd',1,'amrex::ParIterBase']]],

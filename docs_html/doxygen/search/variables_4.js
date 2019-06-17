@@ -19,6 +19,7 @@ var searchData=
   ['eight',['eight',['../namespaceamrex__constants__module.html#a6d0e20a18c5f695168cf590f87a460a4',1,'amrex_constants_module']]],
   ['eighth',['eighth',['../namespaceamrex__constants__module.html#a4f8d71c1b1d316bbf6505f7a9511d24d',1,'amrex_constants_module']]],
   ['eleven',['eleven',['../namespaceamrex__constants__module.html#ad701c896075f8435c6d10def6629fe76',1,'amrex_constants_module']]],
+  ['enable_5finverse',['enable_inverse',['../classamrex_1_1NeighborParticleContainer.html#a253931bb13b740bcdf8da45fe68a4591',1,'amrex::NeighborParticleContainer']]],
   ['enabled',['enabled',['../classamrex_1_1InSituBridge.html#a479b95e65f876998b375cdbaba5ed658',1,'amrex::InSituBridge']]],
   ['end',['end',['../structamrex_1_1Array4.html#ae3e6ea18e90f4b382a90da961a93d8e9',1,'amrex::Array4']]],
   ['endindex',['endIndex',['../classamrex_1_1MFIter.html#a427faab13c7d1f9d72b476452df519e1',1,'amrex::MFIter']]],

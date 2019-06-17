@@ -91,6 +91,7 @@ var searchData=
   ['vector_3c_20std_3a_3aifstream_20_2a_20_3e',['Vector&lt; std::ifstream * &gt;',['../classamrex_1_1Vector.html',1,'amrex']]],
   ['vector_3c_20std_3a_3alist_3c_20blprofstats_3a_3atimerange_20_3e_20_3e',['Vector&lt; std::list&lt; BLProfStats::TimeRange &gt; &gt;',['../classamrex_1_1Vector.html',1,'amrex']]],
   ['vector_3c_20std_3a_3amap_3c_20int_2c_20amrex_3a_3aintvect_20_3e_20_3e',['Vector&lt; std::map&lt; int, amrex::IntVect &gt; &gt;',['../classamrex_1_1Vector.html',1,'amrex']]],
+  ['vector_3c_20std_3a_3amap_3c_20pairindex_2c_20amrex_3a_3aamrex_3a_3avector_3c_20amrex_3a_3aneighborparticlecontainer_3a_3ainversecopytag_20_3e_20_3e_20_3e',['Vector&lt; std::map&lt; PairIndex, amrex::amrex::Vector&lt; amrex::NeighborParticleContainer::InverseCopyTag &gt; &gt; &gt;',['../classamrex_1_1Vector.html',1,'amrex']]],
   ['vector_3c_20std_3a_3amap_3c_20pairindex_2c_20amrex_3a_3avector_3c_20amrex_3a_3avector_3c_20amrex_3a_3aneighborparticlecontainer_3a_3aneighborcopytag_20_3e_20_3e_20_3e_20_3e',['Vector&lt; std::map&lt; PairIndex, amrex::Vector&lt; amrex::Vector&lt; amrex::NeighborParticleContainer::NeighborCopyTag &gt; &gt; &gt; &gt;',['../classamrex_1_1Vector.html',1,'amrex']]],
   ['vector_3c_20std_3a_3amap_3c_20pairindex_2c_20int_20_3e_20_3e',['Vector&lt; std::map&lt; PairIndex, int &gt; &gt;',['../classamrex_1_1Vector.html',1,'amrex']]],
   ['vector_3c_20std_3a_3amap_3c_20pairindex_2c_20intvector_20_3e_20_3e',['Vector&lt; std::map&lt; PairIndex, IntVector &gt; &gt;',['../classamrex_1_1Vector.html',1,'amrex']]],
