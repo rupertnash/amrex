@@ -107,17 +107,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#box">Box</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#dim3-and-xdim3">Dim3 and XDim3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#realbox-and-geometry">RealBox and Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#boxarray">BoxArray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributionmapping">DistributionMapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#basefab-farraybox-and-iarraybox">BaseFab, FArrayBox and IArrayBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basefab-farraybox-iarraybox-and-array4">BaseFab, FArrayBox, IArrayBox, and Array4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fabarray-multifab-and-imultifab">FabArray, MultiFab and iMultiFab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mfiter-and-tiling">MFIter and Tiling</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mfiter-without-tiling">MFIter without Tiling</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mfiter-with-tiling">MFIter with Tiling</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#fortran-c-and-c-kernels">Fortran, C and C++ Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fortran-and-c-kernels">Fortran and C++ Kernels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ghost-cells">Ghost Cells</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#memory-allocation">Memory Allocation</a></li>
@@ -699,6 +700,35 @@ following examples.</p>
 </div>
 </div>
 </div>
+<div class="section" id="dim3-and-xdim3">
+<span id="sec-basics-dim3"></span><h1>Dim3 and XDim3<a class="headerlink" href="#dim3-and-xdim3" title="Permalink to this headline">¶</a></h1>
+<p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Dim3</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">XDim3</span></span></code> are plain structs with three fields,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">Dim3</span> <span class="p">{</span> <span class="kt">int</span> <span class="n">x</span><span class="p">;</span> <span class="kt">int</span> <span class="n">y</span><span class="p">;</span> <span class="kt">int</span> <span class="n">z</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">struct</span> <span class="n">XDim3</span> <span class="p">{</span> <span class="n">Real</span> <span class="n">x</span><span class="p">;</span> <span class="n">Real</span> <span class="n">y</span><span class="p">;</span> <span class="n">Real</span> <span class="n">z</span><span class="p">;</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>One can covert an <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">IntVect</span></span></code> to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Dim3</span></span></code>,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">IntVect</span> <span class="nf">iv</span><span class="p">(...);</span>
+<span class="n">Dim3</span> <span class="n">d3</span> <span class="o">=</span> <span class="n">iv</span><span class="p">.</span><span class="n">dim3</span><span class="p">();</span>
+</pre></div>
+</div>
+<p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Dim3</span></span></code> always has three fields even when AMReX is built for 1D or
+2D.  For the example above, the extra fields are set to zero.  Given a
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code>, one can get its lower and upper bounds and use them to
+write dimension agnostic loops.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Box</span> <span class="nf">bx</span><span class="p">(...);</span>
+<span class="n">Dim3</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">lbound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+<span class="n">Dim3</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">ubound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+<span class="k">for</span>     <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span>   <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>One can also call function <code class="docutils literal notranslate"><span class="pre">Dim3</span> <span class="pre">length(Box</span> <span class="pre">const&amp;)</span></code> to return the length of a Box.</p>
+</div>
 <div class="section" id="realbox-and-geometry">
 <span id="sec-basics-geom"></span><h1>RealBox and Geometry<a class="headerlink" href="#realbox-and-geometry" title="Permalink to this headline">¶</a></h1>
 <p>A <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">RealBox</span></span></code> stores the physical location in floating-point numbers of the
@@ -709,24 +739,27 @@ be constructed with</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">explicit</span> <span class="nf">Geometry</span> <span class="p">(</span><span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span>     <span class="n">dom</span><span class="p">,</span>
                    <span class="k">const</span> <span class="n">RealBox</span><span class="o">*</span> <span class="n">rb</span>     <span class="o">=</span> <span class="k">nullptr</span><span class="p">,</span>
                    <span class="kt">int</span>            <span class="n">coord</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-                   <span class="kt">int</span><span class="o">*</span>           <span class="n">is_per</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">);</span>
+                   <span class="kt">int</span><span class="o">*</span>           <span class="n">is_per</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="k">noexcept</span><span class="p">;</span>
+
+<span class="n">Geometry</span> <span class="p">(</span><span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">dom</span><span class="p">,</span> <span class="k">const</span> <span class="n">RealBox</span><span class="o">&amp;</span> <span class="n">rb</span><span class="p">,</span> <span class="kt">int</span> <span class="n">coord</span><span class="p">,</span>
+          <span class="n">Array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">AMREX_SPACEDIM</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">is_per</span><span class="p">)</span> <span class="k">noexcept</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Here the constructor takes a cell-centered <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> specifying the indexing
-space domain, an optional argument of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">RealBox</span></span></code> pointer specifying the
-physical domain, an optional <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span></code> specifying coordinate system type, and
-an optional <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> specifying periodicity. If a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">RealBox</span></span></code> is not
-given, AMReX will construct one based on <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> parameters,
+<p>Here the constructors take a cell-centered <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> specifying the indexing
+space domain, a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">RealBox</span></span></code> specifying the
+physical domain, an <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span></code> specifying coordinate system type, and
+an <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span></code> pointer or array specifying periodicity. If a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">RealBox</span></span></code> is not
+given in the first constructor, AMReX will construct one based on <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> parameters,
 <code class="docutils literal notranslate"><span class="pre">geometry.prob_lo</span></code> and <code class="docutils literal notranslate"><span class="pre">geometry.prob_hi</span></code>, where each of the parameter is
 an array of <code class="docutils literal notranslate"><span class="pre">AMREX_SPACEDIM</span></code> real numbers. It’s a runtime error if this
-fails. The optional argument for coordinate system is an integer type with
+fails. The argument for coordinate system is an integer type with
 valid values being 0 (Cartesian), or 1 (cylindrical), or 2 (spherical). If it
-is invalid as in the case of the default argument value, AMReX will query the
+is invalid as in the case of the default argument value of the first constructor, AMReX will query the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> database for <code class="docutils literal notranslate"><span class="pre">geometry.coord_sys</span></code> and use it if one is
 found. If it cannot find the parameter, the coordinate system is set to 0
 (i.e., Cartesian coordinates). The <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Geometry</span></span></code> class has the concept of
-periodicity.  An optional argument can be passed specifying periodicity in each
-dimension. If it is not given, the domain is assumed to be non-periodic unless
+periodicity.  An argument can be passed specifying periodicity in each
+dimension. If it is not given in the first constructor, the domain is assumed to be non-periodic unless
 there is the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code> integer array parameter <code class="docutils literal notranslate"><span class="pre">geometry.is_periodic</span></code>
 with 0 denoting non-periodic and 1 denoting periodic. Below is an example of
 defining a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Geometry</span></span></code> for a periodic rectangular domain of
@@ -749,7 +782,7 @@ cells in each direction.</p>
 <span class="n">Array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">AMREX_SPACEDIM</span><span class="o">&gt;</span> <span class="n">is_periodic</span> <span class="p">{</span><span class="n">AMREX_D_DECL</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)};</span>
 
 <span class="c1">// This defines a Geometry object</span>
-<span class="n">Geometry</span> <span class="nf">geom</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">real_box</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">is_periodic</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
+<span class="n">Geometry</span> <span class="nf">geom</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">real_box</span><span class="p">,</span> <span class="n">coord</span><span class="p">,</span> <span class="n">is_periodic</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>A <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Geometry</span></span></code> object can return various information of the physical domain
@@ -792,7 +825,7 @@ the Boxes via domain decomposition. In the example above, a 4-process run may
 divide the work and each process owns say 2 Boxes (see section
 on <a class="reference internal" href="#sec-basics-dm"><span class="std std-ref">DistributionMapping</span></a>). Each process can then allocate memory for the
 floating point data on the Boxes it owns (see sections
-on <a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a> &amp; <a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox and IArrayBox</span></a>).</p>
+on <a class="reference internal" href="#sec-basics-multifab"><span class="std std-ref">FabArray, MultiFab and iMultiFab</span></a> &amp; <a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox, IArrayBox, and Array4</span></a>).</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> has an indexing type, just like <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code>. Each Box in a
 BoxArray has the same type as the BoxArray itself. In the following example, we
 show how one can convert BoxArray to a different type.</p>
@@ -882,8 +915,8 @@ mapping of grids to processes.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="basefab-farraybox-and-iarraybox">
-<span id="sec-basics-fab"></span><h1>BaseFab, FArrayBox and IArrayBox<a class="headerlink" href="#basefab-farraybox-and-iarraybox" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basefab-farraybox-iarraybox-and-array4">
+<span id="sec-basics-fab"></span><h1>BaseFab, FArrayBox, IArrayBox, and Array4<a class="headerlink" href="#basefab-farraybox-iarraybox-and-array4" title="Permalink to this headline">¶</a></h1>
 <p>AMReX is a block-structured AMR framework. Although AMR introduces irregularity
 to the data and algorithms, there is regularity at the block/Box level because
 each is still logically rectangular, and the data structure at the Box level is
@@ -928,7 +961,7 @@ call</p>
 </div>
 <p>The typical usage of the returned pointer is then to pass it to a Fortran or C
 function that works on the array data (see the section on
-<a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran, C and C++ Kernels</span></a>).  <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> has several functions that set the
+<a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran and C++ Kernels</span></a>).  <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> has several functions that set the
 array data to a constant value. Two examples are as follows.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setVal</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">);</span>        <span class="c1">// Set all data to x</span>
 <span class="c1">// Set the sub-region specified by bx to value x starting from component</span>
@@ -970,22 +1003,45 @@ FArrayBox.</p>
 <span class="n">fab2</span><span class="p">.</span><span class="n">saxpy</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">fab1</span><span class="p">);</span> <span class="c1">// For both components, fab2 &lt;- a * fab1 + fab2</span>
 </pre></div>
 </div>
-<p>For more complicated expressions that are not supported, one can write Fortran or C
-functions for those (see the section on <a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran, C and C++ Kernels</span></a>).  Note that
-BaseFab does provide operators for accessing the data directly in C++. For
-example, the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">saxpy</span></span></code> example above can be done with</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Iterate over all components</span>
-<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">icomp</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">icomp</span> <span class="o">&lt;</span> <span class="n">fab1</span><span class="p">.</span><span class="n">nComp</span><span class="p">();</span> <span class="o">++</span><span class="n">icomp</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Iterate over all cells in Box</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">BoxIterator</span> <span class="n">bit</span><span class="p">(</span><span class="n">fab1</span><span class="p">.</span><span class="n">box</span><span class="p">());</span> <span class="n">bit</span><span class="p">.</span><span class="n">ok</span><span class="p">();</span> <span class="o">++</span><span class="n">bit</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// bit() returns IntVect</span>
-        <span class="n">fab2</span><span class="p">(</span><span class="n">bit</span><span class="p">(),</span><span class="n">icomp</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">fab1</span><span class="p">(</span><span class="n">bit</span><span class="p">(),</span><span class="n">icomp</span><span class="p">)</span> <span class="o">+</span> <span class="n">fab2</span><span class="p">(</span><span class="n">bit</span><span class="p">(),</span><span class="n">icomp</span><span class="p">);</span>
+<p id="sec-basics-array4">For more complicated expressions that are not supported, one can write
+Fortran or C/C++ functions for those (see the section
+on <a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran and C++ Kernels</span></a>).  In C++, one can use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span></code>,
+which is a class template for accessing <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> data in a more
+array like manner using <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">operator</span></span><span class="punctuation"><span class="pre">()</span></span></code>.  Below is an example of
+using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">FArrayBox</span> <span class="nf">afab</span><span class="p">(...),</span> <span class="n">bfab</span><span class="p">(...);</span>
+<span class="n">IArrayBox</span> <span class="nf">ifab</span><span class="p">(...);</span>
+<span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">afab</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
+<span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span> <span class="k">const</span><span class="o">&gt;</span> <span class="k">const</span> <span class="n">b</span> <span class="o">=</span> <span class="n">bfab</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
+<span class="n">Array4</span><span class="o">&lt;</span><span class="kt">int</span> <span class="k">const</span><span class="o">&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">ifab</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
+<span class="n">Dim3</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">lbound</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">Dim3</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">ubound</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">nc</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">nComp</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">nc</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span>     <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span>   <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">*=</span> <span class="mf">2.0</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">));</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
     <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>But this approach is generally not recommended for performance reasons.
-However, it can be handy for debugging.</p>
+<p>Note that <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">operator</span></span><span class="punctuation"><span class="pre">()</span></span></code> of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span></code> takes either three or
+four arguments.  The optional fourth argument has a default value of
+zero.  The two <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">const</span></span></code>s in <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span><span class="operator"><span class="pre">&lt;</span></span><span class="name"><span class="pre">Real</span></span> <span class="keyword"><span class="pre">const</span></span><span class="operator"><span class="pre">&gt;</span></span> <span class="keyword"><span class="pre">const</span></span><span class="operator"><span class="pre">&amp;</span></span></code>
+have different meaning.  The first <code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">const</span></span></code> inside <code class="code cpp c++ docutils literal notranslate"><span class="operator"><span class="pre">&lt;&gt;</span></span></code> means
+the data accessed via <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span></code> is read-only, whereas the second
+<code class="code cpp c++ docutils literal notranslate"><span class="keyword"><span class="pre">const</span></span></code> means the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span></code> object itself cannot be modified
+to point to other data.  In the example above, neither <code class="docutils literal notranslate"><span class="pre">m(i,j,k)</span> <span class="pre">=</span>
+<span class="pre">0</span></code> nor <code class="docutils literal notranslate"><span class="pre">b(i,j,k)</span> <span class="pre">=</span> <span class="pre">0.0</span></code> is allowed.  However one is allowed to do
+<code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">ifab2.array()</span></code> to assign <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">m</span></span></code> again, but not to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">b</span></span></code>.
+The behavior is in some sense similar to <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">const</span> <span class="pre">*</span> <span class="pre">const</span> <span class="pre">p</span></code>.</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> and its derived classes are containers for data on <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code>.
 Recall that <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> has various types (see the section on <a class="reference internal" href="#sec-basics-box"><span class="std std-ref">Box, IntVect and IndexType</span></a>).
 The examples in this section so far use the default cell based type.  However,
@@ -1017,7 +1073,12 @@ However, it is not possible to slice in the real space (i.e., the first
 <code class="docutils literal notranslate"><span class="pre">AMREX_SPACEDIM</span></code> dimensions).  Note that no new memory is allocated in
 constructing the alias and the alias contains a non-owning pointer. It should
 be emphasized that the alias will contain a dangling pointer after the original
-<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> reaches its end of life.</p>
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> reaches its end of life.  One can also construct an
+alias <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BaseFab</span></span></code> given an <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span></code>,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span> <span class="n">a</span> <span class="o">=</span> <span class="n">orig_fab</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
+<span class="n">FArrayBox</span> <span class="nf">alias_fab</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fabarray-multifab-and-imultifab">
 <span id="sec-basics-multifab"></span><h1>FabArray, MultiFab and iMultiFab<a class="headerlink" href="#fabarray-multifab-and-imultifab" title="Permalink to this headline">¶</a></h1>
@@ -1057,7 +1118,7 @@ ways to define a MultiFab. For example,</p>
 </div>
 <p>Here we define a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> with 4 components and 1 ghost cell. A MultiFab
 contains a number of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code>es (see the section
-on <a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox and IArrayBox</span></a>) defined on Boxes grown by the number of ghost cells
+on <a class="reference internal" href="#sec-basics-fab"><span class="std std-ref">BaseFab, FArrayBox, IArrayBox, and Array4</span></a>) defined on Boxes grown by the number of ghost cells
 (1 in this example). That is the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> is not
 exactly the same as in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code>.  If the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code> has a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span><span class="punctuation"><span class="pre">{(</span></span><span class="literal number integer"><span class="pre">7</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">7</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">7</span></span><span class="punctuation"><span class="pre">)</span></span> <span class="punctuation"><span class="pre">(</span></span><span class="literal number integer"><span class="pre">15</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">15</span></span><span class="punctuation"><span class="pre">,</span></span><span class="literal number integer"><span class="pre">15</span></span><span class="punctuation"><span class="pre">)}</span></span></code>, the one used for constructing <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code>
@@ -1240,115 +1301,85 @@ together. In this section, we will show how you can operate on the
     <span class="c1">// A reference to the current FArrayBox in this loop iteration.</span>
     <span class="n">FArrayBox</span><span class="o">&amp;</span> <span class="n">fab</span> <span class="o">=</span> <span class="n">mf</span><span class="p">[</span><span class="n">mfi</span><span class="p">];</span>
 
-    <span class="c1">// Pointer to the floating point data of this FArrayBox.</span>
-    <span class="n">Real</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="n">fab</span><span class="p">.</span><span class="n">dataPtr</span><span class="p">();</span>
+    <span class="c1">// Obtain Array4 from FArrayBox.  We can also do</span>
+    <span class="c1">//     Array4&lt;Real&gt; const&amp; a = mf.array(mfi);</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">fab</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
 
-    <span class="c1">// This is the Box on which the FArrayBox is defined.</span>
-    <span class="c1">// Note that &quot;abox&quot; includes ghost cells (if there are any),</span>
-    <span class="c1">// and is thus larger than or equal to &quot;box&quot;.</span>
-    <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">abox</span> <span class="o">=</span> <span class="n">fab</span><span class="p">.</span><span class="n">box</span><span class="p">();</span>
-
-    <span class="c1">// We can now pass the information to a function that does</span>
-    <span class="c1">// work on the region (specified by box) of the data pointed to</span>
-    <span class="c1">// by Real* a.  The data should be viewed as multidimensional</span>
-    <span class="c1">// with bounds specified by abox.</span>
-    <span class="c1">// Function f1 has the signature of</span>
-    <span class="c1">// void f1(const int*, const int*, Real*, const int*, const int*);</span>
-    <span class="n">f1</span><span class="p">(</span><span class="n">box</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">box</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span> <span class="n">a</span><span class="p">,</span> <span class="n">abox</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">abox</span><span class="p">.</span><span class="n">hiVect</span><span class="p">());</span>
+    <span class="c1">// Call function f1 to work on the region specified by box.</span>
+    <span class="c1">// Note that the whole region of the Fab includes ghost</span>
+    <span class="c1">// cells (if there are any), and is thus larger than or</span>
+    <span class="c1">// equal to &quot;box&quot;.</span>
+    <span class="n">f1</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Here function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f1</span></span></code> is usually a Fortran subroutine with ISO C binding
-interface like below,</p>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">f1</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">alo</span><span class="p">,</span> <span class="n">ahi</span><span class="p">)</span> <span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-  <span class="k">use </span><span class="n">amrex_fort_module</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">amrex_real</span>
-  <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">hi</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">alo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">ahi</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-  <span class="kt">real</span><span class="p">(</span><span class="n">amrex_real</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="kd">::</span><span class="n">a</span><span class="p">(</span><span class="n">alo</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span><span class="n">ahi</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">alo</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span><span class="n">ahi</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">alo</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span><span class="n">ahi</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span>
-  <span class="k">do     </span><span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">hi</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="k">do   </span><span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">hi</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-      <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">hi</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="p">...</span>
-      <span class="k">end do</span>
-<span class="k">    end do</span>
-<span class="k">  end do</span>
-<span class="k">end subroutine </span><span class="n">f1</span>
+<p>Here function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f1</span></span></code> might be something like below,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">f1</span> <span class="p">(</span><span class="n">Box</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">bx</span><span class="p">,</span> <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">const</span> <span class="k">auto</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">lbound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+   <span class="k">const</span> <span class="k">auto</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">ubound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+   <span class="k">for</span>     <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">for</span>   <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="p">...</span>
+       <span class="p">}</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>Here <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_fort_module</span></span></code> is a Fortran module in AMReX and
-<code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_real</span></span></code> is a Fortran kind parameter that matches
-<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">Real</span></span></code> in C++. In this example, we assumed the spatial dimension is
-3. In 2D, the function interface is different. In the section on
-<a class="reference internal" href="#sec-basics-fortran"><span class="std std-ref">Fortran, C and C++ Kernels</span></a>, we will present a dimension-agnostic approach
-using macros provided by AMReX.</p>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> only loops over grids owned by this process. For example, suppose
 there are 5 Boxes in total and processes 0 and 1 own 2 and 3 Boxes,
 respectively. That is the MultiFab on process 0 has 2 FArrayBoxes, whereas
 there are 3 FArrayBoxes on process 1. Thus the numbers of iterations of MFIter
 are 2 and 3 on processes 0 and 1, respectively.</p>
-<p>In the example above, <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> is assumed to have a single component. If
-it has multiple components, we can call <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="name"><span class="pre">nc</span></span> <span class="operator"><span class="pre">=</span></span> <span class="name"><span class="pre">mf</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">nComp</span></span><span class="punctuation"><span class="pre">()</span></span></code> to get the
-number of components and pass <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">nc</span></span></code> to the kernel function.</p>
+<p>In the example above, <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> is assumed to have a single
+component. If it has multiple components, we can call <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">nc</span> <span class="pre">=</span>
+<span class="pre">mf.nComp()</span></code> or <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">nc</span> <span class="pre">=</span> <span class="pre">a.nComp()</span></code> to get the number of components.</p>
 <p>There is only one <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> in the example above. Below is an example of
 working with multiple MultiFabs. Note that these two MultiFabs are not
 necessarily built on the same <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BoxArray</span></span></code>.  But they must have the same
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">DistributionMapping</span></span></code>, and their BoxArrays are typically related (e.g.,
 they are different due to index types).</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// U and F are MultiFabs</span>
-<span class="kt">int</span> <span class="n">ncU</span> <span class="o">=</span> <span class="n">U</span><span class="p">.</span><span class="n">nComp</span><span class="p">();</span>   <span class="c1">// number of components</span>
-<span class="kt">int</span> <span class="n">ncF</span> <span class="o">=</span> <span class="n">F</span><span class="p">.</span><span class="n">nComp</span><span class="p">();</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">MFIter</span> <span class="n">mfi</span><span class="p">(</span><span class="n">F</span><span class="p">);</span> <span class="n">mfi</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span> <span class="o">++</span><span class="n">mfi</span><span class="p">)</span> <span class="c1">// Loop over grids</span>
 <span class="p">{</span>
     <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">box</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">validbox</span><span class="p">();</span>
 
-    <span class="k">const</span> <span class="n">FArrayBox</span><span class="o">&amp;</span> <span class="n">ufab</span> <span class="o">=</span> <span class="n">U</span><span class="p">[</span><span class="n">mfi</span><span class="p">];</span>
-    <span class="n">FArrayBox</span><span class="o">&amp;</span>       <span class="n">ffab</span> <span class="o">=</span> <span class="n">F</span><span class="p">[</span><span class="n">mfi</span><span class="p">];</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span> <span class="k">const</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">u</span> <span class="o">=</span> <span class="n">U</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">mfi</span><span class="p">);</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span>      <span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">F</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">mfi</span><span class="p">);</span>
 
-    <span class="n">Real</span><span class="o">*</span> <span class="n">up</span> <span class="o">=</span> <span class="n">ufab</span><span class="p">.</span><span class="n">dataPtr</span><span class="p">();</span>
-    <span class="n">Real</span><span class="o">*</span> <span class="n">fp</span> <span class="o">=</span> <span class="n">ufab</span><span class="p">.</span><span class="n">dataPtr</span><span class="p">();</span>
-
-    <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">ubox</span> <span class="o">=</span> <span class="n">ufab</span><span class="p">.</span><span class="n">box</span><span class="p">();</span>
-    <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">fbox</span> <span class="o">=</span> <span class="n">ffab</span><span class="p">.</span><span class="n">box</span><span class="p">();</span>
-
-    <span class="c1">// Function f2 has the signature of</span>
-    <span class="c1">// void f2(const int*, const int*,</span>
-    <span class="c1">//         const Real*, const int*, const int*, const int*</span>
-    <span class="c1">//               Real*, const int*, const int*, const int*);</span>
-    <span class="c1">// This will compute f using u as inputs.</span>
-    <span class="n">f2</span><span class="p">(</span><span class="n">box</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">box</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span>
-       <span class="n">up</span><span class="p">,</span> <span class="n">ubox</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">ubox</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">ncU</span><span class="p">,</span>
-       <span class="n">fp</span><span class="p">,</span> <span class="n">fbox</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">fbox</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">ncF</span><span class="p">);</span>
+    <span class="n">f2</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Here again function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f2</span></span></code> is usually a Fortran subroutine with ISO C
-binding interface like below,</p>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">f2</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">ulo</span><span class="p">,</span> <span class="n">uhi</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">flo</span><span class="p">,</span> <span class="n">fhi</span><span class="p">,</span> <span class="n">nf</span><span class="p">)</span> <span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-  <span class="k">use </span><span class="n">amrex_fort_module</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">amrex_real</span>
-  <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">hi</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">ulo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">uhi</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">nu</span><span class="p">,</span><span class="n">flo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">fhi</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">nf</span>
-  <span class="kt">real</span><span class="p">(</span><span class="n">amrex_real</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span>   <span class="p">)</span><span class="kd">::</span><span class="n">u</span><span class="p">(</span><span class="n">ulo</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span><span class="n">uhi</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">ulo</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span><span class="n">uhi</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">ulo</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span><span class="n">uhi</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">nu</span><span class="p">)</span>
-  <span class="kt">real</span><span class="p">(</span><span class="n">amrex_real</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="kd">::</span><span class="n">f</span><span class="p">(</span><span class="n">flo</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span><span class="n">fhi</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">flo</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span><span class="n">fhi</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">flo</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span><span class="n">fhi</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">nf</span><span class="p">)</span>
-  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span>
-  <span class="k">do </span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nf</span>
-    <span class="k">do     </span><span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">hi</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-      <span class="k">do   </span><span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">hi</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">hi</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-          <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="p">...</span> <span class="n">u</span><span class="p">(...)</span> <span class="p">...</span>
-        <span class="k">end do</span>
-<span class="k">      end do</span>
-<span class="k">    end do</span>
-<span class="k">  end do</span>
-<span class="k">end subroutine </span><span class="n">f2</span>
+<p>Here function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f2</span></span></code> might be something like below,</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>void f1 (Box const&amp; bx, Array4&lt;Real const&gt; const&amp; u,
+         Array4&lt;Real&gt; const&amp; f)
+{
+   const auto lo = lbound(bx);
+   const auto hi = ubound(bx);
+   const int nf = f.nComp();
+   for (int n = 0; n &lt; nf; ++n) {
+     for     (int k = lo.z; k &lt;= hi.z; ++k) {
+       for   (int j = lo.y; j &lt;= hi.y; ++j) {
+         for (int i = lo.x; i &lt;= hi.x; ++i) {
+           f(i,j,k,n) = ... u(i,j,k,n) ...
+         }
+       }
+     }
+   }
+}
 </pre></div>
 </div>
 </div>
 <div class="section" id="mfiter-with-tiling">
 <span id="sec-basics-mfiter-tiling"></span><h2>MFIter with Tiling<a class="headerlink" href="#mfiter-with-tiling" title="Permalink to this headline">¶</a></h2>
 <p>Tiling, also known as cache blocking, is a well known loop transformation
-technique for improving data locality. This is often done by transforming the
+technique for improving data locality.  This is often done by transforming the
 loops into tiling loops that iterate over tiles and element loops that iterate
 over the data elements within a tile. For example, the original loops might
-look like</p>
+look like this in Fortran</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="n">kmin</span><span class="p">,</span> <span class="n">kmax</span>
   <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">jmin</span><span class="p">,</span> <span class="n">jmax</span>
     <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">imin</span><span class="p">,</span> <span class="n">imax</span>
@@ -1398,10 +1429,8 @@ for the loop iteration.</p></li>
     <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">box</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">tilebox</span><span class="p">();</span>
 
     <span class="n">FArrayBox</span><span class="o">&amp;</span> <span class="n">fab</span> <span class="o">=</span> <span class="n">mf</span><span class="p">[</span><span class="n">mfi</span><span class="p">];</span>
-    <span class="n">Real</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="n">fab</span><span class="p">.</span><span class="n">dataPtr</span><span class="p">();</span>
-    <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">abox</span> <span class="o">=</span> <span class="n">fab</span><span class="p">.</span><span class="n">box</span><span class="p">();</span>
-
-    <span class="n">f1</span><span class="p">(</span><span class="n">box</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">box</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span> <span class="n">a</span><span class="p">,</span> <span class="n">abox</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">abox</span><span class="p">.</span><span class="n">hiVect</span><span class="p">());</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">fab</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
+    <span class="n">f1</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1413,18 +1442,9 @@ also requires only two minor changes.</p>
     <span class="c1">//                   tilebox() instead of validbox()</span>
     <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">box</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">tilebox</span><span class="p">();</span>
 
-    <span class="k">const</span> <span class="n">FArrayBox</span><span class="o">&amp;</span> <span class="n">ufab</span> <span class="o">=</span> <span class="n">U</span><span class="p">[</span><span class="n">mfi</span><span class="p">];</span>
-    <span class="n">FArrayBox</span><span class="o">&amp;</span>       <span class="n">ffab</span> <span class="o">=</span> <span class="n">F</span><span class="p">[</span><span class="n">mfi</span><span class="p">];</span>
-
-    <span class="n">Real</span><span class="o">*</span> <span class="n">up</span> <span class="o">=</span> <span class="n">ufab</span><span class="p">.</span><span class="n">dataPtr</span><span class="p">();</span>
-    <span class="n">Real</span><span class="o">*</span> <span class="n">fp</span> <span class="o">=</span> <span class="n">ufab</span><span class="p">.</span><span class="n">dataPtr</span><span class="p">();</span>
-
-    <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">ubox</span> <span class="o">=</span> <span class="n">ufab</span><span class="p">.</span><span class="n">box</span><span class="p">();</span>
-    <span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">fbox</span> <span class="o">=</span> <span class="n">ffab</span><span class="p">.</span><span class="n">box</span><span class="p">();</span>
-
-    <span class="n">f2</span><span class="p">(</span><span class="n">box</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">box</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span>
-       <span class="n">up</span><span class="p">,</span> <span class="n">ubox</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">ubox</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">ncU</span><span class="p">,</span>
-       <span class="n">fp</span><span class="p">,</span> <span class="n">fbox</span><span class="p">.</span><span class="n">loVect</span><span class="p">(),</span> <span class="n">fbox</span><span class="p">.</span><span class="n">hiVect</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">ncF</span><span class="p">);</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span> <span class="k">const</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">u</span> <span class="o">=</span> <span class="n">U</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">mfi</span><span class="p">);</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span>      <span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">F</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">mfi</span><span class="p">);</span>
+    <span class="n">f2</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1624,10 +1644,12 @@ value. There are three ways of using these functions.</p>
 </pre></div>
 </div>
 <p>But <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span><span class="operator"><span class="pre">&amp;</span></span> <span class="name"><span class="pre">bx</span></span> <span class="operator"><span class="pre">=</span></span> <span class="name"><span class="pre">mfi</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">validbox</span></span><span class="punctuation"><span class="pre">()</span></span></code> is not legal and will not compile.</p>
+<p>Finally it should be emphasized that tiling should not be used when
+running on GPUs because of kernel launch overhead.</p>
 </div>
 </div>
-<div class="section" id="fortran-c-and-c-kernels">
-<span id="sec-basics-fortran"></span><h1>Fortran, C and C++ Kernels<a class="headerlink" href="#fortran-c-and-c-kernels" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fortran-and-c-kernels">
+<span id="sec-basics-fortran"></span><h1>Fortran and C++ Kernels<a class="headerlink" href="#fortran-and-c-kernels" title="Permalink to this headline">¶</a></h1>
 <p>In the section on <a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>, we have shown that a typical
 pattern for working with MultiFabs is to use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> to iterate over the
 data. In each iteration, a kernel function is called to work on the data and
@@ -1635,7 +1657,8 @@ the work region is specified by a <code class="code cpp c++ docutils literal not
 region is a tile. The tiling is logical in the sense that there is no data
 layout transformation. The kernel function still gets the whole arrays in
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code>es, even though it is supposed to work on a tile region of the
-arrays.  Fortran is often used for writing these kernels because of its
+arrays.  We have shown examples of writing kernels in C++ in the
+previous section.  Fortran is also often used for writing these kernels because of its
 native multi-dimensional array support.  To C++, these kernel functions are
 C functions, whose function signatures are typically declared in a header file
 named <code class="docutils literal notranslate"><span class="pre">*_f.H</span></code> or <code class="docutils literal notranslate"><span class="pre">*_F.H</span></code>. We recommend the users to follow this convention.
@@ -1654,11 +1677,7 @@ Examples of these function declarations are as follows.</p>
 <span class="cp">#endif</span>
 </pre></div>
 </div>
-<p>One can write the functions in C and should include the header containing the
-function declarations in the C source code to ensure type safety. However, we
-typically write these kernel functions in Fortran because of the native
-multi-dimensional array support by Fortran. As we have seen in the section on
-<a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>, these Fortran functions take C pointers and view them
+<p>These Fortran functions take C pointers and view them
 as multi-dimensional arrays of the shape specified by the additional integer
 arguments.  Note that Fortran takes arguments by reference unless the
 <code class="code fortran docutils literal notranslate"><span class="keyword"><span class="pre">value</span></span></code> keyword is used. So an integer argument on the Fortran side
@@ -1682,8 +1701,7 @@ it into <code class="code cpp c++ docutils literal notranslate"><span class="nam
 that matches real array argument in Fortran, the first <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> (which
 matches an integer argument in Fortran) specifies the lower bounds, and the
 second <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> the upper bounds of the spatial dimensions of the array.
-Similar to what we have seen in the section on <a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>, a
-matching Fortran function is shown below,</p>
+An example of the Fortran function is shown below,</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">f</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">ulo</span><span class="p">,</span> <span class="n">uhi</span><span class="p">)</span> <span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
   <span class="k">use </span><span class="n">amrex_fort_module</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">amrex_real</span>
   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">hi</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">ulo</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">uhi</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -1733,8 +1751,8 @@ For example,</p>
 <p>Here for simplicity we have omitted passing the tile Box.</p>
 <p>Usually <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code>s  have multiple components. Thus we often also need to
 pass the number of component into Fortran functions. We can obtain the number
-by calling the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">nComp</span></span><span class="punctuation"><span class="pre">()</span></span></code> function, and pass it to Fortran as we
-have seen in the section on <a class="reference internal" href="#sec-basics-mfiter"><span class="std std-ref">MFIter and Tiling</span></a>.  We can also use the
+by calling the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">nComp</span></span><span class="punctuation"><span class="pre">()</span></span></code> function, and pass it to
+Fortran.  We can also use the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BL_TO_FORTRAN_FAB</span></span></code> macro that is similar to <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BL_TO_FORTRAN_ANYD</span></span></code>
 except that it provides an additional <code class="code cpp c++ docutils literal notranslate"><span class="keyword type"><span class="pre">int</span></span> <span class="operator"><span class="pre">*</span></span></code> for the number of
 components. The Fortran function matching <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BL_TO_FORTRAN_FAB</span></span><span class="punctuation"><span class="pre">(</span></span><span class="name"><span class="pre">fab</span></span><span class="punctuation"><span class="pre">)</span></span></code> is then
@@ -1801,16 +1819,20 @@ be hidden by <code class="code cpp c++ docutils literal notranslate"><span class
 details can be found at <code class="docutils literal notranslate"><span class="pre">amrex/Docs/Readme.typecheck</span></code>.  Despite
 these limitations, it is recommended to use the type check tool and
 report issues to us.</p>
-<p id="sec-basics-cppkernel">Writing kernels in C++ is also an option.  AMReX provides a
-multi-dimensional array type of syntax, similar to Fortran,
-that is readable and easy to implement. An example is given below:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">f</span> <span class="p">(</span><span class="n">Box</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">bx</span><span class="p">,</span> <span class="n">FArrayBox</span><span class="o">&amp;</span> <span class="n">fab1</span><span class="p">,</span> <span class="n">FArrayBox</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">fab2</span><span class="p">)</span>
+<p id="sec-basics-cppkernel">Although Fortran has native multi-dimensional array, we recommend
+writing kernels in C++ because of performance portability for CPU and
+GPU.  AMReX provides a multi-dimensional array type of syntax, similar
+to Fortran, that is readable and easy to implement.  We have
+demonstrated how to use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Array4</span></span></code> in previous sections.  Because
+of its importance, we will summarize its basic usage again with the
+example below.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">f</span> <span class="p">(</span><span class="n">Box</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">bx</span><span class="p">,</span> <span class="n">FArrayBox</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">sfab</span><span class="p">,</span> <span class="n">FArrayBox</span><span class="o">&amp;</span> <span class="n">dfab</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">const</span> <span class="n">Dim3</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">lbound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
-    <span class="k">const</span> <span class="n">Dim3</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">hbound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+    <span class="k">const</span> <span class="n">Dim3</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">::</span><span class="n">ubound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
 
-    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">src</span> <span class="o">=</span> <span class="n">fab1</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
-    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">dst</span> <span class="o">=</span> <span class="n">fab2</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span> <span class="k">const</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">src</span> <span class="o">=</span> <span class="n">sfab</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
+    <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span>      <span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">dst</span> <span class="o">=</span> <span class="n">dfab2</span><span class="p">.</span><span class="n">array</span><span class="p">();</span>
 
     <span class="k">for</span>         <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">for</span>     <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
@@ -1852,10 +1874,10 @@ vectorize the loop.  This should be done whenever possible to achieve the
 best performance. Be aware: the macro generates a compiler dependent
 pragma, so their exact effect on the resulting code is also compiler
 dependent.  It should be emphasized that using the <code class="docutils literal notranslate"><span class="pre">AMREX_PRAGMA_SIMD</span></code>
-macro on loops that are not safe for vectorization will lead to a variety
-of errors, so if unsure about the independence of the iterations of a
+macro on loops that are not safe for vectorization may lead to errors,
+so if unsure about the independence of the iterations of a
 loop, test and verify before adding the macro.</p>
-<p>These loops should always use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">i</span></span> <span class="operator"><span class="pre">&lt;=</span></span> <span class="name"><span class="pre">hi</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">x</span></span></code>, not <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">i</span></span> <span class="operator"><span class="pre">&lt;</span></span> <span class="name"><span class="pre">hi</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">x</span></span></code>, when
+<p>These loops should usually use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">i</span></span> <span class="operator"><span class="pre">&lt;=</span></span> <span class="name"><span class="pre">hi</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">x</span></span></code>, not <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">i</span></span> <span class="operator"><span class="pre">&lt;</span></span> <span class="name"><span class="pre">hi</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">x</span></span></code>, when
 defining the loop bounds. If not, the highest index cells will be left out
 of the calculation.</p>
 </div>
@@ -1955,9 +1977,7 @@ changed, <span class="math notranslate nohighlight">\(q(-i) = -q(i)\)</span>.</p
 </dl>
 </div></blockquote>
 </li>
-<li><p>We have interfaces to a fortran routine that fills ghost cells at domain
-boundaries based on the boundary condition type defined in the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">BCRec</span></span></code>
-object.  It is the user’s responsibility to have a consisent definition of
+<li><p>It is the user’s responsibility to have a consisent definition of
 what the ghost cells represent. A common option used in AMReX codes is to
 fill the domain ghost cells with the value that lies on the boundary (as
 opposed to another common option where the value in the ghost cell represents
@@ -1993,27 +2013,13 @@ example).</p>
 </div>
 <p><code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FillDomainBoundary</span></span><span class="punctuation"><span class="pre">()</span></span></code> is a function in
 <code class="docutils literal notranslate"><span class="pre">amrex/Src/Base/AMReX_BCUtil.cpp</span></code> that fills the physical domain
-boundary ghost cells with Fortran function <code class="docutils literal notranslate"><span class="pre">amrex_fab_filcc</span></code> except
-for external Dirichlet (i.e., <code class="code cpp c++ docutils literal notranslate"><span class="name label"><span class="pre">BCType</span></span><span class="punctuation"><span class="pre">:</span></span><span class="name"><span class="pre">ext_dir</span></span></code>).  The user can
-use it as a template and insert their own function for
-<code class="code cpp c++ docutils literal notranslate"><span class="name label"><span class="pre">BCType</span></span><span class="punctuation"><span class="pre">:</span></span><span class="name"><span class="pre">ext_dir</span></span></code> like below</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="n">grown_domain_box</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">fab_box</span><span class="p">))</span>
-<span class="p">{</span>
-    <span class="n">amrex_fab_filcc</span><span class="p">(</span><span class="n">BL_TO_FORTRAN_FAB</span><span class="p">(</span><span class="n">fab</span><span class="p">),</span>
-                    <span class="n">BL_TO_FORTRAN_BOX</span><span class="p">(</span><span class="n">domain_box</span><span class="p">),</span>
-                    <span class="n">dx</span><span class="p">,</span> <span class="n">prob_lo</span><span class="p">,</span>
-                    <span class="n">bc</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">data</span><span class="p">());</span>
-    <span class="n">user_fab_filcc</span><span class="p">(</span><span class="n">BL_TO_FORTRAN_FAB</span><span class="p">(</span><span class="n">fab</span><span class="p">),</span>
-                   <span class="n">BL_TO_FORTRAN_BOX</span><span class="p">(</span><span class="n">domain_box</span><span class="p">),</span>
-                   <span class="n">dx</span><span class="p">,</span> <span class="n">prob_lo</span><span class="p">,</span>
-                   <span class="n">bc</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">data</span><span class="p">());</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+boundary ghost cells except for external Dirichlet (i.e.,
+<code class="code cpp c++ docutils literal notranslate"><span class="name label"><span class="pre">BCType</span></span><span class="punctuation"><span class="pre">:</span></span><span class="name"><span class="pre">ext_dir</span></span></code>).  The user can use it as a template and insert
+their own function.</p>
 </div>
 <div class="section" id="memory-allocation">
 <h1>Memory Allocation<a class="headerlink" href="#memory-allocation" title="Permalink to this headline">¶</a></h1>
-<p>AMReX has a Fortran module, <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_mempool_module</span></span></code> that can be used to
+<p>AMReX has a Fortran module, <code class="code fortran docutils literal notranslate"><span class="name"><span class="pre">amrex_mempool_module</span></span></code> that can be used to
 allocate memory for Fortran pointers. The reason that such a module exists in
 AMReX, is that memory allocation is often very slow in multi-threaded OpenMP
 parallel regions. AMReX <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">amrex_mempool_module</span></span></code> provides a much faster
