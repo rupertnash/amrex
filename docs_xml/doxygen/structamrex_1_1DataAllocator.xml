@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="172" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="172" bodyend="172"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="170" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="170" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1DataAllocator_1afb361ea3f544b7a9105c77ea5528c785" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="173" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="173" bodyend="173"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="171" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="171" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="structamrex_1_1DataAllocator_1ae59dbc45d96d3aa64dd74f792a5b60c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classamrex_1_1Arena" kindref="compound">Arena</ref> *</type>
@@ -54,14 +54,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="174" bodyend="174"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="172" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="172" bodyend="172"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A Fortran Array-like Object <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> emulates the Fortran array concept. Useful operations can be performed upon BaseFabs in C++, and they provide a convenient interface to Fortran when it is necessary to retreat into that language. </para>    </briefdescription>
     <detaileddescription>
 <para><ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> is a template class. Through use of the template, a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> may be based upon any class. So far at least, most applications have been based upon simple types like integers, real*4s, or real*8s. Most applications do not use BaseFabs directly, but utilize specialized classes derived from <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref>.</para><para><ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> objects depend on the dimensionality of space (indirectly through the DOMAIN <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> member). It is typical to define the macro SPACEDIM to be 1, 2, or 3 to indicate the dimension of space. See the discussion of class <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> for more information. A <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> contains a <ref refid="classamrex_1_1Box" kindref="compound">Box</ref> DOMAIN, which indicates the integer indexing space over which the array is defined. A <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> also has NVAR components. By components, we mean that for each point in the rectangular indexing space, there are NVAR values associated with that point. A Fortran array corresponding to a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> would have (SPACEDIM+1) dimensions.</para><para>By design, the array layout in a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> mirrors that of a Fortran array. The first index (x direction for example) varies most rapidly, the next index (y direction), if any, varies next fastest. The component index varies last, after all the spatial indices.</para><para>It is sometimes convenient to be able to treat a sub-array within an existing <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> as a <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> in its own right. This is often referred to as aliasing the <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref>. Note that when aliasing is used, the BaseFabs domain will not, in general, be the same as the parent BaseFabs domain, nor will the number of components. <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab</ref> is a dimension dependent class, so SPACEDIM must be defined as either 1, 2, or 3 when compiling.</para><para>This is NOT a polymorphic class.</para><para>It does NOT provide a copy constructor or assignment operator.</para><para>T MUST have a default constructor and an assignment operator. </para>    </detaileddescription>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="171" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="171" bodyend="175"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="169" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="169" bodyend="173"/>
     <listofallmembers>
       <member refid="structamrex_1_1DataAllocator_1a7938ffe9f30063544db5da6adbe5cbf4" prot="public" virt="non-virtual"><scope>amrex::DataAllocator</scope><name>alloc</name></member>
       <member refid="structamrex_1_1DataAllocator_1ae59dbc45d96d3aa64dd74f792a5b60c4" prot="public" virt="non-virtual"><scope>amrex::DataAllocator</scope><name>arena</name></member>

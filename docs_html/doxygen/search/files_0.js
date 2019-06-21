@@ -237,8 +237,6 @@ var searchData=
   ['amrex_5fextrapolater_5f1d_2ef90',['AMReX_extrapolater_1d.f90',['../AMReX__extrapolater__1d_8f90.html',1,'']]],
   ['amrex_5fextrapolater_5f2d_2ef90',['AMReX_extrapolater_2d.f90',['../AMReX__extrapolater__2d_8f90.html',1,'']]],
   ['amrex_5fextrapolater_5f3d_2ef90',['AMReX_extrapolater_3d.f90',['../AMReX__extrapolater__3d_8f90.html',1,'']]],
-  ['amrex_5ffaballocator_2ecpp',['AMReX_FabAllocator.cpp',['../AMReX__FabAllocator_8cpp.html',1,'']]],
-  ['amrex_5ffaballocator_2eh',['AMReX_FabAllocator.H',['../AMReX__FabAllocator_8H.html',1,'']]],
   ['amrex_5ffabarray_2eh',['AMReX_FabArray.H',['../AMReX__FabArray_8H.html',1,'']]],
   ['amrex_5ffabarraybase_2ecpp',['AMReX_FabArrayBase.cpp',['../AMReX__FabArrayBase_8cpp.html',1,'']]],
   ['amrex_5ffabarraybase_2eh',['AMReX_FabArrayBase.H',['../AMReX__FabArrayBase_8H.html',1,'']]],
@@ -599,6 +597,6 @@ var searchData=
   ['amrex_5fyafluxregister_5f2d_5fk_2eh',['AMReX_YAFluxRegister_2D_K.H',['../AMReX__YAFluxRegister__2D__K_8H.html',1,'']]],
   ['amrex_5fyafluxregister_5f3d_5fk_2eh',['AMReX_YAFluxRegister_3D_K.H',['../AMReX__YAFluxRegister__3D__K_8H.html',1,'']]],
   ['amrex_5fyafluxregister_5fk_2eh',['AMReX_YAFluxRegister_K.H',['../AMReX__YAFluxRegister__K_8H.html',1,'']]],
-  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS3_2arkode__interface_8f90.html',1,'']]],
-  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS4_2arkode__interface_8f90.html',1,'']]]
+  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS4_2arkode__interface_8f90.html',1,'']]],
+  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS3_2arkode__interface_8f90.html',1,'']]]
 ];
