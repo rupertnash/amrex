@@ -54,8 +54,6 @@ var searchData=
   ['intersect_5floz',['intersect_loz',['../classamrex_1_1Amr.html#ac8fbee6b944ffeb46dac1abb6c4e979c',1,'amrex::Amr']]],
   ['intersectpoint',['intersectPoint',['../classamrex_1_1XYPlotDataList.html#ab96876a1b615c3f8da897d2486d87af1',1,'amrex::XYPlotDataList']]],
   ['inv_5fdx',['inv_dx',['../classamrex_1_1CoordSys.html#a09a58ce8c24e2ad549c98754fd2adaeb',1,'amrex::CoordSys']]],
-  ['inv_5fr_5fcellcenter',['inv_r_cellcenter',['../structamrex_1_1MLCellLinOp_1_1MetricFactor.html#a5c62c0b9c853bc5701b580812763e13a',1,'amrex::MLCellLinOp::MetricFactor']]],
-  ['inv_5fr_5fcelledge',['inv_r_celledge',['../structamrex_1_1MLCellLinOp_1_1MetricFactor.html#abafdaf8a76ee3da35786da8143497678',1,'amrex::MLCellLinOp::MetricFactor']]],
   ['invalid_5ftime',['INVALID_TIME',['../namespaceamrex.html#afdf427459e2b9a7718975c38a36d8be2',1,'amrex']]],
   ['inverse_5ftags',['inverse_tags',['../classamrex_1_1NeighborParticleContainer.html#a7587e301a1e7cee4f6fb7c40693b673d',1,'amrex::NeighborParticleContainer']]],
   ['io_5fbuffer',['io_buffer',['../classamrex_1_1NFilesIter.html#ac9b6223bf489ebe24b22ae01e1c16652',1,'amrex::NFilesIter']]],

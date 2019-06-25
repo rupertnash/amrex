@@ -31,6 +31,7 @@ var searchData=
   ['updatedistributionmaps',['UpdateDistributionMaps',['../classamrex_1_1AmrLevel.html#a69fdf4e347142373696281d9269c6799',1,'amrex::AmrLevel']]],
   ['updategrids',['UpdateGrids',['../classamrex_1_1LSCoreBase.html#a36c38fc9573fe9bd45675e3a0f9c6649',1,'amrex::LSCoreBase']]],
   ['updateinsitu',['updateInSitu',['../classamrex_1_1Amr.html#a8a6cfcdb14e8d28779382ac6406ab2ca',1,'amrex::Amr']]],
+  ['updatememusage',['updateMemUsage',['../classamrex_1_1FabArrayBase.html#addf663082b0bdfcedda41fc8bbca4d5f',1,'amrex::FabArrayBase']]],
   ['updateneighbors',['updateNeighbors',['../classamrex_1_1NeighborParticleContainer.html#add63262756c48b8f645f236c664067d0',1,'amrex::NeighborParticleContainer']]],
   ['updateneighborscpu',['updateNeighborsCPU',['../classamrex_1_1NeighborParticleContainer.html#a82b7b32706c360ef9da4f2501f0d2ef7',1,'amrex::NeighborParticleContainer']]],
   ['updatepatch',['UpdatePatch',['../namespaceamrex_1_1InSituUtils.html#aa55a8198c3168709333964b78c796a6a',1,'amrex::InSituUtils']]],

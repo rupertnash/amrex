@@ -4,65 +4,65 @@
     <compoundname>AMReX_ParticleContainerI.H</compoundname>
     <includedby refid="AMReX__Particles_8H" local="yes">/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particles.H</includedby>
     <invincdepgraph>
-      <node id="59162">
+      <node id="58086">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_LoadBalanceKD.cpp</label>
         <link refid="AMReX__LoadBalanceKD_8cpp"/>
       </node>
-      <node id="59164">
+      <node id="58088">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborParticles.H</label>
         <link refid="AMReX__NeighborParticles_8H"/>
       </node>
-      <node id="59160">
+      <node id="58084">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/AmrCore/AMReX_AmrParticles.H</label>
         <link refid="AMReX__AmrParticles_8H"/>
       </node>
-      <node id="59163">
+      <node id="58087">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_NeighborList.H</label>
         <link refid="AMReX__NeighborList_8H"/>
       </node>
-      <node id="59158">
+      <node id="58082">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_ParticleContainerI.H</label>
         <link refid="AMReX_ParticleContainerI.H"/>
-        <childnode refid="59159" relation="include">
+        <childnode refid="58083" relation="include">
         </childnode>
       </node>
-      <node id="59165">
+      <node id="58089">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particle_mod_K.H</label>
         <link refid="AMReX__Particle__mod__K_8H"/>
-        <childnode refid="59159" relation="include">
+        <childnode refid="58083" relation="include">
         </childnode>
       </node>
-      <node id="59166">
+      <node id="58090">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_TracerParticles.H</label>
         <link refid="AMReX__TracerParticles_8H"/>
-        <childnode refid="59160" relation="include">
+        <childnode refid="58084" relation="include">
         </childnode>
-        <childnode refid="59167" relation="include">
+        <childnode refid="58091" relation="include">
         </childnode>
       </node>
-      <node id="59161">
+      <node id="58085">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_LoadBalanceKD.H</label>
         <link refid="AMReX__LoadBalanceKD_8H"/>
-        <childnode refid="59162" relation="include">
+        <childnode refid="58086" relation="include">
         </childnode>
       </node>
-      <node id="59159">
+      <node id="58083">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_Particles.H</label>
         <link refid="AMReX__Particles_8H"/>
-        <childnode refid="59160" relation="include">
+        <childnode refid="58084" relation="include">
         </childnode>
-        <childnode refid="59161" relation="include">
+        <childnode refid="58085" relation="include">
         </childnode>
-        <childnode refid="59163" relation="include">
+        <childnode refid="58087" relation="include">
         </childnode>
-        <childnode refid="59164" relation="include">
+        <childnode refid="58088" relation="include">
         </childnode>
-        <childnode refid="59165" relation="include">
+        <childnode refid="58089" relation="include">
         </childnode>
-        <childnode refid="59166" relation="include">
+        <childnode refid="58090" relation="include">
         </childnode>
       </node>
-      <node id="59167">
+      <node id="58091">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Particle/AMReX_TracerParticles.cpp</label>
         <link refid="AMReX__TracerParticles_8cpp"/>
       </node>
@@ -1566,7 +1566,7 @@
 <codeline lineno="1492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RedistributeMPIGPU(m_not_ours);</highlight></codeline>
 <codeline lineno="1493"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="1495"><highlight class="normal"><sp/><sp/><sp/><sp/>EnforcePeriodicGPU();</highlight></codeline>
+<codeline lineno="1495"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(geom.<ref refid="classamrex_1_1Geometry_1a40882432c46bfa9ae6a7316a0889dc35" kindref="member">isAnyPeriodic</ref>())<sp/>EnforcePeriodicGPU();</highlight></codeline>
 <codeline lineno="1496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="1497"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(OK());</highlight></codeline>
 <codeline lineno="1498"><highlight class="normal"></highlight></codeline>
@@ -4210,10 +4210,10 @@
 <codeline lineno="4136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tile_box.<ref refid="classamrex_1_1Box_1ab6232053a39e1b010d0d9a1b269f53ff" kindref="member">grow</ref>(ng);</highlight></codeline>
 <codeline lineno="4137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>local_rho.<ref refid="classamrex_1_1FArrayBox_1ae5a4b9b9a64a4c1cfd534bb6eefc6b30" kindref="member">resize</ref>(tile_box,ncomp);</highlight></codeline>
 <codeline lineno="4138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>local_rho<sp/>=<sp/>0.0;</highlight></codeline>
-<codeline lineno="4139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhoarr<sp/>=<sp/>local_rho.<ref refid="classamrex_1_1BaseFab_1a06e494140159d9f9ad07c89540a30ed6" kindref="member">array</ref>();</highlight></codeline>
+<codeline lineno="4139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhoarr<sp/>=<sp/>local_rho.<ref refid="classamrex_1_1BaseFab_1a693ad603bec0add41aa9d3406cbec6d1" kindref="member">array</ref>();</highlight></codeline>
 <codeline lineno="4140"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&amp;<sp/>box<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a0a9bd4ca46e296a7c721f45c412688de" kindref="member">box</ref>();</highlight></codeline>
-<codeline lineno="4142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhoarr<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a06e494140159d9f9ad07c89540a30ed6" kindref="member">array</ref>();</highlight></codeline>
+<codeline lineno="4141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&amp;<sp/>box<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a9359cb75c273aa3ab475d21ddc64f8f3" kindref="member">box</ref>();</highlight></codeline>
+<codeline lineno="4142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhoarr<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a693ad603bec0add41aa9d3406cbec6d1" kindref="member">array</ref>();</highlight></codeline>
 <codeline lineno="4143"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="4145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(particle_lvl_offset<sp/>==<sp/>0)</highlight></codeline>
@@ -4232,7 +4232,7 @@
 <codeline lineno="4158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="4159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="4160"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fab.<ref refid="classamrex_1_1BaseFab_1a8e076e004be7054e3814046a611c1c71" kindref="member">atomicAdd</ref>(local_rho,<sp/>tile_box,<sp/>tile_box,<sp/>0,<sp/>0,<sp/>ncomp);</highlight></codeline>
+<codeline lineno="4161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fab.<ref refid="classamrex_1_1BaseFab_1a465cca97d23428cb99803d3645b99a05" kindref="member">atomicAdd</ref>(local_rho,<sp/>tile_box,<sp/>tile_box,<sp/>0,<sp/>0,<sp/>ncomp);</highlight></codeline>
 <codeline lineno="4162"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="4164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -4313,11 +4313,11 @@
 <codeline lineno="4239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>particles<sp/>=<sp/>pti.<ref refid="classamrex_1_1ParIterBase_1aec75eb80427c830ca09374f2a14b0a67" kindref="member">GetArrayOfStructs</ref>();</highlight></codeline>
 <codeline lineno="4240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pstruct<sp/>=<sp/>particles().data();</highlight></codeline>
 <codeline lineno="4241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref>&amp;<sp/>fab<sp/>=<sp/>mesh_data[pti];</highlight></codeline>
-<codeline lineno="4242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>fabarr<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a06e494140159d9f9ad07c89540a30ed6" kindref="member">array</ref>();</highlight></codeline>
-<codeline lineno="4243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&amp;<sp/>box<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a0a9bd4ca46e296a7c721f45c412688de" kindref="member">box</ref>();</highlight></codeline>
+<codeline lineno="4242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>fabarr<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a693ad603bec0add41aa9d3406cbec6d1" kindref="member">array</ref>();</highlight></codeline>
+<codeline lineno="4243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&amp;<sp/>box<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a9359cb75c273aa3ab475d21ddc64f8f3" kindref="member">box</ref>();</highlight></codeline>
 <codeline lineno="4244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>np<sp/>=<sp/>particles.<ref refid="classamrex_1_1Box_1a14c1e4a7eebae64a3e3724fc9c747e1c" kindref="member">size</ref>();</highlight></codeline>
 <codeline lineno="4245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="4246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nComp<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a181a925719f91b201ef4ad8cfc9bef6f" kindref="member">nComp</ref>();</highlight></codeline>
+<codeline lineno="4246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nComp<sp/>=<sp/>fab.<ref refid="classamrex_1_1BaseFab_1a7406ec91dc010602121f1492f2d3a748" kindref="member">nComp</ref>();</highlight></codeline>
 <codeline lineno="4247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__GpuLaunch_8H_1a39a4c246c2c105435c9df228aa98c2a6" kindref="member">AMREX_FOR_1D</ref>(<sp/>np,<sp/>i,</highlight></codeline>
 <codeline lineno="4248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="4249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="AMReX__Particle__mod__K_8H_1abe8ab91e7da4ce13d2bf66ef23d19032" kindref="member">amrex_interpolate_cic</ref>(pstruct[i],<sp/>nComp,<sp/>fabarr,<sp/>plo,<sp/>dxi);</highlight></codeline>

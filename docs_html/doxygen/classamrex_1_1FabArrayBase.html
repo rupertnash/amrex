@@ -128,13 +128,12 @@ Inheritance diagram for amrex::FabArrayBase:</div>
 <area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; amrex::Vector&lt; HYPRE_Int &gt; &gt;" shape="rect" coords="460,784,910,808"/>
 <area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; amrex::Vector&lt; Int &gt; &gt;" shape="rect" coords="460,840,910,864"/>
 <area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; amrex::Vector&lt; PetscInt &gt; &gt;" shape="rect" coords="460,896,910,920"/>
-<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; amrex::Vector&lt; Real &gt; &gt;" shape="rect" coords="460,952,910,976"/>
-<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; amrex::Vector&lt; RealTuple &gt; &gt;" shape="rect" coords="460,1008,910,1032"/>
-<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; GFab &gt;" shape="rect" coords="460,1064,910,1088"/>
-<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; HYPRE_Int &gt;" shape="rect" coords="460,1120,910,1144"/>
-<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; Int &gt;" shape="rect" coords="460,1176,910,1200"/>
-<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; PetscInt &gt;" shape="rect" coords="460,1232,910,1256"/>
-<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; RealTuple &gt;" shape="rect" coords="460,1288,910,1312"/>
+<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; amrex::Vector&lt; RealTuple &gt; &gt;" shape="rect" coords="460,952,910,976"/>
+<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; GFab &gt;" shape="rect" coords="460,1008,910,1032"/>
+<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; HYPRE_Int &gt;" shape="rect" coords="460,1064,910,1088"/>
+<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; Int &gt;" shape="rect" coords="460,1120,910,1144"/>
+<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; PetscInt &gt;" shape="rect" coords="460,1176,910,1200"/>
+<area href="classamrex_1_1LayoutData.html" alt="amrex::LayoutData&lt; RealTuple &gt;" shape="rect" coords="460,1232,910,1256"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -162,6 +161,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FillBoundary.  <a href="structamrex_1_1FabArrayBase_1_1FB.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1FabArrayBase_1_1FPinfo.html">FPinfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1FabArrayBase_1_1meminfo.html">meminfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1FabArrayBase_1_1RegionTag.html">RegionTag</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1FabArrayBase_1_1TileArray.html">TileArray</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiling.  <a href="structamrex_1_1FabArrayBase_1_1TileArray.html#details">More...</a><br /></td></tr>
@@ -269,6 +272,20 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae87329fe7a046f188ea78e63047152b6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#ae87329fe7a046f188ea78e63047152b6">WaitForAsyncSends</a> (int N_snds, <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="AMReX__ccse-mpi_8H.html#a240e9d13a157e03c75e42306b13cd8d8">MPI_Request</a> &gt; &amp;send_reqs, <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; char * &gt; &amp;send_data, <a class="el" href="classamrex_1_1Vector.html">Vector</a>&lt; <a class="el" href="structMPI__Status.html">MPI_Status</a> &gt; &amp;stats)</td></tr>
 <tr class="memdesc:ae87329fe7a046f188ea78e63047152b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block until all send requests complete.  <a href="#ae87329fe7a046f188ea78e63047152b6">More...</a><br /></td></tr>
 <tr class="separator:ae87329fe7a046f188ea78e63047152b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf663082b0bdfcedda41fc8bbca4d5f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#addf663082b0bdfcedda41fc8bbca4d5f">updateMemUsage</a> (std::string const &amp;tag, long nbytes, <a class="el" href="classamrex_1_1Arena.html">Arena</a> const *ar)</td></tr>
+<tr class="separator:addf663082b0bdfcedda41fc8bbca4d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e425df3c8bb2e6aea3510d19646ceb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a56e425df3c8bb2e6aea3510d19646ceb">printMemUsage</a> ()</td></tr>
+<tr class="separator:a56e425df3c8bb2e6aea3510d19646ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ec42351b1a6d214b67e0285322f802"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a81ec42351b1a6d214b67e0285322f802">queryMemUsage</a> (const std::string &amp;tag=std::string(&quot;All&quot;))</td></tr>
+<tr class="separator:a81ec42351b1a6d214b67e0285322f802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e30aecf380fdf1926564da7155a5bc5"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a3e30aecf380fdf1926564da7155a5bc5">queryMemUsageHWM</a> (const std::string &amp;tag=std::string(&quot;All&quot;))</td></tr>
+<tr class="separator:a3e30aecf380fdf1926564da7155a5bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cdf2cc3d52d7d4d7dbf8c24ce614ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a18cdf2cc3d52d7d4d7dbf8c24ce614ee">pushRegionTag</a> (const char *t)</td></tr>
+<tr class="separator:a18cdf2cc3d52d7d4d7dbf8c24ce614ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8278b7adc57c727c9718330665bdeef7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a8278b7adc57c727c9718330665bdeef7">pushRegionTag</a> (std::string t)</td></tr>
+<tr class="separator:a8278b7adc57c727c9718330665bdeef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de51872d78b63b8c99c30eac65f3ee3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a2de51872d78b63b8c99c30eac65f3ee3">popRegionTag</a> ()</td></tr>
+<tr class="separator:a2de51872d78b63b8c99c30eac65f3ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -292,6 +309,10 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a2ee44b09d17bdb0425ab128b7ebc3cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc1878e44728621bf3f21e2ad7d87b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structamrex_1_1FabArrayBase_1_1CacheStats.html">CacheStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a7bc1878e44728621bf3f21e2ad7d87b5">m_CFinfo_stats</a></td></tr>
 <tr class="separator:a7bc1878e44728621bf3f21e2ad7d87b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70ee9b229ec1e56083fd9519a92a000"><td class="memItemLeft" align="right" valign="top">static std::map&lt; std::string, <a class="el" href="structamrex_1_1FabArrayBase_1_1meminfo.html">meminfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#aa70ee9b229ec1e56083fd9519a92a000">m_mem_usage</a></td></tr>
+<tr class="separator:aa70ee9b229ec1e56083fd9519a92a000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4674b38da90801075df354a3491a8d17"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1FabArrayBase.html#a4674b38da90801075df354a3491a8d17">m_region_tag</a></td></tr>
+<tr class="separator:a4674b38da90801075df354a3491a8d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -1678,6 +1699,148 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2de51872d78b63b8c99c30eac65f3ee3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::FabArrayBase::popRegionTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56e425df3c8bb2e6aea3510d19646ceb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::FabArrayBase::printMemUsage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a18cdf2cc3d52d7d4d7dbf8c24ce614ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::FabArrayBase::pushRegionTag </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8278b7adc57c727c9718330665bdeef7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::FabArrayBase::pushRegionTag </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81ec42351b1a6d214b67e0285322f802"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long amrex::FabArrayBase::queryMemUsage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tag</em> = <code>std::string(&quot;All&quot;)</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3e30aecf380fdf1926564da7155a5bc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long amrex::FabArrayBase::queryMemUsageHWM </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tag</em> = <code>std::string(&quot;All&quot;)</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a713a78056e395c21e855dcc1ed56525c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1830,6 +1993,46 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="addf663082b0bdfcedda41fc8bbca4d5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::FabArrayBase::updateMemUsage </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>nbytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1Arena.html">Arena</a> const *&#160;</td>
+          <td class="paramname"><em>ar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -2194,6 +2397,46 @@ template&lt;class FAB &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structamrex_1_1FabArrayBase_1_1CacheStats.html">FabArrayBase::CacheStats</a> amrex::FabArrayBase::m_FPinfo_stats</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa70ee9b229ec1e56083fd9519a92a000"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, <a class="el" href="structamrex_1_1FabArrayBase_1_1meminfo.html">FabArrayBase::meminfo</a> &gt; amrex::FabArrayBase::m_mem_usage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4674b38da90801075df354a3491a8d17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; amrex::FabArrayBase::m_region_tag</td>
         </tr>
       </table>
   </td>

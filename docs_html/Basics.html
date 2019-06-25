@@ -1451,7 +1451,7 @@ also requires only two minor changes.</p>
 <p>The kernels functions like <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f1</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f2</span></span></code> in the two examples here
 usually require very little changes.</p>
 <span id="fig-basics-cc-comparison"></span><table class="docutils align-center" id="id3">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">Comparison of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> with (right) and without (left) tiling.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Comparison of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> with (right) and without (left) tiling.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -1475,7 +1475,7 @@ usually require very little changes.</p>
 </tr>
 </tbody>
 </table>
-<p><a class="reference internal" href="#fig-basics-cc-comparison"><span class="std std-numref">Table 3</span></a> shows an example of the difference between
+<p><a class="reference internal" href="#fig-basics-cc-comparison"><span class="std std-numref">Table 5</span></a> shows an example of the difference between
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">validbox</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">tilebox</span></span></code>. In this example, there are two grids of
 cell-centered index type. The function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">validbox</span></span></code> always returns a
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> for the valid region of an <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">FArrayBox</span></span></code> no matter whether or not
@@ -1507,7 +1507,7 @@ no tiling in 2D. This is used when tile size is not explicitly set but the
 tiling flag is on. One can change the default size using <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParmParse</span></span></code>
 (section <a class="reference internal" href="#sec-basics-parmparse"><span class="std std-ref">ParmParse</span></a>) parameter <code class="docutils literal notranslate"><span class="pre">fabarray.mfiter_tile_size.</span></code></p>
 <span id="fig-basics-ec-comparison"></span><table class="docutils align-center" id="id4">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Comparison of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> with (right) and without (left) tiling, for face-centered nodal indexing.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Comparison of <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> with (right) and without (left) tiling, for face-centered nodal indexing.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -1578,7 +1578,7 @@ example, <code class="code cpp c++ docutils literal notranslate"><span class="na
 <span class="math notranslate nohighlight">\(x\)</span>-direction and cell in other directions. The <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span><span class="operator"><span class="pre">::</span></span><span class="name"><span class="pre">validbox</span></span></code>
 and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">tilebox</span></span></code> functions return Boxes of the same type as the
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MultiFab</span></span></code> used in defining the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> (<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">F</span></span></code> in this example).
-<a class="reference internal" href="#fig-basics-ec-comparison"><span class="std std-numref">Table 4</span></a> illustrates an example of non-cell-centered
+<a class="reference internal" href="#fig-basics-ec-comparison"><span class="std std-numref">Table 6</span></a> illustrates an example of non-cell-centered
 valid and tile boxes. Besides <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">validbox</span></span></code> and <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">tilebox</span></span></code>, <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code>
 has a number of functions returning various Boxes.  Examples include,</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Box</span> <span class="nf">fabbox</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>       <span class="c1">// Return the Box of the FArrayBox</span>
@@ -1601,7 +1601,7 @@ tiling functions. Tiling is a way of domain decomposition for work sharing.
 Overlapping tiles is undesirable because work would be wasted and for
 multi-threaded codes race conditions could occur.</p>
 <span id="fig-basics-growbox-comparison"></span><table class="docutils align-center" id="id5">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Comparing growing cell-type and face-type tile boxes.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Comparing growing cell-type and face-type tile boxes.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -1629,7 +1629,7 @@ multi-threaded codes race conditions could occur.</p>
 </tr>
 </tbody>
 </table>
-<p><a class="reference internal" href="#fig-basics-growbox-comparison"><span class="std std-numref">Table 5</span></a> illustrates an example of
+<p><a class="reference internal" href="#fig-basics-growbox-comparison"><span class="std std-numref">Table 7</span></a> illustrates an example of
 <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">growntilebox</span></span></code>. These functions in <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">MFIter</span></span></code> return <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> by
 value. There are three ways of using these functions.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span> <span class="n">Box</span><span class="o">&amp;</span> <span class="n">bx</span> <span class="o">=</span> <span class="n">mfi</span><span class="p">.</span><span class="n">validbox</span><span class="p">();</span>  <span class="c1">// const&amp; to temporary object is legal</span>

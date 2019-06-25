@@ -7,7 +7,6 @@ var searchData=
   ['basefab_3c_20ebcellflag_20_3e',['BaseFab&lt; EBCellFlag &gt;',['../classamrex_1_1BaseFab.html',1,'amrex']]],
   ['basefab_3c_20int_20_3e',['BaseFab&lt; int &gt;',['../classamrex_1_1BaseFab.html',1,'amrex']]],
   ['basefab_3c_20real_20_3e',['BaseFab&lt; Real &gt;',['../classamrex_1_1BaseFab.html',1,'amrex']]],
-  ['basefabdata',['BaseFabData',['../structamrex_1_1BaseFabData.html',1,'amrex']]],
   ['baseumap',['BaseUmap',['../classamrex_1_1BaseUmap.html',1,'amrex']]],
   ['bcrec',['BCRec',['../classamrex_1_1BCRec.html',1,'amrex']]],
   ['bdkey',['BDKey',['../structamrex_1_1FabArrayBase_1_1BDKey.html',1,'amrex::FabArrayBase']]],

@@ -11,6 +11,7 @@ var searchData=
   ['refid',['RefID',['../structamrex_1_1DistributionMapping_1_1RefID.html',1,'amrex::DistributionMapping']]],
   ['refid',['RefID',['../structamrex_1_1BoxArray_1_1RefID.html',1,'amrex::BoxArray']]],
   ['regionsprofstats',['RegionsProfStats',['../classRegionsProfStats.html',1,'']]],
+  ['regiontag',['RegionTag',['../structamrex_1_1FabArrayBase_1_1RegionTag.html',1,'amrex::FabArrayBase']]],
   ['rm_5ft',['rm_t',['../unionamrex_1_1Particle_1_1rm__t.html',1,'amrex::Particle']]],
   ['rotationif',['RotationIF',['../classamrex_1_1EB2_1_1RotationIF.html',1,'amrex::EB2']]]
 ];

@@ -248,10 +248,10 @@ detailed throughout the rest of this chapter:</p>
 <li><p>Calculations that can be offloaded efficiently to GPUs use CUDA threads
 to parallelize over a valid box at a time.  This is done by using a lot
 of CUDA threads that only work on a few cells each. This work
-distribution is illustrated in <a class="reference internal" href="#fig-gpu-threads"><span class="std std-numref">Table 9</span></a>.</p></li>
+distribution is illustrated in <a class="reference internal" href="#fig-gpu-threads"><span class="std std-numref">Table 11</span></a>.</p></li>
 </ul>
 <span id="fig-gpu-threads"></span><table class="docutils align-default" id="id1">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">Comparison of OpenMP and CUDA work distribution. Pictures provided by Mike Zingale and the CASTRO team.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Comparison of OpenMP and CUDA work distribution. Pictures provided by Mike Zingale and the CASTRO team.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -367,20 +367,32 @@ can run it and that will generate results like:</p>
 </div>
 <div class="section" id="building-with-cmake">
 <h2>Building with CMake<a class="headerlink" href="#building-with-cmake" title="Permalink to this headline">¶</a></h2>
-<p>To build AMReX with GPU support in CMake, add <code class="docutils literal notranslate"><span class="pre">ENABLE_CUDA=YES</span></code> to the
+<p>To build AMReX with GPU support in CMake, add <code class="docutils literal notranslate"><span class="pre">-DENABLE_CUDA=YES</span></code> to the
 <code class="docutils literal notranslate"><span class="pre">cmake</span></code> invocation. By default, CMake will try to determine which GPU
 architecture is supported by the system. If more than one is found, CMake
-will build for all of them. This will generally results in a larger library.
+will build for all of them. This will generally results in a larger library and longer build times.
 If autodetection fails, a set of “common” architectures is assumed.
 You can specify the target architecture to build for via the configuration option
 <code class="docutils literal notranslate"><span class="pre">-DCUDA_ARCH=&lt;target-achitecture&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;target-architecture&gt;</span></code> can be either
 the name of the NVIDIA GPU, i.e. <code class="docutils literal notranslate"><span class="pre">Turing</span></code>, <code class="docutils literal notranslate"><span class="pre">Volta</span></code>, <code class="docutils literal notranslate"><span class="pre">Pascal</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> , or its
 version number, i.e. <code class="docutils literal notranslate"><span class="pre">10.0</span></code>, <code class="docutils literal notranslate"><span class="pre">9.0</span></code>, <code class="docutils literal notranslate"><span class="pre">8.0</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> .
 For example, on Cori GPUs you can specify the architecture as follows:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cmake [options] -DENABLE_CUDA=yes -DCUDA_ARCH=Volta /path/to/amrex/source</span>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span>cmake [options] -DENABLE_CUDA=yes -DCUDA_ARCH=Volta /path/to/amrex/source
 </pre></div>
 </div>
 <p>Note that AMReX only supports GPU architectures with version number <code class="docutils literal notranslate"><span class="pre">6.0</span></code> or higher.</p>
+<p>In order to import CUDA-enabled AMReX into your CMake project, you need to include
+the following code into the appropriate CMakeLists.txt file:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Find CUDA-enabled AMReX installation
+<span class="go">find_package(AMReX REQUIRED CUDA)</span>
+
+<span class="gp">#</span> Add custom CUDA flags
+<span class="go">set(CMAKE_CUDA_FLAGS &quot;${CMAKE_CUDA_FLAGS}  &lt;your-CUDA-flags&gt;&quot;)</span>
+</pre></div>
+</div>
+<p>The snippet of code above will find a CUDA-enabled installation of AMReX and setup
+the CUDA support in the host project CMake via the AMReX-provided macro <code class="docutils literal notranslate"><span class="pre">setup_cuda()</span></code>.
+The host project should <strong>not call directly</strong> <code class="docutils literal notranslate"><span class="pre">enable_language(CUDA)</span></code>.</p>
 </div>
 </div>
 <div class="section" id="gpu-namespace-and-macros">
@@ -423,7 +435,7 @@ CUDA, all <code class="code cpp c++ docutils literal notranslate"><span class="n
 operators. With CUDA, the <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Arena</span></span></code>s each allocate with a
 specific type of GPU memory:</p>
 <span id="tab-gpu-arena"></span><table class="docutils align-default" id="id3">
-<caption><span class="caption-number">Table 10 </span><span class="caption-text">Memory Arenas</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">Memory Arenas</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 54%" />
 <col style="width: 46%" />
