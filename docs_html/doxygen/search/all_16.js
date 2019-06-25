@@ -9,7 +9,7 @@ var searchData=
   ['variablename',['variableName',['../classamrex_1_1DeriveRec.html#a390fb97e437dd3b2fc3b5be48804dd0d',1,'amrex::DeriveRec']]],
   ['variablesetup',['variableSetUp',['../classamrex_1_1LevelBld.html#ab7638fd4ea5c9153a4c81797034b6688',1,'amrex::LevelBld']]],
   ['variablesetupfornewcompprocs',['variableSetUpForNewCompProcs',['../classamrex_1_1LevelBld.html#af5b8be4ad0e53d191561488d2f1136d3',1,'amrex::LevelBld']]],
-  ['varnames',['varNames',['../classamrex_1_1PlotFileDataImpl.html#ae1be85eec31ff4920c3324a8d61a4ca8',1,'amrex::PlotFileDataImpl::varNames()'],['../classamrex_1_1PlotFileData.html#abdc4d9be2576d4f7b6f2b4af2ace47da',1,'amrex::PlotFileData::varNames()']]],
+  ['varnames',['varNames',['../classamrex_1_1PlotFileDataImpl.html#a4b41aced7339c79e76729d342456564e',1,'amrex::PlotFileDataImpl::varNames()'],['../classamrex_1_1PlotFileData.html#abdc4d9be2576d4f7b6f2b4af2ace47da',1,'amrex::PlotFileData::varNames()']]],
   ['vcallstats',['vCallStats',['../structRegionsProfStats_1_1DataBlock.html#a40b142a9ce325e063b6f8003c5d3cc9d',1,'RegionsProfStats::DataBlock']]],
   ['vcartgrid',['vCartGrid',['../classamrex_1_1AmrData.html#a93d8a8d179bc25e308d12760514402c3',1,'amrex::AmrData']]],
   ['vcommstats',['vCommStats',['../structCommProfStats_1_1DataBlock.html#a2616da0635b25290247f80c3cfb6ee32',1,'CommProfStats::DataBlock']]],

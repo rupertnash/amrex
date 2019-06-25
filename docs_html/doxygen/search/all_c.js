@@ -60,7 +60,7 @@ var searchData=
   ['leveldirectorynames',['LevelDirectoryNames',['../classamrex_1_1AmrLevel.html#a7cec3a532b1d9bc6f36417ecb33b4287',1,'amrex::AmrLevel']]],
   ['levelfullpath',['LevelFullPath',['../namespaceamrex.html#a438b71d250fb65fd385716c745be94ad',1,'amrex']]],
   ['levelpath',['LevelPath',['../namespaceamrex.html#a6e1c541c50331b9a3c005b80b4503f85',1,'amrex']]],
-  ['levelstep',['levelStep',['../classamrex_1_1PlotFileDataImpl.html#a3381a63f67f3db46df37b8497a5a78f2',1,'amrex::PlotFileDataImpl::levelStep()'],['../classamrex_1_1PlotFileData.html#afb42191a08a62dff1534e21804a1891b',1,'amrex::PlotFileData::levelStep()']]],
+  ['levelstep',['levelStep',['../classamrex_1_1PlotFileDataImpl.html#a95d9cd20405f8a1010923a022c929f38',1,'amrex::PlotFileDataImpl::levelStep()'],['../classamrex_1_1PlotFileData.html#afb42191a08a62dff1534e21804a1891b',1,'amrex::PlotFileData::levelStep()']]],
   ['levelsteps',['levelSteps',['../classamrex_1_1AmrData.html#a9a873156471b39d52631b3e56b8218a5',1,'amrex::AmrData::levelSteps()'],['../classamrex_1_1Amr.html#a8101a391189955c50c7a36d359f3f5ed',1,'amrex::Amr::levelSteps()'],['../classamrex_1_1AmrData.html#aa1d4b3547af0f7cf316d38d59e036577',1,'amrex::AmrData::LevelSteps()']]],
   ['lexstate',['lexState',['../AMReX__ParmParse_8cpp.html#a185c11f165489bce62af969b2c71242c',1,'amrex::@195']]],
   ['lincc_5finterp',['lincc_interp',['../namespaceamrex.html#acdf3882926f66513ad7885b4cd468233',1,'amrex']]],
