@@ -3451,7 +3451,7 @@
 <codeline lineno="905"><highlight class="normal"></highlight></codeline>
 <codeline lineno="906"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nbytes<sp/>=<sp/>0L;</highlight></codeline>
 <codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>:<sp/>m_fabs_v)<sp/>{</highlight></codeline>
-<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nbytes<sp/>+=<sp/><ref refid="namespaceamrex_1a7cc35276f4477ee2df782ec4098fa277" kindref="member">amrex::nBytesOwned</ref>(*x);</highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x)<sp/>nbytes<sp/>+=<sp/><ref refid="namespaceamrex_1a7cc35276f4477ee2df782ec4098fa277" kindref="member">amrex::nBytesOwned</ref>(*x);</highlight></codeline>
 <codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_factory-&gt;destroy(x);</highlight></codeline>
 <codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fabs_v.clear();</highlight></codeline>
