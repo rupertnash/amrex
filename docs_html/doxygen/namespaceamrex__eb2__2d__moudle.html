@@ -91,8 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:a972a7680044c85ea4b823a01ec7eb9b3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__eb2__2d__moudle.html#a972a7680044c85ea4b823a01ec7eb9b3">amrex_eb2_gfab_build_types</a> (lo, hi, s, slo, shi, cell, clo, chi, fx, fxlo, fxhi, fy, fylo, fyhi)</td></tr>
-<tr class="separator:a972a7680044c85ea4b823a01ec7eb9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85e20779afb2ca1682e2e0aab76a8d82"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__eb2__2d__moudle.html#a85e20779afb2ca1682e2e0aab76a8d82">amrex_eb2_build_faces</a> (lo, hi, cell, clo, chi, fx, fxlo, fxhi, fy, fylo, fyhi, levset, slo, shi, interx, ixlo, ixhi, intery, iylo, iyhi, apx, axlo, axhi, apy, aylo, ayhi, fcx, cxlo, cxhi, fcy, cylo, cyhi, dx, dxinv, problo)</td></tr>
 <tr class="separator:a85e20779afb2ca1682e2e0aab76a8d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f2fe336592dac9db7b209207d12080a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex__eb2__2d__moudle.html#a4f2fe336592dac9db7b209207d12080a">amrex_eb2_build_cells</a> (lo, hi, cell, clo, chi, fx, fxlo, fxhi, fy, fylo, fyhi, apx, axlo, axhi, apy, aylo, ayhi, vfrac, vlo, vhi, vcent, tlo, thi, barea, alo, ahi, bcent, blo, bhi, bnorm, mlo, mhi)</td></tr>
@@ -1113,104 +1111,6 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">integer, intent(inout)&#160;</td>
           <td class="paramname"><em>ierr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a972a7680044c85ea4b823a01ec7eb9b3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine, public amrex_eb2_2d_moudle::amrex_eb2_gfab_build_types </td>
-          <td>(</td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>lo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>hi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="complex-type_8h.html#ab4cafb1ab351d520eb09a05ebd0a1e13">real</a>(<a class="el" href="AMReX__REAL_8H.html#a9c34e09baf6d4d1b12637402203f9e9e">amrex_real</a>), dimension( slo(1): shi(1), slo(2): shi(2)), intent(in)&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>slo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>shi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer(c_int), dimension( clo(1): chi(1), clo(2): chi(2)), intent(inout)&#160;</td>
-          <td class="paramname"><em>cell</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>clo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>chi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer(c_int), dimension(fxlo(1):fxhi(1),fxlo(2):fxhi(2)), intent(inout)&#160;</td>
-          <td class="paramname"><em>fx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>fxlo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>fxhi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer(c_int), dimension(fylo(1):fyhi(1),fylo(2):fyhi(2)), intent(inout)&#160;</td>
-          <td class="paramname"><em>fy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>fylo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, dimension(2), intent(in)&#160;</td>
-          <td class="paramname"><em>fyhi</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
