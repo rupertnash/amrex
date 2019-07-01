@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dimensionality &mdash; amrex 19.07-dev documentation</title>
+  <title>Dimensionality &mdash; amrex 19.08-dev documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                19.07-dev
+                19.08-dev
               </div>
             
           
@@ -119,6 +119,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#fortran-and-c-kernels">Fortran and C++ Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loop-and-loopconcurrent">Loop and LoopConcurrent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ghost-cells">Ghost Cells</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#memory-allocation">Memory Allocation</a></li>
@@ -1354,22 +1355,22 @@ they are different due to index types).</p>
 </pre></div>
 </div>
 <p>Here function <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">f2</span></span></code> might be something like below,</p>
-<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span>void f1 (Box const&amp; bx, Array4&lt;Real const&gt; const&amp; u,
-         Array4&lt;Real&gt; const&amp; f)
-{
-   const auto lo = lbound(bx);
-   const auto hi = ubound(bx);
-   const int nf = f.nComp();
-   for (int n = 0; n &lt; nf; ++n) {
-     for     (int k = lo.z; k &lt;= hi.z; ++k) {
-       for   (int j = lo.y; j &lt;= hi.y; ++j) {
-         for (int i = lo.x; i &lt;= hi.x; ++i) {
-           f(i,j,k,n) = ... u(i,j,k,n) ...
-         }
-       }
-     }
-   }
-}
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">f1</span> <span class="p">(</span><span class="n">Box</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">bx</span><span class="p">,</span> <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span> <span class="k">const</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">,</span>
+         <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">f</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">const</span> <span class="k">auto</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">lbound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+   <span class="k">const</span> <span class="k">auto</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">ubound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+   <span class="k">const</span> <span class="kt">int</span> <span class="n">nf</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">nComp</span><span class="p">();</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">nf</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">for</span>     <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">for</span>   <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="p">...</span> <span class="n">u</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="p">...</span>
+         <span class="p">}</span>
+       <span class="p">}</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -1880,6 +1881,33 @@ loop, test and verify before adding the macro.</p>
 <p>These loops should usually use <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">i</span></span> <span class="operator"><span class="pre">&lt;=</span></span> <span class="name"><span class="pre">hi</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">x</span></span></code>, not <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">i</span></span> <span class="operator"><span class="pre">&lt;</span></span> <span class="name"><span class="pre">hi</span></span><span class="punctuation"><span class="pre">.</span></span><span class="name"><span class="pre">x</span></span></code>, when
 defining the loop bounds. If not, the highest index cells will be left out
 of the calculation.</p>
+</div>
+<div class="section" id="loop-and-loopconcurrent">
+<span id="sec-basics-loop"></span><h1>Loop and LoopConcurrent<a class="headerlink" href="#loop-and-loopconcurrent" title="Permalink to this headline">¶</a></h1>
+<p>In the examples so far, we have explicitly written out the for loops
+when we iterate over a <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Box</span></span></code> or a range specified by
+<code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">Dim3</span></span></code>s.  AMReX also provides function templates for writing
+these in a concise way like below,</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Box</span> <span class="nf">bx</span><span class="p">(...);</span>
+
+<span class="c1">// Loop over Box</span>
+<span class="n">Loop</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="p">[]</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+
+<span class="c1">// Loop over Dim3 ranges</span>
+<span class="k">const</span> <span class="n">Dim3</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">lbound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
+<span class="k">const</span> <span class="n">Dim3</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">ubound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span> <span class="c1">// Inclusive upper bound</span>
+<span class="n">Loop</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="p">[]</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+
+<span class="c1">// 4D loop</span>
+<span class="n">Loop</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">numcomps</span><span class="p">,</span> <span class="p">[]</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">comp</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+
+<span class="c1">// Give hint to compilers that loops can run concurrently</span>
+<span class="n">LoopConcurrent</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="p">[]</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+</pre></div>
+</div>
+<p>Note that, unlike <code class="code cpp c++ docutils literal notranslate"><span class="name"><span class="pre">ParalleFor</span></span></code> that will be introduced in section
+<a class="reference internal" href="GPU.html#sec-gpu-for"><span class="std std-ref">Launching C++ nested loops</span></a>, they do not launch GPU kernels to do the work,
+although they can be used in GPU kernels.</p>
 </div>
 <div class="section" id="ghost-cells">
 <h1>Ghost Cells<a class="headerlink" href="#ghost-cells" title="Permalink to this headline">¶</a></h1>

@@ -4,29 +4,29 @@
     <compoundname>AMReX_Lazy.cpp</compoundname>
     <includes refid="AMReX__Lazy_8H" local="no">AMReX_Lazy.H</includes>
     <incdepgraph>
-      <node id="26205">
+      <node id="26716">
         <label>functional</label>
       </node>
-      <node id="26202">
+      <node id="26713">
         <label>/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_Lazy.cpp</label>
         <link refid="AMReX_Lazy.cpp"/>
-        <childnode refid="26203" relation="include">
+        <childnode refid="26714" relation="include">
         </childnode>
       </node>
-      <node id="26204">
+      <node id="26715">
         <label>vector</label>
       </node>
-      <node id="26206">
+      <node id="26717">
         <label>algorithm</label>
       </node>
-      <node id="26203">
+      <node id="26714">
         <label>AMReX_Lazy.H</label>
         <link refid="AMReX__Lazy_8H"/>
-        <childnode refid="26204" relation="include">
+        <childnode refid="26715" relation="include">
         </childnode>
-        <childnode refid="26205" relation="include">
+        <childnode refid="26716" relation="include">
         </childnode>
-        <childnode refid="26206" relation="include">
+        <childnode refid="26717" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -59,8 +59,8 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceamrex_1_1Lazy_1a0a2dd2d6e19976b8eaebb9d81a65718a" kindref="member">EvalReduction</ref><sp/>()</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BL_USE_MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BL_USE_MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>++count;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>==<sp/>1)<sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>f<sp/>:<sp/>reduction_queue)</highlight></codeline>

@@ -96,9 +96,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A Fortran Array-like Object <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> emulates the Fortran array concept. Useful operations can be performed upon BaseFabs in C++, and they provide a convenient interface to Fortran when it is necessary to retreat into that language.  
- <a href="structamrex_1_1DataAllocator.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="AMReX__BaseFab_8H_source.html">AMReX_BaseFab.H</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for amrex::DataAllocator:</div>
@@ -139,16 +136,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a901b7f1e68950afc823ebc10c093cb94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1Arena.html">Arena</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamrex_1_1DataAllocator.html#a901b7f1e68950afc823ebc10c093cb94">m_arena</a> = nullptr</td></tr>
 <tr class="separator:a901b7f1e68950afc823ebc10c093cb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Fortran Array-like Object <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> emulates the Fortran array concept. Useful operations can be performed upon BaseFabs in C++, and they provide a convenient interface to Fortran when it is necessary to retreat into that language. </p>
-<p><a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> is a template class. Through use of the template, a <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> may be based upon any class. So far at least, most applications have been based upon simple types like integers, real*4s, or real*8s. Most applications do not use BaseFabs directly, but utilize specialized classes derived from <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>.</p>
-<p><a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> objects depend on the dimensionality of space (indirectly through the DOMAIN <a class="el" href="classamrex_1_1Box.html" title="A Rectangular Domain on an Integer Lattice. ">Box</a> member). It is typical to define the macro SPACEDIM to be 1, 2, or 3 to indicate the dimension of space. See the discussion of class <a class="el" href="classamrex_1_1Box.html" title="A Rectangular Domain on an Integer Lattice. ">Box</a> for more information. A <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> contains a <a class="el" href="classamrex_1_1Box.html" title="A Rectangular Domain on an Integer Lattice. ">Box</a> DOMAIN, which indicates the integer indexing space over which the array is defined. A <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> also has NVAR components. By components, we mean that for each point in the rectangular indexing space, there are NVAR values associated with that point. A Fortran array corresponding to a <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> would have (SPACEDIM+1) dimensions.</p>
-<p>By design, the array layout in a <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> mirrors that of a Fortran array. The first index (x direction for example) varies most rapidly, the next index (y direction), if any, varies next fastest. The component index varies last, after all the spatial indices.</p>
-<p>It is sometimes convenient to be able to treat a sub-array within an existing <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> as a <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> in its own right. This is often referred to as aliasing the <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a>. Note that when aliasing is used, the BaseFabs domain will not, in general, be the same as the parent BaseFabs domain, nor will the number of components. <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> is a dimension dependent class, so SPACEDIM must be defined as either 1, 2, or 3 when compiling.</p>
-<p>This is NOT a polymorphic class.</p>
-<p>It does NOT provide a copy constructor or assignment operator.</p>
-<p>T MUST have a default constructor and an assignment operator. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7efc193b557d263444d91cc90c7c7073"></a>
 <div class="memitem">
 <div class="memproto">

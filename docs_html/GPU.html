@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview of AMReX GPU Strategy &mdash; amrex 19.07-dev documentation</title>
+  <title>Overview of AMReX GPU Strategy &mdash; amrex 19.08-dev documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                19.07-dev
+                19.08-dev
               </div>
             
           
@@ -377,7 +377,7 @@ You can specify the target architecture to build for via the configuration optio
 the name of the NVIDIA GPU, i.e. <code class="docutils literal notranslate"><span class="pre">Turing</span></code>, <code class="docutils literal notranslate"><span class="pre">Volta</span></code>, <code class="docutils literal notranslate"><span class="pre">Pascal</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> , or its
 version number, i.e. <code class="docutils literal notranslate"><span class="pre">10.0</span></code>, <code class="docutils literal notranslate"><span class="pre">9.0</span></code>, <code class="docutils literal notranslate"><span class="pre">8.0</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> .
 For example, on Cori GPUs you can specify the architecture as follows:</p>
-<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span>cmake [options] -DENABLE_CUDA=yes -DCUDA_ARCH=Volta /path/to/amrex/source
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cmake [options] -DENABLE_CUDA=yes -DCUDA_ARCH=Volta /path/to/amrex/source</span>
 </pre></div>
 </div>
 <p>Note that AMReX only supports GPU architectures with version number <code class="docutils literal notranslate"><span class="pre">6.0</span></code> or higher.</p>
@@ -706,16 +706,6 @@ or, if necessary, we can make an alias <code class="code cpp c++ docutils litera
 
 <span class="n">AMREX_GPU_HOST_DEVICE</span> <span class="kt">void</span> <span class="nf">f</span> <span class="p">(</span><span class="n">Box</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">bx</span><span class="p">,</span> <span class="n">Array4</span><span class="o">&lt;</span><span class="n">Real</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="k">const</span> <span class="n">Dim3</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">lbound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
-  <span class="k">const</span> <span class="n">Dim3</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">ubound</span><span class="p">(</span><span class="n">bx</span><span class="p">);</span>
-  <span class="k">for</span>     <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">z</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">for</span>   <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="mf">3.</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
   <span class="n">FArrayBox</span> <span class="n">fab</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">bx</span><span class="p">.</span><span class="n">ixType</span><span class="p">());</span>
   <span class="n">g</span><span class="p">(</span><span class="n">fab</span><span class="p">);</span>
 <span class="p">}</span>
@@ -773,7 +763,7 @@ multi-dimensional array syntax, similar in appearance to Fortran,
 while maintaining performance.  The details can be found in
 <a class="reference internal" href="Basics.html#sec-basics-array4"><span class="std std-ref">Array4</span></a> and <a class="reference internal" href="Basics.html#sec-basics-cppkernel"><span class="std std-ref">C++ Kernel</span></a>.</p>
 <div class="section" id="launching-c-nested-loops">
-<h2>Launching C++ nested loops<a class="headerlink" href="#launching-c-nested-loops" title="Permalink to this headline">¶</a></h2>
+<span id="sec-gpu-for"></span><h2>Launching C++ nested loops<a class="headerlink" href="#launching-c-nested-loops" title="Permalink to this headline">¶</a></h2>
 <p>The most common AMReX work construct is a set of nested loops over
 the cells in a box. AMReX provides C++ functions and macro equivalents to port nested
 loops efficiently onto the GPU.  There are 3 different nested loop GPU
