@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="181" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="181" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="185" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="185" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a6ff8aad355f631f7d119403ca460a782" prot="private" static="no" mutable="no">
         <type><ref refid="classamrex_1_1LayoutData" kindref="compound">LayoutData</ref>&lt; <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MLCellLinOp_1ae233eeb511516448492f38fe53fa9cd9" kindref="member">RealTuple</ref> &gt; &gt;</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="182" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="182" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="186" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="186" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a17bbd9eb1d5f4d3355a31313d9b02760" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="183" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="183" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="187" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="187" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -68,12 +68,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp" bodystart="838" bodyend="847"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="163" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp" bodystart="839" bodyend="848"/>
       </memberdef>
-      <memberdef kind="function" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a20001bfdf634f6368d76f1bc25698907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1ae2e9e9cd5085a60c6cede09fc5ac03db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::MLCellLinOp::BndryCondLoc::setLOBndryConds</definition>
-        <argsstring>(const Geometry &amp;geom, const Real *dx, const Vector&lt; Array&lt; BCType, AMREX_SPACEDIM &gt; &gt; &amp;lobc, const Vector&lt; Array&lt; BCType, AMREX_SPACEDIM &gt; &gt; &amp;hibc, int ratio, const RealVect &amp;a_loc)</argsstring>
+        <argsstring>(const Geometry &amp;geom, const Real *dx, const Vector&lt; Array&lt; BCType, AMREX_SPACEDIM &gt; &gt; &amp;lobc, const Vector&lt; Array&lt; BCType, AMREX_SPACEDIM &gt; &gt; &amp;hibc, int ratio, const RealVect &amp;interior_bloc, const Array&lt; Real, AMREX_SPACEDIM &gt; &amp;domain_bloc_lo, const Array&lt; Real, AMREX_SPACEDIM &gt; &amp;domain_bloc_hi)</argsstring>
         <name>setLOBndryConds</name>
         <param>
           <type>const <ref refid="classamrex_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
@@ -97,7 +97,15 @@
         </param>
         <param>
           <type>const <ref refid="classamrex_1_1RealVect" kindref="compound">RealVect</ref> &amp;</type>
-          <declname>a_loc</declname>
+          <declname>interior_bloc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; Real, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>domain_bloc_lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; Real, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>domain_bloc_hi</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -105,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="164" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp" bodystart="850" bodyend="870"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="165" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp" bodystart="851" bodyend="874"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a4718c49441ffa63747c12c0e4613fe6f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MLCellLinOp_1a622b7c2ecc46a6b476aba4fb470f3dcf" kindref="member">BCTuple</ref> &gt; &amp;</type>
@@ -122,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="168" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="168" bodyend="170"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="172" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="172" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a4743698695d4d5318888dde27a48f860" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1Vector" kindref="compound">Vector</ref>&lt; <ref refid="classamrex_1_1MLCellLinOp_1ae233eeb511516448492f38fe53fa9cd9" kindref="member">RealTuple</ref> &gt; &amp;</type>
@@ -139,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="171" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="171" bodyend="173"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="175" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="175" bodyend="177"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a0682ebf88aa6ec77c22de7b7862f4383" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1MLCellLinOp_1a622b7c2ecc46a6b476aba4fb470f3dcf" kindref="member">BCTuple</ref> &amp;</type>
@@ -160,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="174" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="174" bodyend="176"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="178" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="178" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1ad7781aca5acd91bc926efdfc84f05b99" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classamrex_1_1MLCellLinOp_1ae233eeb511516448492f38fe53fa9cd9" kindref="member">RealTuple</ref> &amp;</type>
@@ -181,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="177" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="177" bodyend="179"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="181" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="181" bodyend="183"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -346,7 +354,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="161" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="160" bodyend="184"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" line="161" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLCellLinOp.H" bodystart="160" bodyend="188"/>
     <listofallmembers>
       <member refid="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a6ff8aad355f631f7d119403ca460a782" prot="private" virt="non-virtual"><scope>amrex::MLCellLinOp::BndryCondLoc</scope><name>bcloc</name></member>
       <member refid="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a141ef07902ecbdd351bb14b58ce08901" prot="private" virt="non-virtual"><scope>amrex::MLCellLinOp::BndryCondLoc</scope><name>bcond</name></member>
@@ -356,7 +364,7 @@
       <member refid="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a4743698695d4d5318888dde27a48f860" prot="public" virt="non-virtual"><scope>amrex::MLCellLinOp::BndryCondLoc</scope><name>bndryLocs</name></member>
       <member refid="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1ad7781aca5acd91bc926efdfc84f05b99" prot="public" virt="non-virtual"><scope>amrex::MLCellLinOp::BndryCondLoc</scope><name>bndryLocs</name></member>
       <member refid="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a17bbd9eb1d5f4d3355a31313d9b02760" prot="private" virt="non-virtual"><scope>amrex::MLCellLinOp::BndryCondLoc</scope><name>m_ncomp</name></member>
-      <member refid="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1a20001bfdf634f6368d76f1bc25698907" prot="public" virt="non-virtual"><scope>amrex::MLCellLinOp::BndryCondLoc</scope><name>setLOBndryConds</name></member>
+      <member refid="classamrex_1_1MLCellLinOp_1_1BndryCondLoc_1ae2e9e9cd5085a60c6cede09fc5ac03db" prot="public" virt="non-virtual"><scope>amrex::MLCellLinOp::BndryCondLoc</scope><name>setLOBndryConds</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

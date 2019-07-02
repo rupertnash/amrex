@@ -157,14 +157,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="29" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="16" bodyend="44"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="29" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="16" bodyend="45"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1a414300876982aa8daf8724cdffc0ea8f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classamrex_1_1MLMGBndry_1a02fa2ecdca85125116399e1525095055" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void amrex::MLMGBndry::setBoxBC</definition>
-        <argsstring>(RealTuple &amp;bloc, BCTuple &amp;bctag, const Box &amp;bx, const Box &amp;domain, const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;lo, const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;hi, const Real *dx, int ratio, const RealVect &amp;a_loc, const GpuArray&lt; int, AMREX_SPACEDIM &gt; &amp;is_periodic)</argsstring>
+        <argsstring>(RealTuple &amp;bloc, BCTuple &amp;bctag, const Box &amp;bx, const Box &amp;domain, const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;lo, const Array&lt; LinOpBCType, AMREX_SPACEDIM &gt; &amp;hi, const Real *dx, int ratio, const RealVect &amp;interior_bloc, const Array&lt; Real, AMREX_SPACEDIM &gt; &amp;domain_bloc_lo, const Array&lt; Real, AMREX_SPACEDIM &gt; &amp;domain_bloc_hi, const GpuArray&lt; int, AMREX_SPACEDIM &gt; &amp;is_periodic)</argsstring>
         <name>setBoxBC</name>
         <param>
           <type><ref refid="classamrex_1_1BndryData_1ab4ed85c429f2c9ba26ce7e046590aee0" kindref="member">RealTuple</ref> &amp;</type>
@@ -200,7 +200,15 @@
         </param>
         <param>
           <type>const <ref refid="classamrex_1_1RealVect" kindref="compound">RealVect</ref> &amp;</type>
-          <declname>a_loc</declname>
+          <declname>interior_bloc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; Real, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>domain_bloc_lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceamrex_1afe930d74045516fece8591f173e57007" kindref="member">Array</ref>&lt; Real, AMREX_SPACEDIM &gt; &amp;</type>
+          <declname>domain_bloc_hi</declname>
         </param>
         <param>
           <type>const <ref refid="namespaceamrex_1a317082290117984ef29e149750e2c7a8" kindref="member">GpuArray</ref>&lt; int, AMREX_SPACEDIM &gt; &amp;</type>
@@ -212,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="33" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="47" bodyend="84"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="33" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp" bodystart="48" bodyend="88"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -576,7 +584,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" bodystart="9" bodyend="38"/>
+    <location file="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" line="12" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/LinearSolvers/MLMG/AMReX_MLMGBndry.H" bodystart="9" bodyend="41"/>
     <listofallmembers>
       <member refid="classamrex_1_1BndryData_1a30e8975eaca9018ee72a0f5e9600e590" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bcloc</name></member>
       <member refid="classamrex_1_1BndryData_1a33b33d468118587f694c916018b3f3fb" prot="protected" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>bcond</name></member>
@@ -656,7 +664,7 @@
       <member refid="classamrex_1_1BndryData_1a2d630b4b3737a4d5f8a896954919b210" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoundCond</name></member>
       <member refid="classamrex_1_1BndryData_1a915cd3e0f2421e3ffe2286c62305bedf" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoundLoc</name></member>
       <member refid="classamrex_1_1BndryData_1a09c6217601d6804d709c3860a081e3f3" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoundLoc</name></member>
-      <member refid="classamrex_1_1MLMGBndry_1a414300876982aa8daf8724cdffc0ea8f" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoxBC</name></member>
+      <member refid="classamrex_1_1MLMGBndry_1a02fa2ecdca85125116399e1525095055" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoxBC</name></member>
       <member refid="classamrex_1_1BndryRegister_1a4da05261825b0d26b246bf5c5b5fb586" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setBoxes</name></member>
       <member refid="classamrex_1_1InterpBndryData_1a93b74ec9e39f3c4ad998f20e4ed1e8ee" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setHomogValues</name></member>
       <member refid="classamrex_1_1MLMGBndry_1ad8b876eada24a27272c68dadbfaab2b9" prot="public" virt="non-virtual"><scope>amrex::MLMGBndry</scope><name>setLOBndryConds</name></member>
