@@ -120,7 +120,6 @@ void buildMFs(MultiFab& src_fab, MultiFab& dst_fab,
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost, 
-                                      Real src_val, Real dst_val,
                                       int cpt = 1, int ips = 0,
                                       int num_streams = Gpu::Device::numGpuStreams())
 {
@@ -130,8 +129,8 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
     std::string mf_label = "(" + std::to_string(n_cells) + "x" + std::to_string(max_grid_size) + ","
                                + std::to_string(Ncomp) + "C/" + std::to_string(Nghost) + "G)";
 
-    src_fab.setVal(src_val);
-    dst_fab.setVal(dst_val);
+    src_fab.setVal(amrex::Random());
+    dst_fab.setVal(amrex::Random());
 
     // If CPT > CPB test/adjust?
 
@@ -198,7 +197,6 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
 
 
 void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost, 
-                                   Real src_val, Real dst_val,
                                    int cpt = 1, int simul = 1, int num_launches = 1)
 {
     MultiFab src_fab, dst_fab;
@@ -207,8 +205,8 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
     std::string mf_label = "(" + std::to_string(n_cells) + "x" + std::to_string(max_grid_size) + ","
                                + std::to_string(Ncomp) + "C/" + std::to_string(Nghost) + "G)";
 
-    src_fab.setVal(src_val);
-    dst_fab.setVal(dst_val);
+    src_fab.setVal(amrex::Random());
+    dst_fab.setVal(amrex::Random());
 
     int lsize = src_fab.local_size();
 
@@ -325,24 +323,24 @@ int main (int argc, char* argv[])
         amrex::Print() << " Testing with uneven boxes " << std::endl << std::endl;
 
         // Call Syntax: Defualts in { }
-        // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, src_val, dst_val, cpt{1}, ips{0}, num_streams{Gpu::Device::numGpuStreams})
-        standardLaunch(            256,            64,     1,      1,     4.5,     2.1);
-        standardLaunch(            256,            61,     1,      1,     3.5,    3.14);
-        standardLaunch(            256,            16,     1,      1,     4.1,     1.2);
-        standardLaunch(            256,            14,     1,      1,    0.27,   1.768);
-        standardLaunch(             64,            16,     1,      1,     3.1,     9.2);
-        standardLaunch(             64,            14,     1,      1,    0.17,    0.68);
+        // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, ips{0}, num_streams{Gpu::Device::numGpuStreams})
+        standardLaunch(            256,            64,     1,      1);
+        standardLaunch(            256,            61,     1,      1);
+        standardLaunch(            256,            16,     1,      1);
+        standardLaunch(            256,            14,     1,      1);
+        standardLaunch(             64,            16,     1,      1);
+        standardLaunch(             64,            14,     1,      1);
 
         amrex::Print() << std::endl;
 
-        // fusedLaunch (domain_size, max_grid_size, Ncomp, Nghost, src_val, dst_val, cpt{1}, simul{1}, num_launches{1})
-        fusedLaunch(            256,            64,     1,      1,    0.33,    1.22);
-        fusedLaunch(            256,            61,     1,      1,    0.63,    1.26);
-        fusedLaunch(            256,            16,     1,      1,    0.37,    0.45);
-        fusedLaunch(            256,            14,     1,      1,    0.93,    0.55);
-        fusedLaunch(             64,            16,     1,      1,    0.31,    0.15);
-        fusedLaunch(             64,            14,     1,      1,    0.91,    0.51);
-   }
+        // fusedLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
+        fusedLaunch(            256,            64,     1,      1);
+        fusedLaunch(            256,            61,     1,      1);
+        fusedLaunch(            256,            16,     1,      1);
+        fusedLaunch(            256,            14,     1,      1);
+        fusedLaunch(             64,            16,     1,      1);
+        fusedLaunch(             64,            14,     1,      1);
 
+    }
     amrex::Finalize();
 }
