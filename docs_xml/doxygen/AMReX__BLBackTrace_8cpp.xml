@@ -448,7 +448,7 @@
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="AMReX__TinyProfiler_8H" kindref="compound">AMReX_TinyProfiler.H</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AMREX_DYNAMIC_LOAD)<sp/>&amp;&amp;<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>defined(__APPLE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AMREX_EXPORT_DYNAMIC)<sp/>&amp;&amp;<sp/>defined(__APPLE__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cxxabi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dlfcn.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AMREX_BACKTRACE_SUPPORTED<sp/>1</highlight><highlight class="normal"></highlight></codeline>
@@ -637,7 +637,7 @@
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::free(strings);</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(AMREX_BACKTRACE_SUPPORTED)<sp/>&amp;&amp;<sp/>defined(AMREX_DYNAMIC_LOAD)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(AMREX_BACKTRACE_SUPPORTED)<sp/>&amp;&amp;<sp/>defined(__APPLE__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="206"><highlight class="normal"></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>have_atos<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>cmd<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/usr/bin/atos&quot;</highlight><highlight class="normal">;</highlight></codeline>
