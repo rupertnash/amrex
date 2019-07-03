@@ -1408,7 +1408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_TypeTraits.H" line="36" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_TypeTraits.H" bodystart="36" bodyend="-1"/>
+        <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_TypeTraits.H" line="38" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_TypeTraits.H" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceamrex_1ae337b46a7ca54b353861635503079536" prot="public" static="no">
         <type>std::conditional&lt; std::chrono::high_resolution_clock::is_steady, std::chrono::high_resolution_clock, std::chrono::steady_clock &gt;::type</type>
@@ -4522,14 +4522,14 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="99" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="99" bodyend="102"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1afc4c03cbb8741cc6fad094a7b07c3131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1aa01774de05dd955d25a1e05206821ecd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type>std::enable_if&lt; std::is_trivially_default_constructible&lt; T &gt;::value &gt;::type</type>
-        <definition>std::enable_if&lt; std::is_trivially_default_constructible&lt;T&gt;::value&gt;::type amrex::placementNew</definition>
+        <type>std::enable_if&lt; <ref refid="AMReX__TypeTraits_8H_1a0eff68a0533ea2aa13ab568ac932c60b" kindref="member">AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE</ref>(T)&gt;::type</type>
+        <definition>std::enable_if&lt; AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE(T)&gt;::type amrex::placementNew</definition>
         <argsstring>(T *const ptr, long n)</argsstring>
         <name>placementNew</name>
         <param>
@@ -4548,14 +4548,14 @@
         </inbodydescription>
         <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" line="151" column="1" bodyfile="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_BaseFab.H" bodystart="151" bodyend="156"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceamrex_1a41ea2cd3e014f048210981ada0ab2a69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceamrex_1a89cfab1d62613c97de6191541059ad8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type>std::enable_if&lt;!std::is_trivially_default_constructible&lt; T &gt;::value &gt;::type</type>
-        <definition>std::enable_if&lt;!std::is_trivially_default_constructible&lt;T&gt;::value&gt;::type amrex::placementNew</definition>
+        <type>std::enable_if&lt;!<ref refid="AMReX__TypeTraits_8H_1a0eff68a0533ea2aa13ab568ac932c60b" kindref="member">AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE</ref>(T)&gt;::type</type>
+        <definition>std::enable_if&lt;!AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE(T)&gt;::type amrex::placementNew</definition>
         <argsstring>(T *const ptr, long n)</argsstring>
         <name>placementNew</name>
         <param>

@@ -67,6 +67,7 @@ var searchData=
   ['amrex_5fhost_5fdevice_5ffor_5f4d',['AMREX_HOST_DEVICE_FOR_4D',['../AMReX__GpuLaunch_8H.html#af44071ada5d6349748d7ee4bd8fcd8d9',1,'AMReX_GpuLaunch.H']]],
   ['amrex_5finline',['AMREX_INLINE',['../AMReX__Extension_8H.html#aeb09e10bb31cfaa6b8928520c9041df9',1,'AMReX_Extension.H']]],
   ['amrex_5fis_5ftrivially_5fcopyable',['AMREX_IS_TRIVIALLY_COPYABLE',['../AMReX__TypeTraits_8H.html#adc50ea9983407ec975c6c594c92bae5d',1,'AMReX_TypeTraits.H']]],
+  ['amrex_5fis_5ftrivially_5fdefault_5fconstructible',['AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE',['../AMReX__TypeTraits_8H.html#a0eff68a0533ea2aa13ab568ac932c60b',1,'AMReX_TypeTraits.H']]],
   ['amrex_5flaunch_5fdevice_5flambda',['AMREX_LAUNCH_DEVICE_LAMBDA',['../AMReX__GpuLaunch_8H.html#a224e4236496017e5f5cbcec29e94c379',1,'AMReX_GpuLaunch.H']]],
   ['amrex_5flaunch_5fdevice_5flambda_5fboxiv',['AMREX_LAUNCH_DEVICE_LAMBDA_BOXIV',['../AMReX__GpuLaunch_8H.html#ad6e15a8f0e982fa6bb46f1896c300fdc',1,'AMReX_GpuLaunch.H']]],
   ['amrex_5flaunch_5fhost_5fdevice_5flambda',['AMREX_LAUNCH_HOST_DEVICE_LAMBDA',['../AMReX__GpuLaunch_8H.html#a20fce791cf3cebcb24e689bb5da837c0',1,'AMReX_GpuLaunch.H']]],

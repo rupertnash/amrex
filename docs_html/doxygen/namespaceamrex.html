@@ -982,13 +982,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a23fa77892c9168a73ef0d653ddd550a0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a23fa77892c9168a73ef0d653ddd550a0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="AMReX__Extension_8H.html#a90cf7b81cd61799c87306cad156cc317">AMREX_FORCE_INLINE</a> <a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a23fa77892c9168a73ef0d653ddd550a0">makeArray4</a> (T *p, <a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;bx, int ncomp) noexcept</td></tr>
 <tr class="separator:a23fa77892c9168a73ef0d653ddd550a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc4c03cbb8741cc6fad094a7b07c3131"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:afc4c03cbb8741cc6fad094a7b07c3131"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_trivially_default_constructible&lt; T &gt;::value &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#afc4c03cbb8741cc6fad094a7b07c3131">placementNew</a> (T *const ptr, long n)</td></tr>
-<tr class="memdesc:afc4c03cbb8741cc6fad094a7b07c3131"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Fortran Array-like Object <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> emulates the Fortran array concept. Useful operations can be performed upon BaseFabs in C++, and they provide a convenient interface to Fortran when it is necessary to retreat into that language.  <a href="#afc4c03cbb8741cc6fad094a7b07c3131">More...</a><br /></td></tr>
-<tr class="separator:afc4c03cbb8741cc6fad094a7b07c3131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41ea2cd3e014f048210981ada0ab2a69"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a41ea2cd3e014f048210981ada0ab2a69"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_trivially_default_constructible&lt; T &gt;::value &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a41ea2cd3e014f048210981ada0ab2a69">placementNew</a> (T *const ptr, long n)</td></tr>
-<tr class="separator:a41ea2cd3e014f048210981ada0ab2a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01774de05dd955d25a1e05206821ecd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa01774de05dd955d25a1e05206821ecd"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="AMReX__TypeTraits_8H.html#a0eff68a0533ea2aa13ab568ac932c60b">AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE</a>(T)&gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#aa01774de05dd955d25a1e05206821ecd">placementNew</a> (T *const ptr, long n)</td></tr>
+<tr class="memdesc:aa01774de05dd955d25a1e05206821ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Fortran Array-like Object <a class="el" href="classamrex_1_1BaseFab.html">BaseFab</a> emulates the Fortran array concept. Useful operations can be performed upon BaseFabs in C++, and they provide a convenient interface to Fortran when it is necessary to retreat into that language.  <a href="#aa01774de05dd955d25a1e05206821ecd">More...</a><br /></td></tr>
+<tr class="separator:aa01774de05dd955d25a1e05206821ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89cfab1d62613c97de6191541059ad8b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a89cfab1d62613c97de6191541059ad8b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!<a class="el" href="AMReX__TypeTraits_8H.html#a0eff68a0533ea2aa13ab568ac932c60b">AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE</a>(T)&gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a89cfab1d62613c97de6191541059ad8b">placementNew</a> (T *const ptr, long n)</td></tr>
+<tr class="separator:a89cfab1d62613c97de6191541059ad8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4164e761a5d24f1fd26acd6f6aa1bc4d"><td class="memTemplParams" colspan="2">template&lt;class B , class F &gt; </td></tr>
 <tr class="memitem:a4164e761a5d24f1fd26acd6f6aa1bc4d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a4164e761a5d24f1fd26acd6f6aa1bc4d">ForEachImpl</a> (B &amp;fab, const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;b, int c, int nc, F f) noexcept</td></tr>
 <tr class="separator:a4164e761a5d24f1fd26acd6f6aa1bc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -25032,14 +25032,14 @@ template&lt;int NStructReal, int NStructInt, int NArrayReal, int NArrayInt&gt; <
 
 </div>
 </div>
-<a class="anchor" id="afc4c03cbb8741cc6fad094a7b07c3131"></a>
+<a class="anchor" id="aa01774de05dd955d25a1e05206821ecd"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_trivially_default_constructible&lt;T&gt;::value&gt;::type amrex::placementNew </td>
+          <td class="memname">std::enable_if&lt; <a class="el" href="AMReX__TypeTraits_8H.html#a0eff68a0533ea2aa13ab568ac932c60b">AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE</a>(T)&gt;::type amrex::placementNew </td>
           <td>(</td>
           <td class="paramtype">T *const&#160;</td>
           <td class="paramname"><em>ptr</em>, </td>
@@ -25069,14 +25069,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a41ea2cd3e014f048210981ada0ab2a69"></a>
+<a class="anchor" id="a89cfab1d62613c97de6191541059ad8b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;!std::is_trivially_default_constructible&lt;T&gt;::value&gt;::type amrex::placementNew </td>
+          <td class="memname">std::enable_if&lt;!<a class="el" href="AMReX__TypeTraits_8H.html#a0eff68a0533ea2aa13ab568ac932c60b">AMREX_IS_TRIVIALLY_DEFAULT_CONSTRUCTIBLE</a>(T)&gt;::type amrex::placementNew </td>
           <td>(</td>
           <td class="paramtype">T *const&#160;</td>
           <td class="paramname"><em>ptr</em>, </td>
