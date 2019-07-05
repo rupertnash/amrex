@@ -4,9 +4,11 @@
 
 using namespace amrex;
 
+constexpr double epsilon = DBL_EPSILON;
+
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-// Single launch version
+// Single launch version, no simultaneous boxes.
 AMREX_GPU_GLOBAL
 void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
            amrex::Array4<Real>* src, amrex::Array4<Real>* dst, 
@@ -33,7 +35,7 @@ void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
     }
 }
 
-// Single launch, simutaneous box calc version
+// Single launch, simultaneous box calc version
 AMREX_GPU_GLOBAL
 void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
            amrex::Array4<Real>* src, amrex::Array4<Real>* dst, 
@@ -117,6 +119,37 @@ void buildMFs(MultiFab& src_fab, MultiFab& dst_fab,
     dst_fab.setVal(0.0);
 }
 
+void errorCheck(std::string label, MultiFab& src_fab, MultiFab& dst_fab)
+{
+    Real src_sum = src_fab.sum();
+    Real dst_sum = dst_fab.sum();
+
+    if ( (std::abs(src_sum - dst_sum)/src_sum) > epsilon )
+    {
+        amrex::Print() << "*********** " << label << " error found." << std::endl;
+        amrex::Print() << " ---- dst = " << dst_sum 
+                       << "; src = "     << src_sum  
+                       << "; delta = "   << std::abs(dst_sum - src_sum)/src_sum << std::endl;
+/*
+        for (MFIter mfi(src_fab); mfi.isValid(); ++mfi)
+        {
+            const Box bx = mfi.validbox();
+            Array4<Real> const& src = src_fab.array(mfi);
+            Array4<Real> const& dst = dst_fab.array(mfi);
+
+            amrex::ParallelFor(bx, src_fab.nComp(),
+            [=] AMREX_GPU_DEVICE (int i, int j, int k, int n)
+            {
+                if (src(i,j,k,n) != dst(i,j,k,n))
+                {
+                    printf("Error on: %i,%i,%i,%i: %f != %f\n",i,j,k,n,src(i,j,k,n),dst(i,j,k,n));
+                }
+            });
+        }
+*/
+    }
+}
+
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost, 
@@ -133,7 +166,6 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
     dst_fab.setVal(amrex::Random());
 
     // If CPT > CPB test/adjust?
-
     if (num_streams > Gpu::Device::numGpuStreams())
     {
         num_streams = Gpu::Device::numGpuStreams();
@@ -181,20 +213,10 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
     double timer_end = amrex::second();
 
     amrex::Print() << timer_name << " = " << timer_end-timer_start << " seconds." << std::endl;
-
-    // Error check
-    Real src_sum = src_fab.sum();
-    Real dst_sum = dst_fab.sum();
-    if (src_sum != dst_sum)
-    {
-        amrex::Print() << "*********** " << timer_name << " error found." << std::endl;
-        amrex::Print() << " ---- dst = " << dst_sum 
-                       << "; src = " << src_sum << std::endl;
-    }
+    errorCheck(timer_name, src_fab, dst_fab);
 }
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
 
 void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost, 
                                    int cpt = 1, int simul = 1, int num_launches = 1)
@@ -204,7 +226,6 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
 
     std::string mf_label = "(" + std::to_string(n_cells) + "x" + std::to_string(max_grid_size) + ","
                                + std::to_string(Ncomp) + "C/" + std::to_string(Nghost) + "G)";
-
     src_fab.setVal(amrex::Random());
     dst_fab.setVal(amrex::Random());
 
@@ -293,15 +314,7 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
     double timer_end = amrex::second();
 
     amrex::Print() << timer_name << " = " << timer_end-timer_start << " seconds." << std::endl;
-
-    Real src_sum = src_fab.sum();
-    Real dst_sum = dst_fab.sum();
-    if (src_sum != dst_sum)
-    {
-        amrex::Print() << "*********** " << timer_name << " error found." << std::endl;
-        amrex::Print() << " ---- dst = " << dst_sum 
-                       << "; src = " << src_sum << std::endl;
-    }
+    errorCheck(timer_name, src_fab, dst_fab);
 
     The_Pinned_Arena()->free(bx_h);
     The_Pinned_Arena()->free(offset_h);
@@ -324,23 +337,22 @@ int main (int argc, char* argv[])
 
         // Call Syntax: Defualts in { }
         // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, ips{0}, num_streams{Gpu::Device::numGpuStreams})
-        standardLaunch(            256,            64,     1,      1);
-        standardLaunch(            256,            61,     1,      1);
-        standardLaunch(            256,            16,     1,      1);
-        standardLaunch(            256,            14,     1,      1);
-        standardLaunch(             64,            16,     1,      1);
-        standardLaunch(             64,            14,     1,      1);
+        standardLaunch(            256,            64,     1,      0);
+        standardLaunch(            256,            61,     1,      0);
+        standardLaunch(            256,            16,     1,      0);
+        standardLaunch(            256,            14,     1,      0);
+        standardLaunch(             64,            16,     1,      0);
+        standardLaunch(             64,            14,     1,      0);
 
         amrex::Print() << std::endl;
 
         // fusedLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
-        fusedLaunch(            256,            64,     1,      1);
-        fusedLaunch(            256,            61,     1,      1);
-        fusedLaunch(            256,            16,     1,      1);
-        fusedLaunch(            256,            14,     1,      1);
-        fusedLaunch(             64,            16,     1,      1);
-        fusedLaunch(             64,            14,     1,      1);
-
+        fusedLaunch(            256,            64,     1,      0);
+        fusedLaunch(            256,            61,     1,      0);
+        fusedLaunch(            256,            16,     1,      0);
+        fusedLaunch(            256,            14,     1,      0);
+        fusedLaunch(             64,            16,     1,      0);
+        fusedLaunch(             64,            14,     1,      0);
     }
     amrex::Finalize();
 }
