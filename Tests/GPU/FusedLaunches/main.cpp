@@ -9,19 +9,22 @@ constexpr double epsilon = DBL_EPSILON;
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 // Single launch version, no simultaneous boxes.
+// Generally mean for evenly sized boxes, but should be capable of handling a variety.
 AMREX_GPU_GLOBAL
 void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
            amrex::Array4<Real>* src, amrex::Array4<Real>* dst, 
            int scomp, int dcomp, int ncomp)
 {
+    const int tid = blockDim.x*blockIdx.x+threadIdx.x;
+    const int stride = blockDim.x*gridDim.x;
+
     for (int l=0; l<size; ++l)
     {
         int ncells = bx[l].numPts();
         const auto lo = amrex::lbound(bx[l]);
         const auto len = amrex::length(bx[l]);
  
-        for (int icell = blockDim.x*blockIdx.x+threadIdx.x, stride = blockDim.x*gridDim.x;
-                 icell < ncells; icell += stride) {
+        for (int icell = tid; icell < ncells; icell += stride) {
             int k =  icell /   (len.x*len.y);
             int j = (icell - k*(len.x*len.y)) /   len.x;
             int i = (icell - k*(len.x*len.y)) - j*len.x;
@@ -41,22 +44,21 @@ void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
            amrex::Array4<Real>* src, amrex::Array4<Real>* dst, 
            int scomp, int dcomp, int ncomp, int simul)
 {
-    // Works because boxes are currently of equal size.
-    //    When box size varies: calc or pass in maximum box size.
-    //    Will need to adjust threads.
-    int ncells = bx[0].numPts();
+    // Break up the threads evenly across the boxes.
     int tid = blockDim.x*blockIdx.x+threadIdx.x;
-    int bidx = tid/ncells;
+    int stride = (blockDim.x*gridDim.x)/simul;
+    int bidx = tid/stride;
 
-    if (bidx < simul)
+    for (int l = 0; l < size; l+=simul)
     {
-        for (int l = 0; l < size; l+=simul)
+        int bid = l+bidx;
+        if (bid < size)
         {
-            int bid = l+bidx;
+            int ncells = bx[bid].numPts();
             const auto lo  = amrex::lbound(bx[bid]);
             const auto len = amrex::length(bx[bid]);
  
-            for (int icell = (tid%ncells), stride = (blockDim.x*gridDim.x)/simul; icell < ncells; icell += stride) {
+            for (int icell = (tid%ncells); icell < ncells; icell += stride) {
                 int k =  icell /   (len.x*len.y);
                 int j = (icell - k*(len.x*len.y)) /   len.x;
                 int i = (icell - k*(len.x*len.y)) - j*len.x;
