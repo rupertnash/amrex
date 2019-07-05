@@ -114,6 +114,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a28c3636c49dbe98f8d198928968fbc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d43e33053938bcb6f3edd3131e23ea9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a2d43e33053938bcb6f3edd3131e23ea9">setBottomVerbose</a> (int v) noexcept</td></tr>
 <tr class="separator:a2d43e33053938bcb6f3edd3131e23ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa190e765b472d69390d225023c6abcdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#aa190e765b472d69390d225023c6abcdf">setBottomTolerance</a> (Real t) noexcept</td></tr>
+<tr class="separator:aa190e765b472d69390d225023c6abcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950912e1d77ef8c385ae50930e21c153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a950912e1d77ef8c385ae50930e21c153">setBottomToleranceAbs</a> (Real t) noexcept</td></tr>
+<tr class="separator:a950912e1d77ef8c385ae50930e21c153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3180b889de0ac9df9c1a9949eeb43105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a3180b889de0ac9df9c1a9949eeb43105">setMaxIter</a> (int v) noexcept</td></tr>
 <tr class="separator:a3180b889de0ac9df9c1a9949eeb43105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97182d5c19090f2c6e3f80124f5559d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a97182d5c19090f2c6e3f80124f5559d4">setCGMaxIter</a> (int v) noexcept</td></tr>
@@ -153,6 +157,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aa72fccd433288c1c3d6c83bfb8264e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafd94f8ce6285a8b8b12d6af7c76ee16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#aafd94f8ce6285a8b8b12d6af7c76ee16">m_max_coarsening_level</a> = 100</td></tr>
 <tr class="separator:aafd94f8ce6285a8b8b12d6af7c76ee16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de0c8f9fdd877563dae993429e8cec5"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a9de0c8f9fdd877563dae993429e8cec5">m_bottom_reltol</a> = 1.e-4</td></tr>
+<tr class="separator:a9de0c8f9fdd877563dae993429e8cec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af99ea9a90a1794b4d7eda542b545f162"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#af99ea9a90a1794b4d7eda542b545f162">m_bottom_abstol</a> = -1.0</td></tr>
+<tr class="separator:af99ea9a90a1794b4d7eda542b545f162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38aa95061e693248dfcf66b0bc95328f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceamrex.html#a9303c93b47b7839de8ce552cb7cb21c4">MLMG::BottomSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1MacProjector.html#a38aa95061e693248dfcf66b0bc95328f">bottom_solver_type</a> = MLMG::BottomSolver::bicgstab</td></tr>
 <tr class="separator:a38aa95061e693248dfcf66b0bc95328f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -289,6 +297,54 @@ Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceamrex.html#a9303c93b47b7839de8ce552cb7cb21c4">MLMG::BottomSolver</a>&#160;</td>
           <td class="paramname"><em>bottom_solver_type_in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa190e765b472d69390d225023c6abcdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MacProjector::setBottomTolerance </td>
+          <td>(</td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a950912e1d77ef8c385ae50930e21c153"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amrex::MacProjector::setBottomToleranceAbs </td>
+          <td>(</td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -501,6 +557,46 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::unique_ptr&lt;<a class="el" href="classamrex_1_1MLABecLaplacian.html">MLABecLaplacian</a>&gt; amrex::MacProjector::m_abeclap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af99ea9a90a1794b4d7eda542b545f162"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Real amrex::MacProjector::m_bottom_abstol = -1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9de0c8f9fdd877563dae993429e8cec5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Real amrex::MacProjector::m_bottom_reltol = 1.e-4</td>
         </tr>
       </table>
   </td>
