@@ -4,17 +4,19 @@
 
 using namespace amrex;
 
-constexpr double epsilon = DBL_EPSILON;
+constexpr double epsilon = DBL_EPSILON * 4;
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 // Single launch version, no simultaneous boxes.
-// Generally mean for evenly sized boxes, but should be capable of handling a variety.
+// Kept to possibly test overhead in this version compared to simul version.
 AMREX_GPU_GLOBAL
 void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
            amrex::Array4<Real>* src, amrex::Array4<Real>* dst, 
            int scomp, int dcomp, int ncomp)
 {
+    // Should add these where used instead of here
+    //    to reduce registery count?
     const int tid = blockDim.x*blockIdx.x+threadIdx.x;
     const int stride = blockDim.x*gridDim.x;
 
@@ -45,29 +47,28 @@ void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
            int scomp, int dcomp, int ncomp, int simul)
 {
     // Break up the threads evenly across the boxes.
+
+    // Should add these where used instead of here
+    //    to reduce registery count?
     int tid = blockDim.x*blockIdx.x+threadIdx.x;
     int stride = (blockDim.x*gridDim.x)/simul;
     int bidx = tid/stride;
 
-    for (int l = 0; l < size; l+=simul)
+    for (int bid = bidx; bid < size; bid+=simul)
     {
-        int bid = l+bidx;
-        if (bid < size)
-        {
-            int ncells = bx[bid].numPts();
-            const auto lo  = amrex::lbound(bx[bid]);
-            const auto len = amrex::length(bx[bid]);
+        int ncells = bx[bid].numPts();
+        const auto lo  = amrex::lbound(bx[bid]);
+        const auto len = amrex::length(bx[bid]);
  
-            for (int icell = (tid%ncells); icell < ncells; icell += stride) {
-                int k =  icell /   (len.x*len.y);
-                int j = (icell - k*(len.x*len.y)) /   len.x;
-                int i = (icell - k*(len.x*len.y)) - j*len.x;
-                i += lo.x;
-                j += lo.y;
-                k += lo.z;
-                for (int n = 0; n < ncomp; ++n) {
-                    (dst[bid])(i,j,k,dcomp+n) = (src[bid])(i+offset[bid].x,j+offset[bid].y,k+offset[bid].z,scomp+n); 
-                }
+        for (int icell = (tid%ncells); icell < ncells; icell += stride) {
+            int k =  icell /   (len.x*len.y);
+            int j = (icell - k*(len.x*len.y)) /   len.x;
+            int i = (icell - k*(len.x*len.y)) - j*len.x;
+            i += lo.x;
+            j += lo.y;
+            k += lo.z;
+            for (int n = 0; n < ncomp; ++n) {
+                (dst[bid])(i,j,k,dcomp+n) = (src[bid])(i+offset[bid].x,j+offset[bid].y,k+offset[bid].z,scomp+n); 
             }
         }
     }
@@ -121,6 +122,8 @@ void buildMFs(MultiFab& src_fab, MultiFab& dst_fab,
     dst_fab.setVal(0.0);
 }
 
+// -------------------------------------------------------------
+
 void errorCheck(std::string label, MultiFab& src_fab, MultiFab& dst_fab)
 {
     Real src_sum = src_fab.sum();
@@ -132,6 +135,8 @@ void errorCheck(std::string label, MultiFab& src_fab, MultiFab& dst_fab)
         amrex::Print() << " ---- dst = " << dst_sum 
                        << "; src = "     << src_sum  
                        << "; delta = "   << std::abs(dst_sum - src_sum)/src_sum << std::endl;
+
+        // Full error check. Search for and print all cells with errors. Uncomment if needed.
 /*
         for (MFIter mfi(src_fab); mfi.isValid(); ++mfi)
         {
@@ -155,7 +160,7 @@ void errorCheck(std::string label, MultiFab& src_fab, MultiFab& dst_fab)
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost, 
-                                      int cpt = 1, int ips = 0,
+                                      int cpt = 1, int synchs = 0,
                                       int num_streams = Gpu::Device::numGpuStreams())
 {
     MultiFab src_fab, dst_fab;
@@ -167,22 +172,27 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
     src_fab.setVal(amrex::Random());
     dst_fab.setVal(amrex::Random());
 
-    // If CPT > CPB test/adjust?
     if (num_streams > Gpu::Device::numGpuStreams())
     {
         num_streams = Gpu::Device::numGpuStreams();
         std::cout << "Too many streams requested. Using maximum value of " << num_streams << std::endl;
     }
 
-    if ( (ips <= 0) || (ips > src_fab.local_size()) )
+    int ips = 0;    // (iterations per synch)
+    if ( (synchs <= 0) || (synchs > src_fab.local_size()) )
     {
-        ips = src_fab.local_size();
+        synchs = 0;
+        ips = src_fab.local_size();         // No synchs.
+    }
+    else
+    {
+        ips = src_fab.local_size() / synchs;
     }
 
     std::string timer_name = "STANDARD" + mf_label + ": " +
                                std::to_string(num_streams) + " streams, " + 
                                std::to_string(cpt) + " CPT, " +
-                               std::to_string(ips) + " IPS";
+                               std::to_string(synchs) + " synchs";
 
     double timer_start = amrex::second();
     BL_PROFILE_VAR(timer_name, standard);
@@ -233,11 +243,15 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
 
     int lsize = src_fab.local_size();
 
-    // Note: Not a parallel copy, so src_ba = dst_ba.
     if (num_launches > lsize)
     {
         num_launches = lsize; 
         std::cout << "Too many launches requested. Using one box per launch: " << dst_fab.local_size() << std::endl;
+    }
+    if (simul > lsize)
+    {
+        num_launches = lsize; 
+        std::cout << "Too many simultaneous boxes requested. Using total number of boxes: " << dst_fab.local_size() << std::endl;
     }
 
     std::string timer_name = "FUSED" + mf_label + ": " +
@@ -303,7 +317,7 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
             AMREX_GPU_LAUNCH_GLOBAL(ec, copy, bx_num, 
                                     bx_d+l_start,  offset_d+l_start,
                                     src_d+l_start, dst_d+l_start,
-                                    0, 0, Ncomp, simul);
+                                    0, 0, Ncomp);
         }
         l_start += bx_num;
     }
@@ -331,14 +345,76 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+void standardSuite(int domain_size, int max_grid_size, int Ncomp, int Nghost,
+                   int cpt_start, int cpt_end, int cpt_stride,
+                   int synchs_start, int synchs_end, int synchs_stride,
+                   int nstreams_start, int nstreams_end, int nstreams_stride)
+{
+    for (int cpt = cpt_start; cpt <= cpt_end; cpt *= cpt_stride)
+    {
+        for (int synchs = synchs_start; synchs <= synchs_end; synchs += synchs_stride)
+        {
+            for(int nstreams = nstreams_start; nstreams <= nstreams_end; nstreams *= nstreams_stride)
+            {
+                standardLaunch(domain_size, max_grid_size, Ncomp, Nghost, cpt, synchs, nstreams);
+            }
+        }
+    }
+}
+
+// -------------------------------------------------------------
+
+void fusedSuite(int domain_size, int max_grid_size, int Ncomp, int Nghost,
+                int cpt_start, int cpt_end, int cpt_stride,
+                int simul_start, int simul_end, int simul_stride,
+                int nlaunches_start, int nlaunches_end, int nlaunches_stride)
+{
+    for (int cpt = cpt_start; cpt <= cpt_end; cpt *= cpt_stride)
+    {
+        for (int simul = simul_start; simul <= simul_end; simul *= simul_stride)
+        {
+            for(int nlaunches = nlaunches_start; nlaunches <= nlaunches_end; nlaunches *= nlaunches_stride)
+            {
+                fusedLaunch(domain_size, max_grid_size, Ncomp, Nghost, cpt, simul, nlaunches);
+            }
+        }
+    }
+}
+
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 int main (int argc, char* argv[])
 {
     amrex::Initialize(argc, argv);
     {
-        amrex::Print() << " Testing with uneven boxes " << std::endl << std::endl;
 
-        // Call Syntax: Defualts in { }
-        // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, ips{0}, num_streams{Gpu::Device::numGpuStreams})
+        int domain_size = 256;
+        int max_grid_size = 16;
+        int Ncomp = 1;
+        int Nghost = 0;
+
+        amrex::Print() << std::endl << "Standard Tests" << std::endl;
+
+        standardSuite(domain_size, max_grid_size, Ncomp, Nghost,
+                      1,  32,  2,    // cells per thread
+                      0,  10,  1,    // evenly-distributed synchs ( setup for none )
+                      1,  16,  2);   // number of threads
+
+        amrex::Print() << std::endl << "Fused Tests" << std::endl;
+
+        fusedSuite(domain_size, max_grid_size, Ncomp, Nghost,
+                   1, 32, 2,    // cells per thread
+                   1, 32, 2,    // simultaneous boxes 
+                   1, 32, 2);   // number of launches
+
+/*
+        // Call Syntax: Defaults in { }
+        // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, synchs{0}, num_streams{Gpu::Device::numGpuStreams})
+        // fusedLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
+
+
+        // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, synchs{0}, num_streams{Gpu::Device::numGpuStreams})
         standardLaunch(            256,            64,     1,      0);
         standardLaunch(            256,            61,     1,      0);
         standardLaunch(            256,            16,     1,      0);
@@ -346,7 +422,7 @@ int main (int argc, char* argv[])
         standardLaunch(             64,            16,     1,      0);
         standardLaunch(             64,            14,     1,      0);
 
-        amrex::Print() << std::endl;
+        amrex::Print() << std::endl << std::endl;
 
         // fusedLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
         fusedLaunch(            256,            64,     1,      0);
@@ -355,6 +431,14 @@ int main (int argc, char* argv[])
         fusedLaunch(            256,            14,     1,      0);
         fusedLaunch(             64,            16,     1,      0);
         fusedLaunch(             64,            14,     1,      0);
+
+        amrex::Print() << std::endl << "Simul" << std::endl;
+
+        fusedLaunch(            256,            14,     1,      0,      1,        2);
+        fusedLaunch(            256,            14,     1,      0,      1,        3);
+        fusedLaunch(            256,            14,     1,      0,      1,        4);
+        fusedLaunch(            256,            14,     1,      0,      1,        8);
+*/
     }
     amrex::Finalize();
 }
