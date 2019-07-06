@@ -16,7 +16,7 @@ void copy (int size, amrex::Box* bx, amrex::Dim3* offset,
            int scomp, int dcomp, int ncomp)
 {
     // Should add these where used instead of here
-    //    to reduce registery count?
+    //    to reduce register count?
     const int tid = blockDim.x*blockIdx.x+threadIdx.x;
     const int stride = blockDim.x*gridDim.x;
 
@@ -97,13 +97,13 @@ void copy (amrex::Dim3 lo, amrex::Dim3 len, int ncells,
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-void buildMFs(MultiFab& src_fab, MultiFab& dst_fab, 
-              int n_cell, int max_grid_size, int Ncomp, int Nghost) 
+std::string buildMFs(MultiFab& src_fab, MultiFab& dst_fab, 
+                     IntVect n_cell, IntVect max_grid_size, int Ncomp, int Nghost) 
 {
     BoxArray ba;
     {
-        IntVect dom_lo(AMREX_D_DECL(       0,        0,        0));
-        IntVect dom_hi(AMREX_D_DECL(n_cell-1, n_cell-1, n_cell-1));
+        IntVect dom_lo(AMREX_D_DECL(          0,           0,           0));
+        IntVect dom_hi(AMREX_D_DECL(n_cell[0]-1, n_cell[1]-1, n_cell[2]-1));
         Box domain(dom_lo, dom_hi);
 
         // Initialize the boxarray "ba" from the single box "bx"
@@ -120,6 +120,18 @@ void buildMFs(MultiFab& src_fab, MultiFab& dst_fab,
     // Extra first touch to make sure the MultiFab data is moved to the device.
     src_fab.setVal(0.0);
     dst_fab.setVal(0.0);
+
+    std::string mf_label = AMREX_D_TERM( '(' + std::to_string(n_cell[0]) ,
+                                       + ',' + std::to_string(n_cell[1]) ,
+                                       + ',' + std::to_string(n_cell[2]) + ')') + 'x' +
+                           AMREX_D_TERM( '(' + std::to_string(max_grid_size[0]) ,
+                                       + ',' + std::to_string(max_grid_size[1]) ,
+                                       + ',' + std::to_string(max_grid_size[2]) + ')') + '-'
+                                       + std::to_string(Ncomp) + "C/" 
+                                       + std::to_string(Nghost) + "G";
+
+    return mf_label;
+
 }
 
 // -------------------------------------------------------------
@@ -159,15 +171,11 @@ void errorCheck(std::string label, MultiFab& src_fab, MultiFab& dst_fab)
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost, 
-                                      int cpt = 1, int synchs = 0,
-                                      int num_streams = Gpu::Device::numGpuStreams())
+void loopLaunch(IntVect n_cells, IntVect max_grid_size, int Ncomp, int Nghost, 
+                int cpt = 1, int synchs = 0, int num_streams = Gpu::Device::numGpuStreams())
 {
     MultiFab src_fab, dst_fab;
-    buildMFs(src_fab, dst_fab, n_cells, max_grid_size, Ncomp, Nghost);
-
-    std::string mf_label = "(" + std::to_string(n_cells) + "x" + std::to_string(max_grid_size) + ","
-                               + std::to_string(Ncomp) + "C/" + std::to_string(Nghost) + "G)";
+    std::string mf_label = buildMFs(src_fab, dst_fab, n_cells, max_grid_size, Ncomp, Nghost);
 
     src_fab.setVal(amrex::Random());
     dst_fab.setVal(amrex::Random());
@@ -189,13 +197,13 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
         ips = src_fab.local_size() / synchs;
     }
 
-    std::string timer_name = "STANDARD" + mf_label + ": " +
+    std::string timer_name = "LOOP:" + mf_label + ": " +
                                std::to_string(num_streams) + " streams, " + 
                                std::to_string(cpt) + " CPT, " +
                                std::to_string(synchs) + " synchs";
 
     double timer_start = amrex::second();
-    BL_PROFILE_VAR(timer_name, standard);
+    BL_PROFILE_VAR(timer_name, loop);
     for (MFIter mfi(src_fab); mfi.isValid(); ++mfi)
     {
         const int idx = mfi.LocalIndex();
@@ -221,7 +229,7 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
             Gpu::Device::synchronize();
         }
     }
-    BL_PROFILE_VAR_STOP(standard);
+    BL_PROFILE_VAR_STOP(loop);
     double timer_end = amrex::second();
 
     amrex::Print() << timer_name << " = " << timer_end-timer_start << " seconds." << std::endl;
@@ -230,14 +238,12 @@ void standardLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost, 
-                                   int cpt = 1, int simul = 1, int num_launches = 1)
+void fusedLaunch(IntVect n_cells, IntVect max_grid_size, int Ncomp, int Nghost, 
+                      int cpt = 1, int simul = 1, int num_launches = 1)
 {
     MultiFab src_fab, dst_fab;
-    buildMFs(src_fab, dst_fab, n_cells, max_grid_size, Ncomp, Nghost);
+    std::string mf_label = buildMFs(src_fab, dst_fab, n_cells, max_grid_size, Ncomp, Nghost);
 
-    std::string mf_label = "(" + std::to_string(n_cells) + "x" + std::to_string(max_grid_size) + ","
-                               + std::to_string(Ncomp) + "C/" + std::to_string(Nghost) + "G)";
     src_fab.setVal(amrex::Random());
     dst_fab.setVal(amrex::Random());
 
@@ -254,7 +260,7 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
         std::cout << "Too many simultaneous boxes requested. Using total number of boxes: " << dst_fab.local_size() << std::endl;
     }
 
-    std::string timer_name = "FUSED" + mf_label + ": " +
+    std::string timer_name = "FUSED:" + mf_label + ": " +
                                std::to_string(num_launches) + " launches, " + 
                                std::to_string(cpt) + " CPT, " +
                                std::to_string(simul) + " simul";
@@ -345,7 +351,7 @@ void fusedLaunch(int n_cells, int max_grid_size, int Ncomp, int Nghost,
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-void standardSuite(int domain_size, int max_grid_size, int Ncomp, int Nghost,
+void loopSuite(IntVect n_cells, IntVect max_grid_size, int Ncomp, int Nghost,
                    int cpt_start, int cpt_end, int cpt_stride,
                    int synchs_start, int synchs_end, int synchs_stride,
                    int nstreams_start, int nstreams_end, int nstreams_stride)
@@ -356,7 +362,7 @@ void standardSuite(int domain_size, int max_grid_size, int Ncomp, int Nghost,
         {
             for(int nstreams = nstreams_start; nstreams <= nstreams_end; nstreams *= nstreams_stride)
             {
-                standardLaunch(domain_size, max_grid_size, Ncomp, Nghost, cpt, synchs, nstreams);
+                loopLaunch(n_cells, max_grid_size, Ncomp, Nghost, cpt, synchs, nstreams);
             }
         }
     }
@@ -364,7 +370,7 @@ void standardSuite(int domain_size, int max_grid_size, int Ncomp, int Nghost,
 
 // -------------------------------------------------------------
 
-void fusedSuite(int domain_size, int max_grid_size, int Ncomp, int Nghost,
+void fusedSuite(IntVect n_cells, IntVect max_grid_size, int Ncomp, int Nghost,
                 int cpt_start, int cpt_end, int cpt_stride,
                 int simul_start, int simul_end, int simul_stride,
                 int nlaunches_start, int nlaunches_end, int nlaunches_stride)
@@ -375,7 +381,7 @@ void fusedSuite(int domain_size, int max_grid_size, int Ncomp, int Nghost,
         {
             for(int nlaunches = nlaunches_start; nlaunches <= nlaunches_end; nlaunches *= nlaunches_stride)
             {
-                fusedLaunch(domain_size, max_grid_size, Ncomp, Nghost, cpt, simul, nlaunches);
+                fusedLaunch(n_cells, max_grid_size, Ncomp, Nghost, cpt, simul, nlaunches);
             }
         }
     }
@@ -389,55 +395,54 @@ int main (int argc, char* argv[])
     amrex::Initialize(argc, argv);
     {
 
-        int domain_size = 256;
-        int max_grid_size = 16;
+        // Test entire launch range for a given problem size.
+        IntVect n_cells(256);
+        IntVect max_grid_size(16);
         int Ncomp = 1;
         int Nghost = 0;
 
-        amrex::Print() << std::endl << "Standard Tests" << std::endl;
+        amrex::Print() << std::endl << "Loop Tests" << std::endl;
 
-        standardSuite(domain_size, max_grid_size, Ncomp, Nghost,
+        loopSuite(n_cells, max_grid_size, Ncomp, Nghost,
                       1,  32,  2,    // cells per thread
                       0,  10,  1,    // evenly-distributed synchs ( setup for none )
                       1,  16,  2);   // number of threads
 
         amrex::Print() << std::endl << "Fused Tests" << std::endl;
 
-        fusedSuite(domain_size, max_grid_size, Ncomp, Nghost,
+        fusedSuite(n_cells, max_grid_size, Ncomp, Nghost,
                    1, 32, 2,    // cells per thread
                    1, 32, 2,    // simultaneous boxes 
                    1, 32, 2);   // number of launches
 
 /*
         // Call Syntax: Defaults in { }
-        // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, synchs{0}, num_streams{Gpu::Device::numGpuStreams})
-        // fusedLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
+        // loopLaunch (n_cells, max_grid_size, Ncomp, Nghost, cpt{1}, synchs{0}, num_streams{Gpu::Device::numGpuStreams})
+        // fusedLaunch (n_cells, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
 
 
-        // standardLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, synchs{0}, num_streams{Gpu::Device::numGpuStreams})
-        standardLaunch(            256,            64,     1,      0);
-        standardLaunch(            256,            61,     1,      0);
-        standardLaunch(            256,            16,     1,      0);
-        standardLaunch(            256,            14,     1,      0);
-        standardLaunch(             64,            16,     1,      0);
-        standardLaunch(             64,            14,     1,      0);
+        // loopLaunch (n_cells, max_grid_size, Ncomp, Nghost, cpt{1}, synchs{0}, num_streams{Gpu::Device::numGpuStreams})
+        loopLaunch(        256,            64,     1,      0);
+        loopLaunch(        256,            61,     1,      0);
+        loopLaunch(        256,            16,     1,      0);
+        loopLaunch(        256,            14,     1,      0);
+        loopLaunch(         64,            16,     1,      0);
+        loopLaunch(         64,            14,     1,      0);
 
         amrex::Print() << std::endl << std::endl;
 
-        // fusedLaunch (domain_size, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
-        fusedLaunch(            256,            64,     1,      0);
-        fusedLaunch(            256,            61,     1,      0);
-        fusedLaunch(            256,            16,     1,      0);
-        fusedLaunch(            256,            14,     1,      0);
-        fusedLaunch(             64,            16,     1,      0);
-        fusedLaunch(             64,            14,     1,      0);
+        // fusedLaunch (n_cells, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
+        fusedLaunch(        256,            64,     1,      0);
+        fusedLaunch(        256,            61,     1,      0);
+        fusedLaunch(        256,            16,     1,      0);
+        fusedLaunch(        256,            14,     1,      0);
+        fusedLaunch(         64,            16,     1,      0);
+        fusedLaunch(         64,            14,     1,      0);
 
-        amrex::Print() << std::endl << "Simul" << std::endl;
-
-        fusedLaunch(            256,            14,     1,      0,      1,        2);
-        fusedLaunch(            256,            14,     1,      0,      1,        3);
-        fusedLaunch(            256,            14,     1,      0,      1,        4);
-        fusedLaunch(            256,            14,     1,      0,      1,        8);
+        fusedLaunch(        256,            14,     1,      0,      1,        2);
+        fusedLaunch(        256,            14,     1,      0,      1,        3);
+        fusedLaunch(        256,            14,     1,      0,      1,        4);
+        fusedLaunch(        256,            14,     1,      0,      1,        8);
 */
     }
     amrex::Finalize();
