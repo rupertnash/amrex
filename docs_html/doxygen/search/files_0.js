@@ -150,8 +150,10 @@ var searchData=
   ['amrex_5feb2_2ecpp',['AMReX_EB2.cpp',['../AMReX__EB2_8cpp.html',1,'']]],
   ['amrex_5feb2_2eh',['AMReX_EB2.H',['../AMReX__EB2_8H.html',1,'']]],
   ['amrex_5feb2_5f2d_2ef90',['AMReX_eb2_2d.F90',['../AMReX__eb2__2d_8F90.html',1,'']]],
+  ['amrex_5feb2_5f2d_5fc_2ecpp',['AMReX_EB2_2D_C.cpp',['../AMReX__EB2__2D__C_8cpp.html',1,'']]],
   ['amrex_5feb2_5f2d_5fc_2eh',['AMReX_EB2_2D_C.H',['../AMReX__EB2__2D__C_8H.html',1,'']]],
   ['amrex_5feb2_5f3d_2ef90',['AMReX_eb2_3d.F90',['../AMReX__eb2__3d_8F90.html',1,'']]],
+  ['amrex_5feb2_5f3d_5fc_2ecpp',['AMReX_EB2_3D_C.cpp',['../AMReX__EB2__3D__C_8cpp.html',1,'']]],
   ['amrex_5feb2_5f3d_5fc_2eh',['AMReX_EB2_3D_C.H',['../AMReX__EB2__3D__C_8H.html',1,'']]],
   ['amrex_5feb2_5fc_2eh',['AMReX_EB2_C.H',['../AMReX__EB2__C_8H.html',1,'']]],
   ['amrex_5feb2_5ff_2eh',['AMReX_EB2_F.H',['../AMReX__EB2__F_8H.html',1,'']]],
@@ -377,6 +379,7 @@ var searchData=
   ['amrex_5flo_5futil_2ef90',['AMReX_LO_UTIL.F90',['../AMReX__LO__UTIL_8F90.html',1,'']]],
   ['amrex_5floadbalancekd_2ecpp',['AMReX_LoadBalanceKD.cpp',['../AMReX__LoadBalanceKD_8cpp.html',1,'']]],
   ['amrex_5floadbalancekd_2eh',['AMReX_LoadBalanceKD.H',['../AMReX__LoadBalanceKD_8H.html',1,'']]],
+  ['amrex_5floop_2eh',['AMReX_Loop.H',['../AMReX__Loop_8H.html',1,'']]],
   ['amrex_5floutil_5fk_2eh',['AMReX_LOUtil_K.H',['../AMReX__LOUtil__K_8H.html',1,'']]],
   ['amrex_5flp_5f1d_2ef90',['AMReX_LP_1D.F90',['../AMReX__LP__1D_8F90.html',1,'']]],
   ['amrex_5flp_5f2d_2ef90',['AMReX_LP_2D.F90',['../AMReX__LP__2D_8F90.html',1,'']]],
@@ -597,6 +600,6 @@ var searchData=
   ['amrex_5fyafluxregister_5f2d_5fk_2eh',['AMReX_YAFluxRegister_2D_K.H',['../AMReX__YAFluxRegister__2D__K_8H.html',1,'']]],
   ['amrex_5fyafluxregister_5f3d_5fk_2eh',['AMReX_YAFluxRegister_3D_K.H',['../AMReX__YAFluxRegister__3D__K_8H.html',1,'']]],
   ['amrex_5fyafluxregister_5fk_2eh',['AMReX_YAFluxRegister_K.H',['../AMReX__YAFluxRegister__K_8H.html',1,'']]],
-  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS4_2arkode__interface_8f90.html',1,'']]],
-  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS3_2arkode__interface_8f90.html',1,'']]]
+  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS3_2arkode__interface_8f90.html',1,'']]],
+  ['arkode_5finterface_2ef90',['arkode_interface.f90',['../SUNDIALS4_2arkode__interface_8f90.html',1,'']]]
 ];
