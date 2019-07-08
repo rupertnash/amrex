@@ -396,11 +396,12 @@ int main (int argc, char* argv[])
     {
 
         // Test entire launch range for a given problem size.
-        IntVect n_cells(256);
-        IntVect max_grid_size(16);
+        IntVect n_cells(64);
+        IntVect max_grid_size(64, 64, 1), mgs_b(64);
         int Ncomp = 1;
         int Nghost = 0;
 
+/*
         amrex::Print() << std::endl << "Loop Tests" << std::endl;
 
         loopSuite(n_cells, max_grid_size, Ncomp, Nghost,
@@ -414,6 +415,15 @@ int main (int argc, char* argv[])
                    1, 32, 2,    // cells per thread
                    1, 32, 2,    // simultaneous boxes 
                    1, 32, 2);   // number of launches
+*/
+        // Fused = Loop Test
+        // loopLaunch (n_cells, max_grid_size, Ncomp, Nghost, cpt{1}, synchs{0}, num_streams{Gpu::Device::numGpuStreams})
+        loopLaunch (   n_cells, max_grid_size, Ncomp, Nghost);
+        loopLaunch (   n_cells,         mgs_b, Ncomp, Nghost);
+
+        // fusedLaunch (n_cells, max_grid_size, Ncomp, Nghost, cpt{1}, simul{1}, num_launches{1})
+        fusedLaunch(    n_cells, max_grid_size, Ncomp, Nghost,      1,        1,            4096);
+        fusedLaunch(    n_cells,         mgs_b, Ncomp, Nghost,      1,        1,            4096);
 
 /*
         // Call Syntax: Defaults in { }
