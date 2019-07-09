@@ -1824,9 +1824,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a3fa033d5f7e81438c45cc3b5f6af3443"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a3fa033d5f7e81438c45cc3b5f6af3443">operator&gt;&gt;</a> (std::istream &amp;, <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;)</td></tr>
 <tr class="memdesc:a3fa033d5f7e81438c45cc3b5f6af3443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nice ASCII input.  <a href="#a3fa033d5f7e81438c45cc3b5f6af3443">More...</a><br /></td></tr>
 <tr class="separator:a3fa033d5f7e81438c45cc3b5f6af3443"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e0d98b15f18c12c8848edcb847fa49b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a5e0d98b15f18c12c8848edcb847fa49b">AlmostEqual</a> (const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;box1, const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;box2, Real eps=std::numeric_limits&lt; Real &gt;::round_error()) noexcept</td></tr>
-<tr class="memdesc:a5e0d98b15f18c12c8848edcb847fa49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for equality of real boxes within a certain tolerance.  <a href="#a5e0d98b15f18c12c8848edcb847fa49b">More...</a><br /></td></tr>
-<tr class="separator:a5e0d98b15f18c12c8848edcb847fa49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1862ab58d1cc82443741c7315b72f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a0f1862ab58d1cc82443741c7315b72f4">AlmostEqual</a> (const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;box1, const <a class="el" href="classamrex_1_1RealBox.html">RealBox</a> &amp;box2, Real eps) noexcept</td></tr>
+<tr class="separator:a0f1862ab58d1cc82443741c7315b72f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d29a20abcd90333622f5b010a66f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1RealVect.html">RealVect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ae2d29a20abcd90333622f5b010a66f3c">BASISREALV</a> (int dir) noexcept</td></tr>
 <tr class="separator:ae2d29a20abcd90333622f5b010a66f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad25387cef594d4addc2034b5d34d7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1RealVect.html">RealVect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a6ad25387cef594d4addc2034b5d34d7d">operator/</a> (Real s, const <a class="el" href="classamrex_1_1RealVect.html">RealVect</a> &amp;p) noexcept</td></tr>
@@ -4359,7 +4358,7 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
 
 </div>
 </div>
-<a class="anchor" id="a5e0d98b15f18c12c8848edcb847fa49b"></a>
+<a class="anchor" id="a0f1862ab58d1cc82443741c7315b72f4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -4382,7 +4381,7 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>eps</em>&#160;</td>
+          <td class="paramname"><em>eps</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4396,8 +4395,7 @@ template&lt;class FAB , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check for equality of real boxes within a certain tolerance. </p>
+<p>Check for equality of real boxes within a certain tolerance Can use std::numeric_precision::epsilon() * abs(x + y) * ulps for inexact comparison See <a href="https://en.cppreference.com/w/cpp/types/numeric_limits/epsilon">https://en.cppreference.com/w/cpp/types/numeric_limits/epsilon</a> </p>
 
 </div>
 </div>

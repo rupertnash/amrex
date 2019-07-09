@@ -130,7 +130,7 @@ var searchData=
   ['allprocs',['AllProcs',['../classamrex_1_1Print.html#ac54860bd8ad68a5551e588ff8e01aa3b',1,'amrex::Print::AllProcs()'],['../classamrex_1_1PrintToFile.html#a0067feaedbdfba6996f079b3b44162cc',1,'amrex::PrintToFile::AllProcs()']]],
   ['allregular',['allregular',['../classamrex_1_1EB2_1_1GeometryShop.html#a6c5e06b24c520ce426abd4d936b4cab5',1,'amrex::EB2::GeometryShop']]],
   ['allregularif',['AllRegularIF',['../classamrex_1_1EB2_1_1AllRegularIF.html',1,'amrex::EB2']]],
-  ['almostequal',['AlmostEqual',['../namespaceamrex.html#a5e0d98b15f18c12c8848edcb847fa49b',1,'amrex']]],
+  ['almostequal',['AlmostEqual',['../namespaceamrex.html#a0f1862ab58d1cc82443741c7315b72f4',1,'amrex']]],
   ['alpha',['alpha',['../structamrex_1_1algoim_1_1Interval.html#a017e3af95c08cb7c803eb4717bc2da14',1,'amrex::algoim::Interval::alpha()'],['../classamrex_1_1ABecLaplacian.html#ae7be84b487c2c7ad029dc48232f8103d',1,'amrex::ABecLaplacian::alpha()'],['../classamrex_1_1ABec4.html#a113b6911ebbc42bb219b60fb8eb70323',1,'amrex::ABec4::alpha()'],['../classamrex_1_1DivVis.html#ae044bb26690a4e3b989a12f93d5cb0ee',1,'amrex::DivVis::alpha()']]],
   ['alpha_5fdef',['alpha_def',['../classamrex_1_1ABecLaplacian.html#a64576c78bed2c9421410fe29d10ec0b7',1,'amrex::ABecLaplacian::alpha_def()'],['../classamrex_1_1ABec4.html#afc41f9f2cc9f503fa3758e18ea86bd9c',1,'amrex::ABec4::alpha_def()'],['../classamrex_1_1DivVis.html#a87478f1a266153c9bc5e55a115a998fa',1,'amrex::DivVis::alpha_def()']]],
   ['altapplybc',['altApplyBC',['../classamrex_1_1ABec2.html#a1c6452da2efd04efc611cfdf3def36ed',1,'amrex::ABec2']]],
