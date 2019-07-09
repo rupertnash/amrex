@@ -105,6 +105,7 @@ var searchData=
   ['allocolddata',['allocOldData',['../classamrex_1_1AmrLevel.html#a6508a7e48f0d9da16e52fe4c79917ed3',1,'amrex::AmrLevel::allocOldData()'],['../classamrex_1_1StateData.html#ac696f694c50d2b6251f9576fabfdedcb',1,'amrex::StateData::allocOldData()']]],
   ['allprint',['AllPrint',['../classamrex_1_1AllPrint.html#aea174ee088ce5e27479e1c0a7445d75a',1,'amrex::AllPrint']]],
   ['allprinttofile',['AllPrintToFile',['../classamrex_1_1AllPrintToFile.html#a591916414b23fdad473a12c3bde9f43f',1,'amrex::AllPrintToFile']]],
+  ['almostequal',['AlmostEqual',['../namespaceamrex.html#a5e0d98b15f18c12c8848edcb847fa49b',1,'amrex']]],
   ['altapplybc',['altApplyBC',['../classamrex_1_1ABec2.html#a1c6452da2efd04efc611cfdf3def36ed',1,'amrex::ABec2']]],
   ['altsmooth',['altSmooth',['../classamrex_1_1ABec2.html#acd1c0f5a3fd3c40cb217030006e83808',1,'amrex::ABec2']]],
   ['am0',['am0',['../AMReX__MLNodeLap__2d_8F90.html#af003a12e95dc10413b61f881d513981f',1,'AMReX_MLNodeLap_2d.F90']]],
