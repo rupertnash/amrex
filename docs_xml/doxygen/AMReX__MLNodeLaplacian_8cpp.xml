@@ -201,6 +201,8 @@
         </childnode>
         <childnode refid="57898" relation="include">
         </childnode>
+        <childnode refid="57864" relation="include">
+        </childnode>
         <childnode refid="57859" relation="include">
         </childnode>
         <childnode refid="57878" relation="include">
@@ -432,6 +434,8 @@
         <childnode refid="57879" relation="include">
         </childnode>
         <childnode refid="57893" relation="include">
+        </childnode>
+        <childnode refid="57869" relation="include">
         </childnode>
         <childnode refid="57875" relation="include">
         </childnode>
@@ -692,6 +696,8 @@
         <childnode refid="57962" relation="include">
         </childnode>
         <childnode refid="57956" relation="include">
+        </childnode>
+        <childnode refid="57955" relation="include">
         </childnode>
         <childnode refid="57878" relation="include">
         </childnode>
@@ -2288,7 +2294,7 @@
 <codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MultiFab&amp;<sp/>fine<sp/>=<sp/>*<ref refid="classamrex_1_1MLNodeLaplacian_1a8a183b518f95b79420fa95a4400b3a4f" kindref="member">m_sigma</ref>[amrlev][mglev-1][idim];</highlight></codeline>
 <codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultiFab&amp;<sp/>crse<sp/>=<sp/>*<ref refid="classamrex_1_1MLNodeLaplacian_1a8a183b518f95b79420fa95a4400b3a4f" kindref="member">m_sigma</ref>[amrlev][mglev][idim];</highlight></codeline>
-<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a19deaea1de1f8799e4c319910ef2dae4" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a6a1aa0c151c5fe560ebb86c99194bfc3" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
 <codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultiFab<sp/>cfine;</highlight></codeline>
 <codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(need_parallel_copy)<sp/>{</highlight></codeline>
 <codeline lineno="835"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BoxArray&amp;<sp/>ba<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.boxArray(),<sp/>2);</highlight></codeline>
@@ -2678,7 +2684,7 @@
 <codeline lineno="1219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="1220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MultiFab&amp;<sp/>fine<sp/>=<sp/>*<ref refid="classamrex_1_1MLNodeLaplacian_1ae971fa5b7d9a948b3b8b778bb9540064" kindref="member">m_stencil</ref>[amrlev][mglev-1];</highlight></codeline>
 <codeline lineno="1221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultiFab&amp;<sp/>crse<sp/>=<sp/>*<ref refid="classamrex_1_1MLNodeLaplacian_1ae971fa5b7d9a948b3b8b778bb9540064" kindref="member">m_stencil</ref>[amrlev][mglev];</highlight></codeline>
-<codeline lineno="1222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a19deaea1de1f8799e4c319910ef2dae4" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
+<codeline lineno="1222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a6a1aa0c151c5fe560ebb86c99194bfc3" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
 <codeline lineno="1223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultiFab<sp/>cfine;</highlight></codeline>
 <codeline lineno="1224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(need_parallel_copy)<sp/>{</highlight></codeline>
 <codeline lineno="1225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BoxArray&amp;<sp/>ba<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.boxArray(),<sp/>2);</highlight></codeline>
@@ -2776,7 +2782,7 @@
 <codeline lineno="1317"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1MLNodeLaplacian_1af211d8e359ae9392522fe60c5f253e3f" kindref="member">applyBC</ref>(amrlev,<sp/>cmglev-1,<sp/>fine,<sp/><ref refid="classamrex_1_1MLLinOp_1a5aa01a1ef6b0b3a471f02f65ae4b4884a548465e8241b26162c8e0a7b0cdfc5e7" kindref="member">BCMode::Homogeneous</ref>,<sp/><ref refid="classamrex_1_1MLLinOp_1a1f2821b4a51da49d862dae1e757bb8c3a49b21ad0d38942f635877e7bbc5d7a1e" kindref="member">StateMode::Solution</ref>);</highlight></codeline>
 <codeline lineno="1319"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a19deaea1de1f8799e4c319910ef2dae4" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
+<codeline lineno="1320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a6a1aa0c151c5fe560ebb86c99194bfc3" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
 <codeline lineno="1321"><highlight class="normal"><sp/><sp/><sp/><sp/>MultiFab<sp/>cfine;</highlight></codeline>
 <codeline lineno="1322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(need_parallel_copy)<sp/>{</highlight></codeline>
 <codeline lineno="1323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BoxArray&amp;<sp/>ba<sp/>=<sp/><ref refid="namespaceamrex_1a49cf3c197be59da5b747cf66c597847a" kindref="member">amrex::coarsen</ref>(fine.boxArray(),<sp/>2);</highlight></codeline>
@@ -2825,7 +2831,7 @@
 <codeline lineno="1366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>sigma<sp/>=<sp/><ref refid="classamrex_1_1MLNodeLaplacian_1a8a183b518f95b79420fa95a4400b3a4f" kindref="member">m_sigma</ref>[amrlev][fmglev];</highlight></codeline>
 <codeline lineno="1367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>stencil<sp/>=<sp/><ref refid="classamrex_1_1MLNodeLaplacian_1ae971fa5b7d9a948b3b8b778bb9540064" kindref="member">m_stencil</ref>[amrlev][fmglev];</highlight></codeline>
 <codeline lineno="1368"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a19deaea1de1f8799e4c319910ef2dae4" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
+<codeline lineno="1369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>need_parallel_copy<sp/>=<sp/>!<ref refid="namespaceamrex_1a6a1aa0c151c5fe560ebb86c99194bfc3" kindref="member">amrex::isMFIterSafe</ref>(crse,<sp/>fine);</highlight></codeline>
 <codeline lineno="1370"><highlight class="normal"><sp/><sp/><sp/><sp/>MultiFab<sp/>cfine;</highlight></codeline>
 <codeline lineno="1371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MultiFab*<sp/>cmf<sp/>=<sp/>&amp;crse;</highlight></codeline>
 <codeline lineno="1372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(need_parallel_copy)<sp/>{</highlight></codeline>

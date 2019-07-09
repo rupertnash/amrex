@@ -1046,105 +1046,105 @@
     <detaileddescription>
 <para>Fortran Array <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&apos;s (generally called FAB&apos;s) are objects constructed to emulate the FORTRAN array. Useful operations can be performed upon FAB&apos;s in C++, and they provide a convenient interface to FORTRAN when it is necessary to retreat into that language.</para><para><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> is derived from <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab&lt;Real&gt;</ref>. <ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref> adds additional useful capabilities which make sense for Real types, such as I/O and L**p norms.</para><para><ref refid="classamrex_1_1FArrayBox" kindref="compound">FArrayBox</ref>&apos;s may be output in various formats (see <ref refid="classamrex_1_1FABio" kindref="compound">FABio</ref> above).</para><para>The format and precision may be set in a file read by the <ref refid="classamrex_1_1ParmParse" kindref="compound">ParmParse</ref> class by the &quot;fab.format&quot; variable. Allowed values are: ASCII 8BIT NATIVE NATIVE_32 IEEE32</para><para>FABs written using operator&lt;&lt; are always written in ASCII. FABS written using writOn use the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> specified with setFormat or the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> specified in the <ref refid="classamrex_1_1ParmParse" kindref="compound">ParmParse</ref> file read by init. If the <ref refid="classamrex_1_1FABio_1a0b27140f46fecbc14d58f1a754300e9f" kindref="member">FABio::Format</ref> is not set explicitly by either of these two methods, then it defaults to NATIVE.</para><para>The C pre-processor macro AMREX_SPACEDIM must be defined to use this class. The internal precision of FARRAYBOX objects is set by defining either BL_USE_FLOAT or BL_USE_DOUBLE</para><para>This class does NOT provide a copy constructor or assignment operator, but it has a move constructor. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="1983">
+      <node id="1987">
         <label>amrex::BaseFab&lt; Real &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="1984" relation="public-inheritance">
+        <childnode refid="1988" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1986">
+      <node id="1990">
         <label>amrex::EBFArrayBox</label>
         <link refid="classamrex_1_1EBFArrayBox"/>
-        <childnode refid="1982" relation="public-inheritance">
+        <childnode refid="1986" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1984">
+      <node id="1988">
         <label>amrex::DataAllocator</label>
         <link refid="structamrex_1_1DataAllocator"/>
       </node>
-      <node id="1985">
+      <node id="1989">
         <label>amrex::CutFab</label>
         <link refid="classamrex_1_1CutFab"/>
-        <childnode refid="1982" relation="public-inheritance">
+        <childnode refid="1986" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="1982">
+      <node id="1986">
         <label>amrex::FArrayBox</label>
         <link refid="classamrex_1_1FArrayBox"/>
-        <childnode refid="1983" relation="public-inheritance">
+        <childnode refid="1987" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="1988">
+      <node id="1992">
         <label>amrex::BaseFab&lt; Real &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="1989" relation="public-inheritance">
+        <childnode refid="1993" relation="public-inheritance">
         </childnode>
-        <childnode refid="1992" relation="usage">
+        <childnode refid="1996" relation="usage">
           <edgelabel>domain</edgelabel>
         </childnode>
-        <childnode refid="1995" relation="usage">
+        <childnode refid="1999" relation="usage">
           <edgelabel>dptr</edgelabel>
         </childnode>
       </node>
-      <node id="1991">
+      <node id="1995">
         <label>amrex::ArenaInfo</label>
         <link refid="structamrex_1_1ArenaInfo"/>
       </node>
-      <node id="1993">
+      <node id="1997">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
-        <childnode refid="1993" relation="usage">
+        <childnode refid="1997" relation="usage">
           <edgelabel>Unit</edgelabel>
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="1995">
+      <node id="1999">
         <label>Real</label>
       </node>
-      <node id="1989">
+      <node id="1993">
         <label>amrex::DataAllocator</label>
         <link refid="structamrex_1_1DataAllocator"/>
-        <childnode refid="1990" relation="usage">
+        <childnode refid="1994" relation="usage">
           <edgelabel>m_arena</edgelabel>
         </childnode>
       </node>
-      <node id="1990">
+      <node id="1994">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
-        <childnode refid="1991" relation="usage">
+        <childnode refid="1995" relation="usage">
           <edgelabel>arena_info</edgelabel>
         </childnode>
       </node>
-      <node id="1992">
+      <node id="1996">
         <label>amrex::Box</label>
         <link refid="classamrex_1_1Box"/>
-        <childnode refid="1993" relation="usage">
+        <childnode refid="1997" relation="usage">
           <edgelabel>bigend</edgelabel>
           <edgelabel>smallend</edgelabel>
         </childnode>
-        <childnode refid="1994" relation="usage">
+        <childnode refid="1998" relation="usage">
           <edgelabel>btype</edgelabel>
         </childnode>
       </node>
-      <node id="1994">
+      <node id="1998">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
-      <node id="1996">
+      <node id="2000">
         <label>amrex::FABio</label>
         <link refid="classamrex_1_1FABio"/>
       </node>
-      <node id="1987">
+      <node id="1991">
         <label>amrex::FArrayBox</label>
         <link refid="classamrex_1_1FArrayBox"/>
-        <childnode refid="1988" relation="public-inheritance">
+        <childnode refid="1992" relation="public-inheritance">
         </childnode>
-        <childnode refid="1996" relation="usage">
+        <childnode refid="2000" relation="usage">
           <edgelabel>fabio</edgelabel>
         </childnode>
-        <childnode refid="1995" relation="usage">
+        <childnode refid="1999" relation="usage">
           <edgelabel>initval</edgelabel>
         </childnode>
       </node>
@@ -1360,6 +1360,7 @@
       <member refid="classamrex_1_1BaseFab_1acf3b50d012730dd3521fb2be517573b9" prot="protected" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>ptr_owner</name></member>
       <member refid="classamrex_1_1FArrayBox_1a8a42f4fe7d3ad41e56175103deec42e1" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>readFrom</name></member>
       <member refid="classamrex_1_1FArrayBox_1ac5f3bc40906e22d2e481fa87114b62f4" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>readFrom</name></member>
+      <member refid="classamrex_1_1BaseFab_1a4390286fe2327bd5f0561a75ee14499b" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>release</name></member>
       <member refid="classamrex_1_1FArrayBox_1ae5a4b9b9a64a4c1cfd534bb6eefc6b30" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>resize</name></member>
       <member refid="classamrex_1_1BaseFab_1aa3293873bc0c5ccb66b367b84889e042" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>saxpy</name></member>
       <member refid="classamrex_1_1BaseFab_1ae39c876df7b0ebfe1d9e6dfba4e5c00e" prot="public" virt="non-virtual"><scope>amrex::FArrayBox</scope><name>saxpy</name></member>

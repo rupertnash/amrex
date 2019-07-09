@@ -168,6 +168,8 @@
         </childnode>
         <childnode refid="17205" relation="include">
         </childnode>
+        <childnode refid="17166" relation="include">
+        </childnode>
         <childnode refid="17176" relation="include">
         </childnode>
         <childnode refid="17184" relation="include">
@@ -323,6 +325,8 @@
         <childnode refid="17185" relation="include">
         </childnode>
         <childnode refid="17234" relation="include">
+        </childnode>
+        <childnode refid="17183" relation="include">
         </childnode>
         <childnode refid="17190" relation="include">
         </childnode>
@@ -3536,9 +3540,59 @@
 <codeline lineno="1078"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a1036d99710a96586826f090a3266f5da" kindref="member">amrex::Copy</ref>(fa,<sp/>tmpmf,<sp/>0,<sp/>0,<sp/>ncomp,<sp/>0);</highlight></codeline>
 <codeline lineno="1079"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1080"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1081"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="1082"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1083"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="1081"><highlight class="normal">template<sp/>&lt;class<sp/>FAB,<sp/>class<sp/>foo<sp/>=<sp/>amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::value&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="1082"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1083" refid="namespaceamrex_1a998c5815369d23cd73eea1b09f43a966" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1a998c5815369d23cd73eea1b09f43a966" kindref="member">dtoh_memcpy</ref><sp/>(<ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref>&amp;<sp/>dst,<sp/><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>src,</highlight></codeline>
+<codeline lineno="1084"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scomp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dcomp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncomp)</highlight></codeline>
+<codeline lineno="1085"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1086"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(<ref refid="namespaceamrex_1a6a1aa0c151c5fe560ebb86c99194bfc3" kindref="member">isMFIterSafe</ref>(dst,<sp/>src));</highlight></codeline>
+<codeline lineno="1087"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(dst.<ref refid="classamrex_1_1FabArrayBase_1a0598988ee34f3885bd6d2a4787a8f427" kindref="member">nGrowVect</ref>()<sp/>==<sp/>src.<ref refid="classamrex_1_1FabArrayBase_1a0598988ee34f3885bd6d2a4787a8f427" kindref="member">nGrowVect</ref>());</highlight></codeline>
+<codeline lineno="1088"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_GPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1089"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref><sp/>mfi(dst);<sp/>mfi.<ref refid="classamrex_1_1MFIter_1a61b9a1d5eda39765d1db9b9b936558c7" kindref="member">isValid</ref>();<sp/>++mfi)<sp/>{</highlight></codeline>
+<codeline lineno="1090"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pdst<sp/>=<sp/>dst[mfi].dataPtr(dcomp);</highlight></codeline>
+<codeline lineno="1091"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>psrc<sp/>=<sp/>src[mfi].dataPtr(scomp);</highlight></codeline>
+<codeline lineno="1092"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1_1Gpu_1a6cb0d90b937d4749b2219ad0e9fa8277" kindref="member">Gpu::dtoh_memcpy_async</ref>(pdst,<sp/>psrc,<sp/>dst[mfi].nBytes(mfi.fabbox(),<sp/>dcomp,<sp/>ncomp));</highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="1094"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1095"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a1036d99710a96586826f090a3266f5da" kindref="member">Copy</ref>(dst,<sp/>src,<sp/>scomp,<sp/>dcomp,<sp/>ncomp,<sp/>dst.<ref refid="classamrex_1_1FabArrayBase_1a0598988ee34f3885bd6d2a4787a8f427" kindref="member">nGrowVect</ref>());</highlight></codeline>
+<codeline lineno="1096"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1097"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1098"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1099"><highlight class="normal">template<sp/>&lt;class<sp/>FAB,<sp/>class<sp/>foo<sp/>=<sp/>amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::value&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="1100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1101" refid="namespaceamrex_1a8531953b8fba66482d81cad6c5dc3e73" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1a998c5815369d23cd73eea1b09f43a966" kindref="member">dtoh_memcpy</ref><sp/>(<ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref>&amp;<sp/>dst,<sp/><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>src)</highlight></codeline>
+<codeline lineno="1102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a998c5815369d23cd73eea1b09f43a966" kindref="member">dtoh_memcpy</ref>(dst,<sp/>src,<sp/>0,<sp/>0,<sp/>dst.<ref refid="classamrex_1_1FabArrayBase_1aec6647af0d0a9f2d760d502a8975d6f1" kindref="member">nComp</ref>());</highlight></codeline>
+<codeline lineno="1104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1106"><highlight class="normal">template<sp/>&lt;class<sp/>FAB,<sp/>class<sp/>foo<sp/>=<sp/>amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::value&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="1107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1108" refid="namespaceamrex_1ae243b10c65516ed7dfeaf9aed7e75aa3" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1ae243b10c65516ed7dfeaf9aed7e75aa3" kindref="member">htod_memcpy</ref><sp/>(<ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref>&amp;<sp/>dst,<sp/><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>src,</highlight></codeline>
+<codeline lineno="1109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scomp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dcomp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncomp)</highlight></codeline>
+<codeline lineno="1110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(<ref refid="namespaceamrex_1a6a1aa0c151c5fe560ebb86c99194bfc3" kindref="member">isMFIterSafe</ref>(dst,<sp/>src));</highlight></codeline>
+<codeline lineno="1112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AMReX__BLassert_8H_1aad6450907585a147153aef621fdc6007" kindref="member">AMREX_ASSERT</ref>(dst.<ref refid="classamrex_1_1FabArrayBase_1a0598988ee34f3885bd6d2a4787a8f427" kindref="member">nGrowVect</ref>()<sp/>==<sp/>src.<ref refid="classamrex_1_1FabArrayBase_1a0598988ee34f3885bd6d2a4787a8f427" kindref="member">nGrowVect</ref>());</highlight></codeline>
+<codeline lineno="1113"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>AMREX_USE_GPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="classamrex_1_1MFIter" kindref="compound">MFIter</ref><sp/>mfi(dst);<sp/>mfi.<ref refid="classamrex_1_1MFIter_1a61b9a1d5eda39765d1db9b9b936558c7" kindref="member">isValid</ref>();<sp/>++mfi)<sp/>{</highlight></codeline>
+<codeline lineno="1115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pdst<sp/>=<sp/>dst[mfi].dataPtr(dcomp);</highlight></codeline>
+<codeline lineno="1116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>psrc<sp/>=<sp/>src[mfi].dataPtr(scomp);</highlight></codeline>
+<codeline lineno="1117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1_1Gpu_1aacefe17a39734cb2475a36199ab1370b" kindref="member">Gpu::htod_memcpy_async</ref>(pdst,<sp/>psrc,<sp/>dst[mfi].nBytes(mfi.fabbox(),<sp/>dcomp,<sp/>ncomp));</highlight></codeline>
+<codeline lineno="1118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="1119"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1a1036d99710a96586826f090a3266f5da" kindref="member">Copy</ref>(dst,<sp/>src,<sp/>scomp,<sp/>dcomp,<sp/>ncomp,<sp/>dst.<ref refid="classamrex_1_1FabArrayBase_1a0598988ee34f3885bd6d2a4787a8f427" kindref="member">nGrowVect</ref>());</highlight></codeline>
+<codeline lineno="1121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1124"><highlight class="normal">template<sp/>&lt;class<sp/>FAB,<sp/>class<sp/>foo<sp/>=<sp/>amrex::EnableIf_t&lt;IsBaseFab&lt;FAB&gt;::value&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="1125"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1126" refid="namespaceamrex_1aa9df7c449e875ece24add0d826c4f133" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1ae243b10c65516ed7dfeaf9aed7e75aa3" kindref="member">htod_memcpy</ref><sp/>(<ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref>&amp;<sp/>dst,<sp/><ref refid="classamrex_1_1FabArray" kindref="compound">FabArray&lt;FAB&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>src)</highlight></codeline>
+<codeline lineno="1127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="1128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1ae243b10c65516ed7dfeaf9aed7e75aa3" kindref="member">htod_memcpy</ref>(dst,<sp/>src,<sp/>0,<sp/>0,<sp/>dst.<ref refid="classamrex_1_1FabArrayBase_1aec6647af0d0a9f2d760d502a8975d6f1" kindref="member">nComp</ref>());</highlight></codeline>
+<codeline lineno="1129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/travis/build/AMReX-Codes/amrex/Src/Base/AMReX_FabArrayUtility.H"/>
   </compounddef>

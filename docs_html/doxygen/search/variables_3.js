@@ -119,7 +119,7 @@ var searchData=
   ['dtinavg',['dtinavg',['../structamrex_1_1TinyProfiler_1_1ProcStats.html#ab36067feb232434de61f459d59427970',1,'amrex::TinyProfiler::ProcStats']]],
   ['dtinmax',['dtinmax',['../structamrex_1_1TinyProfiler_1_1ProcStats.html#aba8890827f1d77d1a04fda2971170ffe',1,'amrex::TinyProfiler::ProcStats']]],
   ['dtinmin',['dtinmin',['../structamrex_1_1TinyProfiler_1_1ProcStats.html#ad9c2c49d8b22ac959def10c90dd3ed30',1,'amrex::TinyProfiler::ProcStats']]],
-  ['dx',['dx',['../classamrex_1_1CoordSys.html#a178c38de0cae8e587e4c34541db7f45b',1,'amrex::CoordSys::dx()'],['../structamrex_1_1GeometryData.html#a6ae1008fee5d826e469209d098776573',1,'amrex::GeometryData::dx()'],['../classamrex_1_1XYPlotDataList.html#a9810578aa21d4c3ea548697820ada970',1,'amrex::XYPlotDataList::dX()'],['../classamrex_1_1SplineDistFcnElement2d.html#a6dc7a3f96e7d9b912a500fb17abb9a83',1,'amrex::SplineDistFcnElement2d::Dx()']]],
+  ['dx',['dX',['../classamrex_1_1XYPlotDataList.html#a9810578aa21d4c3ea548697820ada970',1,'amrex::XYPlotDataList::dX()'],['../classamrex_1_1CoordSys.html#a178c38de0cae8e587e4c34541db7f45b',1,'amrex::CoordSys::dx()'],['../structamrex_1_1GeometryData.html#a6ae1008fee5d826e469209d098776573',1,'amrex::GeometryData::dx()'],['../classamrex_1_1SplineDistFcnElement2d.html#a6dc7a3f96e7d9b912a500fb17abb9a83',1,'amrex::SplineDistFcnElement2d::Dx()']]],
   ['dx_5feb_5fvect',['dx_eb_vect',['../classamrex_1_1LSFactory.html#a8509ec2056ef885bfd65e615f91be200',1,'amrex::LSFactory']]],
   ['dx_5fvect',['dx_vect',['../classamrex_1_1LSFactory.html#a69e5d562871b930a2647501d187f41ed',1,'amrex::LSFactory']]],
   ['dxlevel',['dxLevel',['../classamrex_1_1AmrData.html#acf28800ea1c047a973e104f20c05fa4d',1,'amrex::AmrData']]],

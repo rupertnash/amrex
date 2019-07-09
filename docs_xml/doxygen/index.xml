@@ -1107,6 +1107,7 @@
     <member refid="classamrex_1_1BaseFab_1a48099208f15f741c739316388f61737a" kind="function"><name>resize</name></member>
     <member refid="classamrex_1_1BaseFab_1ac5a36d719054f74a00bfc52e10ec9918" kind="function"><name>elixir</name></member>
     <member refid="classamrex_1_1BaseFab_1ae428e6a2645141dd817c288331575f26" kind="function"><name>clear</name></member>
+    <member refid="classamrex_1_1BaseFab_1a4390286fe2327bd5f0561a75ee14499b" kind="function"><name>release</name></member>
     <member refid="classamrex_1_1BaseFab_1a43f0ed693f7f5436621aaf9b27620c56" kind="function"><name>nBytes</name></member>
     <member refid="classamrex_1_1BaseFab_1a267006cc0717e9dfbcbd22afc1c89d8c" kind="function"><name>nBytesOwned</name></member>
     <member refid="classamrex_1_1BaseFab_1ac03d6fdd6bd658196becfefc5b3b93a8" kind="function"><name>nBytes</name></member>
@@ -2507,6 +2508,12 @@
     <member refid="structRegionsProfStats_1_1DataBlock_1a83422209e5d067d4a9f8dbce49722689" kind="function"><name>DataBlock</name></member>
     <member refid="structRegionsProfStats_1_1DataBlock_1afbaca3dac9e6d63164eae742d64b0aed" kind="function"><name>DataBlock</name></member>
   </compound>
+  <compound refid="structamrex_1_1DataDeleter" kind="struct"><name>amrex::DataDeleter</name>
+    <member refid="structamrex_1_1DataDeleter_1a3f56660ebd06ba11f5c873d99b3e899f" kind="variable"><name>m_arena</name></member>
+    <member refid="structamrex_1_1DataDeleter_1a2d435760333c6f0326e928c0f9481a24" kind="function"><name>DataDeleter</name></member>
+    <member refid="structamrex_1_1DataDeleter_1a3daee94cbf63696956b6e349478448dc" kind="function"><name>arena</name></member>
+    <member refid="structamrex_1_1DataDeleter_1a0d66db706137406cce85fd27fa47cb03" kind="function"><name>operator()</name></member>
+  </compound>
   <compound refid="classamrex_1_1DataServices" kind="class"><name>amrex::DataServices</name>
     <member refid="classamrex_1_1DataServices_1a2ac83614f269c777434721474d55ffe9" kind="enum"><name>DSRequestType</name></member>
     <member refid="classamrex_1_1DataServices_1a2ac83614f269c777434721474d55ffe9a98b03a82942b04872302d539974d8300" kind="enumvalue"><name>InvalidRequestType</name></member>
@@ -2862,6 +2869,8 @@
     <member refid="classamrex_1_1DistributionMapping_1a3e7cd82f169573dfa29f3d453a9a40b9" kind="function"><name>empty</name></member>
     <member refid="classamrex_1_1DistributionMapping_1abf8c0efdc1a505b5ef16203d2068f084" kind="function"><name>linkCount</name></member>
     <member refid="classamrex_1_1DistributionMapping_1a051c0211689621d68f3565becf7adddd" kind="function"><name>operator[]</name></member>
+    <member refid="classamrex_1_1DistributionMapping_1af4cb165d9e60aff6ad22b20d44ec22dd" kind="function"><name>readFrom</name></member>
+    <member refid="classamrex_1_1DistributionMapping_1a6ced4b68fb0842c66984c45d46b6ac73" kind="function"><name>writeOn</name></member>
     <member refid="classamrex_1_1DistributionMapping_1a924f7db8b7071a964375eeb077ed72dc" kind="function"><name>operator==</name></member>
     <member refid="classamrex_1_1DistributionMapping_1a47d8be48dc04b300c928211027aa842f" kind="function"><name>operator!=</name></member>
     <member refid="classamrex_1_1DistributionMapping_1ad33d13c8fafe56d041a08c5fbc2b4f60" kind="function"><name>SFCProcessorMap</name></member>
@@ -4784,12 +4793,12 @@
   <compound refid="interfacecvode__interface_1_1FCVodeSetErrHandlerFn" kind="interface"><name>cvode_interface::FCVodeSetErrHandlerFn</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetErrHandlerFn_1abc5d1ca08ec85d36a42aa0d0441bc4c2" kind="function"><name>fcvodeseterrhandlerfn</name></member>
   </compound>
-  <compound refid="interfacecvode__interface_1_1FCVodeSetInitStep" kind="interface"><name>cvode_interface::FCVodeSetInitStep</name>
-    <member refid="interfacecvode__interface_1_1FCVodeSetInitStep_1a781bf0d933eea01d71ffcdf67ebdc29e" kind="function"><name>fcvodesetinitstep</name></member>
-  </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetInitStep" kind="interface"><name>fcvode_mod::FCVodeSetInitStep</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetInitStep_1afd3195d49aee6ddb6e5dbd86a7fd100a" kind="function"><name>fcvodesetinitstep</name></member>
     <member refid="interfacefcvode__mod_1_1FCVodeSetInitStep_1afd3195d49aee6ddb6e5dbd86a7fd100a" kind="function"><name>fcvodesetinitstep</name></member>
+  </compound>
+  <compound refid="interfacecvode__interface_1_1FCVodeSetInitStep" kind="interface"><name>cvode_interface::FCVodeSetInitStep</name>
+    <member refid="interfacecvode__interface_1_1FCVodeSetInitStep_1a781bf0d933eea01d71ffcdf67ebdc29e" kind="function"><name>fcvodesetinitstep</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetIterType" kind="interface"><name>fcvode_mod::FCVodeSetIterType</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetIterType_1af9a6c357c0e45ce9af697aaf27eea1df" kind="function"><name>fcvodesetitertype</name></member>
@@ -4906,12 +4915,12 @@
   <compound refid="interfacecvode__interface_1_1FCVodeSetStopTime" kind="interface"><name>cvode_interface::FCVodeSetStopTime</name>
     <member refid="interfacecvode__interface_1_1FCVodeSetStopTime_1a55787e177a657d2544e98d90d8e2ef4d" kind="function"><name>fcvodesetstoptime</name></member>
   </compound>
-  <compound refid="interfacecvode__interface_1_1FCVodeSetUserData" kind="interface"><name>cvode_interface::FCVodeSetUserData</name>
-    <member refid="interfacecvode__interface_1_1FCVodeSetUserData_1acd35d1e35b97378c6d28417c70b80eb4" kind="function"><name>fcvodesetuserdata</name></member>
-  </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSetUserData" kind="interface"><name>fcvode_mod::FCVodeSetUserData</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSetUserData_1a9a68ac4eba83cd04d71984b626b0adab" kind="function"><name>fcvodesetuserdata</name></member>
     <member refid="interfacefcvode__mod_1_1FCVodeSetUserData_1a9a68ac4eba83cd04d71984b626b0adab" kind="function"><name>fcvodesetuserdata</name></member>
+  </compound>
+  <compound refid="interfacecvode__interface_1_1FCVodeSetUserData" kind="interface"><name>cvode_interface::FCVodeSetUserData</name>
+    <member refid="interfacecvode__interface_1_1FCVodeSetUserData_1acd35d1e35b97378c6d28417c70b80eb4" kind="function"><name>fcvodesetuserdata</name></member>
   </compound>
   <compound refid="interfacefcvode__mod_1_1FCVodeSStolerances" kind="interface"><name>fcvode_mod::FCVodeSStolerances</name>
     <member refid="interfacefcvode__mod_1_1FCVodeSStolerances_1a9442ec182cc8bb17432c7baf3642c5e1" kind="function"><name>fcvodesstolerances</name></member>
@@ -5741,20 +5750,20 @@
   <compound refid="interfacefsunmatrix__mod_1_1FSUNMatScaleAdd" kind="interface"><name>fsunmatrix_mod::FSUNMatScaleAdd</name>
     <member refid="interfacefsunmatrix__mod_1_1FSUNMatScaleAdd_1a077f4a560afa6d5fa1ef6a00e14cc891" kind="function"><name>fsunmatscaleadd</name></member>
   </compound>
-  <compound refid="interfacefsunmat__dense__mod_1_1FSUNMatScaleAdd__Dense" kind="interface"><name>fsunmat_dense_mod::FSUNMatScaleAdd_Dense</name>
-    <member refid="interfacefsunmat__dense__mod_1_1FSUNMatScaleAdd__Dense_1ab72b5d326a2459aac1812be60825c8be" kind="function"><name>fsunmatscaleadd_dense</name></member>
-  </compound>
   <compound refid="interfacefsunmatrix__dense__mod_1_1FSUNMatScaleAdd__Dense" kind="interface"><name>fsunmatrix_dense_mod::FSUNMatScaleAdd_Dense</name>
     <member refid="interfacefsunmatrix__dense__mod_1_1FSUNMatScaleAdd__Dense_1a7e4bdd086a8d2ba708a18d8fc0142be8" kind="function"><name>fsunmatscaleadd_dense</name></member>
+  </compound>
+  <compound refid="interfacefsunmat__dense__mod_1_1FSUNMatScaleAdd__Dense" kind="interface"><name>fsunmat_dense_mod::FSUNMatScaleAdd_Dense</name>
+    <member refid="interfacefsunmat__dense__mod_1_1FSUNMatScaleAdd__Dense_1ab72b5d326a2459aac1812be60825c8be" kind="function"><name>fsunmatscaleadd_dense</name></member>
   </compound>
   <compound refid="interfacefsunmatrix__mod_1_1FSUNMatScaleAddI" kind="interface"><name>fsunmatrix_mod::FSUNMatScaleAddI</name>
     <member refid="interfacefsunmatrix__mod_1_1FSUNMatScaleAddI_1aa2b3877d339e85bfb585000592877ee9" kind="function"><name>fsunmatscaleaddi</name></member>
   </compound>
-  <compound refid="interfacefsunmatrix__dense__mod_1_1FSUNMatScaleAddI__Dense" kind="interface"><name>fsunmatrix_dense_mod::FSUNMatScaleAddI_Dense</name>
-    <member refid="interfacefsunmatrix__dense__mod_1_1FSUNMatScaleAddI__Dense_1a8af3a3f9b0a39b9c77fa78db088f01b8" kind="function"><name>fsunmatscaleaddi_dense</name></member>
-  </compound>
   <compound refid="interfacefsunmat__dense__mod_1_1FSUNMatScaleAddI__Dense" kind="interface"><name>fsunmat_dense_mod::FSUNMatScaleAddI_Dense</name>
     <member refid="interfacefsunmat__dense__mod_1_1FSUNMatScaleAddI__Dense_1acc64c64367306d1ec216ebebc16bec01" kind="function"><name>fsunmatscaleaddi_dense</name></member>
+  </compound>
+  <compound refid="interfacefsunmatrix__dense__mod_1_1FSUNMatScaleAddI__Dense" kind="interface"><name>fsunmatrix_dense_mod::FSUNMatScaleAddI_Dense</name>
+    <member refid="interfacefsunmatrix__dense__mod_1_1FSUNMatScaleAddI__Dense_1a8af3a3f9b0a39b9c77fa78db088f01b8" kind="function"><name>fsunmatscaleaddi_dense</name></member>
   </compound>
   <compound refid="interfacefsunmatrix__mod_1_1FSUNMatSpace" kind="interface"><name>fsunmatrix_mod::FSUNMatSpace</name>
     <member refid="interfacefsunmatrix__mod_1_1FSUNMatSpace_1a512a5f1eb6fcd7c3a38a1d25cb680dc1" kind="function"><name>fsunmatspace</name></member>
@@ -5966,11 +5975,11 @@
     <member refid="classamrex_1_1GShopLSFactory_1a539c0da0cdb511bc13976065052256ec" kind="function"><name>GShopLSFactory</name></member>
     <member refid="classamrex_1_1GShopLSFactory_1a3988960924e67f12e231f0406eae0708" kind="function"><name>fill_impfunc</name></member>
   </compound>
-  <compound refid="structamrex_1_1CArena_1_1Node_1_1hash" kind="struct"><name>amrex::CArena::Node::hash</name>
-    <member refid="structamrex_1_1CArena_1_1Node_1_1hash_1a8259627d5c6e1faa50ef4c9134875684" kind="function"><name>operator()</name></member>
-  </compound>
   <compound refid="structamrex_1_1EArena_1_1Node_1_1hash" kind="struct"><name>amrex::EArena::Node::hash</name>
     <member refid="structamrex_1_1EArena_1_1Node_1_1hash_1a41f1bd5ef8cd90aebfd2fe0689303466" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structamrex_1_1CArena_1_1Node_1_1hash" kind="struct"><name>amrex::CArena::Node::hash</name>
+    <member refid="structamrex_1_1CArena_1_1Node_1_1hash_1a8259627d5c6e1faa50ef4c9134875684" kind="function"><name>operator()</name></member>
   </compound>
   <compound refid="structamrex_1_1VisMF_1_1Header" kind="struct"><name>amrex::VisMF::Header</name>
     <member refid="structamrex_1_1VisMF_1_1Header_1aa4469030a55d4e3be552189f7d06b54d" kind="enum"><name>Version</name></member>
@@ -7094,13 +7103,13 @@
     <member refid="classamrex_1_1MCMultiGrid_1a7ba83b3751a2bc315319cf1fbba14fb0" kind="function"><name>MCMultiGrid</name></member>
     <member refid="classamrex_1_1MCMultiGrid_1a311c47ccb5df10c68c86fa9c2aac46e5" kind="function"><name>operator=</name></member>
   </compound>
-  <compound refid="structamrex_1_1MemProfiler_1_1MemInfo" kind="struct"><name>amrex::MemProfiler::MemInfo</name>
-    <member refid="structamrex_1_1MemProfiler_1_1MemInfo_1a334add2acca04ed49223180ab7991e19" kind="variable"><name>current_bytes</name></member>
-    <member refid="structamrex_1_1MemProfiler_1_1MemInfo_1a0986f22c847ee689a532d882351b7ee0" kind="variable"><name>hwm_bytes</name></member>
-  </compound>
   <compound refid="structamrex_1_1FabArrayBase_1_1meminfo" kind="struct"><name>amrex::FabArrayBase::meminfo</name>
     <member refid="structamrex_1_1FabArrayBase_1_1meminfo_1a1668be4dfe2249347358bd8b49741349" kind="variable"><name>nbytes</name></member>
     <member refid="structamrex_1_1FabArrayBase_1_1meminfo_1a0e8443110095e98946edaec490f65dfb" kind="variable"><name>nbytes_hwm</name></member>
+  </compound>
+  <compound refid="structamrex_1_1MemProfiler_1_1MemInfo" kind="struct"><name>amrex::MemProfiler::MemInfo</name>
+    <member refid="structamrex_1_1MemProfiler_1_1MemInfo_1a334add2acca04ed49223180ab7991e19" kind="variable"><name>current_bytes</name></member>
+    <member refid="structamrex_1_1MemProfiler_1_1MemInfo_1a0986f22c847ee689a532d882351b7ee0" kind="variable"><name>hwm_bytes</name></member>
   </compound>
   <compound refid="classamrex_1_1MemProfiler" kind="class"><name>amrex::MemProfiler</name>
     <member refid="classamrex_1_1MemProfiler_1a40ba66fec50cd477016a8ce11568f4ac" kind="variable"><name>the_instance</name></member>
@@ -8490,6 +8499,12 @@
     <member refid="classamrex_1_1NFilesIter_1a1ba8e895b17fe1e7c39d318b1e1ed9f8" kind="function"><name>SetMinDigits</name></member>
     <member refid="classamrex_1_1NFilesIter_1a0251784dab51b741e87189d342682354" kind="function"><name>NFilesIter</name></member>
   </compound>
+  <compound refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node" kind="struct"><name>amrex::algoim::QuadratureRule::Node</name>
+    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1aec5bde519720bd162ca02815d84c4b7b" kind="variable"><name>x</name></member>
+    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1ac09c0b155c27d48d0efcf8d70277894a" kind="variable"><name>y</name></member>
+    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1a5f9f48bbbd30d20b1b08061b621b46e6" kind="variable"><name>z</name></member>
+    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1a34f5a91f16a2303f0ed25ae611894455" kind="variable"><name>w</name></member>
+  </compound>
   <compound refid="classamrex_1_1CArena_1_1Node" kind="class"><name>amrex::CArena::Node</name>
     <member refid="classamrex_1_1CArena_1_1Node_1a999ce0f54f3eae13c2533caabe5acc89" kind="variable"><name>m_block</name></member>
     <member refid="classamrex_1_1CArena_1_1Node_1a8d1a994928ff734df597327f22db12dd" kind="variable"><name>m_owner</name></member>
@@ -8503,12 +8518,6 @@
     <member refid="classamrex_1_1CArena_1_1Node_1a736fe7c725b517fece9136f39e983765" kind="function"><name>size</name></member>
     <member refid="classamrex_1_1CArena_1_1Node_1abef15ce1cbccdaa8dc7aa6a6bb4a0609" kind="function"><name>owner</name></member>
     <member refid="classamrex_1_1CArena_1_1Node_1a9d48386ac6a4c17d1e2b4eb8ad13e221" kind="function"><name>coalescable</name></member>
-  </compound>
-  <compound refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node" kind="struct"><name>amrex::algoim::QuadratureRule::Node</name>
-    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1aec5bde519720bd162ca02815d84c4b7b" kind="variable"><name>x</name></member>
-    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1ac09c0b155c27d48d0efcf8d70277894a" kind="variable"><name>y</name></member>
-    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1a5f9f48bbbd30d20b1b08061b621b46e6" kind="variable"><name>z</name></member>
-    <member refid="structamrex_1_1algoim_1_1QuadratureRule_1_1Node_1a34f5a91f16a2303f0ed25ae611894455" kind="variable"><name>w</name></member>
   </compound>
   <compound refid="structamrex_1_1EArena_1_1Node" kind="struct"><name>amrex::EArena::Node</name>
     <member refid="structamrex_1_1EArena_1_1Node_1af098a20a26f8c6450ac2751d8f02a263" kind="variable"><name>m_block</name></member>
@@ -10648,6 +10657,10 @@
     <member refid="namespaceamrex_1ab02b05e2eb3282f8df33e5cbc655b2a3" kind="function"><name>prefetchToHost</name></member>
     <member refid="namespaceamrex_1a4db8bcd1f50c790aba6b81860143cc96" kind="function"><name>prefetchToDevice</name></member>
     <member refid="namespaceamrex_1a5821b989454c54f92dd1f2312e95b5b6" kind="function"><name>OverrideSync</name></member>
+    <member refid="namespaceamrex_1a998c5815369d23cd73eea1b09f43a966" kind="function"><name>dtoh_memcpy</name></member>
+    <member refid="namespaceamrex_1a8531953b8fba66482d81cad6c5dc3e73" kind="function"><name>dtoh_memcpy</name></member>
+    <member refid="namespaceamrex_1ae243b10c65516ed7dfeaf9aed7e75aa3" kind="function"><name>htod_memcpy</name></member>
+    <member refid="namespaceamrex_1aa9df7c449e875ece24add0d826c4f133" kind="function"><name>htod_memcpy</name></member>
     <member refid="namespaceamrex_1ac185c39750011cc24fb8c1a0b872a34d" kind="function"><name>operator&lt;&lt;</name></member>
     <member refid="namespaceamrex_1a0ed9b6ea967b3a6cebc43973e1440e06" kind="function"><name>operator&gt;&gt;</name></member>
     <member refid="namespaceamrex_1a69c1f9f47c8c546e09801fc8cf9a1cb7" kind="function"><name>selectOrdering</name></member>
@@ -10744,6 +10757,7 @@
     <member refid="namespaceamrex_1a4b0d01afec5218e25096773af48821bb" kind="function"><name>InterpAddBox</name></member>
     <member refid="namespaceamrex_1aabdb646a3159210a31ec8dc806eaf7bb" kind="function"><name>InterpFillFab</name></member>
     <member refid="namespaceamrex_1a89faf58cc9f92b14a4c334bcb8390966" kind="function"><name>TilingIfNotGPU</name></member>
+    <member refid="namespaceamrex_1a6a1aa0c151c5fe560ebb86c99194bfc3" kind="function"><name>isMFIterSafe</name></member>
     <member refid="namespaceamrex_1ae566fb9632b7a75aed11ce0135cac4c0" kind="function"><name>The_MFIter_Arena</name></member>
     <member refid="namespaceamrex_1ace75305a25397036be723db66686dd01" kind="function"><name>FillBoundary</name></member>
     <member refid="namespaceamrex_1ad60aac176908ba51373d63ca49bef063" kind="function"><name>GccPlacaterMF</name></member>
@@ -10779,7 +10793,6 @@
     <member refid="namespaceamrex_1a3b123b02ae07d8edcaaad7acdbfda099" kind="function"><name>makeFineMask</name></member>
     <member refid="namespaceamrex_1a7b179e68f86c4a06d176f587ec95148c" kind="function"><name>computeDivergence</name></member>
     <member refid="namespaceamrex_1add6ef1af4714e90f5d0b5a098725612b" kind="function"><name>computeGradient</name></member>
-    <member refid="namespaceamrex_1a19deaea1de1f8799e4c319910ef2dae4" kind="function"><name>isMFIterSafe</name></member>
     <member refid="namespaceamrex_1a24aa5b51c299dd1337df192681f47e0e" kind="function"><name>cast</name></member>
     <member refid="namespaceamrex_1aeadc3d45ec6aeb4163a09bee0954a3f8" kind="function"><name>amrex_avg_nd_to_cc</name></member>
     <member refid="namespaceamrex_1ad6b7048ddd0b031ff09bf54f426dc052" kind="function"><name>amrex_avg_eg_to_cc</name></member>

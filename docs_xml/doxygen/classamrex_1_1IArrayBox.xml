@@ -369,77 +369,77 @@
     <detaileddescription>
 <para>iFortran Array <ref refid="classamrex_1_1Box" kindref="compound">Box</ref>&apos;s (generally called iFAB&apos;s) are objects constructed to emulate the FORTRAN array. Useful operations can be performed upon FAB&apos;s in C++, and they provide a convenient interface to FORTRAN when it is necessary to retreat into that language.</para><para><ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> is derived from <ref refid="classamrex_1_1BaseFab" kindref="compound">BaseFab&lt;int&gt;</ref>. <ref refid="classamrex_1_1IArrayBox" kindref="compound">IArrayBox</ref> adds additional useful capabilities which make sense for int types, such as L**p norms.</para><para>The C pre-processor macro AMREX_SPACEDIM must be defined to use this class. The internal precision of FARRAYBOX objects is set by defining either BL_USE_FLOAT or BL_USE_DOUBLE</para><para>This is NOT a polymorphic class.</para><para>This class does NOT provide a copy constructor or assignment operator. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="3336">
+      <node id="3340">
         <label>amrex::BaseFab&lt; int &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="3337" relation="public-inheritance">
+        <childnode refid="3341" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3337">
+      <node id="3341">
         <label>amrex::DataAllocator</label>
         <link refid="structamrex_1_1DataAllocator"/>
       </node>
-      <node id="3335">
+      <node id="3339">
         <label>amrex::IArrayBox</label>
         <link refid="classamrex_1_1IArrayBox"/>
-        <childnode refid="3336" relation="public-inheritance">
+        <childnode refid="3340" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="3339">
+      <node id="3343">
         <label>amrex::BaseFab&lt; int &gt;</label>
         <link refid="classamrex_1_1BaseFab"/>
-        <childnode refid="3340" relation="public-inheritance">
+        <childnode refid="3344" relation="public-inheritance">
         </childnode>
-        <childnode refid="3343" relation="usage">
+        <childnode refid="3347" relation="usage">
           <edgelabel>domain</edgelabel>
         </childnode>
       </node>
-      <node id="3342">
+      <node id="3346">
         <label>amrex::ArenaInfo</label>
         <link refid="structamrex_1_1ArenaInfo"/>
       </node>
-      <node id="3344">
+      <node id="3348">
         <label>amrex::IntVect</label>
         <link refid="classamrex_1_1IntVect"/>
-        <childnode refid="3344" relation="usage">
+        <childnode refid="3348" relation="usage">
           <edgelabel>Unit</edgelabel>
           <edgelabel>Zero</edgelabel>
         </childnode>
       </node>
-      <node id="3340">
+      <node id="3344">
         <label>amrex::DataAllocator</label>
         <link refid="structamrex_1_1DataAllocator"/>
-        <childnode refid="3341" relation="usage">
+        <childnode refid="3345" relation="usage">
           <edgelabel>m_arena</edgelabel>
         </childnode>
       </node>
-      <node id="3341">
+      <node id="3345">
         <label>amrex::Arena</label>
         <link refid="classamrex_1_1Arena"/>
-        <childnode refid="3342" relation="usage">
+        <childnode refid="3346" relation="usage">
           <edgelabel>arena_info</edgelabel>
         </childnode>
       </node>
-      <node id="3343">
+      <node id="3347">
         <label>amrex::Box</label>
         <link refid="classamrex_1_1Box"/>
-        <childnode refid="3344" relation="usage">
+        <childnode refid="3348" relation="usage">
           <edgelabel>bigend</edgelabel>
           <edgelabel>smallend</edgelabel>
         </childnode>
-        <childnode refid="3345" relation="usage">
+        <childnode refid="3349" relation="usage">
           <edgelabel>btype</edgelabel>
         </childnode>
       </node>
-      <node id="3338">
+      <node id="3342">
         <label>amrex::IArrayBox</label>
         <link refid="classamrex_1_1IArrayBox"/>
-        <childnode refid="3339" relation="public-inheritance">
+        <childnode refid="3343" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3345">
+      <node id="3349">
         <label>amrex::IndexType</label>
         <link refid="classamrex_1_1IndexType"/>
       </node>
@@ -626,6 +626,7 @@
       <member refid="classamrex_1_1BaseFab_1acd08ca7330a5790df2af1041eda23b25" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>protected_divide</name></member>
       <member refid="classamrex_1_1BaseFab_1a921f825a91f4fd7a7b4997c65ad4f6c4" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>protected_divide</name></member>
       <member refid="classamrex_1_1BaseFab_1acf3b50d012730dd3521fb2be517573b9" prot="protected" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>ptr_owner</name></member>
+      <member refid="classamrex_1_1BaseFab_1a4390286fe2327bd5f0561a75ee14499b" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>release</name></member>
       <member refid="classamrex_1_1IArrayBox_1ab4da50b98000eb197a2b1050a5e2fd51" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>resize</name></member>
       <member refid="classamrex_1_1BaseFab_1aa3293873bc0c5ccb66b367b84889e042" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>saxpy</name></member>
       <member refid="classamrex_1_1BaseFab_1ae39c876df7b0ebfe1d9e6dfba4e5c00e" prot="public" virt="non-virtual"><scope>amrex::IArrayBox</scope><name>saxpy</name></member>
