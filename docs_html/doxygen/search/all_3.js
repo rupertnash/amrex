@@ -38,6 +38,7 @@ var searchData=
   ['cartgridminmax1d',['cartgridminmax1d',['../AMReX__FABUTIL__1D_8F.html#a39695606b5463f122a72efd357401044',1,'AMReX_FABUTIL_1D.F']]],
   ['cartgridminmax2d',['cartgridminmax2d',['../AMReX__FABUTIL__2D_8F.html#ae5698fd8e1448915e1e5a711c1fdb1a6',1,'AMReX_FABUTIL_2D.F']]],
   ['cartgridversion',['CartGridVersion',['../classamrex_1_1AmrData.html#ac36c8dc2f188b71f707a5dc7376a82bf',1,'amrex::AmrData']]],
+  ['cas',['CAS',['../namespaceamrex_1_1Gpu_1_1Atomic.html#ae51173f72e8aea917b2a1d25a75956d7',1,'amrex::Gpu::Atomic::CAS(int *address, int compare, int val) noexcept'],['../namespaceamrex_1_1Gpu_1_1Atomic.html#a2d9177858c2cd819753d54f0b6ec1741',1,'amrex::Gpu::Atomic::CAS(unsigned int *address, unsigned int compare, unsigned int val) noexcept'],['../namespaceamrex_1_1Gpu_1_1Atomic.html#a9fd06a5f2230d1349c5576a7051c3027',1,'amrex::Gpu::Atomic::CAS(unsigned long long int *address, unsigned long long int compare, unsigned long long int val) noexcept'],['../namespaceamrex_1_1Gpu_1_1Atomic.html#a8739614838d9ec0a9325afb3b958f2b1',1,'amrex::Gpu::Atomic::CAS(unsigned short int *address, unsigned short int compare, unsigned short int val) noexcept']]],
   ['cash_5f5_5f2_5f4',['cash_5_2_4',['../namespacefarkode__mod.html#a262e7ff29b430cb4973176054947ad0e',1,'farkode_mod']]],
   ['cash_5f5_5f3_5f4',['cash_5_3_4',['../namespacefarkode__mod.html#add58069dfea11040e535c7162757eea9',1,'farkode_mod']]],
   ['cash_5fkarp_5f6_5f4_5f5',['cash_karp_6_4_5',['../namespacefarkode__mod.html#a3522836b5255613ae0f8a86369b8737b',1,'farkode_mod']]],
@@ -447,7 +448,7 @@ var searchData=
   ['cvspils_5fsunls_5fnull',['cvspils_sunls_null',['../namespacefcvode__mod.html#aea7da74c42b41c1ce3bdedc3b0c6ad0e',1,'fcvode_mod']]],
   ['cx',['CX',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#a0b4c12a5dc8490a3cff8385334db2d13',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
   ['cy',['CY',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#ac5bc792e372b15e7a1d3efe6daac9aec',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]],
-  ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html',1,'amrex::EB2']]],
   ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html#a7f70d143e2569bc9112f4c5f1efcd83d',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#a65cc987a90a62e4c8e29302895bab48c',1,'amrex::EB2::CylinderIF::CylinderIF(Real a_radius, Real a_height, int a_direction, const RealArray &amp;a_center, bool a_inside)'],['../classamrex_1_1EB2_1_1CylinderIF.html#ac95d0145e3b32c4416b51918700ebe7b',1,'amrex::EB2::CylinderIF::CylinderIF(const CylinderIF &amp;rhs) noexcept=default'],['../classamrex_1_1EB2_1_1CylinderIF.html#a2c89f29c0c46c2871e4a619b859e8882',1,'amrex::EB2::CylinderIF::CylinderIF(CylinderIF &amp;&amp;rhs) noexcept=default']]],
+  ['cylinderif',['CylinderIF',['../classamrex_1_1EB2_1_1CylinderIF.html',1,'amrex::EB2']]],
   ['cz',['CZ',['../AMReX__MCINTERPBNDRYDATA__3D_8F.html#addbd2f751d6f06eaa9eac7526839a4c9',1,'AMReX_MCINTERPBNDRYDATA_3D.F']]]
 ];
