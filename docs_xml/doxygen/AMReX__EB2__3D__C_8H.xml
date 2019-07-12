@@ -14,9 +14,9 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceamrex" kindref="compound">amrex</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">EB2<sp/>{</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1aeb09e10bb31cfaa6b8928520c9041df9" kindref="member">AMREX_INLINE</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="AMReX__GpuQualifiers_8H_1aac52ee54727d35b2d0033b119a991618" kindref="member">AMREX_GPU_HOST_DEVICE</ref><sp/><ref refid="AMReX__Extension_8H_1a90cf7b81cd61799c87306cad156cc317" kindref="member">AMREX_FORCE_INLINE</ref></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="namespaceamrex_1_1EB2_1ae92167a80d751b9406ba0486bd351d5a" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1_1EB2_1a1ab2ae8e7ec0404b2025c51ef19ad247" kindref="member">amrex_eb2_build_types</ref><sp/>(<ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>tbx,<sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>bxg2,</highlight></codeline>
+<codeline lineno="8" refid="namespaceamrex_1_1EB2_1a3f7a5615d8bbdbe47974e1f67f8ae9d7" refkind="member"><highlight class="normal"><ref refid="namespaceamrex_1_1EB2_1a7ba57151d47433c3db4f9e62154c159f" kindref="member">amrex_eb2_build_types</ref><sp/>(<ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>tbx,<sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>bxg2,</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1Array4" kindref="compound">Array4&lt;Real const&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>s,</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1Array4" kindref="compound">Array4&lt;EBCellFlag&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>cell,</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structamrex_1_1Array4" kindref="compound">Array4&lt;Type_t&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>fx,</highlight></codeline>
@@ -52,7 +52,7 @@
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>x-face</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a3d70dd5968fac861d1a6bdeca6a421dd" kindref="member">amrex::surroundingNodes</ref>(bxg2,0);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classamrex_1_1Box" kindref="compound">Box</ref><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a83ce813a4f22bd122dfa0d93671ecb4e" kindref="member">amrex::surroundingNodes</ref>(bxg2,0);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a10613950f73e309724a256c28d4849e1" kindref="member">amrex::max_lbound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a1ffc05df0359580bd1fc89982cbaf264" kindref="member">amrex::min_ubound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1afee333c49bcfdf12a3ccc051cd2f7406" kindref="member">amrex::Loop</ref>(lo,<sp/>hi,</highlight></codeline>
@@ -75,7 +75,7 @@
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>y-face</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a3d70dd5968fac861d1a6bdeca6a421dd" kindref="member">amrex::surroundingNodes</ref>(bxg2,1);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a83ce813a4f22bd122dfa0d93671ecb4e" kindref="member">amrex::surroundingNodes</ref>(bxg2,1);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a10613950f73e309724a256c28d4849e1" kindref="member">amrex::max_lbound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a1ffc05df0359580bd1fc89982cbaf264" kindref="member">amrex::min_ubound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1afee333c49bcfdf12a3ccc051cd2f7406" kindref="member">amrex::Loop</ref>(lo,<sp/>hi,</highlight></codeline>
@@ -98,7 +98,7 @@
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>z-face</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a3d70dd5968fac861d1a6bdeca6a421dd" kindref="member">amrex::surroundingNodes</ref>(bxg2,2);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a83ce813a4f22bd122dfa0d93671ecb4e" kindref="member">amrex::surroundingNodes</ref>(bxg2,2);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a10613950f73e309724a256c28d4849e1" kindref="member">amrex::max_lbound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a1ffc05df0359580bd1fc89982cbaf264" kindref="member">amrex::min_ubound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1afee333c49bcfdf12a3ccc051cd2f7406" kindref="member">amrex::Loop</ref>(lo,<sp/>hi,</highlight></codeline>
@@ -121,7 +121,7 @@
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>x-edge</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a8144932737d783b3734f792250e32181" kindref="member">amrex::convert</ref>(bxg2,<ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>(0,1,1));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a314545dbd77212eb64c3a248c754eda6" kindref="member">amrex::convert</ref>(bxg2,<ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>(0,1,1));</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a10613950f73e309724a256c28d4849e1" kindref="member">amrex::max_lbound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a1ffc05df0359580bd1fc89982cbaf264" kindref="member">amrex::min_ubound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1afee333c49bcfdf12a3ccc051cd2f7406" kindref="member">amrex::Loop</ref>(lo,<sp/>hi,</highlight></codeline>
@@ -137,7 +137,7 @@
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>y-edge</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a8144932737d783b3734f792250e32181" kindref="member">amrex::convert</ref>(bxg2,<ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>(1,0,1));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a314545dbd77212eb64c3a248c754eda6" kindref="member">amrex::convert</ref>(bxg2,<ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>(1,0,1));</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a10613950f73e309724a256c28d4849e1" kindref="member">amrex::max_lbound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a1ffc05df0359580bd1fc89982cbaf264" kindref="member">amrex::min_ubound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1afee333c49bcfdf12a3ccc051cd2f7406" kindref="member">amrex::Loop</ref>(lo,<sp/>hi,</highlight></codeline>
@@ -153,7 +153,7 @@
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>z-edge</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a8144932737d783b3734f792250e32181" kindref="member">amrex::convert</ref>(bxg2,<ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>(1,1,0));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="namespaceamrex_1a314545dbd77212eb64c3a248c754eda6" kindref="member">amrex::convert</ref>(bxg2,<ref refid="classamrex_1_1IntVect" kindref="compound">IntVect</ref>(1,1,0));</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>lo<sp/>=<sp/><ref refid="namespaceamrex_1a10613950f73e309724a256c28d4849e1" kindref="member">amrex::max_lbound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>hi<sp/>=<sp/><ref refid="namespaceamrex_1a1ffc05df0359580bd1fc89982cbaf264" kindref="member">amrex::min_ubound</ref>(tbx,<sp/>b);</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceamrex_1afee333c49bcfdf12a3ccc051cd2f7406" kindref="member">amrex::Loop</ref>(lo,<sp/>hi,</highlight></codeline>

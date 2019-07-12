@@ -11,7 +11,7 @@ var searchData=
   ['qsort',['qsort',['../namespacesdcquadrature__mod.html#aca9a2cd134b3750fabf403d738255f79',1,'sdcquadrature_mod']]],
   ['qsort_5fpartition',['qsort_partition',['../namespacesdcquadrature__mod.html#a48ed5f48f95b69c47de925a1a865a89c',1,'sdcquadrature_mod']]],
   ['qtype',['qtype',['../classSDCstruct.html#a6ce083cc22a392cc9a487fcd854387ac',1,'SDCstruct']]],
-  ['quadgen',['quadGen',['../namespaceamrex_1_1algoim.html#af1203a2f145b2ea77b492f16e4c75844',1,'amrex::algoim']]],
+  ['quadgen',['quadGen',['../namespaceamrex_1_1algoim.html#a05434c8a13201e8af0f5dab5420e33d2',1,'amrex::algoim']]],
   ['quadratic_5finterp',['quadratic_interp',['../namespaceamrex.html#ad21d1e8d053cd312ae67d9bd79b598ac',1,'amrex']]],
   ['quadraturerule',['QuadratureRule',['../structamrex_1_1algoim_1_1QuadratureRule.html',1,'amrex::algoim']]],
   ['quartic_5finterp',['quartic_interp',['../namespaceamrex.html#a2a5decb8ebeab1e499c7c66e78a0eb07',1,'amrex']]],

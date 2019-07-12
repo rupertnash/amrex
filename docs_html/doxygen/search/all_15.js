@@ -28,7 +28,7 @@ var searchData=
   ['unprotectednextid',['UnprotectedNextID',['../structamrex_1_1Particle.html#a008787d04da5113188a90a704f8f066a',1,'amrex::Particle']]],
   ['unreadmessages',['unreadMessages',['../classamrex_1_1NFilesIter.html#a8ac006de5caf3cfd0e6456dd6c3b3f2a',1,'amrex::NFilesIter']]],
   ['unserializestringarray',['UnSerializeStringArray',['../namespaceamrex.html#a23045f55caabc0bec388518c4c4adecb',1,'amrex']]],
-  ['unset',['unset',['../classamrex_1_1IndexType.html#a9ca7e61e3ccde879d6d8067ebfd846ad',1,'amrex::IndexType']]],
+  ['unset',['unset',['../classamrex_1_1IndexType.html#a96a82a3cae3ec1a5185f7c3c93e80fb1',1,'amrex::IndexType']]],
   ['unused_5ftable_5fentries_5fq',['unused_table_entries_q',['../namespaceamrex.html#aebd29bf8d5456e97aae77603a41a032f',1,'amrex']]],
   ['unwrap',['unwrap',['../structamrex_1_1detail_1_1unwrap.html',1,'amrex::detail']]],
   ['unwrap_3c_20std_3a_3areference_5fwrapper_3c_20t_20_3e_20_3e',['unwrap&lt; std::reference_wrapper&lt; T &gt; &gt;',['../structamrex_1_1detail_1_1unwrap_3_01std_1_1reference__wrapper_3_01T_01_4_01_4.html',1,'amrex::detail']]],
