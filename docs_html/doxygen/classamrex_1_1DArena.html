@@ -149,6 +149,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a1061832f806866fdf9902b89c7013792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9274b236cdc85ff9d33d35f2d8027d3"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::ptrdiff_t, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1DArena.html#aa9274b236cdc85ff9d33d35f2d8027d3">m_used</a></td></tr>
 <tr class="separator:aa9274b236cdc85ff9d33d35f2d8027d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe171de824be042a8b957b2fe35d7f3"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; void *, std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1DArena.html#a1fe171de824be042a8b957b2fe35d7f3">m_system</a></td></tr>
+<tr class="separator:a1fe171de824be042a8b957b2fe35d7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60dde49130e2e6672c0f70a63a5fde2c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1DArena.html#a60dde49130e2e6672c0f70a63a5fde2c">m_baseptr</a></td></tr>
 <tr class="separator:a60dde49130e2e6672c0f70a63a5fde2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9532cfd8968174b10df559bd24b8061e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1DArena.html#a9532cfd8968174b10df559bd24b8061e">m_max_size</a></td></tr>
@@ -182,8 +184,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classamrex_1_1Arena"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classamrex_1_1Arena')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classamrex_1_1Arena.html">amrex::Arena</a></td></tr>
 <tr class="memitem:afc721e195430f79b2d1b287c490ef0fb inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#afc721e195430f79b2d1b287c490ef0fb">allocate_system</a> (std::size_t nbytes)</td></tr>
 <tr class="separator:afc721e195430f79b2d1b287c490ef0fb inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9267a7d1f5ca6f3d24154c06329bdbe7 inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#a9267a7d1f5ca6f3d24154c06329bdbe7">deallocate_system</a> (void *p)</td></tr>
-<tr class="separator:a9267a7d1f5ca6f3d24154c06329bdbe7 inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07ba8cda253cddee3cab1168ac65694 inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#ac07ba8cda253cddee3cab1168ac65694">deallocate_system</a> (void *p, std::size_t nbytes)</td></tr>
+<tr class="separator:ac07ba8cda253cddee3cab1168ac65694 inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classamrex_1_1Arena"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classamrex_1_1Arena')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classamrex_1_1Arena.html">amrex::Arena</a></td></tr>
 <tr class="memitem:aeb2158ba443c9b23ba0d12bcf38a66e1 inherit pro_attribs_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structamrex_1_1ArenaInfo.html">ArenaInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#aeb2158ba443c9b23ba0d12bcf38a66e1">arena_info</a></td></tr>
 <tr class="separator:aeb2158ba443c9b23ba0d12bcf38a66e1 inherit pro_attribs_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -631,6 +633,26 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::mutex amrex::DArena::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1fe171de824be042a8b957b2fe35d7f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;void*,std::size_t&gt; amrex::DArena::m_system</td>
         </tr>
       </table>
   </td>

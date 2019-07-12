@@ -159,9 +159,9 @@ Protected Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ae4df71ed6e581bb88793c7c009cb4660"><td class="memItemLeft" align="right" valign="top">std::vector&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1CArena.html#ae4df71ed6e581bb88793c7c009cb4660">m_alloc</a></td></tr>
-<tr class="memdesc:ae4df71ed6e581bb88793c7c009cb4660"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of blocks allocated via ::operator new().  <a href="#ae4df71ed6e581bb88793c7c009cb4660">More...</a><br /></td></tr>
-<tr class="separator:ae4df71ed6e581bb88793c7c009cb4660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b240a0437cfcaee6788096d93a1674"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; void *, std::size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1CArena.html#ad1b240a0437cfcaee6788096d93a1674">m_alloc</a></td></tr>
+<tr class="memdesc:ad1b240a0437cfcaee6788096d93a1674"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of blocks allocated via ::operator new().  <a href="#ad1b240a0437cfcaee6788096d93a1674">More...</a><br /></td></tr>
+<tr class="separator:ad1b240a0437cfcaee6788096d93a1674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000d9e231672c9a28a72a05abec379fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1CArena.html#a9e8adf2bef58badafbefa442d69db64b">NL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1CArena.html#a000d9e231672c9a28a72a05abec379fb">m_freelist</a></td></tr>
 <tr class="memdesc:a000d9e231672c9a28a72a05abec379fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The free list of allocated but not currently used blocks. Maintained in lo to hi memory sorted order.  <a href="#a000d9e231672c9a28a72a05abec379fb">More...</a><br /></td></tr>
 <tr class="separator:a000d9e231672c9a28a72a05abec379fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,8 +195,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classamrex_1_1Arena"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classamrex_1_1Arena')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classamrex_1_1Arena.html">amrex::Arena</a></td></tr>
 <tr class="memitem:afc721e195430f79b2d1b287c490ef0fb inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#afc721e195430f79b2d1b287c490ef0fb">allocate_system</a> (std::size_t nbytes)</td></tr>
 <tr class="separator:afc721e195430f79b2d1b287c490ef0fb inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9267a7d1f5ca6f3d24154c06329bdbe7 inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#a9267a7d1f5ca6f3d24154c06329bdbe7">deallocate_system</a> (void *p)</td></tr>
-<tr class="separator:a9267a7d1f5ca6f3d24154c06329bdbe7 inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07ba8cda253cddee3cab1168ac65694 inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#ac07ba8cda253cddee3cab1168ac65694">deallocate_system</a> (void *p, std::size_t nbytes)</td></tr>
+<tr class="separator:ac07ba8cda253cddee3cab1168ac65694 inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classamrex_1_1Arena"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classamrex_1_1Arena')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classamrex_1_1Arena.html">amrex::Arena</a></td></tr>
 <tr class="memitem:a52dd4bf03bb4d31899bca6ca3440760a inherit pro_static_attribs_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#a52dd4bf03bb4d31899bca6ca3440760a">align_size</a> = 16</td></tr>
 <tr class="separator:a52dd4bf03bb4d31899bca6ca3440760a inherit pro_static_attribs_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -450,7 +450,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae4df71ed6e581bb88793c7c009cb4660"></a>
+<a class="anchor" id="ad1b240a0437cfcaee6788096d93a1674"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -458,7 +458,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;void*&gt; amrex::CArena::m_alloc</td>
+          <td class="memname">std::vector&lt;std::pair&lt;void*,std::size_t&gt; &gt; amrex::CArena::m_alloc</td>
         </tr>
       </table>
   </td>

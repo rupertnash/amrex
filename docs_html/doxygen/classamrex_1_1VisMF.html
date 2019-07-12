@@ -209,6 +209,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a865aac1ae0e0fde40a0470d75eb44935"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a865aac1ae0e0fde40a0470d75eb44935">Write</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;fafab, const std::string &amp;name, <a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156">VisMF::How</a> how=<a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156a167fa24b841257fa58af35b658f5d6c1">NFiles</a>, bool set_ghost=false)</td></tr>
 <tr class="memdesc:a865aac1ae0e0fde40a0470d75eb44935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a <a class="el" href="classamrex_1_1FabArray.html">FabArray&lt;FArrayBox&gt;</a> to disk in a "smart" way. Returns the total number of bytes written on this processor. If set_ghost is true, sets the ghost cells in the <a class="el" href="classamrex_1_1FabArray.html">FabArray&lt;FArrayBox&gt;</a> to one-half the average of the min and max over the valid region of each contained FAB.  <a href="#a865aac1ae0e0fde40a0470d75eb44935">More...</a><br /></td></tr>
 <tr class="separator:a865aac1ae0e0fde40a0470d75eb44935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805c594851bbab413ac80fa5af467ac2"><td class="memItemLeft" align="right" valign="top">static std::future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a805c594851bbab413ac80fa5af467ac2">WriteAsync</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;fafab, const std::string &amp;name)</td></tr>
+<tr class="separator:a805c594851bbab413ac80fa5af467ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f08ad07cd586ef21006e86958609655"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a8f08ad07cd586ef21006e86958609655">WriteOnlyHeader</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;mf, const std::string &amp;mf_name, <a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156">VisMF::How</a> how=<a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156a167fa24b841257fa58af35b658f5d6c1">NFiles</a>)</td></tr>
 <tr class="memdesc:a8f08ad07cd586ef21006e86958609655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write only the header-file corresponding to <a class="el" href="classamrex_1_1FabArray.html">FabArray&lt;FArrayBox&gt;</a> to disk without the corresponding FAB data. This writes <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> information (which might still be needed by data post-processing tools such as yt) when the FAB data is not needed. Returns the total number of bytes written on this processor.  <a href="#a8f08ad07cd586ef21006e86958609655">More...</a><br /></td></tr>
 <tr class="separator:a8f08ad07cd586ef21006e86958609655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,12 +234,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a3384303973984fe6736efd5aeb5535d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b516dcb8729a411f75eaa5d7fc1b54"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a73b516dcb8729a411f75eaa5d7fc1b54">GetNOutFiles</a> ()</td></tr>
 <tr class="separator:a73b516dcb8729a411f75eaa5d7fc1b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e77b1242e5dc3aef8f3b1a15358545"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a81e77b1242e5dc3aef8f3b1a15358545">SetNOutFiles</a> (int noutfiles)</td></tr>
-<tr class="separator:a81e77b1242e5dc3aef8f3b1a15358545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f990c53f9abf19fdd7c10f14eae38b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a12f990c53f9abf19fdd7c10f14eae38b">SetNOutFiles</a> (int noutfiles, <a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a> comm=<a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>())</td></tr>
+<tr class="separator:a12f990c53f9abf19fdd7c10f14eae38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a738d789073dd1072ac3a0c640429574c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a738d789073dd1072ac3a0c640429574c">GetMFFileInStreams</a> ()</td></tr>
 <tr class="separator:a738d789073dd1072ac3a0c640429574c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f0e2a7219ab65191d6fd7206e252138"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a9f0e2a7219ab65191d6fd7206e252138">SetMFFileInStreams</a> (int nstreams)</td></tr>
-<tr class="separator:a9f0e2a7219ab65191d6fd7206e252138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda03b733e4f5e0b9f005f764f1a5b65"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#abda03b733e4f5e0b9f005f764f1a5b65">SetMFFileInStreams</a> (int nstreams, <a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a> comm=<a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>())</td></tr>
+<tr class="separator:abda03b733e4f5e0b9f005f764f1a5b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51041736815ed12616b075d56e53fd2f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a51041736815ed12616b075d56e53fd2f">GetVerbose</a> ()</td></tr>
 <tr class="separator:a51041736815ed12616b075d56e53fd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a998f1813f57b8415140b26966fd0f86c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a998f1813f57b8415140b26966fd0f86c">SetVerbose</a> (int v)</td></tr>
@@ -298,11 +300,13 @@ Private Member Functions</h2></td></tr>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:aef488a8732bb3990f9ca15cd48ab02f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structamrex_1_1VisMF_1_1FabOnDisk.html">FabOnDisk</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#aef488a8732bb3990f9ca15cd48ab02f1">Write</a> (const <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &amp;fab, const std::string &amp;filename, std::ostream &amp;os, long &amp;bytes)</td></tr>
 <tr class="separator:aef488a8732bb3990f9ca15cd48ab02f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6f518c829413e1799363ed72d32a981"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#af6f518c829413e1799363ed72d32a981">WriteHeader</a> (const std::string &amp;fafab_name, <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;hdr, int procToWrite=<a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#ab734a5d614e753d28d03865ee6e4039a">ParallelDescriptor::IOProcessorNumber</a>())</td></tr>
-<tr class="separator:af6f518c829413e1799363ed72d32a981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a897d7c5876969ac1f5a1fa3b016ee8a8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a897d7c5876969ac1f5a1fa3b016ee8a8">FindOffsets</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;fafab, const std::string &amp;fafab_name, <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;hdr, bool <a class="el" href="classamrex_1_1VisMF.html#a51fdeeea196eac049978076bf6671720">groupSets</a>, <a class="el" href="structamrex_1_1VisMF_1_1Header.html#aa4469030a55d4e3be552189f7d06b54d">VisMF::Header::Version</a> whichVersion, <a class="el" href="classamrex_1_1NFilesIter.html">NFilesIter</a> &amp;nfi)</td></tr>
-<tr class="memdesc:a897d7c5876969ac1f5a1fa3b016ee8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">fileNumbers must be passed in for dynamic set selection [proc]  <a href="#a897d7c5876969ac1f5a1fa3b016ee8a8">More...</a><br /></td></tr>
-<tr class="separator:a897d7c5876969ac1f5a1fa3b016ee8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8f858a76c15307f5adf8632f82ec23"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a9f8f858a76c15307f5adf8632f82ec23">WriteHeaderDoit</a> (const std::string &amp;fafab_name, <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> const &amp;hdr)</td></tr>
+<tr class="separator:a9f8f858a76c15307f5adf8632f82ec23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bff325e3c0f62c275d5d2971128914"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a11bff325e3c0f62c275d5d2971128914">WriteHeader</a> (const std::string &amp;fafab_name, <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;hdr, int procToWrite=<a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#ab734a5d614e753d28d03865ee6e4039a">ParallelDescriptor::IOProcessorNumber</a>(), <a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a> comm=<a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>())</td></tr>
+<tr class="separator:a11bff325e3c0f62c275d5d2971128914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a13f502a7ae61af0ef1bc5bff7ee768"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a1a13f502a7ae61af0ef1bc5bff7ee768">FindOffsets</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;fafab, const std::string &amp;fafab_name, <a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> &amp;hdr, bool <a class="el" href="classamrex_1_1VisMF.html#a51fdeeea196eac049978076bf6671720">groupSets</a>, <a class="el" href="structamrex_1_1VisMF_1_1Header.html#aa4469030a55d4e3be552189f7d06b54d">VisMF::Header::Version</a> whichVersion, <a class="el" href="classamrex_1_1NFilesIter.html">NFilesIter</a> &amp;nfi, <a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a> comm=<a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>())</td></tr>
+<tr class="memdesc:a1a13f502a7ae61af0ef1bc5bff7ee768"><td class="mdescLeft">&#160;</td><td class="mdescRight">fileNumbers must be passed in for dynamic set selection [proc]  <a href="#a1a13f502a7ae61af0ef1bc5bff7ee768">More...</a><br /></td></tr>
+<tr class="separator:a1a13f502a7ae61af0ef1bc5bff7ee768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b548af5417b0614cd9795f054976559"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a3b548af5417b0614cd9795f054976559">readFAB</a> (int fabIndex, const std::string &amp;fafab_name, const <a class="el" href="structamrex_1_1VisMF_1_1Header.html">Header</a> &amp;hdr, int whichComp=-1)</td></tr>
 <tr class="memdesc:a3b548af5417b0614cd9795f054976559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a new FAB from a fab in a <a class="el" href="classamrex_1_1FabArray.html">FabArray&lt;FArrayBox&gt;</a> on disk. The returned *FAB will have either one component filled from fafab[fabIndex][whichComp] or fafab[fabIndex].<a class="el" href="classamrex_1_1VisMF.html#a9ff17055f76eb10b376600710788b922" title="The number of components in the on-disk FabArray&lt;FArrayBox&gt;. ">nComp()</a> components. whichComp == -1 means reads the whole FAB. Otherwise read just that component.  <a href="#a3b548af5417b0614cd9795f054976559">More...</a><br /></td></tr>
 <tr class="separator:a3b548af5417b0614cd9795f054976559"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -809,7 +813,7 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a897d7c5876969ac1f5a1fa3b016ee8a8"></a>
+<a class="anchor" id="a1a13f502a7ae61af0ef1bc5bff7ee768"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -850,7 +854,13 @@ Static Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classamrex_1_1NFilesIter.html">NFilesIter</a> &amp;&#160;</td>
-          <td class="paramname"><em>nfi</em>&#160;</td>
+          <td class="paramname"><em>nfi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td>
+          <td class="paramname"><em>comm</em> = <code><a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1808,7 +1818,7 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f0e2a7219ab65191d6fd7206e252138"></a>
+<a class="anchor" id="abda03b733e4f5e0b9f005f764f1a5b65"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1819,8 +1829,18 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void amrex::VisMF::SetMFFileInStreams </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nstreams</em></td><td>)</td>
+          <td class="paramname"><em>nstreams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td>
+          <td class="paramname"><em>comm</em> = <code><a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1832,7 +1852,7 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a81e77b1242e5dc3aef8f3b1a15358545"></a>
+<a class="anchor" id="a12f990c53f9abf19fdd7c10f14eae38b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1843,8 +1863,18 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void amrex::VisMF::SetNOutFiles </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>noutfiles</em></td><td>)</td>
+          <td class="paramname"><em>noutfiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td>
+          <td class="paramname"><em>comm</em> = <code><a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -2136,7 +2166,41 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af6f518c829413e1799363ed72d32a981"></a>
+<a class="anchor" id="a805c594851bbab413ac80fa5af467ac2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::future&lt; void &gt; amrex::VisMF::WriteAsync </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fafab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a11bff325e3c0f62c275d5d2971128914"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2159,7 +2223,47 @@ Static Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>procToWrite</em> = <code><a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#ab734a5d614e753d28d03865ee6e4039a">ParallelDescriptor::IOProcessorNumber</a>()</code>&#160;</td>
+          <td class="paramname"><em>procToWrite</em> = <code><a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#ab734a5d614e753d28d03865ee6e4039a">ParallelDescriptor::IOProcessorNumber</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="AMReX__ccse-mpi_8H.html#a68c509d4adb3f4a1d6fe3a9b0b87c7b9">MPI_Comm</a>&#160;</td>
+          <td class="paramname"><em>comm</em> = <code><a class="el" href="namespaceamrex_1_1ParallelDescriptor.html#a0f53686fc6a6b7dca69c230fd1336e44">ParallelDescriptor::Communicator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9f8f858a76c15307f5adf8632f82ec23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long amrex::VisMF::WriteHeaderDoit </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fafab_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1VisMF_1_1Header.html">VisMF::Header</a> const &amp;&#160;</td>
+          <td class="paramname"><em>hdr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

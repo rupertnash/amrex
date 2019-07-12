@@ -161,8 +161,8 @@ Protected Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a55324b0f7c48fd81f54222a9b7d25cf4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EArena.html#a55324b0f7c48fd81f54222a9b7d25cf4">m_alloc</a></td></tr>
-<tr class="separator:a55324b0f7c48fd81f54222a9b7d25cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b05dd7697d03b2752d96117fe50bf03"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; void *, std::size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EArena.html#a3b05dd7697d03b2752d96117fe50bf03">m_alloc</a></td></tr>
+<tr class="separator:a3b05dd7697d03b2752d96117fe50bf03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a643d1d395c74559a883cea436b148679"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1EArena.html#a62a6459912f2dee99fb7dc6dfe60d851">FreeList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EArena.html#a643d1d395c74559a883cea436b148679">m_freelist</a></td></tr>
 <tr class="separator:a643d1d395c74559a883cea436b148679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68dd7c13d4db50eeaa1b7b075a140960"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classamrex_1_1EArena.html#a4b262f8a364b67bc38f2db23df5dcc75">MergeList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1EArena.html#a68dd7c13d4db50eeaa1b7b075a140960">m_mergelist</a></td></tr>
@@ -199,8 +199,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classamrex_1_1Arena"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classamrex_1_1Arena')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classamrex_1_1Arena.html">amrex::Arena</a></td></tr>
 <tr class="memitem:afc721e195430f79b2d1b287c490ef0fb inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#afc721e195430f79b2d1b287c490ef0fb">allocate_system</a> (std::size_t nbytes)</td></tr>
 <tr class="separator:afc721e195430f79b2d1b287c490ef0fb inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9267a7d1f5ca6f3d24154c06329bdbe7 inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#a9267a7d1f5ca6f3d24154c06329bdbe7">deallocate_system</a> (void *p)</td></tr>
-<tr class="separator:a9267a7d1f5ca6f3d24154c06329bdbe7 inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07ba8cda253cddee3cab1168ac65694 inherit pro_methods_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#ac07ba8cda253cddee3cab1168ac65694">deallocate_system</a> (void *p, std::size_t nbytes)</td></tr>
+<tr class="separator:ac07ba8cda253cddee3cab1168ac65694 inherit pro_methods_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classamrex_1_1Arena"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classamrex_1_1Arena')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classamrex_1_1Arena.html">amrex::Arena</a></td></tr>
 <tr class="memitem:a52dd4bf03bb4d31899bca6ca3440760a inherit pro_static_attribs_classamrex_1_1Arena"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1Arena.html#a52dd4bf03bb4d31899bca6ca3440760a">align_size</a> = 16</td></tr>
 <tr class="separator:a52dd4bf03bb4d31899bca6ca3440760a inherit pro_static_attribs_classamrex_1_1Arena"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -518,7 +518,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a55324b0f7c48fd81f54222a9b7d25cf4"></a>
+<a class="anchor" id="a3b05dd7697d03b2752d96117fe50bf03"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -526,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;void*&gt; amrex::EArena::m_alloc</td>
+          <td class="memname">std::vector&lt;std::pair&lt;void*,std::size_t&gt; &gt; amrex::EArena::m_alloc</td>
         </tr>
       </table>
   </td>

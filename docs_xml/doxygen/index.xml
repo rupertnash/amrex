@@ -965,7 +965,7 @@
     <member refid="classamrex_1_1Arena_1a506a68384da30629323d0839f13812c2" kind="function"><name>PrintUsage</name></member>
     <member refid="classamrex_1_1Arena_1a06dd6197d2081d7dd4c1bed308edd387" kind="function"><name>Finalize</name></member>
     <member refid="classamrex_1_1Arena_1afc721e195430f79b2d1b287c490ef0fb" kind="function"><name>allocate_system</name></member>
-    <member refid="classamrex_1_1Arena_1a9267a7d1f5ca6f3d24154c06329bdbe7" kind="function"><name>deallocate_system</name></member>
+    <member refid="classamrex_1_1Arena_1ac07ba8cda253cddee3cab1168ac65694" kind="function"><name>deallocate_system</name></member>
   </compound>
   <compound refid="structamrex_1_1ArenaInfo" kind="struct"><name>amrex::ArenaInfo</name>
     <member refid="structamrex_1_1ArenaInfo_1a961c961eb343a2fa091082a6f1717b16" kind="variable"><name>device_use_managed_memory</name></member>
@@ -2025,7 +2025,7 @@
     <member refid="classamrex_1_1CArena_1a10adc62608b67926d034077109597b14" kind="enum"><name>@0</name></member>
     <member refid="classamrex_1_1CArena_1a10adc62608b67926d034077109597b14a73f4c71472036baf157528f4435be5d2" kind="enumvalue"><name>DefaultHunkSize</name></member>
     <member refid="classamrex_1_1CArena_1a9e8adf2bef58badafbefa442d69db64b" kind="typedef"><name>NL</name></member>
-    <member refid="classamrex_1_1CArena_1ae4df71ed6e581bb88793c7c009cb4660" kind="variable"><name>m_alloc</name></member>
+    <member refid="classamrex_1_1CArena_1ad1b240a0437cfcaee6788096d93a1674" kind="variable"><name>m_alloc</name></member>
     <member refid="classamrex_1_1CArena_1a000d9e231672c9a28a72a05abec379fb" kind="variable"><name>m_freelist</name></member>
     <member refid="classamrex_1_1CArena_1a88823438ee0e89721d65131d87d2f687" kind="variable"><name>m_busylist</name></member>
     <member refid="classamrex_1_1CArena_1a7bbf66f41bc3167185236bdcd6fe67a1" kind="variable"><name>m_hunk</name></member>
@@ -2446,6 +2446,7 @@
     <member refid="classamrex_1_1DArena_1a271820274e7f0fb9c6e028350f8bf291" kind="variable"><name>m_max_max_order</name></member>
     <member refid="classamrex_1_1DArena_1a1061832f806866fdf9902b89c7013792" kind="variable"><name>m_free</name></member>
     <member refid="classamrex_1_1DArena_1aa9274b236cdc85ff9d33d35f2d8027d3" kind="variable"><name>m_used</name></member>
+    <member refid="classamrex_1_1DArena_1a1fe171de824be042a8b957b2fe35d7f3" kind="variable"><name>m_system</name></member>
     <member refid="classamrex_1_1DArena_1a60dde49130e2e6672c0f70a63a5fde2c" kind="variable"><name>m_baseptr</name></member>
     <member refid="classamrex_1_1DArena_1a9532cfd8968174b10df559bd24b8061e" kind="variable"><name>m_max_size</name></member>
     <member refid="classamrex_1_1DArena_1a948e7568bd55ee259524b92bc872f22e" kind="variable"><name>m_block_size</name></member>
@@ -2949,7 +2950,7 @@
     <member refid="classamrex_1_1EArena_1a62a6459912f2dee99fb7dc6dfe60d851" kind="typedef"><name>FreeList</name></member>
     <member refid="classamrex_1_1EArena_1a4b262f8a364b67bc38f2db23df5dcc75" kind="typedef"><name>MergeList</name></member>
     <member refid="classamrex_1_1EArena_1a05797269791825a6ff9f39ec670c5e1c" kind="typedef"><name>BusyList</name></member>
-    <member refid="classamrex_1_1EArena_1a55324b0f7c48fd81f54222a9b7d25cf4" kind="variable"><name>m_alloc</name></member>
+    <member refid="classamrex_1_1EArena_1a3b05dd7697d03b2752d96117fe50bf03" kind="variable"><name>m_alloc</name></member>
     <member refid="classamrex_1_1EArena_1a643d1d395c74559a883cea436b148679" kind="variable"><name>m_freelist</name></member>
     <member refid="classamrex_1_1EArena_1a68dd7c13d4db50eeaa1b7b075a140960" kind="variable"><name>m_mergelist</name></member>
     <member refid="classamrex_1_1EArena_1a9cc0a06009f6f282f7bc260c283d970f" kind="variable"><name>m_busylist</name></member>
@@ -6000,8 +6001,9 @@
     <member refid="structamrex_1_1VisMF_1_1Header_1a7f2c6b837b0a29af54ae8280eb42c8c9" kind="variable"><name>m_famax</name></member>
     <member refid="structamrex_1_1VisMF_1_1Header_1ae83557a09400cdcb97b0220b3ced8d43" kind="variable"><name>m_writtenRD</name></member>
     <member refid="structamrex_1_1VisMF_1_1Header_1ac047b91f6a9bf22efc30801bfc4b4452" kind="function"><name>Header</name></member>
-    <member refid="structamrex_1_1VisMF_1_1Header_1ac76e5b2205b65e5b8005cf727afdb78a" kind="function"><name>Header</name></member>
-    <member refid="structamrex_1_1VisMF_1_1Header_1af970e6b297855697a3a6c053778bc817" kind="function"><name>CalculateMinMax</name></member>
+    <member refid="structamrex_1_1VisMF_1_1Header_1a2bd7f35c8f6e9d56b50648024cfac5f2" kind="function"><name>Header</name></member>
+    <member refid="structamrex_1_1VisMF_1_1Header_1acdfb696b35b3fe342f5040041f59a301" kind="function"><name>Header</name></member>
+    <member refid="structamrex_1_1VisMF_1_1Header_1a67ebe2f805154bc932ce0d58aebf9e62" kind="function"><name>CalculateMinMax</name></member>
   </compound>
   <compound refid="classamrex_1_1Hypre" kind="class"><name>amrex::Hypre</name>
     <member refid="classamrex_1_1Hypre_1af08fbb42b4509a32e7f20a6101dfd13f" kind="enum"><name>Interface</name></member>
@@ -9391,7 +9393,7 @@
     <member refid="classamrex_1_1RealDescriptor_1a2ef2cf488b706a11674fe3be527147bc" kind="function"><name>convertToNativeFormat</name></member>
     <member refid="classamrex_1_1RealDescriptor_1a72d5b0bcc86c85cbed16e52b0bff6673" kind="function"><name>convertToNativeFormat</name></member>
     <member refid="classamrex_1_1RealDescriptor_1a40602b230f592243c9392bcc4f5f97f5" kind="function"><name>convertFromNativeFormat</name></member>
-    <member refid="classamrex_1_1RealDescriptor_1a66dfc40b6fe503f7f634c715f20f67d6" kind="function"><name>convertFromNativeFormat</name></member>
+    <member refid="classamrex_1_1RealDescriptor_1a07e0802bb55dfb6bcc0311e88fe7d80e" kind="function"><name>convertFromNativeFormat</name></member>
     <member refid="classamrex_1_1RealDescriptor_1a9132ce91c407d7dbe4cd0c1c14e21cd5" kind="function"><name>convertFromNativeFloatFormat</name></member>
     <member refid="classamrex_1_1RealDescriptor_1a789c3c7a96be258b4dc86b4c699facb8" kind="function"><name>convertFromNativeDoubleFormat</name></member>
     <member refid="classamrex_1_1RealDescriptor_1ac8bca714afe5a0214a63bd6542fe397f" kind="function"><name>convertToNativeFloatFormat</name></member>
@@ -10134,6 +10136,7 @@
     <member refid="classamrex_1_1VisMF_1a3eb747b7ba5f46a315650c84c1162418" kind="function"><name>CloseAllStreams</name></member>
     <member refid="classamrex_1_1VisMF_1af7f852d2d1e0656e85e58dcf5ba364b1" kind="function"><name>NoFabHeader</name></member>
     <member refid="classamrex_1_1VisMF_1a865aac1ae0e0fde40a0470d75eb44935" kind="function"><name>Write</name></member>
+    <member refid="classamrex_1_1VisMF_1a805c594851bbab413ac80fa5af467ac2" kind="function"><name>WriteAsync</name></member>
     <member refid="classamrex_1_1VisMF_1a8f08ad07cd586ef21006e86958609655" kind="function"><name>WriteOnlyHeader</name></member>
     <member refid="classamrex_1_1VisMF_1ad4a180abf07b6a7129d8fd4f6ee0d798" kind="function"><name>RemoveFiles</name></member>
     <member refid="classamrex_1_1VisMF_1a584871b7013d4d9e46d16eb6d53803ed" kind="function"><name>Read</name></member>
@@ -10142,9 +10145,9 @@
     <member refid="classamrex_1_1VisMF_1ae12f838572701049902254dfb46eb650" kind="function"><name>Check</name></member>
     <member refid="classamrex_1_1VisMF_1a3384303973984fe6736efd5aeb5535d8" kind="function"><name>FileOffset</name></member>
     <member refid="classamrex_1_1VisMF_1a73b516dcb8729a411f75eaa5d7fc1b54" kind="function"><name>GetNOutFiles</name></member>
-    <member refid="classamrex_1_1VisMF_1a81e77b1242e5dc3aef8f3b1a15358545" kind="function"><name>SetNOutFiles</name></member>
+    <member refid="classamrex_1_1VisMF_1a12f990c53f9abf19fdd7c10f14eae38b" kind="function"><name>SetNOutFiles</name></member>
     <member refid="classamrex_1_1VisMF_1a738d789073dd1072ac3a0c640429574c" kind="function"><name>GetMFFileInStreams</name></member>
-    <member refid="classamrex_1_1VisMF_1a9f0e2a7219ab65191d6fd7206e252138" kind="function"><name>SetMFFileInStreams</name></member>
+    <member refid="classamrex_1_1VisMF_1abda03b733e4f5e0b9f005f764f1a5b65" kind="function"><name>SetMFFileInStreams</name></member>
     <member refid="classamrex_1_1VisMF_1a51041736815ed12616b075d56e53fd2f" kind="function"><name>GetVerbose</name></member>
     <member refid="classamrex_1_1VisMF_1a998f1813f57b8415140b26966fd0f86c" kind="function"><name>SetVerbose</name></member>
     <member refid="classamrex_1_1VisMF_1a5be9ce5dc3ed0083f7959e63528de583" kind="function"><name>GetHeaderVersion</name></member>
@@ -10172,8 +10175,9 @@
     <member refid="classamrex_1_1VisMF_1a25b8309e5f56a1269ddafb6f1f7852fc" kind="function"><name>VisMF</name></member>
     <member refid="classamrex_1_1VisMF_1a5d27212879138a4ea1e4264fa3fc9192" kind="function"><name>operator=</name></member>
     <member refid="classamrex_1_1VisMF_1aef488a8732bb3990f9ca15cd48ab02f1" kind="function"><name>Write</name></member>
-    <member refid="classamrex_1_1VisMF_1af6f518c829413e1799363ed72d32a981" kind="function"><name>WriteHeader</name></member>
-    <member refid="classamrex_1_1VisMF_1a897d7c5876969ac1f5a1fa3b016ee8a8" kind="function"><name>FindOffsets</name></member>
+    <member refid="classamrex_1_1VisMF_1a9f8f858a76c15307f5adf8632f82ec23" kind="function"><name>WriteHeaderDoit</name></member>
+    <member refid="classamrex_1_1VisMF_1a11bff325e3c0f62c275d5d2971128914" kind="function"><name>WriteHeader</name></member>
+    <member refid="classamrex_1_1VisMF_1a1a13f502a7ae61af0ef1bc5bff7ee768" kind="function"><name>FindOffsets</name></member>
     <member refid="classamrex_1_1VisMF_1a3b548af5417b0614cd9795f054976559" kind="function"><name>readFAB</name></member>
     <member refid="classamrex_1_1VisMF_1ae9070f5fb2e6e4ade413965b97e12707" kind="function"><name>readFAB</name></member>
     <member refid="classamrex_1_1VisMF_1a87ed18b9e628d872b53b55a5b3fed710" kind="function"><name>DirName</name></member>
@@ -11521,9 +11525,13 @@
     <member refid="namespaceamrex_1_1ParallelDescriptor_1adc6941c4330302993547bfb867a1df31" kind="function"><name>MyProc</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a705e1be005fbada39a2ca69f6dae9b88" kind="function"><name>MinTag</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1ab1375009d4e5cd0730cada71e3f18c33" kind="function"><name>MaxTag</name></member>
+    <member refid="namespaceamrex_1_1ParallelDescriptor_1a0f53686fc6a6b7dca69c230fd1336e44" kind="function"><name>Communicator</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1aa191723b5d24ceaf64e9d49f542cfcc2" kind="function"><name>NProcs</name></member>
+    <member refid="namespaceamrex_1_1ParallelDescriptor_1a7fe765fcc8bfc4c409483424a83fccf8" kind="function"><name>NProcs</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1ab734a5d614e753d28d03865ee6e4039a" kind="function"><name>IOProcessorNumber</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1ac7fb3467af4aabf15e61cb9c27e916d9" kind="function"><name>IOProcessor</name></member>
+    <member refid="namespaceamrex_1_1ParallelDescriptor_1a9397b95ec0069183061d45372eed1287" kind="function"><name>IOProcessorNumber</name></member>
+    <member refid="namespaceamrex_1_1ParallelDescriptor_1a8780ee1130870c2cd65de891c71b9b76" kind="function"><name>IOProcessor</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a9854dea7eb2ee59093ed0bd80af9063e" kind="function"><name>TeamSize</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1af2f4fc272303fdc7f363d88ffd292c4c" kind="function"><name>NTeams</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a687dc008cc6ce7831496af1f8bbfff96" kind="function"><name>MyTeamColor</name></member>
@@ -11540,7 +11548,6 @@
     <member refid="namespaceamrex_1_1ParallelDescriptor_1ae9b60ea81eb861f883e02edaa5876d08" kind="function"><name>team_for</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1ad8cac9ce7c8c2a234cde3400db6512a5" kind="function"><name>team_for</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a1b1bd2a6da53acc442dac0945108b376" kind="function"><name>team_for</name></member>
-    <member refid="namespaceamrex_1_1ParallelDescriptor_1a0f53686fc6a6b7dca69c230fd1336e44" kind="function"><name>Communicator</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a732a4be5017987f2d6edc0fcd2329301" kind="function"><name>Barrier</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1aa8ebad8ea16a50d70821ec935c70aea9" kind="function"><name>Barrier</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1affba679357b6ad488b02adc81a353697" kind="function"><name>Test</name></member>
@@ -11638,7 +11645,6 @@
     <member refid="namespaceamrex_1_1ParallelDescriptor_1ab581b8dba6006dbb3457d925c4b0f244" kind="function"><name>Waitall</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a09446a4d2b5bb7632b4c9316c5dd213c" kind="function"><name>Waitany</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a3a66ca3d4d64098f62c7aa9c92dcffbb" kind="function"><name>Waitsome</name></member>
-    <member refid="namespaceamrex_1_1ParallelDescriptor_1af1b97040c4bba2d04cce7df79531b2c7" kind="function"><name>MPI_Error</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1aa123b1406423d74e38759f1412955db8" kind="function"><name>ReadAndBcastFile</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a411cea849dee5d54c8335c79f35af182" kind="function"><name>IProbe</name></member>
     <member refid="namespaceamrex_1_1ParallelDescriptor_1a541d49b91b1284763bebf77877cdff93" kind="function"><name>IProbe</name></member>
@@ -13450,7 +13456,6 @@
     <member refid="AMReX__ParallelDescriptor_8cpp_1a246b36fd3c5ded8a2fef5aabac2d46c3" kind="function"><name>amrex_fi_pd_wtime</name></member>
   </compound>
   <compound refid="AMReX__ParallelDescriptor_8H" kind="file"><name>AMReX_ParallelDescriptor.H</name>
-    <member refid="AMReX__ParallelDescriptor_8H_1aa5c7a9db9f965eb95c975e7635e55c24" kind="define"><name>BL_MPI_REQUIRE</name></member>
   </compound>
   <compound refid="AMReX__ParallelDescriptor__F_8F90" kind="file"><name>AMReX_ParallelDescriptor_F.F90</name>
   </compound>
