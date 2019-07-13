@@ -95,6 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;<a class="el" href="AMReX__IntVect_8H_source.html">AMReX_IntVect.H</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="AMReX__Box_8H_source.html">AMReX_Box.H</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="AMReX__Gpu_8H_source.html">AMReX_Gpu.H</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="AMReX__Print_8H_source.html">AMReX_Print.H</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="AMReX__MFIter_8H_source.html">AMReX_MFIter.H</a>&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div>
 <p><a href="AMReX__ParticleUtil_8H_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -107,6 +110,24 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a680ccf73211338c29c896c0a5b4d18b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a680ccf73211338c29c896c0a5b4d18b7">amrex::getTileIndex</a> (const IntVect &amp;iv, const Box &amp;box, const bool a_do_tiling, const IntVect &amp;a_tile_size, Box &amp;tbx)</td></tr>
 <tr class="separator:a680ccf73211338c29c896c0a5b4d18b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a767879ad6960018a8fba811959a849fd"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:a767879ad6960018a8fba811959a849fd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a767879ad6960018a8fba811959a849fd">amrex::ReduceSum</a> (PC const &amp;pc, int lev, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:a767879ad6960018a8fba811959a849fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8bf270725689ef0dc5ec6c9df68e72f"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:af8bf270725689ef0dc5ec6c9df68e72f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#af8bf270725689ef0dc5ec6c9df68e72f">amrex::ReduceSum</a> (PC const &amp;pc, int lev_min, int lev_max, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:af8bf270725689ef0dc5ec6c9df68e72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad422eeb8a8e60fdff29a169dc90b0d00"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:ad422eeb8a8e60fdff29a169dc90b0d00"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ad422eeb8a8e60fdff29a169dc90b0d00">amrex::ReduceMax</a> (PC const &amp;pc, int lev, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:ad422eeb8a8e60fdff29a169dc90b0d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de047bb1ff102c57ccd7a84f75aaff7"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:a5de047bb1ff102c57ccd7a84f75aaff7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a5de047bb1ff102c57ccd7a84f75aaff7">amrex::ReduceMax</a> (PC const &amp;pc, int lev_min, int lev_max, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:a5de047bb1ff102c57ccd7a84f75aaff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da8362c95987c088bcc12d0da3dc7b8"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:a1da8362c95987c088bcc12d0da3dc7b8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a1da8362c95987c088bcc12d0da3dc7b8">amrex::ReduceMin</a> (PC const &amp;pc, int lev, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:a1da8362c95987c088bcc12d0da3dc7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac337242076ce8debaac11f88c9c4b49d"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:ac337242076ce8debaac11f88c9c4b49d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ac337242076ce8debaac11f88c9c4b49d">amrex::ReduceMin</a> (PC const &amp;pc, int lev_min, int lev_max, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:ac337242076ce8debaac11f88c9c4b49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

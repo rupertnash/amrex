@@ -2383,6 +2383,24 @@ Functions</h2></td></tr>
 <tr class="separator:ab612cdff7b506fd2884de82a842e95b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a680ccf73211338c29c896c0a5b4d18b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a680ccf73211338c29c896c0a5b4d18b7">getTileIndex</a> (const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;iv, const <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;box, const bool a_do_tiling, const <a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;a_tile_size, <a class="el" href="classamrex_1_1Box.html">Box</a> &amp;tbx)</td></tr>
 <tr class="separator:a680ccf73211338c29c896c0a5b4d18b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a767879ad6960018a8fba811959a849fd"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:a767879ad6960018a8fba811959a849fd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a767879ad6960018a8fba811959a849fd">ReduceSum</a> (PC const &amp;pc, int lev, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:a767879ad6960018a8fba811959a849fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8bf270725689ef0dc5ec6c9df68e72f"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:af8bf270725689ef0dc5ec6c9df68e72f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#af8bf270725689ef0dc5ec6c9df68e72f">ReduceSum</a> (PC const &amp;pc, int lev_min, int lev_max, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:af8bf270725689ef0dc5ec6c9df68e72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad422eeb8a8e60fdff29a169dc90b0d00"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:ad422eeb8a8e60fdff29a169dc90b0d00"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ad422eeb8a8e60fdff29a169dc90b0d00">ReduceMax</a> (PC const &amp;pc, int lev, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:ad422eeb8a8e60fdff29a169dc90b0d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de047bb1ff102c57ccd7a84f75aaff7"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:a5de047bb1ff102c57ccd7a84f75aaff7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a5de047bb1ff102c57ccd7a84f75aaff7">ReduceMax</a> (PC const &amp;pc, int lev_min, int lev_max, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:a5de047bb1ff102c57ccd7a84f75aaff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da8362c95987c088bcc12d0da3dc7b8"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:a1da8362c95987c088bcc12d0da3dc7b8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#a1da8362c95987c088bcc12d0da3dc7b8">ReduceMin</a> (PC const &amp;pc, int lev, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:a1da8362c95987c088bcc12d0da3dc7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac337242076ce8debaac11f88c9c4b49d"><td class="memTemplParams" colspan="2">template&lt;class PC , class F &gt; </td></tr>
+<tr class="memitem:ac337242076ce8debaac11f88c9c4b49d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceamrex.html#ac337242076ce8debaac11f88c9c4b49d">ReduceMin</a> (PC const &amp;pc, int lev_min, int lev_max, F f) -&gt; decltype(f(typename PC::ParticleType()))</td></tr>
+<tr class="separator:ac337242076ce8debaac11f88c9c4b49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -24552,6 +24570,32 @@ template&lt;int NReal, int NInt&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ae3b2b2af01369829d3b37006cd625fe2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; amrex::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;&#160;</td>
+          <td class="paramname"><em>iv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab982b91919e6fa7eed439d20fc794c41"></a>
 <div class="memitem">
 <div class="memproto">
@@ -24577,32 +24621,6 @@ template&lt;int NReal, int NInt&gt; </div>
 </div><div class="memdoc">
 
 <p>Read an <a class="el" href="classamrex_1_1IndexType.html" title="Cell-Based or Node-Based Indices. ">IndexType</a> from an istream. </p>
-
-</div>
-</div>
-<a class="anchor" id="ae3b2b2af01369829d3b37006cd625fe2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::istream&amp; amrex::operator&gt;&gt; </td>
-          <td>(</td>
-          <td class="paramtype">std::istream &amp;&#160;</td>
-          <td class="paramname"><em>is</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1IntVect.html">IntVect</a> &amp;&#160;</td>
-          <td class="paramname"><em>iv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -26769,6 +26787,82 @@ template&lt;class FAB1 , class FAB2 , class F , class bar  = amrex::EnableIf_t&l
 
 </div>
 </div>
+<a class="anchor" id="ad422eeb8a8e60fdff29a169dc90b0d00"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PC , class F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto amrex::ReduceMax </td>
+          <td>(</td>
+          <td class="paramtype">PC const &amp;&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(f(typename PC::ParticleType()))
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5de047bb1ff102c57ccd7a84f75aaff7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PC , class F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto amrex::ReduceMax </td>
+          <td>(</td>
+          <td class="paramtype">PC const &amp;&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(f(typename PC::ParticleType()))
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a68c3578a653478035603a4f59fe8e4d7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -26911,6 +27005,82 @@ template&lt;class FAB1 , class FAB2 , class F , class bar  = amrex::EnableIf_t&l
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1da8362c95987c088bcc12d0da3dc7b8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PC , class F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto amrex::ReduceMin </td>
+          <td>(</td>
+          <td class="paramtype">PC const &amp;&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(f(typename PC::ParticleType()))
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac337242076ce8debaac11f88c9c4b49d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PC , class F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto amrex::ReduceMin </td>
+          <td>(</td>
+          <td class="paramtype">PC const &amp;&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(f(typename PC::ParticleType()))
+</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -27127,6 +27297,82 @@ template&lt;class FAB , class F , class bar  = amrex::EnableIf_t&lt;IsBaseFab&lt
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a767879ad6960018a8fba811959a849fd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PC , class F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto amrex::ReduceSum </td>
+          <td>(</td>
+          <td class="paramtype">PC const &amp;&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(f(typename PC::ParticleType()))
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af8bf270725689ef0dc5ec6c9df68e72f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PC , class F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto amrex::ReduceSum </td>
+          <td>(</td>
+          <td class="paramtype">PC const &amp;&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lev_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; decltype(f(typename PC::ParticleType()))
+</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -30807,6 +31053,64 @@ template&lt;typename To , typename From &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a3339249c3306102f537642fca0a08903"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="AMReX__Extension_8H.html#a90cf7b81cd61799c87306cad156cc317">AMREX_FORCE_INLINE</a> void amrex::yafluxreg_crseadd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;&#160;</td>
+          <td class="paramname"><em>bx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; int const  &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>fx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>dtdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad2b58521ecabaa0bce47bcd9df9d6231"></a>
 <div class="memitem">
 <div class="memproto">
@@ -30855,64 +31159,6 @@ template&lt;typename To , typename From &gt; </div>
           <td></td>
           <td class="paramtype">Real&#160;</td>
           <td class="paramname"><em>dtdy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a3339249c3306102f537642fca0a08903"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="AMReX__GpuQualifiers_8H.html#aac52ee54727d35b2d0033b119a991618">AMREX_GPU_HOST_DEVICE</a> <a class="el" href="AMReX__Extension_8H.html#a90cf7b81cd61799c87306cad156cc317">AMREX_FORCE_INLINE</a> void amrex::yafluxreg_crseadd </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classamrex_1_1Box.html">Box</a> const &amp;&#160;</td>
-          <td class="paramname"><em>bx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; int const  &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>flag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structamrex_1_1Array4.html">Array4</a>&lt; Real const  &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>fx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>dtdx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
