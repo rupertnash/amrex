@@ -1723,7 +1723,7 @@
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>this<sp/>before<sp/>prematurely<sp/>exiting<sp/>if<sp/>running<sp/>in<sp/>parallel.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Otherwise<sp/>sequence<sp/>numbers<sp/>will<sp/>not<sp/>match<sp/>across<sp/>MPI<sp/>processes.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>preSeqNum;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>preSeqNum<sp/>=<sp/>-1;</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!FAB::preAllocatable())<sp/>{</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>preSeqNum<sp/>=<sp/><ref refid="namespaceamrex_1_1ParallelDescriptor_1a9fa50b376ee8c97f8d84852e244fd916" kindref="member">ParallelDescriptor::SeqNum</ref>();</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
