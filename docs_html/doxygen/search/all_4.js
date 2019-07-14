@@ -21,7 +21,7 @@ var searchData=
   ['datablocks',['dataBlocks',['../classCommProfStats.html#aa69e0ea415e1fd371c727d23195558af',1,'CommProfStats::dataBlocks()'],['../classRegionsProfStats.html#aa8e9c2fde51c4886896f57040c05cf03',1,'RegionsProfStats::dataBlocks()']]],
   ['databox',['dataBox',['../classamrex_1_1OrderedBoxes.html#a02860f69200b013d9dd9710def7fbf44',1,'amrex::OrderedBoxes::dataBox()'],['../classamrex_1_1OrderedBoxes.html#a7add234bdde060c788b9c4fbd6490db8',1,'amrex::OrderedBoxes::DataBox() const ']]],
   ['datadeleter',['DataDeleter',['../structamrex_1_1DataDeleter.html',1,'amrex']]],
-  ['datadeleter',['DataDeleter',['../structamrex_1_1DataDeleter.html#a2d435760333c6f0326e928c0f9481a24',1,'amrex::DataDeleter']]],
+  ['datadeleter',['DataDeleter',['../structamrex_1_1DataDeleter.html#a6538f3e7403c1630f1f101ce2b8a6e16',1,'amrex::DataDeleter::DataDeleter() noexcept'],['../structamrex_1_1DataDeleter.html#a2d435760333c6f0326e928c0f9481a24',1,'amrex::DataDeleter::DataDeleter(Arena *ar) noexcept']]],
   ['datagrids',['dataGrids',['../classamrex_1_1AmrData.html#a8f9fb6ae8ec27c11da30c4a979701707',1,'amrex::AmrData']]],
   ['datagridsdefined',['dataGridsDefined',['../classamrex_1_1AmrData.html#ad860cb8596ec43f70a3ae7f25dec3eab',1,'amrex::AmrData']]],
   ['datalog',['datalog',['../classamrex_1_1Amr.html#a34d4fd7a519716a0155f261ba210bd85',1,'amrex::Amr::datalog()'],['../classamrex_1_1Amr.html#a782f42d62191f606a77cb1c78ab584a1',1,'amrex::Amr::DataLog(int i)']]],

@@ -7,7 +7,7 @@ var searchData=
   ['dataavailable',['DataAvailable',['../classamrex_1_1FabArrayCopyDescriptor.html#a9186c4f7c9f9808bb52497da4783d714',1,'amrex::FabArrayCopyDescriptor']]],
   ['datablock',['DataBlock',['../structCommProfStats_1_1DataBlock.html#acdf0bce91f878d2b4e02349458bb64b1',1,'CommProfStats::DataBlock::DataBlock()'],['../structCommProfStats_1_1DataBlock.html#ad4eae73225064e5320cfd7c29b20a06d',1,'CommProfStats::DataBlock::DataBlock(const int p, const long s, const std::string &amp;fn, const long sp, const std::string &amp;pn, const int nn, const int si)'],['../structRegionsProfStats_1_1DataBlock.html#a83422209e5d067d4a9f8dbce49722689',1,'RegionsProfStats::DataBlock::DataBlock()'],['../structRegionsProfStats_1_1DataBlock.html#afbaca3dac9e6d63164eae742d64b0aed',1,'RegionsProfStats::DataBlock::DataBlock(int p, long nrss, long nts, const std::string &amp;fn, long sp, int si)']]],
   ['databox',['DataBox',['../classamrex_1_1OrderedBoxes.html#a7add234bdde060c788b9c4fbd6490db8',1,'amrex::OrderedBoxes']]],
-  ['datadeleter',['DataDeleter',['../structamrex_1_1DataDeleter.html#a2d435760333c6f0326e928c0f9481a24',1,'amrex::DataDeleter']]],
+  ['datadeleter',['DataDeleter',['../structamrex_1_1DataDeleter.html#a6538f3e7403c1630f1f101ce2b8a6e16',1,'amrex::DataDeleter::DataDeleter() noexcept'],['../structamrex_1_1DataDeleter.html#a2d435760333c6f0326e928c0f9481a24',1,'amrex::DataDeleter::DataDeleter(Arena *ar) noexcept']]],
   ['datalog',['DataLog',['../classamrex_1_1Amr.html#a782f42d62191f606a77cb1c78ab584a1',1,'amrex::Amr']]],
   ['datalogname',['DataLogName',['../classamrex_1_1Amr.html#acbecf8145200607f53282433a788437f',1,'amrex::Amr']]],
   ['dataprefix',['DataPrefix',['../structamrex_1_1Particle.html#afe760b4bd9a5592257a33394fe9f3fa2',1,'amrex::Particle']]],
