@@ -209,8 +209,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a865aac1ae0e0fde40a0470d75eb44935"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a865aac1ae0e0fde40a0470d75eb44935">Write</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;fafab, const std::string &amp;name, <a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156">VisMF::How</a> how=<a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156a167fa24b841257fa58af35b658f5d6c1">NFiles</a>, bool set_ghost=false)</td></tr>
 <tr class="memdesc:a865aac1ae0e0fde40a0470d75eb44935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a <a class="el" href="classamrex_1_1FabArray.html">FabArray&lt;FArrayBox&gt;</a> to disk in a "smart" way. Returns the total number of bytes written on this processor. If set_ghost is true, sets the ghost cells in the <a class="el" href="classamrex_1_1FabArray.html">FabArray&lt;FArrayBox&gt;</a> to one-half the average of the min and max over the valid region of each contained FAB.  <a href="#a865aac1ae0e0fde40a0470d75eb44935">More...</a><br /></td></tr>
 <tr class="separator:a865aac1ae0e0fde40a0470d75eb44935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a805c594851bbab413ac80fa5af467ac2"><td class="memItemLeft" align="right" valign="top">static std::future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a805c594851bbab413ac80fa5af467ac2">WriteAsync</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;fafab, const std::string &amp;name)</td></tr>
-<tr class="separator:a805c594851bbab413ac80fa5af467ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b5053b87b159190b6664cf4fc1020b"><td class="memItemLeft" align="right" valign="top">static std::future&lt; <a class="el" href="structamrex_1_1WriteAsyncStatus.html">WriteAsyncStatus</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a80b5053b87b159190b6664cf4fc1020b">WriteAsync</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;fafab, const std::string &amp;name)</td></tr>
+<tr class="separator:a80b5053b87b159190b6664cf4fc1020b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f08ad07cd586ef21006e86958609655"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamrex_1_1VisMF.html#a8f08ad07cd586ef21006e86958609655">WriteOnlyHeader</a> (const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;mf, const std::string &amp;mf_name, <a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156">VisMF::How</a> how=<a class="el" href="classamrex_1_1VisMF.html#aa50a3ce471ac0bdf8f78134f0004e156a167fa24b841257fa58af35b658f5d6c1">NFiles</a>)</td></tr>
 <tr class="memdesc:a8f08ad07cd586ef21006e86958609655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write only the header-file corresponding to <a class="el" href="classamrex_1_1FabArray.html">FabArray&lt;FArrayBox&gt;</a> to disk without the corresponding FAB data. This writes <a class="el" href="classamrex_1_1BoxArray.html">BoxArray</a> information (which might still be needed by data post-processing tools such as yt) when the FAB data is not needed. Returns the total number of bytes written on this processor.  <a href="#a8f08ad07cd586ef21006e86958609655">More...</a><br /></td></tr>
 <tr class="separator:a8f08ad07cd586ef21006e86958609655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2166,7 +2166,7 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a805c594851bbab413ac80fa5af467ac2"></a>
+<a class="anchor" id="a80b5053b87b159190b6664cf4fc1020b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2174,7 +2174,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::future&lt; void &gt; amrex::VisMF::WriteAsync </td>
+          <td class="memname">std::future&lt; <a class="el" href="structamrex_1_1WriteAsyncStatus.html">WriteAsyncStatus</a> &gt; amrex::VisMF::WriteAsync </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classamrex_1_1FabArray.html">FabArray</a>&lt; <a class="el" href="classamrex_1_1FArrayBox.html">FArrayBox</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>fafab</em>, </td>
