@@ -11,6 +11,10 @@ struct VoidCopyTag {
     Box dbox;
 };
 
+static double tt_start_timer;
+static double tt_end_timer;
+static long message_size;
+
 template <class FAB>
 template <class FOO, class BAR>  // FOO fools nvcc
 void
@@ -206,6 +210,7 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
         indv_send_size.reserve(N_snds);
 
         std::size_t total_volume = 0;
+        message_size = 0;
         for (auto const& kv : *TheFB.m_SndTags)
         {
             Vector<int> iss;                
@@ -240,6 +245,8 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
             send_cctc.push_back(&cctc);
             indv_send_size.push_back(std::move(iss));
         }
+
+        message_size = total_volume;
 
         if (total_volume > 0)
         {
@@ -358,12 +365,19 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
             }
     
             // Launch Graph
+            BL_PROFILE("FillBoundary: ToBuffer Graph");
             TheFB.m_copyToBuffer.executeGraph();
 
         }
         else
 #endif
         {
+            std::string label;
+            if (amrex::Gpu::inLaunchRegion())
+            { label = "GPU"; }
+            else
+            { label = "CPU"; }
+            BL_PROFILE(std::string("FillBoundary: ToBuffer") + label);
 
 #ifdef _OPENMP
 #pragma omp parallel if (is_thread_safe && Gpu::notInLaunchRegion())
@@ -392,6 +406,9 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
         }
 
         int send_counter = 0;
+        amrex::Gpu::Device::synchronize();
+        tt_start_timer = amrex::second();
+
         while (send_counter < N_snds)
         {
             int j;
@@ -417,13 +434,15 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
 	}
     }
 
-    FillBoundary_test();
+//    Remove to ensure better throughput timing.
+//    FillBoundary_test();
 
     //
     // Do the local work.  Hope for a bit of communication/computation overlap.
     //
     if (N_locs > 0)
     {
+        std::cout << ParallelDescriptor::MyProc() << ": Doing local work!" << std::endl << std::endl; 
         bool is_thread_safe = FAB::isCopyOMPSafe() && TheFB.m_threadsafe_loc;
         if (Gpu::inLaunchRegion() || !is_thread_safe)
         {
@@ -554,7 +573,8 @@ FabArray<FAB>::FBEP_nowait (int scomp, int ncomp, const IntVect& nghost,
 	}
     }
 
-    FillBoundary_test();
+//    Remove for clean throughput timers.
+//    FillBoundary_test();
 #endif /*BL_USE_MPI*/
 }
 
@@ -565,29 +585,50 @@ FabArray<FAB>::FillBoundary_finish ()
 {
     BL_PROFILE("FillBoundary_finish()");
 
-    if ( n_grow.allLE(IntVect::TheZeroVector()) && !fb_epo ) return; // For epo (Enforce Periodicity Only), there may be no ghost cells.
+//    if ( n_grow.allLE(IntVect::TheZeroVector()) && !fb_epo ) return; // For epo (Enforce Periodicity Only), there may be no ghost cells.
 
-    if (ParallelContext::NProcsSub() == 1) return;
+//    if (ParallelContext::NProcsSub() == 1) return;
 
 #ifdef BL_USE_MPI
+
+//    if (actual_n_rcvs > 0) {
+    {
+        ParallelDescriptor::Waitall(fb_recv_reqs, fb_recv_stat);
+
+        tt_end_timer = amrex::second(); 
+
+#ifdef AMREX_DEBUG
+        if (!CheckRcvStats(fb_recv_stat, fb_recv_size, MPI_CHAR, fb_tag))
+        {
+            amrex::Abort("FillBoundary_finish failed with wrong message size");
+        }
+#endif
+    }
 
     const FB& TheFB = getFB(fb_nghost,fb_period,fb_cross,fb_epo);
 
     const int N_rcvs = TheFB.m_RcvTags->size();
     const int N_snds = TheFB.m_SndTags->size();
 
+    int actual_n_rcvs = N_rcvs - std::count(fb_recv_data.begin(), fb_recv_data.end(), nullptr);
+
+
+
     Vector<const CopyComTagsContainer*> recv_cctc(N_rcvs,nullptr);
     LayoutData<Vector<VoidCopyTag> > recv_copy_tags;
+    long recv_data_size = 0;
     if (N_rcvs > 0)
     {
 	for (int k = 0; k < N_rcvs; k++) 
 	{
+            recv_data_size += fb_recv_size[k];
             if (fb_recv_size[k] > 0)
             {
                 auto const& cctc = TheFB.m_RcvTags->at(fb_recv_from[k]);
                 recv_cctc[k] = &cctc;
             }
 	}
+
         bool is_thread_safe = FAB::isCopyOMPSafe() && TheFB.m_threadsafe_rcv;
         if (Gpu::inLaunchRegion() || !is_thread_safe)
         {
@@ -609,6 +650,16 @@ FabArray<FAB>::FillBoundary_finish ()
         }
     }
 
+    long total_bytes = message_size + recv_data_size;
+    double fb_timer = tt_end_timer - tt_start_timer;
+
+    std::cout << ParallelDescriptor::MyProc() << ": FB Throughput = "
+              << (total_bytes/(fb_timer))/1000000000 << " GB/s for "
+              << double(total_bytes)/1000 << " kB with a wait-time of "
+              << double(fb_timer) << " secs." << std::endl;
+
+// Moved up for throughput timing.
+/*
     int actual_n_rcvs = N_rcvs - std::count(fb_recv_data.begin(), fb_recv_data.end(), nullptr);
 
     if (actual_n_rcvs > 0) {
@@ -620,7 +671,7 @@ FabArray<FAB>::FillBoundary_finish ()
         }
 #endif
     }
-
+*/
     if (N_rcvs > 0)
     {
         if (!recv_copy_tags.empty())
@@ -681,12 +732,14 @@ FabArray<FAB>::FillBoundary_finish ()
                 }
     
                 // Launch Graph
+                BL_PROFILE("FillBoundary: FromBuffer Graph");
                 TheFB.m_copyFromBuffer.executeGraph();
 
             }
             else
 #endif
             {
+                BL_PROFILE(std::string("FillBoundary: FromBufferGPU"));
 
 #ifdef _OPENMP
 #pragma omp parallel if (Gpu::notInLaunchRegion())
@@ -710,6 +763,8 @@ FabArray<FAB>::FillBoundary_finish ()
         }
         else
         {
+            BL_PROFILE(std::string("FillBoundary: FromBufferCPU"));
+
 #ifdef _OPENMP
 #pragma omp parallel for
 #endif
@@ -746,6 +801,10 @@ FabArray<FAB>::FillBoundary_finish ()
         amrex::The_FA_Arena()->free(fb_the_send_data);
         fb_the_send_data = nullptr;
     }
+
+    ParallelDescriptor::Barrier();
+    amrex::Print() << "============================" << std::endl;
+
 
 #endif // MPI
 }
